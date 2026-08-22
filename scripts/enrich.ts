@@ -110,7 +110,10 @@ function parseGenerated(raw: string): Generated | null {
   const useCases = data.useCases.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).slice(0, 6)
   const keywords = data.keywords.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).slice(0, 8)
   const faqs = data.faqs
-    .filter((item): item is { question: string; answer: string } => Boolean(item) && typeof item.question === 'string' && typeof item.answer === 'string')
+    // typeof だけでは空文字が通り、投入時に「必須フィールドです」で落ちる
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item) && typeof item.question === 'string' && typeof item.answer === 'string'
+      && item.question.trim().length > 0 && item.answer.trim().length > 0)
     .slice(0, 5)
   // 中身が薄いものは載せない。字数が足りないページを量産しても集客にならない。
   const volume = data.summary.length + data.description.length + useCases.join('').length + faqs.map((item) => item.question + item.answer).join('').length

@@ -65,6 +65,11 @@ for (const name of files) {
     record.jaFileCount = ja.hitCount
     record.jaSamplePaths = ja.samples.slice(0, 5).map((text) => ({ text }))
   }
+  // 生成側で空文字が混じることがある。投入時に必須エラーで全体が止まるので落とす。
+  record.faqs = (record.faqs || []).filter((f) => (f.question || '').trim() && (f.answer || '').trim())
+  record.useCases = (record.useCases || []).filter((u) => (u.text || '').trim())
+  record.keywords = (record.keywords || []).filter((k) => (k.text || '').trim())
+  if (record.faqs.length < 2 || record.useCases.length < 3 || !record.keywords.length) continue
   records.push(record)
 }
 

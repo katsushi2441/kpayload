@@ -334,7 +334,9 @@ function vibeSnippet(projects: Project[]): string {
 }
 
 const payload = await getPayload({ config })
-const result = await payload.find({ collection: 'oss-projects', limit: 200, pagination: false, sort: 'name', depth: 0 })
+// limit を省くと既定(10)、200のままだと201件目以降が出力されない。
+// カタログは数千件になるので 0 = 無制限で取る。
+const result = await payload.find({ collection: 'oss-projects', limit: 0, pagination: false, sort: 'name', depth: 0 })
 const projects = result.docs as unknown as Project[]
 
 if (!projects.length) throw new Error('No OSS records found. Run npm run seed first.')
