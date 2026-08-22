@@ -2,10 +2,11 @@
   {
     "name": "hugo",
     "slug": "hugo",
-    "category": "cms",
-    "funnel": "oss",
-    "summary": "世界最速のWebサイト構築フレームワークであるHugo。",
-    "description": "Hugoは、Webサイトを構築するための非常に高速なフレームワークです。静的サイトジェネレーターとして機能し、ブログエンジンやCMS、ドキュメント作成ツールとしても活用できます。Go言語で開発されており、Apache-2.0ライセンスの下で公開されています。",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "世界最速のウェブサイト構築フレームワークです。",
+    "description": "Hugoは、非常に高速なウェブサイトを構築するためのフレームワークです。静的サイトジェネレータとして機能し、ブログエンジンやコンテンツ管理システム（CMS）、ドキュメント作成ツールとしても利用できます。Go言語で書かれており、高いパフォーマンスを実現しています。Apache-2.0ライセンスの下で提供されています。",
     "license": "Apache-2.0",
     "japaneseStatus": "日本語ファイルなし",
     "officialUrl": "https://gohugo.io",
@@ -13,15 +14,23 @@
     "featured": false,
     "stars": 89484,
     "language": "Go",
+    "githubCreatedAt": "2013-07-04T15:26:26Z",
+    "githubPushedAt": "2026-08-20T19:56:40Z",
     "useCases": [
       {
-        "text": "ブログの運営"
+        "text": "ブログの構築"
       },
       {
-        "text": "コンテンツ管理システム（CMS）の構築"
+        "text": "ドキュメントサイトの作成"
       },
       {
-        "text": "技術ドキュメントの作成"
+        "text": "静的ウェブサイトの生成"
+      },
+      {
+        "text": "コンテンツ管理システム"
+      },
+      {
+        "text": "技術文書の公開"
       }
     ],
     "keywords": [
@@ -38,27 +47,44 @@
         "text": "documentation-tool"
       },
       {
+        "text": "go"
+      },
+      {
+        "text": "hugo"
+      },
+      {
         "text": "static-site-generator"
       }
     ],
     "faqs": [
       {
-        "question": "Hugoは何で開発されていますか？",
-        "answer": "HugoはGo言語を用いて開発されているフレームワークです。"
+        "question": "Hugoは何ができるツールですか？",
+        "answer": "Hugoは、高速な静的サイトジェネレータです。これを使用することで、ブログやドキュメント、コンテンツ管理システムなどのウェブサイトを効率的に構築できます。"
       },
       {
-        "question": "どのような種類のサイトを構築できますか？",
-        "answer": "ブログ、コンテンツ管理システム、ドキュメント作成ツールなど、様々なWebサイトの構築が可能です。"
+        "question": "このツールの主な特徴は何ですか？",
+        "answer": "世界で最も速いフレームワークの一つとして知られており、非常に高いパフォーマンスを誇ります。Go言語で開発されているため、高速なビルドが可能です。"
+      },
+      {
+        "question": "どのような種類のコンテンツに適していますか？",
+        "answer": "ブログエンジンとしての機能や、ドキュメント作成ツールとしての側面があるため、情報の整理や公開に適した静的サイトの構築に活用できます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で提供されています。"
       }
-    ]
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
   },
   {
     "name": "Understand-Anything",
     "slug": "understand-anything",
-    "category": "knowledge",
-    "funnel": "oss",
-    "summary": "コードを探索可能なインタラクティブなナレッジグラフに変換するツール",
-    "description": "あらゆるコードを、探索や検索、質問が可能なインタラクティブなナレッジグラフへと変換します。単に視覚的に優れたグラフを作成するだけでなく、学習に役立つ構造を提供することに重点を置いています。Claude Code、Codex、Cursor、Copilot、Gemini CLIなどと連携して動作します。",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "コードを探索可能なインタラクティブなナレッジグラフに変換するツールです。",
+    "description": "このツールは、任意のソースコードを視覚的なナレッジグラフへと変換し、ユーザーが探索や検索、質問を行えるようにします。単に印象の良いグラフを作成するのではなく、学習や理解を助けるための構造を提供することを目的としています。Claude Code、Codex、Cursor、Copilot、Gemini CLIなど、主要なAI開発ツールとの連携に対応しています。TypeScriptで構築されており、コードベースの分析を効率化するための強力な支援ツールとなります。",
     "license": "MIT",
     "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://understand-anything.com/",
@@ -66,52 +92,78 @@
     "featured": false,
     "stars": 80037,
     "language": "TypeScript",
+    "githubCreatedAt": "2026-03-15T02:30:51Z",
+    "githubPushedAt": "2026-08-11T14:13:37Z",
     "useCases": [
       {
-        "text": "コードベースの構造分析"
+        "text": "ソースコードの全体像把握"
       },
       {
-        "text": "インタラクティブなナレッジグラフによる知識の探索"
+        "text": "複雑な依存関係の可視化"
       },
       {
-        "text": "開発ツールとの連携によるコード理解の深化"
+        "text": "開発チームへの技術知識共有"
+      },
+      {
+        "text": "特定の機能の実装箇所の探索"
+      },
+      {
+        "text": "既存システムの構造解析"
       }
     ],
     "keywords": [
       {
-        "text": "knowledge graph"
+        "text": "ナレッジグラフ"
       },
       {
-        "text": "codebase analysis"
+        "text": "コード解析"
       },
       {
-        "text": "developer tools"
+        "text": "AI開発ツール"
       },
       {
         "text": "TypeScript"
       },
       {
-        "text": "AI agent"
+        "text": "ソースコード可視化"
       }
     ],
     "faqs": [
       {
-        "question": "どのようなツールと連携できますか？",
-        "answer": "Claude Code、Codex、Cursor、Copilot、Gemini CLIなどとの連携に対応しています。"
+        "question": "このツールでどのようなことができるのですか？",
+        "answer": "入力したソースコードをインタラクティブなナレッジグラフに変換できます。これにより、単にコードを見るだけでなく、構造を探索したり、特定の情報を検索したり、内容について質問を投げたりすることが可能になります。"
+      },
+      {
+        "question": "対応している開発環境やツールはありますか？",
+        "answer": "Claude Code、Codex、Cursor、Copilot、Gemini CLIなど、多くの主要なAIエージェントや開発ツールとの連携に対応しています。これにより、既存の開発ワークフローに組み込んで活用することができます。"
       },
       {
         "question": "このツールの主な目的は何ですか？",
-        "answer": "単に印象の良いグラフを作るのではなく、学習や探索、質問が可能なナレッジグラフを作成することを目的としています。"
+        "answer": "「印象を与えるためのグラフ」ではなく「学習のためのグラフ」を提供することです。開発者がコードの構造を深く理解し、知識として定着させることを支援するための機能に特化しています。"
+      },
+      {
+        "question": "どのような言語で書かれていますか？",
+        "answer": "このソフトウェアはTypeScriptで記述されています。また、MITライセンスで公開されているため、オープンソースプロジェクトとして利用可能です。"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "understand-anything-plugin/packages/dashboard/src/locales/ja.ts"
+      },
+      {
+        "text": "understand-anything-plugin/skills/understand/locales/ja.md"
       }
     ]
   },
   {
     "name": "grafana",
     "slug": "grafana",
-    "category": "analytics",
-    "funnel": "oss",
-    "summary": "多種多様なデータソースを統合して可視化するオープンソースのオブザーバビリティ・プラットフォーム。",
-    "description": "Grafanaは、メトリクス、ログ、トレースなどのデータを一元的に可視化できるオープンで構成可能なプラットフォームです。Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、複数の異なるデータソースから情報を取得できます。ダッシュボード機能を通じて、データの分析や監視を効率的に行うことが可能です。",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "多種多様なデータソースを統合して可視化するオープンソースの観測・データ可視化プラットフォームです。",
+    "description": "Grafanaは、メトリクス、ログ、トレースといった異なる種類のデータを一元的に可視化するためのプラットフォームです。Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、複数のデータソースから情報を取得することが可能です。構成要素を組み合わせて利用できる柔軟性を備えており、高度なダッシュボードの構築や分析が可能です。アラート機能やビジネスインテリジェンスのためのツールとしても活用されます。",
     "license": "AGPL-3.0",
     "japaneseStatus": "日本語ファイルあり",
     "officialUrl": "https://grafana.com",
@@ -119,42 +171,76 @@
     "featured": false,
     "stars": 76333,
     "language": "TypeScript",
+    "githubCreatedAt": "2013-12-11T15:59:56Z",
+    "githubPushedAt": "2026-08-22T01:25:46Z",
     "useCases": [
       {
-        "text": "メトリクス、ログ、トレースの統合的な可視化"
+        "text": "メトリクスとログの統合監視"
       },
       {
-        "text": "PrometheusやElasticsearch等の外部データソースとの連携"
+        "text": "カスタムダッシュボードによるデータ可視化"
       },
       {
-        "text": "ビジネスインテリジェンスのためのダッシュボード構築"
+        "text": "Prometheusとの連携によるシステム監視"
+      },
+      {
+        "text": "InfluxDBを用いた時系列データの分析"
+      },
+      {
+        "text": "Elasticsearchを活用したログ管理"
       }
     ],
     "keywords": [
       {
-        "text": "alerting"
+        "text": "可視化基盤"
       },
       {
-        "text": "analytics"
+        "text": "ダッシュボード"
       },
       {
-        "text": "business-intelligence"
+        "text": "メトリクス監視"
       },
       {
-        "text": "dashboard"
+        "text": "ログ管理"
       },
       {
-        "text": "data-visualization"
+        "text": "トレース解析"
       }
     ],
     "faqs": [
       {
         "question": "どのようなデータソースに対応していますか？",
-        "answer": "Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、多様なデータソースからのデータを可視化することが可能です。"
+        "answer": "Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、非常に幅広いデータソースからのデータ取得に対応しています。"
       },
       {
-        "question": "このソフトウェアの主な機能は何ですか？",
-        "answer": "メトリクスやログ、トレースなどのデータの可視化に加え、アラート通知、分析、ビジネスインテリジェンス機能を提供します。"
+        "question": "このツールでできることは何ですか？",
+        "answer": "複数のソースから収集したメトリクス、ログ、トレースを可視化し、ダッシュボードの作成やアラートの設定、データの分析を行うことができます。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "データ可視化、アラート通知、アナリティクス、ビジネスインテリジェンス機能などが含まれています。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "このプラットフォームはGo言語やTypeScriptなどの技術を用いて開発されており、オープンかつ構成可能な設計となっています。"
+      }
+    ],
+    "jaFileCount": 8,
+    "jaSamplePaths": [
+      {
+        "text": "apps/advisor/pkg/translations/ja-JP"
+      },
+      {
+        "text": "apps/advisor/pkg/translations/ja-JP/grafana-advisor.json"
+      },
+      {
+        "text": "packages/grafana-sql/src/locales/ja-JP"
+      },
+      {
+        "text": "packages/grafana-sql/src/locales/ja-JP/grafana-sql.json"
+      },
+      {
+        "text": "public/app/plugins/datasource/azuremonitor/locales/ja-JP"
       }
     ]
   },
@@ -163,8 +249,9 @@
     "slug": "appflowy",
     "category": "project",
     "funnel": "oss",
-    "summary": "データの制御権を維持しながらAIを活用できるオープンソースのコラボレーションワークスペース。",
-    "description": "AppFlowyは、プロジェクト管理、Wiki、チームの連携をAIと共に実現するコラボレーションワークスペースです。Notionに代わる主要なオープンソースの選択肢として提供されています。ユーザーはデータのコントロールを失うことなく、より多くの成果を達成することを目指しています。",
+    "kind": "business-app",
+    "summary": "AIを活用したオープンソースのコラボレーションワークスペースです。",
+    "description": "AppFlowyは、プロジェクト管理、Wiki、チームの連携をAIで統合するツールです。データのコントロールを維持しながら、より多くの成果を達成できる環境を提供します。Notionに代わる主要なオープンソースの選択肢として位置づけられています。ドキュメント作成やノート作成など、多様なコンテンツ管理に対応しています。",
     "license": "AGPL-3.0",
     "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://appflowy.com",
@@ -172,15 +259,23 @@
     "featured": false,
     "stars": 75820,
     "language": "Dart",
+    "githubCreatedAt": "2021-06-16T12:56:48Z",
+    "githubPushedAt": "2026-08-11T13:01:19Z",
     "useCases": [
       {
         "text": "プロジェクト管理"
       },
       {
-        "text": "Wikiやドキュメントの作成"
+        "text": "Wikiの構築"
       },
       {
-        "text": "チーム内でのナレッジ共有"
+        "text": "チーム内での情報共有"
+      },
+      {
+        "text": "ドキュメントの管理"
+      },
+      {
+        "text": "ノートの作成"
       }
     ],
     "keywords": [
@@ -188,36 +283,54 @@
         "text": "Notion代替"
       },
       {
-        "text": "Confluence代替"
+        "text": "プロジェクト管理"
       },
       {
-        "text": "コンテンツ管理"
+        "text": "Wiki"
       },
       {
-        "text": "ドキュメント作成"
+        "text": "ドキュメント管理"
       },
       {
-        "text": "ノート作成"
+        "text": "AIワークスペース"
+      },
+      {
+        "text": "オープンソース"
       }
     ],
     "faqs": [
       {
-        "question": "このソフトウェアの主な特徴は何ですか？",
-        "answer": "AIを活用しながらも、ユーザー自身がデータのコントロールを維持できる点が大きな特徴です。Notionに代わるオープンソースのワークスペースとして位置づけられています。"
+        "question": "AppFlowyはどのようなツールですか？",
+        "answer": "プロジェクト、Wiki、チームの連携を統合するAI搭載のコラボレーションワークスペースです。データのコントロールを保ちながら業務を進められるのが特徴です。"
       },
       {
-        "question": "どのような技術で構築されていますか？",
-        "answer": "このソフトウェアはDartというプログラミング言語を用いて開発されており、Flutterなどの技術に関連するトピックが含まれています。"
+        "question": "Notionとの違いは何ですか？",
+        "answer": "AppFlowyはNotionに代わるオープンソースの選択肢として提供されています。ユーザーが自らのデータを管理しながら、効率的に共同作業を行える環境を提供します。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "プロジェクト管理やWikiの構築、ドキュメントの作成、ノートの取り込みなど、コンテンツ管理に関連する幅広い機能が含まれています。"
+      },
+      {
+        "question": "AIはどのように活用されますか？",
+        "answer": "AIを統合することで、チームの生産性を高め、より多くの成果を達成するためのサポートを提供します。"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "frontend/resources/translations/ja-JP.json"
       }
     ]
   },
   {
     "name": "superset",
     "slug": "superset",
-    "category": "analytics",
-    "funnel": "oss",
-    "summary": "データ視覚化およびデータ探索のためのオープンソースプラットフォーム。",
-    "description": "Apache Supersetは、データの視覚化と探索を行うためのプラットフォームです。Pythonを主な言語として採用しており、ビジネス分析やインテリジェンスに活用されます。Apache-2.0ライセンスの下で提供されているオープンソースソフトウェアです。",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "データの可視化と探索を行うためのデータプラットフォームです。",
+    "description": "Apache Supersetは、データの可視化および探索のためのプラットフォームです。Pythonを主な言語としており、ビジネス分析やインテリジェンスに活用されます。ユーザーは多様なデータを分析し、視覚的なレポートを作成することが可能です。オープンソースソフトウェアとして提供されており、高度なデータ解析基盤として機能します。",
     "license": "Apache-2.0",
     "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://superset.apache.org/",
@@ -225,15 +338,23 @@
     "featured": false,
     "stars": 74364,
     "language": "Python",
+    "githubCreatedAt": "2015-07-21T18:55:34Z",
+    "githubPushedAt": "2026-08-22T01:43:17Z",
     "useCases": [
       {
-        "text": "データ視覚化"
+        "text": "データの可視化"
+      },
+      {
+        "text": "ビジネス分析"
       },
       {
         "text": "データ探索"
       },
       {
-        "text": "ビジネス分析"
+        "text": "BI（ビジネスインテリジェンス）の構築"
+      },
+      {
+        "text": "データ分析"
       }
     ],
     "keywords": [
@@ -255,65 +376,32 @@
     ],
     "faqs": [
       {
-        "question": "このソフトウェアの主な目的は何ですか？",
-        "answer": "データの視覚化およびデータ探索を行うためのプラットフォームを提供することを目的としています。"
+        "question": "どのような種類のデータに対応していますか？",
+        "answer": "Apache Supersetは、データの可視化と探索のためのプラットフォームであり、多様なソースからのデータをビジネス分析やインテリジェンスのために活用することを目的としています。"
       },
       {
-        "question": "どのようなライセンスで提供されていますか？",
+        "question": "主な開発言語は何ですか？",
+        "answer": "このソフトウェアの主な言語はPythonです。データ解析やビジネス分析を行うための基盤として提供されています。"
+      },
+      {
+        "question": "どのような用途で利用されますか？",
+        "answer": "主にビジネス分析、データの可視化、およびデータ探索といった、意思決定を支援するためのインテリジェンス活動に利用されます。"
+      },
+      {
+        "question": "ライセンス体系はどうなっていますか？",
         "answer": "Apache-2.0ライセンスの下で提供されているオープンソースソフトウェアです。"
       }
-    ]
-  },
-  {
-    "name": "anything-llm",
-    "slug": "anything-llm",
-    "category": "lowcode",
-    "funnel": "oss",
-    "summary": "ローカル優先の強力なAIエージェント体験を提供するオープンソースソフトウェア。",
-    "description": "AnythingLLMは、ユーザーが自ら知能を所有することを目的としたツールです。強力なローカルファーストのエージェント体験に必要な機能を備えています。JavaScriptで構築されており、MITライセンスの下で提供されています。",
-    "license": "MIT",
-    "japaneseStatus": "日本語ファイルが一部のみ",
-    "officialUrl": "https://anythingllm.com",
-    "githubUrl": "https://github.com/Mintplex-Labs/anything-llm",
-    "featured": false,
-    "stars": 65030,
-    "language": "JavaScript",
-    "useCases": [
-      {
-        "text": "ローカル環境でのAIエージェントの運用"
-      },
-      {
-        "text": "独自のデータを用いたエージェント構築"
-      },
-      {
-        "text": "プライバシーを重視したAI活用"
-      }
     ],
-    "keywords": [
+    "jaFileCount": 3,
+    "jaSamplePaths": [
       {
-        "text": "agent-computer"
+        "text": "superset/translations/ja"
       },
       {
-        "text": "agent-harness"
+        "text": "superset/translations/ja/LC_MESSAGES"
       },
       {
-        "text": "agent-orchestration"
-      },
-      {
-        "text": "agentic-ai"
-      },
-      {
-        "text": "ai-agents"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "このソフトウェアの主な特徴は何ですか？",
-        "answer": "ローカル優先（local-first）の設計を採用しており、ユーザーが自身の環境でAIエージェントを所有・運用できることを重視しています。"
-      },
-      {
-        "question": "ライセンスや開発言語はどのようなものですか？",
-        "answer": "JavaScriptで書かれており、MITライセンスの下で公開されているオープンソースソフトウェアです。"
+        "text": "superset/translations/ja/LC_MESSAGES/messages.po"
       }
     ]
   },
@@ -322,8 +410,9 @@
     "slug": "ghost",
     "category": "cms",
     "funnel": "oss",
-    "summary": "モダンな出版、会員制、購読、ニュースレターのための独立した技術。",
-    "description": "Ghostは、現代的な出版活動や会員制サービスの運営、ニュースレターの配信を支えるための独立した技術です。JavaScriptおよびNode.jsをベースとしたWebアプリケーションであり、ブログやCMSとしての機能を提供します。MITライセンスで公開されており、柔軟なカスタマイズが可能なオープンソースソフトウェアです。",
+    "kind": "business-app",
+    "summary": "モダンな出版や会員制、ニュースレター配信のための独立した技術です。",
+    "description": "Ghostは、現代的なパブリッシングを実現するための独立したテクノロジーを提供します。ブログの運営だけでなく、会員制サービスやサブスクリプションモデル、ニュースレターの配信にも対応しています。JavaScriptおよびNode.jsをベースとしたWebアプリケーションとして構築されています。ジャーナリズムやコンテンツ制作に特化した機能を備えています。",
     "license": "MIT",
     "japaneseStatus": "日本語ファイルあり",
     "officialUrl": "https://ghost.org",
@@ -331,98 +420,1453 @@
     "featured": false,
     "stars": 54898,
     "language": "JavaScript",
+    "githubCreatedAt": "2013-05-04T11:09:13Z",
+    "githubPushedAt": "2026-08-22T01:51:06Z",
     "useCases": [
       {
-        "text": "ブログの運営"
+        "text": "ブログ運営"
       },
       {
-        "text": "会員制サービスの構築"
+        "text": "会員制サイトの構築"
       },
       {
-        "text": "ニュースレターの発行"
+        "text": "サブスクリプションサービスの提供"
       },
       {
-        "text": "コンテンツ管理システム（CMS）の導入"
+        "text": "ニュースレターの配信"
+      },
+      {
+        "text": "コンテンツの発信"
       }
     ],
     "keywords": [
       {
-        "text": "blogging"
+        "text": "ブログ"
+      },
+      {
+        "text": "CMS"
+      },
+      {
+        "text": "Ghost"
+      },
+      {
+        "text": "JavaScript"
+      },
+      {
+        "text": "Node.js"
+      },
+      {
+        "text": "パブリッシング"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のコンテンツに適していますか？",
+        "answer": "ブログ、ジャーナリズム、ニュースレターなどの出版活動に最適化されています。また、会員制やサブスクリプションモデルを組み込んだコンテンツ配信にも対応しているのが特徴です。"
+      },
+      {
+        "question": "技術的なベースは何ですか？",
+        "answer": "このソフトウェアはJavaScriptおよびNode.jsを主な言語として使用しています。モダンなWebアプリケーションとしての技術スタックで構築されています。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "独立したパブリッシング技術として、ブログの管理、会員管理、サブスクリプション機能、ニュースレター配信などの機能を備えています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で提供されているオープンソースソフトウェアです。onite_license_type: MIT"
+      }
+    ],
+    "jaFileCount": 6,
+    "jaSamplePaths": [
+      {
+        "text": "packages/i18n/locales/ja"
+      },
+      {
+        "text": "packages/i18n/locales/ja/comments.json"
+      },
+      {
+        "text": "packages/i18n/locales/ja/ghost.json"
+      },
+      {
+        "text": "packages/i18n/locales/ja/portal.json"
+      },
+      {
+        "text": "packages/i18n/locales/ja/search.json"
+      }
+    ]
+  },
+  {
+    "name": "JeecgBoot",
+    "slug": "jeecgboot",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIを活用してシステム開発の効率を劇的に向上させる企業向け低コードプラットフォームです。",
+    "description": "JeecgBootは、一言の指示からフロントエンドとバックエンドの両方のコードやシステム全体を生成できるエンタープライズ向けのAI低コードプラットフォームです。AI Skills機能により、プロセスの描画、フォームのデザイン、レポートやダッシュボードの作成を自然言語で行うことが可能です。AIチャット、知識ベース、ワークフローオーケストレーション、MCPプラグインなどの機能を内蔵し、主要な大規模言語モデルと互換性があります。「スキルの生成からオンライン設定、コード生成、手動統合、AIによる修正」という開発モデルを採用しています。これによりJavaプロジェクトにおける繰り返しの作業の約90%を削減し、柔軟性を維持しながら開発効率を高めます。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://jeecg.com",
+    "githubUrl": "https://github.com/jeecgboot/JeecgBoot",
+    "featured": false,
+    "stars": 47432,
+    "language": "Java",
+    "githubCreatedAt": "2018-11-26T10:40:00Z",
+    "githubPushedAt": "2026-08-20T11:23:57Z",
+    "useCases": [
+      {
+        "text": "一言の指示からのシステム自動生成"
+      },
+      {
+        "text": "AIを活用した業務フローの設計と構築"
+      },
+      {
+        "text": "フォームやレポートの迅速な作成"
+      },
+      {
+        "text": "知識ベースやAIチャット機能の実装"
+      },
+      {
+        "text": "Javaプロジェクトにおける反復作業の削減"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "低コード"
+      },
+      {
+        "text": "AI開発"
+      },
+      {
+        "text": "Java"
+      },
+      {
+        "text": "コード生成"
+      },
+      {
+        "text": "ワークフロー"
+      },
+      {
+        "text": "エンタープライズ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールを使うと具体的にどのようなメリットがありますか？",
+        "answer": "AIを活用することで、システム開発における繰り返しの作業の約90%を削減できる可能性があります。一言の指示からコードやシステム全体を生成できるため、開発効率を大幅に向上させつつ、必要な柔軟性も確保できます。"
+      },
+      {
+        "question": "どのような技術スタックに対応していますか？",
+        "answer": "主な言語としてJavaを採用しており、Apache-2.0ライセンスで提供されています。また、主要な大規模言語モデルと互換性があり、AIチャットや知識ベースなどの機能を統合して利用することが可能です。"
+      },
+      {
+        "question": "開発プロセスはどのように進みますか？",
+        "answer": "「スキルの生成 → オンラインでの設定 → コードの生成 → 手動による統合 → AIによる修正」という独自のAI低コード開発モデルを導入しています。これにより、設計から実装までの工程を効率的に進めることができます。"
+      },
+      {
+        "question": "どのような機能を一言で作成できますか？",
+        "answer": "AI Skills機能を用いることで、プロセスの描画、フォームのデザイン、レポートの作成、およびダッシュボード（大屏）などの作成を一言の指示から行うことができます。また、ワークフローや知識ベースの構築も含まれます。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "siyuan",
+    "slug": "siyuan",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "人間とAIエージェントが協調して作業を行う、プライバシー重視のセルフホスト型知識管理ワークスペースです。",
+    "description": "このソフトウェアは、ユーザーのプライバシーを最優先に設計されたオープンソースの知識管理プラットフォームです。独自のサーバー環境に構築するセルフホスト形式を採用しており、情報の安全性を確保しながら利用できます。人間とAIエージェントが共存するワークスペースとして、高度な知識の整理や共同作業を実現します。Markdown形式に対応し、ナレッジグラフやデジタルガーデンの概念を取り入れた構造的な情報管理が可能です。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://b3log.org/siyuan",
+    "githubUrl": "https://github.com/siyuan-note/siyuan",
+    "featured": false,
+    "stars": 45920,
+    "language": "TypeScript",
+    "githubCreatedAt": "2020-08-30T09:21:35Z",
+    "githubPushedAt": "2026-08-21T23:22:11Z",
+    "useCases": [
+      {
+        "text": "社内ナレッジベースの構築"
+      },
+      {
+        "text": "AIエージェントを活用した情報整理"
+      },
+      {
+        "text": "プライバシーを重視したドキュメント管理"
+      },
+      {
+        "text": "Markdownを用いた技術文書の蓄積"
+      },
+      {
+        "text": "デジタルガーデンによる知識の公開"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "知識管理"
+      },
+      {
+        "text": "AIエージェント"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "プライバシー保護"
+      },
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "ナレッジグラフ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような環境で動作しますか？",
+        "answer": "セルフホスト型のソフトウェアであるため、ユーザー自身のサーバーやローカル環境に構築して利用することが可能です。これにより、外部サービスへのデータ流出を抑えつつ、プライバシーを保護した状態で運用できます。"
+      },
+      {
+        "question": "AIエージェントとどのように連携できますか？",
+        "answer": "人間とAIエージェントが同じワークスペース内で協力して作業を行うことを目的として設計されています。知識ベースを共有しながら、AIを活用した情報の整理や生成といった共同作業を行うことができます。"
+      },
+      {
+        "question": "どのような形式で情報を保存できますか？",
+        "answer": "Markdown形式に対応しています。構造的なデータ管理に適しており、ナレッジグラフの概念を取り入れたデジタルガーデンのような構成で、体系的な知識の蓄積が可能です。"
+      },
+      {
+        "question": "プライバシーに関する特徴を教えてください。",
+        "answer": "「プライバシーファースト」を掲げており、データを外部に依存せず自社環境で管理できる点が大きな特徴です。機密性の高い情報を扱う企業において、安全な知識共有基盤として活用することを想定しています。Goals"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "README.ja.md"
+      },
+      {
+        "text": "app/appearance/langs/ja.json"
+      }
+    ]
+  },
+  {
+    "name": "paperless-ngx",
+    "slug": "paperless-ngx",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "スキャン、索引作成、アーカイブが可能な文書管理システムです。",
+    "description": "paperless-ngxは、コミュニティによってサポートされている高度な文書管理システムです。ユーザーは紙の書類をスキャンし、システム内でデジタル化して保存することができます。機械学習を活用しており、ドキュメントの内容に基づいて自動的にインデックスを作成します。DjangoとAngularを用いて構築されており、効率的なアーカイブ管理を実現します。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "http://docs.paperless-ngx.com/",
+    "githubUrl": "https://github.com/paperless-ngx/paperless-ngx",
+    "featured": false,
+    "stars": 44482,
+    "language": "Python",
+    "githubCreatedAt": "2022-02-12T21:56:52Z",
+    "githubPushedAt": "2026-08-22T00:21:40Z",
+    "useCases": [
+      {
+        "text": "紙の書類のスキャンとデジタル化"
+      },
+      {
+        "text": "文書の自動索引作成"
+      },
+      {
+        "text": "ドキュメントのアーカイブ管理"
+      },
+      {
+        "text": "スキャンした資料の検索"
+      },
+      {
+        "text": "社内文書の整理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "文書管理システム"
+      },
+      {
+        "text": "DMS"
+      },
+      {
+        "text": "アーカイブ"
+      },
+      {
+        "text": "機械学習"
+      },
+      {
+        "text": "Python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このシステムでできることは何ですか？",
+        "answer": "スキャンした書類をデジタル化し、インデックスを作成してアーカイブする機能を提供します。機械学習を活用することで、ドキュメントの内容に基づいた整理や検索が効率的に行えるようになります。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "バックエンドにはPythonのDjangoフレームワークが使用されており、フロントエンドにはAngularが採用されています。これらを組み合わせることで、高度な文書管理機能を備えたシステムを実現しています。"
+      },
+      {
+        "question": "機械学習はどのように活用されますか？",
+        "answer": "ドキュメントをスキャンした際に、その内容を解析して自動的にインデックスを作成するために機械学習技術が利用されます。これにより、手動でタグ付けを行う手間を削減することが可能です。"
+      },
+      {
+        "question": "どのような種類の文書を管理できますか？",
+        "answer": "説明文には具体的な文書形式の制限は記載されていませんが、スキャン可能なあらゆるドキュメントをデジタル化し、システム内で索引を作成してアーカイブすることが可能です。}]}```jsonoven{"
+      }
+    ],
+    "jaFileCount": 3,
+    "jaSamplePaths": [
+      {
+        "text": "src/locale/ja_JP"
+      },
+      {
+        "text": "src/locale/ja_JP/LC_MESSAGES"
+      },
+      {
+        "text": "src/locale/ja_JP/LC_MESSAGES/django.po"
+      }
+    ]
+  },
+  {
+    "name": "appsmith",
+    "slug": "appsmith",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "管理画面や社内ツールを迅速に構築するためのプラットフォームです。",
+    "description": "appsmithは、管理者パネル、社内ツール、ダッシュボードを構築するためのプラットフォームです。25以上のデータベースおよび任意のAPIと統合することが可能です。TypeScriptを主な言語として採用しています。GUIを備えたアプリビルダーとして、CRUD操作や自動化を含むカスタムな内部ツールの開発を支援します。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.appsmith.com",
+    "githubUrl": "https://github.com/appsmithorg/appsmith",
+    "featured": false,
+    "stars": 40717,
+    "language": "TypeScript",
+    "githubCreatedAt": "2020-06-30T04:07:36Z",
+    "githubPushedAt": "2026-08-21T18:45:48Z",
+    "useCases": [
+      {
+        "text": "管理者パネルの構築"
+      },
+      {
+        "text": "社内用ツールの作成"
+      },
+      {
+        "text": "ダッシュボードの開発"
+      },
+      {
+        "text": "データベースとの連携"
+      },
+      {
+        "text": "APIを利用したカスタムツール制作"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "管理画面"
+      },
+      {
+        "text": "社内ツール"
+      },
+      {
+        "text": "アプリビルダー"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "CRUD"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなシステムを構築できますか？",
+        "answer": "管理者パネル、社内向けの業務ツール、データの可視化を行うためのダッシュボードなど、内部向けのアプリケーションを幅広く構築することが可能です。"
+      },
+      {
+        "question": "外部のデータソースと連携できますか？",
+        "answer": "はい、25以上の主要なデータベースに加え、任意のAPIとの統合にも対応しているため、既存のデータ基盤や外部サービスと連携してツールを作成できます。"
+      },
+      {
+        "question": "開発にはどのようなスキルが必要ですか？",
+        "answer": "TypeScriptを主な言語としており、開発者向けのツールとしての側面があるため、基本的にはプログラミングの知識を活用して構築を進めることになります。"
+      },
+      {
+        "question": "GUIでの操作は可能ですか？",
+        "answer": "はい、GUIを備えたアプリビルダーとしての機能を持っており、視覚的なインターフェースを通じてカスタムな内部ツールの構築を支援します。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "halo",
+    "slug": "halo",
+    "category": "cms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "個人ブログから企業公式サイトまで幅広く対応する多機能なオープンソースのサイト構築ツールです。",
+    "description": "Haloは、使いやすさと強力な機能を兼ね備えたオープンソースのWebサイト構築プラットフォームです。個人のブログや知識ベースの作成だけでなく、企業の公式サイトやオンラインショップの構築にも対応しています。多様なWeb制作ニーズをワンストップで満たすことができる設計となっています。Javaをベースとした技術で構築されており、幅広い用途での活用が可能です。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.halo.run",
+    "githubUrl": "https://github.com/halo-dev/halo",
+    "featured": false,
+    "stars": 39527,
+    "language": "Java",
+    "githubCreatedAt": "2018-03-21T12:56:52Z",
+    "githubPushedAt": "2026-08-18T10:08:34Z",
+    "useCases": [
+      {
+        "text": "個人用ブログの運営"
+      },
+      {
+        "text": "社内向け知識ベースの構築"
+      },
+      {
+        "text": "企業のコーポレートサイト制作"
+      },
+      {
+        "text": "オンラインショップの立ち上げ"
+      },
+      {
+        "text": "コンテンツ管理システム(CMS)としての利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "blog"
+      },
+      {
+        "text": "blog-engine"
       },
       {
         "text": "cms"
       },
       {
-        "text": "ghost"
+        "text": "content-management-system"
       },
       {
-        "text": "javascript"
+        "text": "halo"
       },
       {
-        "text": "nodejs"
+        "text": "halocms"
       }
     ],
     "faqs": [
       {
-        "question": "どのような技術スタックで構築されていますか？",
-        "answer": "このソフトウェアは、主にJavaScriptおよびNode.jsを用いて開発されています。"
+        "question": "どのような種類のサイトを作成できますか？",
+        "answer": "個人向けのブログや知識ベースから、企業向けの公式サイト、さらにはオンラインショップまで、幅広い種類のWebサイトを構築することが可能です。"
       },
       {
-        "question": "ライセンス体系はどうなっていますか？",
-        "answer": "MITライセンスの下で公開されているオープンソースソフトウェアです。"
+        "question": "このツールの主な特徴は何ですか？",
+        "answer": "強力な機能と使いやすさを両立している点が特徴です。多様なWeb制作のニーズを一元的に満たすことができるワンストップの建サイトツールとして設計されています。"
+      },
+      {
+        "question": "どのような技術スタックで動いていますか？",
+        "answer": "このソフトウェアはJavaを主な言語として開発されています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このプロジェクトはGPL-3.0ライセンスの下で提供されています。"
       }
-    ]
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
   },
   {
-    "name": "supervision",
-    "slug": "supervision",
-    "category": "lowcode",
+    "name": "Langchain-Chatchat",
+    "slug": "langchain-chatchat",
+    "category": "knowledge",
     "funnel": "oss",
-    "summary": "再利用可能なコンピュータビジョンツールを構築するためのPythonライブラリ。",
-    "description": "supervisionは、コンピュータビジョンに関する再利用可能なツールを提供します。画像処理やディープラーニングを活用した高度な解析を支援する機能を備えています。分類、インスタンスセグメンテーション、COCO形式の対応など、多様なタスクに対応可能です。",
-    "license": "MIT",
+    "kind": "business-app",
+    "summary": "Langchainと各種言語モデルを組み合わせたRAGおよびエージェントアプリケーションです。",
+    "description": "Langchain、ChatGLM、Qwen、Llamaなどの主要な言語モデルを活用したRAG（検索拡張生成）およびエージェントアプリケーションです。ローカルの知識ベースに基づいたLLMの運用を可能にする機能を備えています。Pythonで構築されており、Apache-2.0ライセンスで公開されています。 chatbotやembedding、Faissといった技術を用いて高度な対話システムを実現します。",
+    "license": "Apache-2.0",
     "japaneseStatus": "日本語ファイルなし",
-    "officialUrl": "https://supervision.roboflow.com",
-    "githubUrl": "https://github.com/roboflow/supervision",
+    "officialUrl": "https://github.com/chatchat-space/Langchain-Chatchat",
+    "githubUrl": "https://github.com/chatchat-space/Langchain-Chatchat",
     "featured": false,
-    "stars": 49642,
+    "stars": 38562,
     "language": "Python",
+    "githubCreatedAt": "2023-03-31T12:12:45Z",
+    "githubPushedAt": "2025-11-10T09:27:42Z",
     "useCases": [
       {
-        "text": "画像内のオブジェクトに対する分類（Classification）"
+        "text": "社内知識ベースを活用したチャットボットの構築"
       },
       {
-        "text": "インスタンスセグメンテーションを用いた物体検知"
+        "text": "RAGを用いた独自のデータに基づく回答生成"
       },
       {
-        "text": "低コードでのコンピュータビジョンツールの構築"
+        "text": "LLMエージェントによる業務自動化の基盤利用"
+      },
+      {
+        "text": "ローカル環境でのプライベートな対話システムの運用"
+      },
+      {
+        "text": "ChatGLMやLlama等のモデルを統合した対話インターフェースの提供"
       }
     ],
     "keywords": [
       {
-        "text": "computer-vision"
+        "text": "chatbot"
       },
       {
-        "text": "deep-learning"
+        "text": "chatchat"
       },
       {
-        "text": "image-processing"
+        "text": "chatglm"
       },
       {
-        "text": "classification"
+        "text": "chatgpt"
       },
       {
-        "text": "instance-segmentation"
+        "text": "embedding"
+      },
+      {
+        "text": "faiss"
+      },
+      {
+        "text": "fastchat"
+      },
+      {
+        "text": "gpt"
       }
     ],
     "faqs": [
       {
-        "question": "このソフトウェアは何の言語で記述されていますか？",
-        "answer": "主な開発言語はPythonです。"
+        "question": "このソフトウェアは何をベースに構築されていますか？",
+        "answer": "Langchainフレームワークと、ChatGLM、Qwen、Llamaといった複数の言語モデルをベースに構築されています。これらを組み合わせることで、RAGやエージェント機能を実現しています。"
+      },
+      {
+        "question": "どのような技術が使われていますか？",
+        "answer": "主な技術として、情報の検索拡張を行うRAG、ベクトル検索のためのFaiss、および埋め込み（embedding）技術などが含まれています。Python言語で開発されています。"
+      },
+      {
+        "question": "ローカルな知識ベースを利用できますか？",
+        "answer": "はい、このアプリケーションはローカルの知識ベースに基づいたLLMの運用を目的としており、独自のデータを用いた対話システムの構築に適しています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で公開されています。オープンソースソフトウェアとして提供されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "erpnext",
+    "slug": "erpnext",
+    "category": "accounting",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "会計や顧客管理など多岐にわたる機能を備えたオープンソースのERPシステムです。",
+    "description": "ERPNextは、企業の経営資源を統合的に管理するための自由でオープンな企業資源計画（ERP）ソフトウェアです。Pythonを主な言語として採用しており、Frappeフレームワークを基盤として構築されています。会計、資産管理、顧客関係管理（CRM）、流通、ヘルスケアなど、幅広い業務領域に対応する機能を備えています。GPL-3.0ライセンスの下で提供されており、企業の多様なニーズに応えるための包括的なプラットフォームです。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://frappe.io/erpnext",
+    "githubUrl": "https://github.com/frappe/erpnext",
+    "featured": false,
+    "stars": 38345,
+    "language": "Python",
+    "githubCreatedAt": "2011-06-08T08:20:56Z",
+    "githubPushedAt": "2026-08-21T22:28:55Z",
+    "useCases": [
+      {
+        "text": "会計管理"
+      },
+      {
+        "text": "資産管理"
+      },
+      {
+        "text": "顧客関係管理（CRM）"
+      },
+      {
+        "text": "流通・在庫管理"
+      },
+      {
+        "text": "ヘルスケア業務の管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ERP"
+      },
+      {
+        "text": "会計"
+      },
+      {
+        "text": "資産管理"
+      },
+      {
+        "text": "CRM"
+      },
+      {
+        "text": "流通"
+      },
+      {
+        "text": "Frappe"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアでどのような業務をカバーできますか？",
+        "answer": "会計、資産管理、顧客関係管理（CRM）、流通、ヘルスケアなど、企業運営に必要な幅広い業務の管理に対応しています。"
+      },
+      {
+        "question": "開発にはどのプログラミング言語が使用されていますか？",
+        "answer": "このソフトウェアは主にPythonを用いて開発されており、Frappeフレームワークを基盤として動作します。"
+      },
+      {
+        "question": "ライセンス体系はどうなっていますか？",
+        "answer": "このソフトウェアはGPL-3.0ライセンスの下で提供されているオープンソースソフトウェアです。"
+      },
+      {
+        "question": "ERPNextの主な特徴は何ですか？",
+        "answer": "企業資源計画（ERP）として、複数の業務機能を一つのシステムに統合して管理できる点が大きな特徴です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "Trilium",
+    "slug": "trilium",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ナレッジグラフを活用したパーソナルな知識ベース構築ツールです。",
+    "description": "Trilium Notesは、個人の知識を整理・蓄積するためのナレッジベース構築アプリケーションです。ElectronとTypeScriptを用いて開発されており、ローカルファーストの設計思想に基づいています。ユーザーは情報を単なるメモとして並べるだけでなく、ナレッジグラフを通じて情報の関連性を視覚的に管理できます。高度なノート管理機能を提供し、複雑な知識体系を構造化するのに適しています。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://triliumnotes.org",
+    "githubUrl": "https://github.com/TriliumNext/Trilium",
+    "featured": false,
+    "stars": 37537,
+    "language": "TypeScript",
+    "githubCreatedAt": "2017-05-23T00:30:20Z",
+    "githubPushedAt": "2026-08-22T00:33:37Z",
+    "useCases": [
+      {
+        "text": "個人のナレッジベース構築"
+      },
+      {
+        "text": "知識のグラフ構造による整理"
+      },
+      {
+        "text": "ローカル環境でのデータ管理"
+      },
+      {
+        "text": "情報収集の構造化"
+      },
+      {
+        "text": "プロジェクト情報の蓄積"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ナレッジマネジメント"
+      },
+      {
+        "text": "ノート管理"
+      },
+      {
+        "text": "知識グラフ"
+      },
+      {
+        "text": "ローカルファースト"
+      },
+      {
+        "text": "Electron"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなことができるのですか？",
+        "answer": "Trilium Notesは、個人のためのナレッジベースを構築するためのツールです。単なるメモの羅列ではなく、情報の関連性を構造化した「ナレッジグラフ」として管理できるのが特徴です。"
+      },
+      {
+        "question": "データの保存場所はどうなっていますか？",
+        "answer": "このソフトウェアはローカルファーストの設計を採用しています。そのため、ユーザー自身のローカル環境にデータを保持しながら利用することが可能です。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "TypeScriptを用いて開発されており、Electronフレームワークをベースとしたアプリケーションとして提供されています。デスクトップアプリとして動作する仕組みを備えています。"
+      },
+      {
+        "question": "ナレッジグラフとはどのような機能ですか？",
+        "answer": "知識の関連性を視覚的に捉えたり、構造化したりするための仕組みです。情報を単一の点として扱うのではなく、他の情報とのつながりを含めて管理することを可能にします。"
+      }
+    ],
+    "jaFileCount": 10,
+    "jaSamplePaths": [
+      {
+        "text": "apps/client/src/translations/ja"
+      },
+      {
+        "text": "apps/client/src/translations/ja/entry.json"
+      },
+      {
+        "text": "apps/client/src/translations/ja/translation.json"
+      },
+      {
+        "text": "apps/server/src/assets/translations/ja"
+      },
+      {
+        "text": "apps/server/src/assets/translations/ja/server.json"
+      }
+    ]
+  },
+  {
+    "name": "refine",
+    "slug": "refine",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "柔軟性の高い、社内ツールやB2Bアプリ構築のためのReactフレームワークです。",
+    "description": "refineは、管理画面、ダッシュボード、およびB2Bアプリケーションを構築するためのReactフレームワークです。比類のない柔軟性を備えており、開発者が迅速に機能を実装できるよう設計されています。TypeScriptを主な言語としてサポートしており、型安全な開発が可能です。CRUD操作やGraphQLとの連携など、高度なバックエンド統合にも対応しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://refine.dev",
+    "githubUrl": "https://github.com/refinedev/refine",
+    "featured": false,
+    "stars": 35547,
+    "language": "TypeScript",
+    "githubCreatedAt": "2021-01-20T12:01:32Z",
+    "githubPushedAt": "2026-06-05T15:19:38Z",
+    "useCases": [
+      {
+        "text": "社内管理ツールの構築"
+      },
+      {
+        "text": "管理画面の作成"
+      },
+      {
+        "text": "ダッシュボードの開発"
+      },
+      {
+        "text": "B2Bアプリケーションの開発"
+      },
+      {
+        "text": "CRUD機能の実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "admin"
+      },
+      {
+        "text": "admin-ui"
+      },
+      {
+        "text": "ant-design"
+      },
+      {
+        "text": "crud"
+      },
+      {
+        "text": "frontend-framework"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のアプリに適していますか？",
+        "answer": "主に社内ツール、管理者用パネル、データ可視化のためのダッシュボード、およびB2B向けのアプリケーション構築に適しています。"
+      },
+      {
+        "question": "主な技術スタックは何ですか？",
+        "answer": "Reactをベースとしたフレームワークであり、TypeScriptを主な言語としてサポートしています。また、Ant DesignなどのUIライブラリとの親和性も考慮されています。"
+      },
+      {
+        "question": "CRUD操作やデータ取得には対応していますか？",
+        "answer": "はい、CRUD操作の構築やGraphQLを用いたデータ連携など、バックエンドとの統合に関する柔軟な機能を備えています。"
+      },
+      {
+        "question": "開発の自由度はどの程度ですか？",
+        "answer": "「比類のない柔軟性」を特徴としており、特定の制約に縛られすぎることなく、要件に合わせてカスタマイズしながらアプリケーションを構築することが可能です。variance="
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "filament",
+    "slug": "filament",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Laravel向けの強力なオープンソースUIフレームワークです。",
+    "description": "Filamentは、PHPのフレームワークであるLaravel向けに設計された高度なUIフレームワークです。Livewireと連携することで、アプリケーションや管理画面を迅速に構築・提供することを可能にします。フォーム機能やビルド機能など、開発に必要な機能を備えています。Alpine.jsなどの技術も活用されており、効率的なフロントエンド開発を実現します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://filamentphp.com",
+    "githubUrl": "https://github.com/filamentphp/filament",
+    "featured": false,
+    "stars": 31866,
+    "language": "PHP",
+    "githubCreatedAt": "2020-03-19T00:19:18Z",
+    "githubPushedAt": "2026-08-21T12:41:06Z",
+    "useCases": [
+      {
+        "text": "管理画面の構築"
+      },
+      {
+        "text": "業務アプリケーションの開発"
+      },
+      {
+        "text": "カスタムCMSの作成"
+      },
+      {
+        "text": "データ入力フォームの実装"
+      },
+      {
+        "text": "社内ツールの迅速なプロトタイプ制作"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "admin"
+      },
+      {
+        "text": "alpine-js"
+      },
+      {
+        "text": "builder"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "filament"
+      },
+      {
+        "text": "forms"
+      },
+      {
+        "text": "laravel"
+      },
+      {
+        "text": "laravel-admin-panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Filamentは何を開発するためのツールですか？",
+        "answer": "Laravelフレームワーク上で動作するアプリケーションや管理画面を、高速に構築するためのUIフレームワークです。特にLivewireとの連携により、効率的なフロントエンドの実装を支援します。"
+      },
+      {
+        "question": "このツールを使ってどのような画面が作れますか？",
+        "answer": "主な用途として、データの入力・編集を行うためのフォーム機能や、システム全体を管理するための管理パネル（Admin Panel）、CMSなどのインターフェースを構築できます。"
+      },
+      {
+        "question": "開発においてどのような技術が活用されていますか？",
+        "answer": "PHPをベースとしたLaravelフレームワークに加え、フロントエンドのインタラクティブな操作を実現するためのAlpine.jsなどが組み込まれています。"
+      },
+      {
+        "question": "Filamentを利用する主なメリットは何ですか？",
+        "answer": "Livewireと連携することで、複雑なUIコンポーネントや管理画面を迅速に構築・デプロイできる点です。開発スピードを向上させながら、強力なUIを提供することが可能です。Goals"
+      }
+    ],
+    "jaFileCount": 95,
+    "jaSamplePaths": [
+      {
+        "text": "packages/actions/resources/lang/ja"
+      },
+      {
+        "text": "packages/actions/resources/lang/ja/associate.php"
+      },
+      {
+        "text": "packages/actions/resources/lang/ja/attach.php"
+      },
+      {
+        "text": "packages/actions/resources/lang/ja/create.php"
+      },
+      {
+        "text": "packages/actions/resources/lang/ja/delete.php"
+      }
+    ]
+  },
+  {
+    "name": "sim",
+    "slug": "sim",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIエージェントやワークフローを構築・デプロイ・監視するための共同作業スペースです。",
+    "description": "Simは、AIエージェントやワークフローの構築からデプロイ、モニタリングまでを一貫して行うための共同作業スペースを提供します。すでに10万人以上の開発者によって活用されています。TypeScriptで構築されており、Agentic Workflowなどの高度な自動化を実現するための基盤となります。ユーザーはチームで協力しながらAIを活用した業務プロセスを設計することが可能です。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://www.sim.ai",
+    "githubUrl": "https://github.com/simstudioai/sim",
+    "featured": false,
+    "stars": 29451,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-01-05T22:47:49Z",
+    "githubPushedAt": "2026-08-22T02:01:40Z",
+    "useCases": [
+      {
+        "text": "AIエージェントの構築"
+      },
+      {
+        "text": "ワークフローの設計とデプロイ"
+      },
+      {
+        "text": "AIシステムのモニタリング"
+      },
+      {
+        "text": "共同での開発作業"
+      },
+      {
+        "text": "Agentic Workflowの実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AIエージェント"
+      },
+      {
+        "text": "ワークフロー自動化"
+      },
+      {
+        "text": "AIプラットフォーム"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "AgenticWorkflow"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Simでできることは何ですか？",
+        "answer": "AIエージェントやそれらを実行するためのワークフローを構築し、デプロイした後の状態を監視することができます。複数の開発者が共同で作業を進めるためのスペースを提供しています。"
+      },
+      {
+        "question": "どのような技術スタックで提供されていますか？",
+        "answer": "主な開発言語としてTypeScriptが使用されています。Apache-2.0ライセンスの下で公開されているオープンソースソフトウェアです。"
+      },
+      {
+        "question": "誰に向けたツールですか？",
+        "answer": "すでに10万人以上のビルダー（開発者）によって利用されており、AIエージェントや高度な自動化ワークフローを構築・運用したい開発者や技術担当者に適しています。"
+      },
+      {
+        "question": "Agentic Workflowとは何ですか？",
+        "answer": "単一の指示に対する回答だけでなく、AIが自律的に目標達成のために計画を立て、ツールを使用したり思考を繰り返したりするような動的なワークフローのことを指します。Simはこの構築を支援します。Goals"
+      }
+    ],
+    "jaFileCount": 219,
+    "jaSamplePaths": [
+      {
+        "text": "apps/docs/content/docs/ja"
+      },
+      {
+        "text": "apps/docs/content/docs/ja/api-reference"
+      },
+      {
+        "text": "apps/docs/content/docs/ja/api-reference/authentication.mdx"
+      },
+      {
+        "text": "apps/docs/content/docs/ja/api-reference/getting-started.mdx"
+      },
+      {
+        "text": "apps/docs/content/docs/ja/api-reference/meta.json"
+      }
+    ]
+  },
+  {
+    "name": "wiki",
+    "slug": "wiki",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Node.jsで構築された、モダンで強力なWikiアプリケーションです。",
+    "description": "Wiki.jsは、Node.jsをベースとした高度な機能を備えたWikiアプリケーションです。クロスプラットフォームに対応しており、ドキュメント管理に最適な環境を提供します。Markdown形式での記述やGitとの連携が可能であり、情報の構造化に適しています。Vueを用いて構築されたモダンなインターフェースを備えています。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://js.wiki",
+    "githubUrl": "https://github.com/requarks/wiki",
+    "featured": false,
+    "stars": 28785,
+    "language": "Vue",
+    "githubCreatedAt": "2016-08-16T19:35:26Z",
+    "githubPushedAt": "2026-08-21T07:29:12Z",
+    "useCases": [
+      {
+        "text": "社内マニュアルの整備"
+      },
+      {
+        "text": "技術ドキュメントの管理"
+      },
+      {
+        "text": "プロジェクトの進捗共有"
+      },
+      {
+        "text": "ナレッジベースの構築"
+      },
+      {
+        "text": "チーム内の情報集約"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Wiki"
+      },
+      {
+        "text": "ドキュメント管理"
+      },
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "Node.js"
+      },
+      {
+        "text": "オープンソース"
+      },
+      {
+        "text": "クロスプラットフォーム"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような形式で文書を記述できますか？",
+        "answer": "Markdown形式での記述に対応しています。これにより、構造化されたドキュメントを効率的に作成・編集することが可能です。"
+      },
+      {
+        "question": "Gitとの連携は可能ですか？",
+        "answer": "はい、Gitとの連携機能が含まれています。バージョン管理システムと組み合わせて、情報の履歴を正確に追跡できます。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "Node.jsをベースとしており、フロントエンドにはVueが使用されています。モダンなWeb技術を用いて開発されたアプリケーションです。"
+      },
+      {
+        "question": "クロスプラットフォームに対応していますか？",
+        "answer": "はい、クロスプラットフォームに対応しているため、多様な環境での利用が可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "redash",
+    "slug": "redash",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "多様なデータソースを接続して可視化・共有できるビジネスインテリジェンス基盤です。",
+    "description": "redashは、企業がデータを活用して意思決定を行えるようにするためのツールです。あらゆるデータソースに接続し、データの可視化やダッシュボードの作成、情報の共有を容易に行うことができます。Pythonを主な言語としており、ビジネスインテリジェンス（BI）を実現するための機能を備えています。Athena、BigQuery、Databricksといった主要なデータ基盤との連携にも対応しています。",
+    "license": "BSD-2-Clause",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "http://redash.io/",
+    "githubUrl": "https://github.com/getredash/redash",
+    "featured": false,
+    "stars": 28762,
+    "language": "Python",
+    "githubCreatedAt": "2013-10-28T13:19:39Z",
+    "githubPushedAt": "2026-08-18T16:14:11Z",
+    "useCases": [
+      {
+        "text": "社内データの統合ダッシュボード作成"
+      },
+      {
+        "text": "各種データソースからのリアルタイム可視化"
+      },
+      {
+        "text": "ビジネスインテリジェンス（BI）の構築"
+      },
+      {
+        "text": "チーム間でのデータ共有と分析"
+      },
+      {
+        "text": "BigQueryやDatabricksとの連携によるデータ分析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "analytics"
+      },
+      {
+        "text": "athena"
+      },
+      {
+        "text": "bi"
+      },
+      {
+        "text": "bigquery"
+      },
+      {
+        "text": "business-intelligence"
+      },
+      {
+        "text": "dashboard"
+      },
+      {
+        "text": "databricks"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデータソースに接続できますか？",
+        "answer": "説明文には「あらゆるデータソース（any data source）」と記載されており、特定の制限なく多様なデータへの接続を可能にする設計となっています。"
+      },
+      {
+        "question": "このツールでできる主な機能は何ですか？",
+        "answer": "データの可視化、ダッシュボードの作成、および分析結果の共有を行うことができます。これらを通じて企業がデータ駆動型の意思決定を行えるようにします。"
+      },
+      {
+        "question": "対応している主要なクラウドサービスはありますか？",
+        "answer": "主なトピックとして、Amazon Athena、Google BigQuery、Databricksなどとの連携が含まれています。"
+      },
+      {
+        "question": "開発において使用される主な言語は何ですか？",
+        "answer": "このソフトウェアの主な言語はPythonです。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "bagisto",
+    "slug": "bagisto",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "大規模な商品数に対応可能なLaravelベースのオープンソースECプラットフォームです。",
+    "description": "Bagistoは、Laravelで構築されたエンタープライズ規模のコマースをサポートするオープンソースのECプラットフォームです。最大1,000万点以上のSKU（在庫管理単位）をサポートしており、大規模な商取引にも対応可能です。B2Bやブロックチェーンを活用したECなど、多様なビジネスモデルに対応できるフレームワークを備えています。ヘッドレスコマース構成もサポートしているため、柔軟なシステム構築が可能です。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://bagisto.com",
+    "githubUrl": "https://github.com/bagisto/bagisto",
+    "featured": false,
+    "stars": 27988,
+    "language": "PHP",
+    "githubCreatedAt": "2018-09-10T09:12:41Z",
+    "githubPushedAt": "2026-08-21T18:29:56Z",
+    "useCases": [
+      {
+        "text": "大規模な商品ラインナップを持つECサイトの構築"
+      },
+      {
+        "text": "B2B向けの卸売・販売プラットフォームの運用"
+      },
+      {
+        "text": "ブロックチェーン技術を統合したECシステムの構築"
+      },
+      {
+        "text": "ヘッドレスコマース構成によるフロントエンドのカスタマイズ"
+      },
+      {
+        "text": "多機能なECフレームワークを活用した独自の商取引基盤開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "b2b-ecommerce"
+      },
+      {
+        "text": "blockchain-ecommerce"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "ecommerce-framework"
+      },
+      {
+        "text": "ecommerce-platform"
+      },
+      {
+        "text": "headless-commerce"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "最大でどの程度の商品数を扱うことができますか？",
+        "answer": "このプラットフォームは、最大1,000万以上のSKU（在庫管理単位）をサポートするように設計されています。そのため、大規模な商品ラインナップを持つ企業でも安心して利用することが可能です。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "PHPの主要なフレームワークであるLaravelを用いて構築されています。Laravelベースであるため、拡張性が高く、エンタープライズ規模のコマース要件にも対応できる設計となっています。"
+      },
+      {
+        "question": "ヘッドレスコマースに対応していますか？",
+        "answer": "はい、ヘッドレスコマースをサポートしています。これにより、バックエンドとフロントエンドを分離した柔軟なシステム構成を選択して構築することが可能です。"
+      },
+      {
+        "question": "B2Bやブロックチェーンなどの特殊な用途にも対応できますか？",
+        "answer": "主なトピックとしてB2B向けECやブロックチェーンを活用したECが含まれています。多様なビジネスモデルに対応できるフレームワークとしての特性を備えています。"
+      }
+    ],
+    "jaFileCount": 34,
+    "jaSamplePaths": [
+      {
+        "text": "lang/ja"
+      },
+      {
+        "text": "lang/ja/auth.php"
+      },
+      {
+        "text": "lang/ja/pagination.php"
+      },
+      {
+        "text": "lang/ja/passwords.php"
+      },
+      {
+        "text": "lang/ja/validation.php"
+      }
+    ]
+  },
+  {
+    "name": "platform",
+    "slug": "platform",
+    "category": "crm",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "プロジェクト管理、CRM、人事管理などを統合したオールインワンプラットフォームです。",
+    "description": "Hulyは、プロジェクト管理、チャット、顧客関係管理（CRM）、人事管理（HRMS）などの機能を備えた包括的なプラットフォームです。LinearやJira、Slack、Notionといった複数のツールを一つにまとめる代替手段として提供されています。主な機能には、課題管理システム、求職者追跡システム、および社内コミュニケーションのためのチャットアプリケーションが含まれます。TypeScriptで開発されており、多様なビジネスプロセスを一元的に管理することを目的としています。",
+    "license": "EPL-2.0",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://huly.io",
+    "githubUrl": "https://github.com/hcengineering/platform",
+    "featured": false,
+    "stars": 27411,
+    "language": "TypeScript",
+    "githubCreatedAt": "2021-08-02T19:39:23Z",
+    "githubPushedAt": "2026-08-11T12:09:34Z",
+    "useCases": [
+      {
+        "text": "プロジェクトの進捗管理と課題トラッキング"
+      },
+      {
+        "text": "顧客情報の管理（CRM）"
+      },
+      {
+        "text": "採用活動における求職者の追跡"
+      },
+      {
+        "text": "社内コミュニケーションのためのチャット利用"
+      },
+      {
+        "text": "人事管理および従業員の情報管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "プロジェクト管理"
+      },
+      {
+        "text": "CRM"
+      },
+      {
+        "text": "課題管理"
+      },
+      {
+        "text": "チャットアプリ"
+      },
+      {
+        "text": "人事管理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなツールを代替できるのですか？",
+        "answer": "Linear、Jira、Slack、Notion、Motionといった複数の業務ツールの機能を統合したオールインワンのプラットフォームとして設計されています。"
+      },
+      {
+        "question": "主な機能には何が含まれていますか？",
+        "answer": "プロジェクト管理や課題トラッキングに加え、チャット機能、顧客関係管理（CRM）、人事管理システム（HRMS）、求職者追跡システムなどが含まれます。"
+      },
+      {
+        "question": "このソフトウェアは何で開発されていますか？",
+        "answer": "このプラットフォームはTypeScriptを用いて構築されています。"
       },
       {
         "question": "どのようなライセンスで提供されていますか？",
-        "answer": "MITライセンスの下で公開されています。"
+        "answer": "EPL-2.0（Eclipse Public License 2.0）というオープンソースライセンスの下で提供されています。"
+      }
+    ],
+    "jaFileCount": 65,
+    "jaSamplePaths": [
+      {
+        "text": "foundations/core/packages/core/lang/ja.json"
+      },
+      {
+        "text": "foundations/core/packages/platform/lang/ja.json"
+      },
+      {
+        "text": "foundations/core/packages/platform/src/__tests__/lang/ja.json"
+      },
+      {
+        "text": "packages/presentation/lang/ja.json"
+      },
+      {
+        "text": "packages/ui/lang/ja.json"
+      }
+    ]
+  },
+  {
+    "name": "onlook",
+    "slug": "onlook",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIを活用してReactアプリケーションを視覚的に構築・編集できるデザインツールです。",
+    "description": "onlookは、デザイナー向けに設計されたオープンソースのAIファーストなデザインツールです。ユーザーはAIの力を借りて、Reactアプリケーションのビジュアル構築、スタイリング、および編集を行うことができます。Figmaのような直感的な操作とコード生成を組み合わせたワークフローを提供します。TypeScriptで開発されており、デザインからコードへの変換を効率化する機能を備えています。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://onlook.com",
+    "githubUrl": "https://github.com/onlook-dev/onlook",
+    "featured": false,
+    "stars": 26531,
+    "language": "TypeScript",
+    "githubCreatedAt": "2024-06-25T19:16:02Z",
+    "githubPushedAt": "2026-07-22T02:07:29Z",
+    "useCases": [
+      {
+        "text": "Reactアプリの視覚的なUI構築"
+      },
+      {
+        "text": "AIを活用したスタイリングの自動化"
+      },
+      {
+        "text": "デザインからコードへの変換作業"
+      },
+      {
+        "text": "フロントエンドのデザイン編集"
+      },
+      {
+        "text": "プロトタイプの迅速なビジュアル制作"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "cursor"
+      },
+      {
+        "text": "design-to-code"
+      },
+      {
+        "text": "editor"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような技術スタックに対応していますか？",
+        "answer": "主にReactアプリケーションの開発を対象としており、デザインからコードへの変換やスタイリングの編集を行うことができます。"
+      },
+      {
+        "question": "デザイナーと開発者の連携にどのように役立ちますか？",
+        "answer": "視覚的なエディタを通じてデザインを構築できるため、デザインの意図を正確に反映したコードの生成や調整がスムーズになります。"
+      },
+      {
+        "question": "AI機能は具体的にどのようなことを行いますか？",
+        "answer": "AIを活用してアプリケーションのビジュアル構築やスタイリング、編集などの作業を支援し、効率的な開発を可能にします。"
+      },
+      {
+        "question": "Figmaとの関係はどうなっていますか？",
+        "answer": "Figmaのような操作感を取り入れたデザインツールとして位置づけられており、デザインからコードへの変換プロセスを重視しています。铵"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "apps/web/client/messages/ja.json"
+      }
+    ]
+  },
+  {
+    "name": "dataease",
+    "slug": "dataease",
+    "category": "analytics",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "データ分析と可視化を可能にするオープンソースのBIツールです。",
+    "description": "dataeaseは、Tableauに代わるオープンソースのビジネスインテリジェンス（BI）ツールです。ユーザーが簡単に扱えるように設計されており、データの可視化を実現する強力な機能を提供します。Javaで開発されており、Apache DorisやKettle、Supersetといった技術スタックとの連携も想定されています。EChartsをベースとした高度なデータビジュアライゼーションが可能です。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://dataease.cn/",
+    "githubUrl": "https://github.com/dataease/dataease",
+    "featured": false,
+    "stars": 24356,
+    "language": "Java",
+    "githubCreatedAt": "2021-02-02T04:10:21Z",
+    "githubPushedAt": "2026-08-22T00:45:41Z",
+    "useCases": [
+      {
+        "text": "ビジネスインテリジェンスの構築"
+      },
+      {
+        "text": "データの可視化"
+      },
+      {
+        "text": "データ分析"
+      },
+      {
+        "text": "ダッシュボードの作成"
+      },
+      {
+        "text": "Tableauの代替ツールとしての利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "BIツール"
+      },
+      {
+        "text": "データ可視化"
+      },
+      {
+        "text": "Apache Doris"
+      },
+      {
+        "text": "Kettle"
+      },
+      {
+        "text": "ECharts"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "dataeaseはどのようなツールですか？",
+        "answer": "dataeaseは、誰もが簡単に使えるように設計されたオープンソースのビジネスインテリジェンス（BI）ツールです。データの可視化や分析を行うための機能を提供しており、Tableauのような商用ツールの代替として利用できます。"
+      },
+      {
+        "question": "主な技術スタックは何ですか？",
+        "answer": "このツールはJavaで開発されています。また、Apache Doris、Kettle、Supersetといったデータ基盤やETLツールとの連携、およびEChartsを用いたグラフ描画などのトピックが含まれています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "dataeaseはGPL-3.0ライセンスの下で公開されているオープンソースソフトウェアです。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "主な機能として、データの可視化（データビジュアライゼーション）やビジネスインテリジェンスの構築が挙げられます。ユーザーが扱いやすいインターフェースを通じて、複雑なデータを分析可能な形に変換することが可能です。"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "docs/README.ja.md"
       }
     ]
   }

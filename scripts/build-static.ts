@@ -69,6 +69,16 @@ const categoryLabel = (value: string) => categoryLabels[value] || value
 // 出口は2つある。業務アプリは「そのOSSを改造して納品する」(vibe-oss)、
 // AI開発ツールは「それを使って作る」(vibe-prototype)。Ollama をカスタマイズ
 // しませんかと誘う事故を避けるため、文面とCTAをここで一括して切り替える。
+// Search Console の実アクセス。無ければ空で動く。
+const trafficBySlug: Record<string, { clicks: number; impressions: number }> = await (async () => {
+  try {
+    const raw = await fs.readFile(path.join(root, 'data', 'traffic.json'), 'utf8')
+    return (JSON.parse(raw) as { traffic?: Record<string, { clicks: number; impressions: number }> }).traffic || {}
+  } catch {
+    return {}
+  }
+})()
+
 // 並び順の重み。自社のLP・Brain・デモを持つOSSを常に上に出す。
 // アクセスが増えたものにLP/Brainを作れば、そのまま上位に上がる運用になる。
 function priorityOf(project: Project): number {
@@ -80,6 +90,9 @@ function priorityOf(project: Project): number {
   if (project.sourceLpName) score += 200
   if (project.japaneseStatus === '日本語ファイルなし') score += 100
   score += Math.min(300, Math.round(Math.log10(Math.max(1, Number(project.stars || 0))) * 60))
+  // 実際に検索で拾われているものを上げる。LP・Brainを作る候補がそのまま上に来る。
+  const hit = trafficBySlug[project.slug]
+  if (hit) score += Math.min(600, Math.round(Math.log10(Math.max(1, hit.impressions)) * 80) + hit.clicks * 5)
   return score
 }
 const byPriority = (a: Project, b: Project) => priorityOf(b) - priorityOf(a) || Number(b.stars || 0) - Number(a.stars || 0) || a.name.localeCompare(b.name)

@@ -185,6 +185,16 @@ export interface OssProject {
   sourceLpName?: string | null;
   stars?: number | null;
   language?: string | null;
+  priority?: number | null;
+  jaFileCount?: number | null;
+  jaSamplePaths?:
+    | {
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  githubCreatedAt?: string | null;
+  githubPushedAt?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -329,6 +339,16 @@ export interface OssProjectsSelect<T extends boolean = true> {
   sourceLpName?: T;
   stars?: T;
   language?: T;
+  priority?: T;
+  jaFileCount?: T;
+  jaSamplePaths?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  githubCreatedAt?: T;
+  githubPushedAt?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -120,14 +120,16 @@ function parseGenerated(raw: string): Generated | null {
 }
 
 async function generate(repo: Repo): Promise<Generated | null> {
-  for (let attempt = 0; attempt < 3; attempt++) {
+  // 3回に1回ほど faqs を1件しか返さず、字数の門番に落ちる（実測）。
+  // 回数を増やし、再試行では温度を上げて出力を変える。
+  for (let attempt = 0; attempt < 5; attempt++) {
     try {
       const res = await fetch(OLLAMA, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // gemma4は思考型。think:false を外すと隠れ推論がnum_predictを食って応答が空になる。
         // format:"json" が無いと、項目を増やしたときに括弧が壊れたJSONを返す（実測3/3失敗）。
-        body: JSON.stringify({ model: MODEL, prompt: prompt(repo), stream: false, think: false, format: 'json', options: { temperature: 0.3, num_predict: 2000 } }),
+        body: JSON.stringify({ model: MODEL, prompt: prompt(repo), stream: false, think: false, format: 'json', options: { temperature: 0.3 + attempt * 0.15, num_predict: 2000 } }),
         signal: AbortSignal.timeout(300_000),
       })
       if (!res.ok) throw new Error(`ollama ${res.status}`)
@@ -135,7 +137,7 @@ async function generate(repo: Repo): Promise<Generated | null> {
       const parsed = parseGenerated(body.response || '')
       if (parsed) return parsed
     } catch (error) {
-      if (attempt === 2) console.log(`  ! ${repo.full_name}: ${(error as Error).message}`)
+      if (attempt === 4) console.log(`  ! ${repo.full_name}: ${(error as Error).message}`)
     }
   }
   return null
