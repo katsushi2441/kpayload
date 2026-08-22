@@ -204,6 +204,7 @@ ${structuredData.map((item) => `<script type="application/ld+json">${json(item)}
 ${styles()}${analytics()}</head><body>
 <header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="${publicBase}/media-mesh.php">メディアメッシュ</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
 ${body}
+<img src="${publicBase}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
 <footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="${publicBase}/media-mesh.php">Media Mesh</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
 </body></html>`
 }
