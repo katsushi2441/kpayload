@@ -29,17 +29,22 @@ type Enriched = {
   featured: boolean
   stars: number
   language: string | null
+  jaFileCount?: number
+  jaSamplePaths?: Array<{ text: string }>
+  githubCreatedAt?: string | null
+  githubPushedAt?: string | null
+  kind?: string
   useCases: Array<{ text: string }>
   keywords: Array<{ text: string }>
   faqs: Array<{ question: string; answer: string }>
 }
 
-const jaByRepo = new Map<string, string>()
+const jaByRepo = new Map<string, { status: string; hitCount: number; samples: string[] }>()
 try {
   for (const name of await fs.readdir(jaDir)) {
     if (!name.endsWith('.json')) continue
-    const data = JSON.parse(await fs.readFile(path.join(jaDir, name), 'utf8')) as { full_name: string; status: string }
-    jaByRepo.set(data.full_name.toLowerCase(), data.status)
+    const data = JSON.parse(await fs.readFile(path.join(jaDir, name), 'utf8')) as { full_name: string; status: string; hitCount?: number; samples?: string[] }
+    jaByRepo.set(data.full_name.toLowerCase(), { status: data.status, hitCount: data.hitCount || 0, samples: data.samples || [] })
   }
 } catch {
   console.log('日本語判定はまだ無い（detect-ja 未実行）。japaneseStatus は 未調査 のままにする。')
@@ -54,8 +59,12 @@ for (const name of files) {
   const record = JSON.parse(await fs.readFile(path.join(enrichedDir, name), 'utf8')) as Enriched
   if (handmade.has(record.slug)) continue // 手作り分を自動生成で上書きしない
   const repo = (record.githubUrl || '').replace(/^https?:\/\/github\.com\//i, '').replace(/\/+$/, '').toLowerCase()
-  const status = jaByRepo.get(repo)
-  if (status) record.japaneseStatus = status
+  const ja = jaByRepo.get(repo)
+  if (ja) {
+    record.japaneseStatus = ja.status
+    record.jaFileCount = ja.hitCount
+    record.jaSamplePaths = ja.samples.slice(0, 5).map((text) => ({ text }))
+  }
   records.push(record)
 }
 

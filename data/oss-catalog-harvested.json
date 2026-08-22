@@ -1,0 +1,429 @@
+[
+  {
+    "name": "hugo",
+    "slug": "hugo",
+    "category": "cms",
+    "funnel": "oss",
+    "summary": "世界最速のWebサイト構築フレームワークであるHugo。",
+    "description": "Hugoは、Webサイトを構築するための非常に高速なフレームワークです。静的サイトジェネレーターとして機能し、ブログエンジンやCMS、ドキュメント作成ツールとしても活用できます。Go言語で開発されており、Apache-2.0ライセンスの下で公開されています。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://gohugo.io",
+    "githubUrl": "https://github.com/gohugoio/hugo",
+    "featured": false,
+    "stars": 89484,
+    "language": "Go",
+    "useCases": [
+      {
+        "text": "ブログの運営"
+      },
+      {
+        "text": "コンテンツ管理システム（CMS）の構築"
+      },
+      {
+        "text": "技術ドキュメントの作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "blog-engine"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "content-management-system"
+      },
+      {
+        "text": "documentation-tool"
+      },
+      {
+        "text": "static-site-generator"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Hugoは何で開発されていますか？",
+        "answer": "HugoはGo言語を用いて開発されているフレームワークです。"
+      },
+      {
+        "question": "どのような種類のサイトを構築できますか？",
+        "answer": "ブログ、コンテンツ管理システム、ドキュメント作成ツールなど、様々なWebサイトの構築が可能です。"
+      }
+    ]
+  },
+  {
+    "name": "Understand-Anything",
+    "slug": "understand-anything",
+    "category": "knowledge",
+    "funnel": "oss",
+    "summary": "コードを探索可能なインタラクティブなナレッジグラフに変換するツール",
+    "description": "あらゆるコードを、探索や検索、質問が可能なインタラクティブなナレッジグラフへと変換します。単に視覚的に優れたグラフを作成するだけでなく、学習に役立つ構造を提供することに重点を置いています。Claude Code、Codex、Cursor、Copilot、Gemini CLIなどと連携して動作します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://understand-anything.com/",
+    "githubUrl": "https://github.com/Egonex-AI/Understand-Anything",
+    "featured": false,
+    "stars": 80037,
+    "language": "TypeScript",
+    "useCases": [
+      {
+        "text": "コードベースの構造分析"
+      },
+      {
+        "text": "インタラクティブなナレッジグラフによる知識の探索"
+      },
+      {
+        "text": "開発ツールとの連携によるコード理解の深化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "knowledge graph"
+      },
+      {
+        "text": "codebase analysis"
+      },
+      {
+        "text": "developer tools"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "AI agent"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなツールと連携できますか？",
+        "answer": "Claude Code、Codex、Cursor、Copilot、Gemini CLIなどとの連携に対応しています。"
+      },
+      {
+        "question": "このツールの主な目的は何ですか？",
+        "answer": "単に印象の良いグラフを作るのではなく、学習や探索、質問が可能なナレッジグラフを作成することを目的としています。"
+      }
+    ]
+  },
+  {
+    "name": "grafana",
+    "slug": "grafana",
+    "category": "analytics",
+    "funnel": "oss",
+    "summary": "多種多様なデータソースを統合して可視化するオープンソースのオブザーバビリティ・プラットフォーム。",
+    "description": "Grafanaは、メトリクス、ログ、トレースなどのデータを一元的に可視化できるオープンで構成可能なプラットフォームです。Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、複数の異なるデータソースから情報を取得できます。ダッシュボード機能を通じて、データの分析や監視を効率的に行うことが可能です。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://grafana.com",
+    "githubUrl": "https://github.com/grafana/grafana",
+    "featured": false,
+    "stars": 76333,
+    "language": "TypeScript",
+    "useCases": [
+      {
+        "text": "メトリクス、ログ、トレースの統合的な可視化"
+      },
+      {
+        "text": "PrometheusやElasticsearch等の外部データソースとの連携"
+      },
+      {
+        "text": "ビジネスインテリジェンスのためのダッシュボード構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "alerting"
+      },
+      {
+        "text": "analytics"
+      },
+      {
+        "text": "business-intelligence"
+      },
+      {
+        "text": "dashboard"
+      },
+      {
+        "text": "data-visualization"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデータソースに対応していますか？",
+        "answer": "Prometheus、Loki、Elasticsearch、InfluxDB、Postgresなど、多様なデータソースからのデータを可視化することが可能です。"
+      },
+      {
+        "question": "このソフトウェアの主な機能は何ですか？",
+        "answer": "メトリクスやログ、トレースなどのデータの可視化に加え、アラート通知、分析、ビジネスインテリジェンス機能を提供します。"
+      }
+    ]
+  },
+  {
+    "name": "AppFlowy",
+    "slug": "appflowy",
+    "category": "project",
+    "funnel": "oss",
+    "summary": "データの制御権を維持しながらAIを活用できるオープンソースのコラボレーションワークスペース。",
+    "description": "AppFlowyは、プロジェクト管理、Wiki、チームの連携をAIと共に実現するコラボレーションワークスペースです。Notionに代わる主要なオープンソースの選択肢として提供されています。ユーザーはデータのコントロールを失うことなく、より多くの成果を達成することを目指しています。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://appflowy.com",
+    "githubUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+    "featured": false,
+    "stars": 75820,
+    "language": "Dart",
+    "useCases": [
+      {
+        "text": "プロジェクト管理"
+      },
+      {
+        "text": "Wikiやドキュメントの作成"
+      },
+      {
+        "text": "チーム内でのナレッジ共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Notion代替"
+      },
+      {
+        "text": "Confluence代替"
+      },
+      {
+        "text": "コンテンツ管理"
+      },
+      {
+        "text": "ドキュメント作成"
+      },
+      {
+        "text": "ノート作成"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアの主な特徴は何ですか？",
+        "answer": "AIを活用しながらも、ユーザー自身がデータのコントロールを維持できる点が大きな特徴です。Notionに代わるオープンソースのワークスペースとして位置づけられています。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "このソフトウェアはDartというプログラミング言語を用いて開発されており、Flutterなどの技術に関連するトピックが含まれています。"
+      }
+    ]
+  },
+  {
+    "name": "superset",
+    "slug": "superset",
+    "category": "analytics",
+    "funnel": "oss",
+    "summary": "データ視覚化およびデータ探索のためのオープンソースプラットフォーム。",
+    "description": "Apache Supersetは、データの視覚化と探索を行うためのプラットフォームです。Pythonを主な言語として採用しており、ビジネス分析やインテリジェンスに活用されます。Apache-2.0ライセンスの下で提供されているオープンソースソフトウェアです。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://superset.apache.org/",
+    "githubUrl": "https://github.com/apache/superset",
+    "featured": false,
+    "stars": 74364,
+    "language": "Python",
+    "useCases": [
+      {
+        "text": "データ視覚化"
+      },
+      {
+        "text": "データ探索"
+      },
+      {
+        "text": "ビジネス分析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "analytics"
+      },
+      {
+        "text": "apache-superset"
+      },
+      {
+        "text": "bi"
+      },
+      {
+        "text": "business-intelligence"
+      },
+      {
+        "text": "data-analysis"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアの主な目的は何ですか？",
+        "answer": "データの視覚化およびデータ探索を行うためのプラットフォームを提供することを目的としています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "Apache-2.0ライセンスの下で提供されているオープンソースソフトウェアです。"
+      }
+    ]
+  },
+  {
+    "name": "anything-llm",
+    "slug": "anything-llm",
+    "category": "lowcode",
+    "funnel": "oss",
+    "summary": "ローカル優先の強力なAIエージェント体験を提供するオープンソースソフトウェア。",
+    "description": "AnythingLLMは、ユーザーが自ら知能を所有することを目的としたツールです。強力なローカルファーストのエージェント体験に必要な機能を備えています。JavaScriptで構築されており、MITライセンスの下で提供されています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://anythingllm.com",
+    "githubUrl": "https://github.com/Mintplex-Labs/anything-llm",
+    "featured": false,
+    "stars": 65030,
+    "language": "JavaScript",
+    "useCases": [
+      {
+        "text": "ローカル環境でのAIエージェントの運用"
+      },
+      {
+        "text": "独自のデータを用いたエージェント構築"
+      },
+      {
+        "text": "プライバシーを重視したAI活用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agent-computer"
+      },
+      {
+        "text": "agent-harness"
+      },
+      {
+        "text": "agent-orchestration"
+      },
+      {
+        "text": "agentic-ai"
+      },
+      {
+        "text": "ai-agents"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアの主な特徴は何ですか？",
+        "answer": "ローカル優先（local-first）の設計を採用しており、ユーザーが自身の環境でAIエージェントを所有・運用できることを重視しています。"
+      },
+      {
+        "question": "ライセンスや開発言語はどのようなものですか？",
+        "answer": "JavaScriptで書かれており、MITライセンスの下で公開されているオープンソースソフトウェアです。"
+      }
+    ]
+  },
+  {
+    "name": "Ghost",
+    "slug": "ghost",
+    "category": "cms",
+    "funnel": "oss",
+    "summary": "モダンな出版、会員制、購読、ニュースレターのための独立した技術。",
+    "description": "Ghostは、現代的な出版活動や会員制サービスの運営、ニュースレターの配信を支えるための独立した技術です。JavaScriptおよびNode.jsをベースとしたWebアプリケーションであり、ブログやCMSとしての機能を提供します。MITライセンスで公開されており、柔軟なカスタマイズが可能なオープンソースソフトウェアです。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://ghost.org",
+    "githubUrl": "https://github.com/TryGhost/Ghost",
+    "featured": false,
+    "stars": 54898,
+    "language": "JavaScript",
+    "useCases": [
+      {
+        "text": "ブログの運営"
+      },
+      {
+        "text": "会員制サービスの構築"
+      },
+      {
+        "text": "ニュースレターの発行"
+      },
+      {
+        "text": "コンテンツ管理システム（CMS）の導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "blogging"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "ghost"
+      },
+      {
+        "text": "javascript"
+      },
+      {
+        "text": "nodejs"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "このソフトウェアは、主にJavaScriptおよびNode.jsを用いて開発されています。"
+      },
+      {
+        "question": "ライセンス体系はどうなっていますか？",
+        "answer": "MITライセンスの下で公開されているオープンソースソフトウェアです。"
+      }
+    ]
+  },
+  {
+    "name": "supervision",
+    "slug": "supervision",
+    "category": "lowcode",
+    "funnel": "oss",
+    "summary": "再利用可能なコンピュータビジョンツールを構築するためのPythonライブラリ。",
+    "description": "supervisionは、コンピュータビジョンに関する再利用可能なツールを提供します。画像処理やディープラーニングを活用した高度な解析を支援する機能を備えています。分類、インスタンスセグメンテーション、COCO形式の対応など、多様なタスクに対応可能です。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://supervision.roboflow.com",
+    "githubUrl": "https://github.com/roboflow/supervision",
+    "featured": false,
+    "stars": 49642,
+    "language": "Python",
+    "useCases": [
+      {
+        "text": "画像内のオブジェクトに対する分類（Classification）"
+      },
+      {
+        "text": "インスタンスセグメンテーションを用いた物体検知"
+      },
+      {
+        "text": "低コードでのコンピュータビジョンツールの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "computer-vision"
+      },
+      {
+        "text": "deep-learning"
+      },
+      {
+        "text": "image-processing"
+      },
+      {
+        "text": "classification"
+      },
+      {
+        "text": "instance-segmentation"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何の言語で記述されていますか？",
+        "answer": "主な開発言語はPythonです。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "MITライセンスの下で公開されています。"
+      }
+    ]
+  }
+]

@@ -85,5 +85,12 @@ export const OSSProjects: CollectionConfig = {
     { name: 'sourceLpName', label: 'media-mesh上の掲載元', type: 'text' },
     { name: 'stars', label: 'GitHubスター数', type: 'number' },
     { name: 'language', label: '主な言語', type: 'text' },
+    // 一覧・カテゴリ・検索の並び順。手で上げたいときはここに数値を入れる。
+    { name: 'priority', label: '優先度の手動加点', type: 'number', defaultValue: 0 },
+    // 日本語対応は推測せず実測値を持つ。ページ上でも根拠として出す。
+    { name: 'jaFileCount', label: '日本語ロケールの実ファイル数', type: 'number' },
+    { name: 'jaSamplePaths', label: '日本語ファイルの実パス', type: 'array', fields: [{ name: 'text', type: 'text', required: true }] },
+    { name: 'githubCreatedAt', label: 'GitHub初回公開', type: 'text' },
+    { name: 'githubPushedAt', label: 'GitHub最終更新', type: 'text' },
   ],
 }

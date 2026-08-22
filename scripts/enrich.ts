@@ -31,6 +31,8 @@ type Repo = {
   language: string | null
   license: { spdx_id?: string | null } | null
   topics: string[]
+  created_at?: string
+  pushed_at?: string
 }
 type Selected = { repo: Repo; category: string; funnel: 'oss' | 'prototype'; topics: string[] }
 
@@ -53,11 +55,8 @@ function makeSlug(repo: Repo): string {
   return `${base}-${n}`
 }
 
-function prompt(repo: Repo, funnel: 'oss' | 'prototype'): string {
-  const angle = funnel === 'oss'
-    ? '自社の業務に合わせて改造して導入することを検討している担当者'
-    : 'このツールを部品として使い、自社向けの仕組みを作ることを検討している担当者'
-  return `次のオープンソースソフトウェアについて、日本の中小企業の${angle}に向けた紹介文をJSONで書いてください。
+function prompt(repo: Repo): string {
+  return `次のオープンソースソフトウェアを分類し、日本の中小企業の担当者に向けた紹介文をJSONで書いてください。
 
 名前: ${repo.full_name.split('/')[1] || repo.full_name}
 説明(英語): ${repo.description || ''}
@@ -66,16 +65,27 @@ function prompt(repo: Repo, funnel: 'oss' | 'prototype'): string {
 ライセンス: ${repo.license?.spdx_id || '不明'}
 スター数: ${repo.stargazers_count}
 
+まず kind を次の3つから選んでください。判断を誤ると誤った提案になるので慎重に。
+- "business-app": 業務の担当者がそのまま使う完成したアプリ。導入して画面や項目を自社向けに変えて納品できる。
+  例) 顧客管理、問合せ管理、在庫管理、勤怠、会計、予約、EC、社内ポータル、グループウェア
+- "dev-tool": 開発者が何かを作るために使う道具。単体では業務担当者の仕事にならない。
+  例) 静的サイトジェネレータ、フレームワーク、CLI、データベース、監視基盤、可視化基盤、
+      ローカルLLM実行環境、エージェント基盤、CI、コード生成
+- "library": 他のプログラムに組み込む部品。単体で起動して使う画面を持たない。
+  例) Python/JavaScriptのライブラリ、SDK、画像処理ツールキット、モデル実装
+
 守ること:
 - 英語の説明から読み取れる事実だけを書く。機能を創作しない。
 - 日本語対応の有無、価格、導入実績は書かない（未確認のため）。
 - 「弊社が対応します」などの営業文は書かない。
+- summary は「〜です」で終える体言止めにしない文にする。
 
 次のJSONだけを出力してください。前後に説明や\`\`\`は書かないでください。
-{"summary":"一文の要約(60字以内)","description":"3文の説明(200字前後)","useCases":["用途1","用途2","用途3"],"keywords":["検索語1","検索語2","検索語3","検索語4","検索語5"],"faqs":[{"question":"質問1","answer":"回答1(80字前後)"},{"question":"質問2","answer":"回答2(80字前後)"}]}`
+{"kind":"business-app|dev-tool|library","summary":"一文の要約(60字以内)","description":"4文の説明(300字前後)","useCases":["用途1","用途2","用途3","用途4","用途5"],"keywords":["検索語1","検索語2","検索語3","検索語4","検索語5","検索語6"],"faqs":[{"question":"質問1","answer":"回答1(100字前後)"},{"question":"質問2","answer":"回答2(100字前後)"},{"question":"質問3","answer":"回答3(100字前後)"},{"question":"質問4","answer":"回答4(100字前後)"}]}`
 }
 
 type Generated = {
+  kind: 'business-app' | 'dev-tool' | 'library'
   summary: string
   description: string
   useCases: string[]
@@ -95,23 +105,29 @@ function parseGenerated(raw: string): Generated | null {
   const data = parsed as Partial<Generated>
   if (typeof data.summary !== 'string' || typeof data.description !== 'string') return null
   if (!Array.isArray(data.useCases) || !Array.isArray(data.keywords) || !Array.isArray(data.faqs)) return null
-  const useCases = data.useCases.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).slice(0, 5)
+  const kind = data.kind === 'dev-tool' || data.kind === 'library' || data.kind === 'business-app' ? data.kind : null
+  if (!kind) return null
+  const useCases = data.useCases.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).slice(0, 6)
   const keywords = data.keywords.filter((item): item is string => typeof item === 'string' && item.trim().length > 0).slice(0, 8)
   const faqs = data.faqs
     .filter((item): item is { question: string; answer: string } => Boolean(item) && typeof item.question === 'string' && typeof item.answer === 'string')
-    .slice(0, 4)
-  if (!data.summary.trim() || !data.description.trim() || !useCases.length || !keywords.length || !faqs.length) return null
-  return { summary: data.summary.trim(), description: data.description.trim(), useCases, keywords, faqs }
+    .slice(0, 5)
+  // 中身が薄いものは載せない。字数が足りないページを量産しても集客にならない。
+  const volume = data.summary.length + data.description.length + useCases.join('').length + faqs.map((item) => item.question + item.answer).join('').length
+  if (volume < 500) return null
+  if (!data.summary.trim() || !data.description.trim() || useCases.length < 3 || !keywords.length || faqs.length < 2) return null
+  return { kind, summary: data.summary.trim(), description: data.description.trim(), useCases, keywords, faqs }
 }
 
-async function generate(repo: Repo, funnel: 'oss' | 'prototype'): Promise<Generated | null> {
+async function generate(repo: Repo): Promise<Generated | null> {
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const res = await fetch(OLLAMA, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // gemma4は思考型。think:false を外すと隠れ推論がnum_predictを食って応答が空になる。
-        body: JSON.stringify({ model: MODEL, prompt: prompt(repo, funnel), stream: false, think: false, options: { temperature: 0.3, num_predict: 900 } }),
+        // format:"json" が無いと、項目を増やしたときに括弧が壊れたJSONを返す（実測3/3失敗）。
+        body: JSON.stringify({ model: MODEL, prompt: prompt(repo), stream: false, think: false, format: 'json', options: { temperature: 0.3, num_predict: 2000 } }),
         signal: AbortSignal.timeout(300_000),
       })
       if (!res.ok) throw new Error(`ollama ${res.status}`)
@@ -136,6 +152,7 @@ let done = 0
 let made = 0
 let skipped = 0
 let failed = 0
+let dropped = 0
 const started = Date.now()
 
 async function worker(): Promise<void> {
@@ -152,15 +169,20 @@ async function worker(): Promise<void> {
     } catch {
       // 未生成
     }
-    const generated = await generate(repo, funnel)
+    const generated = await generate(repo)
     done++
     if (!generated) { failed++; continue }
+    // トピック由来のfunnelより、実物を読んだ分類を優先する。
+    if (generated.kind === 'library') { dropped++; continue }
+    const resolvedFunnel: 'oss' | 'prototype' = generated.kind === 'business-app' ? 'oss' : 'prototype'
+    const resolvedCategory = generated.kind === 'business-app' ? category : (funnel === 'oss' ? 'devtools' : category)
     const homepage = (repo.homepage || '').trim()
     const record = {
       name: repo.full_name.split('/')[1] || repo.full_name,
       slug: makeSlug(repo),
-      category,
-      funnel,
+      category: resolvedCategory,
+      funnel: resolvedFunnel,
+      kind: generated.kind,
       summary: generated.summary,
       description: generated.description,
       license: repo.license?.spdx_id || '不明',
@@ -171,6 +193,8 @@ async function worker(): Promise<void> {
       featured: false,
       stars: repo.stargazers_count,
       language: repo.language,
+      githubCreatedAt: repo.created_at || null,
+      githubPushedAt: repo.pushed_at || null,
       useCases: generated.useCases.map((text) => ({ text })),
       keywords: generated.keywords.map((text) => ({ text })),
       faqs: generated.faqs,
@@ -179,10 +203,10 @@ async function worker(): Promise<void> {
     made++
     if (done % 20 === 0) {
       const rate = (Date.now() - started) / 1000 / Math.max(1, made)
-      console.log(`  ${done} 件処理 (生成${made} 既存${skipped} 失敗${failed})  ${rate.toFixed(1)}秒/件`)
+      console.log(`  ${done} 件処理 (生成${made} 既存${skipped} 部品として除外${dropped} 失敗${failed})  ${rate.toFixed(1)}秒/件`)
     }
   }
 }
 
 await Promise.all(Array.from({ length: Math.max(1, CONCURRENCY) }, () => worker()))
-console.log(`enrich done: 生成${made} 既存${skipped} 失敗${failed} → ${enrichedDir}`)
+console.log(`enrich done: 生成${made} 既存${skipped} 部品として除外${dropped} 失敗${failed} → ${enrichedDir}`)
