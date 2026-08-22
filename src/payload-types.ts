@@ -156,7 +156,10 @@ export interface OssProject {
     | 'lowcode'
     | 'analytics'
     | 'aidev'
-    | 'devtools';
+    | 'devtools'
+    | 'sitegen'
+    | 'automation'
+    | 'devsupport';
   funnel: 'oss' | 'prototype';
   summary: string;
   description: string;

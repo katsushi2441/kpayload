@@ -44,7 +44,10 @@ export const OSSProjects: CollectionConfig = {
         { label: 'ローコード開発', value: 'lowcode' },
         { label: '分析・BI', value: 'analytics' },
         { label: 'AI開発基盤', value: 'aidev' },
-        { label: '開発者ツール', value: 'devtools' }
+        { label: '開発者ツール', value: 'devtools' },
+        { label: 'サイト構築・静的生成', value: 'sitegen' },
+        { label: '自動化・連携', value: 'automation' },
+        { label: '開発支援ツール', value: 'devsupport' }
       ],
     },
     {

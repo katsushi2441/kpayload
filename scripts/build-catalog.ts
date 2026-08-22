@@ -39,6 +39,31 @@ type Enriched = {
   faqs: Array<{ question: string; answer: string }>
 }
 
+// 「開発に使う」判定のものは enrich.ts が全部 devtools に入れるため、
+// 1カテゴリに数百件が集中してカテゴリページが肥大する(2026-08-23に363KBまで膨張)。
+// 名前・要約・キーワードの規則で振り分け直す。LLMは使わない（件数分の再生成は現実的でない）。
+const RULES: Array<[string, RegExp]> = [
+  ['aidev', /(llm|ai\s*エージェント|エージェント基盤|生成ai|rag|プロンプト|chatgpt|claude|gpt|推論|モデル(を|の)?(実行|提供|管理)|ローカルai|ベクトル|埋め込み)/i],
+  ['analytics', /(可視化|ダッシュボード|bi\b|ビジネスインテリジェンス|データ分析|メトリク|グラフ|レポーティング|観測|オブザーバ)/i],
+  ['lowcode', /(ローコード|ノーコード|low.?code|no.?code|管理画面|社内ツール|内部ツール|admin\s*panel|フォームビルダー|ドラッグ)/i],
+  ['sitegen', /(静的サイト|サイトジェネレータ|static\s*site|ウェブサイト(を|の)?(構築|生成)|ブログエンジン|ヘッドレスcms|headless)/i],
+  ['automation', /(ワークフロー|自動化|オートメーション|ジョブ|スケジュ|パイプライン|連携基盤|iPaaS|webhook)/i],
+  ['monitoring', /(監視|アラート|ログ(収集|管理|基盤)|障害|稼働状況|ヘルスチェック|apm)/i],
+  ['media', /(音声|画像(生成|編集)|動画|映像|tts|音楽|字幕|読み上げ)/i],
+  ['database', /(データベース|db\b|sql|nosql|データストア|キャッシュ|検索エンジン(を|の)?(構築|提供))/i],
+  ['devsupport', /(コード(を|の)?(解析|生成|レビュー|補完)|開発(を|の)?(支援|効率)|リポジトリ|git|ci\/?cd|テスト(自動|フレーム)|デバッグ|ドキュメント(生成|作成))/i],
+]
+
+function refineCategory(record: Enriched): string {
+  if (record.funnel !== 'prototype' || record.category !== 'devtools') return record.category
+  const hay = [record.name, record.summary, record.description,
+    ...(record.keywords || []).map((k) => k.text)].join(' ')
+  for (const [cat, rx] of RULES) {
+    if (rx.test(hay)) return cat
+  }
+  return 'devtools'
+}
+
 const jaByRepo = new Map<string, { status: string; hitCount: number; samples: string[] }>()
 try {
   for (const name of await fs.readdir(jaDir)) {
@@ -70,6 +95,7 @@ for (const name of files) {
   record.useCases = (record.useCases || []).filter((u) => (u.text || '').trim())
   record.keywords = (record.keywords || []).filter((k) => (k.text || '').trim())
   if (record.faqs.length < 2 || record.useCases.length < 3 || !record.keywords.length) continue
+  record.category = refineCategory(record)
   records.push(record)
 }
 

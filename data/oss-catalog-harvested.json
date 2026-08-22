@@ -2,7 +2,7 @@
   {
     "name": "hugo",
     "slug": "hugo",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "世界最速のウェブサイト構築フレームワークです。",
@@ -80,7 +80,7 @@
   {
     "name": "Understand-Anything",
     "slug": "understand-anything",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コードを探索可能なインタラクティブなナレッジグラフに変換するツールです。",
@@ -159,7 +159,7 @@
   {
     "name": "grafana",
     "slug": "grafana",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "多種多様なデータソースを統合して可視化するオープンソースの観測・データ可視化プラットフォームです。",
@@ -326,7 +326,7 @@
   {
     "name": "superset",
     "slug": "superset",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "データの可視化と探索を行うためのデータプラットフォームです。",
@@ -408,7 +408,7 @@
   {
     "name": "anything-llm",
     "slug": "anything-llm",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローカル優先の強力なAIエージェント体験を提供するプラットフォームです。",
@@ -663,7 +663,7 @@
   {
     "name": "JeecgBoot",
     "slug": "jeecgboot",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用してシステム開発の効率を劇的に向上させる企業向け低コードプラットフォームです。",
@@ -902,7 +902,7 @@
   {
     "name": "appsmith",
     "slug": "appsmith",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "管理画面や社内ツールを迅速に構築するためのプラットフォームです。",
@@ -1293,7 +1293,7 @@
   {
     "name": "refine",
     "slug": "refine",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "柔軟性の高い、社内ツールやB2Bアプリ構築のためのReactフレームワークです。",
@@ -1368,7 +1368,7 @@
   {
     "name": "filament",
     "slug": "filament",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravel向けの強力なオープンソースUIフレームワークです。",
@@ -1465,7 +1465,7 @@
   {
     "name": "sim",
     "slug": "sim",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントやワークフローを構築・デプロイ・監視するための共同作業スペースです。",
@@ -1628,7 +1628,7 @@
   {
     "name": "redash",
     "slug": "redash",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "多様なデータソースを接続して可視化・共有できるビジネスインテリジェンス基盤です。",
@@ -1797,7 +1797,7 @@
   {
     "name": "vibe-kanban",
     "slug": "vibe-kanban",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIコーディングエージェントの能力を最大化するタスク管理ツールです。",
@@ -1974,7 +1974,7 @@
   {
     "name": "onlook",
     "slug": "onlook",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用してReactアプリケーションを視覚的に構築・編集できるデザインツールです。",
@@ -2308,7 +2308,7 @@
   {
     "name": "node-red",
     "slug": "node-red",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "イベント駆動型アプリケーションのためのローコード・プログラミングツールです。",
@@ -2631,7 +2631,7 @@
   {
     "name": "coze-studio",
     "slug": "coze-studio",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ビジュアルツールを用いてAIエージェントを構築・デプロイできるプラットフォームです。",
@@ -2961,7 +2961,7 @@
   {
     "name": "SWE-agent",
     "slug": "swe-agent",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHubの課題をLLMを用いて自動で修正するソフトウェア開発用エージェントです。",
@@ -3033,7 +3033,7 @@
   {
     "name": "agency-agents-zh",
     "slug": "agency-agents-zh",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "多種多様なAI専門家ロールと自動連携機能を提供するエージェント基盤です。",
@@ -3108,7 +3108,7 @@
   {
     "name": "decap-cms",
     "slug": "decap-cms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "静的サイトジェネレータ向けのGitベースのコンテンツ管理システムです。",
@@ -3287,7 +3287,7 @@
   {
     "name": "amis",
     "slug": "amis",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "JSON設定によって様々なページを生成できるフロントエンドの低コードフレームワークです。",
@@ -3434,7 +3434,7 @@
   {
     "name": "deepwiki-open",
     "slug": "deepwiki-open",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHubやGitLabなどのリポジトリからAIを活用してWikiを自動生成するツールです。",
@@ -3516,7 +3516,7 @@
   {
     "name": "zola",
     "slug": "zola",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Rustで構築された高速な静的サイトジェネレータです。",
@@ -3588,7 +3588,7 @@
   {
     "name": "maxun",
     "slug": "maxun",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Webスクレイピングやデータ抽出をノーコードで実現するプラットフォームです。",
@@ -3664,7 +3664,7 @@
   {
     "name": "edict",
     "slug": "edict",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "9つの専門AIエージェントを統合・管理するマルチエージェント・オーケストレーションシステムです。",
@@ -3820,7 +3820,7 @@
   {
     "name": "lowcode-engine",
     "slug": "lowcode-engine",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "拡張性を備えた企業向けの低コード技術スタックです。",
@@ -4395,7 +4395,7 @@
   {
     "name": "onedev",
     "slug": "onedev",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを統合した自律的な開発プラットフォームです。",
@@ -4476,7 +4476,7 @@
   {
     "name": "claude-seo",
     "slug": "claude-seo",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Code向けに高度なSEOスキルを拡張するオープンソースツールです。",
@@ -4859,7 +4859,7 @@
   {
     "name": "tinacms",
     "slug": "tinacms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHubをコンテンツ管理の基盤として活用できるヘッドレスCMSです。",
@@ -5087,7 +5087,7 @@
   {
     "name": "puck",
     "slug": "puck",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "React向けのビジュアルエディタです。",
@@ -5319,7 +5319,7 @@
   {
     "name": "nebula",
     "slug": "nebula",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "水平スケーラビリティと高可用性を備えた分散型グラフデータベースです。",
@@ -5394,7 +5394,7 @@
   {
     "name": "illa-builder",
     "slug": "illa-builder",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "多様なデータベースやAPIと連携して社内ツールを迅速に構築できるローコードプラットフォームです。",
@@ -5692,7 +5692,7 @@
   {
     "name": "frappe",
     "slug": "frappe",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PythonとJavaScriptを用いた低コードのWebアプリケーションフレームワークです。",
@@ -5917,7 +5917,7 @@
   {
     "name": "h5-Dooring",
     "slug": "h5-dooring",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ドラッグ＆ドロップでH5ページやWebサイトを構築できるローコードプラットフォームです。",
@@ -5992,7 +5992,7 @@
   {
     "name": "keystone",
     "slug": "keystone",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Node.jsで動作するGraphQLベースのヘッドレスCMSフレームワークです。",
@@ -6240,7 +6240,7 @@
   {
     "name": "astron-agent",
     "slug": "astron-agent",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "次世代のSuperAgentを構築するための企業向けエージェントワークフロープラットフォームです。",
@@ -6473,7 +6473,7 @@
   {
     "name": "builder",
     "slug": "builder",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ReactやVueなどの主要フレームワークに対応したビジュアル開発ツールです。",
@@ -6777,7 +6777,7 @@
   {
     "name": "flowgram.ai",
     "slug": "flowgram-ai",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIワークフロー開発を迅速かつ簡素化するための拡張可能なフレームワークです。",
@@ -6855,7 +6855,7 @@
   {
     "name": "claude-ads",
     "slug": "claude-ads",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Codeを活用したマルチプラットフォーム広告運用を自動化するスキルセットです。",
@@ -6923,7 +6923,7 @@
   {
     "name": "ccpm",
     "slug": "ccpm",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHub IssuesとGit worktreesを活用したAIエージェント向けのプロジェクト管理システムです。",
@@ -7531,7 +7531,7 @@
   {
     "name": "plasmic",
     "slug": "plasmic",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "React向けのビジュアルビルドツールです。",
@@ -7675,7 +7675,7 @@
   {
     "name": "evidence",
     "slug": "evidence",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SQLとMarkdownを用いて高速かつインタラクティブなデータ可視化を構築できるツールです。",
@@ -7919,7 +7919,7 @@
   {
     "name": "Yuxi",
     "slug": "yuxi",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "RAGや知識グラフ、マルチエージェント機能を備えたセルフホスト型の知能エージェントプラットフォームです。",
@@ -7994,7 +7994,7 @@
   {
     "name": "sanity",
     "slug": "sanity",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "構造化されたコンテンツを活用して、コンテンツワークスペースを迅速に構成できるツールです。",
@@ -8224,7 +8224,7 @@
   {
     "name": "ponzu",
     "slug": "ponzu",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自動でJSON APIを生成するヘッドレスCMSです。",
@@ -8544,7 +8544,7 @@
   {
     "name": "openagent",
     "slug": "openagent",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLM、RAG、エージェントループを活用した次世代型パーソナルAIアシスタント基盤です。",
@@ -8845,7 +8845,7 @@
   {
     "name": "skills",
     "slug": "skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェント向けに構築されたブラウザ自動化CLIツールです。",
@@ -9002,7 +9002,7 @@
   {
     "name": "moreThanFAANGM",
     "slug": "morethanfaangm",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "400以上の企業やスタートアップへの応募機会を提供するリポジトリです。",
@@ -9475,7 +9475,7 @@
   {
     "name": "SparkleShare",
     "slug": "sparkleshare",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Gitリポジトリと同期してファイル共有や共同作業を可能にするツールです。",
@@ -9698,7 +9698,7 @@
   {
     "name": "blazer",
     "slug": "blazer",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SQLを用いてビジネスインテリジェンスを簡単に構築できるツールです。",
@@ -9946,7 +9946,7 @@
   {
     "name": "prest",
     "slug": "prest",
-    "category": "devtools",
+    "category": "database",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PostgreSQLをベースとした低コードの高速バックエンド開発プラットフォームです。",
@@ -10174,7 +10174,7 @@
   {
     "name": "typedb",
     "slug": "typedb",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高度な推論能力を備えた知識ベース構築のためのデータベースです。",
@@ -10478,7 +10478,7 @@
   {
     "name": "briefer",
     "slug": "briefer",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コードによる柔軟なダッシュボード作成とNotion風ノート機能を備えたデータ分析基盤です。",
@@ -10991,7 +10991,7 @@
   {
     "name": "twill",
     "slug": "twill",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravelでカスタム管理画面を迅速に構築するためのCMSツールキットです。",
@@ -11073,7 +11073,7 @@
   {
     "name": "lektor",
     "slug": "lektor",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Pythonで動作する静的ファイルコンテンツ管理システムです。",
@@ -11305,7 +11305,7 @@
   {
     "name": "pagescms",
     "slug": "pagescms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHubリポジトリ内でコンテンツとメディアを管理できるシンプルなCMSです。",
@@ -11772,7 +11772,7 @@
   {
     "name": "smart-admin",
     "slug": "smart-admin",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高品質なコードを核とした、迅速なシステム開発のためのプラットフォームです。",
@@ -11916,7 +11916,7 @@
   {
     "name": "tracecat",
     "slug": "tracecat",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントやチーム向けのオープンソース・セキュリティ自動化プラットフォームです。",
@@ -12066,7 +12066,7 @@
   {
     "name": "figma-html",
     "slug": "figma-html",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Webサイトを編集可能なFigmaデザインに変換するツールです。",
@@ -12213,7 +12213,7 @@
   {
     "name": "content",
     "slug": "content",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "MarkdownとVueコンポーネントを使用したファイルベースのCMSです。",
@@ -12435,7 +12435,7 @@
   {
     "name": "langwatch",
     "slug": "langwatch",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMの評価とAIエージェントのテストを行うためのプラットフォームです。",
@@ -12516,7 +12516,7 @@
   {
     "name": "arscontexta",
     "slug": "arscontexta",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "会話を通じて個人の思考や業務スタイルを構造的なナレッジシステムへ変換するツールです。",
@@ -12823,7 +12823,7 @@
   {
     "name": "llm-wiki-agent",
     "slug": "llm-wiki-agent",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ソースから知識を抽出して自動で構築・維持するパーソナルナレッジベースです。",
@@ -12976,7 +12976,7 @@
   {
     "name": "terminusdb",
     "slug": "terminusdb",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "構造化データの構築、共有、バージョン管理、推論を可能にする分散型コラボレーションデータベースです。",
@@ -13365,7 +13365,7 @@
   {
     "name": "obsidian-wiki",
     "slug": "obsidian-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Obsidianを基盤としたAIエージェント用の知識ベース構築フレームワークです。",
@@ -13440,7 +13440,7 @@
   {
     "name": "graphic-walker",
     "slug": "graphic-walker",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Tableauの代替となるオープンソースの可視化基盤です。",
@@ -13827,7 +13827,7 @@
   {
     "name": "CBoard",
     "slug": "cboard",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "セルフサービスで利用可能なオープンなBIレポーティングおよびダッシュボードプラットフォームです。",
@@ -14225,7 +14225,7 @@
   {
     "name": "Silex",
     "slug": "silex",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "動的なデータを活用した静的サイトを視覚的に作成できるオンラインツールです。",
@@ -14300,7 +14300,7 @@
   {
     "name": "jekyll-admin",
     "slug": "jekyll-admin",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "JekyllサイトにCMSのような管理画面を追加するプラグインです。",
@@ -14451,7 +14451,7 @@
   {
     "name": "sponge",
     "slug": "sponge",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Go言語を用いたバックエンド開発を効率化する低コードのフレームワークです。",
@@ -14523,7 +14523,7 @@
   {
     "name": "lin-cms-vue",
     "slug": "lin-cms-vue",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Vue.jsとElementPlusを使用したCMS開発用フレームワークです。",
@@ -14673,7 +14673,7 @@
   {
     "name": "datachain",
     "slug": "datachain",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "非構造化データのコンテキスト層を構築するデータ管理基盤です。",
@@ -14912,7 +14912,7 @@
   {
     "name": "erupt",
     "slug": "erupt",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "アノテーション駆動で開発効率を最大化するJavaフレームワークです。",
@@ -15072,7 +15072,7 @@
   {
     "name": "sveltia-cms",
     "slug": "sveltia-cms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Gitベースで動作するモダンなヘッドレスCMSです。",
@@ -15223,7 +15223,7 @@
   {
     "name": "vscode-project-manager",
     "slug": "vscode-project-manager",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Visual Studio Codeでプロジェクトを効率的に管理するための拡張機能です。",
@@ -15295,7 +15295,7 @@
   {
     "name": "aaron-marketing-skills",
     "slug": "aaron-marketing-skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用したマーケティング業務を自動化・最適化するためのエージェント基盤です。",
@@ -15612,7 +15612,7 @@
   {
     "name": "vscode-front-matter",
     "slug": "vscode-front-matter",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Visual Studio Code上で動作するコンテンツ管理システムです。",
@@ -15906,7 +15906,7 @@
   {
     "name": "squidex",
     "slug": "squidex",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コンテンツ管理と配信を統合するヘッドレスCMSです。",
@@ -15978,7 +15978,7 @@
   {
     "name": "ai-marketing-claude",
     "slug": "ai-marketing-claude",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Code向けのAIマーケティングスキルセットです。",
@@ -16207,7 +16207,7 @@
   {
     "name": "Genie.jl",
     "slug": "genie-jl",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Julia言語を用いた高生産的なフルスタックWebフレームワークです。",
@@ -16282,7 +16282,7 @@
   {
     "name": "SAG",
     "slug": "sag",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高度な検索技術を用いたRAGのための知識ベース構築基盤です。",
@@ -16504,7 +16504,7 @@
   {
     "name": "oinone-pamirs",
     "slug": "oinone-pamirs",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIと開発者を共通のメタデータモデルで統合する低コードフレームワークです。",
@@ -16654,7 +16654,7 @@
   {
     "name": "builder",
     "slug": "frappe-builder",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "直感的なビジュアル builder を備えたウェブサイト制作ツールです。",
@@ -16726,7 +16726,7 @@
   {
     "name": "keystatic",
     "slug": "keystatic",
-    "category": "devtools",
+    "category": "database",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "データベースを必要としないMarkdownやYAMLベースのCMSです。",
@@ -16811,7 +16811,7 @@
   {
     "name": "oqtane.framework",
     "slug": "oqtane-framework",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": ".NET環境でモダンなアプリケーションを構築するための開発者向けプラットフォームです。",
@@ -17807,7 +17807,7 @@
   {
     "name": "hexo-theme-stellar",
     "slug": "hexo-theme-stellar",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Hexoベースの多機能な個人知識ベース用テーマです。",
@@ -17964,7 +17964,7 @@
   {
     "name": "karpathy-llm-wiki",
     "slug": "karpathy-llm-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude CodeやCursorなどのAIツール向けに、構造化された知識ベースを構築するツールです。",
@@ -18277,7 +18277,7 @@
   {
     "name": "nndeploy",
     "slug": "nndeploy",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIモデルを簡単に高性能にデプロイするためのフレームワークです。",
@@ -18433,7 +18433,7 @@
   {
     "name": "nexrender",
     "slug": "nexrender",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "After Effectsのレンダリングを自動化するためのデータ駆動型ツールです。",
@@ -18734,7 +18734,7 @@
   {
     "name": "growth-lab",
     "slug": "growth-lab",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "製品の理解から市場調査、キャンペーン実行までを自動化するAI駆動型の成長支援ツールです。",
@@ -19126,7 +19126,7 @@
   {
     "name": "email-builder-js",
     "slug": "email-builder-js",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ブロックベースで操作可能なオープンソースのメールテンプレートビルダーです。",
@@ -19518,7 +19518,7 @@
   {
     "name": "datagear",
     "slug": "datagear",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自由なカスタマイズが可能なデータ可視化分析プラットフォームです。",
@@ -19668,7 +19668,7 @@
   {
     "name": "datalens",
     "slug": "datalens",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "モダンで拡張性の高い分析システムです。",
@@ -19743,7 +19743,7 @@
   {
     "name": "deepwiki-rs",
     "slug": "deepwiki-rs",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コードから正確な技術ドキュメントやAI用コンテキストを生成するツールです。",
@@ -19818,7 +19818,7 @@
   {
     "name": "sonicjs",
     "slug": "sonicjs",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Cloudflare Workers上で動作するエッジネイティブなヘッドレスCMSです。",
@@ -20036,7 +20036,7 @@
   {
     "name": "Ac-Wiki",
     "slug": "ac-wiki",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "MkDocsとMaterialテーマを活用したWiki構築のためのオープンソースプロジェクトです。",
@@ -20111,7 +20111,7 @@
   {
     "name": "open-mercato",
     "slug": "open-mercato",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "CRMやERP、コマース向けに設計されたAIエンジニアリング基盤フレームワークです。",
@@ -20483,7 +20483,7 @@
   {
     "name": "diboot",
     "slug": "diboot",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "開発効率を最大化する低コード開発フレームワークです。",
@@ -20555,7 +20555,7 @@
   {
     "name": "framework",
     "slug": "framework",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "モダンなメール開発のためのフレームワークです。",
@@ -20708,7 +20708,7 @@
   {
     "name": "just-dashboard",
     "slug": "just-dashboard",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "YAMLやJSONファイルを用いてデータダッシュボードを構築できるツールです。",
@@ -20783,7 +20783,7 @@
   {
     "name": "steedos-platform",
     "slug": "steedos-platform",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロンプトから企業向けソフトウェアを生成するAIネイティブなインフラです。",
@@ -21002,7 +21002,7 @@
   {
     "name": "ktx",
     "slug": "ktx",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントに企業の分析データベースへの正確なアクセスを可能にする実行コンテキスト層です。",
@@ -21158,7 +21158,7 @@
   {
     "name": "nodepress",
     "slug": "nodepress",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "NestJSで構築された、プロダクション品質のヘッドレスCMS APIサービスです。",
@@ -21622,7 +21622,7 @@
   {
     "name": "n8n-as-code",
     "slug": "n8n-as-code",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントに高度な機能を付与するためのn8n拡張ツールです。",
@@ -21703,7 +21703,7 @@
   {
     "name": "vscode-wakatime",
     "slug": "vscode-wakatime",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プログラミング活動から自動的に時間計測とメトリクスを生成するVS Codeプラグインです。",
@@ -21775,7 +21775,7 @@
   {
     "name": "KaibanJS",
     "slug": "kaibanjs",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "カンバン方式でマルチエージェントシステムを構築できるJavaScriptネイティブのフレームワークです。",
@@ -22019,7 +22019,7 @@
   {
     "name": "app-platform",
     "slug": "app-platform",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "宣言的プログラミングと低コード設定によりLLMアプリの開発を効率化するプラットフォームです。",
@@ -22169,7 +22169,7 @@
   {
     "name": "sunmao-ui",
     "slug": "sunmao-ui",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "低コードツールを開発するためのフレームワークです。",
@@ -22244,7 +22244,7 @@
   {
     "name": "writer-framework",
     "slug": "writer-framework",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "フロントエンドはノーコード、バックエンドはPythonで構築できるデータアプリ用フレームワークです。",
@@ -22482,7 +22482,7 @@
   {
     "name": "devops-ai-guidelines",
     "slug": "devops-ai-guidelines",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "DevOpsにおけるAI導入のための学習パスと実践的なガイドラインを提供するリポジトリです。",
@@ -22654,7 +22654,7 @@
   {
     "name": "PrismerCloud",
     "slug": "prismercloud",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントの構築や管理を行うための基盤ツールです。",
@@ -22892,7 +22892,7 @@
   {
     "name": "openDataV",
     "slug": "opendatav",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ドラッグ＆ドロップで操作可能な低コードデータ可視化開発プラットフォームです。",
@@ -23121,7 +23121,7 @@
   {
     "name": "saiku",
     "slug": "saiku",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Excelやダッシュボード、AIエージェントで共通利用できるセマンティック層です。",
@@ -23202,7 +23202,7 @@
   {
     "name": "moonshine",
     "slug": "moonshine",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravel向けの管理画面構築用フレームワークです。",
@@ -23734,7 +23734,7 @@
   {
     "name": "badaso",
     "slug": "badaso",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LaravelとVue.jsを用いた多機能なCMSおよび管理画面構築ツールです。",
@@ -23906,7 +23906,7 @@
   {
     "name": "KnowledgeEditingPapers",
     "slug": "knowledgeeditingpapers",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "大規模言語モデルの知識編集に関する主要な論文をまとめたリポジトリです。",
@@ -24513,7 +24513,7 @@
   {
     "name": "turbo",
     "slug": "turbo",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "BPMN2.0をサポートする軽量なフローエンジンフレームワークです。",
@@ -25042,7 +25042,7 @@
   {
     "name": "magic",
     "slug": "magic",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LovableとSupabaseの機能を統合したオープンソースの代替システムです。",
@@ -25371,7 +25371,7 @@
   {
     "name": "better-chatbot",
     "slug": "better-chatbot",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントやワークフローの自動化を実現するためのオープンソースなAIワークスペースです。",
@@ -25528,7 +25528,7 @@
   {
     "name": "Chorus",
     "slug": "chorus",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIと人間が協調して開発を行うためのエージェント・ハーネスです。",
@@ -25858,7 +25858,7 @@
   {
     "name": "go2o",
     "slug": "go2o",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "DDDに基づいたO2Oビジネスモデルの基盤システムです。",
@@ -25930,7 +25930,7 @@
   {
     "name": "flowershow",
     "slug": "flowershow",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "MarkdownやHTMLを素早くWebサイトやドキュメントとして公開できるツールです。",
@@ -26096,7 +26096,7 @@
   {
     "name": "tego",
     "slug": "tego",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "独自のノーコード・ローコードシステムを構築するためのNode.jsフレームワークです。",
@@ -26340,7 +26340,7 @@
   {
     "name": "tribe",
     "slug": "tribe",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "マルチエージェントチームを迅速に構築・調整するためのローコードツールです。",
@@ -26415,7 +26415,7 @@
   {
     "name": "system-designer",
     "slug": "system-designer",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "システム構築のためのローコード開発プラットフォームです。",
@@ -26490,7 +26490,7 @@
   {
     "name": "opsli-boot",
     "slug": "opsli-boot",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SpringBootとVue.jsをベースとした、高拡張な業務システム開発用プラットフォームです。",
@@ -26565,7 +26565,7 @@
   {
     "name": "google-meta-ads-ga4-mcp",
     "slug": "google-meta-ads-ga4-mcp",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Google広告、Meta広告、GA4をAIエージェントと連携させるためのMCPサーバーです。",
@@ -27102,7 +27102,7 @@
   {
     "name": "zato",
     "slug": "zato",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Pythonを用いたエンタープライズ向けの統合・連携基盤です。",
@@ -27174,7 +27174,7 @@
   {
     "name": "insights",
     "slug": "insights",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Pythonで動作するオープンソースのビジネスインテリジェンスツールです。",
@@ -27797,7 +27797,7 @@
   {
     "name": "lin-cms-spring-boot",
     "slug": "lin-cms-spring-boot",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SpringBootベースのCMS、DMS、および管理システム開発用フレームワークです。",
@@ -28270,7 +28270,7 @@
   {
     "name": "Conduit",
     "slug": "conduit",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "あらゆる技術スタックと連携可能なバックエンド基盤です。",
@@ -28501,7 +28501,7 @@
   {
     "name": "selfhost-ai",
     "slug": "selfhost-ai",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "n8nやOllamaを含むAI自動化ツールをワンコマンドで構築できるプラットフォームです。",
@@ -28582,7 +28582,7 @@
   {
     "name": "towncrier",
     "slug": "towncrier",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロジェクトのリリースノートを管理するためのツールです。",
@@ -28798,7 +28798,7 @@
   {
     "name": "alchemy_cms",
     "slug": "alchemy-cms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コンポーネントベースのWebサイト構築が可能なRuby on Rails用CMSフレームワークです。",
@@ -28954,7 +28954,7 @@
   {
     "name": "nesta",
     "slug": "nesta",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Rubyで構築されたファイルベースのCMSおよび静的サイトジェネレータです。",
@@ -29104,7 +29104,7 @@
   {
     "name": "layra",
     "slug": "layra",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "視覚的RAGとマルチステップ・エージェント・ワークフローを実現する基盤です。",
@@ -29179,7 +29179,7 @@
   {
     "name": "puppetry",
     "slug": "puppetry",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "非開発者でも利用可能なWebテストソリューションです。",
@@ -29329,7 +29329,7 @@
   {
     "name": "mix.core",
     "slug": "mix-core",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ASP.NET Coreベースの柔軟なヘッドレスおよびデカップルド対応Web CMSです。",
@@ -30024,7 +30024,7 @@
   {
     "name": "marmite",
     "slug": "marmite",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Rustで構築されたMarkdownベースの静的サイトジェネレータです。",
@@ -30579,7 +30579,7 @@
   {
     "name": "zotonic",
     "slug": "zotonic",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Erlangで構築されたWebフレームワークおよびCMSです。",
@@ -30736,7 +30736,7 @@
   {
     "name": "motor-admin-rails",
     "slug": "motor-admin-rails",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "UIから設定可能な低コードの管理画面およびビジネスインテリジェンス用Railsエンジンです。",
@@ -30974,7 +30974,7 @@
   {
     "name": "studiocms",
     "slug": "studiocms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Astroフレームワークに最適化されたネイティブなヘッドレスCMSです。",
@@ -31049,7 +31049,7 @@
   {
     "name": "mkdnflow.nvim",
     "slug": "mkdnflow-nvim",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "NeovimでMarkdownノートブックを効率的にナビゲート・管理するためのツールです。",
@@ -31124,7 +31124,7 @@
   {
     "name": "veritas-kanban",
     "slug": "veritas-kanban",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントのための軽量なオーケストレーション・ハーネスです。",
@@ -31271,7 +31271,7 @@
   {
     "name": "codealmanac",
     "slug": "codealmanac",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIコーディングエージェント向けのコードベースWikiです。",
@@ -31419,7 +31419,7 @@
   {
     "name": "DBAPI",
     "slug": "dbapi",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SQLを用いて短時間でREST APIを構築できるツールです。",
@@ -31494,7 +31494,7 @@
   {
     "name": "vue-component-creater-ui",
     "slug": "vue-component-creater-ui",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ドラッグ＆ドロップ操作でVueコンポーネントのコードを生成するエディタです。",
@@ -31569,7 +31569,7 @@
   {
     "name": "sharp",
     "slug": "sharp",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravel 11をベースとしたコンテンツ管理フレームワークです。",
@@ -32089,7 +32089,7 @@
   {
     "name": "pruvious",
     "slug": "pruvious",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Nuxt.jsアプリケーション向けの信頼性の高いコンテンツ管理システムです。",
@@ -32161,7 +32161,7 @@
   {
     "name": "eCommerce-Skills",
     "slug": "ecommerce-skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ECサイト運営のためのAIエージェント用スキルセットです。",
@@ -32315,7 +32315,7 @@
   {
     "name": "OpenContext",
     "slug": "opencontext",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントやアシスタントのためのプロジェクト知識管理ツールです。",
@@ -32465,7 +32465,7 @@
   {
     "name": "ovine",
     "slug": "ovine",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "JSON形式の定義から管理画面を構築するためのフレームワークです。",
@@ -32606,7 +32606,7 @@
   {
     "name": "nussknacker",
     "slug": "nussknacker",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "リアルタイムデータに対するアクションを自動化するためのローコードツールです。",
@@ -32834,7 +32834,7 @@
   {
     "name": "dac",
     "slug": "dac",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "YAMLとJSXを用いてインタラクティブなダッシュボードを構築するツールです。",
@@ -33138,7 +33138,7 @@
   {
     "name": "v6.dooring.public",
     "slug": "v6-dooring-public",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローコードでカスタマイズ可能なデータ可視化ダッシュボード作成エンジンです。",
@@ -33285,7 +33285,7 @@
   {
     "name": "pygraft",
     "slug": "pygraft",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "合成スキーマやナレッジグラフを生成するための構成可能なツールです。",
@@ -33439,7 +33439,7 @@
   {
     "name": "scout",
     "slug": "scout",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントを活用した企業のナレッジ管理システムです。",
@@ -33893,7 +33893,7 @@
   {
     "name": "klog",
     "slug": "klog",
-    "category": "devtools",
+    "category": "database",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "テキストファイル形式で時間を記録するコマンドラインツールです。",
@@ -34259,7 +34259,7 @@
   {
     "name": "MindOS",
     "slug": "mindos",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "人間とAIが共生し、思考を同期させるためのエージェント基盤です。",
@@ -34334,7 +34334,7 @@
   {
     "name": "codemap",
     "slug": "codemap",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMにプロジェクトの構造的コンテキストを効率的に提供するツールです。",
@@ -34497,7 +34497,7 @@
   {
     "name": "ui-builder",
     "slug": "ui-builder",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Reactコンポーネントを使用してUIをノーコードで視覚的に構築できるツールです。",
@@ -34823,7 +34823,7 @@
   {
     "name": "apex",
     "slug": "apex",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Oracle APEX向けのサンプルコードやスターターアプリを提供するリポジトリです。",
@@ -35350,7 +35350,7 @@
   {
     "name": "chubbyskills",
     "slug": "chubbyskills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "中国の主要SNSからコンテンツを収集し、個人知識ベースへ統合するAIスキルセットです。",
@@ -35425,7 +35425,7 @@
   {
     "name": "markdown-site",
     "slug": "markdown-site",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Markdownを基にWebサイトやドキュメントを公開するためのオープンソース・フレームワークです。",
@@ -35500,7 +35500,7 @@
   {
     "name": "LinkedDataHub",
     "slug": "linkeddatahub",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "低コードでナレッジグラフを構築できるアプリケーションプラットフォームです。",
@@ -35867,7 +35867,7 @@
   {
     "name": "owl-admin",
     "slug": "owl-admin",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravelとamisをベースにした、バックエンド管理システムの構築用フレームワークです。",
@@ -36102,7 +36102,7 @@
   {
     "name": "typemill",
     "slug": "typemill",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Markdownをベースとしたフラットファイル型のCMSです。",
@@ -36465,7 +36465,7 @@
   {
     "name": "xlings",
     "slug": "xlings",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "OSのような分離機能を持つ汎用的なパッケージインフラストラクチャです。",
@@ -36540,7 +36540,7 @@
   {
     "name": "gramax",
     "slug": "gramax",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Git管理とMarkdownを活用したドキュメント公開サイトの構築ツールです。",
@@ -36615,7 +36615,7 @@
   {
     "name": "mesh",
     "slug": "mesh",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "開発者向けのヘッドレスCMSプラットフォームです。",
@@ -36909,7 +36909,7 @@
   {
     "name": "core",
     "slug": "core",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PHPで構築されるヘッドレスCMSのコアシステムです。",
@@ -37154,7 +37154,7 @@
   {
     "name": "crusher",
     "slug": "crusher",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高速なローコードでのテスト作成と実行、アラート通知を実現するツールです。",
@@ -37229,7 +37229,7 @@
   {
     "name": "three-editor",
     "slug": "three-editor",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Three.jsをベースとした低コードの3Dエディタです。",
@@ -37536,7 +37536,7 @@
   {
     "name": "myduckserver",
     "slug": "myduckserver",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "DuckDBを基盤としたMySQL、Postgres、FlightSQLの統合サーバーです。",
@@ -37617,7 +37617,7 @@
   {
     "name": "web-builder",
     "slug": "web-builder",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用したTailwindCSSベースの低コードUI構築プラットフォームです。",
@@ -37692,7 +37692,7 @@
   {
     "name": "Amazon-Skills",
     "slug": "amazon-skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Amazonセラー向けに、AIエージェントへ付与可能なスキルセットを提供するツールです。",
@@ -37767,7 +37767,7 @@
   {
     "name": "ctx",
     "slug": "ctx",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "リポジトリの文脈を理解し、スキルやエージェントを推奨するツールです。",
@@ -37920,7 +37920,7 @@
   {
     "name": "goatdb",
     "slug": "goatdb",
-    "category": "devtools",
+    "category": "database",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "デバイス間で同期可能なピアツーピア型のデータベースです。",
@@ -37995,7 +37995,7 @@
   {
     "name": "tensei",
     "slug": "tensei",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "洗練された操作性を備えたコンテンツ管理および配信システムです。",
@@ -38220,7 +38220,7 @@
   {
     "name": "vibe-check",
     "slug": "vibe-check",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "曖昧なアイデアから構築可能な計画への落とし込みと開発を導くツールです。",
@@ -38380,7 +38380,7 @@
   {
     "name": "giselle",
     "slug": "giselle",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントを構築するためのオープンソースのアプリケーションビルダーです。",
@@ -38452,7 +38452,7 @@
   {
     "name": "wikipedia-mirror",
     "slug": "wikipedia-mirror",
-    "category": "devtools",
+    "category": "database",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Wikipediaのオフラインミラーを作成するためのガイドとツール群です。",
@@ -38678,7 +38678,7 @@
   {
     "name": "ai-business-skills",
     "slug": "ai-business-skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ClaudeやVS Code等で活用可能なAIマーケティングスキルセットです。",
@@ -38972,7 +38972,7 @@
   {
     "name": "Rythe-Engine",
     "slug": "rythe-engine",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "最新のハードウェア性能を最大限に引き出すデータ指向型のC++20ゲームエンジンです。",
@@ -39122,7 +39122,7 @@
   {
     "name": "EnterpriseRAG-Bench",
     "slug": "enterpriserag-bench",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "企業内文書を用いたRAGの性能を評価するためのデータセットとベンチマークです。",
@@ -39200,7 +39200,7 @@
   {
     "name": "node-red-contrib-uibuilder",
     "slug": "node-red-contrib-uibuilder",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Node-REDでデータ駆動型のWeb UIを構築するためのツールです。",
@@ -39350,7 +39350,7 @@
   {
     "name": "unbody",
     "slug": "unbody",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIネイティブなソフトウェア構築のためのモジュール式オープンソース・バックエンドです。",
@@ -39428,7 +39428,7 @@
   {
     "name": "pi-llm-wiki",
     "slug": "pi-llm-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "生のソースから相互に関連するWikiを構築できるナレッジベース構築ツールです。",
@@ -40203,7 +40203,7 @@
   {
     "name": "skyve",
     "slug": "skyve",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高度で拡張性の高いクラウドソリューションを構築するためのローコードプラットフォームです。",
@@ -40291,7 +40291,7 @@
   {
     "name": "yona",
     "slug": "yona",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロジェクトの管理やリポジトリのホスティングを行うためのソフトウェアです。",
@@ -40510,7 +40510,7 @@
   {
     "name": "opencrew",
     "slug": "opencrew",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Slackと連携してAIエージェントを協調動作させるマルチエージェントOSです。",
@@ -41201,7 +41201,7 @@
   {
     "name": "flowpipe",
     "slug": "flowpipe",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "クラウド上のリソースやシステムを連携させるためのクラウドスクリプティングエンジンです。",
@@ -41276,7 +41276,7 @@
   {
     "name": "core",
     "slug": "chaibuilder-core",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "React JSフレームワーク向けのオープンソースWebサイトビルダーです。",
@@ -41508,7 +41508,7 @@
   {
     "name": "db2rest",
     "slug": "db2rest",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "リレーショナルデータベースを迅速にデータAPIへ変換するノーコードプラットフォームです。",
@@ -41583,7 +41583,7 @@
   {
     "name": "piccolo_admin",
     "slug": "piccolo-admin",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "データベースを管理するための強力なWebアドミンツールです。",
@@ -41802,7 +41802,7 @@
   {
     "name": "honohub",
     "slug": "honohub",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Hono、Drizzle、Zod、Viteを活用したヘッドレスCMSフレームワークです。",
@@ -41877,7 +41877,7 @@
   {
     "name": "design-studio",
     "slug": "design-studio",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMやGPT AIを活用した対話型自動化フローを構築できるノーコードのデザインツールです。",
@@ -42105,7 +42105,7 @@
   {
     "name": "sentient-os",
     "slug": "sentient-os",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "デバイス上で動作し、ユーザーの活動を理解してタスクを実行するAIエージェント基盤です。",
@@ -42412,7 +42412,7 @@
   {
     "name": "Knowage-Server",
     "slug": "knowage-server",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "伝統的なデータソースやビッグデータシステムに対応したビジネス分析用オープンソーススイートです。",
@@ -42559,7 +42559,7 @@
   {
     "name": "claudeblattman",
     "slug": "claudeblattman",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "学術研究向けのClaude Code活用スキルやエージェント設定を網羅したガイド。",
@@ -42706,7 +42706,7 @@
   {
     "name": "beever-atlas",
     "slug": "beever-atlas",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMを活用したWiki形式の対話型知識ベース構築ツールです。",
@@ -43417,7 +43417,7 @@
   {
     "name": "MimirQ",
     "slug": "mimirq",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "企業向けのRAG（検索拡張生成）知識ベース構築を支援する基盤ツールです。",
@@ -43708,7 +43708,7 @@
   {
     "name": "ml_forge",
     "slug": "ml-forge",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "視覚的なノードエディタでコンピュータビジョンモデルを学習できるツールです。",
@@ -44271,7 +44271,7 @@
   {
     "name": "github-blog",
     "slug": "github-blog",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHubのIssueを活用してブログを管理できるCMSです。",
@@ -44509,7 +44509,7 @@
   {
     "name": "stashbase",
     "slug": "stashbase",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローカルファイルをAIエージェントが検索可能なコンテキストに変換するツールです。",
@@ -45114,7 +45114,7 @@
   {
     "name": "django-erp-framework",
     "slug": "django-erp-framework",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Djangoベースの多様なビジネスソリューション構築用フレームワークです。",
@@ -45192,7 +45192,7 @@
   {
     "name": "serendipity",
     "slug": "serendipity",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高品質で高性能なアプリケーションを構築するためのオープンソースツールキットです。",
@@ -45580,7 +45580,7 @@
   {
     "name": "World-Simulator",
     "slug": "world-simulator",
-    "category": "devtools",
+    "category": "media",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "マルチモーダル生成モデルに関する調査論文とリソースの集約リポジトリです。",
@@ -45655,7 +45655,7 @@
   {
     "name": "trends-checker",
     "slug": "trends-checker",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Googleトレンドのデータを分析するための高度なPython CLIツールです。",
@@ -45802,7 +45802,7 @@
   {
     "name": "marble",
     "slug": "marble",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "シンプルさを追求したヘッドレスCMSです。",
@@ -45952,7 +45952,7 @@
   {
     "name": "cylc-flow",
     "slug": "cylc-flow",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Pythonで構築できる汎用的なワークフローエンジンです。",
@@ -46178,7 +46178,7 @@
   {
     "name": "llm-wiki",
     "slug": "llm-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMとの対話履歴をナレッジベースとして構築するツールです。",
@@ -46263,7 +46263,7 @@
   {
     "name": "yams",
     "slug": "yams",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMやアプリケーション向けの永続的なメモリ管理システムです。",
@@ -46338,7 +46338,7 @@
   {
     "name": "mcp-server-odoo",
     "slug": "mcp-server-odoo",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIアシスタントがOdoo ERPシステムと安全に連携するためのMCPサーバーです。",
@@ -46729,7 +46729,7 @@
   {
     "name": "css-text-portrait-builder",
     "slug": "css-text-portrait-builder",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "CSSのみで構成されるテキストポートレート作成ツールです。",
@@ -46801,7 +46801,7 @@
   {
     "name": "Wiki_MkDocs",
     "slug": "wiki-mkdocs",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "MkDocsとMaterialテーマをベースにした個人用ナレッジベース構築ツールです。",
@@ -47020,7 +47020,7 @@
   {
     "name": "magento2-CronjobManager",
     "slug": "magento2-cronjobmanager",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Magento 2におけるクロンジョブを管理するための拡張機能です。",
@@ -47239,7 +47239,7 @@
   {
     "name": "tellery",
     "slug": "tellery",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SQLを用いてメトリクスを構築し、チームで共有できるデータ分析基盤です。",
@@ -47318,7 +47318,7 @@
   {
     "name": "pwa-kit",
     "slug": "pwa-kit",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Salesforce B2C Commerce向けのPWAフロントエンド構築用フレームワークです。",
@@ -47483,7 +47483,7 @@
   {
     "name": "LightCMS",
     "slug": "lightcms",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Laravelをベースとした軽量なCMSおよび汎用的なバックエンド管理フレームワークです。",
@@ -47928,7 +47928,7 @@
   {
     "name": "Unified-Hosts-AutoUpdate",
     "slug": "unified-hosts-autoupdate",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "hostsファイルの自動更新と管理を容易にするスクリプトです。",
@@ -48003,7 +48003,7 @@
   {
     "name": "vibe-log-cli",
     "slug": "vibe-log-cli",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude CodeやCursorを用いたAIによるコーディングセッションを記録・分析するCLIツールです。",
@@ -48075,7 +48075,7 @@
   {
     "name": "mprove",
     "slug": "mprove",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Malloyセマンティック層を活用したオープンソースのAIエージェント型ビジネスインテリジェンスです。",
@@ -48381,7 +48381,7 @@
   {
     "name": "openaccountants",
     "slug": "openaccountants",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェント向けのオープンソース税務ガイド集です。",
@@ -48459,7 +48459,7 @@
   {
     "name": "Forge",
     "slug": "forge",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "設定駆動型のツリーウォーカーに基づいた汎用的なローコードフレームワークです。",
@@ -48828,7 +48828,7 @@
   {
     "name": "noco-form",
     "slug": "noco-form",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ドラッグ＆ドロップで操作可能な低コードのフォーム作成ツールです。",
@@ -48978,7 +48978,7 @@
   {
     "name": "gtm-cheat-codes",
     "slug": "gtm-cheat-codes",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コーディングエージェントを活用したマーケティング戦略立案を支援するガイド",
@@ -49053,7 +49053,7 @@
   {
     "name": "MetaLowCode",
     "slug": "metalowcode",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "企業向けのフルスタックな低コード開発プラットフォームです。",
@@ -49201,7 +49201,7 @@
   {
     "name": "mcp-logseq",
     "slug": "mcp-logseq",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIアシスタントがLogSeqのデータを操作するためのMCPサーバーです。",
@@ -49351,7 +49351,7 @@
   {
     "name": "ledger-autosync",
     "slug": "ledger-autosync",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ledger-cliのファイルを銀行口座と同期するツールです。",
@@ -49502,7 +49502,7 @@
   {
     "name": "gpt-image2-ecommerce",
     "slug": "gpt-image2-ecommerce",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GPT-Image-2を活用してEC用素材を生成するCLIツールです。",
@@ -49649,7 +49649,7 @@
   {
     "name": "stash",
     "slug": "stash",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "チーム内のコーディングエージェント向けに共有メモリを提供するツールです。",
@@ -50466,7 +50466,7 @@
   {
     "name": "gamewiki",
     "slug": "gamewiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Geminiを活用したRAG機能を持つ、ゲーム向けインテリジェントWikiオーバーレイツールです。",
@@ -50616,7 +50616,7 @@
   {
     "name": "livecontext-ce",
     "slug": "livecontext-ce",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "チャットを通じてAIエージェントやワークフローを構築できるセルフホスト型の自動化プラットフォームです。",
@@ -51167,7 +51167,7 @@
   {
     "name": "skeleton",
     "slug": "skeleton",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Sulu CMSをベースにした新規プロジェクト用のテンプレートです。",
@@ -51330,7 +51330,7 @@
   {
     "name": "smythos-studio",
     "slug": "smythos-studio",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "直感的な操作でAIエージェントを構築・デプロイできるオープンソースのプラットフォームです。",
@@ -51552,7 +51552,7 @@
   {
     "name": "kite",
     "slug": "kite",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ノーコードでカスタムDiscordボットを簡単に作成できるツールです。",
@@ -51627,7 +51627,7 @@
   {
     "name": "facebook-ads-library-mcp",
     "slug": "facebook-ads-library-mcp",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Facebook広告ライブラリから情報を取得するためのMCPサーバーです。",
@@ -51774,7 +51774,7 @@
   {
     "name": "Frappe_Assistant_Core",
     "slug": "frappe-assistant-core",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ERPNextの機能をLLMと連携させるためのインフラ基盤です。",
@@ -52371,7 +52371,7 @@
   {
     "name": "leanspec",
     "slug": "leanspec",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用したモダンな開発向けの軽量で柔軟な仕様駆動開発ツールです。",
@@ -52446,7 +52446,7 @@
   {
     "name": "moore-wechat-article-downloader",
     "slug": "moore-wechat-article-downloader",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "微信（WeChat）のコンテンツを収集・分析するためのローカル優先型ツールです。",
@@ -52912,7 +52912,7 @@
   {
     "name": "umple",
     "slug": "umple",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "モデル駆動型プログラミングにより、設計からコード生成までを効率化するツールです。",
@@ -53143,7 +53143,7 @@
   {
     "name": "email-marketing-bible",
     "slug": "email-marketing-bible",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Codeにメールマーケティングの専門知識を付与するスキルセットです。",
@@ -53291,7 +53291,7 @@
   {
     "name": "Gobi",
     "slug": "gobi",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Go言語で構築されたAPIファーストな軽量BIエンジンです。",
@@ -53363,7 +53363,7 @@
   {
     "name": "kanban-tui",
     "slug": "kanban-tui",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Pythonで構築された、エージェントも操作可能なTUI形式のタスク管理ツールです。",
@@ -53510,7 +53510,7 @@
   {
     "name": "studio",
     "slug": "studio",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Frappeフレームワーク向けのビジュアルアプリビルダーです。",
@@ -53892,7 +53892,7 @@
   {
     "name": "teedoc",
     "slug": "teedoc",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "MarkdownやJupyter Notebookから静的なドキュメントサイトを生成するツールです。",
@@ -54055,7 +54055,7 @@
   {
     "name": "NanoSage",
     "slug": "nanosage",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローカルLLMを活用した再帰的検索とスマートな知識探索ツールです。",
@@ -54284,7 +54284,7 @@
   {
     "name": "AS-Editor",
     "slug": "as-editor",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Vueベースの視覚的なドラッグ＆ドロップによるページ生成ツールです。",
@@ -54437,7 +54437,7 @@
   {
     "name": "portable-data-stack-dagster",
     "slug": "portable-data-stack-dagster",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Dockerベースのポータブルなデータマートおよびビジネスインテリジェンス構築スイートです。",
@@ -54663,7 +54663,7 @@
   {
     "name": "affine-mcp-server",
     "slug": "affine-mcp-server",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AFFiNEのデータとAIアシスタントを連携させるためのMCPサーバーです。",
@@ -54738,7 +54738,7 @@
   {
     "name": "data-selection-survey",
     "slug": "data-selection-survey",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "大規模言語モデルのためのデータ選択に関する調査報告です。",
@@ -54810,7 +54810,7 @@
   {
     "name": "SLMs-Survey",
     "slug": "slms-survey",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ペンシルベニア州立大学による小規模言語モデル（SLM）の調査報告。",
@@ -55191,7 +55191,7 @@
   {
     "name": "sql-data-analytics-project",
     "slug": "sql-data-analytics-project",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "SQLを用いて多様な分析手法を実践するためのスクリプト集です。",
@@ -55266,7 +55266,7 @@
   {
     "name": "agx",
     "slug": "agx",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用したデータ分析および可視化のためのプラットフォームです。",
@@ -55344,7 +55344,7 @@
   {
     "name": "knowledge-rag",
     "slug": "knowledge-rag",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Code向けのローカルRAG MCPサーバーです。",
@@ -55416,7 +55416,7 @@
   {
     "name": "apibrew",
     "slug": "apibrew",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "YAMLファイルからCRUD操作を自動生成するローコードソフトウェアです。",
@@ -55964,7 +55964,7 @@
   {
     "name": "Ziit",
     "slug": "ziit",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "コードの工数管理や統計を可視化するための多機能な開発ツールです。",
@@ -56039,7 +56039,7 @@
   {
     "name": "praxis-ide",
     "slug": "praxis-ide",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Prologを用いたビジュアルプログラミングが可能なオンラインIDEです。",
@@ -56114,7 +56114,7 @@
   {
     "name": "raytha",
     "slug": "raytha",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "C#と.NETを活用した、高機能で高速なヘッドレスCMSです。",
@@ -56265,7 +56265,7 @@
   {
     "name": "Zenroom",
     "slug": "zenroom",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高度な暗号化操作やデータ処理をノーコードで実行できるセキュアな仮想マシンです。",
@@ -56337,7 +56337,7 @@
   {
     "name": "RepoWiki",
     "slug": "repowiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ソースコードから包括的なWikiドキュメントを自動生成するツールです。",
@@ -56486,7 +56486,7 @@
   {
     "name": "dev-3.0",
     "slug": "dev-3-0",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "複数のAIコーディングエージェントを並列で管理・運用するためのツールです。",
@@ -57035,7 +57035,7 @@
   {
     "name": "howm",
     "slug": "howm",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Emacs上で動作するノート作成ツールです。",
@@ -57123,7 +57123,7 @@
   {
     "name": "vex-hugo",
     "slug": "vex-hugo",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Hugoを使用したレスポンシブな製品ランディングページ用テーマです。",
@@ -57195,7 +57195,7 @@
   {
     "name": "knowns",
     "slug": "knowns",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIネイティブな開発におけるプロジェクトの記憶層を提供するツールです。",
@@ -57351,7 +57351,7 @@
   {
     "name": "KnowledgeBase-RAG-LLM-System",
     "slug": "knowledgebase-rag-llm-system",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "StreamlitとLangChainを用いた軽量なRAG学習プロジェクトです。",
@@ -57680,7 +57680,7 @@
   {
     "name": "django-business-logic",
     "slug": "django-business-logic",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Djangoでビジネスロジックを視覚的に構築するためのDSLフレームワークです。",
@@ -57905,7 +57905,7 @@
   {
     "name": "FM-AD-Survey",
     "slug": "fm-ad-survey",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自動運転におけるシナリオ生成と分析に関する研究論文の収集リポジトリです。",
@@ -58055,7 +58055,7 @@
   {
     "name": "typedb-studio",
     "slug": "typedb-studio",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "TypeDBを視覚的に操作するためのインタラクティブな開発環境です。",
@@ -58277,7 +58277,7 @@
   {
     "name": "xlog",
     "slug": "xlog",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Gitネイティブな知識ベース構築のための高速な静的サイトジェネレータです。",
@@ -58352,7 +58352,7 @@
   {
     "name": "mcp-n8n-workflow-builder",
     "slug": "mcp-n8n-workflow-builder",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自然言語を用いてn8nのワークフローを構築・管理できるMCPサーバーです。",
@@ -58675,7 +58675,7 @@
   {
     "name": "frontends",
     "slug": "frontends",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Shopware 6を用いたカスタムヘッドレスフロントエンド構築のためのフレームワークです。",
@@ -58753,7 +58753,7 @@
   {
     "name": "deep-project",
     "slug": "deep-project",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "抽象的なソフトウェアのアイデアを具体的な計画コンポーネントに変換するツールです。",
@@ -58828,7 +58828,7 @@
   {
     "name": "CodeKanban",
     "slug": "codekanban",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "複数のターミナルとAIコーディングエージェントを一元管理するツールです。",
@@ -59125,7 +59125,7 @@
   {
     "name": "spidercreator",
     "slug": "spidercreator",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMを活用してPlaywrightベースのWebスクレイピング用スパイダーを自動生成するツールです。",
@@ -59203,7 +59203,7 @@
   {
     "name": "eXpand",
     "slug": "expand",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "DevExpress XAF向けの拡張フレームワークです。",
@@ -59278,7 +59278,7 @@
   {
     "name": "go-wind-cms",
     "slug": "go-wind-cms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Go言語をベースとしたフルスタックなヘッドレスCMSです。",
@@ -59651,7 +59651,7 @@
   {
     "name": "lowflow-design",
     "slug": "lowflow-design",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Vue 3を使用した視覚的な承認ワークフロー設計ツールです。",
@@ -60395,7 +60395,7 @@
   {
     "name": "px0",
     "slug": "px0",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自然言語を用いてカスタムAIエージェントやワークフローを構築できるツールです。",
@@ -60771,7 +60771,7 @@
   {
     "name": "vcspull",
     "slug": "vcspull",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "YAMLやJSONのマニフェストファイルを使用してプロジェクトを同期するツールです。",
@@ -60996,7 +60996,7 @@
   {
     "name": "devglobe-extension",
     "slug": "devglobe-extension",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "開発中のコードの状況を3D地球上にリアルタイムで可視化する拡張機能です。",
@@ -61218,7 +61218,7 @@
   {
     "name": "platform",
     "slug": "platform",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "宣言的な言語を用いた情報システム開発のためのオープンソースプラットフォームです。",
@@ -61365,7 +61365,7 @@
   {
     "name": "crudapi-admin-web",
     "slug": "crudapi-admin-web",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "VueとQuasarを使用した、コードを書かずにバックエンド管理画面を構築できるツールです。",
@@ -61515,7 +61515,7 @@
   {
     "name": "meegle-cli",
     "slug": "meegle-cli",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ブラウザを開かずにターミナルからMeegleのプロジェクト情報を管理できるCLIツールです。",
@@ -62184,7 +62184,7 @@
   {
     "name": "flowbaker",
     "slug": "flowbaker",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ワークフローを構築・接続・自動化するためのノーコードプラットフォーム用実行エンジンです。",
@@ -62259,7 +62259,7 @@
   {
     "name": "EDA",
     "slug": "eda",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "複数のデータソースを統合して分析や可視化を行うビジネスインテリジェンスプラットフォームです。",
@@ -62561,7 +62561,7 @@
   {
     "name": "mfish-nocode-view",
     "slug": "mfish-nocode-view",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Vue3やTypeScriptを活用した低コードフロントエンド開発基盤です。",
@@ -62636,7 +62636,7 @@
   {
     "name": "FFMPerative",
     "slug": "ffmperative",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "チャットを通じて動画を生成・編集するためのAIエージェント基盤です。",
@@ -62783,7 +62783,7 @@
   {
     "name": "nitro",
     "slug": "nitro",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "JavaScriptやHTML、CSSを使用せずに高速にアプリケーションを構築できるツールです。",
@@ -62861,7 +62861,7 @@
   {
     "name": "unchained",
     "slug": "unchained",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Node.jsベースの高性能なヘッドレスECフレームワークです。",
@@ -63187,7 +63187,7 @@
   {
     "name": "tiki",
     "slug": "tiki",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ターミナル上で動作するMarkdownベースのワークフロー構築ツールです。",
@@ -63337,7 +63337,7 @@
   {
     "name": "vscode-java-dependency",
     "slug": "vscode-java-dependency",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Visual Studio CodeでJavaプロジェクトを管理するための拡張機能です。",
@@ -63484,7 +63484,7 @@
   {
     "name": "ocamlverse.github.io",
     "slug": "ocamlverse-github-io",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "OCaml言語に関連するあらゆるリソースを網羅した公式ドキュメントサイトです。",
@@ -63556,7 +63556,7 @@
   {
     "name": "GamingGaiden",
     "slug": "gaminggaiden",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PCおよびエミュレータ上のゲームプレイ時間を詳細に分析するツールです。",
@@ -63781,7 +63781,7 @@
   {
     "name": "zigflow",
     "slug": "zigflow",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "YAMLで定義可能な、Temporalを基盤とした耐久性の高いワークフローエンジンです。",
@@ -64007,7 +64007,7 @@
   {
     "name": "xrm-ci-framework",
     "slug": "xrm-ci-framework",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Dynamics 365のCRMソリューションにおけるビルドとデプロイを自動化するフレームワークです。",
@@ -64395,7 +64395,7 @@
   {
     "name": "Notion-Hugo",
     "slug": "notion-hugo",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Notionをコンテンツ管理システムとして活用できるHugo用ツールです。",
@@ -64762,7 +64762,7 @@
   {
     "name": "roboticsknowledgebase.github.io",
     "slug": "roboticsknowledgebase-github-io",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ロボット開発者向けのナレッジを蓄積・共有するためのWikiプラットフォームです。",
@@ -64906,7 +64906,7 @@
   {
     "name": "BESSER",
     "slug": "besser",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIを活用したPythonベースのローコードソフトウェア開発プラットフォームです。",
@@ -64981,7 +64981,7 @@
   {
     "name": "piyaz",
     "slug": "piyaz",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "人間とAIエージェントが協調して作業を行うためのエージェンティック・ワークスペースです。",
@@ -65056,7 +65056,7 @@
   {
     "name": "Meta3D",
     "slug": "meta3d",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Web3Dアプリケーションを構築するための低コードプラットフォームです。",
@@ -65428,7 +65428,7 @@
   {
     "name": "wiki",
     "slug": "xsleaks-wiki",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ブラウザのサイドチャネルや情報漏洩に関する技術情報を集約したWikiです。",
@@ -65654,7 +65654,7 @@
   {
     "name": "e2a",
     "slug": "e2a",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェント向けのオープンソース・メールゲートウェイです。",
@@ -66026,7 +66026,7 @@
   {
     "name": "abecms",
     "slug": "abecms",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "高速な動作を実現するAPIファーストのCMSフレームワークです。",
@@ -66167,7 +66167,7 @@
   {
     "name": "framed",
     "slug": "framed",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロジェクトのファイルやディレクトリ構造を効率的に管理するためのツールです。",
@@ -66242,7 +66242,7 @@
   {
     "name": "claude-ops",
     "slug": "claude-ops",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Codeの機能を拡張し、多様な外部サービスと連携させるビジネスオペレーション基盤です。",
@@ -66314,7 +66314,7 @@
   {
     "name": "anythingmcp",
     "slug": "anythingmcp",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "あらゆるAPIやデータベースをAI用コネクタに変換するゲートウェイです。",
@@ -66536,7 +66536,7 @@
   {
     "name": "open-agents-builder",
     "slug": "open-agents-builder",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ビジネス向けのAIエージェントを構築するためのフレームワークです。",
@@ -66683,7 +66683,7 @@
   {
     "name": "web-design",
     "slug": "web-design",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "JavaScriptを用いたローコード開発プラットフォームです。",
@@ -66758,7 +66758,7 @@
   {
     "name": "datasette-dashboards",
     "slug": "datasette-dashboards",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Datasette上でインタラクティブなダッシュボードを作成するためのプラグインです。",
@@ -66908,7 +66908,7 @@
   {
     "name": "markplane",
     "slug": "markplane",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "リポジトリをプロジェクトマネージャーとして活用するAIネイティブなプロジェクト管理ツールです。",
@@ -67271,7 +67271,7 @@
   {
     "name": "eclipse-wakatime",
     "slug": "eclipse-wakatime",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Eclipse上でプログラミング活動から自動的に時間を追跡し、メトリクスを生成するプラグインです。",
@@ -67346,7 +67346,7 @@
   {
     "name": "knowledge-base-server",
     "slug": "knowledge-base-server",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントに永続的な記憶を与えるための知識ベースサーバーです。",
@@ -67643,7 +67643,7 @@
   {
     "name": "student-llm-wiki",
     "slug": "student-llm-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "講義資料から相互に関連する知識ベースを自動生成するAIツールです。",
@@ -67862,7 +67862,7 @@
   {
     "name": "SML",
     "slug": "sml",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "セマンティック・モデリング言語（SML）のためのオープンソース・リポジトリです。",
@@ -68009,7 +68009,7 @@
   {
     "name": "link",
     "slug": "link",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "LLMエージェント向けのローカルな個人記憶管理システムです。",
@@ -68234,7 +68234,7 @@
   {
     "name": "quiqr-desktop",
     "slug": "quiqr-desktop",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローカル優先のフラットファイル型CMSおよびパブリッシングアプリケーションです。",
@@ -68457,7 +68457,7 @@
   {
     "name": "vibe-coding-kit",
     "slug": "vibe-coding-kit",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "非技術職の製品担当者がAIを活用したコーディングを計画するためのツールキットです。",
@@ -68607,7 +68607,7 @@
   {
     "name": "aidefense-framework",
     "slug": "aidefense-framework",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AI/MLシステムを保護するための防御策に関するオープンソースのナレッジベースです。",
@@ -68685,7 +68685,7 @@
   {
     "name": "enthusiast",
     "slug": "enthusiast",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ECサイト向けのオープンソースAIエージェント基盤です。",
@@ -68907,7 +68907,7 @@
   {
     "name": "BeautyQuests",
     "slug": "beautyquests",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Minecraft内でクエストシステムを構築するためのプラグインです。",
@@ -69067,7 +69067,7 @@
   {
     "name": "git-build-hook",
     "slug": "git-build-hook",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロジェクトに参加する開発者のローカルなGit設定を管理するMavenプラグインです。",
@@ -69142,7 +69142,7 @@
   {
     "name": "selene",
     "slug": "selene",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローカル環境で動作するAIエージェント実行デスクトップアプリです。",
@@ -69838,7 +69838,7 @@
   {
     "name": "runify",
     "slug": "runify",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "低リソースで動作する軽量なマルチエージェント・プラットフォームです。",
@@ -70004,7 +70004,7 @@
   {
     "name": "docker-strapi",
     "slug": "docker-strapi",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Strapi v4をDocker環境で簡単に実行するためのイメージです。",
@@ -70076,7 +70076,7 @@
   {
     "name": "backroad",
     "slug": "backroad",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Node.js環境でStreamlitのような操作感を実現する低コードフレームワークです。",
@@ -70226,7 +70226,7 @@
   {
     "name": "knowrob",
     "slug": "knowrob",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "認知能力を備えたロボットのための知識ベースシステムです。",
@@ -70674,7 +70674,7 @@
   {
     "name": "flowg",
     "slug": "flowg",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ローコードでログ処理パイプラインを構築できるビジュアルスクリプティングツールです。",
@@ -70749,7 +70749,7 @@
   {
     "name": "echoes-vault-opencode",
     "slug": "echoes-vault-opencode",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "OpenCode向けの永続的なメモリを保持するためのプラグインです。",
@@ -70824,7 +70824,7 @@
   {
     "name": "sitepins",
     "slug": "sitepins",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Gitリポジトリをバックエンドとして利用できるヘッドレスCMSです。",
@@ -70915,7 +70915,7 @@
   {
     "name": "platform",
     "slug": "dashjoin-platform",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "データ駆動型のアプローチを用いたローコード開発および統合プラットフォームです。",
@@ -71134,7 +71134,7 @@
   {
     "name": "ouijit",
     "slug": "ouijit",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "CLIコーディングエージェント向けのGit worktreeベースのタスク管理ツールです。",
@@ -71362,7 +71362,7 @@
   {
     "name": "ensemble",
     "slug": "ensemble",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "FlutterやReact Nativeよりも高速なネイティブアプリ開発を可能にするフレームワークです。",
@@ -71509,7 +71509,7 @@
   {
     "name": "kb-prolog",
     "slug": "kb-prolog",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PrologとSQLiteを基盤としたコンテンツアドレス指定型の知識ベースです。",
@@ -72360,7 +72360,7 @@
   {
     "name": "JAWA",
     "slug": "jawa",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Jamf環境においてWebhookとcronジョブを連携させるためのアシスタントツールです。",
@@ -72585,7 +72585,7 @@
   {
     "name": "huxy-admin",
     "slug": "huxy-admin",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Reactベースのカスタマイズ可能な管理画面テンプレートです。",
@@ -72738,7 +72738,7 @@
   {
     "name": "librarian",
     "slug": "librarian",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PHPで記述された、Markdownをインデックスする静的サイトジェネレータです。",
@@ -72813,7 +72813,7 @@
   {
     "name": "mcp-fiscal-brasil",
     "slug": "mcp-fiscal-brasil",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "ブラジルの税務・会計情報に対応したMCPサーバーツールです。",
@@ -73107,7 +73107,7 @@
   {
     "name": "ModularDoc",
     "slug": "modulardoc",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": ".NETライブラリ向けのモジュール式ドキュメント生成ツールです。",
@@ -73257,7 +73257,7 @@
   {
     "name": "d9",
     "slug": "d9",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Directusのメンテナンスを支援するためのオープンソースプロジェクトです。",
@@ -73336,7 +73336,7 @@
   {
     "name": "lowcode-tools",
     "slug": "lowcode-tools",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "拡張性を備えた企業向けの低コード技術スタックです。",
@@ -73487,7 +73487,7 @@
   {
     "name": "CodeJury",
     "slug": "codejury",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントを活用した、要件定義からプルリクエストの承認までを自動化するソフトウェア配信パイプラインです。",
@@ -73640,7 +73640,7 @@
   {
     "name": "llm-wiki",
     "slug": "mehmetgoekce-llm-wiki",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Claude Codeを活用してKarpathyのLLM Wikiを構築するツールです。",
@@ -73868,7 +73868,7 @@
   {
     "name": "acornix",
     "slug": "acornix",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "モバイル端末上で動作するAIエージェントによる自動化システムです。",
@@ -74257,7 +74257,7 @@
   {
     "name": "vratix-expressjs-api-modules",
     "slug": "vratix-expressjs-api-modules",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Node.jsを用いたAPIバックエンドを迅速に構築するための開発用テンプレートです。",
@@ -74551,7 +74551,7 @@
   {
     "name": "madao_service",
     "slug": "madao-service",
-    "category": "devtools",
+    "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Spring Cloudを使用したマイクロサービスアーキテクチャの学習および開発用基盤です。",
@@ -74626,7 +74626,7 @@
   {
     "name": "third-brain-v7-skills",
     "slug": "third-brain-v7-skills",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェントのスキル管理とナレッジマネジメントのための基盤ツールです。",
@@ -74929,7 +74929,7 @@
   {
     "name": "DocMason",
     "slug": "docmason",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "複雑なオフィスファイルをローカルLLMのナレッジベースへ変換するエージェントです。",
@@ -75079,7 +75079,7 @@
   {
     "name": "github-wiki-see-rs",
     "slug": "github-wiki-see-rs",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "GitHub Wikiの内容を検索エンジンにインデックスさせるためのツールです。",
@@ -75151,7 +75151,7 @@
   {
     "name": "oinone-kunlun",
     "slug": "oinone-kunlun",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIと開発者を共通のメタデータモデルで統合する低コードフレームワークです。",
@@ -75226,7 +75226,7 @@
   {
     "name": "asyncjobs",
     "slug": "asyncjobs",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Go言語で動作する非同期ジョブプロセッサです。",
@@ -75706,7 +75706,7 @@
   {
     "name": "d365fo-mcp-server",
     "slug": "d365fo-mcp-server",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Dynamics 365 Finance & Operationsのメタデータに基づいたコード生成支援ツールです。",
@@ -76013,7 +76013,7 @@
   {
     "name": "pad",
     "slug": "pad",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIエージェント時代のプロジェクト管理を支援するツールです。",
@@ -76088,7 +76088,7 @@
   {
     "name": "the-best-email-marketing-services-and-tools-for-marketers",
     "slug": "the-best-email-marketing-services-and-tools-for-marketers",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "メールマーケティングにおける最適なツールやサービスをまとめたリストです。",
@@ -76232,7 +76232,7 @@
   {
     "name": "overview",
     "slug": "overview",
-    "category": "devtools",
+    "category": "devsupport",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "プロジェクトの概要やコミュニティへの参加方法を案内するリソースです。",
@@ -76307,7 +76307,7 @@
   {
     "name": "waldiez",
     "slug": "waldiez",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AG2エージェントをノーコードで連携・オーケストレーションするツールです。",
@@ -76538,7 +76538,7 @@
   {
     "name": "tiny.place",
     "slug": "tiny-place",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "自律型AIエージェントのためのソーシャル経済基盤です。",
@@ -76685,7 +76685,7 @@
   {
     "name": "mcp-hubspot",
     "slug": "mcp-hubspot",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "AIアシスタントがHubSpot CRMデータと連携するためのMCPサーバーです。",
@@ -76760,7 +76760,7 @@
   {
     "name": "rest",
     "slug": "rest",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "任意のSQLデータベースからRESTful APIを生成するツールです。",
@@ -77060,7 +77060,7 @@
   {
     "name": "plandev",
     "slug": "plandev",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "宇宙機のモデリングを行うためのソフトウェアフレームワークです。",
@@ -77282,7 +77282,7 @@
   {
     "name": "meta-system",
     "slug": "meta-system",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "効率的な開発を実現するための包括的なフレームワークです。",
@@ -77441,7 +77441,7 @@
   {
     "name": "remindb",
     "slug": "remindb",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "セッショントークンを大幅に削減するエージェント用メモリデータベースです。",
@@ -77591,7 +77591,7 @@
   {
     "name": "mfs",
     "slug": "mfs",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "散在する情報を統合してAIエージェントに提供するためのコンテキスト管理基盤です。",
@@ -77983,7 +77983,7 @@
   {
     "name": "dyn365-ce-vsts-tasks",
     "slug": "dyn365-ce-vsts-tasks",
-    "category": "devtools",
+    "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Dynamics 365 Customer Engagement向けのVSTS拡張機能です。",
@@ -78386,7 +78386,7 @@
   {
     "name": "urungi",
     "slug": "urungi",
-    "category": "devtools",
+    "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "PostgreSQLやMySQLなどのデータベースからデータを可視化するBIツールです。",
@@ -78533,7 +78533,7 @@
   {
     "name": "tymly",
     "slug": "tymly",
-    "category": "devtools",
+    "category": "lowcode",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "デジタルサービスを構築するためのオープンなフレームワークです。",
@@ -78605,7 +78605,7 @@
   {
     "name": "linear-claude-skill",
     "slug": "linear-claude-skill",
-    "category": "devtools",
+    "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "Linearの課題、プロジェクト、チームを管理するためのClaude用エージェントスキルです。",
@@ -78828,6 +78828,78 @@
     "jaSamplePaths": []
   },
   {
+    "name": "gitsocial",
+    "slug": "gitsocial",
+    "category": "devsupport",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Go言語で構築された分散型のクロスフォージ・コラボレーションプラットフォームです。",
+    "description": "gitsocialは、Gitをベースとした分散型の共同作業を行うためのプラットフォームです。Go言語で開発されており、CLI（コマンドラインインターフェース）を通じて操作を行います。カンバン機能やクロスフォージの概念を取り入れており、チームでのプロジェクト管理を支援します。bubbleteaライブラリを活用したユーザーインターフェースを備えています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://gitsocial.org/",
+    "githubUrl": "https://github.com/gitsocial-org/gitsocial",
+    "featured": false,
+    "stars": 120,
+    "language": "Go",
+    "githubCreatedAt": "2025-10-27T20:11:56Z",
+    "githubPushedAt": "2026-08-16T03:46:31Z",
+    "useCases": [
+      {
+        "text": "分散型でのプロジェクト管理"
+      },
+      {
+        "text": "CLIを活用した開発ワークフローの構築"
+      },
+      {
+        "text": "カンバン形式によるタスク管理"
+      },
+      {
+        "text": "Gitベースの共同作業環境の運用"
+      },
+      {
+        "text": "クロスフォージにおけるコラボレーション"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Go"
+      },
+      {
+        "text": "Git"
+      },
+      {
+        "text": "CLI"
+      },
+      {
+        "text": "Kanban"
+      },
+      {
+        "text": "Decentralized"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはGUI（画面）で操作するものでしょうか？",
+        "answer": "主なインターフェースとしてCLI（コマンドラインインターフェース）が挙げられており、ターミナル上で操作を行うツールです。"
+      },
+      {
+        "question": "どのようなプログラミング言語で動作しますか？",
+        "answer": "Go言語で構築されています。"
+      },
+      {
+        "question": "カンバン機能は含まれていますか？",
+        "answer": "はい、主なトピックの一つとしてカンバン機能が含まれており、タスクの視覚的な管理をサポートしています。"
+      },
+      {
+        "question": "分散型のシステムとはどのようなものですか？",
+        "answer": "中央集権的なサーバーに依存せず、複数のノードで情報を共有・同期する仕組みを指します。このツールはその概念を取り入れています。Goals: "
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "mc-magento",
     "slug": "mc-magento",
     "category": "commerce",
@@ -78894,6 +78966,3333 @@
       {
         "question": "主なプログラミング言語は何ですか？",
         "answer": "このソフトウェアはPHPで開発されており、PHP環境において動作します。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "vibra-code",
+    "slug": "vibra-code",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIを活用してモバイルアプリを構築できるオープンソースのアプリビルダーです。",
+    "description": "vibra-codeは、自然言語による指示からAIがモバイルアプリを生成するオープンソースのプラットフォームです。Claude Code、Expo、React Native、Convex、E2Bなどの技術スタックを用いて構築されています。ユーザーが作りたい内容を記述すると、AIがコードを生成し、スマートフォン上でプレビューを確認することが可能です。bolt.newやlovableといったサービスと同様の体験を、オープンソースとして提供しています。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://mintlify.wiki/sa4hnd/vibra-code",
+    "githubUrl": "https://github.com/sa4hnd/vibra-code",
+    "featured": false,
+    "stars": 120,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-03-06T02:54:48Z",
+    "githubPushedAt": "2026-03-06T03:03:59Z",
+    "useCases": [
+      {
+        "text": "モバイルアプリのプロトタイプ制作"
+      },
+      {
+        "text": "AIによる迅速なコード生成"
+      },
+      {
+        "text": "React Nativeを用いたアプリ開発"
+      },
+      {
+        "text": "モバイル向けUIのプレビュー確認"
+      },
+      {
+        "text": "カスタムアプリの迅速な構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai-app-builder"
+      },
+      {
+        "text": "ai-code-generation"
+      },
+      {
+        "text": "mobile-app-development"
+      },
+      {
+        "text": "react-native"
+      },
+      {
+        "text": "typescript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールを使ってどのようなアプリが作れますか？",
+        "answer": "自然言語での指示に基づいて、AIがモバイルアプリのコードを生成します。ExpoやReact Nativeを活用しているため、AndroidおよびiOS向けのモバイルアプリケーションの開発を支援する仕組みを提供しています。"
+      },
+      {
+        "question": "開発に使用されている主な技術は何ですか？",
+        "answer": "このツールは、Claude Code、Expo、React Native、Convex、そしてE2Bといった最新の技術スタックを組み合わせて構築されています。TypeScriptが主要な言語として使用されています。"
+      },
+      {
+        "question": "既存のAIアプリビルダーとの違いは何ですか？",
+        "answer": "vibecodeappやlovable、bolt.newといったサービスと同様の機能を備えつつ、完全にオープンソースである点が特徴です。開発者がより自由度の高い環境でAIを活用したアプリ構築を行えるよう設計されています。"
+      },
+      {
+        "question": "生成されたアプリをすぐに確認することは可能ですか？",
+        "answer": "はい、このツールではユーザーが作りたい内容を記述してAIに構築させた後、スマートフォン上でプレビューを確認できる機能が含まれています。これにより、開発の初期段階での視覚的な確認が容易になります。"
+      }
+    ],
+    "jaFileCount": 3,
+    "jaSamplePaths": [
+      {
+        "text": "vibracode-mobile/react-native-lab/react-native/packages/react-native/React/I18n/strings/ja.lproj"
+      },
+      {
+        "text": "vibracode-mobile/react-native-lab/react-native/packages/react-native/React/I18n/strings/ja.lproj/Localizable.strings"
+      },
+      {
+        "text": "vibracode-mobile/react-native-lab/react-native/packages/react-native/React/I18n/strings/ja.lproj/fbt_language_pack.bin"
+      }
+    ]
+  },
+  {
+    "name": "chapter",
+    "slug": "chapter",
+    "category": "crm",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "開発者向けツールを対象としたオープンソースのGTMプラットフォームです。",
+    "description": "Chapterは、主にデベロッパー向けツールの市場参入（GTM）を支援するために設計されたオープンソースソフトウェアです。CRM機能やリード管理、アウトバウンド活動、案件の適格性評価、そして営業プロセスといった販売に関わる主要な機能を備えています。Pythonで構築されており、企業のセールスチームが効率的に顧客を獲得するための基盤を提供します。開発者向け製品の成長を加速させるための包括的な仕組みを備えたツールです。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://chapter.show",
+    "githubUrl": "https://github.com/chapter-gtm/chapter",
+    "featured": false,
+    "stars": 119,
+    "language": "Python",
+    "githubCreatedAt": "2024-07-25T08:51:19Z",
+    "githubPushedAt": "2025-05-10T10:05:52Z",
+    "useCases": [
+      {
+        "text": "デベロッパー向けツールのリード管理"
+      },
+      {
+        "text": "アウトバウンド営業活動の管理"
+      },
+      {
+        "text": "新規市場参入に向けたGTM戦略の実行"
+      },
+      {
+        "text": "見込み顧客の適格性評価"
+      },
+      {
+        "text": "CRM機能を用いた営業プロセスの統合"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "crm"
+      },
+      {
+        "text": "gtm"
+      },
+      {
+        "text": "leads"
+      },
+      {
+        "text": "outbound"
+      },
+      {
+        "text": "qualification"
+      },
+      {
+        "text": "sales"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような企業に適していますか？",
+        "answer": "デベロッパー向けツールの販売やマーケティングを強化したい企業に適しています。特に、効率的なリード獲得やアウトバウンド営業のプロセスをシステム化したい場合に有効なプラットフォームです。"
+      },
+      {
+        "question": "主な機能にはどのようなものがありますか？",
+        "answer": "CRM（顧客関係管理）、リードの管理、アウトバウンド活動の追跡、案件の適格性評価、および販売に関連する主要なプロセスが含まれています。開発者向け製品のGTM戦略に特化した構成となっています。"
+      },
+      {
+        "question": "どのプログラミング言語で構築されていますか？",
+        "answer": "このソフトウェアはPythonを用いて構築されています。Pythonをベースとしたシステム環境での運用や拡張に適した設計となっています。"
+      },
+      {
+        "question": "ライセンス体系はどうなっていますか？",
+        "answer": "このプロジェクトはAGPL-3.0ライセンスの下で公開されています。オープンソースソフトウェアとして提供されており、利用条件についてはライセンスの詳細を確認してください。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "flux-sched",
+    "slug": "flux-sched",
+    "category": "analytics",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "グラフベースのジョブスケジューリングシステムです。",
+    "description": "flux-schedは、グラフに基づいたジョブスケジューリングを実現するためのソフトウェアです。HPC（ハイパフォーマンス・コンピューティング）環境やワークフローの管理に適した設計となっています。C++で記述されており、効率的なリソース配分を目的としています。Radiusプロトコルへの対応など、高度なスケジューリング機能を提供します。",
+    "license": "LGPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://flux-framework.readthedocs.io/projects/flux-sched/en/latest/",
+    "githubUrl": "https://github.com/flux-framework/flux-sched",
+    "featured": false,
+    "stars": 119,
+    "language": "C++",
+    "githubCreatedAt": "2014-10-23T23:09:17Z",
+    "githubPushedAt": "2026-08-12T17:14:02Z",
+    "useCases": [
+      {
+        "text": "HPC環境におけるジョブ管理"
+      },
+      {
+        "text": "複雑なワークフローのスケジュール実行"
+      },
+      {
+        "text": "グラフ構造に基づくタスク依存関係の処理"
+      },
+      {
+        "text": "計算リソースの効率的な配分"
+      },
+      {
+        "text": "RADIUSを用いた認証連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "hpc"
+      },
+      {
+        "text": "job-scheduler"
+      },
+      {
+        "text": "radius"
+      },
+      {
+        "text": "scheduling"
+      },
+      {
+        "text": "workflows"
+      },
+      {
+        "text": "C++"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような仕組みで動作しますか？",
+        "answer": "グラフベースのスケジューリング手法を採用しており、タスク間の依存関係をグラフとして定義することで、適切な順序でのジョブ実行を管理します。"
+      },
+      {
+        "question": "主な対象となる利用環境は何ですか？",
+        "answer": "主にHPC（ハイパフォーマンス・コンピューティング）分野や、複雑なワークフローを実行する必要がある計算基盤の構築が想定されています。"
+      },
+      {
+        "question": "サポートされているプログラミング言語はありますか？",
+        "answer": "このソフトウェア自体はC++で開発されています。"
+      },
+      {
+        "question": "RADIUSとの連携は可能ですか？",
+        "answer": "はい、主なトピックの一つとしてRadiusが含まれており、関連する認証やネットワーク管理との連携を考慮した設計となっています。媒体としての機能を提供します。Goals: Provide a graph-based job scheduler for HPC and workflows. Language: C++. License: LGPL-3.0."
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "edgelinkd",
+    "slug": "edgelinkd",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Rustで再実装されたフローベースのプログラミングツールです。",
+    "description": "edgelinkdは、Node-REDをRust言語で再実装したオープンソースソフトウェアです。イベント駆動型の設計を採用しており、フローベースのプログラミングを通じてシステムを構築できます。低コード環境を提供するため、複雑なロジックを視覚的に整理しながら実装することが可能です。IoTデバイスとの連携やデータの流れを制御する基盤として活用できます。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/oldrev/edgelinkd",
+    "githubUrl": "https://github.com/oldrev/edgelinkd",
+    "featured": false,
+    "stars": 119,
+    "language": "Rust",
+    "githubCreatedAt": "2025-07-09T14:33:02Z",
+    "githubPushedAt": "2026-01-19T16:30:05Z",
+    "useCases": [
+      {
+        "text": "IoTデバイスのデータ処理"
+      },
+      {
+        "text": "イベント駆動型システムの構築"
+      },
+      {
+        "text": "Node-RED代替の開発環境"
+      },
+      {
+        "text": "低コードによるワークフロー自動化"
+      },
+      {
+        "text": "Rustを用いた高速なフロー処理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "edgelinkd"
+      },
+      {
+        "text": "Node-RED"
+      },
+      {
+        "text": "Rust"
+      },
+      {
+        "text": "IoT"
+      },
+      {
+        "text": "低コード"
+      },
+      {
+        "text": "イベント駆動"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Node-REDとの違いは何ですか？",
+        "answer": "このツールはNode-REDをRust言語で再実装したものです。Rustを使用することで、高いパフォーマンスやメモリの安全性といった利点を享受しながら、Node-REDと同様のフローベースのプログラミング手法を利用できます。"
+      },
+      {
+        "question": "どのような技術スタックで動いていますか？",
+        "answer": "主な開発言語としてRustが採用されています。イベント駆動型（event-driven）のアーキテクチャに基づいており、効率的なデータ処理やシステム連携を実現するための設計となっています。"
+      },
+      {
+        "question": "低コード（Low-code）とはどういう意味ですか？",
+        "answer": "プログラミングの知識を最小限に抑えつつ、視覚的なフローを組み立てることでアプリケーションやシステムを構築する手法のことです。このツールでは、フローベースの操作によってシステムの挙動を定義できます。"
+      },
+      {
+        "question": "IoT分野での活用は可能ですか？",
+        "answer": "はい、主なトピックの一つとしてIoTが含まれています。デバイスからのイベントを受け取り、それに対する処理をフローとして定義することで、IoTデータの収集や制御システムの一部として組み込むことが可能です。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "openpetra",
+    "slug": "openpetra",
+    "category": "crm",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "慈善団体向けの顧客管理および業務管理システムです。",
+    "description": "OpenPetraは、主に慈善活動を行う組織のために設計されたアドミニストレーションソフトウェアです。CRM（顧客関係管理）とERP（企業資源計画）の機能を備えています。C#で開発されており、GPL-3.0ライセンスの下で公開されています。非営利団体などが組織運営を効率化するための管理基盤として提供されています。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.openpetra.org",
+    "githubUrl": "https://github.com/openpetra/openpetra",
+    "featured": false,
+    "stars": 119,
+    "language": "C#",
+    "githubCreatedAt": "2013-10-11T06:25:59Z",
+    "githubPushedAt": "2026-07-04T15:07:15Z",
+    "useCases": [
+      {
+        "text": "慈善団体の顧客管理"
+      },
+      {
+        "text": "団体内の業務プロセス管理"
+      },
+      {
+        "text": "CRM機能の活用"
+      },
+      {
+        "text": "ERP機能による資源管理"
+      },
+      {
+        "text": "寄付者や支援者のデータ管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "openpetra"
+      },
+      {
+        "text": "charity"
+      },
+      {
+        "text": "crm"
+      },
+      {
+        "text": "erp"
+      },
+      {
+        "text": "c-sharp"
+      },
+      {
+        "text": "gpl-3.0"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような組織向けのソフトウェアですか？",
+        "answer": "このソフトウェアは、主に慈善活動を行う団体（Charities）を対象として設計された管理システムです。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "CRM（顧客関係管理）とERP（企業資源計画）の両方の機能を備えており、組織の運営に必要なデータ管理や業務プロセスを統合的に行えます。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "C#というプログラミング言語を使用して開発されており、GPL-3.0というオープンソースライセンスで提供されています。"
+      },
+      {
+        "question": "カスタマイズは可能ですか？",
+        "answer": "オープンソースソフトウェアとして公開されているため、ソースコードへのアクセスが可能ですが、具体的なカスタマイズ範囲については公式のドキュメントを確認する必要があります。variance"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "b3s",
+    "slug": "b3s",
+    "category": "forum",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Ruby on Railsで構築された掲示板ソフトウェアです。",
+    "description": "b3sは、Ruby on Railsをベースに開発された掲示板ソフトウェアです。MITライセンスの下で提供されています。ユーザー同士が情報を共有したり議論したりするためのフォーラム機能を提供します。Webアプリケーションとして完成しているため、コミュニティ運営や情報交換の場として活用できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/b3s/b3s",
+    "githubUrl": "https://github.com/b3s/b3s",
+    "featured": false,
+    "stars": 118,
+    "language": "Ruby",
+    "githubCreatedAt": "2009-04-23T12:44:42Z",
+    "githubPushedAt": "2026-08-19T07:59:26Z",
+    "useCases": [
+      {
+        "text": "コミュニティサイトの構築"
+      },
+      {
+        "text": "社内情報の共有掲示板"
+      },
+      {
+        "text": "技術的な議論のためのフォーラム"
+      },
+      {
+        "text": "ユーザー間の意見交換の場の提供"
+      },
+      {
+        "text": "趣味の話題を共有する掲示板"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "forum"
+      },
+      {
+        "text": "rails"
+      },
+      {
+        "text": "ruby"
+      },
+      {
+        "text": "mit-license"
+      },
+      {
+        "text": "open-source"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何で動いていますか？",
+        "answer": "Ruby on RailsというWebアプリケーションフレームワークをベースに構築されています。そのため、Railsの知識があればカスタマイズや運用が可能です。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で公開されています。商用利用を含め、非常に制約の少ないオープンソースライセンスです。"
+      },
+      {
+        "question": "どのような機能を持っていますか？",
+        "answer": "掲示板（フォーラム）としての基本機能を備えています。ユーザーが投稿を行い、それに対して反応や議論ができる仕組みを提供します。"
+      },
+      {
+        "question": "開発言語は何ですか？",
+        "answer": "主な開発言語はRubyです。Rubyの環境があれば動作させることができます。}]}/n/n※すみません、再度指示通り正確にJSONのみを出力します。/n/n{"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "review-analyzer-skill",
+    "slug": "review-analyzer-skill",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "AIを活用してECサイトのレビューを多角的に分析するツールです。",
+    "description": "このツールは、AmazonなどのECサイトにおける顧客レビューをAIで深く分析するためのものです。22種類のタグを用いてデータを構造化し、14章構成の洞察レポートを自動生成します。また、6種類のテーマ別ダッシュボードが内蔵されており、分析結果を視覚的に把握することが可能です。さらに、解析したデータを飛書（Feishu）へ書き出す機能も備えています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/buluslan/review-analyzer-skill",
+    "githubUrl": "https://github.com/buluslan/review-analyzer-skill",
+    "featured": false,
+    "stars": 118,
+    "language": "Python",
+    "githubCreatedAt": "2026-03-04T12:22:01Z",
+    "githubPushedAt": "2026-08-19T05:03:06Z",
+    "useCases": [
+      {
+        "text": "ECサイトの顧客レビュー分析"
+      },
+      {
+        "text": "商品改善のためのインサイト抽出"
+      },
+      {
+        "text": "競合商品の評価傾向の調査"
+      },
+      {
+        "text": "SNSやレビューデータの構造化"
+      },
+      {
+        "text": "レポート作成業務の自動化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AI"
+      },
+      {
+        "text": "Amazon"
+      },
+      {
+        "text": "データ分析"
+      },
+      {
+        "text": "EC"
+      },
+      {
+        "text": "機械学習"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のデータを分析できますか？",
+        "answer": "主にAmazonなどのECプラットフォームにおける顧客レビューを対象としています。AIを活用することで、単なるテキストの抽出にとどまらず、多角的な視点での深い分析を行うことが可能です。"
+      },
+      {
+        "question": "分析結果はどのように出力されますか？",
+        "answer": "22次元のタグ構築に基づいたデータ整理に加え、14章構成の洞察レポートが生成されます。また、内蔵された6つのテーマ別ダッシュボードによって、視覚的な確認も行えます。"
+      },
+      {
+        "question": "外部ツールとの連携は可能ですか？",
+        "answer": "このツールには飛書（Feishu）への書き出し機能が備わっています。分析したデータをスムーズに共有・管理するワークフローを構築することが可能です。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "Pythonを主な言語として開発されており、AIや機械学習、NLP（自然言語処理）の技術を組み合わせて高度なレビュー解析を実現しています。MITライセンスで公開されています。直し方】"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "osmea",
+    "slug": "osmea",
+    "category": "devsupport",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Flutterを用いたエンタープライズ向けECモバイルアプリの開発基盤です。",
+    "description": "MasterFabricは、eコマース用モバイルアプリケーションのアーキテクチャを表現するフレームワークです。企業レベルの要件を満たすFlutter開発を支援することを目的としています。Dart言語を用いて構築されており、高度なモバイルアプリ開発のための構造を提供します。ECサイト向けのモバイル展開を検討している開発チームにとって、基盤となる設計指針となります。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://osmea.masterfabric.co",
+    "githubUrl": "https://github.com/masterfabric-mobile/osmea",
+    "featured": false,
+    "stars": 118,
+    "language": "Dart",
+    "githubCreatedAt": "2025-04-15T17:38:25Z",
+    "githubPushedAt": "2026-03-09T19:59:36Z",
+    "useCases": [
+      {
+        "text": "EC向けモバイルアプリの開発"
+      },
+      {
+        "text": "企業向けモバイルアプリケーションの構築"
+      },
+      {
+        "text": "Flutterを用いたクロスプラットフォーム開発"
+      },
+      {
+        "text": "eコマースシステムのアーキテクチャ設計"
+      },
+      {
+        "text": "大規模なモバイルプロジェクトの基盤導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "flutter"
+      },
+      {
+        "text": "mobile"
+      },
+      {
+        "text": "Dart"
+      },
+      {
+        "text": "MasterFabric"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは完成したアプリですか？",
+        "answer": "いいえ、これは完成したアプリケーションではなく、企業レベルのFlutter開発を行うためのアーキテクチャや基盤を提供するものです。"
+      },
+      {
+        "question": "どのような言語で使用しますか？",
+        "answer": "主にDart言語を使用して開発を行います。Flutterフレームワークに基づいたモバイルアプリの開発に適しています。"
+      },
+      {
+        "question": "ECサイト以外の用途にも使えますか？",
+        "answer": "説明文ではeコマース用モバイルアプリのアーキテクチャとして紹介されていますが、Flutterを用いた企業向けモバイルアプリ開発の基盤として活用可能です。"
+      },
+      {
+        "question": "初心者でもすぐに業務で利用できますか？",
+        "answer": "エンタープライズレベルの開発を想定した構成であるため、基本的には開発者がアプリケーションを構築・カスタマイズするための道具として使用します。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "runwhenidle",
+    "slug": "runwhenidle",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ユーザーの操作状況に応じてプログラムを自動で一時停止・再開するLinuxユーティリティです。",
+    "description": "このツールは、ユーザーがPCを操作しているか、あるいはアイドル状態にあるかを検知して動作を制御します。ユーザーのアクティビティが検出されると実行中のプログラムを自動的に一時停止し、アイドル状態に戻った際に再開する仕組みを提供します。C言語で記述されており、Linux環境においてシステムレベルの挙動を制御するために設計されています。スケジューリング機能と組み合わせて、特定の操作状況に応じた処理の自動化を実現します。",
+    "license": "GPL-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/perk11/runwhenidle",
+    "githubUrl": "https://github.com/perk11/runwhenidle",
+    "featured": false,
+    "stars": 118,
+    "language": "C",
+    "githubCreatedAt": "2023-05-15T03:05:52Z",
+    "githubPushedAt": "2026-06-11T19:43:47Z",
+    "useCases": [
+      {
+        "text": "ユーザーが離席している間のプログラム実行制御"
+      },
+      {
+        "text": "操作中のみ動作させたいバックグラウンドプロセスの管理"
+      },
+      {
+        "text": "Linux環境におけるリソース配分の最適化"
+      },
+      {
+        "text": "ユーザーのアクティビティに基づくタスクの自動スケジューリング"
+      },
+      {
+        "text": "特定条件下での処理中断と再開の自動化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Linux"
+      },
+      {
+        "text": "idle"
+      },
+      {
+        "text": "scheduling"
+      },
+      {
+        "text": "C言語"
+      },
+      {
+        "text": "ユーティリティ"
+      },
+      {
+        "text": "自動制御"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何を自動で行いますか？",
+        "answer": "ユーザーがPCを操作していることを検知すると実行中のプログラムを一時停止し、ユーザーが操作を止めてアイドル状態になるとプログラムを再開する動作を自動的に行います。"
+      },
+      {
+        "question": "どのオペレーティングシステムで利用できますか？",
+        "answer": "このソフトウェアはLinux用のユーティリティとして設計されているため、Linux環境での使用を想定しています。"
+      },
+      {
+        "question": "どのようなプログラミング言語で作られていますか？",
+        "answer": "このツールはC言語を用いて開発されています。"
+      },
+      {
+        "question": "主な機能の目的は何ですか？",
+        "answer": "ユーザーのアクティビティ（操作の有無）を監視し、それに基づいてプログラムの実行状態を動的に制御することを目的としています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "jspwiki",
+    "slug": "jspwiki",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Javaベースの多機能なオープンソースWikiエンジンです。",
+    "description": "Apache JSPWikiは、標準的なJEEコンポーネント（Java、servlets、JSP）を基盤として構築された主要なオープンソースのWikiWikiエンジンです。豊富な機能を備えており、コンテンツ管理のための強力なプラットフォームを提供します。Java言語で開発されており、Apacheソフトウェア財団のプロジェクトの一部として提供されています。組織内での情報共有やドキュメント作成を支援するための仕組みを備えています。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://jspwiki.apache.org/",
+    "githubUrl": "https://github.com/apache/jspwiki",
+    "featured": false,
+    "stars": 117,
+    "language": "Java",
+    "githubCreatedAt": "2009-03-27T15:41:58Z",
+    "githubPushedAt": "2026-08-16T20:18:05Z",
+    "useCases": [
+      {
+        "text": "社内情報の集約"
+      },
+      {
+        "text": "技術ドキュメントの管理"
+      },
+      {
+        "text": "ナレッジベースの構築"
+      },
+      {
+        "text": "コンテンツ管理"
+      },
+      {
+        "text": "チーム内での情報共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "apache"
+      },
+      {
+        "text": "asf"
+      },
+      {
+        "text": "content"
+      },
+      {
+        "text": "java"
+      },
+      {
+        "text": "jspwiki"
+      },
+      {
+        "text": "wiki"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何を目的としたものですか？",
+        "answer": "Apache JSPWikiは、情報を整理し共有するためのWikiエンジンです。Javaの標準的な技術を用いて構築されており、多機能なコンテンツ管理環境を提供します。"
+      },
+      {
+        "question": "どのような技術スタックで動作しますか？",
+        "answer": "Java、Servlets、JSPといった標準的なJEEコンポーネントをベースに構築されています。そのため、Java環境があるシステムにおいて導入が可能です。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "Apache-2.0ライセンスの下で提供されています。これはオープンソースソフトウェアとして広く利用されているライセンスの一つです。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "Wikiとしての基本機能に加え、コンテンツの管理や情報の構造化を行うための豊富な機能を備えています。Javaベースの標準的なコンポーネントを活用して動作します。媒体としての柔軟な情報公開が可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "wiki",
+    "slug": "almalinux-wiki",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "AlmaLinuxプロジェクトのドキュメントを管理するためのWikiです。",
+    "description": "このソフトウェアは、AlmaLinuxプロジェクトに関連するドキュメントを公開・管理するために使用されています。主なトピックとしてAlmaLinuxとWikiが含まれており、情報の整理や共有に適した仕組みを提供します。ライセンスはCC-BY-SA-4.0であり、コミュニティ主導のプロジェクトで活用されているツールです。Shell言語に関連する技術要素を含み、ドキュメントの構造化を支援します。",
+    "license": "CC-BY-SA-4.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://wiki.almalinux.org/",
+    "githubUrl": "https://github.com/AlmaLinux/wiki",
+    "featured": false,
+    "stars": 116,
+    "language": "Shell",
+    "githubCreatedAt": "2021-01-25T15:48:40Z",
+    "githubPushedAt": "2026-08-18T19:02:28Z",
+    "useCases": [
+      {
+        "text": "AlmaLinuxに関する情報の集約"
+      },
+      {
+        "text": "プロジェクトドキュメントの公開"
+      },
+      {
+        "text": "社内向けWikiの構築"
+      },
+      {
+        "text": "技術情報の共有"
+      },
+      {
+        "text": "マニュアルの管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "almalinux"
+      },
+      {
+        "text": "wiki"
+      },
+      {
+        "text": "documentation"
+      },
+      {
+        "text": "open-source"
+      },
+      {
+        "text": "knowledge-base"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何のためのものですか？",
+        "answer": "AlmaLinuxプロジェクトのドキュメントを管理・公開するためのWikiです。特定の情報を整理して共有する仕組みを提供します。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "CC-BY-SA-4.0というライセンスの下で提供されています。内容の詳細については、公式なライセンス条項を確認してください。"
+      },
+      {
+        "question": "主なトピックは何ですか？",
+        "answer": "主なトピックはAlmaLinuxとWikiです。これらに関連する情報の管理や公開を目的として設計されています。"
+      },
+      {
+        "question": "Shell言語との関係はありますか？",
+        "answer": "このソフトウェアの主な言語としてShellが含まれています。システム環境におけるドキュメント管理に活用される側面があります。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "dafthunk",
+    "slug": "dafthunk",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Cloudflareインフラ上で動作するワークフロー実行プラットフォームです。",
+    "description": "dafthunkは、強力なCloudflareのインフラを活用して構築されたワークフロー実行プラットフォームです。TypeScriptを主な言語として採用しており、データの流れや自動化のプロセスを管理できます。AI、生成AI、グラフ構造を含む多様なトピックに対応した設計となっています。開発者はこの基盤を利用することで、複雑なデータ処理やシステム連携の自動化を実現できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.dafthunk.com",
+    "githubUrl": "https://github.com/dafthunk-com/dafthunk",
+    "featured": false,
+    "stars": 116,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-02-13T15:29:53Z",
+    "githubPushedAt": "2026-08-19T13:03:29Z",
+    "useCases": [
+      {
+        "text": "ワークフローの自動化"
+      },
+      {
+        "text": "データフローの構築"
+      },
+      {
+        "text": "生成AIを活用したプロセス統合"
+      },
+      {
+        "text": "Cloudflare上でのバックエンド処理"
+      },
+      {
+        "text": "グラフ構造を伴うデータ処理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Cloudflare"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "ワークフロー"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "生成AI"
+      },
+      {
+        "text": "データフロー"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなインフラ上で動作しますか？",
+        "answer": "このツールはCloudflareのインフラを基盤として構築されています。Cloudflareの機能を活用することで、効率的なワークフロー実行が可能になります。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "主にTypeScriptを使用して開発されています。TypeScriptを扱える開発環境であれば、このプラットフォームを活用した実装が進められます。"
+      },
+      {
+        "question": "どのような種類の自動化が可能ですか？",
+        "answer": "データフローやインテグレーションに関するトピックを網羅しており、AIや生成AIを含む高度なワークフローの自動化に対応しています。"
+      },
+      {
+        "question": "グラフ構造を扱うことは可能ですか？",
+        "answer": "主なトピックの一つとして「graph」が含まれており、グラフに基づいたデータの流れや処理を構築することが可能です。Goals: 1. Identify the software category (kind). 2. Write a summary in Japanese (under 60 chars). 3. Provide a detailed description in Japanese (4 sentences, ~300 chars). 4. List use cases. 5. List keywords. 6. Include FAQs with specific constraints."
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "backstage-plugin-qeta",
+    "slug": "backstage-plugin-qeta",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Backstageに統合可能な社内Q&Aおよびナレッジベース機能です。",
+    "description": "このツールは、開発者ポータルであるBackstageに内部向けのQ&Aとナレッジベースを構築するためのプラグインです。チーム間での知識共有や質問のやり取りを促進し、組織内の知見を蓄積することを目的としています。最大の特徴として、AIを活用した回答機能を開発者ポータル内に直接統合できる点があります。エンジニアリング文化の向上や、ドキュメントへのアクセス性を高めるための開発体験（DX）を改善するのに適しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.npmjs.com/package/@drodil/backstage-plugin-qeta",
+    "githubUrl": "https://github.com/drodil/backstage-plugin-qeta",
+    "featured": false,
+    "stars": 116,
+    "language": "TypeScript",
+    "githubCreatedAt": "2022-12-20T11:57:40Z",
+    "githubPushedAt": "2026-08-19T12:30:52Z",
+    "useCases": [
+      {
+        "text": "社内ナレッジベースの構築"
+      },
+      {
+        "text": "チーム間でのQ&A共有"
+      },
+      {
+        "text": "AIを活用した自動回答機能の実装"
+      },
+      {
+        "text": "開発者ポータルの機能拡張"
+      },
+      {
+        "text": "技術ドキュメントの統合管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai-assistant"
+      },
+      {
+        "text": "backstage"
+      },
+      {
+        "text": "developer-portal"
+      },
+      {
+        "text": "knowledge-base"
+      },
+      {
+        "text": "documentation"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何を目的としたものですか？",
+        "answer": "Backstageという開発者ポータルにおいて、チーム内での知識共有やQ&Aを円滑に行うための機能を提供することを目的としています。"
+      },
+      {
+        "question": "AI機能について教えてください。",
+        "answer": "AIを活用した回答機能を開発者ポータルのインターフェース内に直接統合することが可能です。これにより、ユーザーはより迅速に知見を得ることができます。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "このプラグインはTypeScriptを用いて開発されており、Backstageの構成に合わせて導入が可能です。"
+      },
+      {
+        "question": "主な対象者は誰ですか？",
+        "answer": "主にエンジニアリングチームや、開発者ポータルを運用し、社内のナレッジ共有を効率化したい技術組織の担当者を対象としています。铵"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "bipolar",
+    "slug": "bipolar",
+    "category": "hr",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Polar FlowSyncからデータを自由にエクスポートするためのツールです。",
+    "description": "このソフトウェアは、Polar FlowSyncに保存されているデータを外部へ取り出すために提供されています。主な機能として、GPX、HRM、TCXといった各種データ形式の扱いに対応しています。C++およびQtフレームワークを用いて開発されており、データの自由な活用を目的としています。ユーザーは特定のプラットフォームに縛られることなく、自身のデータを管理することが可能になります。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/pcolby/bipolar",
+    "githubUrl": "https://github.com/pcolby/bipolar",
+    "featured": false,
+    "stars": 116,
+    "language": "C++",
+    "githubCreatedAt": "2014-06-23T10:07:31Z",
+    "githubPushedAt": "2025-10-25T02:56:58Z",
+    "useCases": [
+      {
+        "text": "Polar FlowSyncからのデータ移行"
+      },
+      {
+        "text": "GPXデータの抽出"
+      },
+      {
+        "text": "HRMデータの取り出し"
+      },
+      {
+        "text": "TCXファイルの処理"
+      },
+      {
+        "text": "活動データのバックアップ"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "bipolar"
+      },
+      {
+        "text": "Polar FlowSync"
+      },
+      {
+        "text": "GPX"
+      },
+      {
+        "text": "HRM"
+      },
+      {
+        "text": "TCX"
+      },
+      {
+        "text": "C++"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何のために使用しますか？",
+        "answer": "Polar FlowSyncに保存されているデータを、外部の環境や他のアプリケーションで利用できるように取り出すために使用します。特定のプラットフォームに依存せず、自身のデータを自由に扱うことを目的としています。"
+      },
+      {
+        "question": "対応しているデータ形式にはどのようなものがありますか？",
+        "answer": "説明文に基づき、GPX、HRM、およびTCXといったファイル形式に対応しています。これらのデータ形式を介して、Polar FlowSyncから情報を抽出することが可能です。"
+      },
+      {
+        "question": "このソフトウェアは何で開発されていますか？",
+        "answer": "C++言語とQt（Qt5を含む）フレームワークを使用して開発されています。オープンソースソフトウェアとして提供されており、GPL-3.0ライセンスの下で公開されています。"
+      },
+      {
+        "question": "データの自由な管理とはどのような意味ですか？",
+        "answer": "特定のメーカーやサービスの同期システムにデータを閉じ込めるのではなく、ユーザーが自身の手元でデータを取り出し、必要な場所で活用できるようにすることを指します。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "nanopos",
+    "slug": "nanopos",
+    "category": "pos",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Lightningネットワークを利用したシンプルな決済システムです。",
+    "description": "nanoposは、Lightning Chargeを搭載したシンプルなポイント・オブ・セールス（POS）システムです。ビットコインのLightningネットワークを活用しており、マイクロペイメントに対応しています。JavaScriptで開発されており、MITライセンスの下で提供されています。店舗などでの迅速な決済処理を実現するための仕組みを備えています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/ElementsProject/nanopos",
+    "githubUrl": "https://github.com/ElementsProject/nanopos",
+    "featured": false,
+    "stars": 115,
+    "language": "JavaScript",
+    "githubCreatedAt": "2018-03-05T18:57:16Z",
+    "githubPushedAt": "2025-11-16T21:43:15Z",
+    "useCases": [
+      {
+        "text": "ビットコインによる小額決済"
+      },
+      {
+        "text": "Lightningネットワークを利用したPOSシステム"
+      },
+      {
+        "text": "マイクロペイメントの受け取り"
+      },
+      {
+        "text": "シンプルなレジシステムの構築"
+      },
+      {
+        "text": "Lightning Chargeを活用した決済フロー"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "bitcoin"
+      },
+      {
+        "text": "lightning"
+      },
+      {
+        "text": "lightning-charge"
+      },
+      {
+        "text": "micropayments"
+      },
+      {
+        "text": "point-of-sale"
+      },
+      {
+        "text": "pos"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何をするためのものですか？",
+        "answer": "Lightningネットワークを使用した、シンプルで迅速な決済を行うためのPOS（販売時点情報管理）システムです。特にビットコインを用いたマイクロペイメントの処理に適しています。"
+      },
+      {
+        "question": "どのような技術が使われていますか？",
+        "answer": "主にJavaScriptで記述されており、Lightning Chargeという仕組みをベースに構築されています。オープンソースとして公開されているため、MITライセンスに従って利用可能です。"
+      },
+      {
+        "question": "マイクロペイメントとは何を指しますか？",
+        "answer": "非常に少額の支払いを迅速に行うことを指します。このシステムはLightningネットワークを活用することで、ビットコインを用いたこうした小規模な決済を効率的に処理できるように設計されています。"
+      },
+      {
+        "question": "POSシステムとしてどのような特徴がありますか？",
+        "answer": "複雑な機能を省いたシンプルな構成が特徴です。Lightningネットワークとの親和性が高く、特定の暗号資産決済に特化した販売環境を構築したい場合に適したツールとなっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "knucklehead",
+    "slug": "knucklehead",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Corneスタイルの分割キーボード向けの最適化されたキーレイアウトです。",
+    "description": "knuckleheadは、macOSに最適化されたエルゴノミックなカラムレイアウトを提供するソフトウェアです。特に42キーのCorneスタイル分割キーボードを対象としており、Apple ANSIキーボードからの移行をスムーズにするために設計されています。ColemakやDvorakといった特殊なキー配列に対応しており、ホームロウモッド（home-row-mods）などの高度な設定も可能です。C言語で記述されており、効率的な入力環境の構築を目指すユーザーに適しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/minusfive/knucklehead",
+    "githubUrl": "https://github.com/minusfive/knucklehead",
+    "featured": false,
+    "stars": 115,
+    "language": "C",
+    "githubCreatedAt": "2023-06-29T21:00:04Z",
+    "githubPushedAt": "2025-08-18T10:30:51Z",
+    "useCases": [
+      {
+        "text": "Corneスタイルの分割キーボードの導入"
+      },
+      {
+        "text": "macOSにおけるエルゴノミックな入力環境の構築"
+      },
+      {
+        "text": "ColemakやDvorakへのキー配列移行"
+      },
+      {
+        "text": "ホームロウモッドを活用したタイピング効率の向上"
+      },
+      {
+        "text": "カスタムキーボードレイアウトの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "colemak"
+      },
+      {
+        "text": "colemak-dh"
+      },
+      {
+        "text": "corneish-zen"
+      },
+      {
+        "text": "crkbd"
+      },
+      {
+        "text": "dvorak"
+      },
+      {
+        "text": "home-row-mods"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアはどのようなキーボード向けですか？",
+        "answer": "主に42キーのCorneスタイル分割キーボードを対象としています。エルゴノミックなカラムレイアウトを採用しており、特殊な形状のキーボードを使用するユーザー向けに最適化されています。"
+      },
+      {
+        "question": "macOS以外でも利用できますか？",
+        "answer": "提供されている説明では、macOSに最適化されていることが明記されています。他のOSでの動作については、公式な仕様が確認されていないため注意が必要です。"
+      },
+      {
+        "question": "どのようなキー配列に対応していますか？",
+        "answer": "ColemakやDvorakといった主要な特殊配列に加え、home-row-mods（hrm）などの高度な入力設定にも対応しています。Apple ANSIキーボードからの移行を容易にする設計となっています。"
+      },
+      {
+        "question": "このソフトウェアのライセンスは何ですか？",
+        "answer": "MITライセンスで公開されています。オープンソースとして提供されており、利用規約に従って活用することが可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "erpnext-mcp-server",
+    "slug": "erpnext-mcp-server",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ERPNextとAIアシスタントをModel Context Protocolで連携させるツールです。",
+    "description": "このソフトウェアは、公式のFrappe APIを使用して、AIアシスタントをERPNextインスタンスに接続するためのものです。Model Context Protocol（MCP）を採用しており、エージェントがERP内のデータや機能にアクセスできるようにします。JavaScriptで実装されており、MITライセンスの下で提供されています。開発者はこれを利用して、自社のERPシステムと高度なAI機能を統合する仕組みを構築できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/rakeshgangwar/erpnext-mcp-server",
+    "githubUrl": "https://github.com/rakeshgangwar/erpnext-mcp-server",
+    "featured": false,
+    "stars": 115,
+    "language": "JavaScript",
+    "githubCreatedAt": "2025-03-28T21:00:20Z",
+    "githubPushedAt": "2026-04-25T06:23:30Z",
+    "useCases": [
+      {
+        "text": "AIアシスタントによるERPデータの参照"
+      },
+      {
+        "text": "AIエージェントを用いた業務自動化の基盤構築"
+      },
+      {
+        "text": "Frappe APIを活用した外部ツールとの連携"
+      },
+      {
+        "text": "MCPを用いたコンテキスト共有の実装"
+      },
+      {
+        "text": "カスタムAIワークフローの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "erpnext"
+      },
+      {
+        "text": "mcp"
+      },
+      {
+        "text": "model-context-protocol"
+      },
+      {
+        "text": "ai-agents"
+      },
+      {
+        "text": "frappe-api"
+      },
+      {
+        "text": "javascript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールを使うと何ができるようになりますか？",
+        "answer": "Model Context Protocol（MCP）を介して、AIアシスタントがERPNextのデータや機能にアクセスできるようになります。これにより、AIを活用した業務支援システムの構築が可能になります。"
+      },
+      {
+        "question": "どのような技術スタックで動作しますか？",
+        "answer": "このツールはJavaScriptで記述されており、公式のFrappe APIを使用してERPNextと通信を行います。また、モデルコンテキストプロトコル（MCP）をベースとしています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはMITライセンスで提供されています。オープンソースとして公開されており、利用条件に従って活用することが可能です。"
+      },
+      {
+        "question": "業務担当者が直接操作する画面はありますか？",
+        "answer": "いいえ、このツール自体には業務担当者が直接操作するためのUI（画面）は含まれていません。AIアシスタントやエージェントを構築するための開発用基盤として提供されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "claude-marketing",
+    "slug": "claude-marketing",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Claude Code向けにマーケティング業務を効率化するスキルパック集です。",
+    "description": "このツールは、Claude Codeで動作する包括的なマーケティング部門のような機能を提供します。Klaviyo、Shopify、GA4、Looker Studio、有料メディアなどの主要なプラットフォームに対応したスキルパックが含まれています。自然言語を用いることで、データの監査、最適化、レポート作成を自動的に実行することが可能です。Pythonをベースとしており、高度なAIスキルを活用して多角的なマーケティング運用を支援します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/thatrebeccarae/claude-marketing",
+    "githubUrl": "https://github.com/thatrebeccarae/claude-marketing",
+    "featured": false,
+    "stars": 115,
+    "language": "Python",
+    "githubCreatedAt": "2026-02-09T12:53:25Z",
+    "githubPushedAt": "2026-05-14T20:12:45Z",
+    "useCases": [
+      {
+        "text": "ShopifyやKlaviyoを用いたECサイトの分析と最適化"
+      },
+      {
+        "text": "GA4やLooker Studioを活用したデータ可視化とレポート作成"
+      },
+      {
+        "text": "自然言語による広告運用の監査および改善提案"
+      },
+      {
+        "text": "有料メディアを含むマルチチャネルのマーケティング戦略立案"
+      },
+      {
+        "text": "マーケティングデータの収集・集計の自動化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AIスキル"
+      },
+      {
+        "text": "Anthropic"
+      },
+      {
+        "text": "Claude"
+      },
+      {
+        "text": "Claude Code"
+      },
+      {
+        "text": "データ可視化"
+      },
+      {
+        "text": "Eコマース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなプラットフォームに対応していますか？",
+        "answer": "Klaviyo、Shopify、Googleアナリティクス4（GA4）、Looker Studio、および各種有料メディアなどの主要なマーケティングツールに対応したスキルパックが含まれています。"
+      },
+      {
+        "question": "このツールを使って具体的に何ができますか？",
+        "answer": "自然言語を使用することで、データの監査、コンテンツの最適化、そしてレポートの作成を依頼できます。Claude Codeを通じてこれら一連のマーケティング業務を実行することが可能です。"
+      },
+      {
+        "question": "プログラミングの知識は必要ですか？",
+        "answer": "このツール自体はPythonで構成されていますが、主なインターフェースとして自然言語を使用する設計となっています。ただし、Claude Code上で動作させるための環境構築などには一定の技術的理解が必要になる場合があります。"
+      },
+      {
+        "question": "マーケティング以外の用途にも使えますか？",
+        "answer": "提供されている説明では、主にEC（DTC）、データ可視化、有料メディアなどのマーケティング分野におけるスキルパックの提供に焦点を当てています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "VidForge",
+    "slug": "vidforge",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "短尺コマース動画制作のためのオープンソースAIパイプラインです。",
+    "description": "VidForgeは、EC向けの短尺動画を生成するためのマルチモーダル分析やRAGスクリプトを備えたAIパイプラインです。LangGraphを用いたマルチエージェントのオーケストレーションや、FFmpegによる動画合成機能を提供します。また、コスト追跡機能も備わっており、効率的な動画制作プロセスを実現します。TypeScriptで構築されており、開発者はこれらのコンポーネントを組み合わせて独自のワークフローを構築できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://vid-forge-frontend-nu.vercel.app",
+    "githubUrl": "https://github.com/WANGLEVY9/VidForge",
+    "featured": false,
+    "stars": 114,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-05-21T04:18:06Z",
+    "githubPushedAt": "2026-08-19T05:51:54Z",
+    "useCases": [
+      {
+        "text": "EC向けの短尺動画の自動生成パイプライン構築"
+      },
+      {
+        "text": "マルチモーダル分析を用いたコンテンツ解析"
+      },
+      {
+        "text": "LangGraphによるAIエージェントの連携制御"
+      },
+      {
+        "text": "FFmpegを活用した高度な動画合成処理"
+      },
+      {
+        "text": "AI生成動画におけるコスト管理と追跡"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai-video"
+      },
+      {
+        "text": "aigc"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "ffmpeg"
+      },
+      {
+        "text": "generative-ai"
+      },
+      {
+        "text": "langgraph"
+      },
+      {
+        "text": "multi-agent"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような種類の動画制作に適していますか？",
+        "answer": "主にEC（電子商取引）向けの短尺コマース動画の制作に特化したAIパイプラインです。マルチモーダル分析やRAGスクリプト、FFmpegによる合成機能などを組み合わせて活用できます。"
+      },
+      {
+        "question": "開発においてどのような技術スタックが利用されていますか？",
+        "answer": "主な言語はTypeScriptであり、バックエンドのジョブキューにはBullMQ、エージェントのオーケストレーションにはLangGraph、動画処理にはFFmpegなどが採用されています。"
+      },
+      {
+        "question": "コスト追跡機能にはどのようなものがありますか？",
+        "answer": "AIを用いた動画生成プロセスにおけるコストを追跡する機能が含まれています。これにより、制作にかかるリソースや費用を把握しながらパイプラインを運用することが可能です。"
+      },
+      {
+        "question": "このツールを使って独自のワークフローを作成できますか？",
+        "answer": "はい、マルチエージェントのオーケストレーションやFFmpegによる構成など、提供されているコンポーネントを組み合わせて、特定の目的に沿ったAI動画制作パイプラインを構築できます。Goals"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "README.ja.md"
+      }
+    ]
+  },
+  {
+    "name": "minshop",
+    "slug": "minshop",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Cloudflareのインフラを活用したフルスタックなECプラットフォームです。",
+    "description": "このソフトウェアは、Cloudflare Workers、D1、R2などのコンポーネントを活用して構築されたフルスタックなECシステムです。管理画面を備えており、StripeやOpenNode、Lightning決済といった多様な支払い手段に対応しています。また、エージェント向けのAPIも提供されているため、外部システムとの連携も可能です。TypeScriptで記述されており、モダンなエッジコンピューティング技術を基盤としています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://minshop.dev",
+    "githubUrl": "https://github.com/ddyy/minshop",
+    "featured": false,
+    "stars": 114,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-07-20T23:58:28Z",
+    "githubPushedAt": "2026-08-18T20:44:58Z",
+    "useCases": [
+      {
+        "text": "オンラインショップの構築"
+      },
+      {
+        "text": "Stripeを利用した決済システムの導入"
+      },
+      {
+        "text": "Lightningネットワークによる決済対応"
+      },
+      {
+        "text": "管理画面を備えたECサイトの運用"
+      },
+      {
+        "text": "AIエージェントと連携するコマース基盤"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "Cloudflare Workers"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "Stripe"
+      },
+      {
+        "text": "Lightning Network"
+      },
+      {
+        "text": "edge-computing"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このシステムで利用できる決済手段には何がありますか？",
+        "answer": "Stripe、OpenNode、およびLightningネットワークを利用した決済に対応しています。多様な支払い方法を検討しているECサイトの構築に適しています。"
+      },
+      {
+        "question": "どのようなインフラ技術に基づいて構築されていますか？",
+        "answer": "Cloudflare Workers、D1（データベース）、R2（ストレージ）といったCloudflareのエコシステムを活用したエッジコンピューティング技術を基盤としています。"
+      },
+      {
+        "question": "管理機能は含まれていますか？",
+        "answer": "はい、このソフトウェアには管理画面（admin）が含まれており、ECサイトの運営に必要な管理機能を備えています。"
+      },
+      {
+        "question": "外部システムやAIとの連携は可能ですか？",
+        "answer": "エージェント向けのAPIが用意されているため、外部のツールやAIエージェントなどと連携した仕組みを構築することが可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "web-monitoring",
+    "slug": "web-monitoring",
+    "category": "monitoring",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Webサイトの監視プロジェクトに関するドキュメントと課題管理ツールです。",
+    "description": "このソフトウェアは、Website Monitoring（別名「Scanner」）プロジェクトのためのドキュメントおよびプロジェクト全体の課題を管理するためのものです。主なトピックには、ドキュメンテーション、プロジェクト管理、GSOC-2017などが含まれています。HTML形式で提供されており、プロジェクトの進行状況や情報の整理に利用されます。開発者がプロジェクトの構造を把握し、円滑に運用を進めるための基盤として設計されています。",
+    "license": "CC-BY-SA-4.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/edgi-govdata-archiving/web-monitoring",
+    "githubUrl": "https://github.com/edgi-govdata-archiving/web-monitoring",
+    "featured": false,
+    "stars": 114,
+    "language": "HTML",
+    "githubCreatedAt": "2017-03-03T19:54:37Z",
+    "githubPushedAt": "2026-07-28T07:08:28Z",
+    "useCases": [
+      {
+        "text": "Webサイト監視プロジェクトのドキュメント管理"
+      },
+      {
+        "text": "プロジェクト全体の課題（Issue）の追跡"
+      },
+      {
+        "text": "GSOC-2017関連のタスク管理"
+      },
+      {
+        "text": "技術情報の整理と共有"
+      },
+      {
+        "text": "開発チーム内での進捗管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "web-monitoring"
+      },
+      {
+        "text": "Scanner"
+      },
+      {
+        "text": "documentation"
+      },
+      {
+        "text": "project-management"
+      },
+      {
+        "text": "gsoc-2017"
+      },
+      {
+        "text": "HTML"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールで具体的に何ができるのですか？",
+        "answer": "Website Monitoringプロジェクトにおけるドキュメントの閲覧や、プロジェクト全体に関連する課題（Issues）の確認・管理を行うことができます。特定の業務アプリではなく、開発プロジェクトを円滑に進めるための管理基盤です。"
+      },
+      {
+        "question": "どのような技術スタックで構成されていますか？",
+        "answer": "主な言語としてHTMLが使用されており、ウェブベースでドキュメントや情報を閲覧できる仕組みを提供しています。詳細なバックエンドの仕様については、提供されているリポジトリの内容を確認する必要があります。"
+      },
+      {
+        "question": "プロジェクト管理に特化したツールですか？",
+        "answer": "はい、このソフトウェアは「project-management」を主要なトピックの一つとしており、特にWebsite Monitoringプロジェクトにおける課題管理やドキュメンテーションの整備を目的に設計されています。"
+      },
+      {
+        "question": "商用利用は可能ですか？",
+        "answer": "このソフトウェアはCC-BY-SA-4.0ライセンスで提供されています。ライセンスの詳細については、公式のリポジトリに記載されている条件に従って確認してください。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "eshop_mean",
+    "slug": "eshop-mean",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "MEANスタックを活用したフル機能のECサイトアプリケーションです。",
+    "description": "MongoDB、Express、Nest.js、Angular 20を使用したモダンな技術構成で構築されたECプラットフォームです。ショッピングカート機能や管理画面を備えており、Dockerによるコンテナ化にも対応しています。TypeScriptを採用することで型安全な開発を実現しており、SSR（サーバーサイドレンダリング）やzonelessモードに対応した最新のフロントエンド技術を取り入れています。Cloudinaryとの連携など、実用的なECサイトに必要な機能を備えています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://eshop.privatelibrary.eu/",
+    "githubUrl": "https://github.com/pararell/eshop_mean",
+    "featured": false,
+    "stars": 114,
+    "language": "TypeScript",
+    "githubCreatedAt": "2020-04-22T15:24:34Z",
+    "githubPushedAt": "2026-08-09T18:33:52Z",
+    "useCases": [
+      {
+        "text": "オンラインショップの構築"
+      },
+      {
+        "text": "商品管理システムの導入"
+      },
+      {
+        "text": "ショッピングカート機能の実装"
+      },
+      {
+        "text": "在庫・注文管理ダッシュボードの運用"
+      },
+      {
+        "text": "Dockerを用いた環境構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "angular"
+      },
+      {
+        "text": "nestjs"
+      },
+      {
+        "text": "mongodb"
+      },
+      {
+        "text": "typescript"
+      },
+      {
+        "text": "docker"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアでどのようなEC機能が利用できますか？",
+        "answer": "ショッピングカート機能、商品情報の表示、および管理者向けのダッシュボード機能が含まれています。これらをベースとして、独自のECサイトを構築することが可能です。"
+      },
+      {
+        "question": "技術スタックはどのようなものですか？",
+        "answer": "バックエンドにはNest.js（Express）とMongoDBを使用し、フロントエンドにはAngular 20を採用しています。また、TypeScriptで記述されており、Dockerによるデプロイにも対応しています。"
+      },
+      {
+        "question": "画像の管理や配信にはどのツールが使われていますか？",
+        "answer": "画像管理の機能としてCloudinaryとの連携が含まれています。これにより、ECサイトに必要な商品画像のアップロードや配信を効率的に行うことができます。"
+      },
+      {
+        "question": "サーバーサイドレンダリングに対応していますか？",
+        "answer": "はい、Angular 20のSSR（サーバーサイドレンダリング）およびzonelessモードに対応しており、パフォーマンスとSEOを意識したフロントエンド構成となっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "account-payment",
+    "slug": "account-payment",
+    "category": "accounting",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Banking PSCの監督下で提供される会計・ERPシステムです。",
+    "description": "このプロジェクトは、Banking PSCの監督のもとで管理されています。Pythonを主な言語として開発されており、会計やERP（企業資源計画）に関連する機能を備えています。Odooとの関連性も示唆されており、企業の基幹業務を支えるための仕組みを提供します。オープンソースソフトウェアとして公開されており、拡張性の高いシステム構築に活用できます。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://odoo-community.org/psc-teams/banking-10",
+    "githubUrl": "https://github.com/OCA/account-payment",
+    "featured": false,
+    "stars": 113,
+    "language": "Python",
+    "githubCreatedAt": "2014-06-17T12:05:42Z",
+    "githubPushedAt": "2026-08-17T10:47:29Z",
+    "useCases": [
+      {
+        "text": "会計業務の管理"
+      },
+      {
+        "text": "ERPシステムの導入"
+      },
+      {
+        "text": "企業の基幹システム構築"
+      },
+      {
+        "text": "Pythonベースのビジネスアプリ開発"
+      },
+      {
+        "text": "Odooとの連携検討"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "accounting"
+      },
+      {
+        "text": "erp"
+      },
+      {
+        "text": "python"
+      },
+      {
+        "text": "odoo"
+      },
+      {
+        "text": "banking"
+      },
+      {
+        "text": "business-app"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何を目的としたものですか？",
+        "answer": "Banking PSCの監督下で提供されている、会計やERP（企業資源計画）に関連する機能を備えたシステムです。企業の業務プロセスを管理するための基盤として設計されています。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "このプロジェクトの主な開発言語はPythonです。Pythonをベースとした技術スタックで構築されており、関連するエコシステムを活用することが可能です。"
+      },
+      {
+        "question": "どのような企業向けの内容が含まれていますか？",
+        "answer": "会計やERPといったビジネスに関連するトピックが主な対象となっています。具体的な業務内容については提供されているソースコードやドキュメントを確認する必要があります。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアのライセンスはAGPL-3.0です。利用にあたっては、オープンソースソフトウェアとしての規定に従う必要があります。}]}```json (Wait, the prompt says "
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "account_payment_term_extension/i18n/ja.po"
+      }
+    ]
+  },
+  {
+    "name": "aksara",
+    "slug": "aksara",
+    "category": "sitegen",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "CodeIgniter 4をベースとした、開発者向けのモダンなCMSフレームワークです。",
+    "description": "Aksaraは、CodeIgniter 4を基盤として構築された、開発者に優しいモダンなフレームワークおよびCMSです。迅速なCRUD開発やモジュール式アーキテクチャを備えており、スマートなルーティングや柔軟なアクセス制御を実現します。API連携にも対応しており、コンテンツ管理をより高速かつスマートにするためのAIアシスタントも搭載されています。ヘッドレスCMSとしての利用も可能で、拡張性の高いシステム構築に適しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://www.aksaracms.com",
+    "githubUrl": "https://github.com/abydahana/aksara",
+    "featured": false,
+    "stars": 113,
+    "language": "PHP",
+    "githubCreatedAt": "2020-02-04T08:06:53Z",
+    "githubPushedAt": "2026-08-22T00:41:13Z",
+    "useCases": [
+      {
+        "text": "Webアプリケーションの開発"
+      },
+      {
+        "text": "CMSの構築"
+      },
+      {
+        "text": "APIサーバーの構築"
+      },
+      {
+        "text": "コンテンツ管理システムの開発"
+      },
+      {
+        "text": "モジュール式Webサイトの制作"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "aksara"
+      },
+      {
+        "text": "aksaracms"
+      },
+      {
+        "text": "api"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "codeigniter"
+      },
+      {
+        "text": "headless"
+      },
+      {
+        "text": "php"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような技術で動いていますか？",
+        "answer": "PHPのフレームワークであるCodeIgniter 4をベースに構築されています。そのため、CodeIgniter 4の知識がある開発者であればスムーズに導入・活用することが可能です。"
+      },
+      {
+        "question": "主な機能にはどのようなものがありますか？",
+        "answer": "迅速なCRUD開発、モジュール式アーキテクチャ、スマートルーティング、柔軟なアクセス制御、API連携、そしてコンテンツ管理を効率化するためのAIアシスタントなどが含まれています。"
+      },
+      {
+        "question": "ヘッドレスCMSとして利用できますか？",
+        "answer": "はい、主なトピックの一つとして「headless」が含まれており、APIを通じてコンテンツを配信するヘッドレスな構成での利用にも対応しています。"
+      },
+      {
+        "question": "開発の利便性についてはどのような特徴がありますか？",
+        "answer": "開発者フレンドリーな設計となっており、モジュール構造やスマートなルーティング機能によって、効率的で整理されたアプリケーション開発を支援します。"
+      }
+    ],
+    "jaFileCount": 37,
+    "jaSamplePaths": [
+      {
+        "text": "aksara/Language/ja"
+      },
+      {
+        "text": "aksara/Language/ja/CLI.php"
+      },
+      {
+        "text": "aksara/Language/ja/Cache.php"
+      },
+      {
+        "text": "aksara/Language/ja/Cast.php"
+      },
+      {
+        "text": "aksara/Language/ja/Cookie.php"
+      }
+    ]
+  },
+  {
+    "name": "shopify-spy",
+    "slug": "shopify-spy",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Shopifyサイトから構造化されたデータを抽出するツールです。",
+    "description": "このツールは、Shopifyで構築されたウェブサイトから必要な情報を抽出し、構造化されたデータとして取得することを目的としています。Python言語で記述されており、CLI（コマンドラインインターフェース）を通じて操作を行います。ScrapyやSpiderといった技術を活用しており、効率的なWebスクレイピングを実現します。ドロップシッピングやEC事業におけるデータ収集の自動化に適したツールです。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/ndgigliotti/shopify-spy",
+    "githubUrl": "https://github.com/ndgigliotti/shopify-spy",
+    "featured": false,
+    "stars": 113,
+    "language": "Python",
+    "githubCreatedAt": "2020-12-30T21:52:02Z",
+    "githubPushedAt": "2026-04-03T03:18:15Z",
+    "useCases": [
+      {
+        "text": "Shopifyサイトからの商品情報の抽出"
+      },
+      {
+        "text": "競合他社のECサイトの価格調査"
+      },
+      {
+        "text": "ドロップシッピング向けのデータ収集"
+      },
+      {
+        "text": "構造化された商品リストの作成"
+      },
+      {
+        "text": "Webスクレイピングによる市場分析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "shopify-spy"
+      },
+      {
+        "text": "web-scraping"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "cli"
+      },
+      {
+        "text": "scrapy"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなデータが取得できますか？",
+        "answer": "Shopifyサイトから抽出される構造化されたデータを取得できます。具体的な項目については、対象となるウェブサイトの構成やスクレイピングの設定に依存します。"
+      },
+      {
+        "question": "プログラミングの知識は必要ですか？",
+        "answer": "Python言語をベースとしており、CLIで操作するツールであるため、基本的にはコマンドラインの操作やPythonに関する基礎的な知識が必要となります。"
+      },
+      {
+        "question": "Scrapyを使用していますか？",
+        "answer": "はい、主なトピックの一つとしてScrapyが含まれており、Webスクレイピングのフレームワークを活用してデータの抽出を行っています。"
+      },
+      {
+        "question": "ドロップシッピングに活用できますか？",
+        "answer": "はい、主なトピックとしてドロップシッピングが含まれており、ECサイトからのデータ収集を効率化する用途に適しています。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "silvershop-core",
+    "slug": "silvershop-core",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "SilverStripe CMS向けのECショッピングカートモジュールです。",
+    "description": "SilverShopは、CMSであるSilverStripe上で動作するショッピングカート機能を提供するモジュールです。PHPで構築されており、オンラインでの商品販売を可能にするEC機能を備えています。Omnipayとの統合により決済処理に対応しています。BSD-2-Clauseライセンスのもとで公開されているオープンソースソフトウェアです。",
+    "license": "BSD-2-Clause",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "http://silvershop.github.io",
+    "githubUrl": "https://github.com/silvershop/silvershop-core",
+    "featured": false,
+    "stars": 113,
+    "language": "PHP",
+    "githubCreatedAt": "2012-01-24T05:42:40Z",
+    "githubPushedAt": "2026-06-17T18:56:22Z",
+    "useCases": [
+      {
+        "text": "SilverStripe CMSを活用したECサイトの構築"
+      },
+      {
+        "text": "PHPベースのショッピングカート機能の実装"
+      },
+      {
+        "text": "オンラインでの商品販売システムの運用"
+      },
+      {
+        "text": "決済システムを統合したECプラットフォームの提供"
+      },
+      {
+        "text": "CMSと連携したコマース機能の拡張"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "cart"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "php"
+      },
+      {
+        "text": "silverstripe"
+      },
+      {
+        "text": "omnipay"
+      },
+      {
+        "text": "shopping-cart"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何を目的としたものですか？",
+        "answer": "SilverStripe CMSを利用している環境において、ショッピングカート機能を追加することを目的としています。これにより、CMS上で商品を販売するECサイトを構築することが可能になります。"
+      },
+      {
+        "question": "どのようなプログラミング言語を使用していますか？",
+        "answer": "このモジュールはPHPで記述されています。そのため、PHPの環境があり、SilverStripe CMSを導入しているシステムにおいて動作します。"
+      },
+      {
+        "question": "決済機能について統合されているものはありますか？",
+        "answer": "Omnipayとの統合に対応しています。これにより、さまざまな決済手段をショッピングカートに組み込むための基盤として活用できます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "BSD-2-Clauseライセンスの下で提供されています。このライセンスに基づき、ソフトウェアの利用や配布に関する条件を確認した上で導入を検討してください。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "testtimescaling.github.io",
+    "slug": "testtimescaling-github-io",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "大規模言語モデルにおけるテスト時スケーリングに関する調査レポートです。",
+    "description": "このリポジトリは、大規模言語モデル（LLM）におけるテスト時スケーリングについての調査をまとめたものです。「何が、どのように、どこで、どの程度うまく機能するか」という問いに対して包括的な情報を提示します。HTML形式で提供されており、最新の技術動向や研究結果を整理して把握するためのリソースとなります。LLMの性能向上に向けたスケーリング手法を体系的に学ぶためのガイドとして活用できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://arxiv.org/abs/2503.24235",
+    "githubUrl": "https://github.com/testtimescaling/testtimescaling.github.io",
+    "featured": false,
+    "stars": 113,
+    "language": "HTML",
+    "githubCreatedAt": "2025-04-08T02:50:44Z",
+    "githubPushedAt": "2026-08-21T00:46:24Z",
+    "useCases": [
+      {
+        "text": "LLMの研究調査"
+      },
+      {
+        "text": "テスト時スケーリングの技術理解"
+      },
+      {
+        "text": "AIモデルの評価手法の検討"
+      },
+      {
+        "text": "関連論文のキャッチアップ"
+      },
+      {
+        "text": "最新のLLM動向の把握"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "大規模言語モデル"
+      },
+      {
+        "text": "テスト時スケーリング"
+      },
+      {
+        "text": "調査レポート"
+      },
+      {
+        "text": "awesome-lists"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このリポジトリにはどのような内容が含まれていますか？",
+        "answer": "大規模言語モデルにおけるテスト時スケーリングに関する「何が、どのように、どこで、どの程度うまく機能するか」という問いに対する調査結果が含まれています。"
+      },
+      {
+        "question": "どのような形式で情報が提供されていますか？",
+        "answer": "HTML形式のWebページとして公開されており、ブラウザなどで閲覧可能な形で調査内容を確認することができます。"
+      },
+      {
+        "question": "このリポジトリは誰のためのものですか？",
+        "answer": "大規模言語モデルの技術動向やテスト時スケーリングに関する最新の調査情報を効率的に収集したい開発者や研究者に適しています。"
+      },
+      {
+        "question": "特定のソフトウェアをインストールして使うものでしょうか？",
+        "answer": "いいえ、これはアプリケーションやライブラリではなく、情報を提供する調査結果をまとめたコンテンツです。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "open-csai-wiki",
+    "slug": "open-csai-wiki",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "コンピュータサイエンスやAIに関する体系的な知識を網羅したWikiです。",
+    "description": "このプロジェクトは、基礎知識、データ構造とアルゴリズム、ソフトウェア開発、そして大規模言語モデル（LLM）を含む体系的なノートを提供するオープンなCS/AI知識ベースです。ユーザーはこれらの分野に関する体系化された情報を参照することができます。MITライセンスで公開されており、幅広い技術領域をカバーしています。開発者や学習者が技術スタックを深く理解するためのリソースとして活用できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://wiki.dwj601.cn",
+    "githubUrl": "https://github.com/Explorer-Dong/open-csai-wiki",
+    "featured": false,
+    "stars": 112,
+    "language": null,
+    "githubCreatedAt": "2024-02-23T12:08:40Z",
+    "githubPushedAt": "2026-08-21T06:10:37Z",
+    "useCases": [
+      {
+        "text": "コンピュータサイエンスの基礎学習"
+      },
+      {
+        "text": "データ構造とアルゴリズムの参照"
+      },
+      {
+        "text": "ソフトウェア開発手法の確認"
+      },
+      {
+        "text": "大規模言語モデル（LLM）に関する知識習得"
+      },
+      {
+        "text": "技術的な概念の体系的な整理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "人工知能"
+      },
+      {
+        "text": "コンピュータサイエンス"
+      },
+      {
+        "text": "データ構造"
+      },
+      {
+        "text": "アルゴリズム"
+      },
+      {
+        "text": "大規模言語モデル"
+      },
+      {
+        "text": "Wiki"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何を目的としていますか？",
+        "answer": "コンピュータサイエンスやAI、ソフトウェア開発に関する基礎から高度な知識までを体系的にまとめたノートを提供することを目的としています。"
+      },
+      {
+        "question": "どのようなトピックが含まれていますか？",
+        "answer": "主なトピックには、データ構造とアルゴリズム、ソフトウェア開発の基礎、そして大規模言語モデル（LLM）などの分野が含まれています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このプロジェクトはMITライセンスの下で公開されています。"
+      },
+      {
+        "question": "誰が使うためのツールですか？",
+        "answer": "コンピュータサイエンスやAI技術を学んでいる人や、ソフトウェア開発における基礎知識を体系的に確認したい開発者向けです。  "
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "FusionGEN",
+    "slug": "fusiongen",
+    "category": "cms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "オープンソースのコンテンツ管理システム（CMS）です。",
+    "description": "FusionGENは、FusionCMSを継承したブランド名の新しいCMSプロジェクトです。このソフトウェアはオープンソースとして公開されており、誰でも自由に使用したり貢献したりすることが可能です。長期的な運用を見据えた継続的な開発を目指しています。PHP言語で構築されており、コミュニティの協力によって発展していくことを目的としたシステムです。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://fusiongen.net/",
+    "githubUrl": "https://github.com/FusionGen/FusionGEN",
+    "featured": false,
+    "stars": 112,
+    "language": "PHP",
+    "githubCreatedAt": "2020-05-01T15:31:30Z",
+    "githubPushedAt": "2026-08-14T00:16:19Z",
+    "useCases": [
+      {
+        "text": "Webサイトのコンテンツ管理"
+      },
+      {
+        "text": "CMSシステムの導入"
+      },
+      {
+        "text": "オープンソースプロジェクトへの参加"
+      },
+      {
+        "text": "PHPベースのウェブサイト構築"
+      },
+      {
+        "text": "長期的な運用を前提としたサイト運営"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "cms"
+      },
+      {
+        "text": "fusiongen"
+      },
+      {
+        "text": "php"
+      },
+      {
+        "text": "open-source"
+      },
+      {
+        "text": "web-management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "FusionGENとはどのようなソフトウェアですか？",
+        "answer": "FusionCMSを継承し、新しいブランド名として展開されているオープンソースのコンテンツ管理システム（CMS）です。"
+      },
+      {
+        "question": "誰でもこのソフトウェアを使用できますか？",
+        "answer": "はい、オープンソースプロジェクトであるため、誰でも自由に使用したり、開発への貢献を行ったりすることが可能です。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "主にPHPというプログラミング言語を用いて構築されています。"
+      },
+      {
+        "question": "このプロジェクトの主な目的は何ですか？",
+        "answer": "長期的な視点を持って継続的に運用・発展させていくことを主な目標としています。Goalはコミュニティからの支援を得ながら成長させることです。"
+      }
+    ],
+    "jaFileCount": 15,
+    "jaSamplePaths": [
+      {
+        "text": "system/language/japanese"
+      },
+      {
+        "text": "system/language/japanese/calendar_lang.php"
+      },
+      {
+        "text": "system/language/japanese/date_lang.php"
+      },
+      {
+        "text": "system/language/japanese/db_lang.php"
+      },
+      {
+        "text": "system/language/japanese/email_lang.php"
+      }
+    ]
+  },
+  {
+    "name": "beadbox",
+    "slug": "beadbox",
+    "category": "project",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Gitを基盤とした課題管理システム用のデスクトップGUIアプリケーションです。",
+    "description": "beadboxは、gitバックエンドを使用した課題トラッカー「beads」のためのネイティブなGUIクライアントです。macOS、Windows、およびLinux環境に対応しており、ユーザーが直感的に操作できるインターフェースを提供します。Tauri、Next.js、Reactといった最新の技術スタックで構築されています。Gitを活用した課題管理をデスクトップアプリとして効率的に行いたい場合に適しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://beadbox.app",
+    "githubUrl": "https://github.com/beadbox/beadbox",
+    "featured": false,
+    "stars": 112,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-02-08T01:32:58Z",
+    "githubPushedAt": "2026-08-21T22:04:54Z",
+    "useCases": [
+      {
+        "text": "プロジェクト内の課題管理"
+      },
+      {
+        "text": "GitHub等のGitリポジトリと連携したIssue追跡"
+      },
+      {
+        "text": "クロスプラットフォームでのタスク管理"
+      },
+      {
+        "text": "デスクトップアプリによるGUI操作"
+      },
+      {
+        "text": "チーム内での進捗状況の可視化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "課題管理"
+      },
+      {
+        "text": "issue-tracker"
+      },
+      {
+        "text": "Git"
+      },
+      {
+        "text": "デスクトップアプリ"
+      },
+      {
+        "text": "タスク管理"
+      },
+      {
+        "text": "beads"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このアプリでできることは何ですか？",
+        "answer": "gitバックエンドの課題トラッカーである「beads」のためのGUIを提供します。macOS、Windows、Linuxで動作し、課題の管理や追跡を視覚的なインターフェースで行うことができます。"
+      },
+      {
+        "question": "対応しているOSは何ですか？",
+        "answer": "macOS、Windows、およびLinuxに対応しています。ネイティブなデスクトップアプリとして提供されているため、各OSの環境で利用が可能です。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "Tauri、Next.js、Reactを使用して開発されており、主要な言語としてはTypeScriptが採用されています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で公開されています。オープンソースソフトウェアとして提供されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "bigcommerce-for-wordpress",
+    "slug": "bigcommerce-for-wordpress",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "BigCommerceとWordPressを連携させるヘッドレスコマース統合ツールです。",
+    "description": "このソフトウェアは、WordPressとBigCommerceを統合するためのヘッドレスコマースソリューションを提供します。PHPで記述されており、WordPressのプラットフォームを活用しながらBigCommerceの機能を組み込むことが可能です。GPL-2.0ライセンスの下で公開されています。既存のWordPress環境にEC機能を追加したい場合に適したプラグインです。",
+    "license": "GPL-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.bigcommerce.com/wordpress/",
+    "githubUrl": "https://github.com/bigcommerce/bigcommerce-for-wordpress",
+    "featured": false,
+    "stars": 112,
+    "language": "PHP",
+    "githubCreatedAt": "2018-05-02T22:52:50Z",
+    "githubPushedAt": "2025-08-24T13:54:48Z",
+    "useCases": [
+      {
+        "text": "WordPressサイトへのEC機能統合"
+      },
+      {
+        "text": "ヘッドレスコマースの構築"
+      },
+      {
+        "text": "BigCommerceを利用したオンライン販売"
+      },
+      {
+        "text": "コンテンツ管理とECの分離"
+      },
+      {
+        "text": "WordPressを活用した店舗運営"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "bigcommerce"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "wordpress"
+      },
+      {
+        "text": "headless commerce"
+      },
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "GPL-2.0"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何をするためのものですか？",
+        "answer": "WordPressとBigCommerceを統合するためのヘッドレスコマース連携ツールです。WordPressのコンテンツ管理機能を利用しながら、EC機能としてBigCommerceを活用することができます。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "主にPHP言語を用いて開発されています。また、WordPressのプラグインとして動作する仕組みを提供しており、GPL-2.0ライセンスで提供されています。"
+      },
+      {
+        "question": "ヘッドレスコマースとは何を指しますか？",
+        "answer": "フロントエンド（ユーザーが見る画面）とバックエンド（データ管理や処理）を分離する構成のことです。このツールはその統合を支援します。"
+      },
+      {
+        "question": "WordPressとの関係はどうなっていますか？",
+        "answer": "WordPressのプラットフォーム上で動作するプラグインとして設計されています。これにより、既存のWordPressサイトにBigCommerceのEC機能を組み込むことが可能になります。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "claude-email",
+    "slug": "claude-email",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Claude Codeで高度なメール管理やマーケティングを実現するスキルセットです。",
+    "description": "このツールは、AIを活用してメールの仕分け、作成、品質レビュー、配信可能性の監査を行うためのスキルを提供します。自動化シーケンスの構築やマーケティング戦略の策定など、多岐にわたる機能を備えています。Pythonで記述されており、Claude Codeと連携することで高度な操作を可能にします。オープンソースとして公開されており、柔軟なカスタマイズが可能です。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.skool.com/ai-marketing-hub-pro/",
+    "githubUrl": "https://github.com/AgriciDaniel/claude-email",
+    "featured": false,
+    "stars": 111,
+    "language": "Python",
+    "githubCreatedAt": "2026-02-16T20:44:34Z",
+    "githubPushedAt": "2026-05-23T08:03:13Z",
+    "useCases": [
+      {
+        "text": "メールの自動仕分け"
+      },
+      {
+        "text": "メール本文の作成支援"
+      },
+      {
+        "text": "メール配信の品質レビュー"
+      },
+      {
+        "text": "マーケティング戦略の策定"
+      },
+      {
+        "text": "メール送信の自動化シーケンス構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AI"
+      },
+      {
+        "text": "AIマーケティング"
+      },
+      {
+        "text": "Claude Code"
+      },
+      {
+        "text": "マーケティングオートメーション"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような機能を提供しますか？",
+        "answer": "受信トレイの仕分け、メール本文の作成、品質レビュー、配信可能性の監査、自動化シーケンスの構築、およびマーケティング戦略の策定といったAIを活用した一連の機能を備えています。"
+      },
+      {
+        "question": "どのプラットフォームや環境で動作しますか？",
+        "answer": "Claude Codeと連携して使用するスキルとして提供されており、主な言語はPythonです。"
+      },
+      {
+        "question": "マーケティングにおいてどのような活用ができますか？",
+        "answer": "メールの配信戦略の策定から、実際の送信内容の品質確認、自動化された送信シーケンスの構築まで、AIを活用した一貫したマーケティング業務を支援します。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはMITライセンスで提供されています。これにより、多くの用途において自由な利用や改変が可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "github-wiki-action",
+    "slug": "github-wiki-action",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "特定のフォルダの内容をGitHub Wikiに同期するGitHub Actionです。",
+    "description": "このツールは、ローカルやリポジトリ内の特定のフォルダをGitHub Wikiへ自動的に同期するためのGitHub Actionです。TypeScriptで記述されており、GitHub Actionsのワークフローとして組み込んで使用します。bashなどのシェル操作を活用して動作し、ドキュメント管理の自動化を実現します。手動での更新作業を省き、ソースコードと並行したドキュメントの整合性を保つのに役立ちます。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/Andrew-Chen-Wang/github-wiki-action",
+    "githubUrl": "https://github.com/Andrew-Chen-Wang/github-wiki-action",
+    "featured": false,
+    "stars": 111,
+    "language": "TypeScript",
+    "githubCreatedAt": "2020-06-16T18:10:45Z",
+    "githubPushedAt": "2026-07-11T16:28:14Z",
+    "useCases": [
+      {
+        "text": "ドキュメントの自動同期"
+      },
+      {
+        "text": "Wikiの更新自動化"
+      },
+      {
+        "text": "技術文書の管理"
+      },
+      {
+        "text": "リポジトリ内フォルダの公開"
+      },
+      {
+        "text": "CI/CDへのドキュメント反映"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "GitHub Action"
+      },
+      {
+        "text": "GitHub Wiki"
+      },
+      {
+        "text": "同期"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールを使うとどのようなメリットがありますか？",
+        "answer": "特定のフォルダを監視し、変更があった際にGitHub Wikiへ自動で同期できるため、手動での更新作業を削減できます。ソースコードの変更とドキュメントの更新を一致させやすくなります。"
+      },
+      {
+        "question": "日本語のドキュメントにも対応していますか？",
+        "answer": "このツールはフォルダの内容を同期する仕組みを提供するため、フォルダ内に含まれるファイルが日本語であっても、そのままWikiに反映されます。"
+      },
+      {
+        "question": "導入には特別なサーバーが必要ですか？",
+        "answer": "いいえ、GitHub Actionsとして動作するため、GitHubのリポジトリ上で実行されます。独自のサーバーを用意することなく利用可能です。"
+      },
+      {
+        "question": "どのような技術スタックで動いていますか？",
+        "answer": "主な言語はTypeScriptであり、bashなどのシェルコマンドを活用して処理を行います。GitHub Actionsの仕組みを利用した設計となっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "headless-ecommerce",
+    "slug": "headless-ecommerce",
+    "category": "sitegen",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "GraphQLベースのヘッドレスEC向けREST APIプラットフォームです。",
+    "description": "Laravelを基盤としたオープンソースのheadless eCommerce APIです。GraphQLを活用することで、高速で動的、かつパーソナライズされたショッピング体験を提供します。非常にスケーラブルなフロントエンドのパフォーマンスを実現できる設計となっています。BagistoやJWTなどの技術を取り入れており、柔軟なシステム構築に適しています。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://bagisto.com/en/headless-ecommerce/",
+    "githubUrl": "https://github.com/bagisto/headless-ecommerce",
+    "featured": false,
+    "stars": 111,
+    "language": "PHP",
+    "githubCreatedAt": "2021-02-18T05:55:14Z",
+    "githubPushedAt": "2026-07-21T06:34:32Z",
+    "useCases": [
+      {
+        "text": "ヘッドレスコマースのバックエンド構築"
+      },
+      {
+        "text": "GraphQLを使用した動的な商品情報の提供"
+      },
+      {
+        "text": "パーソナライズされたショッピング体験の実装"
+      },
+      {
+        "text": "スケーラブルなECプラットフォームの開発"
+      },
+      {
+        "text": "高速なフロントエンドとの連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "headless-commerce"
+      },
+      {
+        "text": "graphql-api"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "laravel"
+      },
+      {
+        "text": "php"
+      },
+      {
+        "text": "jwt"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような技術スタックで構築されていますか？",
+        "answer": "PHPのフレームワークであるLaravelをベースにしており、GraphQLを使用したREST APIとして提供されています。MITライセンスの下で公開されているオープンソースソフトウェアです。"
+      },
+      {
+        "question": "ヘッドレスコマースとは具体的にどのような利点がありますか？",
+        "answer": "フロントエンドとバックエンドを分離することで、より高速で動的なショッピング体験を実現できます。また、特定のプラットフォームに縛られず、スケーラブルなパフォーマンスを確保できるのが特徴です。"
+      },
+      {
+        "question": "GraphQLを利用する主な目的は何ですか？",
+        "answer": "クライアントが必要とするデータのみを効率的に取得できるようにするためです。これにより、パーソナライズされた動的なコンテンツの提供や、フロントエンドのパフォーマンス向上が可能になります。"
+      },
+      {
+        "question": "このプラットフォームでサポートされている認証方式はありますか？",
+        "answer": "説明文の中にJWT（JSON Web Token）が含まれていることから、APIに対する認証認可にJWTを利用できることが示唆されています。詳細な実装方法は公式ドキュメントを確認する必要があります。铵"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "src/Resources/lang/ja"
+      },
+      {
+        "text": "src/Resources/lang/ja/app.php"
+      }
+    ]
+  },
+  {
+    "name": "byceps",
+    "slug": "byceps",
+    "category": "support",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "LANパーティーの運営や管理を統合的に行うセルフホスト型のWebプラットフォームです。",
+    "description": "BYCEPSは、LANパーティーの開催・運営を管理するためのセルフホスト型Webプラットフォームです。複数のブランドやサイトの運用、高度なチケット販売システム、座席管理機能を備えています。また、ネイティブな掲示板やショップ機能、イントラネットモードなどの多様な機能を統合しています。Pythonで開発されており、BSD-3-Clauseライセンスのもとで提供されています。",
+    "license": "BSD-3-Clause",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://byceps.nwsnet.de/",
+    "githubUrl": "https://github.com/byceps/byceps",
+    "featured": false,
+    "stars": 111,
+    "language": "Python",
+    "githubCreatedAt": "2015-08-03T22:05:23Z",
+    "githubPushedAt": "2026-08-12T13:28:17Z",
+    "useCases": [
+      {
+        "text": "LANパーティーのイベント運営"
+      },
+      {
+        "text": "高度なチケット販売システムの構築"
+      },
+      {
+        "text": "座席管理を含む予約システムの運用"
+      },
+      {
+        "text": "ブランド別の複数サイト管理"
+      },
+      {
+        "text": "社内用イントラネットの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "byceps"
+      },
+      {
+        "text": "LANパーティー"
+      },
+      {
+        "text": "イベント管理"
+      },
+      {
+        "text": "チケット販売"
+      },
+      {
+        "text": "座席管理"
+      },
+      {
+        "text": "掲示板"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のイベントに適していますか？",
+        "answer": "主にLANパーティーの運営を目的として設計されていますが、高度なチケット販売機能や座席管理、ショップ機能を備えているため、同様の管理が必要なイベントにも活用可能です。"
+      },
+      {
+        "question": "マルチブランドでの運用は可能ですか？",
+        "answer": "はい、複数のブランドやサイトを管理する機能が含まれており、異なるブランドのイベントやページを統合的に運営することが可能です。"
+      },
+      {
+        "question": "掲示板などのコミュニティ機能は含まれていますか？",
+        "answer": "ネイティブなディスカッションボード（掲示板）機能が備わっているため、ユーザー間でのコミュニケーションを促進する仕組みを構築できます。"
+      },
+      {
+        "question": "イントラネットとして利用することはできますか？",
+        "answer": "イントラネットモードを備えているため、外部に公開しない特定の組織内やコミュニティ内だけで利用するための設定が可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "clickup-cli",
+    "slug": "clickup-cli",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIエージェント向けのClickUp操作用コマンドラインインターフェースです。",
+    "description": "このツールは、AIエージェントがClickUpを操作できるようにするためのCLI（コマンドラインインターフェース）を提供します。TypeScriptで開発されており、Claude CodeやCodexなどの技術スタックと組み合わせて利用することが可能です。プロジェクト管理ツールであるClickUpの機能を、プログラムから制御する際の基盤として機能します。開発者はこのツールを活用することで、AIによる自動化ワークフローを構築できます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/krodak/clickup-cli",
+    "githubUrl": "https://github.com/krodak/clickup-cli",
+    "featured": false,
+    "stars": 111,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-02-23T11:35:04Z",
+    "githubPushedAt": "2026-08-18T13:44:03Z",
+    "useCases": [
+      {
+        "text": "AIエージェントによるタスク管理の自動化"
+      },
+      {
+        "text": "Claude Code等と連携したプロジェクト更新"
+      },
+      {
+        "text": "CLIを通じたClickUpデータの操作"
+      },
+      {
+        "text": "開発者向け自動化ツールの構築"
+      },
+      {
+        "text": "AI駆動の生産性向上システムの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "clickup"
+      },
+      {
+        "text": "ai-agents"
+      },
+      {
+        "text": "cli"
+      },
+      {
+        "text": "developer-tools"
+      },
+      {
+        "text": "productivity"
+      },
+      {
+        "text": "typescript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは一般の事務担当者が直接操作するものでしょうか？",
+        "answer": "いいえ、このツールは主に開発者がAIエージェントを構築したり、プログラムからClickUpを操作したりするために使用するCLIツールです。一般的な画面操作を行うためのアプリケーションではありません。"
+      },
+      {
+        "question": "どのような技術スタックと組み合わせて使うことができますか？",
+        "answer": "説明文に基づくと、Claude CodeやCodexといったAI関連の技術、およびTypeScript環境で動作する開発ツールと組み合わせて利用することが想定されています。"
+      },
+      {
+        "question": "ClickUpのどの機能を操作できるのですか？",
+        "answer": "具体的な機能一覧は提供されていませんが、CLIを通じてAIエージェントがClickUpを操作するためのインターフェースを提供することで、プロジェクト管理の自動化などに活用できます。"
+      },
+      {
+        "question": "このツールのライセンスはどうなっていますか？",
+        "answer": "MITライセンスで公開されています。オープンソースソフトウェアとして利用可能な条件ですが、詳細な規約については公式のリポジトリを確認してください。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "gssocFAQ-Bot",
+    "slug": "gssocfaq-bot",
+    "category": "project",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "コミュニティ運営の問い合わせ対応を自動化するFAQボットです。",
+    "description": "Gssoc FAQ Botは、コントリビューターからのよくある質問に回答し、スムーズな案内を行うためのアシスタントツールです。キュレーションされたデータベースから最適な回答をスマートに照合する仕組みを備えており、AIを使用せずに信頼性の高い情報を提供します。毎日繰り返される重複した質問への対応を自動化することで、コミュニティマネージャーの業務負荷を軽減します。HTMLを主な言語として利用しており、プロジェクト管理やイベント運営における効率化に寄与します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://gssocfaq-bot.onrender.com/docs/",
+    "githubUrl": "https://github.com/piyushpatelcodes/gssocFAQ-Bot",
+    "featured": false,
+    "stars": 110,
+    "language": "HTML",
+    "githubCreatedAt": "2025-07-21T14:12:11Z",
+    "githubPushedAt": "2025-12-26T16:20:33Z",
+    "useCases": [
+      {
+        "text": "コミュニティ運営におけるFAQ対応の自動化"
+      },
+      {
+        "text": "イベント参加者への定型的な問い合わせ回答"
+      },
+      {
+        "text": "プロジェクトマネジメントにおける情報提供の効率化"
+      },
+      {
+        "text": "Hacktoberfest等のイベントでの案内業務"
+      },
+      {
+        "text": "重複する質問に対する一貫した回答の提供"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "faq-system"
+      },
+      {
+        "text": "gssoc25"
+      },
+      {
+        "text": "hacktoberfest"
+      },
+      {
+        "text": "project-management"
+      },
+      {
+        "text": "自動応答"
+      },
+      {
+        "text": "コミュニティ運営"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはAIを使って回答を生成しますか？",
+        "answer": "いいえ、このボットはAIを使用しません。あらかじめキュレーションされたデータベースから最適な情報を照合して回答する仕組みを採用しているため、信頼性の高い情報を提供することが可能です。"
+      },
+      {
+        "question": "どのような業務の効率化に役立ちますか？",
+        "answer": "主にコミュニティマネージャーが日々対応する、ユーザーからの重複した質問への回答を自動化するのに役立ちます。手動での繰り返し作業を削減し、より重要な業務に集中できる環境を整えます。"
+      },
+      {
+        "question": "主なターゲットとなる利用シーンはどこですか？",
+        "answer": "GSSoCやHacktoberfestのような大規模なプロジェクトやイベントにおいて、多くのコントリビューターや参加者から寄せられるFAQへの対応をスムーズに行いたい場面に適しています。"
+      },
+      {
+        "question": "このツールで提供される回答の精度はどう担保されますか？",
+        "answer": "スマートマッチング技術を用いて、あらかじめ用意された信頼できるデータベースから最適な答えを見つけ出すことで、正確な情報を提供します。情報の整合性を保ちながらユーザーを導く設計になっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "waterhole",
+    "slug": "waterhole",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Laravelを使用したコミュニティやフォーラム構築のためのスタータープロジェクトです。",
+    "description": "このソフトウェアは、PHPのフレームワークであるLaravelをベースにしたコミュニティサイトやフォーラムを作成するためのスタータープロジェクトです。開発者が独自のコミュニティ機能を迅速に立ち上げるための基礎的な構造を提供します。主な技術スタックとしてPHPが採用されており、拡張性の高い開発が可能です。0BSDライセンスで公開されているため、自由度の高いカスタマイズが行えます。",
+    "license": "0BSD",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://waterhole.dev",
+    "githubUrl": "https://github.com/waterholeforum/waterhole",
+    "featured": false,
+    "stars": 110,
+    "language": "PHP",
+    "githubCreatedAt": "2022-10-01T23:20:47Z",
+    "githubPushedAt": "2026-08-19T01:11:02Z",
+    "useCases": [
+      {
+        "text": "コミュニティサイトの構築"
+      },
+      {
+        "text": "フォーラム機能の実装"
+      },
+      {
+        "text": "Laravelベースの掲示板開発"
+      },
+      {
+        "text": "ユーザー参加型プラットフォームの制作"
+      },
+      {
+        "text": "Webサービスの基礎基盤構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Laravel"
+      },
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "Community"
+      },
+      {
+        "text": "Forum"
+      },
+      {
+        "text": "Starter Project"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは完成したアプリですか？",
+        "answer": "いいえ、これはスタータープロジェクトです。特定の業務をすぐに実行できる完成品ではなく、開発者が独自のコミュニティやフォーラムを構築するための土台となるプログラムです。"
+      },
+      {
+        "question": "どのような技術で動きますか？",
+        "answer": "PHP言語とLaravelフレームワークを使用しています。これらを利用したWebアプリケーションの開発経験があるエンジニアが活用することを想定した構成になっています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "0BSDライセンスで提供されています。このライセンスに基づき、ソフトウェアの利用や改変に関する条件を確認した上で導入を検討してください。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "説明文には具体的な機能一覧は記載されていませんが、コミュニティやフォーラムを作成するための初期設定や基本構造が含まれていることが示唆されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "brimm",
+    "slug": "brimm",
+    "category": "project",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "グラフ構造を基盤とした、柔軟なナレッジマネジメントツールです。",
+    "description": "Notionのような操作性を持ちながら、ユーザー自身が所有するグラフ構造をバックエンドに備えた知識管理システムです。フルスタックで構築されており、オープンソースとして提供されています。ローカルファーストの設計を採用しているため、データのプライバシーを保ちつつ情報を整理できます。ノート作成からプロジェクト管理まで幅広く対応しており、高度なナレッジマネジメントを実現します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/zeitstein/brimm",
+    "githubUrl": "https://github.com/zeitstein/brimm",
+    "featured": false,
+    "stars": 110,
+    "language": null,
+    "githubCreatedAt": "2023-11-19T11:45:13Z",
+    "githubPushedAt": "2025-08-16T16:08:38Z",
+    "useCases": [
+      {
+        "text": "社内のナレッジ共有"
+      },
+      {
+        "text": "プロジェクト管理"
+      },
+      {
+        "text": "個人的なメモの整理"
+      },
+      {
+        "text": "知識グラフの構築"
+      },
+      {
+        "text": "ドキュメント管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "knowledge-management"
+      },
+      {
+        "text": "graph"
+      },
+      {
+        "text": "note-taking"
+      },
+      {
+        "text": "project-management"
+      },
+      {
+        "text": "local-first"
+      },
+      {
+        "text": "open-source"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような構造で情報を管理しますか？",
+        "answer": "ユーザーが所有するグラフ構造（Knowledge Graph）を基盤としています。これにより、単なる階層構造ではなく、情報同士の関連性を捉えた柔軟なナレッジマネジメントが可能になります。"
+      },
+      {
+        "question": "データのプライバシーはどうなっていますか？",
+        "answer": "ローカルファースト（local-first）という設計思想に基づいています。これにより、データを外部サーバーに依存することなく、ユーザー自身が管理する環境で安全に情報を扱うことができます。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "Notionに着想を得た多目的なインターフェースを備えており、ノートの作成（note-taking）からプロジェクトの進行管理まで、幅広い業務に対応できる機能を備えています。"
+      },
+      {
+        "question": "このソフトウェアのライセンスはどうなっていますか？",
+        "answer": "MITライセンスで提供されているオープンソースソフトウェアです。自由度の高い利用が可能であり、フルスタックな構成で提供されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "bitcointranscripts",
+    "slug": "bitcointranscripts",
+    "category": "media",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "BitcoinおよびLightning Networkに関連する講義やポッドキャストの書き起こしデータ集です。",
+    "description": "このプロジェクトは、ビットコインやライトニングネットワークに関する多様なトランスクリプト（書き起こし）を収集したリポジトリです。カンファレンス、ポッドキャスト、講演などの音声コンテンツから抽出された知識ベースが含まれています。Pythonで構築されており、関連する技術情報の収集に役立ちます。MITライセンスの下で公開されているため、開発の過程で必要な情報を探索するためのリソースとして活用可能です。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://btctranscripts.com",
+    "githubUrl": "https://github.com/bitcointranscripts/bitcointranscripts",
+    "featured": false,
+    "stars": 109,
+    "language": "Python",
+    "githubCreatedAt": "2021-03-12T17:02:08Z",
+    "githubPushedAt": "2026-07-22T21:39:38Z",
+    "useCases": [
+      {
+        "text": "ビットコインに関する技術的な知見の調査"
+      },
+      {
+        "text": "ライトニングネットワークの仕様理解のための資料収集"
+      },
+      {
+        "text": "カンファレンスの講演内容の検索と確認"
+      },
+      {
+        "text": "ポッドキャストの内容に基づく知識ベースの構築"
+      },
+      {
+        "text": "特定のトピックに関する講義情報の抽出"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "bitcoin"
+      },
+      {
+        "text": "lightning network"
+      },
+      {
+        "text": "transcripts"
+      },
+      {
+        "text": "knowledge-base"
+      },
+      {
+        "text": "podcast"
+      },
+      {
+        "text": "conferences"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のデータが含まれていますか？",
+        "answer": "ビットコインやライトニングネットワークに関連する、カンファレンス、ポッドキャスト、講演などの書き起こし（トランスクリプト）が含まれています。"
+      },
+      {
+        "question": "このツールを使って直接アプリケーションを構築できますか？",
+        "answer": "これは主に知識ベースとしての役割を持つリポジトリであり、開発者が情報を収集するためのリソースです。具体的なアプリとして機能するものではありません。"
+      },
+      {
+        "question": "主なプログラミング言語は何ですか？",
+        "answer": "このプロジェクトに関連する主要な言語はPythonです。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスで提供されているため、制約を理解した上で利用することが可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "community_store",
+    "slug": "community-store",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Concrete CMS上で動作するオープンソースのECシステムです。",
+    "description": "community_storeは、Concrete CMS向けに開発されたオープンで無料のコミュニティベースのECシステムです。PHP言語で構築されており、MITライセンスの下で提供されています。このシステムを導入することで、Concrete CMSを活用したオンライン販売機能を実現できます。コミュニティによって開発が進められているソフトウェアです。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://concretecms-community-store.github.io/community_store/",
+    "githubUrl": "https://github.com/concretecms-community-store/community_store",
+    "featured": false,
+    "stars": 109,
+    "language": "PHP",
+    "githubCreatedAt": "2016-02-20T11:13:54Z",
+    "githubPushedAt": "2026-08-20T12:09:29Z",
+    "useCases": [
+      {
+        "text": "ECサイトの構築"
+      },
+      {
+        "text": "オンラインショップの運営"
+      },
+      {
+        "text": "Concrete CMSとの連携"
+      },
+      {
+        "text": "コミュニティ主導のEC展開"
+      },
+      {
+        "text": "PHPベースのECシステム導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "concrete5"
+      },
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "MITライセンス"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何を目的としたものですか？",
+        "answer": "Concrete CMSというコンテンツ管理システム上で動作する、オープンで無料なEC（電子商取引）システムを提供することを目的としています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "MITライセンスの下で提供されているため、コミュニティによって開発されたオープンなソフトウェアとして利用可能です。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "このシステムはPHPというプログラミング言語を用いて開発されています。"
+      },
+      {
+        "question": "Concrete CMSとの関係はどうなっていますか？",
+        "answer": "Concrete CMS専用のECシステムとして設計されており、同プラットフォーム上で動作するように構築されています。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "next-ecommerce",
+    "slug": "giladfuchs-next-ecommerce",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Next.jsとPayload CMSを活用したモダンなECプラットフォームです。",
+    "description": "Next.js 16とPayload CMSを用いて構築された、無料かつアクセシブルな最新のEコマースプラットフォームです。動的なストアフロントを備えており、柔軟なコンテンツ管理が可能です。本製品は、本番環境に対応した商取引フローを標準で備えています。TypeScriptを採用しており、堅牢な開発基盤を提供します。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://payload.url-link.org",
+    "githubUrl": "https://github.com/giladfuchs/next-ecommerce",
+    "featured": false,
+    "stars": 109,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-05-19T15:59:13Z",
+    "githubPushedAt": "2026-08-21T14:25:57Z",
+    "useCases": [
+      {
+        "text": "ECサイトの構築"
+      },
+      {
+        "text": "商品情報のコンテンツ管理"
+      },
+      {
+        "text": "動的なオンラインストアの運用"
+      },
+      {
+        "text": "アクセシブルなショッピング体験の提供"
+      },
+      {
+        "text": "生産性の高いコマースフローの実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ecommerce"
+      },
+      {
+        "text": "nextjs"
+      },
+      {
+        "text": "payloadcms"
+      },
+      {
+        "text": "postgresql"
+      },
+      {
+        "text": "storefront"
+      },
+      {
+        "text": "typescript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このプラットフォームでできることは何ですか？",
+        "answer": "Next.jsとPayload CMSをベースとした、動的なストアフロントの構築や柔軟なコンテンツ管理が可能です。本番環境に対応した商取引フローを備えており、モダンでアクセシブルなECサイトを実現できます。"
+      },
+      {
+        "question": "どのような技術スタックで構成されていますか？",
+        "answer": "主な技術としてNext.js 16、Payload CMS、PostgreSQL、およびTypeScriptを使用しています。最新のWeb技術を組み合わせることで、高性能で保守性の高いEコマース環境を提供します。"
+      },
+      {
+        "question": "コンテンツ管理は柔軟に行えますか？",
+        "answer": "はい、Payload CMSを統合しているため、柔軟なコンテンツ管理が可能です。動的なストアフロントと連携しながら、商品の情報やサイトのコンテンツを効率的に管理できる設計になっています。"
+      },
+      {
+        "question": "アクセシビリティへの配慮はありますか？",
+        "answer": "このプラットフォームはアクセシブルに構築されていることが特徴の一つです。すべてのユーザーにとって使いやすい、モダンなEコマース体験を提供することを目指しています。}]}_109_stars_count_is_not_included_in_json.json_output_only_requested._no_markdown_blocks_used._done_{"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "growerp",
+    "slug": "growerp",
+    "category": "commerce",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "MoquiやApache OFBizをベースとしたマルチプラットフォーム対応のERPシステムです。",
+    "description": "GrowERPは、Android、iOS、Web、Linux、Windowsの各環境で動作するFlutterベースのERPアプリケーションです。Moqui.orgおよびApache OFBizを活用しており、多言語への対応を備えています。管理ダッシュボードやEコマース機能が含まれており、幅広いビジネスニーズに対応可能です。オープンソースとして提供されており、柔軟なシステム構築を支援します。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.growerp.com",
+    "githubUrl": "https://github.com/growerp/growerp",
+    "featured": false,
+    "stars": 109,
+    "language": "Dart",
+    "githubCreatedAt": "2022-08-14T08:38:04Z",
+    "githubPushedAt": "2026-08-21T23:52:25Z",
+    "useCases": [
+      {
+        "text": "ERPシステムの導入"
+      },
+      {
+        "text": "Eコマースサイトの運営"
+      },
+      {
+        "text": "ホテル業務の管理"
+      },
+      {
+        "text": "フリーランスの業務管理"
+      },
+      {
+        "text": "管理ダッシュボードの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ERP"
+      },
+      {
+        "text": "Flutter"
+      },
+      {
+        "text": "Moqui"
+      },
+      {
+        "text": "Apache OFBiz"
+      },
+      {
+        "text": "Eコマース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのプラットフォームで利用できますか？",
+        "answer": "Android、iOS、Web、Linux、Windowsのすべての主要なプラットフォームに対応しています。Flutterを使用しているため、一貫したユーザー体験を提供することが可能です。"
+      },
+      {
+        "question": "このソフトウェアは何をベースに構築されていますか？",
+        "answer": "Moqui.orgおよびApache OFBizという既存の基盤を活用して構築されています。これにより、堅牢なERP機能を実現しています。"
+      },
+      {
+        "question": "対応している言語にはどのようなものがありますか？",
+        "answer": "英語、フランス語、ドイツ語、スペイン語、タイ語、オランダ語に対応しています。※日本語への対応については提供情報に含まれていません。"
+      },
+      {
+        "question": "主な機能にはどのようなものがありますか？",
+        "answer": "管理ダッシュボードやEコマース機能が含まれています。また、ホテル業務やフリーランス向けの管理など、幅広いビジネスシーンでの利用が想定されています。鱗}]}`json`{"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "SPMS-Web",
+    "slug": "spms-web",
+    "category": "accounting",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "製造現場の管理を統合するスマート生産管理システムです。",
+    "description": "SPMS-Webは、製造実行システム（MES）、倉庫管理システム（WMS）、企業資源計画システム（ERP）、品質管理システム（QMS）、およびIoT管理システム（IoTS）を統合した企業向けアプリケーションです。複数の主要な生産管理モジュールを一元化し、スマートな生産管理を実現します。Vueを採用しており、直感的な操作が可能なインターフェースを提供します。MITライセンスの下で公開されており、柔軟な導入が可能です。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://spms.hamm.cn",
+    "githubUrl": "https://github.com/s-pms/SPMS-Web",
+    "featured": false,
+    "stars": 109,
+    "language": "Vue",
+    "githubCreatedAt": "2024-03-27T05:53:49Z",
+    "githubPushedAt": "2026-08-11T08:48:26Z",
+    "useCases": [
+      {
+        "text": "製造実行システム(MES)の導入"
+      },
+      {
+        "text": "倉庫管理システム(WMS)による在庫管理"
+      },
+      {
+        "text": "企業資源計画(ERP)によるリソース管理"
+      },
+      {
+        "text": "品質管理システム(QMS)による品質維持"
+      },
+      {
+        "text": "IoTを活用した生産ラインの管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "erp"
+      },
+      {
+        "text": "iot"
+      },
+      {
+        "text": "mes"
+      },
+      {
+        "text": "qms"
+      },
+      {
+        "text": "wms"
+      },
+      {
+        "text": "Vue"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアにはどのような機能が含まれていますか？",
+        "answer": "製造実行システム（MES）、倉庫管理システム（WMS）、企業資源計画システム（ERP）、品質管理システム（QMS）、およびIoT管理システム（IoTS）といった、生産管理における主要なモジュールが統合されています。"
+      },
+      {
+        "question": "技術スタックについて教えてください。",
+        "answer": "フロントエンドにはVueが採用されており、ユーザーインターフェースの構築に使用されています。また、MITライセンスで提供されているため、オープンソースとして利用可能です。"
+      },
+      {
+        "question": "どのような企業の課題を解決するためのツールですか？",
+        "answer": "複数の生産管理システムを個別に運用するのではなく、統合されたスマートなシステムを通じて、製造、倉庫、品質、資源管理を一元的に管理したい企業向けのソリューションです。"
+      },
+      {
+        "question": "IoTとの連携は可能ですか？",
+        "answer": "はい、このシステムにはIoT管理システム（IoTS）が含まれており、生産現場におけるIoTデバイスやデータの管理を統合して行うことが可能です。Goals"
       }
     ],
     "jaFileCount": 0,

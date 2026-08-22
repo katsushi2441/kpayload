@@ -55,6 +55,7 @@ const categoryLabels: Record<string, string> = {
   lms: '学習管理・LMS', hr: '人事・勤怠', accounting: '会計・経理', forum: 'コミュニティ・掲示板',
   booking: '予約・受付', survey: 'アンケート・フォーム', pos: 'POS・店舗', dms: '文書管理',
   lowcode: 'ローコード開発', analytics: '分析・BI', aidev: 'AI開発基盤', devtools: '開発者ツール',
+  sitegen: 'サイト構築・静的生成', automation: '自動化・連携', devsupport: '開発支援ツール',
 }
 
 const h = (value: unknown) => String(value ?? '')
