@@ -1,0 +1,112 @@
+/**
+ * 収集した候補から、カタログに載せるものだけを残す。
+ *
+ * 落とすもの:
+ *   - 基盤・ライブラリ・CLI（改造して納品する対象でも、使って作る道具でもない）
+ *   - 学習用リポジトリ（awesome / tutorial / boilerplate / 書籍）
+ *   - 保守されていないもの、ライセンス不明のもの、説明が無いもの
+ *
+ * 使い方: npx tsx scripts/select.ts
+ * 出力:   data/harvest/selected.json
+ */
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const harvestDir = path.join(root, 'data', 'harvest')
+
+type Repo = {
+  full_name: string
+  html_url: string
+  homepage: string | null
+  description: string | null
+  stargazers_count: number
+  language: string | null
+  license: { spdx_id?: string | null; name?: string | null } | null
+  topics: string[]
+  archived: boolean
+  fork: boolean
+  pushed_at: string
+  created_at: string
+}
+type Bucket = { topic: string; category: string; funnel: 'oss' | 'prototype'; items: Repo[] }
+
+// 学習用・一覧系。ソフトウェアではないので納品対象にならない。
+const NAME_BLOCK = /(^|[-_/])(awesome|awesome-list|cheatsheet|cheat-sheet|roadmap|tutorials?|examples?|samples?|demos?|boilerplate|starter|scaffold|template|templates|books?|course|courses|handbook|guide|guides|learning|learn|curriculum|interview|resources|collection|list|links|papers|notes|docs|documentation|spec|specs|rfc)([-_/]|$)/i
+const DESC_BLOCK = /(awesome list|curated list|a list of|collection of (links|resources|papers)|learning resources|study (notes|guide)|interview questions|cheat ?sheet|road ?map|book about|free books)/i
+
+// ライブラリ・部品。単体で業務に使えないので、どちらの出口にも乗らない。
+const LIB_TOPICS = new Set([
+  'library', 'libraries', 'sdk', 'api-client', 'api-wrapper', 'wrapper', 'binding', 'bindings',
+  'plugin', 'plugins', 'theme', 'themes', 'extension', 'extensions', 'package', 'module',
+  'component', 'components', 'ui-kit', 'design-system', 'icons', 'fonts', 'polyfill', 'middleware',
+])
+// OS・基盤。Linux や Apache の側。
+const INFRA_TOPICS = new Set([
+  'kernel', 'operating-system', 'compiler', 'programming-language', 'interpreter', 'emulator',
+  'firmware', 'bootloader', 'driver', 'filesystem', 'networking', 'dns', 'vpn', 'proxy',
+  'load-balancer', 'web-server', 'reverse-proxy', 'kubernetes', 'terraform', 'ansible',
+  'infrastructure-as-code', 'container', 'virtualization', 'hypervisor',
+])
+
+const STALE_MONTHS = 18
+
+const files = (await fs.readdir(harvestDir)).filter((name) => name.endsWith('.json') && name.includes('__'))
+if (!files.length) throw new Error('No harvest files. Run scripts/harvest.ts first.')
+
+const seen = new Map<string, { repo: Repo; category: string; funnel: 'oss' | 'prototype'; topics: Set<string> }>()
+for (const name of files) {
+  const bucket = JSON.parse(await fs.readFile(path.join(harvestDir, name), 'utf8')) as Bucket
+  for (const repo of bucket.items) {
+    const key = repo.full_name.toLowerCase()
+    const hit = seen.get(key)
+    if (hit) {
+      hit.topics.add(bucket.topic)
+      // 業務アプリ側の判定を優先する（同じリポジトリが両方のトピックに出ることがある）
+      if (bucket.funnel === 'oss' && hit.funnel === 'prototype') { hit.funnel = 'oss'; hit.category = bucket.category }
+      continue
+    }
+    seen.set(key, { repo, category: bucket.category, funnel: bucket.funnel, topics: new Set([bucket.topic]) })
+  }
+}
+
+const staleBefore = new Date()
+staleBefore.setMonth(staleBefore.getMonth() - STALE_MONTHS)
+
+const reasons = new Map<string, number>()
+const bump = (reason: string) => reasons.set(reason, (reasons.get(reason) || 0) + 1)
+
+const kept: Array<{ repo: Repo; category: string; funnel: 'oss' | 'prototype'; topics: string[] }> = []
+for (const entry of seen.values()) {
+  const { repo } = entry
+  const shortName = repo.full_name.split('/')[1] || repo.full_name
+  const desc = repo.description || ''
+  const spdx = repo.license?.spdx_id || ''
+
+  if (repo.archived) { bump('archived'); continue }
+  if (repo.fork) { bump('fork'); continue }
+  if (!desc.trim()) { bump('no description'); continue }
+  if (!spdx || spdx === 'NOASSERTION') { bump('no license'); continue }
+  if (new Date(repo.pushed_at) < staleBefore) { bump(`stale (>${STALE_MONTHS}mo)`); continue }
+  if (NAME_BLOCK.test(shortName)) { bump('learning/list repo (name)'); continue }
+  if (DESC_BLOCK.test(desc)) { bump('learning/list repo (description)'); continue }
+
+  const topics = repo.topics || []
+  if (topics.some((topic) => LIB_TOPICS.has(topic))) { bump('library/component'); continue }
+  if (topics.some((topic) => INFRA_TOPICS.has(topic))) { bump('infrastructure'); continue }
+
+  kept.push({ repo, category: entry.category, funnel: entry.funnel, topics: [...entry.topics] })
+}
+
+kept.sort((a, b) => b.repo.stargazers_count - a.repo.stargazers_count)
+
+const out = path.join(harvestDir, 'selected.json')
+await fs.writeFile(out, JSON.stringify(kept, null, 2))
+
+console.log(`候補 ${seen.size} 件 → 採用 ${kept.length} 件`)
+console.log('落とした理由:')
+for (const [reason, count] of [...reasons.entries()].sort((a, b) => b[1] - a[1])) console.log(`  ${reason.padEnd(28)}${count}`)
+const byFunnel = kept.reduce<Record<string, number>>((acc, item) => { acc[item.funnel] = (acc[item.funnel] || 0) + 1; return acc }, {})
+console.log('出口別:', byFunnel)
+console.log(`出力: ${out}`)
