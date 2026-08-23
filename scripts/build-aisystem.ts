@@ -142,13 +142,15 @@ ${body}
 </body></html>`
 }
 
-function ctaBlock(cap: Capability, name: string): string {
+/** subject を渡すと見出しの主語を差し替える（index では分類名ではなく「AI導入」にする）。 */
+function ctaBlock(cap: Capability, name: string, subject?: string): string {
+  const s = subject || cap.label
   return `<div class="cta">
-<h2>${h(cap.label)}を、まず15時間で試す</h2>
+<h2>${h(s)}を、まず15時間で試す</h2>
 <p>名古屋市内なら、1日3時間×5日間の計15時間・税別15万円で試せます。<strong>初日3時間のヒアリングと提案は無料</strong>です。御社のPCと御社名義のAIエージェントで目の前で開発するので、作り方ごと社内に残ります。成果物とソースコードはお客様のものです。</p>
-<a class="btn btn-main" href="${TRIAL}?ref=ai-system-${attr(cap.key)}">AI導入お試し実験を見る</a>
+<a class="btn btn-main" href="${TRIAL}?ref=ai-system-${attr(subject ? 'index' : cap.key)}">AI導入お試し実験を見る</a>
 <a class="btn" href="${KURAGE}/vibe-prototype.html?ref=exbridge-ai-system">動くデモを先に見る（110,000円〜）</a>
-<a class="btn" href="${SITE}/contact.php?subject=${encodeURIComponent(cap.label + 'の相談')}">${h(name)}について相談する</a>
+<a class="btn" href="${SITE}/contact.php?subject=${encodeURIComponent(s + 'の相談')}">${h(name)}について相談する</a>
 </div>`
 }
 
@@ -245,6 +247,53 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
   return shell(title, desc, url, body + faqHtml, ld)
 }
 
+/**
+ * 経営者が言葉にする課題と、対応する「できること」ページの対応表。
+ *
+ * なぜ手書きか: 分類は業務名（社内Wiki、在庫管理…）で並んでいるが、
+ * 経営者は「人手が足りない」「属人化している」という言い方で検索・相談する。
+ * 入口の言葉と中身の言葉が違うので、ここで橋をかける。
+ * caps に含まれない key は表示時に落とす（リンク切れを作らない）。
+ */
+const ISSUES: Array<{ issue: string; effect: string; keys: string[] }> = [
+  { issue: '人手が足りない。募集しても採用できない',
+    effect: 'いま人がやっている入力・転記・問い合わせ対応をAIに寄せると、同じ人数で回る量が増えます。増えた余力は、採用しないと着手できなかった仕事に回せます。',
+    keys: ['ocr', 'chatbot', 'automation', 'helpdesk'] },
+  { issue: '特定の人しかできない仕事があり、その人が休むと止まる',
+    effect: '手順と判断の根拠を文書にして検索できる状態にすると、担当が代われる仕事が増えます。退職時に知識ごと失われる状態を止められます。',
+    keys: ['manual', 'wiki', 'knowledge', 'rag'] },
+  { issue: '残業が減らない。定時で終わらない',
+    effect: '毎日繰り返している定型作業を機械に移すと、人の時間は判断が要る仕事だけに残ります。作業時間を記録して、どこに時間が消えているかを先に測ります。',
+    keys: ['automation', 'timetrack', 'workflow', 'report'] },
+  { issue: '紙とハンコで承認が止まる。書類が溜まる',
+    effect: '申請と承認を画面で回すと、誰の手元で止まっているかが見えます。紙の書類は読み取って検索できる形にすれば、探す時間そのものが消えます。',
+    keys: ['workflow', 'ocr', 'dms', 'esign'] },
+  { issue: '経営の数字が月末にならないと分からない',
+    effect: '売上・原価・在庫を同じ場所に集めて自動で集計すると、判断が月末待ちでなくなります。手集計のExcelを廃止できます。',
+    keys: ['bi', 'report', 'visualize', 'spreadsheet'] },
+  { issue: '同じ問い合わせに何度も答えている',
+    effect: '過去の回答をAIに答えさせると、一次対応が人の手を離れます。人は例外だけを見ればよくなり、対応の質も揃います。',
+    keys: ['chatbot', 'faq', 'helpdesk', 'rag'] },
+  { issue: '社内の資料が探せない。前に作ったものが見つからない',
+    effect: '言葉が違っても意味で探せる検索にすると、作り直しが減ります。「探す時間」は業務時間の中で最も気づかれにくい損失です。',
+    keys: ['knowledge', 'search', 'vectordb', 'dms'] },
+  { issue: '見積・請求・経費の処理に人手がかかる',
+    effect: '発行と突合を自動化すると、月末の集中がなくなります。入力ミスによる回収漏れも減ります。',
+    keys: ['invoice', 'quote', 'expense', 'accounting'] },
+  { issue: '在庫と発注をExcelで管理していて、欠品と過剰が起きる',
+    effect: '在庫と受発注を同じ台帳に載せると、欠品も抱えすぎも数字で見えます。運転資金の使い方が変わります。',
+    keys: ['inventory', 'order', 'purchase', 'warehouse'] },
+  { issue: '勤怠・シフト・給与の管理が紙とExcelのまま',
+    effect: '打刻と集計をつなぐと、締めの作業が短くなります。労務のリスク（残業時間の把握漏れ）も見えるようになります。',
+    keys: ['attendance', 'shift', 'payroll', 'hr'] },
+  { issue: '営業の状況が個人の頭の中にあり、引き継げない',
+    effect: '顧客と商談を記録に残すと、担当が代わっても続けられます。誰に何を提案したかが会社の資産になります。',
+    keys: ['crm', 'sfa', 'mailmarketing', 'contact'] },
+  { issue: '欲しい画面を作るたびに外注していて、費用も時間もかかる',
+    effect: '自社で直せる形にすると、小さな改善が止まりません。作り方ごと社内に残すことを、当社は導入の前提にしています。',
+    keys: ['lowcode', 'form', 'database', 'api'] },
+]
+
 function capabilityPage(cap: Capability, all: Project[], related: Capability[], counts: Map<string, number>): string {
   const url = `${BASE}/c/${cap.key}/`
   const groupLabel = GROUPS.find((g) => g.key === cap.group)?.label || ''
@@ -270,6 +319,11 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
     { q: '費用はどのくらいかかりますか？', a: '名古屋市内であれば、1日3時間×5日間の計15時間・税別15万円のお試し導入があります。初日3時間のヒアリングと提案は無料で、進めるとお決めいただいた場合のみ費用が発生します。作るものが決まっている場合は税込110,000円からのプロトタイプ制作もあります。' },
     { q: 'どれを選べばよいかわからないのですが、相談だけでもよいですか？', a: '構いません。初日3時間のヒアリングは無料です。現場のやり方を見せていただいたうえで、どれを土台にするか、そもそもオープンソースを使わないほうがよいかを含めて提案します。' },
   ]
+
+  // この分類が経営課題のどれに効くかは ISSUES にある分だけ出す。
+  // 96枚に同じ一般論を貼ると、ページの見分けがつかなくなるので作文しない。
+  const issueBlock = ISSUES.filter((it) => it.keys.includes(cap.key))
+    .map((it) => `<div class="card"><h3>${h(it.issue)}</h3><p>${h(it.effect)}</p></div>`).join('')
 
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">AIでできること / ${h(groupLabel)}</p>
@@ -301,6 +355,11 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 ${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.japaneseStatus)}</td></tr>`).join('')}
 </tbody></table></div>
 </div></section>
+${issueBlock ? `<section><div class="panel">
+<h2>${h(cap.label)}は、経営のどんな課題につながっていますか？</h2>
+<div class="grid">${issueBlock}</div>
+<p class="note">課題の出方は業種によって違います。<a href="${BASE}/">AI導入で解決できる経営課題の一覧</a>に、当社が名古屋の経営者から実際に相談を受ける12の言い方をまとめています。</p>
+</div></section>` : ''}
 <section><div class="panel">
 <h2>どれを選べばよいですか？</h2>
 <p>選び方とは、機能の多さではなく、ライセンス・日本語対応・自社の業務との距離で絞ることです。一覧の「日本語」欄が「日本語ファイルなし」であれば、日本語化から着手します。当社は初日3時間の無料ヒアリングで現場を見てから、どれを土台にするかを提案します。土台選びだけを相談していただいても構いません。</p>
@@ -331,34 +390,141 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
 }
 
 function indexPage(caps: Capability[], counts: Map<string, number>, total: number): string {
-  const title = 'AIでできること一覧｜やりたいことから探す業務システム | 株式会社エクスブリッジ'
-  const desc = `社内Wiki、問い合わせの自動応答、請求書の発行、在庫管理、勤怠管理など、AIと既存のオープンソースでできることを${caps.length}種類・${total}件のOSSから探せます。名古屋のシステム開発会社が導入まで行います。`
+  const title = 'AIでできること一覧｜AI導入で何ができるか、どんな経営課題が解決できるか | 株式会社エクスブリッジ'
+  const desc = `AI導入で何ができるようになるのか、経営のどんな課題が解決できるのかを、${caps.length}種類の用途と${total}件のオープンソースで具体的に示します。人手不足、属人化、残業、紙の承認、月末待ちの数字。名古屋のシステム開発会社が、初日3時間無料のヒアリングから動くシステムまで作ります。`
+  const has = (k: string) => caps.some((c) => c.key === k)
+  const capOf = (k: string) => caps.find((c) => c.key === k)!
+
+  const issueCards = ISSUES.map((it) => {
+    const links = it.keys.filter(has)
+    if (!links.length) return ''
+    return `<div class="card"><h3>${h(it.issue)}</h3><p>${h(it.effect)}</p>
+<p class="note">${links.map((k) => `<a href="${BASE}/c/${attr(k)}/">${h(capOf(k).label)}（${counts.get(k) || 0}件）</a>`).join('　')}</p></div>`
+  }).join('')
+
   const sections = GROUPS.map((g) => {
     const list = caps.filter((c) => c.group === g.key)
     if (!list.length) return ''
-    return `<section><div class="panel"><h2>${h(g.label)}</h2>
-<div class="cat-grid">${list.map((c) => `<a class="cat-card" href="${BASE}/c/${attr(c.key)}/"><b>${h(c.label)}</b><span>${h(c.question)}（${counts.get(c.key) || 0}件）</span></a>`).join('')}</div>
-</div></section>`
+    return `<h3>${h(g.label)}</h3>
+<div class="cat-grid">${list.map((c) => `<a class="cat-card" href="${BASE}/c/${attr(c.key)}/"><b>${h(c.label)}</b><span>${h(c.question)}（${counts.get(c.key) || 0}件）</span></a>`).join('')}</div>`
   }).join('')
+
+  const faqs = [
+    { q: 'AI導入で、具体的に何ができるようになりますか？',
+      a: `大きく分けて4つです。第一に、人がやっている入力・転記・集計を機械が肩代わりします。第二に、社内に散らばった資料や過去の回答から、聞けば答えが返る状態を作ります。第三に、紙とハンコで止まっていた申請・承認・記録を画面で回します。第四に、月末にならないと分からなかった売上・原価・在庫の数字が、その日のうちに見えるようになります。当社は${caps.length}種類の用途に分けて、${total}件のオープンソースを土台として掲載しています。` },
+    { q: 'AIにできないことは何ですか？',
+      a: '責任を伴う最終判断はできません。誰と取引するか、いくらで売るか、誰を採用するかは人が決めることです。また、決まった手順を正確に繰り返すだけの処理は、AIを使わないほうが速く確実で安価です。当社ではその部分は普通のプログラムとして作ります。AIを入れること自体は目的ではありません。' },
+    { q: 'AI導入は本当に利益につながりますか？',
+      a: '順番があります。まず作業時間が減り、次にその時間が別の仕事に回り、そこで初めて売上や利益が動きます。時間が減っただけでは利益は変わりません。だから当社は、削減した時間を何に使うかを最初のヒアリングで決めてから作ります。効果が出ない見込みなら、作らないほうがよいと申し上げます。' },
+    { q: '中小企業でも導入できますか。社内にIT担当者がいません。',
+      a: 'できます。担当者がいない会社ほど向いています。いまの紙とExcelのやり方をそのまま見せていただければ、こちらで形にします。専門用語で話を進めることはしません。名古屋市内であれば、1日3時間×5日間の計15時間・税別15万円で実際に動くシステムを1つ以上作るお試し導入があります。' },
+    { q: '費用はどのくらいかかりますか？',
+      a: '名古屋市内なら、計15時間・税別15万円のお試し導入があります。初日3時間のヒアリングと提案は無料で、進めるとお決めいただいた場合のみ費用が発生します。作るものが決まっている場合は税込110,000円からのプロトタイプ制作、既存のオープンソースを土台にする場合も税込110,000円からのカスタマイズがあります。月額のユーザー課金は発生しません。' },
+    { q: '社内のデータが外部に出ることはありませんか？',
+      a: '用途に応じて、社内やお客様のサーバーで動くローカルLLMを使う構成にできます。外部のAIサービスに社内データを送らない形での構築実績があります。掲載しているオープンソースは、いずれも自社サーバーに置いて動かせるものです。' },
+    { q: '失敗したという話も聞きます。何が原因ですか？',
+      a: '多いのは、対象を決めずに「AIで何かできないか」から始めた場合です。動くものを見ないまま仕様を固め、出来上がってから現場と食い違うという流れになります。当社は初日に現場を見て対象を1つに絞り、2日目から目の前で動くものを作って見ていただく進め方をとります。' },
+    { q: '作ったシステムは自社のものになりますか？',
+      a: 'なります。ソースコード一式をお渡しします。開発はお客様のPCとお客様名義のAIエージェントで行うので、作り方ごと社内に残ります。以後は自社で改造しても、他社に依頼しても構いません。当社に縛られる契約にはしません。' },
+  ]
+
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">AIでできること</p>
-<h1>やりたいことから、<br>作れる仕組みを探す。</h1>
-<p class="lead">「社内の資料が探せない」「問い合わせ対応に時間を取られる」「請求書を手で作っている」——その課題に対して、すでに世界で使われているオープンソースを土台にした解決策を、${caps.length}種類・${total}件から探せます。</p>
+<h1>AI導入で、<br>何ができるようになるのか。</h1>
+<p class="lead">「AIで何ができるのか」「うちの会社の何が解決するのか」——その問いに、抽象論ではなく用途${caps.length}種類と、実際に土台として使えるオープンソース${total}件で答えます。名古屋市内なら、計15時間・税別15万円で実際に1つ作って確かめられます。<strong>初日3時間の相談は無料</strong>です。</p>
+<p><a class="btn btn-main" href="${TRIAL}?ref=ai-system-hero">AI導入お試し実験を見る</a> <a class="btn" href="${SITE}/contact.php?subject=${encodeURIComponent('AI導入で何ができるかの相談')}">何ができるか相談する</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / AIでできること</nav>
+
 <section><div class="panel">
 <h2>AIでできることとは？</h2>
-<p>AIでできることとは、いま人が時間を使っている作業を、AIと既存のソフトウェアに肩代わりさせることです。多くの業務には、同じ用途で世界中に使われているオープンソースが既にあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。ゼロから作るより早く、月額のユーザー課金もありません。</p>
+<p>AIでできることとは、いま人が時間を使っている作業を、AIと既存のソフトウェアに肩代わりさせることです。具体的には次の4つに分かれます。</p>
+<ul class="checks">
+<li><strong>読む・写す</strong>——紙やPDF、メールの内容を読み取って、システムに入力する</li>
+<li><strong>探す・答える</strong>——社内の資料や過去の回答から、聞かれたことに答える</li>
+<li><strong>流す・記録する</strong>——申請、承認、予約、勤怠、在庫の動きを画面で回して残す</li>
+<li><strong>集める・見せる</strong>——売上、原価、在庫、工数を集計して、判断できる形にする</li>
+</ul>
+<p>この4つはどれも、同じ用途で世界中に使われているオープンソースが既にあります。ゼロから作る必要はありません。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
 </div></section>
+
 <section><div class="panel">
-<h2>どこから見ればよいですか？</h2>
-<p>見方とは、製品名ではなく「やりたいこと」から入ることです。下の分類から近いものを選ぶと、その用途に使えるオープンソースが、ライセンスと日本語対応の実測つきで並びます。どれを選ぶか決められない場合は、初日3時間の無料ヒアリングで現場を見てから提案します。</p>
+<h2>AI導入で解決できる経営課題は？</h2>
+<p>解決できる経営課題とは、原因が「人の時間の使い方」にある課題のことです。下の12は、当社が名古屋の経営者から実際に相談を受ける言い方で並べています。それぞれ、どの用途で手を付けるかまで示しました。</p>
+<div class="grid">${issueCards}</div>
 </div></section>
+
+<section><div class="panel">
+<h2>AI導入は、利益にどうつながるのか？</h2>
+<p>利益につながる道筋とは、作業時間の削減がそのまま利益になるのではなく、次の順番を通って初めて数字が動く、ということです。ここを飛ばすと「効率化したのに利益が変わらない」が起きます。</p>
+<div class="grid">
+<div class="card"><h3>1. 作業時間が減る</h3><p>入力・転記・集計・問い合わせ対応など、人がやっていた定型作業が機械に移ります。ここまでは比較的短期間で起きます。</p></div>
+<div class="card"><h3>2. 空いた時間の行き先を決める</h3><p>ここが分かれ目です。行き先を決めないと、空いた時間は別の雑務で埋まります。当社は最初のヒアリングで「減った時間を何に使うか」を先に決めます。</p></div>
+<div class="card"><h3>3. 人が価値を生む仕事に移る</h3><p>提案、開発、新規の顧客開拓、既存顧客との関係づくり——採用しないと着手できなかった仕事に、いまの人員で手が回るようになります。</p></div>
+<div class="card"><h3>4. 売上と利益が動く</h3><p>同じ人数で扱える量が増え、着手できなかった案件が動きます。原価と在庫が数字で見えることで、値付けと仕入れの判断も変わります。</p></div>
+<div class="card"><h3>5. 待遇に返す</h3><p>増えた利益を給与や労働時間に返すと、採用と定着が変わります。人手不足を採用だけで解こうとしない、という選択肢が持てます。</p></div>
+</div>
+<p class="note">当社は効果を数値で保証しません。業種と業務によって差が大きく、根拠のない数字を掲げないためです。代わりに、初日3時間の無料ヒアリングでどの作業に何時間かかっているかを実際に測り、見込みが立たない場合は「作らないほうがよい」と申し上げます。</p>
+</div></section>
+
+<section><div class="panel">
+<h2>AI導入のメリットとデメリットは？</h2>
+<p>メリットとは、人の時間が空くこと、判断に使える数字が早く出ること、そして知識が人から会社に移ることです。デメリットとは、導入そのものに手間がかかること、間違いを含んだ出力を人が確認しなければならないこと、そして対象を絞らずに始めると効果が出ないことです。当社は後者を隠さずに前提として説明します。</p>
+<div class="table-wrap"><table><thead><tr><th>観点</th><th>メリット</th><th>デメリット・注意点</th></tr></thead><tbody>
+<tr><th>時間</th><td>入力・転記・集計・一次対応が人の手を離れる</td><td>導入初期は、現場の手順を見せてもらう時間が必要になる</td></tr>
+<tr><th>正確さ</th><td>転記ミスや記入漏れが減り、記録が残る</td><td>AIの出力は間違うことがあり、責任のある場面では人の確認が要る</td></tr>
+<tr><th>費用</th><td>ユーザー数に応じた月額課金が発生しない構成にできる</td><td>サーバー費用と、作った後の保守は残る</td></tr>
+<tr><th>知識</th><td>手順と判断の根拠が文書として会社に残り、属人化が解ける</td><td>元の知識が誰の頭にもない場合、まず言語化から始める必要がある</td></tr>
+<tr><th>情報管理</th><td>社内サーバーで動かせば、外部のAIサービスにデータを送らずに済む</td><td>社内で動かす分、機材と運用の準備が要る</td></tr>
+<tr><th>効果</th><td>空いた時間の行き先を決めれば、売上と利益に返る</td><td>対象を絞らず「AIで何かできないか」から始めると効果が出ない</td></tr>
+</tbody></table></div>
+<p class="note">デメリットのうち「間違いを含む出力」は用途の選び方で避けられます。決まった手順を正確に繰り返す処理は、AIを使わず普通のプログラムとして作るのが確実です。</p>
+</div></section>
+
+<section><div class="panel">
+<h2>何から始めればよいですか？</h2>
+<p>始め方とは、対象を1つに絞って、動くものを見ながら作ることです。当社は書類で仕様を固めてから作る進め方をとりません。名古屋市内であれば、1日3時間×5日間の計15時間で、実際に現場で使えるシステムを1つ以上作ります。</p>
+<div class="grid">
+<div class="card"><h3>1日目（無料）</h3><p>現場に伺い、いまのやり方を見せていただきます。どの作業に時間がかかっているかを測り、最初に手を付ける1つを決めます。ここまでで費用は発生しません。</p></div>
+<div class="card"><h3>2〜3日目</h3><p>御社のPCと御社名義のAIエージェントで、目の前で開発します。動くものを見ながらその場で直すので、要件のすれ違いが起きません。</p></div>
+<div class="card"><h3>4日目</h3><p>実際のデータを入れて動かします。ここで初めて分かる不足を直します。簡単なもので早く終われば、2つ目に着手します。</p></div>
+<div class="card"><h3>5日目</h3><p>御社の環境へ構築し、ソースコードと開発ノウハウをお渡しします。以後は自社で改造できます。</p></div>
+</div>
+</div></section>
+
+<section><div class="panel">
+<h2>AIを使わないほうがよい業務は？</h2>
+<p>使わないほうがよい業務とは、決まった手順を正確に繰り返すだけの処理のことです。この種の処理は、普通のプログラムのほうが速く、確実で、安く済みます。また、責任を伴う最終判断——誰と取引するか、いくらで売るか、誰を採用するか——は人が決めることです。当社はAIを入れること自体を目的にしないので、該当する部分は普通のプログラムとして作ります。</p>
+</div></section>
+
+<section><div class="panel">
+<h2>AIでできることを、やりたいことから探す</h2>
+<p>やりたいことから探すとは、製品名ではなく業務の名前で入口を選ぶことです。下の${caps.length}種類から近いものを選ぶと、その用途に使えるオープンソース${total}件が、ライセンスと日本語対応の実測つきで並びます。</p>
 ${sections}
-${ctaBlock(caps[0], 'やりたいこと')}
+</div></section>
+
+${ctaBlock(caps[0], 'AI導入', 'AI導入')}
+
+<section><div class="panel">
+<h2>名古屋でAI導入を相談するには？</h2>
+<p>相談先とは、提案書ではなく動くものを見せられる相手のことです。株式会社エクスブリッジは名古屋市瑞穂区の法人（2004年設立・法人番号4180001056508）で、AIを使った業務システムの開発と、既存のオープンソースを土台にしたカスタマイズを行っています。このページに載せている${total}件は、当社が実際に日本語対応まで調べたうえで掲載しているものです。</p>
+<p>「何ができるか分からない」「どこから手を付けるか決まっていない」という段階での相談が最も多く、その状態を前提にしています。初日3時間のヒアリングと提案は無料です。<a href="${SITE}/contact.php?subject=${encodeURIComponent('AI導入で何ができるかの相談')}">お問い合わせフォーム</a>から受け付けています。</p>
+</div></section>
+
+<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>
 </main>`
   const ld = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    { '@context': 'https://schema.org', '@type': 'Service', name: 'AI導入支援・AI活用支援（名古屋）',
+      description: 'AI導入で何ができるかの整理から、実際に動く業務システムの開発・導入まで。初日3時間の相談は無料。',
+      url: `${BASE}/`, serviceType: 'AI導入支援、AI活用支援、AIシステム開発、業務システム開発',
+      areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'AdministrativeArea', name: '愛知県' }],
+      provider: { '@id': `${SITE}/#organization` },
+      offers: { '@type': 'Offer', priceCurrency: 'JPY', price: '150000', url: TRIAL,
+        description: '初日3時間のヒアリングと提案は無料。計15時間・税別150,000円。名古屋市内限定。' } },
     { '@context': 'https://schema.org', '@type': 'ItemList', name: 'AIでできること', numberOfItems: caps.length,
       itemListElement: caps.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/c/${c.key}/`, name: c.label })) },
     { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url: `${BASE}/`, description: desc,
