@@ -41,6 +41,31 @@ type Project = {
   useCases?: TextItem[] | null; keywords?: TextItem[] | null
 }
 
+/**
+ * 会社の実体情報。exbridge.jp/index.html の Organization と同じ内容を使う
+ * （所在地・法人番号・sameAs を発明しない）。
+ * AI検索側は発信元が誰かを確認できないページを引用しにくいので、全ページに入れる。
+ */
+const ORG = {
+  '@type': 'Organization',
+  '@id': `${SITE}/#organization`,
+  name: '株式会社エクスブリッジ',
+  alternateName: 'EXBRIDGE, Inc.',
+  url: `${SITE}/`,
+  logo: { '@type': 'ImageObject', url: `${SITE}/images/logo.svg` },
+  foundingDate: '2004-04-01',
+  identifier: { '@type': 'PropertyValue', propertyID: '法人番号', value: '4180001056508' },
+  address: { '@type': 'PostalAddress', postalCode: '467-0853', addressRegion: '愛知県',
+    addressLocality: '名古屋市瑞穂区', streetAddress: '内浜町34-9 305', addressCountry: 'JP' },
+  areaServed: [{ '@type': 'AdministrativeArea', name: '愛知県' }, { '@type': 'Country', name: '日本' }],
+  contactPoint: { '@type': 'ContactPoint', contactType: 'business inquiries',
+    url: `${SITE}/contact.php`, availableLanguage: 'Japanese' },
+  sameAs: ['https://x.com/xb_bittensor', 'https://github.com/katsushi2441'],
+}
+const orgLd = () => ({ '@context': 'https://schema.org', ...ORG })
+const TODAY = new Date().toISOString().slice(0, 10)
+const TODAY_JA = TODAY.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1年$2月$3日')
+
 const h = (v: unknown) => String(v ?? '')
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;').replaceAll("'", '&#039;')
@@ -100,7 +125,7 @@ function shell(title: string, desc: string, canonical: string, body: string, ld:
 <meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(desc)}">
 <meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${SITE}/images/ai-development-ogp.png">
 <meta name="twitter:card" content="summary_large_image">
-${ld.map((x) => `<script type="application/ld+json">${json(x)}</script>`).join('\n')}
+${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</script>`).join('\n')}
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA}');</script>
 <script>(function(){var s=document.createElement('script');s.src='${SITE}/simpletrack.php?url='+encodeURIComponent(location.href)+'&ref='+encodeURIComponent(document.referrer);s.async=true;document.head.appendChild(s)})();</script>
@@ -109,7 +134,11 @@ ${styles()}</head><body>
 <nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>
 ${body}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
-<footer><div class="wrap"><p>株式会社エクスブリッジ / 名古屋のAI開発・AI活用支援　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${BASE}/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a></p></div></footer>
+<footer><div class="wrap">
+<p><strong>株式会社エクスブリッジ</strong>（EXBRIDGE, Inc.／法人番号 4180001056508）　愛知県名古屋市瑞穂区内浜町34-9 305　2004年4月設立</p>
+<p><a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${BASE}/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a></p>
+<p class="note">このページの最終更新日: <time datetime="${TODAY}">${TODAY_JA}</time>／文責: 株式会社エクスブリッジ 代表取締役 小嶋 篤</p>
+</div></footer>
 </body></html>`
 }
 
@@ -201,6 +230,9 @@ ${siblings.map((s) => `<tr><th><a href="${BASE}/${attr(s.slug)}/">${h(s.name)}</
       offers: { '@type': 'Offer', priceCurrency: 'JPY', price: '150000', url: TRIAL,
         description: '初日3時間のヒアリングと提案は無料。計15時間・税別150,000円。名古屋市内限定。' } },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'AIでできること', item: `${BASE}/` },
@@ -213,16 +245,36 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
   return shell(title, desc, url, body + faqHtml, ld)
 }
 
-function capabilityPage(cap: Capability, shown: Project[], total: number, related: Capability[], counts: Map<string, number>): string {
+function capabilityPage(cap: Capability, all: Project[], related: Capability[], counts: Map<string, number>): string {
   const url = `${BASE}/c/${cap.key}/`
   const groupLabel = GROUPS.find((g) => g.key === cap.group)?.label || ''
+  const total = all.length
+  const shown = all.slice(0, MAX_LIST)
+  const cut = total > shown.length
   const title = `${cap.label}に使えるオープンソース${total}件｜AIでできること | 株式会社エクスブリッジ`
   const desc = `${cap.question}という課題に使えるオープンソースを${total}件掲載。ライセンスと日本語対応の実測つきで比較でき、名古屋のシステム開発会社が導入まで行います。初日3時間の相談は無料です。`
-  const cut = total > shown.length
+
+  // 実測の内訳。数字は当社が数えたもので、出所を本文に書く。
+  const noJa = all.filter((p) => p.japaneseStatus === '日本語ファイルなし').length
+  const hasJa = all.filter((p) => p.japaneseStatus && p.japaneseStatus !== '日本語ファイルなし' && p.japaneseStatus !== '未調査').length
+  const licenses = new Map<string, number>()
+  for (const p of all) licenses.set(p.license || '不明', (licenses.get(p.license || '不明') || 0) + 1)
+  const topLicense = [...licenses.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3)
+  const starsSorted = all.map((p) => Number(p.stars || 0)).sort((a, b) => a - b)
+  const median = starsSorted.length ? starsSorted[Math.floor(starsSorted.length / 2)] : 0
+  const jaPct = total ? Math.round((noJa / total) * 100) : 0
+
+  const faqs = [
+    { q: `${cap.label}にオープンソースを使うと、何が違うのですか？`, a: `ゼロから作る場合と比べて、出来上がっている土台をそのまま使える分だけ短い期間で導入できます。ユーザー数に応じた月額課金も発生しません。当社が掲載している${total}件は、いずれも公開されているソースコードを自社サーバーに置いて動かせるものです。` },
+    { q: '日本語で使えますか？', a: `掲載${total}件のうち${noJa}件（${jaPct}%）は、GitHubの公開ファイルを数えた時点で日本語のロケールファイルがありませんでした。日本語で使う場合は日本語化から着手します。当社はこの作業を含めて導入します。` },
+    { q: '費用はどのくらいかかりますか？', a: '名古屋市内であれば、1日3時間×5日間の計15時間・税別15万円のお試し導入があります。初日3時間のヒアリングと提案は無料で、進めるとお決めいただいた場合のみ費用が発生します。作るものが決まっている場合は税込110,000円からのプロトタイプ制作もあります。' },
+    { q: 'どれを選べばよいかわからないのですが、相談だけでもよいですか？', a: '構いません。初日3時間のヒアリングは無料です。現場のやり方を見せていただいたうえで、どれを土台にするか、そもそもオープンソースを使わないほうがよいかを含めて提案します。' },
+  ]
+
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">AIでできること / ${h(groupLabel)}</p>
 <h1>${h(cap.label)}</h1>
-<p class="lead">${h(cap.question)}——その課題に使えるオープンソースを${total}件掲載しています。ライセンスと日本語対応を実測して並べました。</p>
+<p class="lead">${h(cap.question)}——その課題に使えるオープンソースを${total}件掲載しています。ライセンスと日本語対応を実測して並べました。名古屋市内なら、計15時間・税別15万円で実際に導入まで試せます。</p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / ${h(cap.label)}</nav>
@@ -231,8 +283,20 @@ function capabilityPage(cap: Capability, shown: Project[], total: number, relate
 <p>${h(cap.label)}とは、${h(cap.question)}という状態を仕組みで解消することです。ゼロから作らなくても、同じ用途で世界中に使われているオープンソースがあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
 </div></section>
 <section><div class="panel">
+<h2>この分類の実測データ</h2>
+<p>実測データとは、掲載している${total}件について当社がGitHubの公開情報から数えた内訳のことです。日本語対応は、配布用のビルド成果物を除いた日本語ロケールの実ファイル数で判定しています。</p>
+<div class="table-wrap"><table><tbody>
+<tr><th>掲載件数</th><td>${total}件</td></tr>
+<tr><th>日本語ロケールなし</th><td>${noJa}件（${jaPct}%）— 日本語化から着手します</td></tr>
+<tr><th>日本語ロケールあり</th><td>${hasJa}件</td></tr>
+<tr><th>GitHubスター中央値</th><td>${median.toLocaleString('en-US')}</td></tr>
+<tr><th>多いライセンス</th><td>${topLicense.map(([n, c]) => `${h(n)}（${c}件）`).join('、') || '不明'}</td></tr>
+</tbody></table></div>
+<p class="note">出所: 各リポジトリのGitHub公開情報を当社で集計（${TODAY_JA}時点）。ライセンスは導入前に必ず個別に確認します。</p>
+</div></section>
+<section><div class="panel">
 <h2>${h(cap.label)}に使えるオープンソース${total}件</h2>
-${cut ? `<p class="note">当てはまりの強い順に${shown.length}件を掲載しています（該当${total}件）。残りは<a href="${BASE}/">AIでできること一覧</a>から他の分類でお探しください。</p>` : ''}
+<p>この一覧とは、${h(cap.label)}という用途に当てはまるオープンソースを、当てはまりの強い順に並べたもののことです。${cut ? `全${total}件のうち上位${shown.length}件を掲載しています。` : ''}名前をクリックすると、その土台で何をどう作るかの説明に移ります。</p>
 <div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th></tr></thead><tbody>
 ${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.japaneseStatus)}</td></tr>`).join('')}
 </tbody></table></div>
@@ -243,13 +307,21 @@ ${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a><
 </div></section>
 ${ctaBlock(cap, cap.label)}
 ${related.length ? `<section><div class="panel"><h2>${h(groupLabel)}の他のできること</h2>
+<p>関連するできることとは、同じ業務領域にあり、並べて検討されることが多いテーマのことです。${h(cap.label)}と一緒に手を付けると効果が出やすい範囲でもあります。</p>
 <div class="cat-grid">${related.map((c) => `<a class="cat-card" href="${BASE}/c/${attr(c.key)}/"><b>${h(c.label)}</b><span>${h(c.question)}（${counts.get(c.key) || 0}件）</span></a>`).join('')}</div>
 <p class="note"><a href="${BASE}/">AIでできること一覧をすべて見る</a></p>
 </div></section>` : ''}
+<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>
 </main>`
   const ld = [
     { '@context': 'https://schema.org', '@type': 'ItemList', name: `${cap.label}に使えるオープンソース`, numberOfItems: total,
       itemListElement: shown.slice(0, 100).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/${p.slug}/`, name: p.name })) },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'AIでできること', item: `${BASE}/` },
@@ -289,6 +361,10 @@ ${ctaBlock(caps[0], 'やりたいこと')}
   const ld = [
     { '@context': 'https://schema.org', '@type': 'ItemList', name: 'AIでできること', numberOfItems: caps.length,
       itemListElement: caps.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/c/${c.key}/`, name: c.label })) },
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url: `${BASE}/`, description: desc,
+      inLanguage: 'ja', dateModified: TODAY,
+      isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'AIでできること', item: `${BASE}/` }] },
@@ -357,8 +433,7 @@ for (const cap of usedCaps) {
   const related = usedCaps.filter((c) => c.group === cap.group && c.key !== cap.key)
   const dir = path.join(distRoot, 'c', cap.key)
   await fs.mkdir(dir, { recursive: true })
-  await fs.writeFile(path.join(dir, 'index.html'),
-    capabilityPage(cap, all.slice(0, MAX_LIST), all.length, related, counts))
+  await fs.writeFile(path.join(dir, 'index.html'), capabilityPage(cap, all, related, counts))
 }
 
 for (const p of projects) {
