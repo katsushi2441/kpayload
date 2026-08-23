@@ -34,7 +34,10 @@ type Repo = {
   created_at?: string
   pushed_at?: string
 }
-type Selected = { repo: Repo; category: string; funnel: 'oss' | 'prototype'; topics: string[] }
+type Selected = { repo: Repo; category: string; funnel: 'oss' | 'prototype'; topics: string[]
+  // select.ts が解決したライセンス。GitHubが判定できなかったもの(NOASSERTION)は
+  // LICENSE本文から判定した名前が入る。licenseNote には利用条件の説明が入る。
+  licenseName?: string; licenseTier?: string; licenseNote?: string | null }
 
 const selected = JSON.parse(await fs.readFile(path.join(harvestDir, 'selected.json'), 'utf8')) as Selected[]
 const existing = JSON.parse(await fs.readFile(path.join(root, 'data', 'oss-catalog.json'), 'utf8')) as Array<{ slug: string; githubUrl?: string | null }>
@@ -190,7 +193,11 @@ async function worker(): Promise<void> {
       kind: generated.kind,
       summary: generated.summary,
       description: generated.description,
-      license: repo.license?.spdx_id || '不明',
+      // NOASSERTION をそのまま出すと画面に「NOASSERTION」と表示される。
+      // select.ts が本文から判定した名前を優先する。
+      license: item.licenseName || repo.license?.spdx_id || '不明',
+      licenseTier: item.licenseTier || 'osi',
+      licenseNote: item.licenseNote || null,
       // 日本語対応は別途 detect-ja で実測する。ここで推測して書かない。
       japaneseStatus: '未調査',
       officialUrl: /^https?:\/\//i.test(homepage) ? homepage : repo.html_url,

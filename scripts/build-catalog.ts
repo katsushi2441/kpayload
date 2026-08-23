@@ -23,6 +23,8 @@ type Enriched = {
   summary: string
   description: string
   license: string
+  licenseTier?: string
+  licenseNote?: string | null
   japaneseStatus: string
   officialUrl: string
   githubUrl: string

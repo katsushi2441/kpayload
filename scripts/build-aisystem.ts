@@ -35,7 +35,8 @@ const GA = 'G-BP0650KDFR'
 type TextItem = { text?: string | null }
 type Project = {
   name: string; slug: string; category: string; summary: string; description: string
-  license: string; japaneseStatus: string; officialUrl: string; githubUrl?: string | null
+  license: string; licenseTier?: string | null; licenseNote?: string | null
+  japaneseStatus: string; officialUrl: string; githubUrl?: string | null
   stars?: number | null; language?: string | null; funnel?: string | null
   jaFileCount?: number | null
   useCases?: TextItem[] | null; keywords?: TextItem[] | null
@@ -198,6 +199,7 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
 <p>${h(jaVerdict(p))}</p>
 <div class="table-wrap"><table><tbody>
 <tr><th>ライセンス</th><td>${h(p.license)}</td></tr>
+${p.licenseNote ? `<tr><th>利用条件</th><td>${h(p.licenseNote)}</td></tr>` : ''}
 ${p.language ? `<tr><th>主な言語</th><td>${h(p.language)}</td></tr>` : ''}
 ${typeof p.stars === 'number' ? `<tr><th>GitHubスター</th><td>${p.stars.toLocaleString('en-US')}</td></tr>` : ''}
 <tr><th>日本語ロケール</th><td>${h(p.japaneseStatus)}${typeof p.jaFileCount === 'number' ? `（${p.jaFileCount}ファイル）` : ''}</td></tr>

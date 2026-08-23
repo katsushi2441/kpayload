@@ -85,6 +85,8 @@ export const OSSProjects: CollectionConfig = {
       ],
     },
     // 手作りの掲載分だけが持つ。GitHubから収集した分は空。
+    { name: 'licenseTier', label: 'ライセンス区分（osi / dual / source-available など）', type: 'text' },
+    { name: 'licenseNote', label: '利用条件の説明（画面に出る）', type: 'textarea' },
     { name: 'sourceLpName', label: '紹介ページ名（画面に出るので社内の呼び名は入れない）', type: 'text' },
     { name: 'stars', label: 'GitHubスター数', type: 'number' },
     { name: 'language', label: '主な言語', type: 'text' },
