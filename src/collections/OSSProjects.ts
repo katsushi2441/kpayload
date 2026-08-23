@@ -85,7 +85,7 @@ export const OSSProjects: CollectionConfig = {
       ],
     },
     // 手作りの掲載分だけが持つ。GitHubから収集した分は空。
-    { name: 'sourceLpName', label: 'media-mesh上の掲載元', type: 'text' },
+    { name: 'sourceLpName', label: '紹介ページ名（画面に出るので社内の呼び名は入れない）', type: 'text' },
     { name: 'stars', label: 'GitHubスター数', type: 'number' },
     { name: 'language', label: '主な言語', type: 'text' },
     // 一覧・カテゴリ・検索の並び順。手で上げたいときはここに数値を入れる。
