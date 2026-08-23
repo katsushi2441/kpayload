@@ -116,6 +116,19 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding:26px 0 44px;colo
 </style>`
 }
 
+/**
+ * Kurage.AI 相談ボタン。
+ * 正典は exbridge_jp/partials/kurage-ai-fab.html。片方だけ直すと見た目がずれるので、
+ * 変えるときは exbridge_jp/scripts/add_kurage_ai_fab.py も合わせて実行する。
+ * ref= は、どのページから相談に来たかを後で見るために付ける。
+ */
+function kurageAiFab(canonical: string): string {
+  const slug = canonical.replace(`${BASE}/`, '').replace(/\/$/, '') || 'index'
+  const ref = `exbridge-ai-system-${slug.replace(/\//g, '-') || 'index'}`
+  return `<a href="${KURAGE}/chat.php?ref=${attr(ref)}" id="kai-fab" aria-label="Kurage.AIに相談"><img src="${KURAGE}/kurage-face-384.webp" alt="Kurage.AI" width="44" height="44"><span class="kai-txt"><b>Kurage.AI に相談</b><i>AIが何でも答えます</i></span></a>
+<style>#kai-fab{position:fixed;right:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#12a99f,#0a726b);color:#fff;text-decoration:none;border-radius:999px;padding:8px 18px 8px 8px;box-shadow:0 12px 30px rgba(10,80,75,.35);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;animation:kaiPulse 2.6s ease-in-out infinite}#kai-fab img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:2px solid rgba(255,255,255,.85);background:#fff;flex:none}#kai-fab .kai-txt{display:flex;flex-direction:column;line-height:1.2}#kai-fab .kai-txt b{font-size:14px;font-weight:900}#kai-fab .kai-txt i{font-size:10.5px;font-style:normal;opacity:.92}#kai-fab:hover{transform:translateY(-2px)}@keyframes kaiPulse{0%,100%{box-shadow:0 12px 30px rgba(10,80,75,.35)}50%{box-shadow:0 14px 44px rgba(18,169,159,.6)}}@media(max-width:520px){#kai-fab .kai-txt i{display:none}#kai-fab{padding:7px 15px 7px 7px}#kai-fab img{width:40px;height:40px}}</style>`
+}
+
 function shell(title: string, desc: string, canonical: string, body: string, ld: unknown[]): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -134,6 +147,7 @@ ${styles()}</head><body>
 <nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>
 ${body}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
+${kurageAiFab(canonical)}
 <footer><div class="wrap">
 <p><strong>株式会社エクスブリッジ</strong>（EXBRIDGE, Inc.／法人番号 4180001056508）　愛知県名古屋市瑞穂区内浜町34-9 305　2004年4月設立</p>
 <p><a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${BASE}/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a></p>
