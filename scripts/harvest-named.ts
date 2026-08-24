@@ -43,6 +43,19 @@ const WANTED: Array<{ repo: string; category: string }> = [
   { repo: 'mautic/mautic', category: 'marketing' },
   { repo: 'vendure-ecommerce/vendure', category: 'commerce' },
   { repo: 'chatwoot/chatwoot', category: 'support' },
+  // 2026-08-25 追加。/saas/ から名指ししているのに収集されていなかったもの。
+  // medusa は enrich が別リポジトリ(medusa-mobile-react-native)を拾っていて、
+  // Shopifyの置き換え候補としては別物だった。
+  { repo: 'medusajs/medusa', category: 'commerce' },
+  { repo: 'orangehrm/orangehrm', category: 'hr' },
+  { repo: 'horilla-opensource/horilla', category: 'hr' },
+  { repo: 'frappe/hrms', category: 'hr' },
+  { repo: 'haiwen/seafile', category: 'storage' },
+  { repo: 'owncloud/ocis', category: 'storage' },
+  { repo: 'zulip/zulip', category: 'groupware' },
+  { repo: 'akaunting/akaunting', category: 'accounting' },
+  { repo: 'invoiceninja/invoiceninja', category: 'accounting' },
+  { repo: 'bigbluebutton/bigbluebutton', category: 'groupware' },
 ]
 
 async function getRepo(full: string) {

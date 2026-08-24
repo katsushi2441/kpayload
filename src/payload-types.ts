@@ -185,6 +185,8 @@ export interface OssProject {
     answer: string;
     id?: string | null;
   }[];
+  licenseTier?: string | null;
+  licenseNote?: string | null;
   sourceLpName?: string | null;
   stars?: number | null;
   language?: string | null;
@@ -339,6 +341,8 @@ export interface OssProjectsSelect<T extends boolean = true> {
         answer?: T;
         id?: T;
       };
+  licenseTier?: T;
+  licenseNote?: T;
   sourceLpName?: T;
   stars?: T;
   language?: T;

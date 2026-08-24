@@ -286,7 +286,7 @@
     ],
     "ossPicks": [
       "seafile",
-      "owncloud",
+      "ocis",
       "nextcloud-deck"
     ]
   },
@@ -303,7 +303,7 @@
     ],
     "ossPicks": [
       "seafile",
-      "owncloud",
+      "ocis",
       "nextcloud-deck"
     ]
   },
@@ -375,7 +375,6 @@
     "ossPicks": [
       "plane",
       "openproject",
-      "taiga",
       "wekan"
     ]
   },

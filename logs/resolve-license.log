@@ -1,0 +1,53 @@
+  50/782 件  {'dual': 1, '判定不能': 4, 'eula': 2, 'osi': 4, 'osi-copyleft': 2, 'osi-network-copyleft': 1, 'source-available': 2}
+  150/782 件  {'dual': 9, '判定不能': 26, 'eula': 4, 'osi': 21, 'osi-copyleft': 8, 'osi-network-copyleft': 8, 'source-available': 7}
+  200/782 件  {'dual': 12, '判定不能': 36, 'eula': 4, 'osi': 31, 'osi-copyleft': 9, 'osi-network-copyleft': 13, 'source-available': 10}
+  250/782 件  {'dual': 14, '判定不能': 50, 'eula': 4, 'osi': 38, 'osi-copyleft': 12, 'osi-network-copyleft': 14, 'source-available': 14}
+  350/782 件  {'dual': 17, '判定不能': 68, 'eula': 5, 'osi': 52, 'osi-copyleft': 19, 'osi-network-copyleft': 18, 'source-available': 22}
+  400/782 件  {'dual': 17, '判定不能': 81, 'eula': 5, 'osi': 56, 'osi-copyleft': 20, 'osi-network-copyleft': 19, 'source-available': 23}
+  650/782 件  {'dual': 17, '判定不能': 131, 'eula': 6, 'osi': 78, 'osi-copyleft': 28, 'osi-network-copyleft': 25, 'source-available': 32}
+判定済み 782 件 → /home/kojima/work/kpayload/data/harvest/licenses.json
+    540  判定不能
+     99  osi
+     41  source-available
+     35  osi-network-copyleft
+     34  osi-copyleft
+     26  dual
+      7  eula
+判定済み 782 件 → /home/kojima/work/kpayload/data/harvest/licenses.json
+    540  判定不能
+     99  osi
+     41  source-available
+     35  osi-network-copyleft
+     34  osi-copyleft
+     26  dual
+      7  eula
+  200/782 件  {'dual': 2, 'content': 5, '判定不能': 27, 'source-available': 1, 'osi': 2, 'osi-copyleft': 4}
+判定済み 782 件 → /home/kojima/work/kpayload/data/harvest/licenses.json
+    491  判定不能
+    106  osi
+     44  osi-copyleft
+     42  source-available
+     35  osi-network-copyleft
+     29  content
+     28  dual
+      7  eula
+  150/1052 件  {'判定不能': 3, 'dual': 2, 'osi': 8, 'source-available': 1, 'osi-copyleft': 3, 'osi-network-copyleft': 1, 'content': 2}
+  900/1052 件  {'判定不能': 39, 'dual': 4, 'osi': 36, 'source-available': 7, 'osi-copyleft': 9, 'osi-network-copyleft': 7, 'content': 10, 'eula': 11}
+判定済み 1052 件 → /home/kojima/work/kpayload/data/harvest/licenses.json
+    668  判定不能
+    147  osi
+     55  osi-copyleft
+     50  source-available
+     42  osi-network-copyleft
+     39  content
+     32  dual
+     19  eula
+判定済み 1053 件 → /home/kojima/work/kpayload/data/harvest/licenses.json
+    668  判定不能
+    147  osi
+     55  osi-copyleft
+     50  source-available
+     42  osi-network-copyleft
+     39  content
+     33  dual
+     19  eula

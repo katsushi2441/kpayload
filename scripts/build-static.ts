@@ -347,7 +347,9 @@ const result = await payload.find({ collection: 'oss-projects', limit: 0, pagina
 const projects = result.docs as unknown as Project[]
 
 if (!projects.length) throw new Error('No OSS records found. Run npm run seed first.')
-await fs.rm(path.join(root, 'dist'), { recursive: true, force: true })
+// 自分の出力先だけを消す。dist/ ごと消すと、先に生成した dist/saas や
+// dist/ai-system まで巻き添えで消える（2026-08-25にそれで /saas/ が0件になった）。
+await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 await fs.writeFile(path.join(distRoot, 'index.html'), indexPage(projects))
 

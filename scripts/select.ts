@@ -34,7 +34,9 @@ type Bucket = { topic: string; category: string; funnel: 'oss' | 'prototype'; it
 
 // 学習用・一覧系。ソフトウェアではないので納品対象にならない。
 const NAME_BLOCK = /(^|[-_/])(awesome|awesome-list|cheatsheet|cheat-sheet|roadmap|tutorials?|examples?|samples?|demos?|boilerplate|starter|scaffold|template|templates|books?|course|courses|handbook|guide|guides|learning|learn|curriculum|interview|resources|collection|list|links|papers|notes|docs|documentation|spec|specs|rfc)([-_/]|$)/i
-const DESC_BLOCK = /(awesome list|curated list|a list of|collection of (links|resources|papers)|learning resources|study (notes|guide)|interview questions|cheat ?sheet|road ?map|book about|free books)/i
+// 「roadmap」単体では落とさない。製品の機能名として書かれることが多く、
+// OpenProject の "roadmaps, Gantt charts" で誤爆して落ちていた（2026-08-25）。
+const DESC_BLOCK = /(awesome list|curated list|a list of|collection of (links|resources|papers)|learning resources|study (notes|guide)|interview questions|cheat ?sheet|(developer|learning|study|beginner|career)s? road ?map|road ?map to (learn|become|master)|book about|free books)/i
 
 // ライブラリ・部品。単体で業務に使えないので、どちらの出口にも乗らない。
 const LIB_TOPICS = new Set([

@@ -152,9 +152,16 @@ async function generate(repo: Repo): Promise<Generated | null> {
 await fs.mkdir(enrichedDir, { recursive: true })
 
 const limit = Number(process.argv[2] || '0')
+// 特定のリポジトリだけを先に生成したいときに使う。
+// 全件は1件90秒かかるので、SaaSの入口から名指しで要るものを後から足すのに要る
+// （2026-08-24に全件走行が2080/3189で止まり、planka等が欠けたまま公開された）。
+//   ENRICH_ONLY=planka,openproject npx tsx scripts/enrich.ts
+const only = (process.env.ENRICH_ONLY || '').split(',').map((x) => x.trim().toLowerCase()).filter(Boolean)
 const queue = selected
   .filter((item) => !existingRepos.has(item.repo.html_url.toLowerCase().replace(/\/+$/, '')))
+  .filter((item) => !only.length || only.some((k) => item.repo.full_name.toLowerCase().includes(k)))
   .slice(0, limit > 0 ? limit : undefined)
+if (only.length) console.log(`ENRICH_ONLY: ${only.join(', ')} → ${queue.length}件`)
 
 let done = 0
 let made = 0
