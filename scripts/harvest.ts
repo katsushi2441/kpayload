@@ -23,6 +23,24 @@ type TopicSpec = { topic: string; category: string; funnel: Funnel }
 
 // 業務アプリ = 完成品を改造して納品できるもの。カテゴリはkpayloadのselect値に揃える。
 const BUSINESS_TOPICS: TopicSpec[] = [
+  // 2026-08-24 追加: SaaS入口(/saas/)から推薦したいOSSが、こちらの巡回トピックと
+  // GitHub側のトピック名が違うために1件も取れていなかった。
+  // 例) nextcloud は groupware ではなく collaboration / file-sharing を付けている。
+  { topic: 'collaboration', category: 'groupware', funnel: 'oss' },
+  { topic: 'file-sharing', category: 'dms', funnel: 'oss' },
+  { topic: 'cloud-storage', category: 'dms', funnel: 'oss' },
+  { topic: 'chat', category: 'groupware', funnel: 'oss' },
+  { topic: 'team-chat', category: 'groupware', funnel: 'oss' },
+  { topic: 'video-conferencing', category: 'groupware', funnel: 'oss' },
+  { topic: 'videoconference', category: 'groupware', funnel: 'oss' },
+  { topic: 'appointment-scheduling', category: 'booking', funnel: 'oss' },
+  { topic: 'calendar', category: 'booking', funnel: 'oss' },
+  { topic: 'hr', category: 'hr', funnel: 'oss' },
+  { topic: 'hrms', category: 'hr', funnel: 'oss' },
+  { topic: 'attendance', category: 'hr', funnel: 'oss' },
+  { topic: 'payroll', category: 'hr', funnel: 'oss' },
+  { topic: 'invoice', category: 'accounting', funnel: 'oss' },
+  { topic: 'expenses', category: 'accounting', funnel: 'oss' },
   { topic: 'crm', category: 'crm', funnel: 'oss' },
   { topic: 'erp', category: 'accounting', funnel: 'oss' },
   { topic: 'cms', category: 'cms', funnel: 'oss' },

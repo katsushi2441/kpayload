@@ -39,6 +39,10 @@ OUT = POOL / "licenses.json"
 # 上から順に当て、最初に一致したものを採る。独自ライセンスを先に置く
 # （多くが「Apache 2.0 をベースに制限を足した」形で、後ろの語も混ざるため）。
 RULES = [
+    ("提供元独自の商用ライセンス", "eula",
+     r"do not use the same license on more than one project"
+     r"|each licensed copy of the software"
+     r"|per-?site license|requires a paid license"),
     ("Sustainable Use License", "source-available",
      r"sustainable use license"),
     ("Business Source License", "source-available",
@@ -73,6 +77,19 @@ RULES = [
      r"permission is hereby granted, free of charge"),
     ("BSD", "osi",
      r"redistribution and use in source and binary forms"),
+    ("OSL-3.0", "osi-copyleft", r"open software license"),
+    ("AFL-3.0", "osi", r"academic free license"),
+    ("EPL", "osi-copyleft", r"eclipse public license"),
+    ("CDDL", "osi-copyleft", r"common development and distribution license"),
+    ("Artistic", "osi", r"the artistic license"),
+    ("ISC", "osi", r"permission to use, copy, modify, and/or distribute this software"),
+    ("Zlib", "osi", r"this software is provided ['‘]as-is['’]"),
+    ("Unlicense", "osi", r"this is free and unencumbered software released into the public domain"),
+    ("CC0", "osi", r"creative commons zero|cc0 1\.0 universal"),
+    ("CC BY-SA", "content", r"creative commons attribution"),
+    # 提供元が独自に名付けたもの。OSI承認ではないので source-available 扱い。
+    ("提供元独自のコミュニティライセンス", "source-available",
+     r"community license|community edition license|open core license"),
 ]
 
 NOTE = {
@@ -82,6 +99,7 @@ NOTE = {
     "source-available": "ソースは公開されていますが、OSI承認のオープンソースではありません。自社の業務のための利用と、その環境への構築・カスタマイズはできますが、第三者へのホスティング提供や再販はできません。",
     "dual": "本体はオープンソースですが、一部の機能やファイルが別ライセンス（多くは有償の企業向け機能）です。どこまで無償で使えるかは、導入前に対象機能ごとに確認します。",
     "eula": "提供元との個別の利用許諾契約に基づく製品です。OSI承認のオープンソースではありません。利用条件は提供元にご確認ください。",
+    "content": "文書・教材向けのライセンスです（ソフトウェア用ではありません）。",
 }
 
 
@@ -112,7 +130,11 @@ DUAL_RX = re.compile(
     r"|covered by one of two licenses"
     r"|unless the header or package license file specifies"
     r"|licensed under a modified version of"
-    r"|with the following additional condition",
+    r"|with the following additional condition"
+    r"|see the licen[cs]e[^\n]{0,30}in each"
+    r"|is licensed under [^\n]{0,40} and [^\n]{0,40} are licensed under"
+    r"|multi-licensed"
+    r"|the license that applies depends on",
     re.I | re.S)
 
 # 会社との個別契約書がそのままLICENSEに置かれている形。OSSではない。
@@ -137,6 +159,7 @@ def classify(text: str):
 
 
 def main() -> None:
+    redo = "--redo-unresolved" in sys.argv
     limit = 0
     if "--limit" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--limit") + 1])
@@ -168,7 +191,7 @@ def main() -> None:
     stats = {}
     for i, repo in enumerate(targets, 1):
         name = repo["full_name"]
-        if name in done:
+        if name in done and not (redo and not done[name].get("tier")):
             continue
         try:
             info = get(f"https://api.github.com/repos/{name}/license", tok)
