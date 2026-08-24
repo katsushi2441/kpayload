@@ -82,7 +82,7 @@ function ossFor(s: Saas): { list: Project[]; named: number } {
   // 名指しが2件以上あるなら、カテゴリ補完はしない。
   // 正しいものが並んでいるところに1件でも的外れが混ざると、全部の信用が落ちる。
   const named = picked.length
-  if (named >= 2) return { list: picked.slice(0, 6), named }
+  if (named >= 2) return { list: picked.slice(0, 8), named }
 
   // 数合わせをしない。カテゴリ補完は3件までで打ち切る。
   // 6件に揃えようとすると、Slackの代わりにお絵かきツール、Boxの代わりに
@@ -126,6 +126,24 @@ function licenseVerdict(p: Project): string {
     case 'dual': return '一部の機能が別ライセンス'
     default: return '—'
   }
+}
+
+/**
+ * 比較表のいちばん右。触れるデモと、買い切りで買える先を出す。
+ * 自社製品(kappstore掲載)は lpUrl に商品ページが入っている。
+ */
+function cell(p: Project, saasSlug: string): string {
+  const links: string[] = []
+  if (DEMOS[p.slug]) {
+    links.push(`<a href="${demoUrl(p.slug, `saas-${saasSlug}`)}" target="_blank" rel="noopener">触れる</a>`)
+  } else if (p.demoUrl) {
+    links.push(`<a href="${attr(p.demoUrl)}?ref=saas-${attr(saasSlug)}" target="_blank" rel="noopener">触れる</a>`)
+  }
+  const buy = p.buyUrl || (p.lpUrl && p.lpUrl.includes('kappstore') ? p.lpUrl : '')
+  if (buy) {
+    links.push(`<a href="${attr(buy)}${buy.includes('?') ? '&' : '?'}ref=saas-${attr(saasSlug)}" target="_blank" rel="noopener">買い切り</a>`)
+  }
+  return links.join(' / ') || '—'
 }
 
 /**
@@ -206,8 +224,8 @@ ${relatedNews('saas', s.slug)}
 <p>${named >= 2
   ? `以下は、${h(s.name)}が扱う業務と同じ用途に使えるオープンソースです。当社がGitHubの公開情報からライセンスと日本語対応を実測して並べています。名前をクリックすると、そのソフトで何をどう作るかの説明に移ります。`
   : `${h(s.name)}をそのまま置き換えられる定番は、現在調査中です。以下は近い分野で使われているもので、そのままの置き換えにはなりません。<strong>実際に何を土台にするかは、業務内容を伺ってから提案します</strong>。無理に当てはめて提案することはしません。`}</p>
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>受託での構築・納品</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
-${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license)}</td><td>${h(licenseVerdict(p))}</td><td>${h(p.japaneseStatus)}</td><td>${DEMOS[p.slug] ? `<a href="${demoUrl(p.slug, `saas-${s.slug}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>受託での構築・納品</th><th>日本語</th><th>デモ・購入</th></tr></thead><tbody>
+${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license)}</td><td>${h(licenseVerdict(p))}</td><td>${h(p.japaneseStatus)}</td><td>${cell(p, s.slug)}</td></tr>`).join('')}
 </tbody></table></div>
 <p class="note">並びはライセンスの自由度が高い順です。「制限なし」のものは、当社が改変して納品することに制約がありません。「再販不可」のものは御社が自社の業務で使う分には問題ありませんが、第三者へのホスティング提供はできません。日本語欄が「日本語ファイルなし」であれば、日本語化から着手します。</p>
 ${s.note ? `<div class="card" style="margin-top:14px"><h3>${h(s.name)}を置き換えるときの注意</h3><p>${h(s.note)}</p></div>` : ''}

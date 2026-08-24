@@ -855,7 +855,9 @@
       }
     ],
     "sourceLpName": "サイボウズ・kintoneが無くてもグループウェアは持てる",
-    "funnel": "oss"
+    "funnel": "oss",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+    "demoUrl": "https://proto.exbridge.jp/kvgwc/"
   },
   {
     "name": "OpenKB",
@@ -1376,7 +1378,8 @@
         "answer": "公開先URL、ログイン方式、端末権限、ストア配布の有無を確認します。"
       }
     ],
-    "funnel": "oss"
+    "funnel": "oss",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=e8d0518e44c29a60"
   },
   {
     "name": "Kurage Finanalyst",
@@ -2187,6 +2190,1239 @@
       {
         "question": "Kurage URL2AI Publisherの導入前に何を確認すべきですか？",
         "answer": "各媒体の認証、投稿上限、失敗時の再実行、重複投稿防止を確認します。"
+      }
+    ],
+    "funnel": "oss"
+  },
+  {
+    "name": "Kurage AI Meishi Analysis",
+    "slug": "kaima",
+    "category": "crm",
+    "featured": false,
+    "summary": "スマホで名刺を撮るとAIが12項目を読み取って下書きし、人が承認した分だけ台帳へ入る名刺管理システムです。",
+    "description": "名刺をスマホで撮って投げると、AIが会社・氏名・部署・役職・電話・メール・住所など12項目を読み取り、下書きとして登録します。台帳に書き込めるのは人が承認したときだけで、AIは下書きの作成しかできません。氏名と会社の表記ゆれを吸収する名寄せ、役職が変わったときの変遷履歴、「誰がいつどこで交換したか」の接点記録を持ちます。PHPとSQLiteの1ファイル構成で、共有レンタルサーバーで動きます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kaima",
+    "githubUrl": "https://github.com/katsushi2441/kaima",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-19T05:44:47Z",
+    "githubPushedAt": "2026-08-19T06:02:05Z",
+    "useCases": [
+      {
+        "text": "名刺をスマホで撮って台帳にする"
+      },
+      {
+        "text": "名寄せして同一人物をまとめる"
+      },
+      {
+        "text": "役職の変遷を履歴で追う"
+      },
+      {
+        "text": "この会社を誰が知っているかを調べる"
+      },
+      {
+        "text": "名刺情報をCSVで書き出す"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "名刺管理 買い切り"
+      },
+      {
+        "text": "Sansan 代替"
+      },
+      {
+        "text": "名刺 OCR 自社サーバー"
+      },
+      {
+        "text": "名刺管理 OSS"
+      },
+      {
+        "text": "AI 名刺 読み取り"
+      },
+      {
+        "text": "名刺 台帳 PHP"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "AIが台帳を直接書き換えることはありますか？",
+        "answer": "ありません。AIができるのは下書きの作成までで、台帳への反映は人が承認したときだけです。ソース内の宣言表が全ての入口を裁いています。"
+      },
+      {
+        "question": "読み取りの間違いはどう防いでいますか？",
+        "answer": "AIに自己採点させず、プログラムが機械的に検証します。メールアドレスは形式に加えてドメインのDNS実在確認まで行い、それらしい誤読を警告します。"
+      },
+      {
+        "question": "名刺画像はどこに置かれますか？",
+        "answer": "自社のサーバー内です。個人情報として扱い、ログイン済みのセッションにだけ配信します。外部のサービスへ送りません。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+    "sourceLpName": "AI名刺解析・名刺台帳（Kurage AI Meishi Analysis）",
+    "demoUrl": "https://proto.exbridge.jp/kaima/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580"
+  },
+  {
+    "name": "Kurage Memo",
+    "slug": "kmemo",
+    "category": "knowledge",
+    "featured": false,
+    "summary": "本文の1行目がそのままタイトルになる、1ファイルPHPのメモ帳です。",
+    "description": "タイトル欄も保存ボタンもありません。書いた1行目がタイトルになり、入力した端から自動保存します。上の検索欄に打つと全メモを即座に絞り込みます。設定ファイルに1行足すだけで利用者を増やせ、メモの保存先は利用者ごとに完全に別ファイルになります。データベースは不要で、FTPでファイルを置くだけで動きます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kmemo",
+    "githubUrl": "https://github.com/katsushi2441/kmemo",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-24T20:02:16Z",
+    "githubPushedAt": "2026-08-24T20:02:20Z",
+    "useCases": [
+      {
+        "text": "個人用のメモをレンタルサーバーに置く"
+      },
+      {
+        "text": "家族や社内で1台を共用する"
+      },
+      {
+        "text": "全文検索でメモを探す"
+      },
+      {
+        "text": "バックアップZIPで手元に控える"
+      },
+      {
+        "text": "スマホのブラウザから書く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Simplenote 代替"
+      },
+      {
+        "text": "メモ 自社サーバー"
+      },
+      {
+        "text": "1ファイル PHP メモ"
+      },
+      {
+        "text": "メモ 買い切り"
+      },
+      {
+        "text": "メモアプリ OSS"
+      },
+      {
+        "text": "ノート セルフホスト"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "データベースは必要ですか？",
+        "answer": "不要です。JSONファイルとflockで保存します。PHPが動くレンタルサーバーにファイルを置くだけで動きます。"
+      },
+      {
+        "question": "複数人で使えますか？",
+        "answer": "使えます。設定ファイルに利用者を足すと、保存先がその人専用のファイルに分かれます。他人のメモが混ざる経路が構造的にありません。"
+      },
+      {
+        "question": "バックアップはどうしますか？",
+        "answer": "画面からZIPで書き出せます。中にJSONとCSVと復元手順が入っているので、他のツールへ移すこともできます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
+    "sourceLpName": "シンプルメモ（Kurage Memo）",
+    "demoUrl": "https://proto.exbridge.jp/kmemo/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c"
+  },
+  {
+    "name": "Kurage Kintai",
+    "slug": "kkintai",
+    "category": "hr",
+    "featured": false,
+    "summary": "タブレット1台を顔認証タイムレコーダーにする、丸めない台帳の勤怠システムです。",
+    "description": "タブレットのカメラに顔を向けると出退勤が記録されます。顔の照合はサーバー側で行い、打刻の時刻は丸めずそのまま台帳に残します。同意の取得と削除の導線を最初から持ち、給与ソフトへ渡すCSVも出力できます。PHPとSQLiteで動き、専用の打刻機を買わずに始められます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kkintai",
+    "githubUrl": "https://github.com/katsushi2441/kkintai",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-19T18:23:51Z",
+    "githubPushedAt": "2026-08-19T18:24:03Z",
+    "useCases": [
+      {
+        "text": "タブレット1台で出退勤を記録する"
+      },
+      {
+        "text": "打刻を丸めずに台帳へ残す"
+      },
+      {
+        "text": "給与ソフト向けのCSVを出す"
+      },
+      {
+        "text": "顔データの同意と削除を管理する"
+      },
+      {
+        "text": "工場や店舗のようにPCが無い現場で使う"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "勤怠管理 買い切り"
+      },
+      {
+        "text": "顔認証 打刻"
+      },
+      {
+        "text": "KING OF TIME 代替"
+      },
+      {
+        "text": "勤怠 OSS 自社サーバー"
+      },
+      {
+        "text": "タイムカード 電子化"
+      },
+      {
+        "text": "勤怠 PHP"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "顔のデータはどこで照合しますか？",
+        "answer": "サーバー側です。端末に顔データを残さない設計で、同意の取得と削除の導線を持っています。"
+      },
+      {
+        "question": "打刻の時刻は丸められますか？",
+        "answer": "丸めません。実際に打刻された時刻をそのまま台帳に残します。丸めが必要な場合は集計側で行います。"
+      },
+      {
+        "question": "専用の打刻機が必要ですか？",
+        "answer": "不要です。カメラのあるタブレットかPCのブラウザで動きます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
+    "sourceLpName": "顔打刻つき勤怠システム（Kurage Kintai）",
+    "demoUrl": "https://proto.exbridge.jp/kkintai/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be"
+  },
+  {
+    "name": "Kurage HR Post",
+    "slug": "khrpost",
+    "category": "hr",
+    "featured": false,
+    "summary": "人ではなく職に記録を紐づけて、業務の属人化を止める職務・目標・引継ぎ管理システムです。",
+    "description": "職務や目標を「人」ではなく「職（ポジション）」に紐づけて記録します。担当者が変わっても、その職に付いていた職責・目標・手順がそのまま残るため、引き継ぎのたびに知識が失われることがなくなります。社員のマスタは外部のJSONを読むだけなので、既存の人事システムと二重管理になりません。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/khrpost",
+    "githubUrl": "https://github.com/katsushi2441/khrpost",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-20T22:24:46Z",
+    "githubPushedAt": "2026-08-20T22:24:49Z",
+    "useCases": [
+      {
+        "text": "職務と職責を職ごとに定義する"
+      },
+      {
+        "text": "目標とタスクを職に紐づける"
+      },
+      {
+        "text": "担当者が変わっても手順を残す"
+      },
+      {
+        "text": "引き継ぎの抜けを防ぐ"
+      },
+      {
+        "text": "既存の社員マスタをそのまま使う"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "引き継ぎ 属人化"
+      },
+      {
+        "text": "職務記述書 管理"
+      },
+      {
+        "text": "目標管理 買い切り"
+      },
+      {
+        "text": "人事 OSS 自社サーバー"
+      },
+      {
+        "text": "業務 標準化 ツール"
+      },
+      {
+        "text": "ポジション管理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "社員のマスタを二重に持つことになりませんか？",
+        "answer": "なりません。外部のJSONを読むだけの設計なので、既存の人事システムやCSVをそのまま参照できます。"
+      },
+      {
+        "question": "担当者が退職したら記録はどうなりますか？",
+        "answer": "職に紐づいているので残ります。次の担当者はその職の記録をそのまま引き継げます。"
+      },
+      {
+        "question": "評価制度に使えますか？",
+        "answer": "目標とタスクの記録はできますが、評価の点数付けや査定の仕組みは持っていません。必要なら追加で作ります。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
+    "sourceLpName": "職務・目標・引継ぎ管理（Kurage HR Post）",
+    "demoUrl": "https://proto.exbridge.jp/khrpost/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457"
+  },
+  {
+    "name": "Kurage CRM Agent",
+    "slug": "kcrmagent",
+    "category": "crm",
+    "featured": false,
+    "summary": "日報を投げるとAIが顧客記録の下書きを作り、人が承認した分だけ台帳に入るCRMです。",
+    "description": "営業担当者が日報や商談メモを文章のまま投げると、AIが顧客・案件・次のアクションの下書きを作ります。台帳に反映されるのは人が承認したものだけで、AIは宣言した範囲の外には出られません。入力の手間をゼロに近づけながら、記録の正しさは人が担保する設計です。PHPの1ファイル構成で動きます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kcrmagent",
+    "githubUrl": "https://github.com/katsushi2441/kcrmagent",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-19T02:00:15Z",
+    "githubPushedAt": "2026-08-19T02:36:01Z",
+    "useCases": [
+      {
+        "text": "日報から顧客記録を起こす"
+      },
+      {
+        "text": "商談の内容を台帳に残す"
+      },
+      {
+        "text": "次のアクションを取りこぼさない"
+      },
+      {
+        "text": "入力の手間を減らす"
+      },
+      {
+        "text": "承認の記録を監査ログに残す"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CRM 買い切り"
+      },
+      {
+        "text": "営業日報 自動化"
+      },
+      {
+        "text": "顧客管理 AI"
+      },
+      {
+        "text": "SFA OSS"
+      },
+      {
+        "text": "入力レス CRM"
+      },
+      {
+        "text": "顧客管理 PHP"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "AIが勝手に顧客データを書き換えませんか？",
+        "answer": "書き換えません。AIは下書きの作成までで、台帳への反映は人の承認が必要です。宣言した範囲の外には出られない作りになっています。"
+      },
+      {
+        "question": "どんな文章を投げればいいですか？",
+        "answer": "普段書いている日報や商談メモのままで構いません。形式を決める必要はありません。"
+      },
+      {
+        "question": "既存のCRMから移行できますか？",
+        "answer": "CSVで取り込めます。項目の対応づけは導入時に調整します。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+    "sourceLpName": "入力ゼロCRM（Kurage CRM Agent）",
+    "demoUrl": "https://proto.exbridge.jp/kcrmagent/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f"
+  },
+  {
+    "name": "Kurage DB Agent",
+    "slug": "kdbagent",
+    "category": "database",
+    "featured": false,
+    "summary": "設定で宣言した表・列・操作だけを、人にもAIエージェントにも同じ制限で許すDB管理ツールです。",
+    "description": "MySQLとSQLiteに対応した1ファイルのデータベース管理ツールです。設定ファイルで「触ってよい表・列・操作」を宣言し、画面から操作する人も、CLIも、HTTP APIも、AIエージェントも、同じ制限を通ります。範囲を決めてから渡せるので、本番のデータベースに直接つなぐ不安を減らせます。Claude Code連携用のスキルを同梱しています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kdbagent",
+    "githubUrl": "https://github.com/katsushi2441/kdbagent",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-09T08:15:12Z",
+    "githubPushedAt": "2026-08-09T09:09:05Z",
+    "useCases": [
+      {
+        "text": "本番DBを範囲を決めて触らせる"
+      },
+      {
+        "text": "AIエージェントに安全にDBを渡す"
+      },
+      {
+        "text": "CLIとHTTP APIから同じ制限で操作する"
+      },
+      {
+        "text": "phpMyAdminの代わりに使う"
+      },
+      {
+        "text": "操作の記録を残す"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "phpMyAdmin 代替"
+      },
+      {
+        "text": "DB管理 買い切り"
+      },
+      {
+        "text": "MySQL 管理ツール"
+      },
+      {
+        "text": "AI エージェント DB"
+      },
+      {
+        "text": "データベース 権限 制限"
+      },
+      {
+        "text": "SQLite 管理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "phpMyAdminと何が違いますか？",
+        "answer": "範囲を先に宣言する点です。設定で許した表・列・操作しか通らないので、想定外の操作が構造的にできません。"
+      },
+      {
+        "question": "AIエージェントに使わせても安全ですか？",
+        "answer": "人が使う場合と同じ制限を通ります。宣言した範囲の外は、人でもAIでも実行できません。"
+      },
+      {
+        "question": "どのデータベースに対応していますか？",
+        "answer": "MySQLとSQLiteです。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
+    "sourceLpName": "データベース管理ツール（kdbagent）",
+    "demoUrl": "https://proto.exbridge.jp/kdbagent/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793"
+  },
+  {
+    "name": "Kurage Light ChatBot",
+    "slug": "klchatbot",
+    "category": "support",
+    "featured": false,
+    "summary": "自社の知識を読ませてFAQ・AI接客・社内向けの質問対応に使える1ファイルPHPのチャットボットです。",
+    "description": "自社の文書やFAQを読み込ませ、その範囲で答えるチャットボットです。知識は決まった順序で読み込む設計にしてあり、LLMのキャッシュが効くため応答が速く費用も抑えられます。Webサイトの接客、社内の問い合わせ対応、製品のFAQなどに使えます。PHPの1ファイルで動き、データベースは不要です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/klchatbot",
+    "githubUrl": "https://github.com/katsushi2441/klchatbot",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-15T19:54:52Z",
+    "githubPushedAt": "2026-08-15T19:54:55Z",
+    "useCases": [
+      {
+        "text": "Webサイトに接客チャットを置く"
+      },
+      {
+        "text": "社内の問い合わせに答えさせる"
+      },
+      {
+        "text": "製品FAQを自動応答にする"
+      },
+      {
+        "text": "資料を読ませて社内ChatGPTにする"
+      },
+      {
+        "text": "一次対応だけ自動化する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャットボット 買い切り"
+      },
+      {
+        "text": "社内 ChatGPT"
+      },
+      {
+        "text": "FAQ 自動応答"
+      },
+      {
+        "text": "AI接客 導入"
+      },
+      {
+        "text": "チャットボット PHP"
+      },
+      {
+        "text": "問い合わせ 自動化"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "知識はどうやって読ませますか？",
+        "answer": "テキストやMarkdownのファイルを置くだけです。決まった順序で読み込むので、LLMのキャッシュが効いて応答が速くなります。"
+      },
+      {
+        "question": "どのAIを使いますか？",
+        "answer": "設定で切り替えられます。ローカルのモデルでも、外部のAPIでも動きます。"
+      },
+      {
+        "question": "知識にないことを聞かれたらどうなりますか？",
+        "answer": "分からないと答えるよう設定できます。作り話をさせない運用が前提です。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
+    "sourceLpName": "AIチャットボット（Kurage Light ChatBot）",
+    "demoUrl": "https://proto.exbridge.jp/klchatbot/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8"
+  },
+  {
+    "name": "Kurage BBS",
+    "slug": "kbbs",
+    "category": "forum",
+    "featured": false,
+    "summary": "X認証と自社ドメインのメール確認で、宣伝を許しつつ荒れない1ファイルPHP掲示板です。",
+    "description": "書き込みにXでの認証と、投稿するURLと同じドメインのメールアドレス確認を求めます。この2つで、なりすましと使い捨てアカウントによる荒らしを防ぎながら、宣伝の投稿を許容できます。管理画面には投稿者のXアカウント・URL・メールが並ぶので、そのまま営業リストとして使えます。データベースは不要です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kbbs",
+    "githubUrl": "https://github.com/katsushi2441/kbbs",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-12T12:48:22Z",
+    "githubPushedAt": "2026-08-13T12:10:24Z",
+    "useCases": [
+      {
+        "text": "宣伝を許す掲示板を運営する"
+      },
+      {
+        "text": "なりすましを防ぐ"
+      },
+      {
+        "text": "投稿者の一覧を営業リストにする"
+      },
+      {
+        "text": "コミュニティの窓口を作る"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "掲示板 設置 無料"
+      },
+      {
+        "text": "宣伝OK 掲示板"
+      },
+      {
+        "text": "X認証 掲示板"
+      },
+      {
+        "text": "掲示板 PHP DB不要"
+      },
+      {
+        "text": "コミュニティ 自社サーバー"
+      },
+      {
+        "text": "掲示板 買い切り"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "なぜX認証とメール確認の両方が要るのですか？",
+        "answer": "片方だけでは使い捨てアカウントで荒らせるためです。投稿するURLと同じドメインのメールを確認することで、実在の運営者だけが宣伝できます。"
+      },
+      {
+        "question": "データベースは必要ですか？",
+        "answer": "不要です。ファイルで保存します。"
+      },
+      {
+        "question": "管理画面で何ができますか？",
+        "answer": "投稿の削除に加えて、投稿者のXアカウント・URL・メールの一覧を見られます。営業先の一覧としても使えます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05",
+    "sourceLpName": "宣伝OK掲示板（kbbs）",
+    "demoUrl": "https://kurage.exbridge.jp/kbbs.php",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05"
+  },
+  {
+    "name": "Kurage CalDAV",
+    "slug": "kcaldav",
+    "category": "groupware",
+    "featured": false,
+    "summary": "フレームワークを使わない1ファイルのCalDAVサーバーです。スマホの標準カレンダーと同期できます。",
+    "description": "CalDAVの仕様を1ファイルのPHPで実装したカレンダーサーバーです。ThunderbirdやiPhone、Androidの標準カレンダーアプリからそのまま同期できます。Baikalのような既存のCalDAVサーバーより設置が軽く、共有レンタルサーバーでも動きます。予定を他社のクラウドに預けたくない場合の選択肢になります。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kcaldav",
+    "githubUrl": "https://github.com/katsushi2441/kcaldav",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-09T20:51:04Z",
+    "githubPushedAt": "2026-08-21T02:21:27Z",
+    "useCases": [
+      {
+        "text": "予定を自社サーバーに置く"
+      },
+      {
+        "text": "iPhoneやAndroidの標準カレンダーと同期する"
+      },
+      {
+        "text": "Thunderbirdと同期する"
+      },
+      {
+        "text": "家族や社内で予定を共有する"
+      },
+      {
+        "text": "Googleカレンダーをやめる"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CalDAV サーバー 構築"
+      },
+      {
+        "text": "カレンダー 自社サーバー"
+      },
+      {
+        "text": "Googleカレンダー 代替"
+      },
+      {
+        "text": "Baikal 代替"
+      },
+      {
+        "text": "予定表 セルフホスト"
+      },
+      {
+        "text": "CalDAV PHP"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どの端末から使えますか？",
+        "answer": "CalDAVに対応したアプリなら使えます。iPhoneとAndroidの標準カレンダー、Thunderbirdで動作を確認しています。"
+      },
+      {
+        "question": "データベースは必要ですか？",
+        "answer": "不要です。ファイルで保存します。"
+      },
+      {
+        "question": "Googleカレンダーと同期できますか？",
+        "answer": "双方向の同期は行いません。予定を自社側に持つための仕組みです。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02",
+    "sourceLpName": "カレンダー同期（kcaldav）",
+    "demoUrl": "https://proto.exbridge.jp/kcaldav/kcaldav.php",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02"
+  },
+  {
+    "name": "Kurage Reserve",
+    "slug": "kreserve",
+    "category": "booking",
+    "featured": false,
+    "summary": "ダブルブッキングを排他ロックで防ぐ、サロン・クリニック・士業向けの予約受付システムです。",
+    "description": "予約ページと管理画面のセットです。同じ時間帯に予約が重ならないよう、判定と書き込みを排他ロックの中で行います。電話での予約受付をやめたい店舗や、少人数で運営している事業所を想定しています。PHPのみで動きデータベースは不要です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kreserve",
+    "githubUrl": "https://github.com/katsushi2441/kreserve",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-09T19:18:07Z",
+    "githubPushedAt": "2026-08-09T19:26:07Z",
+    "useCases": [
+      {
+        "text": "Webから予約を受ける"
+      },
+      {
+        "text": "電話での受付をやめる"
+      },
+      {
+        "text": "ダブルブッキングを防ぐ"
+      },
+      {
+        "text": "予約状況を管理画面で見る"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "予約システム 買い切り"
+      },
+      {
+        "text": "RESERVA 代替"
+      },
+      {
+        "text": "予約 自社サーバー"
+      },
+      {
+        "text": "サロン 予約 システム"
+      },
+      {
+        "text": "予約 PHP DB不要"
+      },
+      {
+        "text": "ダブルブッキング 防止"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "ダブルブッキングはどう防いでいますか？",
+        "answer": "空き状況の判定と予約の書き込みを排他ロックの中で行います。同時に申し込まれても、後の一方は失敗します。"
+      },
+      {
+        "question": "決済はできますか？",
+        "answer": "この製品には決済機能がありません。注文と決済までを一つにしたい場合は Kurage PayLink をご覧ください。"
+      },
+      {
+        "question": "メールは届きますか？",
+        "answer": "設定したメールサーバーから通知を送れます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
+    "sourceLpName": "予約・受付システム（kreserve）",
+    "demoUrl": "https://proto.exbridge.jp/kreserve/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2"
+  },
+  {
+    "name": "Kurage TrackGeo",
+    "slug": "ktrackgeo",
+    "category": "analytics",
+    "featured": false,
+    "summary": "自社サイトへの流入を、AIからの参照も含めて記録するアクセス解析です。",
+    "description": "アクセスログを自社のサーバーに記録し、どこから来たのか、どのページを見たのかを追えるようにします。検索エンジンだけでなく、AIの回答経由での参照も記録の対象にしています。他社の解析サービスに依存せず、生のログを自分で持てる点が特徴です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/ktrackgeo",
+    "githubUrl": "https://github.com/katsushi2441/ktrackgeo",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-07T11:29:59Z",
+    "githubPushedAt": "2026-08-07T11:31:02Z",
+    "useCases": [
+      {
+        "text": "流入元を自社で記録する"
+      },
+      {
+        "text": "AI経由の参照を見つける"
+      },
+      {
+        "text": "ページごとの閲覧を追う"
+      },
+      {
+        "text": "解析データを他社に預けない"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "アクセス解析 自社サーバー"
+      },
+      {
+        "text": "Googleアナリティクス 代替"
+      },
+      {
+        "text": "AI 流入 計測"
+      },
+      {
+        "text": "アクセスログ 解析"
+      },
+      {
+        "text": "解析 買い切り"
+      },
+      {
+        "text": "GEO 計測"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Googleアナリティクスの代わりになりますか？",
+        "answer": "流入元とページ閲覧の記録という基本の部分は代わりになります。広告連携や高度な分析機能はありません。"
+      },
+      {
+        "question": "データはどこに置かれますか？",
+        "answer": "自社のサーバーです。外部へ送信しません。"
+      },
+      {
+        "question": "AI経由の流入はどう分かりますか？",
+        "answer": "参照元と利用者の情報から判別できる範囲を記録します。すべてを識別できるわけではありません。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc",
+    "sourceLpName": "AIアクセス解析（ktrackgeo）＋ VWork教材",
+    "demoUrl": "https://proto.exbridge.jp/ktrackgeo/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc"
+  },
+  {
+    "name": "Kurage Check It",
+    "slug": "kcheckit",
+    "category": "monitoring",
+    "featured": false,
+    "summary": "必要な情報を監視して保存し、変化があったら知らせる仕組みです。RSSやAPIを対象にできます。",
+    "description": "見ておきたいページやRSS、APIを定期的に確認し、内容を保存して、変わったときに通知します。競合のお知らせ、法令や制度の更新、取引先の発表などを人手で見に行く作業をなくすための道具です。記録が残るので、いつ何が変わったかを後から追えます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kcheckit",
+    "githubUrl": "https://github.com/katsushi2441/kcheckit",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-06T23:32:33Z",
+    "githubPushedAt": "2026-08-07T03:16:36Z",
+    "useCases": [
+      {
+        "text": "競合サイトの更新を監視する"
+      },
+      {
+        "text": "制度や法令の変更を見逃さない"
+      },
+      {
+        "text": "RSSをまとめて追う"
+      },
+      {
+        "text": "APIの応答を定期的に記録する"
+      },
+      {
+        "text": "変化があったときだけ知らせる"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "サイト 更新 監視"
+      },
+      {
+        "text": "情報収集 自動化"
+      },
+      {
+        "text": "RSS 監視 通知"
+      },
+      {
+        "text": "ページ 変更 検知"
+      },
+      {
+        "text": "監視 買い切り"
+      },
+      {
+        "text": "情報 監視 PHP"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どんなものを監視できますか？",
+        "answer": "Webページ、RSS、APIの応答です。ログインが必要なページは設定が要ります。"
+      },
+      {
+        "question": "どのくらいの間隔で確認しますか？",
+        "answer": "設定で決められます。サーバーのcronで動かします。"
+      },
+      {
+        "question": "通知はどこに届きますか？",
+        "answer": "メールのほか、設定で外部の通知先へ送れます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730",
+    "sourceLpName": "情報監視システム（kcheckit）＋ VWork教材",
+    "demoUrl": "https://proto.exbridge.jp/kcheckit/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730"
+  },
+  {
+    "name": "Kurage Billing",
+    "slug": "kbilling",
+    "category": "accounting",
+    "featured": false,
+    "summary": "請求書をPDFで発行し、専用URLをメールで送って銀行振込やPayPalで支払ってもらうシステムです。",
+    "description": "請求書をPDFで作り、支払い用のURLをメールで送ります。受け取った側はそのURLから銀行振込またはPayPalで支払えます。入金の確認までを一つの流れで扱えるので、請求と回収が別々の作業になりません。データベースは不要で、外部のサービスに顧客情報を預けません。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kbilling",
+    "githubUrl": "https://github.com/katsushi2441/kbilling",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-05T11:55:23Z",
+    "githubPushedAt": "2026-08-07T03:16:34Z",
+    "useCases": [
+      {
+        "text": "請求書をPDFで発行する"
+      },
+      {
+        "text": "支払い用URLをメールで送る"
+      },
+      {
+        "text": "銀行振込とPayPalで受け取る"
+      },
+      {
+        "text": "入金の確認まで一つで行う"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "請求書 発行 システム"
+      },
+      {
+        "text": "請求 買い切り"
+      },
+      {
+        "text": "入金確認 自動化"
+      },
+      {
+        "text": "請求書 PDF 自動"
+      },
+      {
+        "text": "請求管理 自社サーバー"
+      },
+      {
+        "text": "集金 システム"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どの支払い方法に対応していますか？",
+        "answer": "銀行振込とPayPalです。他の決済を追加したい場合はカスタマイズになります。"
+      },
+      {
+        "question": "会計ソフトと連携できますか？",
+        "answer": "CSVで書き出せます。直接の連携は行いません。"
+      },
+      {
+        "question": "Kurage PayLinkとの違いは何ですか？",
+        "answer": "こちらは請求書の発行と集金が中心です。PayLinkは注文の受付から請求・決済までを一つにしたものです。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
+    "sourceLpName": "請求書発行・集金システム（kbilling）＋ VWork教材",
+    "demoUrl": "https://proto.exbridge.jp/kbilling/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6"
+  },
+  {
+    "name": "Kurage PayLink",
+    "slug": "kpaylink",
+    "category": "commerce",
+    "featured": false,
+    "summary": "注文を受けると請求書PDFが発行され、そのまま銀行振込やPayPalで決済まで進むページです。",
+    "description": "決まった商品と金額の注文ページを設定ファイルで作ります。注文が入ると請求書のPDFが発行され、支払い用のURLから銀行振込またはPayPalで決済できます。商品数が少なく、注文から入金までを一つにまとめたい事業に向いています。データベースは不要です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kpaylink",
+    "githubUrl": "https://github.com/katsushi2441/kpaylink",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-05T12:42:13Z",
+    "githubPushedAt": "2026-08-07T03:16:37Z",
+    "useCases": [
+      {
+        "text": "決まった商品の注文ページを作る"
+      },
+      {
+        "text": "注文から請求書発行までを自動にする"
+      },
+      {
+        "text": "銀行振込とPayPalで受け取る"
+      },
+      {
+        "text": "少数の商品を売る"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "注文フォーム 決済"
+      },
+      {
+        "text": "請求書 決済 一体"
+      },
+      {
+        "text": "PayPal 注文ページ"
+      },
+      {
+        "text": "買い切り 決済システム"
+      },
+      {
+        "text": "注文 自社サーバー"
+      },
+      {
+        "text": "決済ページ 作成"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "カートは付いていますか？",
+        "answer": "付いていません。決まった商品と金額を扱う設計です。商品数が多い場合はECのオープンソースが向きます。"
+      },
+      {
+        "question": "どの決済に対応していますか？",
+        "answer": "銀行振込とPayPalです。"
+      },
+      {
+        "question": "Kurage Billingとの違いは何ですか？",
+        "answer": "PayLinkは注文の受付から始まります。Billingは既にある取引に対して請求書を出すものです。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
+    "sourceLpName": "商品注文・請求書・決済ページ（kpaylink）＋ VWork教材",
+    "demoUrl": "https://proto.exbridge.jp/kpaylink/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4"
+  },
+  {
+    "name": "Kurage Send Invoice",
+    "slug": "kinvoice",
+    "category": "accounting",
+    "featured": false,
+    "summary": "領収書のPDFを発行し、ダウンロード用のURLをメールで送るシステムです。",
+    "description": "領収書をPDFで作り、ダウンロードできるURLをメールで送ります。PDFを添付しないため、メールの容量制限や添付ファイルの拒否に引っかかりません。発行の記録が残るので、いつ誰に出したかを後から追えます。データベースは不要です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kinvoice",
+    "githubUrl": "https://github.com/katsushi2441/kinvoice",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-05T06:21:40Z",
+    "githubPushedAt": "2026-08-07T03:16:33Z",
+    "useCases": [
+      {
+        "text": "領収書をPDFで発行する"
+      },
+      {
+        "text": "ダウンロードURLをメールで送る"
+      },
+      {
+        "text": "発行の記録を残す"
+      },
+      {
+        "text": "添付ファイルの拒否を避ける"
+      },
+      {
+        "text": "レンタルサーバーに置く"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "領収書 発行 システム"
+      },
+      {
+        "text": "領収書 PDF 自動"
+      },
+      {
+        "text": "領収書 メール 送信"
+      },
+      {
+        "text": "買い切り 領収書"
+      },
+      {
+        "text": "領収書 管理 自社"
+      },
+      {
+        "text": "インボイス 領収書"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "なぜPDFを添付しないのですか？",
+        "answer": "添付ファイルは容量制限や受信側の設定で届かないことがあるためです。URLを送る形にすると確実に渡せます。"
+      },
+      {
+        "question": "インボイス制度に対応していますか？",
+        "answer": "必要な項目を記載できます。登録番号などは設定に入れてください。制度の解釈は税理士にご確認ください。"
+      },
+      {
+        "question": "発行の記録は残りますか？",
+        "answer": "残ります。いつ誰に発行したかを一覧で確認できます。"
+      }
+    ],
+    "funnel": "oss",
+    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0",
+    "sourceLpName": "領収書メール送信システム（kinvoice）＋ VWork教材",
+    "demoUrl": "https://proto.exbridge.jp/kinvoice/",
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0"
+  },
+  {
+    "name": "Kurage Logo Generator",
+    "slug": "klogogen",
+    "category": "media",
+    "featured": false,
+    "summary": "AIでロゴを生成し、SVG・透過PNG・PDFの形式で書き出せるWebサービスです。",
+    "description": "入力した社名や事業内容からロゴの候補をAIで生成し、SVG・透過PNG・PDFで書き出します。ベクター形式で出せるので、名刺や看板など大きさの違う用途にそのまま使えます。生成した画像から輪郭を取り出す処理を入れており、そのままでは使いにくいAI画像を実用的な形に整えます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/klogogen",
+    "githubUrl": "https://github.com/katsushi2441/klogogen",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-24T20:03:04Z",
+    "githubPushedAt": "2026-08-24T20:03:10Z",
+    "useCases": [
+      {
+        "text": "社名からロゴ案を作る"
+      },
+      {
+        "text": "SVGで書き出して拡大に耐える形にする"
+      },
+      {
+        "text": "透過PNGを資料に使う"
+      },
+      {
+        "text": "印刷用にPDFで渡す"
+      },
+      {
+        "text": "ロゴの案を短時間で複数見る"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ロゴ 作成 AI"
+      },
+      {
+        "text": "ロゴ SVG 生成"
+      },
+      {
+        "text": "ロゴ 無料 自作"
+      },
+      {
+        "text": "ロゴジェネレーター"
+      },
+      {
+        "text": "透過PNG ロゴ"
+      },
+      {
+        "text": "ロゴ 印刷用 PDF"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "生成したロゴは商用利用できますか？",
+        "answer": "利用条件は生成に使うモデルによります。導入時に使うモデルとその条件を確認してください。"
+      },
+      {
+        "question": "SVGはきれいに出ますか？",
+        "answer": "生成画像から輪郭を取り出して変換します。写実的な絵より、単純な形のロゴのほうがきれいに出ます。"
+      },
+      {
+        "question": "何案くらい出せますか？",
+        "answer": "設定と実行時間しだいです。短時間で複数案を並べて比べる使い方を想定しています。"
+      }
+    ],
+    "funnel": "oss"
+  },
+  {
+    "name": "Kurage Game Master",
+    "slug": "kgm",
+    "category": "media",
+    "featured": false,
+    "summary": "AIがゲームマスターを務める、日本語のソロTRPGです。NarrativeEngine-Pを土台にしています。",
+    "description": "一人で遊べるテーブルトークRPGで、進行役をAIが務めます。物語の生成にNarrativeEngine-Pを使い、日本語で遊べるように手を入れています。複数の利用者が同時に別々の物語を進められるようにしてあり、Webから遊べます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "japaneseStatus": "日本語で開発・提供。",
+    "officialUrl": "https://github.com/katsushi2441/kgm",
+    "githubUrl": "https://github.com/katsushi2441/kgm",
+    "stars": 0,
+    "language": null,
+    "githubCreatedAt": "2026-08-24T20:03:11Z",
+    "githubPushedAt": "2026-08-24T20:03:15Z",
+    "useCases": [
+      {
+        "text": "一人でTRPGを遊ぶ"
+      },
+      {
+        "text": "AIに進行役をさせる"
+      },
+      {
+        "text": "日本語で物語を生成する"
+      },
+      {
+        "text": "複数人が別々に遊べるようにする"
+      },
+      {
+        "text": "自社サーバーで運営する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ソロ TRPG"
+      },
+      {
+        "text": "AI ゲームマスター"
+      },
+      {
+        "text": "TRPG 一人用"
+      },
+      {
+        "text": "物語 生成 AI"
+      },
+      {
+        "text": "TRPG 日本語 Web"
+      },
+      {
+        "text": "AI 物語 ゲーム"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "何人で遊べますか？",
+        "answer": "一人用です。複数の利用者がそれぞれ別の物語を同時に進められます。"
+      },
+      {
+        "question": "どのAIを使いますか？",
+        "answer": "設定で切り替えられます。ローカルのモデルでも動きます。"
+      },
+      {
+        "question": "元になっているソフトは何ですか？",
+        "answer": "NarrativeEngine-P です。日本語化とマルチユーザー化を加えています。"
       }
     ],
     "funnel": "oss"

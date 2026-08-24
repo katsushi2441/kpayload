@@ -18,7 +18,9 @@
       "appsmith",
       "budibase",
       "espocrm",
-      "krayin-crm"
+      "krayin-crm",
+      "kvgwc",
+      "kdbagent"
     ],
     "note": "kintoneは「表形式のデータ管理」「申請・承認のワークフロー」「非エンジニアが画面操作でアプリを増やせること」の3つが1つになったサービスです。置き換えを考えるときは、このどれを重視するかで選ぶものが変わります。汎用のデータ管理が中心ならBaserowやNocoDBのような表形式のもの、画面を作り込むならAppsmithのような管理画面ビルダー型が向きます。ただし用途が顧客管理・営業管理・テレアポであれば、汎用の土台を組み直すよりEspoCRMやKrayinのようなCRMのほうが早いです。通話履歴、次回接触予定、商談段階、担当者の割り当てといった項目が最初から入っており、kintoneで自作していた画面を作らずに済みます。一方で3つ目の「現場の担当者が自分でアプリを増やす」使い方は、どのオープンソースでもkintoneには届きません。現場で日常的にアプリが増えているなら、kintoneを続けるほうが安く済みます。"
   },
@@ -37,7 +39,8 @@
       "twenty",
       "krayin-crm",
       "espocrm",
-      "suitecrm"
+      "suitecrm",
+      "kcrmagent"
     ]
   },
   {
@@ -55,7 +58,9 @@
     "ossPicks": [
       "mattermost",
       "nextcloud-deck",
-      "wekan"
+      "wekan",
+      "kvgwc",
+      "kcaldav"
     ]
   },
   {
@@ -91,7 +96,8 @@
       "zammad",
       "chatwoot",
       "freescout",
-      "frappe-helpdesk"
+      "frappe-helpdesk",
+      "klchatbot"
     ]
   },
   {
@@ -110,7 +116,8 @@
       "docmost",
       "affine",
       "bookstack",
-      "wiki"
+      "wiki",
+      "kmemo"
     ]
   },
   {
@@ -165,7 +172,9 @@
       "akaunting",
       "erpnext",
       "invoiceninja",
-      "dolibarr"
+      "dolibarr",
+      "kbilling",
+      "kinvoice"
     ]
   },
   {
@@ -184,7 +193,9 @@
       "erpnext",
       "akaunting",
       "invoiceninja",
-      "dolibarr"
+      "dolibarr",
+      "kbilling",
+      "kinvoice"
     ]
   },
   {
@@ -202,7 +213,8 @@
     "ossPicks": [
       "erpnext",
       "akaunting",
-      "dolibarr"
+      "dolibarr",
+      "kbilling"
     ]
   },
   {
@@ -219,7 +231,8 @@
     "ossPicks": [
       "horilla-hr",
       "hrms",
-      "orangehrm"
+      "orangehrm",
+      "khrpost"
     ]
   },
   {
@@ -236,7 +249,8 @@
     "ossPicks": [
       "kimai",
       "horilla-hr",
-      "hrms"
+      "hrms",
+      "kkintai"
     ]
   },
   {
@@ -252,7 +266,8 @@
     ],
     "ossPicks": [
       "kimai",
-      "horilla-hr"
+      "horilla-hr",
+      "kkintai"
     ]
   },
   {
@@ -270,7 +285,8 @@
       "medusa",
       "bagisto",
       "saleor",
-      "vendure"
+      "vendure",
+      "kpaylink"
     ]
   },
   {
@@ -340,7 +356,8 @@
       "apitable",
       "baserow",
       "nocodb",
-      "teable"
+      "teable",
+      "kdbagent"
     ]
   },
   {
@@ -394,7 +411,8 @@
       "twenty",
       "espocrm",
       "mautic",
-      "krayin-crm"
+      "krayin-crm",
+      "kcrmagent"
     ]
   },
   {
@@ -412,7 +430,9 @@
     "ossPicks": [
       "mattermost",
       "nextcloud-deck",
-      "wekan"
+      "wekan",
+      "kvgwc",
+      "kcaldav"
     ]
   },
   {
@@ -429,7 +449,8 @@
     "ossPicks": [
       "metabase",
       "superset",
-      "grafana"
+      "grafana",
+      "ktrackgeo"
     ]
   },
   {
@@ -445,7 +466,8 @@
     ],
     "ossPicks": [
       "cal-diy",
-      "easyappointments"
+      "easyappointments",
+      "kreserve"
     ]
   },
   {
@@ -463,7 +485,8 @@
       "erpnext",
       "akaunting",
       "dolibarr",
-      "invoiceninja"
+      "invoiceninja",
+      "kbilling"
     ],
     "note": "弥生会計は、税理士事務所とのデータのやり取りに広く使われています。顧問税理士が弥生のデータ形式を前提にしている場合、置き換えると先方の手間が増えます。移行を考えるなら、まず税理士に相談してください。一方で、販売管理や在庫まで一つにまとめたい場合は、会計だけのソフトより ERPNext や Dolibarr のような統合型のほうが向きます。"
   },
@@ -517,7 +540,9 @@
     "ossPicks": [
       "invoiceninja",
       "erpnext",
-      "dolibarr"
+      "dolibarr",
+      "kbilling",
+      "kinvoice"
     ],
     "note": "バクラクの強みは、紙やPDFの請求書をAIで読み取って仕訳の下書きまで作るところです。オープンソースにそのままの機能はありません。読み取りの部分だけをAIで作り、記録はオープンソースに持たせる、という組み合わせなら当社で対応できます。電子帳簿保存法の要件（訂正削除の履歴、検索要件）は自前で満たす必要があるので、そこは設計時に確認してください。"
   },
@@ -535,7 +560,8 @@
     "ossPicks": [
       "erpnext",
       "dolibarr",
-      "akaunting"
+      "akaunting",
+      "kbilling"
     ],
     "note": "TOKIUMの価値は「入力代行」という人の作業を含む点にあります。オープンソースはソフトだけなので、入力の手間はそのまま残ります。領収書の撮影からAIで下書きするところまでは作れますが、確認と修正は自社で行うことになります。この手間を許容できるかが判断の分かれ目です。"
   },
@@ -553,7 +579,9 @@
     "ossPicks": [
       "invoiceninja",
       "erpnext",
-      "dolibarr"
+      "dolibarr",
+      "kinvoice",
+      "kbilling"
     ],
     "note": "発行した明細をWebで受け取ってもらう仕組みなので、取引先側の操作が変わります。置き換えるときは、先方に新しいURLとログイン方法を案内し直す手間が生じます。取引先が少ないうちのほうが移行しやすい種類のサービスです。"
   },
@@ -625,7 +653,8 @@
     "ossPicks": [
       "orangehrm",
       "horilla-hr",
-      "hrms"
+      "hrms",
+      "khrpost"
     ],
     "note": "カオナビは「顔と名前と経歴が一目で分かる」ことに振り切った作りで、人事評価や配置の検討に強みがあります。オープンソースのHRは勤怠・給与・申請といった管理業務が中心で、タレントマネジメントの視点は弱めです。評価シートや1on1の記録が主目的なら、そこだけを当社で作るほうが早い場合があります。"
   },
@@ -643,7 +672,9 @@
     "ossPicks": [
       "orangehrm",
       "horilla-hr",
-      "hrms"
+      "hrms",
+      "kkintai",
+      "khrpost"
     ],
     "note": "複数の機能を一つのIDで使えることが価値なので、機能ごとに別のオープンソースへ分けると、社員マスタを二重に持つことになります。置き換えるなら OrangeHRM や Frappe HR のように人事の土台を一つ持てるものを選び、足りない部分を足す形が向きます。"
   },
@@ -661,7 +692,8 @@
     "ossPicks": [
       "orangehrm",
       "horilla-hr",
-      "hrms"
+      "hrms",
+      "khrpost"
     ],
     "note": "最大の価値は、社会保険や雇用保険の電子申請（e-Gov連携）に対応していることです。ここは日本固有の制度で、海外発のオープンソースには入っていません。従業員情報の管理はオープンソースに寄せられますが、電子申請だけは既存サービスを併用するか、社労士に任せる前提になります。"
   },
@@ -678,7 +710,8 @@
     ],
     "ossPicks": [
       "kimai",
-      "horilla-hr"
+      "horilla-hr",
+      "kkintai"
     ],
     "note": "専用の打刻機とセットで導入されていることが多く、機器を含めた置き換えになります。オープンソースの勤怠はブラウザやスマホからの打刻が前提です。現場にスマホがある職場なら移行できますが、共有端末が1台の工場などは、打刻機をそのまま活かす方法を先に検討してください。当社は顔での打刻を含む勤怠システムも用意しています。"
   },
@@ -696,7 +729,8 @@
     "ossPicks": [
       "mattermost",
       "rocket-chat",
-      "zulip"
+      "zulip",
+      "kbbs"
     ],
     "note": "LINE WORKSの決定的な強みは、社外の取引先や現場スタッフの個人LINEとやり取りできることです。オープンソースのチャットにこの機能はありません。社内の連絡だけであれば Mattermost などで置き換えられますが、顧客や協力会社とLINEでつながっている業務は残ります。"
   },
@@ -714,7 +748,8 @@
     "ossPicks": [
       "mattermost",
       "rocket-chat",
-      "jitsi-meet"
+      "jitsi-meet",
+      "kvgwc"
     ],
     "note": "TeamsはMicrosoft 365の一部として提供されるため、WordやExcelを使っている会社にとっては「追加費用ゼロ」に見えます。この場合、置き換えても削減額が出ません。Microsoft 365 をやめる話とセットでなければ、Teamsだけの置き換えは意味が薄いです。"
   },
@@ -732,7 +767,9 @@
     "ossPicks": [
       "nextcloud-deck",
       "mattermost",
-      "wekan"
+      "wekan",
+      "kvgwc",
+      "kcaldav"
     ],
     "note": "国産グループウェアは、稟議や申請のワークフローが日本の商習慣に合わせて作られている点が価値です。オープンソースのグループウェアは、この申請・承認の流れが弱いものが多いです。スケジュールと情報共有だけなら置き換えられますが、ワークフローが中心なら作り込みが必要になります。"
   },
@@ -749,7 +786,8 @@
     ],
     "ossPicks": [
       "mattermost",
-      "zulip"
+      "zulip",
+      "kbbs"
     ],
     "note": "TUNAGは「制度の運用」まで含めた設計が価値で、単なる掲示板ではありません。オープンソースのチャットに置き換えると、感謝を伝える仕組みや表彰の運用は自社で作ることになります。導入目的が情報共有だけなら置き換えられますが、組織づくりが目的なら慎重に判断してください。"
   },
@@ -768,7 +806,9 @@
       "espocrm",
       "krayin-crm",
       "twenty",
-      "suitecrm"
+      "suitecrm",
+      "kcrmagent",
+      "kaima"
     ],
     "note": "Zoho CRMは価格が抑えられているぶん、置き換えによる削減額も小さくなります。人数が少ないうちは、そのまま使い続けるほうが安く済むことがあります。判断材料は金額より「自社の営業の流れに合わせて画面と項目を変えたいか」です。変えたい度合いが強いなら、オープンソースを土台にする価値があります。"
   },
@@ -787,7 +827,8 @@
       "bagisto",
       "saleor",
       "medusa",
-      "vendure"
+      "vendure",
+      "kpaylink"
     ],
     "note": "STORESの価値は、開設のしやすさと、決済がすぐ使えることです。オープンソースのECは自由に作り込めますが、決済代行の契約と設定は自社で行うことになります。売上が小さいうちは手数料のほうが安く、規模が大きくなるほど自社構築が見合ってきます。損益が分かれる点を先に計算してください。"
   },
@@ -805,8 +846,28 @@
     "ossPicks": [
       "bagisto",
       "saleor",
-      "medusa"
+      "medusa",
+      "kpaylink"
     ],
     "note": "国内の決済手段（コンビニ払い、キャリア決済など）への対応が広いことが価値です。オープンソースのECは海外発が多く、日本の決済への対応は自社で組み込むことになります。ここが移行の一番の手間になるので、いま使っている決済手段を先に洗い出してください。"
+  },
+  {
+    "slug": "sansan",
+    "name": "Sansan",
+    "kana": "サンサン",
+    "vendor": "Sansan株式会社",
+    "category": "crm",
+    "volume": 135000,
+    "what": "名刺をスキャンして人と会社のつながりを社内で共有する法人向けのサービス。誰がどの会社と接点を持っているかを全社で見えるようにします。",
+    "ossCats": [
+      "crm"
+    ],
+    "ossPicks": [
+      "kaima",
+      "kcrmagent",
+      "espocrm",
+      "krayin-crm"
+    ],
+    "note": "Sansanの価値は、名刺のデータ化を人の手で高い精度に仕上げていることと、全社の人脈が一つにつながることです。ここは枚数に応じた課金として続きます。当社のKurage AI Meishi Analysisは、その中核である「撮って投げるとAIが読み取り、人が承認して台帳に入る」部分を買い切りで自社サーバーに置くものです。読み取りの精度はAIに任せる分だけ落ちるので、承認の一手間は残ります。台帳を顧客管理まで広げるなら、EspoCRMやKrayinと組み合わせる形になります。名刺の枚数が多く、データ化の正確さを人手で担保したいならSansanを続けるほうが確実です。"
   }
 ]

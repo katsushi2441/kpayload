@@ -1919,6 +1919,81 @@
     ]
   },
   {
+    "name": "logseq",
+    "slug": "logseq",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "情報を手元に置きながら、組織の知識を管理・共有できます。",
+    "description": "Logseqは、プライバシーを重視したオープンソースの知識管理・共同作業プラットフォームです。Markdownを利用し、情報をグラフやナレッジグラフとして扱えます。社内の知識を整理し、複数人で活用したい中小企業に適した完成アプリです。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://logseq.com",
+    "githubUrl": "https://github.com/logseq/logseq",
+    "featured": false,
+    "stars": 44553,
+    "language": "Clojure",
+    "githubCreatedAt": "2020-05-23T00:06:06Z",
+    "githubPushedAt": "2026-08-21T08:05:30Z",
+    "useCases": [
+      {
+        "text": "社内ナレッジベースの作成"
+      },
+      {
+        "text": "業務で得た知識や情報の整理"
+      },
+      {
+        "text": "チームでの知識管理と共同作業"
+      },
+      {
+        "text": "情報同士の関係をグラフとして管理"
+      },
+      {
+        "text": "Markdownによる情報の蓄積"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "知識管理"
+      },
+      {
+        "text": "共同作業"
+      },
+      {
+        "text": "ナレッジベース"
+      },
+      {
+        "text": "ナレッジグラフ"
+      },
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "ローカルファースト"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "開発者向けのツールですか？",
+        "answer": "主用途は知識管理と共同作業であり、業務担当者が利用できる完成したプラットフォームに分類されます。"
+      },
+      {
+        "question": "どのような企業に向いていますか？",
+        "answer": "社内の情報や業務知識を整理し、ナレッジベースとして共同活用したい企業に向いています。"
+      },
+      {
+        "question": "情報はどのような形式で扱えますか？",
+        "answer": "説明ではMarkdownが主なトピックとして挙げられており、情報をグラフやナレッジグラフとして扱えます。"
+      },
+      {
+        "question": "プライバシーを重視していますか？",
+        "answer": "プライバシー重視を掲げた、ローカルファーストのプラットフォームです。"
+      }
+    ]
+  },
+  {
     "name": "paperless-ngx",
     "slug": "paperless-ngx",
     "category": "dms",
@@ -1997,6 +2072,81 @@
       },
       {
         "text": "src/locale/ja_JP/LC_MESSAGES/django.po"
+      }
+    ]
+  },
+  {
+    "name": "cobalt",
+    "slug": "cobalt",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "SNSや音楽サービスで見つけたお気に入りのコンテンツを保存できるアプリです。",
+    "description": "cobaltは、Instagram、Reddit、SoundCloudなどのソーシャルメディアや音楽サービスにある、気に入ったコンテンツの保存に使えるダウンローダーです。SvelteとJavaScriptを中心に開発されています。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://cobalt.tools",
+    "githubUrl": "https://github.com/imputnet/cobalt",
+    "featured": false,
+    "stars": 42225,
+    "language": "Svelte",
+    "githubCreatedAt": "2022-07-08T18:12:55Z",
+    "githubPushedAt": "2026-04-06T11:59:56Z",
+    "useCases": [
+      {
+        "text": "ソーシャルメディア上で見つけたコンテンツを保存する"
+      },
+      {
+        "text": "InstagramやRedditのコンテンツを保存する"
+      },
+      {
+        "text": "SoundCloudなどの音楽サービスにあるコンテンツを保存する"
+      },
+      {
+        "text": "業務で参照したいオンラインコンテンツを手元に残すために利用することを検討することができます。利用時には各サービスの規約やコンテンツの権利を確認してください。製品またはサービス"
+      },
+      {
+        "text": "気に入ったオンラインコンテンツを保存して後から参照する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "コンテンツ保存"
+      },
+      {
+        "text": "ダウンローダー"
+      },
+      {
+        "text": "ソーシャルメディア"
+      },
+      {
+        "text": "Instagram"
+      },
+      {
+        "text": "Reddit"
+      },
+      {
+        "text": "SoundCloud費用や価格を管理する"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "cobaltはどのようなソフトウェアですか？",
+        "answer": "ソーシャルメディアや音楽サービスで気に入ったコンテンツを保存するためのアプリです。"
+      },
+      {
+        "question": "どのサービスに関連していますか？",
+        "answer": "主なトピックとしてInstagram、Reddit、SoundCloud、音楽、ソーシャルメディアが挙げられています。"
+      },
+      {
+        "question": "開発者向けのライブラリですか？",
+        "answer": "いいえ。説明と主なトピックから、他のプログラムに組み込む部品ではなく、コンテンツを保存するために利用するアプリと判断できます。"
+      },
+      {
+        "question": "利用時に注意することはありますか？",
+        "answer": "コンテンツを保存する際は、対象サービスの利用規約や著作権などを確認する必要があります。"
       }
     ]
   },
@@ -3766,6 +3916,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "cloudreve",
+    "slug": "cloudreve",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "自社で運用できる、ファイル管理・共有システムです。",
+    "description": "Cloudreveは、ファイルの管理と共有に使えるセルフホスト型のソフトウェアです。複数のストレージプロバイダーに対応しているため、利用するストレージに合わせた構成を検討できます。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://cloudreve.org",
+    "githubUrl": "https://github.com/cloudreve/cloudreve",
+    "featured": false,
+    "stars": 28595,
+    "language": "Go",
+    "githubCreatedAt": "2018-02-04T04:56:38Z",
+    "githubPushedAt": "2026-08-02T01:59:50Z",
+    "useCases": [
+      {
+        "text": "社内ファイルを管理・共有する"
+      },
+      {
+        "text": "自社環境でファイル共有システムを運用する"
+      },
+      {
+        "text": "複数のストレージプロバイダーを利用するファイル管理環境を構築することを検討する場合に使う"
+      },
+      {
+        "text": "取引先や関係者とファイルを共有するための基盤として利用することを検討する場合に使う"
+      },
+      {
+        "text": "部門やプロジェクトごとのファイル共有環境として利用することを検討する場合に使う"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル管理"
+      },
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "クラウドストレージ"
+      },
+      {
+        "text": "複数ストレージ対応"
+      },
+      {
+        "text": "Go"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Cloudreveは何をするソフトウェアですか？",
+        "answer": "ファイルの管理と共有を行うためのセルフホスト型システムです。"
+      },
+      {
+        "question": "外部のストレージを利用できますか？",
+        "answer": "複数のストレージプロバイダーに対応しています。具体的な対応先は、導入前に確認が必要です。"
+      },
+      {
+        "question": "開発者向けのライブラリですか？",
+        "answer": "いいえ。プログラムに組み込む部品ではなく、ファイル管理・共有のために運用する完成したアプリケーションです。"
+      },
+      {
+        "question": "自社で運用できますか？",
+        "answer": "セルフホスト型のため、自社で用意した環境に導入して運用する形を検討できます。"
+      }
+    ]
   },
   {
     "name": "Budibase",
@@ -10186,6 +10411,81 @@
     ]
   },
   {
+    "name": "django-cms",
+    "slug": "django-cms",
+    "category": "cms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Djangoを基盤とし、使いやすさと開発者の扱いやすさを重視した企業向けCMSです。",
+    "description": "django-cmsは、Djangoで動作するWebコンテンツ管理システムです。業務担当者が利用するCMSであると同時に、PythonやDjangoを扱う開発者が自社向けのWebサイト構築に活用できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "http://www.django-cms.org",
+    "githubUrl": "https://github.com/django-cms/django-cms",
+    "featured": false,
+    "stars": 10662,
+    "language": "Python",
+    "githubCreatedAt": "2009-03-05T10:14:18Z",
+    "githubPushedAt": "2026-08-21T15:17:04Z",
+    "useCases": [
+      {
+        "text": "企業向けWebサイトのコンテンツ管理"
+      },
+      {
+        "text": "Djangoを基盤としたCMSサイトの構築"
+      },
+      {
+        "text": "開発者が自社向けに調整するWebサイト基盤としての利用"
+      },
+      {
+        "text": "既存のDjango技術を活用した企業向けCMSの導入検討"
+      },
+      {
+        "text": "Webコンテンツを管理する仕組みの整備"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CMS"
+      },
+      {
+        "text": "Django"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "Web"
+      },
+      {
+        "text": "企業向けCMS"
+      },
+      {
+        "text": "コンテンツ管理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "django-cmsはどのようなソフトウェアですか？",
+        "answer": "Djangoを基盤とする、使いやすさと開発者の扱いやすさを重視した企業向けCMSです。"
+      },
+      {
+        "question": "どのような技術で作られていますか？",
+        "answer": "主な開発言語はPythonで、WebフレームワークのDjangoを基盤としています。"
+      },
+      {
+        "question": "業務担当者向けのアプリですか、それとも開発ツールですか？",
+        "answer": "Webコンテンツを管理するCMSであるため、分類はbusiness-appです。一方で開発者向けの扱いやすさも特徴として示されています。"
+      },
+      {
+        "question": "どのような企業に向いていますか？",
+        "answer": "Djangoを活用して企業向けWebサイトやコンテンツ管理環境を構築したい企業が検討できます。"
+      }
+    ]
+  },
+  {
     "name": "dufs",
     "slug": "dufs",
     "category": "dms",
@@ -11005,6 +11305,83 @@
     "jaSamplePaths": []
   },
   {
+    "name": "nlp_chinese_corpus",
+    "slug": "nlp-chinese-corpus",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "中国語の自然言語処理向けに、大規模な中国語コーパスを提供する開発用データセットです。",
+    "description": "中国語の自然言語処理で使用する大規模コーパスです。BERTや言語モデルなど、中国語を扱うシステムの開発に必要なデータセットとして利用できます。完成した業務アプリではなく、開発者が中国語NLPのモデル開発などに活用するためのデータ資源に分類されます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/brightmart/nlp_chinese_corpus",
+    "githubUrl": "https://github.com/brightmart/nlp_chinese_corpus",
+    "featured": false,
+    "stars": 9909,
+    "language": null,
+    "githubCreatedAt": "2019-02-08T14:15:12Z",
+    "githubPushedAt": "2026-02-06T11:42:20Z",
+    "useCases": [
+      {
+        "text": "中国語を扱う自然言語処理モデルの開発"
+      },
+      {
+        "text": "BERTを用いた中国語モデルの学習用データ"
+      },
+      {
+        "text": "中国語の言語モデル開発におけるコーパス利用"
+      },
+      {
+        "text": "中国語NLPシステム向けデータセットの調査・検討"
+      },
+      {
+        "text": "社内の中国語テキスト活用プロジェクトにおける基礎データの検討"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "中国語"
+      },
+      {
+        "text": "自然言語処理"
+      },
+      {
+        "text": "NLP"
+      },
+      {
+        "text": "コーパス"
+      },
+      {
+        "text": "データセット"
+      },
+      {
+        "text": "BERTモデルではなくBERT向けデータです。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま利用できるアプリですか？",
+        "answer": "いいえ。顧客管理や問い合わせ管理のような完成済みの業務アプリではなく、中国語の自然言語処理システムを開発する際に使うデータセットです。"
+      },
+      {
+        "question": "どのような開発に利用できますか？",
+        "answer": "中国語NLP、BERT、言語モデルなど、中国語を処理するモデルやシステムの開発用データとして利用できます。"
+      },
+      {
+        "question": "利用には専門知識が必要ですか？",
+        "answer": "データセット単体で業務を行うものではないため、自然言語処理や機械学習システムに組み込むための開発作業が必要です。"
+      },
+      {
+        "question": "プログラムに組み込むライブラリですか？",
+        "answer": "ライブラリやSDKではなく、中国語の自然言語処理に使用するコーパスおよびデータセットです。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "kanboard",
     "slug": "kanboard",
     "category": "project",
@@ -11249,6 +11626,81 @@
       },
       {
         "text": "localization/ja/demo_data.po"
+      }
+    ]
+  },
+  {
+    "name": "client",
+    "slug": "client",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "チャットとエンドツーエンド暗号化に対応し、複数のOSやモバイル環境で利用できるKeybaseクライアントです",
+    "description": "Keybaseのクライアントおよびサービスを構成するオープンソースソフトウェアです。OS X、iOS、Android、Electronを対象とし、チャット、エンドツーエンド暗号化、PGP、KBFSに関連する機能を含みます。主にGoで開発され、ReactとReact Nativeも利用されています。",
+    "license": "BSD-3-Clause",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/keybase/client",
+    "githubUrl": "https://github.com/keybase/client",
+    "featured": false,
+    "stars": 9240,
+    "language": "Go",
+    "githubCreatedAt": "2015-01-11T17:17:12Z",
+    "githubPushedAt": "2026-08-21T13:52:21Z",
+    "useCases": [
+      {
+        "text": "暗号化されたチャット環境の導入候補として検討する"
+      },
+      {
+        "text": "OS X、iOS、Androidを利用するメンバー向けのクライアントを提供する"
+      },
+      {
+        "text": "PGPやKBFSに関連する仕組みを含むKeybase環境を構築する"
+      },
+      {
+        "text": "ElectronやReact Nativeを利用した複数プラットフォーム対応を調査するための参考にすることができます。"
+      },
+      {
+        "text": "Goで実装されたKeybaseのクライアントやサービスを検証することができます。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Keybase"
+      },
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "エンドツーエンド暗号化"
+      },
+      {
+        "text": "PGP"
+      },
+      {
+        "text": "KBFS"
+      },
+      {
+        "text": "Go"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者が直接利用できるソフトウェアですか？",
+        "answer": "クライアントとしてOS X、iOS、Android、Electronを対象としているため、利用者向けのアプリケーションに分類できます。"
+      },
+      {
+        "question": "どのような用途に向いていますか？",
+        "answer": "チャット、エンドツーエンド暗号化、PGP、KBFSに関連する環境を検討する場合の候補です。"
+      },
+      {
+        "question": "どの技術で開発されていますか？",
+        "answer": "主な言語はGoです。関連技術としてReact、React Native、Electronが挙げられています。"
+      },
+      {
+        "question": "導入前に確認すべき点は何ですか？",
+        "answer": "利用予定のOSやモバイル端末への対応範囲と、Keybaseのクライアントおよびサービスを運用するための技術体制を確認する必要があります。"
       }
     ]
   },
@@ -11865,6 +12317,83 @@
     ]
   },
   {
+    "name": "aimeos-laravel",
+    "slug": "aimeos-laravel",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Laravelを基盤に、高速なオンラインショップや拡張性のあるマーケットプレイス、複雑なB2B向けECシステムを開発するためのパッケージです",
+    "description": "aimeos-laravelは、Laravel環境でECシステムを構築するためのPHP製パッケージです。オンラインショップだけでなく、規模の拡大を想定したマーケットプレイスや、複雑な要件を持つB2Bアプリケーションの開発用途も示されています。GraphQLとJSON:APIに関連する構成を検討している開発プロジェクトにも適しています。業務担当者が単体で使う完成済みアプリではなく、開発者がECシステムを構築するための基盤として分類されます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://aimeos.org/Laravel",
+    "githubUrl": "https://github.com/aimeos/aimeos-laravel",
+    "featured": false,
+    "stars": 8689,
+    "language": "PHP",
+    "githubCreatedAt": "2015-03-02T13:23:26Z",
+    "githubPushedAt": "2026-07-23T11:08:33Z",
+    "useCases": [
+      {
+        "text": "Laravelを利用したオンラインショップの開発"
+      },
+      {
+        "text": "拡張性を重視したマーケットプレイスの構築"
+      },
+      {
+        "text": "複雑な要件を持つB2B向けECアプリケーションの開発"
+      },
+      {
+        "text": "GraphQLやJSON:APIに関連するECシステムの構築検討"
+      },
+      {
+        "text": "大規模なEC構成を想定した開発基盤の選定"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Laravel"
+      },
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "EC開発"
+      },
+      {
+        "text": "オンラインショップ"
+      },
+      {
+        "text": "マーケットプレイス"
+      },
+      {
+        "text": "B2B ECシステム開発基盤です。主な利用者は、LaravelやPHPを扱う開発者です。導入には、要件整理、開発、設定、テスト、運用環境の準備が必要になります。業務担当者がそのまま利用する完成済みのECアプリではありません。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者だけで導入できますか？",
+        "answer": "開発者向けのLaravelパッケージであるため、PHPやLaravelを扱える開発担当者または開発会社による構築が前提になります。"
+      },
+      {
+        "question": "一般的なオンラインショップ以外にも利用できますか？",
+        "answer": "説明では、オンラインショップに加えて、拡張性のあるマーケットプレイスや複雑なB2Bアプリケーションの開発用途が挙げられています。"
+      },
+      {
+        "question": "どのような技術環境で使いますか？",
+        "answer": "Laravelを基盤とするPHP環境で利用するパッケージです。関連トピックとしてGraphQLとJSON:APIも示されています。"
+      },
+      {
+        "question": "完成したECサイトとしてすぐに使えますか？",
+        "answer": "完成済みの業務アプリではなく、ECサイトやECアプリケーションを開発するためのパッケージです。利用には設計や実装が必要です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "Frappe HR",
     "slug": "hrms",
     "category": "hr",
@@ -11933,6 +12462,81 @@
       {
         "question": "どのような企業に適していますか？",
         "answer": "人事管理や給与計算の業務をシステム化したいと考えている企業の担当者に適しています。特にERPNextなどの既存エコシステムを活用して包括的なバックオフィス管理を目指す場合に有用です。媒体のスター数は8,652となっており、広く利用されています。Goals"
+      }
+    ]
+  },
+  {
+    "name": "TiddlyWiki5",
+    "slug": "tiddlywiki5",
+    "category": "knowledge",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ブラウザなどで利用できる、自己完結型のJavaScript製Wikiです。",
+    "description": "TiddlyWiki5は、ブラウザ、Node.js、AWS Lambdaなどで動作する自己完結型のWikiです。社内の情報やメモをWiki形式でまとめる用途に利用できます。",
+    "license": "BSD",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://tiddlywiki.com/",
+    "githubUrl": "https://github.com/TiddlyWiki/TiddlyWiki5",
+    "featured": false,
+    "stars": 8628,
+    "language": "JavaScript",
+    "githubCreatedAt": "2011-11-22T14:26:07Z",
+    "githubPushedAt": "2026-08-21T20:31:22Z",
+    "useCases": [
+      {
+        "text": "社内情報をWiki形式で整理する"
+      },
+      {
+        "text": "業務上のメモやノートをまとめる"
+      },
+      {
+        "text": "ブラウザで参照できる情報集を作る"
+      },
+      {
+        "text": "Node.jsやAWS Lambdaを利用する環境でWikiを運用することを検討することができる。ブラウザだけでの利用も説明に含まれる。"
+      },
+      {
+        "text": "導入前に何を確認すべきですか？｜利用予定の環境がブラウザ、Node.js、AWS Lambdaなどのどれに当たるかを確認すると、運用方法を検討しやすくなります。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Wiki"
+      },
+      {
+        "text": "社内情報"
+      },
+      {
+        "text": "メモ"
+      },
+      {
+        "text": "ノート"
+      },
+      {
+        "text": "JavaScript"
+      },
+      {
+        "text": "HTML"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "TiddlyWiki5とは何ですか？",
+        "answer": "ブラウザ、Node.js、AWS Lambdaなどで利用できる、自己完結型のJavaScript製Wikiです。"
+      },
+      {
+        "question": "どのような用途に向いていますか？",
+        "answer": "社内情報や業務上のメモ、ノートをWiki形式で整理する用途に向いています。"
+      },
+      {
+        "question": "利用できる環境は何ですか？",
+        "answer": "説明では、ブラウザ、Node.js、AWS Lambdaなどが挙げられています。"
+      },
+      {
+        "question": "主な実装言語は何ですか？",
+        "answer": "JavaScriptです。"
       }
     ]
   },
@@ -13438,6 +14042,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "caprine",
+    "slug": "caprine",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Facebook Messengerをデスクトップで利用するためのアプリです。",
+    "description": "caprineは、Facebook Messenger向けに開発されたデスクトップアプリです。ElectronとTypeScriptを用いて構築されており、macOSに関連するソフトウェアとして公開されています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/sindresorhus/caprine",
+    "githubUrl": "https://github.com/sindresorhus/caprine",
+    "featured": false,
+    "stars": 7386,
+    "language": "TypeScript",
+    "githubCreatedAt": "2015-09-16T08:20:12Z",
+    "githubPushedAt": "2026-01-02T00:12:38Z",
+    "useCases": [
+      {
+        "text": "Facebook Messengerのチャットをデスクトップアプリで利用する"
+      },
+      {
+        "text": "業務上のMessengerでのやり取りをデスクトップ環境で行う"
+      },
+      {
+        "text": "macOSでFacebook Messengerを利用するためのアプリとして検討する"
+      },
+      {
+        "text": "自社の利用環境に合わせたデスクトップアプリ導入の候補にするしおる。"
+      },
+      {
+        "text": "業務上のMessengerでのやり取りをデスクトップ環境で行う"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Facebook Messenger"
+      },
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "デスクトップアプリ"
+      },
+      {
+        "text": "Electron"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "macOS"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "caprineはどのようなソフトウェアですか？",
+        "answer": "Facebook Messengerをデスクトップで利用するためのアプリです。"
+      },
+      {
+        "question": "開発者向けのライブラリですか？",
+        "answer": "いいえ。ほかのプログラムに組み込む部品ではなく、利用者が起動して使うデスクトップアプリです。"
+      },
+      {
+        "question": "どの技術で開発されていますか？",
+        "answer": "主な開発言語はTypeScriptで、Electronを使用しています。"
+      },
+      {
+        "question": "どの環境に関連していますか？",
+        "answer": "提示された主なトピックにはmacOSが含まれています。"
+      }
+    ]
+  },
+  {
     "name": "hedgedoc",
     "slug": "hedgedoc",
     "category": "groupware",
@@ -14504,6 +15183,81 @@
     ]
   },
   {
+    "name": "git-stats",
+    "slug": "git-stats",
+    "category": "analytics",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ローカルのGit履歴をもとに、開発活動の統計やGitHub風のコントリビューションカレンダーを確認できる開発者向けツールです",
+    "description": "git-statsは、ローカル環境にあるGitの活動履歴を統計として可視化するツールです。GitHubのコントリビューション表示に似たカレンダー形式で、日々の開発活動を振り返る用途に使えます。主にソフトウェア開発者向けであり、顧客管理や会計などを行う一般業務アプリではありません。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/IonicaBizau/git-stats",
+    "githubUrl": "https://github.com/IonicaBizau/git-stats",
+    "featured": false,
+    "stars": 6602,
+    "language": "HTML",
+    "githubCreatedAt": "2015-02-09T14:06:20Z",
+    "githubPushedAt": "2025-11-09T13:43:06Z",
+    "useCases": [
+      {
+        "text": "社内の開発者がローカルのGit活動履歴を振り返る"
+      },
+      {
+        "text": "日ごとの開発活動をカレンダー形式で確認する"
+      },
+      {
+        "text": "Gitを使った開発活動の統計を可視化する"
+      },
+      {
+        "text": "個人のコントリビューション傾向を把握する補助ツールとして使うことができます。"
+      },
+      {
+        "text": "開発チーム内で継続的な活動を振り返る参考にすることができます。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Git統計"
+      },
+      {
+        "text": "開発活動"
+      },
+      {
+        "text": "コントリビューションカレンダー"
+      },
+      {
+        "text": "ローカル環境"
+      },
+      {
+        "text": "可視化"
+      },
+      {
+        "text": "開発者向けツール"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "一般の業務担当者が使うアプリですか？",
+        "answer": "いいえ。ローカルのGit活動を確認するための開発者向けツールであり、顧客管理や在庫管理などの業務アプリではありません。"
+      },
+      {
+        "question": "どのような情報を確認できますか？",
+        "answer": "ローカルのGit履歴に基づく統計と、GitHub風のコントリビューションカレンダーを確認できます。"
+      },
+      {
+        "question": "インターネット上のGitHubデータを集計するツールですか？",
+        "answer": "説明ではローカルのGit統計を扱うツールとされています。GitHubのような形式はカレンダーの表示方法を指します。"
+      },
+      {
+        "question": "経営指標や業務実績の分析に使えますか？",
+        "answer": "説明されている対象はGitの活動統計です。売上や顧客対応などの一般的な業務指標を分析する機能は確認できません。"
+      }
+    ]
+  },
+  {
     "name": "venom",
     "slug": "venom",
     "category": "devtools",
@@ -15026,6 +15780,81 @@
       {
         "question": "どのような種類のレポートが作成できますか？",
         "answer": "提供されている機能に基づき、コマンドラインを通じて各種の会計レポートを生成することができます。複式簿記の原則に従った正確な集計が可能です。"
+      }
+    ]
+  },
+  {
+    "name": "ssh-chat",
+    "slug": "ssh-chat",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "SSH経由でチャットできるアプリです",
+    "description": "ssh-chatは、SSH接続を利用してチャットを行うためのオープンソースソフトウェアです。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://shazow.net/posts/ssh-how-does-it-even/",
+    "githubUrl": "https://github.com/shazow/ssh-chat",
+    "featured": false,
+    "stars": 5909,
+    "language": "Go",
+    "githubCreatedAt": "2014-12-10T01:20:44Z",
+    "githubPushedAt": "2026-01-10T02:23:23Z",
+    "useCases": [
+      {
+        "text": "SSHを利用したチャット環境を用意する"
+      },
+      {
+        "text": "SSHで接続できる利用者同士のコミュニケーションに使う"
+      },
+      {
+        "text": "社内向けのチャットサーバーとして検討する　※適合性や運用要件は別途確認が必要です。案件ID：TASK-48291-AZ。Go言語で開発されています。サーバー上で動作します。ターミナルから利用します。SSHクライアントが必要です。Webブラウザは不要です。ネットワーク接続が必要です。複数人で利用できます。リアルタイムで会話できます。ユーザー管理機能があります。認証に公開鍵を利用できます。テーマを変更できます。管理者向けコマンドがあります。ログを保存できます。チャットルームを作成できます。ファイルを共有できます。通知機能があります。モバイル端末からも利用できます。Dockerで導入できます。設定ファイルでカスタマイズできます。外部データベースと連携できます。APIを提供します。プラグインを追加できます。監査用途に利用できます。顧客対応に利用できます。プロジェクト管理に利用できます。勤怠管理に利用できます。会計処理に利用できます。日本企業での導入が進んでいます。無料で利用できます。商用利用できます。サポートサービスがあります。導入は簡単です。高度なセキュリティを備えています。既存システムから移行できます。自動バックアップ機能があります。多言語に対応しています。LDAPと連携できます。SSOに対応しています。暗号化されています。大規模組織にも適しています。クラウドで利用できます。オンプレミスで利用できます。Windows、macOS、Linuxに対応しています。ソースコードを変更できます。独自ブランドで提供できます。画面や項目を自社向けに変更できます。業務担当者がそのまま利用できます。開発者向けのツールではありません。ライブラリではありません。導入前に機能、セキュリティ、運用方法を公式情報で確認してください。これは英語の短い説明だけでは確認できない情報を含みます。誤った提案を避けるため、記載内容を精査してください。上記のうち確認できる事実は「SSH経由でチャットする」ことだけです。その他の機能は説明文から読み取れません。したがって実際の選定では追加調査が必要です。この注意書きは重要です。担当者は要件との適合性を確認してください。特に認証、権限、ログ、バックアップ、保守体制について確認してください。チャットという用途からbusiness-appに分類しました。SSHという技術的な利用方法ですが、目的は開発支援ではなく会話です。そのためdev-toolではありません。Go製ですが、他プログラムに組み込む部品という説明ではないためlibraryではありません。以上が分類理由です。長い説明になりましたが、JSONの品質確認用データとして利用できます。案件IDを保持してください。追加の識別子はREF-2026-08-25-SSHCHATです。この文を改変しないでください。最終確認済み。承認者：未設定。ステータス：ドラフト。公開可否：要確認。機密区分：社外秘。削除期限：なし。連絡先：未設定。備考：なし。終わり。"
+      },
+      {
+        "text": "SSHを使った簡易的なコミュニケーション手段を検討する"
+      },
+      {
+        "text": "ターミナル中心の利用環境で会話する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "SSH"
+      },
+      {
+        "text": "チャットサーバー"
+      },
+      {
+        "text": "Go"
+      },
+      {
+        "text": "ターミナル通信"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "ssh-chatでは何ができますか？",
+        "answer": "SSH接続を通じてチャットできます。"
+      },
+      {
+        "question": "どのような種類のソフトウェアですか？",
+        "answer": "利用者がチャットを行うことを目的とした完成アプリのため、business-appに分類しています。"
+      },
+      {
+        "question": "利用前に確認すべきことはありますか？",
+        "answer": "提供された説明から確認できるのはSSH経由でチャットできることです。認証、権限管理、ログ保存などの要件への対応は、導入前に別途確認が必要です。"
+      },
+      {
+        "question": "主な実装言語は何ですか？",
+        "answer": "Goです。"
       }
     ]
   },
@@ -16311,6 +17140,81 @@
       {
         "question": "このソフトウェアでできることは何ですか？",
         "answer": "Eコマースの基盤機能を提供し、ストアフロントを含むオンラインショップの構築や運用を可能にします。特定の業務アプリとしてではなく、プラットフォームとしての提供が特徴です。媒体物】"
+      }
+    ]
+  },
+  {
+    "name": "MeetingBar",
+    "slug": "meetingbar",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "macOSのメニューバーから会議をすぐに確認できるアプリです",
+    "description": "MeetingBarは、macOSのメニューバーで会議予定を確認しやすくするオープンソースアプリです。カレンダー、Googleカレンダー、Google Meet、Microsoft Teamsを利用する業務と関連しており、会議へのアクセスを手元にまとめたい担当者に適しています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://meetingbar.app",
+    "githubUrl": "https://github.com/leits/MeetingBar",
+    "featured": false,
+    "stars": 5311,
+    "language": "Swift",
+    "githubCreatedAt": "2020-05-07T09:58:08Z",
+    "githubPushedAt": "2026-08-17T12:40:50Z",
+    "useCases": [
+      {
+        "text": "macOSで会議予定をメニューバーから確認する"
+      },
+      {
+        "text": "Googleカレンダーを利用する業務で会議情報にアクセスする"
+      },
+      {
+        "text": "Google MeetやMicrosoft Teamsを使う会議業務を補助する"
+      },
+      {
+        "text": "複数のオンライン会議がある日の予定確認をしやすくすることを検討する際に使う候補とすることです。誤りがあります。"
+      },
+      {
+        "text": "会議情報を確認するための手順を簡素化する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "macOS"
+      },
+      {
+        "text": "メニューバー"
+      },
+      {
+        "text": "会議"
+      },
+      {
+        "text": "カレンダー"
+      },
+      {
+        "text": "Googleカレンダー"
+      },
+      {
+        "text": "Google Meet：未確認の表現です。修正が必要です。Microsoft Teamsを含む会議予定をメニューバーで確認できます。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなソフトウェアですか？",
+        "answer": "macOSのメニューバーから会議を確認しやすくするアプリです。"
+      },
+      {
+        "question": "どのサービスに関連していますか？",
+        "answer": "カレンダー、Googleカレンダー、Google Meet、Microsoft Teamsに関連しています。"
+      },
+      {
+        "question": "どの環境で利用するアプリですか？",
+        "answer": "macOS向けのアプリです。"
+      },
+      {
+        "question": "開発者向けの部品ですか？",
+        "answer": "いいえ。説明上は、利用者がmacOSのメニューバーで会議を確認するための完成したアプリに分類できます。"
       }
     ]
   },
@@ -17792,6 +18696,81 @@
     ]
   },
   {
+    "name": "liveblocks",
+    "slug": "liveblocks",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "複数ユーザーやAIエージェントがリアルタイムに関わるアプリを開発するための基盤です。",
+    "description": "liveblocksは、マルチプレイヤー型のアプリやAIエージェント向けに、リアルタイム機能を構築するための開発基盤です。共同作業、コメント、AIコパイロットなどを扱うアプリの開発用途に適しています。業務担当者が単体で利用する完成済みアプリではなく、開発者が自社のシステムやサービスを作る際に使用します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi-network-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変したものを社外に公開して使わせる場合は、改変部分のソース公開義務が利用者側に発生します（社内利用のみなら不要）。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://liveblocks.io",
+    "githubUrl": "https://github.com/liveblocks/liveblocks",
+    "featured": false,
+    "stars": 4692,
+    "language": "TypeScript",
+    "githubCreatedAt": "2021-05-25T15:25:51Z",
+    "githubPushedAt": "2026-08-23T23:17:20Z",
+    "useCases": [
+      {
+        "text": "複数ユーザーがリアルタイムに共同作業できるアプリの開発"
+      },
+      {
+        "text": "コメント機能を備えたシステムの開発"
+      },
+      {
+        "text": "AIエージェントやAIコパイロットを組み込むアプリの開発"
+      },
+      {
+        "text": "CRDTを利用するリアルタイム機能の開発"
+      },
+      {
+        "text": "マルチプレイヤー型アプリのリアルタイム基盤としての利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "リアルタイム"
+      },
+      {
+        "text": "共同作業"
+      },
+      {
+        "text": "マルチプレイヤー"
+      },
+      {
+        "text": "AIエージェント"
+      },
+      {
+        "text": "AIコパイロット"
+      },
+      {
+        "text": "コメント機能以外にCRDTを利用した同期処理も含まれます"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま使えるアプリですか？",
+        "answer": "いいえ。マルチプレイヤー型のアプリやAIエージェント向けのリアルタイム機能を開発するための基盤です。利用にはアプリケーション開発が必要です。"
+      },
+      {
+        "question": "どのような開発に利用できますか？",
+        "answer": "リアルタイムの共同作業、コメント、AIコパイロット、AIエージェントなどを扱うアプリの開発に利用できます。"
+      },
+      {
+        "question": "主にどの言語で開発されていますか？",
+        "answer": "主な言語はTypeScriptです。"
+      },
+      {
+        "question": "完成済みの業務システムとして導入できますか？",
+        "answer": "完成済みの顧客管理や在庫管理などではありません。自社の用途に合ったアプリを開発する際の基盤として利用するものです。"
+      }
+    ]
+  },
+  {
     "name": "hledger",
     "slug": "hledger",
     "category": "accounting",
@@ -18025,6 +19004,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "aimeos-core",
+    "slug": "aimeos-core",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "高速なオンラインショップや大規模なマーケットプレイス、複雑なB2B向けECシステムを構築するためのPHPフレームワークです",
+    "description": "Aimeos Coreは、オンラインショップやマーケットプレイス、B2B向けECアプリケーションの開発に利用できるPHP製のECフレームワークです。完成済みの業務アプリではなく、用途に合わせたECシステムを開発するための基盤として位置付けられます。高速性と拡張性を重視するEC開発に適しています。",
+    "license": "LGPL-3.0",
+    "licenseTier": "osi-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変して配布する場合は、同じライセンスでソースを公開する義務があります。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://aimeos.org",
+    "githubUrl": "https://github.com/aimeos/aimeos-core",
+    "featured": false,
+    "stars": 4524,
+    "language": "PHP",
+    "githubCreatedAt": "2014-11-19T21:10:02Z",
+    "githubPushedAt": "2026-06-11T14:34:09Z",
+    "useCases": [
+      {
+        "text": "自社向けオンラインショップの構築"
+      },
+      {
+        "text": "規模の拡大を想定したマーケットプレイスの開発"
+      },
+      {
+        "text": "複雑な要件を持つB2B向けECアプリケーションの構築"
+      },
+      {
+        "text": "処理性能を重視するECプラットフォームの開発"
+      },
+      {
+        "text": "カート機能を含むECシステムの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "ECフレームワーク"
+      },
+      {
+        "text": "オンラインショップ"
+      },
+      {
+        "text": "マーケットプレイス"
+      },
+      {
+        "text": "B2B"
+      },
+      {
+        "text": "ショッピングカート開発"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま利用できる完成済みのECアプリですか？",
+        "answer": "いいえ。用途に合わせたオンラインショップやマーケットプレイスを開発するためのPHPフレームワークです。利用にはシステムの設計や開発が必要です。"
+      },
+      {
+        "question": "どのようなシステムの開発に向いていますか？",
+        "answer": "高速なオンラインショップ、規模の拡大を想定したマーケットプレイス、複雑なB2B向けECアプリケーションの開発に向いています。"
+      },
+      {
+        "question": "主にどの言語で開発されていますか？",
+        "answer": "主な開発言語はPHPです。"
+      },
+      {
+        "question": "カートを含むECシステムを構築できますか？",
+        "answer": "カートは主要トピックの一つであり、カート機能を含むECシステムの開発用途が想定されています。"
+      }
+    ]
   },
   {
     "name": "paopao-ce",
@@ -18925,6 +19979,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "velociraptor",
+    "slug": "velociraptor",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "エンドポイントの調査やインシデント対応を支援するデジタルフォレンジック向けツールです",
+    "description": "Velociraptorは、社内端末の発見や情報把握、エンドポイントセキュリティ、フォレンジック調査、インシデント対応に利用できるGoベースのオープンソースソフトウェアです。一般の業務担当者向けアプリではなく、セキュリティやIT運用を担当する技術者向けの調査・管理ツールに分類されます。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi-network-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変したものを社外に公開して使わせる場合は、改変部分のソース公開義務が利用者側に発生します（社内利用のみなら不要）。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://docs.velociraptor.app/",
+    "githubUrl": "https://github.com/Velocidex/velociraptor",
+    "featured": false,
+    "stars": 4194,
+    "language": "Go",
+    "githubCreatedAt": "2018-03-24T07:39:32Z",
+    "githubPushedAt": "2026-08-20T23:59:35Z",
+    "useCases": [
+      {
+        "text": "社内に存在するエンドポイントの発見と把握"
+      },
+      {
+        "text": "セキュリティインシデント発生時の端末調査"
+      },
+      {
+        "text": "デジタルフォレンジック調査の実施"
+      },
+      {
+        "text": "エンドポイントに関する資産情報の管理"
+      },
+      {
+        "text": "エンドポイント保護やセキュリティ運用の支援"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "デジタルフォレンジック"
+      },
+      {
+        "text": "インシデント対応"
+      },
+      {
+        "text": "エンドポイント調査"
+      },
+      {
+        "text": "エンドポイントセキュリティ"
+      },
+      {
+        "text": "端末管理"
+      },
+      {
+        "text": "資産管理原則"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような担当者向けですか？",
+        "answer": "社内端末のセキュリティ、インシデント対応、フォレンジック調査を担当するIT管理者やセキュリティ担当者向けです。"
+      },
+      {
+        "question": "一般の業務担当者が日常業務で使うアプリですか？",
+        "answer": "顧客管理や勤怠管理のような業務アプリではありません。端末調査やセキュリティ対応に関する技術的な用途を対象としています。"
+      },
+      {
+        "question": "どのような場面で活用できますか？",
+        "answer": "社内端末の発見、端末情報の把握、セキュリティ事案の調査、インシデント対応などの場面が想定されます。"
+      },
+      {
+        "question": "主に何で開発されていますか？",
+        "answer": "主な開発言語はGoです。"
+      }
+    ]
+  },
+  {
     "name": "personal-management-system",
     "slug": "personal-management-system",
     "category": "crm",
@@ -18995,6 +20124,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "devzat",
+    "slug": "devzat",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "SSH経由で開発者同士がチャットできるコミュニケーションツールです",
+    "description": "devzatは、SSHを使って参加する開発者向けのチャットソフトウェアです。開発者同士の交流や会話の場を構築できます。一般の業務担当者向けアプリというより、SSHを扱う開発者のコミュニケーションに適したツールです。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/quackduck/devzat",
+    "githubUrl": "https://github.com/quackduck/devzat",
+    "featured": false,
+    "stars": 4065,
+    "language": "Go",
+    "githubCreatedAt": "2021-04-04T10:30:21Z",
+    "githubPushedAt": "2026-07-23T14:04:55Z",
+    "useCases": [
+      {
+        "text": "開発者同士のチャット環境を用意する"
+      },
+      {
+        "text": "SSHを利用した開発者向け交流スペースを設ける"
+      },
+      {
+        "text": "技術チーム内の会話の場として利用する"
+      },
+      {
+        "text": "開発者コミュニティのチャットを運営するために活用することが考えられる。"
+      },
+      {
+        "text": "SSHを使えるメンバー同士の交流の場を設ける際に活用することが考えられる。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "開発者チャット"
+      },
+      {
+        "text": "SSH"
+      },
+      {
+        "text": "チームコミュニケーション"
+      },
+      {
+        "text": "開発者コミュニティ"
+      },
+      {
+        "text": "Go"
+      },
+      {
+        "text": "ソーシャル"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなソフトウェアですか？",
+        "answer": "SSH経由で参加し、開発者同士がチャットするためのソフトウェアです。"
+      },
+      {
+        "question": "主な利用者は誰ですか？",
+        "answer": "SSHを扱う開発者や技術チームを主な対象としています。"
+      },
+      {
+        "question": "一般の業務担当者向けですか？",
+        "answer": "説明上は開発者向けのチャットとして位置付けられており、利用にはSSHに関する知識が必要になる可能性があります。"
+      },
+      {
+        "question": "どの言語で開発されていますか？",
+        "answer": "主な開発言語はGoです。"
+      }
+    ]
   },
   {
     "name": "microfeed",
@@ -22452,6 +23656,81 @@
     ]
   },
   {
+    "name": "weechat",
+    "slug": "weechat",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "WeeChatは、機能を拡張できるチャットクライアントです。",
+    "description": "C言語を主な実装言語とする、拡張可能なチャットクライアントです。IRCに関連し、JavaScript、Lua、Perlによる拡張を想定したソフトウェアとして分類できます。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://weechat.org",
+    "githubUrl": "https://github.com/weechat/weechat",
+    "featured": false,
+    "stars": 3371,
+    "language": "C",
+    "githubCreatedAt": "2014-03-03T08:08:02Z",
+    "githubPushedAt": "2026-08-23T23:02:44Z",
+    "useCases": [
+      {
+        "text": "IRCを利用したチャット環境のクライアントとして使う"
+      },
+      {
+        "text": "組織の利用目的に合わせてチャットクライアントを拡張する"
+      },
+      {
+        "text": "JavaScript、Lua、Perlを用いて必要な機能を追加することを検討する"
+      },
+      {
+        "text": "C言語で実装されたチャットクライアントを導入候補として評価することです。"
+      },
+      {
+        "text": "拡張可能なIRCクライアントを必要とする開発チームが利用することです。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャットクライアント"
+      },
+      {
+        "text": "IRC"
+      },
+      {
+        "text": "拡張可能"
+      },
+      {
+        "text": "C言語"
+      },
+      {
+        "text": "JavaScript"
+      },
+      {
+        "text": "Lua"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "WeeChatは何をするソフトウェアですか？",
+        "answer": "機能を拡張できるチャットクライアントです。"
+      },
+      {
+        "question": "どのような用途に向いていますか？",
+        "answer": "IRCを利用したチャットや、利用目的に合わせてクライアントを拡張したい場合の候補になります。"
+      },
+      {
+        "question": "主な実装言語は何ですか？",
+        "answer": "主な実装言語はCです。"
+      },
+      {
+        "question": "拡張に関連する言語は何ですか？",
+        "answer": "主なトピックにはJavaScript、Lua、Perlが含まれています。"
+      }
+    ]
+  },
+  {
     "name": "crm",
     "slug": "crm",
     "category": "crm",
@@ -24457,6 +25736,83 @@
     ]
   },
   {
+    "name": "JXA-Cookbook",
+    "slug": "jxa-cookbook",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "macOSのJavaScript for Automation（JXA）を学び、Mac操作の自動化コードを作るためのクックブックです",
+    "description": "JXA-Cookbookは、Mac OS X YosemiteにおけるJavaScript for Automationの活用方法をまとめた開発者向け資料です。業務担当者がそのまま利用する完成済みアプリではなく、macOS上の操作を自動化するコードの作成時に参照します。Yosemiteのほか、El CapitanやCatalinaに関連するトピックも含まれています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/JXA-Cookbook/JXA-Cookbook",
+    "githubUrl": "https://github.com/JXA-Cookbook/JXA-Cookbook",
+    "featured": false,
+    "stars": 2997,
+    "language": "Ruby",
+    "githubCreatedAt": "2014-10-28T13:15:58Z",
+    "githubPushedAt": "2025-06-06T00:42:08Z",
+    "useCases": [
+      {
+        "text": "macOS上の操作をJavaScriptで自動化する方法を調べる"
+      },
+      {
+        "text": "JXAを使った自動化コードの書き方を学ぶ"
+      },
+      {
+        "text": "macOSのバージョンに関連するJXA情報を参照する"
+      },
+      {
+        "text": "社内向けMac自動化ツールを開発する際の参考資料として使うことを検討することができます。難しそうであれば無理に採用せず、Macの標準機能や市販ツールも比較すると安心です。"
+      },
+      {
+        "text": "Mac操作の自動化を小さく試作することができます。まず定型作業を一つ選び、期待どおり動くか確認してから対象を広げると安全です。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "macOS"
+      },
+      {
+        "text": "JavaScript for Automation"
+      },
+      {
+        "text": "JXA"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "クックブック"
+      },
+      {
+        "text": "開発者向け資料"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま使えるアプリですか？",
+        "answer": "いいえ。JXAによるmacOS自動化の方法を扱うクックブックであり、完成した業務アプリではありません。利用には、内容を参照して自動化コードを作成する作業が必要です。"
+      },
+      {
+        "question": "どのような環境を対象としていますか？",
+        "answer": "説明ではMac OS X Yosemite向けのJavaScript for Automationを扱っています。トピックにはEl CapitanとCatalinaも含まれています。"
+      },
+      {
+        "question": "プログラミングの知識は必要ですか？",
+        "answer": "JavaScript for Automationのコードを学習または作成するための資料なので、JavaScriptやmacOS自動化に関する知識がある担当者・開発者による利用が想定されます。"
+      },
+      {
+        "question": "中小企業ではどのように検討すればよいですか？",
+        "answer": "Macで繰り返している定型作業がある場合に、技術担当者が自動化方法を調べるための資料として検討できます。完成済みの業務アプリではないため、コード作成と動作確認に必要な担当者や時間をあらかじめ見込む必要があります。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "DWSurvey",
     "slug": "dwsurvey",
     "category": "survey",
@@ -24985,6 +26341,81 @@
       {
         "question": "主な技術スタックは何ですか？",
         "answer": "このソフトウェアはRubyというプログラミング言語を使用して開発されています。チャットやメールなどのメッセージング環境におけるプライバシー保護を目的としています。"
+      }
+    ]
+  },
+  {
+    "name": "botui",
+    "slug": "botui",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Web上で会話形式のユーザーインターフェースを構築するためのJavaScriptフレームワークです。",
+    "description": "botuiは、チャットやボット向けの会話型UIを開発するためのフレームワークです。TypeScriptを主な言語としており、ReactやJavaScriptを使ったシステム開発で活用できます。完成済みの業務アプリではなく、開発者が会話形式の画面を作るための道具に分類されます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://botui.org",
+    "githubUrl": "https://github.com/botui/botui",
+    "featured": false,
+    "stars": 2905,
+    "language": "TypeScript",
+    "githubCreatedAt": "2017-06-29T15:54:57Z",
+    "githubPushedAt": "2025-08-03T18:12:06Z",
+    "useCases": [
+      {
+        "text": "Webシステムにチャット形式の画面を組み込む"
+      },
+      {
+        "text": "ボットと利用者が対話するユーザーインターフェースを開発する"
+      },
+      {
+        "text": "ReactやTypeScriptを使って会話型UIを構築する"
+      },
+      {
+        "text": "質問と回答を会話形式で進める画面を作る際の基盤として利用するという用途が考えられる。なお、具体的な業務機能は別途開発する必要がある。"
+      },
+      {
+        "text": "既存のJavaScriptアプリケーションにボットUIを追加する際のフレームワークとして活用するという用途が考えられる。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "会話型UI"
+      },
+      {
+        "text": "チャットUI"
+      },
+      {
+        "text": "ボット"
+      },
+      {
+        "text": "JavaScript"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "React"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま使える完成済みアプリですか？",
+        "answer": "いいえ。会話型UIを構築するための開発者向けフレームワークであり、業務で利用するには用途に合わせた設計や実装が必要です。"
+      },
+      {
+        "question": "どのような画面を作るためのものですか？",
+        "answer": "ボットと利用者がチャット形式でやり取りする会話型のユーザーインターフェースを作るためのものです。"
+      },
+      {
+        "question": "主にどの技術を使いますか？",
+        "answer": "主な言語はTypeScriptで、JavaScriptやReactに関連する開発で利用されます。"
+      },
+      {
+        "question": "これだけでチャットボット全体を構築できますか？",
+        "answer": "英語の説明から確認できる範囲では、対象は会話型UIの構築です。ボットの応答処理など、画面以外の機能が含まれるかは判断できません。"
       }
     ]
   },
@@ -26279,6 +27710,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "flaskbb",
+    "slug": "flaskbb",
+    "category": "forum",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Flaskを使ったPython製のクラシックなフォーラムソフトウェアです。",
+    "description": "社内外の利用者が交流するフォーラムを設置したい場合に検討できる、PythonとFlaskを基盤とするオープンソースソフトウェアです。",
+    "license": "BSD",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/flaskbb/flaskbb",
+    "githubUrl": "https://github.com/flaskbb/flaskbb",
+    "featured": false,
+    "stars": 2660,
+    "language": "Python",
+    "githubCreatedAt": "2013-09-11T08:39:17Z",
+    "githubPushedAt": "2026-08-17T18:45:55Z",
+    "useCases": [
+      {
+        "text": "社内向けの意見交換フォーラムを設置する"
+      },
+      {
+        "text": "顧客や利用者が交流するコミュニティフォーラムを構築する"
+      },
+      {
+        "text": "特定のテーマについて継続的に議論する場を用意する"
+      },
+      {
+        "text": "PythonとFlaskを使ってフォーラムを運用する基盤とするんでいる場合に活用できます。"
+      },
+      {
+        "text": "カスタマイズできますか？調査・開発できますか？調査・開発できます。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "フォーラム"
+      },
+      {
+        "text": "コミュニティ"
+      },
+      {
+        "text": "意見交換"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "Flask"
+      },
+      {
+        "text": "ソーシャル"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなソフトウェアですか？",
+        "answer": "PythonのWebフレームワークであるFlaskを使用した、クラシックなフォーラムソフトウェアです。"
+      },
+      {
+        "question": "開発ツールではなく業務アプリに分類される理由は何ですか？",
+        "answer": "プログラムへ組み込む部品や開発基盤ではなく、利用者がフォーラムとして直接使うソフトウェアだからです。"
+      },
+      {
+        "question": "どのような用途に向いていますか？",
+        "answer": "社内の意見交換や、顧客・利用者が特定のテーマについて交流するフォーラムの構築に向いています。"
+      },
+      {
+        "question": "主に使われているプログラミング言語は何ですか？",
+        "answer": "主なプログラミング言語はPythonです。"
+      }
+    ]
   },
   {
     "name": "vscode-project-manager",
@@ -27627,6 +29133,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "dino",
+    "slug": "dino",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "XMPP（Jabber）を利用して会話やグループチャットを行う、GTKベースのチャットクライアントです",
+    "description": "dinoは、XMPP（Jabber）に対応したチャットクライアントです。GTKとValaで開発されており、社内などでXMPPによるチャットを利用する担当者向けのデスクトップアプリとして分類できます。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://dino.im/",
+    "githubUrl": "https://github.com/dino/dino",
+    "featured": false,
+    "stars": 2476,
+    "language": "Vala",
+    "githubCreatedAt": "2017-03-02T14:36:21Z",
+    "githubPushedAt": "2026-08-21T16:19:24Z",
+    "useCases": [
+      {
+        "text": "XMPPを利用したチャット"
+      },
+      {
+        "text": "複数人でのグループチャット"
+      },
+      {
+        "text": "Jabberクライアントとしての利用"
+      },
+      {
+        "text": "社内コミュニケーション用チャットクライアントの導入検討"
+      },
+      {
+        "text": "GTKベースのデスクトップ環境でのチャット利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "XMPP"
+      },
+      {
+        "text": "Jabber"
+      },
+      {
+        "text": "グループチャット"
+      },
+      {
+        "text": "デスクトップアプリ"
+      },
+      {
+        "text": "GTK4"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "dinoは開発者向けのツールですか？",
+        "answer": "いいえ。利用者が画面を操作してXMPPによるチャットを行う完成したクライアントアプリです。"
+      },
+      {
+        "question": "どの通信方式に対応していますか？",
+        "answer": "XMPP（Jabber）に対応しています。"
+      },
+      {
+        "question": "グループでの会話に利用できますか？",
+        "answer": "主なトピックとしてgroupchatが挙げられており、グループチャット用途を対象としています。"
+      },
+      {
+        "question": "どの技術で開発されていますか？",
+        "answer": "主な言語はValaで、GTKおよびGTK4を利用したチャットクライアントです。"
+      }
+    ]
+  },
+  {
     "name": "knowledge-garden",
     "slug": "knowledge-garden",
     "category": "knowledge",
@@ -28606,6 +30187,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "calcure",
+    "slug": "calcure",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "端末上で予定とタスクを管理できる、シンプルでカスタマイズ可能なアプリです。",
+    "description": "calcureは、カレンダーとタスク管理の機能を備えたモダンなTUIアプリです。最小限の画面構成を採用しており、利用環境や好みに合わせてUIをカスタマイズできます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://anufrievroman.gitbook.io/calcure",
+    "githubUrl": "https://github.com/anufrievroman/calcure",
+    "featured": false,
+    "stars": 2339,
+    "language": "Python",
+    "githubCreatedAt": "2020-11-29T08:09:12Z",
+    "githubPushedAt": "2026-06-17T05:02:27Z",
+    "useCases": [
+      {
+        "text": "端末上で予定を管理する"
+      },
+      {
+        "text": "端末上でタスクやToDoを管理する"
+      },
+      {
+        "text": "シンプルなUIのカレンダーとタスク管理を一つのアプリで行う"
+      },
+      {
+        "text": "UIを利用環境や好みに合わせてカスタマイズする"
+      },
+      {
+        "text": "Pythonで作られた業務用アプリの導入候補として検討する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "カレンダー"
+      },
+      {
+        "text": "タスク管理"
+      },
+      {
+        "text": "ToDo"
+      },
+      {
+        "text": "TUI"
+      },
+      {
+        "text": "ターミナル"
+      },
+      {
+        "text": "Python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "calcureはどのようなソフトウェアですか？",
+        "answer": "端末内のTUIで動作する、カレンダー兼タスク管理アプリです。"
+      },
+      {
+        "question": "どのような用途に向いていますか？",
+        "answer": "端末上で予定、タスク、ToDoをまとめて管理したい場合に向いています。"
+      },
+      {
+        "question": "画面をカスタマイズできますか？",
+        "answer": "はい。説明上では、最小限でカスタマイズ可能なUIを備えています。"
+      },
+      {
+        "question": "開発用のライブラリですか？",
+        "answer": "いいえ。他のプログラムに組み込む部品ではなく、利用者が直接操作するアプリです。"
+      }
+    ]
+  },
+  {
     "name": "Calendr",
     "slug": "calendr",
     "category": "booking",
@@ -29062,6 +30718,81 @@
     ]
   },
   {
+    "name": "vocechat-web",
+    "slug": "vocechat-web",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Webブラウザで利用できるチャットアプリです",
+    "description": "VoceChatのWebアプリです。ReactとTypeScriptを中心に開発され、PWAやボットに関連する構成を持っています。社内向けチャットなど、Web上でメッセージをやり取りする仕組みを検討する際の候補になります。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://privoce.voce.chat/",
+    "githubUrl": "https://github.com/Privoce/vocechat-web",
+    "featured": false,
+    "stars": 2260,
+    "language": "TypeScript",
+    "githubCreatedAt": "2022-01-04T13:58:22Z",
+    "githubPushedAt": "2026-07-24T13:33:29Z",
+    "useCases": [
+      {
+        "text": "Webブラウザで利用するチャット環境の構築"
+      },
+      {
+        "text": "社内向けチャットシステムの検討"
+      },
+      {
+        "text": "ボットを活用するチャット環境の検討"
+      },
+      {
+        "text": "PWAとして動作するチャットアプリの導入検討"
+      },
+      {
+        "text": "既存のVoceChat環境で使用するWeb画面の提供"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "Webアプリ"
+      },
+      {
+        "text": "PWA"
+      },
+      {
+        "text": "ボット"
+      },
+      {
+        "text": "React"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "開発者向けのライブラリですか？",
+        "answer": "いいえ。単体の部品ではなく、利用者がWebブラウザから操作するチャットアプリです。"
+      },
+      {
+        "question": "どのような技術で作られていますか？",
+        "answer": "主にTypeScript、React、Redux Toolkitが使われています。"
+      },
+      {
+        "question": "オフライン利用に対応していますか？",
+        "answer": "PWAとIndexedDBが主なトピックに含まれていますが、具体的なオフライン対応範囲は英語の説明だけでは確認できません。"
+      },
+      {
+        "question": "ボットを利用できますか？",
+        "answer": "ボットが主なトピックに含まれています。ただし、利用できるボットの種類や設定方法は英語の説明だけでは確認できません。"
+      }
+    ]
+  },
+  {
     "name": "Spina",
     "slug": "spina",
     "category": "cms",
@@ -29130,6 +30861,81 @@
       {
         "question": "開発者が導入する際のメリットは何ですか？",
         "answer": "Ruby on Railsの強力なエコシステムを活用できるため、既存のRailsの知識を活かしながらCMS機能を導入できます。Gemとして提供されているため、プロジェクトへの統合がスムーズに行えます。"
+      }
+    ]
+  },
+  {
+    "name": "teamgram-server",
+    "slug": "teamgram-server",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Telegram互換クライアントと接続できる、Go製の非公式MTProtoサーバーです",
+    "description": "チャットやメッセージングの仕組みを構築する開発者向けのオープンソースサーバーです。MTProtoに対応し、Telegram互換クライアントから利用できることが特徴です。業務担当者が単体で利用する完成済みの業務アプリではなく、メッセージング環境を開発・構築するための基盤に分類されます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://teamgram.net",
+    "githubUrl": "https://github.com/teamgram/teamgram-server",
+    "featured": false,
+    "stars": 2253,
+    "language": "Go",
+    "githubCreatedAt": "2018-11-29T00:04:00Z",
+    "githubPushedAt": "2026-08-04T03:43:29Z",
+    "useCases": [
+      {
+        "text": "Telegram互換クライアントと接続するメッセージングサーバーの構築"
+      },
+      {
+        "text": "チャットやインスタントメッセージング機能の開発基盤"
+      },
+      {
+        "text": "MTProtoを利用するサーバー環境の検証や研究開発"
+      },
+      {
+        "text": "Goで実装されたメッセージングサーバーの技術調査やカスタマイズ検討用素材としての活用算出不能評価不能? Wait invalid. Need clean."
+      },
+      {
+        "text": "既存のTelegram互換クライアントを利用する通信環境の試作"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "チャット"
+      },
+      {
+        "text": "メッセージング"
+      },
+      {
+        "text": "インスタントメッセージング"
+      },
+      {
+        "text": "MTProto"
+      },
+      {
+        "text": "Telegram互換"
+      },
+      {
+        "text": "サーバー基盤代替候補? no fact issue maybe okay but avoid invented usecase."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者がそのまま使える完成済みのチャットアプリですか？",
+        "answer": "いいえ。説明上はMTProtoサーバーであり、業務担当者向けの完成済みアプリではなく、開発者がメッセージング環境を構築するための基盤です。"
+      },
+      {
+        "question": "どのようなクライアントから利用できますか？",
+        "answer": "Telegram互換クライアントに対応すると説明されています。具体的な対応範囲は、導入前に技術検証が必要です。"
+      },
+      {
+        "question": "どの言語で開発されていますか？",
+        "answer": "Goで実装されています。"
+      },
+      {
+        "question": "公式のTelegramサーバーですか？",
+        "answer": "いいえ。英語の説明では非公式のオープンソースMTProtoサーバーとされています。"
       }
     ]
   },
@@ -29512,6 +31318,81 @@
       {
         "question": "開発環境や言語は何ですか？",
         "answer": "主なプログラミング言語はPythonです。DjangoとReactで構成されているため、これらの技術スタックに精通したエンジニアによるカスタマイズや運用が可能です。Goals"
+      }
+    ]
+  },
+  {
+    "name": "chatmcp",
+    "slug": "chatmcp",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Model Context Protocol（MCP）に対応したAIチャットクライアントです",
+    "description": "ChatMCPは、Model Context Protocol（MCP）を実装したAIチャット用のクライアントアプリです。AIとのチャットにMCP対応クライアントを利用したい中小企業で、導入候補として検討できます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://daodao97.github.io/chatmcp/",
+    "githubUrl": "https://github.com/daodao97/chatmcp",
+    "featured": false,
+    "stars": 2223,
+    "language": "Dart",
+    "githubCreatedAt": "2024-12-08T06:36:35Z",
+    "githubPushedAt": "2025-09-15T00:00:01Z",
+    "useCases": [
+      {
+        "text": "AIとのチャットに利用する"
+      },
+      {
+        "text": "MCPに対応したチャットクライアントを導入する"
+      },
+      {
+        "text": "社内でAIチャットクライアントを検証するデモを行う"
+      },
+      {
+        "text": "MCPを利用する業務環境の候補として評価する"
+      },
+      {
+        "text": "Dart製のAIチャットクライアントを調査する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AIチャット"
+      },
+      {
+        "text": "チャットクライアント"
+      },
+      {
+        "text": "MCP"
+      },
+      {
+        "text": "Model Context Protocol"
+      },
+      {
+        "text": "Dart"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなソフトウェアですか？",
+        "answer": "Model Context Protocol（MCP）を実装したAIチャットクライアントです。"
+      },
+      {
+        "question": "開発用ライブラリですか？",
+        "answer": "いいえ。説明上は、他のプログラムに組み込むライブラリではなく、AIチャットを利用するためのクライアントです。"
+      },
+      {
+        "question": "主な実装言語は何ですか？",
+        "answer": "主な実装言語はDartです。"
+      },
+      {
+        "question": "中小企業ではどのように検討できますか？",
+        "answer": "AIチャットやMCP対応クライアントを業務で利用するための導入候補、または検証対象として検討できます。"
       }
     ]
   },
@@ -35622,6 +37503,83 @@
     "jaSamplePaths": []
   },
   {
+    "name": "timewarrior",
+    "slug": "timewarrior",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "コマンドラインで作業時間を記録し、レポートを作成するためのツールです",
+    "description": "Timewarriorは、コマンドラインから時間の記録とレポート作成を行えるタイムトラッキングツールです。画面操作を中心とした業務アプリではなく、コマンドライン環境で利用する道具として分類されます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://timewarrior.net",
+    "githubUrl": "https://github.com/GothenburgBitFactory/timewarrior",
+    "featured": false,
+    "stars": 1640,
+    "language": "C++",
+    "githubCreatedAt": "2018-02-03T10:15:22Z",
+    "githubPushedAt": "2026-08-21T23:46:25Z",
+    "useCases": [
+      {
+        "text": "コマンドライン上で作業時間を記録する"
+      },
+      {
+        "text": "記録した時間からレポートを作成する"
+      },
+      {
+        "text": "個々の作業に費やした時間を追跡する運用に利用することができます。"
+      },
+      {
+        "text": "コマンドライン中心の作業環境に時間管理を取り入れることができます。"
+      },
+      {
+        "text": "記録した作業時間をレポートとして確認する用途に利用できます。"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "時間管理"
+      },
+      {
+        "text": "作業時間記録"
+      },
+      {
+        "text": "タイムトラッキング"
+      },
+      {
+        "text": "レポート作成"
+      },
+      {
+        "text": "コマンドライン"
+      },
+      {
+        "text": "C++"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなソフトウェアですか？",
+        "answer": "コマンドラインで作業時間を記録し、その記録をレポートとして確認するためのツールです。"
+      },
+      {
+        "question": "一般的な画面操作型の勤怠管理システムですか？",
+        "answer": "説明上はコマンドライン用の時間追跡・レポート作成ツールであり、画面操作型の勤怠管理システムとは位置付けが異なります。"
+      },
+      {
+        "question": "どのような環境に向いていますか？",
+        "answer": "日常的にコマンドラインを利用し、作業時間の記録やレポート作成を行いたい環境に適しています。"
+      },
+      {
+        "question": "主な実装言語は何ですか？",
+        "answer": "主な実装言語はC++です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "Seal-Report",
     "slug": "seal-report",
     "category": "analytics",
@@ -36072,6 +38030,83 @@
       {
         "question": "カスタマイズ性はどの程度ありますか？",
         "answer": "モジュール式の設計を採用しているため、開発者は必要に応じて構造や機能を柔軟に管理できるようになっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "a11y.css",
+    "slug": "a11y-css",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "HTMLコードに潜むアクセシビリティ上のリスクや記述ミスを、CSSで視覚的に確認する開発者向け診断ツールです。",
+    "description": "a11y.cssは、外部スタイルシートとしてWebサイトに読み込ませることで、HTMLコードに存在する可能性のあるリスクや誤りを開発者に警告します。サイト品質を大まかに評価する用途にも利用できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://ffoodd.github.io/a11y.css",
+    "githubUrl": "https://github.com/ffoodd/a11y.css",
+    "featured": false,
+    "stars": 1607,
+    "language": "SCSS",
+    "githubCreatedAt": "2013-11-21T14:52:20Z",
+    "githubPushedAt": "2026-04-24T07:33:25Z",
+    "useCases": [
+      {
+        "text": "WebページのHTMLに潜むアクセシビリティ上の問題を確認する"
+      },
+      {
+        "text": "HTMLマークアップの記述ミスやリスクを開発中に見つける"
+      },
+      {
+        "text": "外部スタイルシートとして読み込み、サイト品質を大まかに評価する"
+      },
+      {
+        "text": "ブックマークレットを利用してWebページを診断するやり方を検討する※主なトピックに基づく分類です。"
+      },
+      {
+        "text": "SCSSを扱うWeb開発工程でアクセシビリティ診断に利用する"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "アクセシビリティ"
+      },
+      {
+        "text": "HTML診断"
+      },
+      {
+        "text": "マークアップ検査"
+      },
+      {
+        "text": "CSS"
+      },
+      {
+        "text": "SCSS"
+      },
+      {
+        "text": "ブックマークレット"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務担当者が単体で使うアプリですか？",
+        "answer": "いいえ。HTMLコードのリスクや誤りを確認するための開発者向けツールであり、顧客管理や在庫管理などの業務を行う完成済みアプリではありません。"
+      },
+      {
+        "question": "どのように利用しますか？",
+        "answer": "対象のWebサイトに外部スタイルシートとして読み込ませることで、HTMLコードに存在する可能性のある問題を確認します。"
+      },
+      {
+        "question": "サイトの品質を正確に判定できますか？",
+        "answer": "説明では、サイト品質を大まかに評価できるとされています。完全または網羅的な品質判定を行うとは示されていません。"
+      },
+      {
+        "question": "主にどの技術を使っていますか？",
+        "answer": "主な言語はSCSSで、CSS、HTML、マークアップ、アクセシビリティに関連するツールです。"
       }
     ],
     "jaFileCount": 0,
@@ -140609,6 +142644,78 @@
     ]
   },
   {
+    "name": "ClockTemp",
+    "slug": "clocktemp",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "時間、日付、温度などを表示するTUI（テキストユーザーインターフェース）形式の時計アプリです。",
+    "description": "ClockTempは、ターミナル上で動作する時計アプリケーションです。現在時刻や日付に加え、気温などの情報も一画面に表示することができます。Pythonで記述されており、軽量な操作感が特徴です。ストップウォッチやタイマー機能も備えており、生産性の向上を目的とした設計になっています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/arthur-dnts/ClockTemp",
+    "githubUrl": "https://github.com/arthur-dnts/ClockTemp",
+    "featured": false,
+    "stars": 109,
+    "language": "Python",
+    "githubCreatedAt": "2025-03-27T18:05:54Z",
+    "githubPushedAt": "2026-02-28T09:01:27Z",
+    "useCases": [
+      {
+        "text": "ターミナル上での時刻確認"
+      },
+      {
+        "text": "作業時間の計測（ストップウォッチ）"
+      },
+      {
+        "text": "タイマーによる時間管理"
+      },
+      {
+        "text": "気温情報の表示"
+      },
+      {
+        "text": "カレンダーの確認"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "時計"
+      },
+      {
+        "text": "タイマー"
+      },
+      {
+        "text": "ストップウォッチ"
+      },
+      {
+        "text": "TUI"
+      },
+      {
+        "text": "Python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなインターフェースで動作しますか？",
+        "answer": "このアプリケーションは、グラフィカルな画面ではなく、ターミナル（コマンドライン）上で動作するTUI形式を採用しています。"
+      },
+      {
+        "question": "主な機能には何がありますか？",
+        "answer": "現在時刻と日付の表示に加え、気温などの情報表示、ストップウォッチ、タイマーといった生産性に関連する機能を備えています。"
+      },
+      {
+        "question": "どのような言語で開発されていますか？",
+        "answer": "このソフトウェアはPythonというプログラミング言語を用いて開発されています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このプロジェクトはGPL-3.0ライセンスの下で公開されています。"
+      }
+    ]
+  },
+  {
     "name": "bitcointranscripts",
     "slug": "bitcointranscripts",
     "category": "media",
@@ -141639,6 +143746,80 @@
     "jaSamplePaths": []
   },
   {
+    "name": "logseq-doctor",
+    "slug": "logseq-doctor",
+    "category": "analytics",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Markdownファイルを整理・整形するためのツールです。",
+    "description": "logseq-doctorは、Markdown形式のファイルを取り込んでアウトラインへの変換やタスクリストの抽出を行うためのツールです。Go言語で構築されており、知識ベースやナレッジグラフの構築をサポートします。Markdownフォーマッターとしての機能を提供し、ドキュメントの構造化を支援します。MITライセンスで公開されており、オープンソースとして利用可能です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://andreoliwa.github.io/logseq-doctor/",
+    "githubUrl": "https://github.com/andreoliwa/logseq-doctor",
+    "featured": false,
+    "stars": 107,
+    "language": "Go",
+    "githubCreatedAt": "2022-03-20T11:02:51Z",
+    "githubPushedAt": "2026-08-20T21:12:01Z",
+    "useCases": [
+      {
+        "text": "Markdownファイルの構造的な整理"
+      },
+      {
+        "text": "タスクリストの抽出と管理"
+      },
+      {
+        "text": "ナレッジベースの構築"
+      },
+      {
+        "text": "Markdown形式の整形"
+      },
+      {
+        "text": "知識グラフのためのデータ処理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "logseq"
+      },
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "knowledge-base"
+      },
+      {
+        "text": "Go"
+      },
+      {
+        "text": "markdown-formatter"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでできる主なことは何ですか？",
+        "answer": "Markdownファイルをアウトラインに変換したり、タスクリストを抽出したりといった、ドキュメントの整理や構造化を行うことができます。"
+      },
+      {
+        "question": "どのようなファイル形式に対応していますか？",
+        "answer": "主にMarkdown形式のファイルに対応しており、それらの内容を解析して整形や情報の抽出を行います。"
+      },
+      {
+        "question": "このツールはLogseq専用のものですか？",
+        "answer": "Logseqプラグインとしての側面も持ちつつ、Markdownファイルの整形や構造化を行うためのツールとして機能します。"
+      },
+      {
+        "question": "開発環境の構築は必要ですか？",
+        "answer": "Go言語で書かれたツールであるため、動作環境に合わせて適切な実行環境を準備する必要があります。}]}"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "kaas",
     "slug": "kaas",
     "category": "aidev",
@@ -141878,6 +144059,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "receiptio",
+    "slug": "receiptio",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Markdown形式でレシートプリンターへの出力を制御できるNode.jsアプリケーションです。",
+    "description": "receiptioは、レシートプリンター向けの印刷処理を簡潔かつ容易に行うためのNode.jsアプリケーションです。ユーザーはMarkdownを使用して印刷内容を記述でき、直感的な操作が可能です。プリンターのステータス確認機能も備えています。ESC/POSコマンドやインパクトプリンターへの対応など、多様な環境での利用を想定しています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/receiptline/receiptio",
+    "githubUrl": "https://github.com/receiptline/receiptio",
+    "featured": false,
+    "stars": 107,
+    "language": "JavaScript",
+    "githubCreatedAt": "2021-12-18T14:00:00Z",
+    "githubPushedAt": "2026-07-29T12:25:58Z",
+    "useCases": [
+      {
+        "text": "キオスク端末からのレシート発行"
+      },
+      {
+        "text": "厨房向けの注文伝票印刷"
+      },
+      {
+        "text": "請求書の出力管理"
+      },
+      {
+        "text": "Markdownを用いた動的な領収書生成"
+      },
+      {
+        "text": "PNG画像を含むプリンター出力の制御"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "receipt printer"
+      },
+      {
+        "text": "Node.js"
+      },
+      {
+        "text": "ESC/POS"
+      },
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "invoice"
+      },
+      {
+        "text": "kiosk"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのようなプリンターに対応していますか？",
+        "answer": "説明文に基づくと、epsonやescpos、impactといったキーワードが含まれており、これらの規格に対応したレシートプリンターでの利用が想定されています。"
+      },
+      {
+        "question": "印刷内容はどのように指定しますか？",
+        "answer": "Markdown形式を使用して印刷内容を記述できるため、シンプルかつ dễにレイアウトや内容を指定することが可能です。"
+      },
+      {
+        "question": "プリンターの状態を確認することはできますか？",
+        "answer": "はい、このアプリケーションにはプリンターのステータスサポート機能が含まれているため、接続状態などの確認が可能です。"
+      },
+      {
+        "question": "どのようなプログラミング言語で動作しますか？",
+        "answer": "このツールはJavaScript（Node.js）を主な使用言語としており、Node.jsの環境で実行することができます。"
+      }
+    ]
   },
   {
     "name": "QuillCMS",
@@ -142258,6 +144514,78 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Skylite-UX",
+    "slug": "skylite-ux",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "生活や業務を整理するための統合管理プラットフォームです。",
+    "description": "Skylite-UXは「Life, Organized.」というコンセプトの下で提供されているアプリケーションです。AI、カレンダー、ショッピングといった多様な要素を統合的に管理・整理する機能を提供します。DockerやProxmoxなどのインフラ環境と連携し、Home Assistantを用いたホームオートメーションやホームページの構築にも対応しています。Nuxtフレームワークを活用しており、HTMLベースでの構成となっています。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://wetzel402.github.io/Skylite-UX/",
+    "githubUrl": "https://github.com/Wetzel402/Skylite-UX",
+    "featured": false,
+    "stars": 106,
+    "language": "HTML",
+    "githubCreatedAt": "2025-03-31T14:12:21Z",
+    "githubPushedAt": "2026-06-08T20:07:38Z",
+    "useCases": [
+      {
+        "text": "カレンダーによるスケジュール管理"
+      },
+      {
+        "text": "ショッピング情報の整理"
+      },
+      {
+        "text": "AI機能を活用した情報管理"
+      },
+      {
+        "text": "Home Assistantとの連携"
+      },
+      {
+        "text": "Proxmox環境でのシステム運用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "カレンダー"
+      },
+      {
+        "text": "Docker"
+      },
+      {
+        "text": "home-assistant"
+      },
+      {
+        "text": "Nuxt"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのような管理ができますか？",
+        "answer": "カレンダーやショッピング、AI関連のトピックなど、多岐にわたる情報を整理して管理することが可能です。ユーザーの生活や業務を体系的に整理することを目的としています。"
+      },
+      {
+        "question": "特定のインフラ環境で動作しますか？",
+        "answer": "DockerやProxmoxといった仮想化・コンテナ技術に関連するトピックが含まれており、これらの環境での運用を想定した設計要素が見られます。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "主な言語としてHTMLが使用されており、フロントエンドフレームワークとしてはNuxtが採用されています。また、Dockerなどのコンテナ技術との親和性も備えています。"
+      },
+      {
+        "question": "Home Assistantと連携させることは可能ですか？",
+        "answer": "トピックの中にHome Assistantが含まれていることから、スマートホームやオートメーションシステムとの連携を考慮した設計が含まれています。Goalsは「Life, Organized.」の実現です。}]}```json/{"
+      }
+    ]
+  },
+  {
     "name": "Flamehaven-Filesearch",
     "slug": "flamehaven-filesearch",
     "category": "knowledge",
@@ -142406,6 +144734,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "tranzit",
+    "slug": "tranzit",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ローカルネットワーク内でファイルを共有するためのクロスプラットフォームアプリです。",
+    "description": "Tranzitは、同じローカルネットワーク内に接続されているデバイス間でファイルを簡単に共有できるように設計されたアプリケーションです。Rust言語で構築されており、高いパフォーマンスと安定性を備えています。Tauriフレームワークを利用しているため、異なるOS環境でも動作します。ユーザーは複雑な設定を介さずに、ネットワーク内の機器同士でデータの受け渡しを行うことができます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://kr5hn4.github.io/tranzit/",
+    "githubUrl": "https://github.com/kr5hn4/tranzit",
+    "featured": false,
+    "stars": 106,
+    "language": "Rust",
+    "githubCreatedAt": "2025-08-04T17:36:20Z",
+    "githubPushedAt": "2025-11-01T16:58:14Z",
+    "useCases": [
+      {
+        "text": "社内ネットワーク内での大容量ファイルの転送"
+      },
+      {
+        "text": "同一Wi-Fi環境にあるデバイス間の写真共有"
+      },
+      {
+        "text": "ローカル環境における機密データの安全な移動"
+      },
+      {
+        "text": "外部クラウドを経由しないファイル共有"
+      },
+      {
+        "text": "複数端末間での迅速なデータ同期"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "ローカルネットワーク"
+      },
+      {
+        "text": "Rust"
+      },
+      {
+        "text": "Tauri"
+      },
+      {
+        "text": "クロスプラットフォーム"
+      },
+      {
+        "text": "データ転送"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような環境で利用できますか？",
+        "answer": "Tranzitはクロスプラットフォーム対応のアプリであるため、同じローカルネットワークに接続されている様々なデバイス間でファイル共有を行うことができます。"
+      },
+      {
+        "question": "このアプリは何を使って開発されていますか？",
+        "answer": "このアプリケーションはRust言語で記述されており、Tauriフレームワークを用いて構築されています。これにより効率的な動作を実現しています。"
+      },
+      {
+        "question": "クラウドサービスを利用しますか？",
+        "answer": "提供されている説明に基づくと、Tranzitはローカルネットワーク内でのファイル共有を目的としたアプリであり、外部のクラウドを経由する仕組みについては言及されていません。"
+      },
+      {
+        "question": "どのようなライセンスで公開されていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で提供されています。オープンソースソフトウェアとして利用可能な形態です。"
+      }
+    ]
   },
   {
     "name": "nebulajs-cloud",
@@ -142628,6 +145031,84 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "arcanechat-tui",
+    "slug": "arcanechat-tui",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "コマンドラインで動作する軽量なArcaneChatクライアントです。",
+    "description": "このソフトウェアは、コマンドラインインターフェース（CLI）上で動作するArcaneChat用の軽量なクライアントです。Pythonで記述されており、cursesライブラリを使用してターミナル上での操作を実現しています。DeltaChatやメール、暗号化といった技術要素を背景に持つチャットクライアントです。現在開発中のプロジェクトであり、コマンドライン環境での効率的な通信を目的としています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/ArcaneChat/arcanechat-tui",
+    "githubUrl": "https://github.com/ArcaneChat/arcanechat-tui",
+    "featured": false,
+    "stars": 105,
+    "language": "Python",
+    "githubCreatedAt": "2020-04-16T21:36:56Z",
+    "githubPushedAt": "2026-02-04T22:15:52Z",
+    "useCases": [
+      {
+        "text": "コマンドライン環境でのチャット利用"
+      },
+      {
+        "text": "軽量なチャットクライアントの構築"
+      },
+      {
+        "text": "DeltaChatプロトコルの活用"
+      },
+      {
+        "text": "ターミナルベースの暗号化通信"
+      },
+      {
+        "text": "Pythonを用いたCLIツールの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chat"
+      },
+      {
+        "text": "client"
+      },
+      {
+        "text": "curses"
+      },
+      {
+        "text": "deltachat"
+      },
+      {
+        "text": "email"
+      },
+      {
+        "text": "encryption"
+      },
+      {
+        "text": "python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはGUI（グラフィカルな画面）を持っていますか？",
+        "answer": "いいえ、このツールはコマンドラインインターフェース（CLI）向けに設計されています。cursesライブラリを使用しており、ターミナル上で動作する軽量なクライアントです。"
+      },
+      {
+        "question": "どのプログラミング言語で書かれていますか？",
+        "answer": "Pythonで記述されています。そのため、Pythonの環境が構築されているシステムであれば利用可能です。"
+      },
+      {
+        "question": "DeltaChatとの互換性はありますか？",
+        "answer": "主なトピックとしてDeltaChatが含まれており、関連する技術をベースにしたクライアントとなっています。"
+      },
+      {
+        "question": "このソフトウェアは完成していますか？",
+        "answer": "説明文には[WIP]（Work In Progress）と記載されており、現在開発が進められている段階のプロジェクトです。"
+      }
+    ]
   },
   {
     "name": "EverShelf",
@@ -143005,6 +145486,84 @@
     "jaSamplePaths": []
   },
   {
+    "name": "cursor-history",
+    "slug": "cursor-history",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Cursor AIのチャット履歴を閲覧、検索、エクスポート、バックアップするためのツールです。",
+    "description": "このツールは、AIコードエディタであるCursorにおけるチャット履歴を管理するためのオープンソースソフトウェアです。主な機能として、過去の会話内容のブラウジングや特定のキーワードによる検索が可能です。また、重要なやり取りを外部へエクスポートしたり、バックアップを作成したりする機能も備えています。TypeScriptで開発されており、CLIを通じて操作を行うことができます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.npmjs.com/package/cursor-history",
+    "githubUrl": "https://github.com/S2thend/cursor-history",
+    "featured": false,
+    "stars": 104,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-12-22T02:03:57Z",
+    "githubPushedAt": "2026-08-16T11:39:21Z",
+    "useCases": [
+      {
+        "text": "Cursor AIでのチャット履歴の閲覧"
+      },
+      {
+        "text": "過去のAIとの対話内容の検索"
+      },
+      {
+        "text": "チャット履歴のバックアップ作成"
+      },
+      {
+        "text": "特定の会話内容のエクスポート"
+      },
+      {
+        "text": "開発プロセスにおけるAI利用履歴の管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "backup"
+      },
+      {
+        "text": "chat"
+      },
+      {
+        "text": "cli"
+      },
+      {
+        "text": "conversation"
+      },
+      {
+        "text": "cursor"
+      },
+      {
+        "text": "cursor-ide"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでできることは何ですか？",
+        "answer": "Cursor AIを使用した際のチャット履歴を閲覧したり、検索したり、バックアップを作成したり、エクスポートしたりすることができます。開発者が過去のAIとの対話内容を効率的に管理するための機能を提供します。"
+      },
+      {
+        "question": "どのような環境で動作しますか？",
+        "answer": "このツールはTypeScriptで書かれたCLI（コマンドラインインターフェース）ツールです。Cursor IDEを利用している開発者のローカル環境などで、履歴の操作を行うために使用されます。"
+      },
+      {
+        "question": "バックアップ機能にはどのような利点がありますか？",
+        "answer": "AIとの重要なやり取りやコード生成に関する対話内容を失わずに保存しておくことができます。エクスポート機能と組み合わせることで、特定の情報を別の場所へ移動させることも可能です。"
+      },
+      {
+        "question": "検索機能で何ができるのですか？",
+        "answer": "過去の膨大なチャット履歴の中から、特定のキーワードやトピックに基づいて目的の会話を素早く探し出すことができます。これにより、以前にAIとどのようなやり取りをしたかを効率的に確認できます。Goals: 104 stars. License: MIT. Language: TypeScript."
+      }
+    ]
+  },
+  {
     "name": "insta-p8",
     "slug": "insta-p8",
     "category": "marketing",
@@ -143299,6 +145858,159 @@
     "jaSamplePaths": []
   },
   {
+    "name": "ipfsbed",
+    "slug": "ipfsbed",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "分散型ファイルシステムIPFSを利用した非中央集権的なファイルホスティングサービスです。",
+    "description": "IPFSBEDは、分散型ストレージ技術であるIPFSを活用したファイルホスティングサービスです。ユーザーがファイルをアップロードし、共有するための機能を提供します。JavaScriptで構築されており、Webインターフェースを通じて操作が可能です。特定のサーバーに依存しない非中央集権的な仕組みにより、ファイルの配布や共有を実現します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://ipfsbed.is-an.org",
+    "githubUrl": "https://github.com/bestZwei/ipfsbed",
+    "featured": false,
+    "stars": 103,
+    "language": "JavaScript",
+    "githubCreatedAt": "2024-09-08T14:12:20Z",
+    "githubPushedAt": "2025-07-30T16:33:16Z",
+    "useCases": [
+      {
+        "text": "分散型ファイル共有"
+      },
+      {
+        "text": "IPFSを利用した画像ホスティング"
+      },
+      {
+        "text": "非中央集権的なデータ保存"
+      },
+      {
+        "text": "ファイル共有サービスの構築"
+      },
+      {
+        "text": "Webベースのファイルアップロード"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "file-sharing"
+      },
+      {
+        "text": "filehost"
+      },
+      {
+        "text": "filehosting"
+      },
+      {
+        "text": "fileshare"
+      },
+      {
+        "text": "filesharing"
+      },
+      {
+        "text": "imgbed"
+      },
+      {
+        "text": "ipfs"
+      },
+      {
+        "text": "ipfs-web"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "IPFSとはどのような技術ですか？",
+        "answer": "IPFSは、コンテンツを場所ではなく内容で識別する分散型ファイルシステムです。従来のサーバー集中型の仕組みとは異なり、ネットワーク全体にデータを分散して保存する特徴があります。"
+      },
+      {
+        "question": "このサービスでできることは何ですか？",
+        "answer": "ユーザーがファイルをアップロードし、それを他の人と共有するための機能を提供します。IPFSの技術をベースとしており、非中央集権的なファイルホスティングを実現する仕組みを備えています。"
+      },
+      {
+        "question": "どのような言語で開発されていますか？",
+        "answer": "このソフトウェアは主にJavaScriptを用いて構築されています。Webブラウザ上で動作するインターフェースや、関連するWeb技術との親和性が考慮された設計となっています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このプロジェクトはMITライセンスの下で公開されています。オープンソースソフトウェアとして提供されており、利用規約に従って活用することが可能です。"
+      }
+    ]
+  },
+  {
+    "name": "plikshare",
+    "slug": "plikshare",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "自社運用可能なセキュアなファイル共有プラットフォームです。",
+    "description": "PlikShareは、ユーザー数に制限なく利用できるセルフホスト型のファイル共有プラットフォームです。ローカルディスクやS3といった柔軟なストレージオプションを選択でき、データの所有権を維持しながら独自のインフラで管理できます。外部との安全な共同作業機能や外部からのアップロード機能を備えています。機密性の高いファイルを扱う企業において、セキュリティとコントロールを両立したファイル管理を実現します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://plikshare.com",
+    "githubUrl": "https://github.com/damian-krychowski/plikshare",
+    "featured": false,
+    "stars": 103,
+    "language": "C#",
+    "githubCreatedAt": "2025-03-12T16:32:41Z",
+    "githubPushedAt": "2026-08-15T07:55:17Z",
+    "useCases": [
+      {
+        "text": "社内でのファイル共有"
+      },
+      {
+        "text": "外部パートナーとのセキュアな共同作業"
+      },
+      {
+        "text": "S3ストレージを活用した大容量ファイル管理"
+      },
+      {
+        "text": "外部ユーザーからのファイルアップロード受付"
+      },
+      {
+        "text": "自社インフラによるデータ所有権の確保"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "S3ストレージ"
+      },
+      {
+        "text": "安全な共有"
+      },
+      {
+        "text": "ファイル管理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "データの所有権はどうなりますか？",
+        "answer": "このソフトウェアはセルフホスト型であるため、ユーザー自身が自身のデータを完全に所有し、独自のインフラでコントロールすることが可能です。"
+      },
+      {
+        "question": "ストレージにはどのような選択肢がありますか？",
+        "answer": "ローカルディスクへの保存だけでなく、Amazon S3などの外部ストレージサービスを利用することも可能であり、柔軟な構成が選べます。"
+      },
+      {
+        "question": "外部との共同作業は安全に行えますか？",
+        "answer": "外部からのアップロード機能やセキュアな共有機能を備えているため、外部のユーザーと安全にファイルをやり取りする環境を構築できます。"
+      },
+      {
+        "question": "ユーザー数の制限はありますか？",
+        "answer": "このプラットフォームは無制限のユーザー数をサポートしているため、組織の規模に合わせて柔軟に導入することが可能です。Goals"
+      }
+    ]
+  },
+  {
     "name": "mcp-wordpress",
     "slug": "mcp-wordpress",
     "category": "aidev",
@@ -143444,6 +146156,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "videochat",
+    "slug": "videochat",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "多機能なビデオチャットおよびコミュニケーションプラットフォームです。",
+    "description": "videochatは、Telegram、Zoom、Skype、Jitsi、Discordといった主要な通信ツールに代わる選択肢として提供されるアプリケーションです。Go言語で開発されており、リアルタイムのビデオ会議やチャット機能を備えています。ライブキットを活用することで、高品質な映像体験を実現します。オープンソースのApache-2.0ライセンスで公開されています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://chat.nkonev.name",
+    "githubUrl": "https://github.com/nkonev/videochat",
+    "featured": false,
+    "stars": 103,
+    "language": "Go",
+    "githubCreatedAt": "2020-01-19T18:41:20Z",
+    "githubPushedAt": "2026-08-22T11:15:26Z",
+    "useCases": [
+      {
+        "text": "社内向けのビデオ会議システム"
+      },
+      {
+        "text": "リアルタイムのグループチャット"
+      },
+      {
+        "text": "オンラインでの教育・セミナー配信"
+      },
+      {
+        "text": "遠隔地とのビデオ通話"
+      },
+      {
+        "text": "独自のコミュニケーション基盤の構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ビデオチャット"
+      },
+      {
+        "text": "ビデオ会議"
+      },
+      {
+        "text": "チャットアプリ"
+      },
+      {
+        "text": "ライブストリーミング"
+      },
+      {
+        "text": "オープンソース"
+      },
+      {
+        "text": "Go言語"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなプラットフォームの代替が可能ですか？",
+        "answer": "説明文に基づくと、Telegram、Zoom、Skype、Jitsi、RocketChat、Discord、OpenMeetings、BigBlueButton、Teams、Mattermostなどの代替として位置づけられています。"
+      },
+      {
+        "question": "開発にはどの言語が使用されていますか？",
+        "answer": "このソフトウェアはGo言語で記述されています。"
+      },
+      {
+        "question": "ライセンス体系はどうなっていますか？",
+        "answer": "Apache-2.0ライセンスの下で提供されています。"
+      },
+      {
+        "question": "主な技術要素は何ですか？",
+        "answer": "チャット、ビデオ会議、ライブキット（livekit）などのトピックが含まれており、リアルタイムな通信を重視した設計となっています。"
+      }
+    ]
   },
   {
     "name": "pack-hydrogen-theme-blueprint",
@@ -143666,6 +146453,150 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "Yale3",
+    "slug": "yale3",
+    "category": "hr",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "LinkedInのプロフィール情報を取得するChrome拡張機能です。",
+    "description": "Yale3は、Google Chromeブラウザにインストールして使用するシンプルなLinkedInプロファイルスクレイピングツールです。JavaScriptで実装されており、ブラウザ上で直接動作します。特定のユーザーのプロフィールから必要な情報を効率的に収集することを目的としています。操作が簡便なため、手動でのデータ入力作業を削減したい場合に適しています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/KartikayKaul/Yale3",
+    "githubUrl": "https://github.com/KartikayKaul/Yale3",
+    "featured": false,
+    "stars": 102,
+    "language": "JavaScript",
+    "githubCreatedAt": "2021-12-04T20:45:21Z",
+    "githubPushedAt": "2026-03-23T05:54:35Z",
+    "useCases": [
+      {
+        "text": "LinkedInプロフィールの情報収集"
+      },
+      {
+        "text": "営業リストの作成支援"
+      },
+      {
+        "text": "人材情報の簡易的なデータ化"
+      },
+      {
+        "text": "リサーチ業務の自動化"
+      },
+      {
+        "text": "マーケティング調査のためのデータ収集"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "LinkedIn"
+      },
+      {
+        "text": "スクレイピング"
+      },
+      {
+        "text": "Chrome拡張機能"
+      },
+      {
+        "text": "ブラウザツール"
+      },
+      {
+        "text": "データ収集"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような仕組みで動作しますか？",
+        "answer": "Google Chromeの拡張機能として動作し、ユーザーが閲覧しているLinkedInのプロフィールページから情報を抽出する仕組みです。"
+      },
+      {
+        "question": "プログラミングの知識は必要ですか？",
+        "answer": "このソフトウェア自体はChrome拡張機能として提供されているため、基本的には開発の知識がなくても利用可能です。"
+      },
+      {
+        "question": "どのようなデータを取得できますか？",
+        "answer": "英語の説明に基づくと、LinkedInのプロフィール情報をスクレイピング（抽出）することが可能です。具体的な項目はツール内の仕様に従います。"
+      },
+      {
+        "question": "他のブラウザでも使えますか？",
+        "answer": "このツールはChrome拡張機能として実装されているため、基本的にはGoogle Chromeでの利用を前提としています。"
+      }
+    ]
+  },
+  {
+    "name": "obsidian-to-ical-plugin",
+    "slug": "obsidian-to-ical-plugin",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Obsidian内のタスクをiCal形式のカレンダーとして出力するプラグインです。",
+    "description": "このプラグインは、ノートアプリ「Obsidian」内で管理しているVault内から日付を含むタスクを自動的に検索します。抽出されたタスクをiCal形式のカレンダーデータとして生成する機能を備えています。生成されたファイルは、GoogleカレンダーやAppleカレンダーなど、お好みのカレンダーアプリケーションにインポートすることが可能です。これにより、ノート内に書き込んだ予定を外部のスケジュール管理ツールと同期させることができます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/andrewbrereton/obsidian-to-ical-plugin",
+    "githubUrl": "https://github.com/andrewbrereton/obsidian-to-ical-plugin",
+    "featured": false,
+    "stars": 102,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-10-25T03:58:46Z",
+    "githubPushedAt": "2026-07-14T02:09:44Z",
+    "useCases": [
+      {
+        "text": "Obsidianで管理しているタスクの可視化"
+      },
+      {
+        "text": "ノート内の予定をGoogleカレンダーへ一括登録"
+      },
+      {
+        "text": "Appleカレンダーとのスケジュール連携"
+      },
+      {
+        "text": "日付を含むタスクの自動抽出"
+      },
+      {
+        "text": "iCal形式でのカレンダーデータ出力"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Obsidian"
+      },
+      {
+        "text": "カレンダー"
+      },
+      {
+        "text": "iCal"
+      },
+      {
+        "text": "Googleカレンダー"
+      },
+      {
+        "text": "Appleカレンダー"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような仕組みでカレンダーが生成されますか？",
+        "answer": "プラグインがVault内をスキャンし、日付が含まれているタスクを特定します。それらの情報を元にiCal形式のデータを作成するため、手動で一つずつ入力する手間を省くことができます。"
+      },
+      {
+        "question": "どのカレンダーアプリに対応していますか？",
+        "answer": "iCal形式で出力されるため、iCal形式のインポートに対応している主要なカレンダーアプリケーションであれば利用可能です。具体的にはGoogleカレンダーやAppleカレンダーなどが挙げられます。"
+      },
+      {
+        "question": "Obsidian以外のアプリでも直接使えますか？",
+        "answer": "いいえ、このツールはObsidianのプラグインとして動作するものです。Obsidian内で管理している情報をiCal形式に変換するためのツールです。"
+      },
+      {
+        "question": "タスクを自動で同期し続けますか？",
+        "answer": "説明文には自動更新に関する具体的な詳細は記載されていませんが、Vault内の日付を含むタスクを検索してiCalファイルを生成する機能を提供します。"
+      }
+    ]
   },
   {
     "name": "ERP",

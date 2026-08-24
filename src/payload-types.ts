@@ -171,6 +171,7 @@ export interface OssProject {
   brainUrl?: string | null;
   brainLabel?: string | null;
   demoUrl?: string | null;
+  buyUrl?: string | null;
   featured?: boolean | null;
   useCases: {
     text: string;
@@ -321,6 +322,7 @@ export interface OssProjectsSelect<T extends boolean = true> {
   brainUrl?: T;
   brainLabel?: T;
   demoUrl?: T;
+  buyUrl?: T;
   featured?: T;
   useCases?:
     | T
