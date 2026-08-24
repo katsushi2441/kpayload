@@ -869,5 +869,502 @@
       "krayin-crm"
     ],
     "note": "Sansanの価値は、名刺のデータ化を人の手で高い精度に仕上げていることと、全社の人脈が一つにつながることです。ここは枚数に応じた課金として続きます。当社のKurage AI Meishi Analysisは、その中核である「撮って投げるとAIが読み取り、人が承認して台帳に入る」部分を買い切りで自社サーバーに置くものです。読み取りの精度はAIに任せる分だけ落ちるので、承認の一手間は残ります。台帳を顧客管理まで広げるなら、EspoCRMやKrayinと組み合わせる形になります。名刺の枚数が多く、データ化の正確さを人手で担保したいならSansanを続けるほうが確実です。"
+  },
+  {
+    "slug": "misoca",
+    "name": "Misoca",
+    "kana": "ミソカ",
+    "vendor": "弥生株式会社",
+    "category": "accounting",
+    "volume": 33100,
+    "what": "見積書・納品書・請求書をブラウザで作って送れるサービス。個人事業主と小規模事業者に広く使われています。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "invoiceninja",
+      "akaunting",
+      "dolibarr",
+      "kinvoice",
+      "kbilling"
+    ],
+    "note": "Misocaは無料枠があり、月あたりの発行枚数が少ないうちは費用がほとんどかかりません。置き換えの動機は金額ではなく「請求データを自社に持ちたい」「発行の流れを自社の業務に合わせたい」場合です。弥生会計との連携を使っているなら、そこが切れる点も確認してください。"
+  },
+  {
+    "slug": "bill-one",
+    "name": "Bill One",
+    "kana": "ビルワン",
+    "vendor": "Sansan株式会社",
+    "category": "accounting",
+    "volume": 27100,
+    "what": "受け取った請求書をスキャンやメールで集約し、データ化して経理の処理につなげるサービス。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "invoiceninja",
+      "erpnext",
+      "dolibarr",
+      "kbilling"
+    ],
+    "note": "Bill Oneの価値は、あらゆる形式で届く請求書を人手も使ってデータ化するところにあります。オープンソースはソフトだけなので、受け取った請求書を読む作業は自社に残ります。AIで下書きを作る部分は当社で作れますが、確認は人が行う前提です。"
+  },
+  {
+    "slug": "tayori",
+    "name": "Tayori",
+    "kana": "タヨリ",
+    "vendor": "株式会社PR TIMES",
+    "category": "support",
+    "volume": 22200,
+    "what": "問い合わせフォーム、FAQ、アンケート、チャットをまとめて作れるカスタマーサポートのサービス。",
+    "ossCats": [
+      "support"
+    ],
+    "ossPicks": [
+      "formbricks",
+      "heyform",
+      "chatwoot",
+      "klchatbot"
+    ],
+    "note": "Tayoriは4つの機能が1つになっている点が便利さの源です。オープンソースで置き換えるとフォームとFAQとチャットが別々のソフトになり、管理画面も分かれます。使っている機能が1つだけなら置き換えやすく、全部使っているなら手間が増えます。"
+  },
+  {
+    "slug": "confluence",
+    "name": "Confluence",
+    "kana": "コンフルエンス",
+    "vendor": "Atlassian Pty Ltd",
+    "category": "knowledge",
+    "volume": 14800,
+    "what": "社内のドキュメントと議事録を蓄積・共有するwiki型のツール。Jiraと同じ会社が提供しています。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "outline",
+      "docmost",
+      "bookstack",
+      "wiki",
+      "affine"
+    ],
+    "note": "Confluenceの強みはJiraとの連携です。Jiraを使っていないなら、置き換えのハードルはぐっと下がります。ページ数が多い場合は移行の手間が最大の障壁になるので、まずエクスポートできる形式を確認してください。"
+  },
+  {
+    "slug": "recoru",
+    "name": "レコル",
+    "kana": "レコル",
+    "vendor": "中央システム株式会社",
+    "category": "hr",
+    "volume": 14800,
+    "what": "打刻、勤務表、休暇管理を行う勤怠管理のクラウドサービス。1人あたりの月額が抑えられています。",
+    "ossCats": [
+      "hr"
+    ],
+    "ossPicks": [
+      "kimai",
+      "horilla-hr",
+      "kkintai"
+    ],
+    "note": "レコルは1人あたりの単価が低いため、人数が少ないと置き換えの削減額も小さくなります。判断材料は金額より「自社の勤務ルール（変形労働、みなし、複数拠点）に合わせて計算を変えたいか」です。"
+  },
+  {
+    "slug": "contracts",
+    "name": "ContractS",
+    "kana": "コントラクツ",
+    "vendor": "ContractS株式会社",
+    "category": "esign",
+    "volume": 14800,
+    "what": "契約書の作成、審査依頼、締結、保管までを一つで扱う契約ライフサイクル管理のサービス。",
+    "ossCats": [
+      "esign"
+    ],
+    "ossPicks": [
+      "docuseal",
+      "documenso",
+      "opensign"
+    ],
+    "note": "ContractSは締結だけでなく、社内の審査ワークフローと契約書の管理台帳までを含みます。オープンソースの電子署名は締結の部分だけなので、審査の流れと台帳は別に作ることになります。法務部門が使っているなら置き換えは慎重に判断してください。"
+  },
+  {
+    "slug": "formrun",
+    "name": "formrun",
+    "kana": "フォームラン",
+    "vendor": "株式会社ベーシック",
+    "category": "support",
+    "volume": 12100,
+    "what": "問い合わせフォームを作り、届いた内容をかんばんで管理できるフォーム作成サービス。",
+    "ossCats": [
+      "support"
+    ],
+    "ossPicks": [
+      "formbricks",
+      "heyform",
+      "limesurvey"
+    ],
+    "note": "formrunの特徴は、フォームで受けた内容をそのまま対応状況のかんばんで管理できることです。オープンソースのフォームツールは回答の収集までが中心で、その後の対応管理は弱めです。対応管理まで必要なら、問い合わせ管理のオープンソース（Zammad、FreeScout）と組み合わせる形になります。"
+  },
+  {
+    "slug": "nextengine",
+    "name": "ネクストエンジン",
+    "kana": "ネクストエンジン",
+    "vendor": "NE株式会社",
+    "category": "commerce",
+    "volume": 9900,
+    "what": "複数のネットショップの受注・在庫・商品情報を一元管理するサービス。楽天・Amazon・Yahoo!などをまとめて扱えます。",
+    "ossCats": [
+      "commerce"
+    ],
+    "ossPicks": [
+      "erpnext",
+      "dolibarr",
+      "inventree",
+      "bagisto"
+    ],
+    "note": "ネクストエンジンの価値は、各モールのAPI仕様に追随し続けている点です。モールの仕様は頻繁に変わるので、自社で作ると保守が重くのしかかります。複数モールに出店しているなら続けるほうが安全です。自社サイト1本に絞れるなら、置き換えの現実味が出ます。"
+  },
+  {
+    "slug": "esa",
+    "name": "esa",
+    "kana": "エサ",
+    "vendor": "esa LLC",
+    "category": "knowledge",
+    "volume": 9900,
+    "what": "書きかけを共有する文化を前提にした社内向けドキュメント共有サービス。日報や設計メモに使われます。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "outline",
+      "docmost",
+      "bookstack",
+      "kmemo"
+    ],
+    "note": "esaは「WIP（書きかけ）で共有する」という使い方を仕組みにしている点が独特です。オープンソースの社内wikiにこの発想はありません。単なる文書置き場として使っているなら置き換えられますが、書きかけ共有の文化が根付いているなら失うものがあります。"
+  },
+  {
+    "slug": "staple",
+    "name": "Staple",
+    "kana": "ステイプル",
+    "vendor": "クラウドキャスト株式会社",
+    "category": "accounting",
+    "volume": 9900,
+    "what": "スマホで領収書を撮って申請する経費精算のサービス。プリペイドカードと組み合わせた運用もできます。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "erpnext",
+      "dolibarr",
+      "kbilling"
+    ],
+    "note": "経費精算は、申請から承認、会計への反映までの流れが業務のかたちに直結します。オープンソースのERPで置き換えると、この流れは自社で組むことになります。人数が少なく承認が1段階なら作れますが、多段階の承認や規程チェックがあるなら手間が増えます。"
+  },
+  {
+    "slug": "hrmos",
+    "name": "HRMOS",
+    "kana": "ハーモス",
+    "vendor": "株式会社ビズリーチ",
+    "category": "hr",
+    "volume": 9900,
+    "what": "採用管理、勤怠、人事評価などをそろえたクラウドの人材管理サービス。",
+    "ossCats": [
+      "hr"
+    ],
+    "ossPicks": [
+      "orangehrm",
+      "horilla-hr",
+      "hrms",
+      "khrpost"
+    ],
+    "note": "HRMOSは採用から入社後の管理までを一つでつなげる設計です。オープンソースの人事は入社後の管理が中心で、採用管理（求人媒体との連携、応募者の選考状況）は弱いか存在しません。採用が主目的なら置き換えは向きません。"
+  },
+  {
+    "slug": "invoy",
+    "name": "INVOY",
+    "kana": "インボイ",
+    "vendor": "FINUX株式会社",
+    "category": "accounting",
+    "volume": 8100,
+    "what": "請求書の作成・送付・受け取りを無料から使えるクラウドサービス。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "invoiceninja",
+      "kinvoice",
+      "kbilling",
+      "akaunting"
+    ],
+    "note": "無料枠があるので、置き換えても金銭的な削減はほぼありません。自社サーバーに請求データを置きたい、発行の流れを自社の業務に合わせたい、という動機があるときだけ検討してください。"
+  },
+  {
+    "slug": "talknote",
+    "name": "Talknote",
+    "kana": "トークノート",
+    "vendor": "Talknote株式会社",
+    "category": "groupware",
+    "volume": 6600,
+    "what": "社内のコミュニケーションを活性化させるビジネスSNS。日報、サンクス、グループ投稿などを行います。",
+    "ossCats": [
+      "groupware"
+    ],
+    "ossPicks": [
+      "mattermost",
+      "zulip",
+      "kbbs"
+    ],
+    "note": "Talknoteは投稿の反応を可視化して組織の状態を見る使い方まで含みます。オープンソースのチャットに置き換えると、この分析の部分は残りません。連絡と情報共有だけが目的なら置き換えられます。"
+  },
+  {
+    "slug": "karte",
+    "name": "KARTE",
+    "kana": "カルテ",
+    "vendor": "株式会社プレイド",
+    "category": "marketing",
+    "volume": 6600,
+    "what": "サイト訪問者の行動をリアルタイムに解析し、その場で接客の出し分けを行うWeb接客のサービス。",
+    "ossCats": [
+      "marketing"
+    ],
+    "ossPicks": [
+      "mautic",
+      "chatwoot",
+      "klchatbot"
+    ],
+    "note": "KARTEはリアルタイムの行動解析と出し分けが芯で、この規模の処理を自前で持つのは負担が大きいです。置き換えるなら「チャットでの接客」「メールでの追客」のように、機能を絞って別々のオープンソースに割り当てる形になります。同じことをそのまま実現するのは現実的ではありません。"
+  },
+  {
+    "slug": "zaico",
+    "name": "zaico",
+    "kana": "ザイコ",
+    "vendor": "株式会社ZAICO",
+    "category": "commerce",
+    "volume": 5400,
+    "what": "スマホのバーコード読み取りで在庫を数える在庫管理のクラウドサービス。小規模な倉庫や現場で使われています。",
+    "ossCats": [
+      "commerce"
+    ],
+    "ossPicks": [
+      "inventree",
+      "dolibarr",
+      "erpnext",
+      "grocy"
+    ],
+    "note": "zaicoの手軽さはスマホでの読み取りにあります。オープンソースの在庫管理も同じことはできますが、現場の端末設定は自社で行うことになります。品目数が少なく、置き場所も限られているなら移行しやすい部類です。"
+  },
+  {
+    "slug": "jooto",
+    "name": "Jooto",
+    "kana": "ジョートー",
+    "vendor": "株式会社PR TIMES",
+    "category": "project",
+    "volume": 5400,
+    "what": "かんばん形式でタスクを管理するプロジェクト管理サービス。無料から使えます。",
+    "ossCats": [
+      "project"
+    ],
+    "ossPicks": [
+      "wekan",
+      "planka",
+      "focalboard",
+      "plane"
+    ],
+    "note": "Jootoは無料枠があるので、金額の削減が目的なら置き換える理由がありません。タスクの内容を社外に置きたくない、という理由なら自社サーバーに置く価値があります。"
+  },
+  {
+    "slug": "ubiregi",
+    "name": "ユビレジ",
+    "kana": "ユビレジ",
+    "vendor": "株式会社ユビレジ",
+    "category": "commerce",
+    "volume": 5400,
+    "what": "iPadをレジにするPOSのサービス。売上分析や在庫管理と組み合わせて使えます。",
+    "ossCats": [
+      "commerce"
+    ],
+    "ossPicks": [
+      "opensourcepos",
+      "erpnext",
+      "dolibarr"
+    ],
+    "note": "POSは、レシートプリンタ・キャッシュドロア・決済端末という機器との組み合わせで動きます。ソフトだけを置き換えても、機器の対応が取れなければ現場が回りません。導入前に、いま使っている機器が動くかを必ず確認してください。"
+  },
+  {
+    "slug": "satori",
+    "name": "SATORI",
+    "kana": "サトリ",
+    "vendor": "SATORI株式会社",
+    "category": "marketing",
+    "volume": 5400,
+    "what": "匿名の見込み客の行動も追える国産のマーケティングオートメーション。メール配信、フォーム、スコアリングを行います。",
+    "ossCats": [
+      "marketing"
+    ],
+    "ossPicks": [
+      "mautic",
+      "listmonk",
+      "mailtrain"
+    ],
+    "note": "Mauticは同じ領域のオープンソースとして機能が揃っていますが、設定と運用の負担は小さくありません。メール配信だけが目的ならlistmonkのほうが軽く済みます。まず何のために使っているかを切り分けてください。"
+  },
+  {
+    "slug": "clarity",
+    "name": "Microsoft Clarity",
+    "kana": "マイクロソフトクラリティ",
+    "vendor": "Microsoft Corporation",
+    "category": "analytics",
+    "volume": 4400,
+    "what": "ヒートマップとセッション録画でサイト訪問者の動きを見られる無料の解析ツール。",
+    "ossCats": [
+      "analytics"
+    ],
+    "ossPicks": [
+      "ktrackgeo",
+      "neutralpress"
+    ],
+    "note": "Clarityは無料なので、置き換えの動機は費用ではありません。訪問者の行動データを他社に渡したくない、という場合だけ自社サーバーに置く価値があります。セッション録画のような重い機能を自前で持つのは負担が大きいので、必要な指標を絞ることをおすすめします。"
+  },
+  {
+    "slug": "channeltalk",
+    "name": "チャネルトーク",
+    "kana": "チャネルトーク",
+    "vendor": "株式会社Channel Corporation",
+    "category": "support",
+    "volume": 4400,
+    "what": "サイトに置くチャット窓口と、顧客情報を組み合わせた接客・サポートのサービス。",
+    "ossCats": [
+      "support"
+    ],
+    "ossPicks": [
+      "chatwoot",
+      "klchatbot",
+      "zammad"
+    ],
+    "note": "Chatwootは同じ領域のオープンソースで、複数チャネルの問い合わせを一つの画面で扱えます。違いは、チャネルトークが持つ顧客データとの結びつけや自動接客の作り込みで、そこは自社で組むことになります。"
+  },
+  {
+    "slug": "ashitano-cloud",
+    "name": "あしたのクラウド",
+    "kana": "あしたのクラウド",
+    "vendor": "株式会社あしたのチーム",
+    "category": "hr",
+    "volume": 3600,
+    "what": "目標設定と人事評価を運用するためのクラウドサービス。評価制度の設計支援とセットで提供されています。",
+    "ossCats": [
+      "hr"
+    ],
+    "ossPicks": [
+      "khrpost",
+      "orangehrm",
+      "horilla-hr"
+    ],
+    "note": "このサービスの価値の多くは、ソフトではなく評価制度そのものの設計支援にあります。制度が既に固まっていて運用だけを回したいなら、記録の仕組みは置き換えられます。制度づくりから相談しているなら、ソフトの置き換えでは代わりになりません。"
+  },
+  {
+    "slug": "collaboflow",
+    "name": "コラボフロー",
+    "kana": "コラボフロー",
+    "vendor": "株式会社コラボスタイル",
+    "category": "groupware",
+    "volume": 3600,
+    "what": "Excelで作った申請書のレイアウトをそのまま使えるワークフローのサービス。稟議や各種申請の電子化に使われます。",
+    "ossCats": [
+      "groupware"
+    ],
+    "ossPicks": [
+      "kvgwc",
+      "erpnext",
+      "dolibarr"
+    ],
+    "note": "コラボフローの強みは、いまExcelで使っている申請書の見た目をそのまま電子化できることです。日本の稟議の様式に合わせた作りで、海外発のオープンソースにこの発想はありません。申請書の様式にこだわらないなら置き換えられますが、こだわるなら作り込みが必要です。"
+  },
+  {
+    "slug": "maildealer",
+    "name": "メールディーラー",
+    "kana": "メールディーラー",
+    "vendor": "株式会社ラクス",
+    "category": "support",
+    "volume": 2900,
+    "what": "複数人で1つのメールアドレスを共有し、対応漏れと二重返信を防ぐメール共有のサービス。",
+    "ossCats": [
+      "support"
+    ],
+    "ossPicks": [
+      "freescout",
+      "zammad",
+      "chatwoot"
+    ],
+    "note": "FreeScoutは同じ発想のオープンソースで、共有の受信箱と対応状況の管理を持ちます。違いは日本語での運用実績と、電話やFAXを含めた対応履歴の統合です。メールだけで完結しているなら置き換えやすい領域です。"
+  },
+  {
+    "slug": "blastmail",
+    "name": "ブラストメール",
+    "kana": "ブラストメール",
+    "vendor": "株式会社ラクスライトクラウド",
+    "category": "marketing",
+    "volume": 2900,
+    "what": "メールマガジンや一斉配信を行うメール配信のサービス。到達率の管理と配信停止の処理を含みます。",
+    "ossCats": [
+      "marketing"
+    ],
+    "ossPicks": [
+      "listmonk",
+      "mautic",
+      "mailtrain"
+    ],
+    "note": "メール配信で一番効くのは到達率、つまり迷惑メールに入らないことです。配信サービスはこの部分にお金と手間をかけています。自社サーバーから送ると、SPF・DKIM・DMARCの設定と送信元の評判づくりを自分で行うことになります。listmonkは配信の仕組みとしては十分ですが、送信経路は別途用意してください。"
+  },
+  {
+    "slug": "selecttype",
+    "name": "SELECTTYPE",
+    "kana": "セレクトタイプ",
+    "vendor": "株式会社セレクトタイプ",
+    "category": "booking",
+    "volume": 2900,
+    "what": "予約システムとフォーム、アンケートを作れるサービス。教室やイベントの受付に使われています。",
+    "ossCats": [
+      "booking"
+    ],
+    "ossPicks": [
+      "kreserve",
+      "easyappointments",
+      "cal-diy"
+    ],
+    "note": "予約とフォームの両方を1つで使っているなら、置き換えると2つのソフトに分かれます。予約だけなら Easy!Appointments や当社の Kurage Reserve で足ります。"
+  },
+  {
+    "slug": "learningbox",
+    "name": "learningBOX",
+    "kana": "ラーニングボックス",
+    "vendor": "learningBOX株式会社",
+    "category": "knowledge",
+    "volume": 1600,
+    "what": "教材の配信とテスト、成績管理を行うeラーニングのサービス。社内研修や資格対策に使われています。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "moodle",
+      "chamilo-lms",
+      "classroomio"
+    ],
+    "note": "Moodleは世界の大学で使われている定番のeラーニング基盤で、機能の幅ははるかに広いです。逆に言えば設定項目が多く、小規模な社内研修には過剰なことがあります。教材数が少ないなら、動画と確認テストだけの簡素な仕組みを作るほうが早い場合もあります。"
+  },
+  {
+    "slug": "logikura",
+    "name": "ロジクラ",
+    "kana": "ロジクラ",
+    "vendor": "株式会社ロジクラ",
+    "category": "commerce",
+    "volume": 1600,
+    "what": "スマホで入出荷と在庫を管理する物流向けのサービス。ネットショップの発送業務で使われています。",
+    "ossCats": [
+      "commerce"
+    ],
+    "ossPicks": [
+      "inventree",
+      "dolibarr",
+      "erpnext"
+    ],
+    "note": "ロジクラは、出荷の現場でスマホをハンディ端末として使えることが価値です。オープンソースの在庫管理でも同じことはできますが、バーコードの運用と端末の設定は自社で組むことになります。出荷件数が多いほど、現場の作業設計が効いてきます。"
   }
 ]
