@@ -1367,5 +1367,224 @@
       "erpnext"
     ],
     "note": "ロジクラは、出荷の現場でスマホをハンディ端末として使えることが価値です。オープンソースの在庫管理でも同じことはできますが、バーコードの運用と端末の設定は自社で組むことになります。出荷件数が多いほど、現場の作業設計が効いてきます。"
+  },
+  {
+    "slug": "google-keep",
+    "name": "Google Keep",
+    "kana": "グーグルキープ",
+    "vendor": "Google LLC",
+    "category": "knowledge",
+    "volume": 60500,
+    "what": "思いついたことをすぐ書き留めるメモアプリ。Googleアカウントで同期され、無料で使えます。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "memos",
+      "kmemo",
+      "joplin",
+      "trilium"
+    ],
+    "note": "Google Keepは無料なので、置き換えの動機は費用ではありません。仕事のメモに顧客名や単価が入っているなら、それを他社のサーバーに置き続けるかという判断になります。Memosは同じ「思いついたら書く」使い方に近く、Joplinは端末アプリと同期を持ちます。当社のKurage Memoは共有レンタルサーバーに1ファイルで置けます。ただし、どれもGoogleの検索の速さと端末連携には届きません。"
+  },
+  {
+    "slug": "evernote",
+    "name": "Evernote",
+    "kana": "エバーノート",
+    "vendor": "Bending Spoons S.p.A.",
+    "category": "knowledge",
+    "volume": 33100,
+    "what": "文書、画像、Webページの切り抜きをまとめて保管し、横断検索できるノートアプリ。長く使われてきた定番です。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "joplin",
+      "trilium",
+      "siyuan",
+      "outline",
+      "kmemo"
+    ],
+    "note": "Evernoteは値上げと無料枠の縮小が続いており、乗り換え先を探している人が多い領域です。Joplinは端末アプリと同期を持ち、Evernoteからのインポートにも対応しているため、移行の現実味が一番あります。ただし同期先は自分で用意することになり、そこがEvernoteの手軽さとの差です。年数分のノートがあるなら、まず書き出して読める形になるかを確認してください。"
+  },
+  {
+    "slug": "1password",
+    "name": "1Password",
+    "kana": "ワンパスワード",
+    "vendor": "AgileBits Inc.",
+    "category": "security",
+    "volume": 27100,
+    "what": "パスワードとログイン情報を暗号化して保管し、端末間で同期する管理サービス。社内での共有にも使われます。",
+    "ossCats": [
+      "security"
+    ],
+    "ossPicks": [
+      "vaultwarden",
+      "passbolt-api"
+    ],
+    "note": "パスワード管理は、預ける先を替えることそのものが危険を伴います。移行の途中で控えを失うと業務が止まります。Vaultwardenは自社サーバーで動かせて、Bitwardenの端末アプリとブラウザ拡張がそのまま使えます。Passboltはチームでの共有を前提にした作りです。どちらを選ぶ場合も、サーバーの障害時に自分たちで復旧できる体制があるかを先に確認してください。手元に何も残らない事故が最も怖い領域です。"
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "kana": "グラマリー",
+    "vendor": "Grammarly, Inc.",
+    "category": "knowledge",
+    "volume": 27100,
+    "what": "英文の文法とスペル、言い回しを指摘してくれる文章校正のサービス。ブラウザ拡張で入力欄に直接働きます。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "languagetool",
+      "harper",
+      "textlint"
+    ],
+    "note": "LanguageToolは自社サーバーで動かせる文章校正で、ブラウザ拡張も用意されています。英語だけでなく多言語に対応しますが、指摘の質はGrammarlyのほうが上です。Harperは動作が軽く、書いている最中の指摘が速い作りです。日本語の文章を整えたいなら、textlintのほうが向いています（表記ゆれ、二重否定、冗長な言い回しなどを規則で指摘します）。置き換えの動機は費用より「書いている文章を外部へ送りたくない」場合です。契約書や未発表の企画を扱うなら、自社内で完結する意味があります。"
+  },
+  {
+    "slug": "zaim",
+    "name": "Zaim",
+    "kana": "ザイム",
+    "vendor": "株式会社Zaim",
+    "category": "accounting",
+    "volume": 22200,
+    "what": "レシートの撮影と口座連携で収支を記録する家計簿サービス。個人事業主が事業用の支出管理に使うこともあります。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "firefly-iii",
+      "actual",
+      "akaunting"
+    ],
+    "note": "Zaimの便利さの大部分は、銀行やカードとの自動連携にあります。オープンソースの家計簿はこの連携を持たないため、明細のCSVを自分で取り込むことになります。事業用として使っていて、経費の記録が目的なら、家計簿ではなくAkauntingのような会計側に寄せるほうが確実です。"
+  },
+  {
+    "slug": "moneyforward-me",
+    "name": "マネーフォワード ME",
+    "kana": "マネーフォワード ミー",
+    "vendor": "株式会社マネーフォワード",
+    "category": "accounting",
+    "volume": 27100,
+    "what": "銀行・カード・証券をまとめて連携し、資産と収支を自動で記録する家計簿サービス。",
+    "ossCats": [
+      "accounting"
+    ],
+    "ossPicks": [
+      "firefly-iii",
+      "actual",
+      "akaunting"
+    ],
+    "note": "価値の中心は金融機関との自動連携です。国内の口座に対応し続けるには継続的な保守が要り、オープンソースでこれを再現するのは現実的ではありません。置き換えるなら、連携をあきらめて明細を手で取り込む前提になります。事業の経理として使っているなら、マネーフォワード クラウド会計のほうへ寄せるか、Akauntingのような会計ソフトに移すのが筋です。"
+  },
+  {
+    "slug": "todoist",
+    "name": "Todoist",
+    "kana": "トゥドゥイスト",
+    "vendor": "Doist Inc.",
+    "category": "project",
+    "volume": 12100,
+    "what": "個人のタスクを管理するToDoアプリ。期限や優先度、繰り返しの設定ができ、端末間で同期します。",
+    "ossCats": [
+      "project"
+    ],
+    "ossPicks": [
+      "vikunja",
+      "wekan",
+      "planka",
+      "focalboard"
+    ],
+    "note": "Vikunjaは個人のタスク管理として作りが近く、一覧・かんばん・ガントを切り替えられます。Todoistの無料枠でも大半の使い方は足りるので、置き換えの動機は費用ではなく「タスクの中身を外部に置きたくない」場合になります。仕事の予定に顧客名が入るなら意味があります。"
+  },
+  {
+    "slug": "feedly",
+    "name": "Feedly",
+    "kana": "フィードリー",
+    "vendor": "Feedly Inc.",
+    "category": "knowledge",
+    "volume": 12100,
+    "what": "ニュースやブログの更新をRSSでまとめて読むサービス。業界情報の収集に使われます。",
+    "ossCats": [
+      "knowledge"
+    ],
+    "ossPicks": [
+      "freshrss",
+      "v2",
+      "kcheckit"
+    ],
+    "note": "RSSリーダーは自社サーバーに置きやすい部類です。FreshRSSは多機能で、Minifluxは軽さを重視した作りです。どちらも共有レンタルサーバーやVPSで動きます。Feedlyの有料機能であるAIによる要約や絞り込みは含まれないので、その部分を使っているなら差が出ます。当社のKurage Check Itは、RSSの購読よりも「変化を見つけて知らせる」用途に寄せた道具です。"
+  },
+  {
+    "slug": "bitly",
+    "name": "Bitly",
+    "kana": "ビットリー",
+    "vendor": "Bitly, Inc.",
+    "category": "marketing",
+    "volume": 9900,
+    "what": "長いURLを短くし、クリック数を計測できる短縮URLのサービス。広告やSNSの効果測定に使われます。",
+    "ossCats": [
+      "marketing"
+    ],
+    "ossPicks": [
+      "shlink",
+      "yourls"
+    ],
+    "note": "短縮URLは自社ドメインで運用したほうが、リンク先の信頼につながります。ShlinkとYOURLSはどちらも自社サーバーで動き、クリック数の集計を持ちます。注意点は、いま配布済みの短縮URLは移行できないことです。Bitlyのリンクは印刷物やSNSに残り続けるので、契約を切ると一斉に切れます。新しいものから自社ドメインに切り替える形が現実的です。"
+  },
+  {
+    "slug": "calendly",
+    "name": "Calendly",
+    "kana": "カレンドリー",
+    "vendor": "Calendly, LLC",
+    "category": "booking",
+    "volume": 4400,
+    "what": "自分の空き時間を相手に見せて、日程調整をメールの往復なしで決められるサービス。",
+    "ossCats": [
+      "booking"
+    ],
+    "ossPicks": [
+      "cal-diy",
+      "easyappointments",
+      "kreserve"
+    ],
+    "note": "Cal.comは同じ発想のオープンソースで、機能はほぼそろっています。カレンダーとの連携を自分で設定する手間がある代わりに、予約ページを自社ドメインで出せます。商談の日程調整に使っているなら、予約ページのドメインが自社であること自体が信頼につながります。"
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier",
+    "kana": "ザピアー",
+    "vendor": "Zapier, Inc.",
+    "category": "automation",
+    "volume": 18100,
+    "what": "別々のサービス同士をつないで、決まった操作を自動で走らせる連携サービス。プログラムを書かずに設定できます。",
+    "ossCats": [
+      "automation"
+    ],
+    "ossPicks": [
+      "n8n",
+      "activepieces",
+      "automatisch",
+      "huginn"
+    ],
+    "note": "n8nは同じ領域で最も使われているオープンソースで、自社サーバーに置けます。ActivepiecesはZapierに近い画面の作りです。違いは、つなげる先の数と、各サービスの仕様変更への追随の速さです。よく使う連携が数本に決まっているなら置き換えられます。次々に新しいサービスをつなぐ使い方なら、Zapierのほうが手間が少なく済みます。"
+  },
+  {
+    "slug": "peraichi",
+    "name": "ペライチ",
+    "kana": "ペライチ",
+    "vendor": "株式会社ペライチ",
+    "category": "cms",
+    "volume": 40500,
+    "what": "1枚もののホームページを、テンプレートを選んで文字を入れるだけで作れるサービス。小規模事業者の集客ページに使われます。",
+    "ossCats": [
+      "cms"
+    ],
+    "ossPicks": [
+      "wordpress",
+      "ghost",
+      "publii"
+    ],
+    "note": "ペライチの価値は、作る手軽さとサーバーを意識しなくてよいことです。オープンソースに置き換えると、サーバーとドメインの管理が自分の仕事になります。ページが1枚だけなら、置き換えの手間に見合わないことが多いです。ページが増え、予約やフォーム、記事の追加まで必要になってきた段階で、WordPressやGhostに移す判断が現実的になります。"
   }
 ]

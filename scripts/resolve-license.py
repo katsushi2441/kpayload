@@ -60,7 +60,12 @@ RULES = [
     ("Fair Source License", "source-available",
      r"fair source license"),
     ("AGPL-3.0", "osi-network-copyleft",
-     r"gnu affero general public license"),
+     r"gnu affero general public license|agpl-3\.0"),
+    ("GPL-3.0", "osi-copyleft",
+     r"gpl-3\.0(-or-later)?\b"),
+    ("GPL", "osi-copyleft",
+     r"this program is free software:? you can redistribute it and/or modify it"
+     r"\s*under the terms of the gnu general public license"),
     ("GPL-3.0", "osi-copyleft",
      r"gnu general public license\s*\n?\s*version 3"),
     ("GPL-2.0", "osi-copyleft",

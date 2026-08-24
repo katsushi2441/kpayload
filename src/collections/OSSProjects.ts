@@ -41,6 +41,9 @@ export const OSSProjects: CollectionConfig = {
         { label: 'アンケート・フォーム', value: 'survey' },
         { label: 'POS・店舗', value: 'pos' },
         { label: '文書管理', value: 'dms' },
+        // パスワード管理など。1件しか無かったため選択肢に入れ忘れ、
+        // seed が「無効な選択です」で全件失敗していた（2026-08-25）。
+        { label: 'セキュリティ・認証', value: 'security' },
         { label: 'ローコード開発', value: 'lowcode' },
         { label: '分析・BI', value: 'analytics' },
         { label: 'AI開発基盤', value: 'aidev' },

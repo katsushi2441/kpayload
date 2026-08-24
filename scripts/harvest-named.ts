@@ -56,6 +56,23 @@ const WANTED: Array<{ repo: string; category: string }> = [
   { repo: 'akaunting/akaunting', category: 'accounting' },
   { repo: 'invoiceninja/invoiceninja', category: 'accounting' },
   { repo: 'bigbluebutton/bigbluebutton', category: 'groupware' },
+  // 2026-08-25 追加。個人向けの月額サービスを置き換える受け皿。
+  // 事業者が仕事で使っているものに限る（音楽・動画のような娯楽は入れない）。
+  { repo: 'dani-garcia/vaultwarden', category: 'security' },
+  { repo: 'passbolt/passbolt_api', category: 'security' },
+  { repo: 'keepassxreboot/keepassxc', category: 'security' },
+  { repo: 'FreshRSS/FreshRSS', category: 'knowledge' },
+  { repo: 'miniflux/v2', category: 'knowledge' },
+  { repo: 'shlinkio/shlink', category: 'marketing' },
+  { repo: 'YOURLS/YOURLS', category: 'marketing' },
+  { repo: 'languagetool-org/languagetool', category: 'knowledge' },
+  { repo: 'laurent22/joplin', category: 'knowledge' },
+  { repo: 'usememos/memos', category: 'knowledge' },
+  { repo: 'activepieces/activepieces', category: 'automation' },
+  { repo: 'huginn/huginn', category: 'automation' },
+  { repo: 'actualbudget/actual', category: 'accounting' },
+  { repo: 'Automattic/harper', category: 'knowledge' },
+  { repo: 'textlint/textlint', category: 'knowledge' },
 ]
 
 async function getRepo(full: string) {

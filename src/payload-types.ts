@@ -153,6 +153,7 @@ export interface OssProject {
     | 'survey'
     | 'pos'
     | 'dms'
+    | 'security'
     | 'lowcode'
     | 'analytics'
     | 'aidev'
