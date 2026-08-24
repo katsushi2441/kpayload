@@ -29,6 +29,7 @@ import { getPayload } from 'payload'
 
 import config from '../src/payload.config'
 import { SITE, KURAGE, TRIAL } from './site'
+import { DEMOS, PROTO, demoUrl } from './demos'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, type Project } from './page-shell'
 
@@ -39,13 +40,15 @@ const BASE = `${SITE}/saas`
 const SHELL = {
   refPrefix: 'exbridge-saas',
   base: BASE,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-saas">触れるデモ一覧</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 
 type Saas = {
   slug: string; name: string; kana: string; vendor: string; category: string
   what: string; volume: number; ossCats: string[]; ossPicks: string[]
+  /** 選び方の注意。製品ごとに事情が違うので、書けるものだけ手で書く */
+  note?: string
 }
 
 const saasList = JSON.parse(await fs.readFile(path.join(root, 'data', 'saas-list.json'), 'utf8')) as Saas[]
@@ -86,15 +89,58 @@ function ossFor(s: Saas): { list: Project[]; named: number } {
   // ファイル転送CLIが並ぶ（2026-08-24 に実際そうなった）。
   // 関係ないものを混ぜると、並んでいる正しいものまで信用されない。
   for (const cat of s.ossCats) {
+    // 補完もライセンスの自由度が高い順にする。スター数だけで並べると、
+    // 再販できないものが上に来て、当社が受託で使えないものを勧めることになる。
+    const freedom = (p: Project) => ({ osi: 0, 'osi-copyleft': 1, 'osi-network-copyleft': 2,
+      dual: 3, 'source-available': 4 } as Record<string, number>)[p.licenseTier || 'osi'] ?? 5
     const pool = (byCategory.get(cat) || [])
       .filter((p) => p.funnel !== 'prototype')
-      .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
+      .sort((a, b) => freedom(a) - freedom(b) || Number(b.stars || 0) - Number(a.stars || 0))
     for (const p of pool) {
       if (picked.length >= 3) break
       if (!seen.has(p.slug)) { picked.push(p); seen.add(p.slug) }
     }
   }
   return { list: picked.slice(0, 6), named }
+}
+
+/**
+ * ライセンスから「当社が改変して納品できるか」を一言にする。
+ * ライセンス名だけ出しても、再販できないことは読み取れない。
+ */
+function licenseVerdict(p: Project): string {
+  // 手で作った46件には licenseTier が無い。SPDX名から補う
+  // （空欄のままだと、制限が無いものほど情報が出ない逆転が起きる）。
+  let tier = p.licenseTier
+  if (!tier) {
+    const l = (p.license || '').toUpperCase()
+    if (/^(MIT|APACHE|BSD|ISC|MPL|ZLIB|UNLICENSE|CC0)/.test(l)) tier = 'osi'
+    else if (/^AGPL/.test(l)) tier = 'osi-network-copyleft'
+    else if (/^(GPL|LGPL|EPL|OSL|CDDL)/.test(l)) tier = 'osi-copyleft'
+  }
+  switch (tier) {
+    case 'osi': return '制限なし'
+    case 'osi-copyleft': return '可（配布時はソース公開の義務）'
+    case 'osi-network-copyleft': return '可（社外公開時は改変部分の公開義務）'
+    case 'source-available': return '自社利用のみ可・再販不可'
+    case 'dual': return '一部の機能が別ライセンス'
+    default: return '—'
+  }
+}
+
+/**
+ * 推薦したOSSのうち、proto.exbridge.jp で実際に触れるものを出す。
+ * 表の「触れる」リンクだけだと見落とされるので、IDとパスワードごと本文に置く。
+ */
+function demoBlock(s: Saas, oss: Project[]): string {
+  const withDemo = oss.filter((p) => DEMOS[p.slug])
+  if (!withDemo.length) return ''
+  return `<section><div class="panel demo-panel">
+<h2>${h(s.name)}の代わりになるか、いま触って確かめられます</h2>
+<p>上の候補のうち${withDemo.length}件は、当社が日本語化して稼働させたものを公開しています。<strong>問い合わせも資料請求も要りません。</strong>${h(s.name)}で今やっている作業が同じようにできるか、ご自分の目で確かめてください。</p>
+${withDemo.map((p) => `<div class="card" style="margin:0 0 10px"><h3>${h(p.name)}</h3><p>${h(DEMOS[p.slug].point)}</p><dl class="demo-cred"><div><dt>ユーザー</dt><dd><code>${h(DEMOS[p.slug].user)}</code></dd></div><div><dt>パスワード</dt><dd><code>${h(DEMOS[p.slug].pass)}</code></dd></div></dl><p class="demo-actions"><a class="btn btn-main" href="${demoUrl(p.slug, `saas-${s.slug}`)}" target="_blank" rel="noopener">${h(p.name)}のデモを開く</a> <a class="btn" href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}の詳細</a></p></div>`).join('')}
+<p class="demo-note">デモのためメールは送信されません。データは公開の場所にあるので、実在の個人情報は入れないでください。定期的に初期化します。　<a href="${PROTO}/?ref=saas-${attr(s.slug)}">他のデモも見る</a></p>
+</div></section>`
 }
 
 function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): string {
@@ -160,11 +206,13 @@ ${relatedNews('saas', s.slug)}
 <p>${named >= 2
   ? `以下は、${h(s.name)}が扱う業務と同じ用途に使えるオープンソースです。当社がGitHubの公開情報からライセンスと日本語対応を実測して並べています。名前をクリックすると、そのソフトで何をどう作るかの説明に移ります。`
   : `${h(s.name)}をそのまま置き換えられる定番は、現在調査中です。以下は近い分野で使われているもので、そのままの置き換えにはなりません。<strong>実際に何を土台にするかは、業務内容を伺ってから提案します</strong>。無理に当てはめて提案することはしません。`}</p>
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>日本語</th></tr></thead><tbody>
-${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license)}</td><td>${h(p.japaneseStatus)}</td></tr>`).join('')}
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>受託での構築・納品</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
+${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license)}</td><td>${h(licenseVerdict(p))}</td><td>${h(p.japaneseStatus)}</td><td>${DEMOS[p.slug] ? `<a href="${demoUrl(p.slug, `saas-${s.slug}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
 </tbody></table></div>
-${oss.some((p) => p.licenseNote) ? `<p class="note">ライセンスによっては、第三者へのホスティング提供や再販ができないものがあります。自社の業務で使うための構築は問題ありません。各ソフトの詳細ページに利用条件を書いています。</p>` : ''}
+<p class="note">並びはライセンスの自由度が高い順です。「制限なし」のものは、当社が改変して納品することに制約がありません。「再販不可」のものは御社が自社の業務で使う分には問題ありませんが、第三者へのホスティング提供はできません。日本語欄が「日本語ファイルなし」であれば、日本語化から着手します。</p>
+${s.note ? `<div class="card" style="margin-top:14px"><h3>${h(s.name)}を置き換えるときの注意</h3><p>${h(s.note)}</p></div>` : ''}
 </div></section>
+${demoBlock(s, oss)}
 
 <section><div class="panel">
 <h2>${h(s.name)}を使い続けたほうがよいのは、どんな場合ですか？</h2>

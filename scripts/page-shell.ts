@@ -8,6 +8,7 @@
  * サイト固有の値（footerの並び、計測用のref接頭辞）は呼び出し側から渡す。
  */
 import { SITE, KURAGE, TRIAL, GA } from './site'
+import { DEMO_CSS } from './demos'
 
 type TextItem = { text?: string | null }
 export type Project = {
@@ -63,6 +64,7 @@ export function jaVerdict(p: Project): string {
 
 export function styles(): string {
   return `<style>
+${DEMO_CSS}
 :root{--ink:#132329;--muted:#5a6a72;--paper:#f4f7f7;--line:#dbe5e8;--blue:#007f96;--dark:#10242b;--amber:#c17a00}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.85;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
 a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}.relnews{width:min(1080px,calc(100% - 34px));margin:22px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:16px 20px}.relnews h2{font-size:15px;margin:0 0 8px}.relnews .news-list{margin:0;padding:0;list-style:none;font-size:13.5px}.relnews .news-list li{padding:5px 0;border-bottom:1px dotted var(--line);display:flex;gap:10px;justify-content:space-between}.relnews .news-list li:last-child{border-bottom:0}.relnews .news-date{color:var(--muted);font-size:11.5px;white-space:nowrap}

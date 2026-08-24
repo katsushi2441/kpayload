@@ -30,6 +30,7 @@ const BASE = `${SITE}/ai-system`
 
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
+import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, type Project } from './page-shell'
 
@@ -37,7 +38,7 @@ import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
 const SHELL = {
   refPrefix: 'exbridge-ai-system',
   base: `${SITE}/ai-system`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 
@@ -61,6 +62,7 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
 <p class="kicker">AIでできること / ${h(cap.label)}</p>
 <h1>${h(cap.label)}を、<br>${h(p.name)}で実現する。</h1>
 <p class="lead">${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。ゼロから作るより早く、月額のユーザー課金もありません。</p>
+${DEMOS[p.slug] ? `<p><a class="btn btn-main" href="${demoUrl(p.slug, `ai-system-hero-${p.slug}`)}" target="_blank" rel="noopener">${h(p.name)}の日本語デモを触る</a></p>` : ''}
 </div></section>
 ${relatedNews('oss', p.slug)}
 <main class="wrap">
@@ -90,6 +92,8 @@ ${typeof p.stars === 'number' ? `<tr><th>GitHubスター</th><td>${p.stars.toLoc
 <p class="note">GitHubの公開ファイル一覧から日本語ロケールの実ファイルを数えた結果です。配布用のビルド成果物は除いています。技術的な詳細は<a href="${KURAGE}/oss/${attr(p.slug)}/?ref=exbridge-ai-system">${h(p.name)}のOSS情報</a>にまとめています。</p>
 </div></section>
 
+${demoPanel(p.slug, p.name, `ai-system-${p.slug}`)}
+
 <section><div class="panel">
 <h2>進め方は？</h2>
 <p>進め方とは、現場を見て対象を決め、動くものを見ていただきながら作り、御社の環境へ導入するまでの流れのことです。書類で仕様を固めてから作る進め方はしません。</p>
@@ -111,8 +115,8 @@ ${ctaBlock(cap, p.name)}
 ${siblings.length ? `<section><div class="panel">
 <h2>${h(cap.label)}に使える他のオープンソース</h2>
 <p>同じ用途に使える土台は他にもあります。ライセンス、日本語対応、規模を比べて選べます。</p>
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th></tr></thead><tbody>
-${siblings.map((s) => `<tr><th><a href="${BASE}/${attr(s.slug)}/">${h(s.name)}</a></th><td>${h(s.summary)}</td><td>${h(s.japaneseStatus)}</td></tr>`).join('')}
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
+${siblings.map((s) => `<tr><th><a href="${BASE}/${attr(s.slug)}/">${h(s.name)}</a></th><td>${h(s.summary)}</td><td>${h(s.japaneseStatus)}</td><td>${DEMOS[s.slug] ? `<a href="${demoUrl(s.slug, `ai-system-sib-${s.slug}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
 </tbody></table></div>
 <p class="note"><a href="${BASE}/c/${attr(cap.key)}/">${h(cap.label)}に使えるOSSの一覧を見る</a></p>
 </div></section>` : ''}
@@ -250,8 +254,9 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 <section><div class="panel">
 <h2>${h(cap.label)}に使えるオープンソース${total}件</h2>
 <p>この一覧とは、${h(cap.label)}という用途に当てはまるオープンソースを、当てはまりの強い順に並べたもののことです。${cut ? `全${total}件のうち上位${shown.length}件を掲載しています。` : ''}名前をクリックすると、その土台で何をどう作るかの説明に移ります。</p>
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th></tr></thead><tbody>
-${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.japaneseStatus)}</td></tr>`).join('')}
+${shown.some((p) => DEMOS[p.slug]) ? `<p class="demo-line">このうち${shown.filter((p) => DEMOS[p.slug]).length}件は、当社が日本語化したものを<a href="${PROTO}/?ref=ai-system-c-${attr(cap.key)}">デモサイト</a>で公開しています。ログイン情報も出しているので、問い合わせなしでそのまま触れます。</p>` : ''}
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
+${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.japaneseStatus)}</td><td>${DEMOS[p.slug] ? `<a href="${demoUrl(p.slug, `ai-system-c-${cap.key}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
 </tbody></table></div>
 </div></section>
 ${issueBlock ? `<section><div class="panel">
