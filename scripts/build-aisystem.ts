@@ -31,7 +31,7 @@ const BASE = `${SITE}/ai-system`
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
-         shell as baseShell, type Project } from './page-shell'
+         relatedNews, shell as baseShell, type Project } from './page-shell'
 
 /** このサイトのフッターと計測用ref。枠は page-shell.ts と共通。 */
 const SHELL = {
@@ -62,6 +62,7 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
 <h1>${h(cap.label)}を、<br>${h(p.name)}で実現する。</h1>
 <p class="lead">${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。ゼロから作るより早く、月額のユーザー課金もありません。</p>
 </div></section>
+${relatedNews('oss', p.slug)}
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / <a href="${BASE}/c/${attr(cap.key)}/">${h(cap.label)}</a> / ${h(p.name)}</nav>
 

@@ -65,7 +65,7 @@ export function styles(): string {
   return `<style>
 :root{--ink:#132329;--muted:#5a6a72;--paper:#f4f7f7;--line:#dbe5e8;--blue:#007f96;--dark:#10242b;--amber:#c17a00}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.85;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
-a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}
+a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}.relnews{width:min(1080px,calc(100% - 34px));margin:22px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:16px 20px}.relnews h2{font-size:15px;margin:0 0 8px}.relnews .news-list{margin:0;padding:0;list-style:none;font-size:13.5px}.relnews .news-list li{padding:5px 0;border-bottom:1px dotted var(--line);display:flex;gap:10px;justify-content:space-between}.relnews .news-list li:last-child{border-bottom:0}.relnews .news-date{color:var(--muted);font-size:11.5px;white-space:nowrap}
 .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 26px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:800;text-decoration:none}
 .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:6px;background:var(--blue);color:#fff;font-size:12px}
@@ -110,6 +110,20 @@ export function kurageAiFab(canonical: string, refPrefix: string, base: string):
 }
 
 export type ShellOpts = { refPrefix: string; base: string; footerLinks: string }
+/**
+ * 関連ニュースの差し込み口。中身は exbridge.jp/ai-it-news/ の news-widget.js が
+ * news-index.json を読んで描画する。
+ *
+ * なぜHTMLに埋め込まないか: 対象が1,700ページ以上あり、毎朝埋め込むと
+ * 再生成とFTP配置に15〜20分かかるうえ、全ページのlastmodが毎日動く。
+ * JSON1本の差し替えなら数秒で終わる。
+ */
+export function relatedNews(kind: 'saas' | 'oss', key: string): string {
+  return `<section id="related-news" data-kind="${kind}" data-key="${attr(key)}" class="relnews" style="display:none"></section>`
+}
+
+export const NEWS_SCRIPT = '<script defer src="https://exbridge.jp/ai-it-news/news-widget.js"></script>'
+
 export function shell(title: string, desc: string, canonical: string, body: string, ld: unknown[], opts: ShellOpts): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -123,6 +137,7 @@ ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</sc
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA}');</script>
 <script>(function(){var s=document.createElement('script');s.src='${SITE}/simpletrack.php?url='+encodeURIComponent(location.href)+'&ref='+encodeURIComponent(document.referrer);s.async=true;document.head.appendChild(s)})();</script>
+${NEWS_SCRIPT}
 ${styles()}</head><body>
 <header class="topbar"><a class="brand" href="${SITE}/"><span class="brand-mark">XB</span><span>株式会社エクスブリッジ</span></a>
 <nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>

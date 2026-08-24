@@ -1,0 +1,288 @@
+/**
+ * 3つ目の入口 exbridge.jp/saas/ を作る。
+ *
+ * 入口の違い:
+ *   /oss/        OSSの名前が入口   「そのOSSは何か」
+ *   /ai-system/  やりたいことが入口 「その業務をどうやるか」
+ *   /saas/       SaaSの名前が入口   「いま使っている（検討している）サービスの代わりに何ができるか」
+ *
+ * なぜSaaS名なのか（2026-08-24 実測・キーワードプランナー日本）:
+ *   「SaaS名 + 代替」はほぼ0件だった。「代替」は日本語の検索で使われない。
+ *   一方「SaaS名 + 料金」には需要があり、競合も低い。
+ *     kintone 料金 2,400 / マネーフォワード 料金 2,900 / freee 料金 1,300
+ *     dropbox 料金 2,900 / zoom 料金 3,600 / slack 料金 2,400 …計36,000件/月
+ *   「kintone OSS」「kintone オープンソース」は測定下限未満。つまり
+ *   OSSという言葉で探している人はいない。ページ側で気づかせる設計にする。
+ *
+ * 書かないこと:
+ *   - 他社の具体的な金額（未検証の数字は書かない。公式へリンクする）
+ *   - 他社製品の否定（比較は事実だけ。SaaSのほうが良い場合も必ず書く）
+ *   商標は各社のものである旨を明記する。
+ */
+import 'dotenv/config'
+
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import { getPayload } from 'payload'
+
+import config from '../src/payload.config'
+import { SITE, KURAGE, TRIAL } from './site'
+import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
+         relatedNews, shell as baseShell, type Project } from './page-shell'
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const distRoot = path.join(root, 'dist', 'saas')
+const BASE = `${SITE}/saas`
+
+const SHELL = {
+  refPrefix: 'exbridge-saas',
+  base: BASE,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>`,
+}
+const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
+
+type Saas = {
+  slug: string; name: string; kana: string; vendor: string; category: string
+  what: string; volume: number; ossCats: string[]; ossPicks: string[]
+}
+
+const saasList = JSON.parse(await fs.readFile(path.join(root, 'data', 'saas-list.json'), 'utf8')) as Saas[]
+
+const payload = await getPayload({ config })
+const result = await payload.find({ collection: 'oss-projects', limit: 0, pagination: false, sort: 'name', depth: 0 })
+const projects = result.docs as unknown as Project[]
+const bySlug = new Map(projects.map((p) => [p.slug, p]))
+const byCategory = new Map<string, Project[]>()
+for (const p of projects) {
+  const list = byCategory.get(p.category) || []
+  list.push(p)
+  byCategory.set(p.category, list)
+}
+
+/**
+ * 推薦するOSS。名指しを優先し、足りなければ同カテゴリで補う。
+ *
+ * 補うときは「そのまま業務に使える完成品」(funnel=oss)だけにする。
+ * 開発者向けの道具(funnel=prototype)を混ぜると、kintoneの代わりに
+ * UIフレームワークを勧めることになる（実際に filament と strapi が
+ * 混ざった。2026-08-24）。
+ */
+function ossFor(s: Saas): { list: Project[]; named: number } {
+  const picked: Project[] = []
+  const seen = new Set<string>()
+  for (const slug of s.ossPicks) {
+    const p = bySlug.get(slug)
+    if (p && !seen.has(p.slug)) { picked.push(p); seen.add(p.slug) }
+  }
+  // 名指しが2件以上あるなら、カテゴリ補完はしない。
+  // 正しいものが並んでいるところに1件でも的外れが混ざると、全部の信用が落ちる。
+  const named = picked.length
+  if (named >= 2) return { list: picked.slice(0, 6), named }
+
+  // 数合わせをしない。カテゴリ補完は3件までで打ち切る。
+  // 6件に揃えようとすると、Slackの代わりにお絵かきツール、Boxの代わりに
+  // ファイル転送CLIが並ぶ（2026-08-24 に実際そうなった）。
+  // 関係ないものを混ぜると、並んでいる正しいものまで信用されない。
+  for (const cat of s.ossCats) {
+    const pool = (byCategory.get(cat) || [])
+      .filter((p) => p.funnel !== 'prototype')
+      .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
+    for (const p of pool) {
+      if (picked.length >= 3) break
+      if (!seen.has(p.slug)) { picked.push(p); seen.add(p.slug) }
+    }
+  }
+  return { list: picked.slice(0, 6), named }
+}
+
+function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): string {
+  const url = `${BASE}/${s.slug}.html`
+  const title = `${s.name}の費用と、同じことをオープンソースでやる選択肢｜${s.vendor}のサービスを検討中の方へ | 株式会社エクスブリッジ`
+  const desc = `${s.name}（${s.vendor}）の料金は利用人数×月額で毎年かかり続けます。同じ業務をオープンソースで行えばライセンス費はかからず、ソースコードは自社に残ります。${oss.length}件の候補を、ライセンスと日本語対応の実測つきで掲載。名古屋のシステム開発会社が導入まで行います。`
+
+  const faqs = [
+    { q: `${s.name}の代わりにオープンソースを使うと、何が変わりますか？`,
+      a: `毎年かかり続ける利用料が、最初の構築費用とサーバー代に置き換わります。ソースコードは自社に残るので、値上げや仕様変更に振り回されません。一方で、障害対応やバージョン更新は自社（または当社）の責任になります。人数が少なく標準機能で足りるうちは、${s.name}をそのまま使うほうが安く済むこともあります。` },
+    { q: 'なぜ今、その選択肢が現実的になったのですか？',
+      a: 'オープンソースを自社業務に合わせて直す作業に、これまでは人手と期間がかかっていました。AIエージェントと対話しながら実装するバイブコーディングで、その部分の費用が大きく下がりました。結果として、月額を払い続けるより、一度作って自社資産にするほうが総額で見合う場面が増えています。' },
+    { q: `${s.name}から移行する場合、データは移せますか？`,
+      a: `多くの場合、CSVやAPIでの書き出しに対応しているため移行できます。ただし項目の対応づけや、添付ファイル・履歴の扱いは製品ごとに違います。初日3時間の無料ヒアリングで、実際のデータを見たうえで可否と手間をお伝えします。移せないと判断した場合は、その旨を正直に申し上げます。` },
+    { q: '費用はどのくらいかかりますか？',
+      a: '土台にするオープンソースが決まっている場合は、合計10時間以内・税込110,000円からのカスタマイズと導入があります。何を使うか決まっていない場合は、名古屋市内なら1日3時間×5日間の計15時間・税別15万円のお試し導入で、実際に動くものを1つ以上作ります。初日3時間のヒアリングと提案は無料です。' },
+    { q: '作ったものは自社のものになりますか？',
+      a: 'なります。ソースコード一式をお渡しします。開発はお客様のPCとお客様名義のAIエージェントで行うので、作り方ごと社内に残ります。以後は自社で改造しても、他社に依頼しても構いません。' },
+  ]
+
+  const body = `<section class="hero"><div class="wrap">
+<p class="kicker">SaaSとオープンソース</p>
+<h1>${h(s.name)}の費用を、<br>オープンソースで見直す。</h1>
+<p class="lead">${h(s.name)}は${h(s.what)}便利なサービスですが、料金は<strong>利用する人数×月額</strong>で、使い続ける限りかかり続けます。同じ業務をオープンソースで行えば、ライセンス費はかからず、ソースコードは自社に残ります。ここでは${oss.length}件の候補を、ライセンスと日本語対応の実測つきで並べました。</p>
+<p><a class="btn btn-main" href="${TRIAL}?ref=saas-${attr(s.slug)}">AI導入お試し実験を見る</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=saas-${attr(s.slug)}">OSSのカスタマイズ（110,000円〜）</a></p>
+</div></section>
+${relatedNews('saas', s.slug)}
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">SaaSとOSSの対応表</a> / ${h(s.name)}</nav>
+
+<section><div class="panel">
+<h2>${h(s.name)}とは？</h2>
+<p>${h(s.name)}とは、${h(s.what)}提供元は${h(s.vendor)}です。読み方は「${h(s.kana)}」。導入している企業は多く、標準機能だけで業務が回るのであれば、そのまま使い続けるのが最も手間がかかりません。</p>
+<p class="note">料金の詳細は提供元の公式サイトをご確認ください。本ページでは金額を掲載していません（改定があるため、当社が転載すると古い情報が残ります）。</p>
+</div></section>
+
+<section><div class="panel">
+<h2>${h(s.name)}の費用は、どういう仕組みですか？</h2>
+<p>費用の仕組みとは、<strong>利用する人数と期間に比例して増える</strong>ということです。1人あたり月額◯円という形なので、社員が増えれば増え、使い続ける限り終わりません。3年、5年と積み上がると、システムを1つ作る金額を超えることがあります。</p>
+<div class="table-wrap"><table><thead><tr><th>観点</th><th>${h(s.name)}（月額サービス）</th><th>オープンソース＋バイブコーディング</th></tr></thead><tbody>
+<tr><th>費用の形</th><td>人数×月額が毎年かかり続ける</td><td>最初の構築費用と、以後はサーバー代のみ</td></tr>
+<tr><th>ソースの所有</th><td>提供元が保有する</td><td>自社が保有する（お渡しします）</td></tr>
+<tr><th>業務への適合</th><td>標準機能の範囲に業務を合わせる</td><td>自社の業務に合わせて画面と項目を変えられる</td></tr>
+<tr><th>値上げ・仕様変更</th><td>提供元の判断に従うことになる</td><td>自社で決められる</td></tr>
+<tr><th>障害対応・更新</th><td>提供元が行う</td><td>自社または委託先の責任になる</td></tr>
+<tr><th>導入までの早さ</th><td>申し込んだその日から使える</td><td>構築の期間が必要（当社は計15時間を目安）</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section><div class="panel">
+<h2>なぜ今、オープンソースが現実的になったのですか？</h2>
+<p>理由は、<strong>オープンソースを自社業務に合わせて直す費用が下がったこと</strong>です。以前は、完成品を業務に合わせるだけで人手と期間がかかり、その分だけ月額サービスのほうが安く見えていました。</p>
+<p>AIエージェントと対話しながら実装する「バイブコーディング」で、この部分の費用が大きく下がりました。当社の場合、土台にするオープンソースが決まっていれば<strong>合計10時間以内・税込110,000円から</strong>、日本語化・画面・項目・権限・連携の変更とサーバー導入までを行います。月額を払い続ける金額と比べてみてください。</p>
+<ul class="checks">
+<li><strong>固定費が消える</strong>——毎年かかり続ける利用料が、最初の構築費用に置き換わります</li>
+<li><strong>業務に合う</strong>——標準機能に業務を合わせるのではなく、業務に合わせて画面と項目を変えられます</li>
+<li><strong>資産とノウハウが残る</strong>——ソースコードと、AIを使った直し方が社内に残ります</li>
+</ul>
+</div></section>
+
+<section><div class="panel">
+<h2>${named >= 2 ? `${h(s.name)}と同じことができるオープンソース${oss.length}件` : `${h(s.name)}と近い分野で使われているオープンソース`}</h2>
+<p>${named >= 2
+  ? `以下は、${h(s.name)}が扱う業務と同じ用途に使えるオープンソースです。当社がGitHubの公開情報からライセンスと日本語対応を実測して並べています。名前をクリックすると、そのソフトで何をどう作るかの説明に移ります。`
+  : `${h(s.name)}をそのまま置き換えられる定番は、現在調査中です。以下は近い分野で使われているもので、そのままの置き換えにはなりません。<strong>実際に何を土台にするかは、業務内容を伺ってから提案します</strong>。無理に当てはめて提案することはしません。`}</p>
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>日本語</th></tr></thead><tbody>
+${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license)}</td><td>${h(p.japaneseStatus)}</td></tr>`).join('')}
+</tbody></table></div>
+${oss.some((p) => p.licenseNote) ? `<p class="note">ライセンスによっては、第三者へのホスティング提供や再販ができないものがあります。自社の業務で使うための構築は問題ありません。各ソフトの詳細ページに利用条件を書いています。</p>` : ''}
+</div></section>
+
+<section><div class="panel">
+<h2>${h(s.name)}を使い続けたほうがよいのは、どんな場合ですか？</h2>
+<p>使い続けたほうがよい場合とは、<strong>標準機能で業務が回っていて、人数が少なく、社内に運用を見る人がいない場合</strong>です。人数が数名なら月額の総額は小さく、構築費用のほうが高くつきます。また障害対応や更新を自社で持てないなら、提供元に任せられる価値は大きいです。</p>
+<p>当社は、見込みが立たない場合に「作らないほうがよい」と申し上げます。無理に置き換えることが目的ではありません。判断材料として、いまの利用人数と月額、そして不便に感じている点を教えていただければ、比較してお伝えします。</p>
+</div></section>
+
+<div class="cta">
+<h2>${h(s.name)}からの見直しを、まず15時間で試す</h2>
+<p>名古屋市内なら、1日3時間×5日間の計15時間・税別15万円で試せます。<strong>初日3時間のヒアリングと提案は無料</strong>です。土台にするオープンソースが決まっている場合は、税込110,000円からのカスタマイズと導入があります。</p>
+<a class="btn btn-main" href="${TRIAL}?ref=saas-${attr(s.slug)}">AI導入お試し実験を見る</a>
+<a class="btn" href="${KURAGE}/vibe-oss.html?ref=saas-${attr(s.slug)}">OSSのカスタマイズを見る</a>
+<a class="btn" href="${KURAGE}/vibe-prototype.html?ref=saas-${attr(s.slug)}">動くデモを先に見る</a>
+<a class="btn" href="${SITE}/contact.php?subject=${encodeURIComponent(s.name + 'の見直し相談')}">${h(s.name)}について相談する</a>
+</div>
+
+${others.length ? `<section><div class="panel"><h2>他のサービスから探す</h2>
+<div class="cat-grid">${others.map((o) => `<a class="cat-card" href="${BASE}/${attr(o.slug)}.html"><b>${h(o.name)}</b><span>${h(o.vendor)}</span></a>`).join('')}</div>
+<p class="note"><a href="${BASE}/">SaaSとOSSの対応表をすべて見る</a>　<a href="${SITE}/ai-system/?ref=saas-${attr(s.slug)}">やりたいことから探す</a></p>
+</div></section>` : ''}
+
+<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>
+
+<section><div class="panel">
+<p class="note">${h(s.name)}は${h(s.vendor)}の商標または登録商標です。本ページは当社が独自にまとめた比較情報であり、${h(s.vendor)}が提供・監修するものではありません。料金や機能は変更される場合があるため、最新の情報は提供元の公式サイトをご確認ください。</p>
+</div></section>
+</main>`
+
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    { '@context': 'https://schema.org', '@type': 'Service', name: `${s.name}からのオープンソース移行支援`,
+      description: desc, url, serviceType: 'OSS導入・日本語化・カスタマイズ・システム移行',
+      areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'Country', name: '日本' }],
+      provider: { '@id': `${SITE}/#organization` },
+      offers: { '@type': 'Offer', priceCurrency: 'JPY', price: '110000', url: `${KURAGE}/vibe-oss.html`,
+        description: '土台にするOSSが決まっている場合。合計10時間以内・税込110,000円から。' } },
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: `${s.name}と同じことができるオープンソース`,
+      numberOfItems: oss.length,
+      itemListElement: oss.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/ai-system/${p.slug}/`, name: p.name })) },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'SaaSとOSSの対応表', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: s.name, item: url }] },
+  ]
+  return shell(title, desc, url, body, ld)
+}
+
+function indexPage(list: Array<{ s: Saas; oss: Project[] }>): string {
+  const title = 'SaaSの費用を、オープンソースで見直す｜サービス名から探す対応表 | 株式会社エクスブリッジ'
+  const desc = `kintone、freee、Slack、Backlog、Zendesk など${list.length}のクラウドサービスについて、同じ業務をオープンソースで行う選択肢をまとめました。ライセンス費はかからず、ソースコードは自社に残ります。名古屋のシステム開発会社が導入まで行います。`
+  const rows = [...list].sort((a, b) => b.s.volume - a.s.volume)
+  const body = `<section class="hero"><div class="wrap">
+<p class="kicker">SaaSとオープンソース</p>
+<h1>SaaSの月額費用も、<br>パッケージソフトの年次ライセンス費用も、<br>OSS × AI開発でゼロにできます。</h1>
+<p class="lead">クラウドサービスの月額も、パッケージソフトの保守・ライセンス更新料も、使い続ける限り毎年かかり続けます。同じ業務をオープンソースで行えば、<strong>この「払い続ける費用」がゼロになります</strong>（かかるのは最初の構築費用と、以後のサーバー代だけです）。これまではOSSを自社業務に合わせて直す手間が壁でしたが、<strong>AIによるバイブコーディングでその費用が大きく下がり</strong>、現実的な選択肢になりました。</p>
+<p><a class="btn btn-main" href="${TRIAL}?ref=saas-index">AI導入お試し実験を見る</a> <a class="btn" href="${SITE}/ai-system/?ref=saas-index">やりたいことから探す</a></p>
+</div></section>
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / SaaSとOSSの対応表</nav>
+<section><div class="panel">
+<h2>この対応表とは？</h2>
+<p>この対応表とは、いま使っている（あるいは検討している）クラウドサービスの名前から、同じ業務に使えるオープンソースを引けるようにしたものです。サービス名をクリックすると、費用の仕組みの違い、置き換えの候補、向き不向きが読めます。</p>
+<p>当社は置き換えを勧めることが目的ではありません。人数が少なく標準機能で足りるなら、そのまま使うほうが安く済みます。判断材料として並べています。</p>
+</div></section>
+<section><div class="panel">
+<h2>サービス名から探す</h2>
+<div class="table-wrap"><table><thead><tr><th>サービス</th><th>提供元</th><th>置き換えの候補</th></tr></thead><tbody>
+${rows.map(({ s, oss }) => `<tr><th><a href="${BASE}/${attr(s.slug)}.html">${h(s.name)}</a></th><td>${h(s.vendor)}</td><td>${oss.slice(0, 3).map((p) => h(p.name)).join('、')}${oss.length > 3 ? ` ほか${oss.length - 3}件` : ''}</td></tr>`).join('')}
+</tbody></table></div>
+</div></section>
+<section><div class="panel">
+<h2>なぜ今なのですか？</h2>
+<p>理由は、オープンソースを自社業務に合わせて直す費用が下がったことです。以前はその作業に人手と期間がかかり、月額を払い続けるほうが安く見えていました。AIエージェントと対話しながら実装するバイブコーディングで、その前提が変わりました。固定費が消え、業務に合わせられ、ソースコードとノウハウが自社に残ります。</p>
+</div></section>
+<section><div class="panel">
+<p class="note">記載のサービス名・製品名は各社の商標または登録商標です。本ページは当社が独自にまとめた比較情報であり、各提供元が監修するものではありません。料金や機能は変更される場合があるため、最新の情報は各公式サイトをご確認ください。</p>
+</div></section>
+</main>`
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: 'SaaSとオープンソースの対応表', numberOfItems: rows.length,
+      itemListElement: rows.map(({ s }, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/${s.slug}.html`, name: s.name })) },
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url: `${BASE}/`, description: desc,
+      inLanguage: 'ja', dateModified: TODAY,
+      isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'SaaSとOSSの対応表', item: `${BASE}/` }] },
+  ]
+  return shell(title, desc, `${BASE}/`, body, ld)
+}
+
+const withOss = saasList.map((s) => {
+  const r = ossFor(s)
+  return { s, oss: r.list, named: r.named }
+})
+const thin = withOss.filter((x) => x.named < 2)
+
+await fs.rm(distRoot, { recursive: true, force: true })
+await fs.mkdir(distRoot, { recursive: true })
+await fs.writeFile(path.join(distRoot, 'index.html'), indexPage(withOss))
+for (const { s, oss, named } of withOss) {
+  const others = saasList.filter((o) => o.slug !== s.slug && o.category === s.category).slice(0, 6)
+  await fs.writeFile(path.join(distRoot, `${s.slug}.html`), detailPage(s, oss, others, named))
+}
+
+const urls = [`${BASE}/`, ...saasList.map((s) => `${BASE}/${s.slug}.html`)]
+await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/saas/') ? '0.9' : '0.8'}</priority></url>`).join('\n') +
+  `\n</urlset>\n`)
+
+payload.logger.info(`saas: ${saasList.length}ページ + index/sitemap`)
+if (thin.length) {
+  payload.logger.warn(`推薦できるOSSが2件未満: ${thin.map((x) => x.s.slug).join(', ')}`)
+}
