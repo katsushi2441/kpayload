@@ -20,6 +20,11 @@ export const DISPLAY_NAMES: Record<string, string> = {
   'cal-diy': 'Cal.com',
   chatwoot: 'Chatwoot',
   docmost: 'Docmost',
+  documenso: 'Documenso',
+  docuseal: 'DocuSeal',
+  opensign: 'OpenSign',
+  inventree: 'InvenTree',
+  opensourcepos: 'Open Source Point of Sale',
   dolibarr: 'Dolibarr',
   easyappointments: 'Easy!Appointments',
   erpnext: 'ERPNext',
@@ -62,3 +67,12 @@ export const DISPLAY_NAMES: Record<string, string> = {
 /** カタログの1件に正式表記を当てる（無ければそのまま） */
 export const displayName = (slug: string, current: string): string =>
   DISPLAY_NAMES[slug] || current
+
+/**
+ * 分類の手直し。紹介文の生成が分類を外すことがあるので、実物を見て決めた分だけ直す。
+ * 例: medusajs/medusa はECの土台なのに aidev になっていた（Shopifyの置き換え候補として
+ * 出しているのに、AI開発ツールのカテゴリに入っていた。2026-08-25）。
+ */
+export const CATEGORY_FIX: Record<string, string> = {
+  medusa: 'commerce',
+}

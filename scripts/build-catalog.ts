@@ -10,7 +10,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { displayName } from './display-names'
+import { CATEGORY_FIX, displayName } from './display-names'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const harvestDir = path.join(root, 'data', 'harvest')
@@ -99,7 +99,7 @@ for (const name of files) {
   record.useCases = (record.useCases || []).filter((u) => (u.text || '').trim())
   record.keywords = (record.keywords || []).filter((k) => (k.text || '').trim())
   if (record.faqs.length < 2 || record.useCases.length < 3 || !record.keywords.length) continue
-  record.category = refineCategory(record)
+  record.category = CATEGORY_FIX[record.slug] || refineCategory(record)
   // GitHubのリポジトリ名がそのまま製品名になっているので、公式表記に寄せる
   record.name = displayName(record.slug, record.name)
   records.push(record)

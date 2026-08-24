@@ -2916,7 +2916,7 @@
   {
     "name": "Medusa",
     "slug": "medusa",
-    "category": "aidev",
+    "category": "commerce",
     "funnel": "prototype",
     "kind": "dev-tool",
     "summary": "開発者やエージェント向けの柔軟なコマースプラットフォームです。",
@@ -8078,7 +8078,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "documenso",
+    "name": "Documenso",
     "slug": "documenso",
     "category": "esign",
     "funnel": "oss",
@@ -18246,7 +18246,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "opensourcepos",
+    "name": "Open Source Point of Sale",
     "slug": "opensourcepos",
     "category": "inventory",
     "funnel": "oss",
@@ -129601,6 +129601,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Sharing",
+    "slug": "sharing",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ブラウザを介してAndroidデバイス間でファイルやアプリを共有できるツールです。",
+    "description": "このソフトウェアは、Androidデバイス上のファイルやアプリケーションをブラウザを使用して他のデバイスと共有することを可能にします。Javaで開発されており、AGPL-3.0ライセンスの下で提供されています。ユーザーは複雑な設定を介さず、ブラウザを通じてシームレスにデータのやり取りを行うことができます。Androidアプリの利便性を活かしつつ、マルチデバイス間でのファイル共有を実現します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/Ammar64/Sharing",
+    "githubUrl": "https://github.com/Ammar64/Sharing",
+    "featured": false,
+    "stars": 137,
+    "language": "Java",
+    "githubCreatedAt": "2024-05-23T17:43:12Z",
+    "githubPushedAt": "2026-06-06T12:17:39Z",
+    "useCases": [
+      {
+        "text": "Android端末間のファイル転送"
+      },
+      {
+        "text": "ブラウザを利用したアプリ共有"
+      },
+      {
+        "text": "マルチデバイスでのデータ同期"
+      },
+      {
+        "text": "モバイル環境でのファイル配布"
+      },
+      {
+        "text": "クロスデバイスな情報共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "android"
+      },
+      {
+        "text": "file-sharing"
+      },
+      {
+        "text": "share"
+      },
+      {
+        "text": "sharing"
+      },
+      {
+        "text": "java"
+      },
+      {
+        "text": "browser"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような仕組みで共有が行われますか？",
+        "answer": "このツールはブラウザを介して動作するため、Androidデバイス上のファイルやアプリを他のデバイスと共有することが可能です。特定のネットワーク環境下でブラウザを開くことで操作を行えます。"
+      },
+      {
+        "question": "対応しているOSは何ですか？",
+        "answer": "説明文に基づくと、主にAndroidデバイスから他のデバイスへファイルを共有するための機能を提供しています。具体的な他デバイスのOSについては詳細が記載されていません。"
+      },
+      {
+        "question": "このソフトウェアはどのような言語で書かれていますか？",
+        "answer": "このソフトウェアはJavaというプログラミング言語を使用して開発されています。オープンソースとして公開されており、AGPL-3.0ライセンスが適用されています。"
+      },
+      {
+        "question": "ブラウザ以外の方法でも共有できますか？",
+        "answer": "提供されている主な機能は、ブラウザを使用してAndroidデバイス間でファイルやアプリを共有することです。他のインターフェースでの動作については、このソフトウェアの基本仕様に含まれていません。}]}_```json_ (Note: The prompt asked for ONLY the JSON, but I will ensure it's clean.)_ 修正：指示通りJSONのみを出力します。/thought<channel|>{"
+      }
+    ]
+  },
+  {
     "name": "madao_service",
     "slug": "madao-service",
     "category": "sitegen",
@@ -129757,6 +129832,156 @@
     "jaSamplePaths": []
   },
   {
+    "name": "PrivyDrop",
+    "slug": "privydrop",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Webブラウザを通じてファイルやテキストを安全に共有できるオープンソースアプリです。",
+    "description": "PrivyDropはAirDropの代替となるオープンソースのWebアプリケーションです。WebRTC技術を活用することで、P2P（ピアツーピア）方式でのファイル共有を実現しています。エンドツーエンドの暗号化に対応しており、セキュリティを重視したデータ送受信が可能です。TypeScriptで開発されており、ブラウザさえあればテキストやファイルの共有が行えます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.PrivyDrop.app",
+    "githubUrl": "https://github.com/david-bai00/PrivyDrop",
+    "featured": false,
+    "stars": 137,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-06-16T14:57:35Z",
+    "githubPushedAt": "2026-06-24T07:42:13Z",
+    "useCases": [
+      {
+        "text": "大容量ファイルの安全な転送"
+      },
+      {
+        "text": "ブラウザ間でのテキスト共有"
+      },
+      {
+        "text": "P2Pによる直接的なファイル送信"
+      },
+      {
+        "text": "エンドツーエンド暗号化が必要なデータ共有"
+      },
+      {
+        "text": "AirDropに代わるWebベースの共有手段"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "P2P"
+      },
+      {
+        "text": "WebRTC"
+      },
+      {
+        "text": "エンドツーエンド暗号化"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このアプリでどのようなデータを送れますか？",
+        "answer": "ファイルだけでなく、テキスト情報の共有にも対応しています。WebRTCを利用したP2P方式により、ブラウザを通じて直接データをやり取りすることが可能です。"
+      },
+      {
+        "question": "セキュリティ面での特徴を教えてください。",
+        "answer": "エンドツーエンドの暗号化に対応しているため、安全なデータ共有が可能です。プライバシーを重視する環境でのファイル転送に適しています。"
+      },
+      {
+        "question": "特別なソフトウェアのインストールは必要ですか？",
+        "answer": "Webアプリケーションとして動作するため、ブラウザを通じて利用できます。AirDropのようなデバイス固有の制約を受けずに共有が行えるのが特徴です。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "TypeScriptを主な言語として使用しており、WebRTC技術を組み合わせてP2P通信を実現しています。オープンソースとしてMITライセンスで公開されています。Goals"
+      }
+    ]
+  },
+  {
+    "name": "xabber-web",
+    "slug": "xabber-web",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Webブラウザ上で動作するオープンソースのXMPPクライアントです。",
+    "description": "xabber-webは、JavaScriptを用いて構築されたWebベースのXMPPチャットクライアントです。ユーザーは専用のソフトウェアをインストールすることなく、標準的なWebブラウザを通じてメッセージの送受信を行うことができます。このツールはXMPPプロトコルに対応しており、Jabberなどの互換性のあるシステムと連携が可能です。オープンソースとして提供されており、Web上でのリアルタイムなコミュニケーションを実現するための機能を備えています。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/redsolution/xabber-web",
+    "githubUrl": "https://github.com/redsolution/xabber-web",
+    "featured": false,
+    "stars": 137,
+    "language": "JavaScript",
+    "githubCreatedAt": "2017-08-02T19:40:37Z",
+    "githubPushedAt": "2026-03-12T07:07:32Z",
+    "useCases": [
+      {
+        "text": "Webブラウザを利用した社内チャットの導入"
+      },
+      {
+        "text": "XMPPプロトコルを用いたメッセージングシステムの構築"
+      },
+      {
+        "text": "JavaScriptベースの軽量なWebクライアントの利用"
+      },
+      {
+        "text": "Jabberサーバーとの連携によるコミュニケーション環境の整備"
+      },
+      {
+        "text": "ブラウザ完結型のメッセンジャー機能の実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chat"
+      },
+      {
+        "text": "jabber"
+      },
+      {
+        "text": "javascript"
+      },
+      {
+        "text": "messenger"
+      },
+      {
+        "text": "webclient"
+      },
+      {
+        "text": "xabber"
+      },
+      {
+        "text": "xmpp"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアを動かすために特別なソフトは必要ですか？",
+        "answer": "いいえ、Webクライアントであるため、標準的なWebブラウザがあれば利用可能です。JavaScriptで動作する仕組みになっています。"
+      },
+      {
+        "question": "どのようなプロトコルに対応していますか？",
+        "answer": "XMPP（Jabber）プロトコルに対応しています。これにより、既存のXMPPサーバーや関連システムとの連携が可能です。"
+      },
+      {
+        "question": "このソフトウェアは商用利用が可能ですか？",
+        "answer": "AGPL-3.0ライセンスで提供されています。利用にあたっては、各国の法律に従いライセンス条項を確認してください。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "主にJavaScriptを用いて開発されています。Web技術を活用して構築されているため、ブラウザ上での動作に適しています。Goals"
+      }
+    ]
+  },
+  {
     "name": "report-print-send",
     "slug": "report-print-send",
     "category": "accounting",
@@ -129904,6 +130129,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "multi-model-chat",
+    "slug": "multi-model-chat",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "複数のAIモデルの回答をリアルタイムで並べて比較できるチャットアプリケーションです。",
+    "description": "このツールは、GPTやClaude、Mistralといった主要なAIモデルに加え、Ollamaを使用したローカルモデルの回答を横並びで表示します。React、TypeScript、Tailwind CSSを用いて構築されており、直感的な操作が可能です。複数のモデルから得られる回答を同時に確認できるため、最適な結果を効率的に選別できます。Markdown形式にも対応しており、構造化された情報の閲覧に適しています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://seehiong.github.io/multi-model-chat/",
+    "githubUrl": "https://github.com/seehiong/multi-model-chat",
+    "featured": false,
+    "stars": 136,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-08-19T14:02:25Z",
+    "githubPushedAt": "2026-06-28T15:11:02Z",
+    "useCases": [
+      {
+        "text": "異なるAIモデルの精度比較"
+      },
+      {
+        "text": "ローカルLLMと商用LLMの性能検証"
+      },
+      {
+        "text": "複数のプロンプトに対する反応確認"
+      },
+      {
+        "text": "AIを活用したコンテンツ制作の検討"
+      },
+      {
+        "text": "社内でのAI活用手法の調査"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai-comparison"
+      },
+      {
+        "text": "anthropic"
+      },
+      {
+        "text": "chat"
+      },
+      {
+        "text": "llm"
+      },
+      {
+        "text": "mistral"
+      },
+      {
+        "text": "multi-model"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのAIモデルに対応していますか？",
+        "answer": "GPT、Claude、Mistralといった主要な商用モデルに加え、Ollamaを介したローカルLLMにも対応しています。複数のモデルを同時に操作することが可能です。"
+      },
+      {
+        "question": "技術スタックはどのようなものですか？",
+        "answer": "フロントエンドにはReact、TypeScript、Tailwind CSSが使用されています。モダンなWeb技術で構築されているため、スムーズな操作感が特徴です。"
+      },
+      {
+        "question": "Markdown形式での表示に対応していますか？",
+        "answer": "はい、Markdownをサポートしているため、AIから生成された構造化されたテキストやコードなどを適切に表示することができます。"
+      },
+      {
+        "question": "ローカルモデルの実行も可能ですか？",
+        "answer": "Ollamaを介することで、ローカル環境で動作するモデルとの比較も可能です。プライバシーを重視した検証などにも活用できます。Goals"
+      }
+    ]
+  },
+  {
     "name": "python-OSINT-notebook",
     "slug": "python-osint-notebook",
     "category": "devtools",
@@ -129977,6 +130277,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "MeshDrop",
+    "slug": "meshdrop",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ブラウザ上で動作する、インストール不要の直接ファイル転送ソリューションです。",
+    "description": "MeshDropは、デバイス間でシームレスなファイル共有を可能にするブラウザベースのツールです。クラウドサービスを経由せず、デバイス間での直接的なファイル転送を実現します。ソフトウェアのインストールが不要なため、迅速に導入して利用を開始できます。WebRTCやオフラインファーストの技術を活用しており、ネットワーク環境に左右されにくい設計となっています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://meshdrop.vercel.app",
+    "githubUrl": "https://github.com/Emmaccen/MeshDrop",
+    "featured": false,
+    "stars": 135,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-03-29T20:45:46Z",
+    "githubPushedAt": "2026-06-14T23:44:51Z",
+    "useCases": [
+      {
+        "text": "社内での大容量ファイルの共有"
+      },
+      {
+        "text": "クライアントへの資料送付"
+      },
+      {
+        "text": "イベント会場での機材間データ転送"
+      },
+      {
+        "text": "クラウドを介さない安全なファイル移動"
+      },
+      {
+        "text": "一時的なデバイス間のデータ同期"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "ブラウザベース"
+      },
+      {
+        "text": "P2P"
+      },
+      {
+        "text": "WebRTC"
+      },
+      {
+        "text": "オフラインファースト"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "ソフトのインストールは必要ですか？",
+        "answer": "いいえ、MeshDropはブラウザベースのソリューションであるため、デバイスにソフトウェアをインストールすることなく利用可能です。"
+      },
+      {
+        "question": "クラウドサービスを利用しますか？",
+        "answer": "いいえ、このツールはクラウドサービスを介さずにデバイス間で直接ファイルを共有する仕組みを採用しています。"
+      },
+      {
+        "question": "オフライン環境でも動作しますか？",
+        "answer": "はい、オフラインファーストの設計を取り入れており、ネットワーク接続に依存しないファイル転送が可能です。"
+      },
+      {
+        "question": "どのような技術で動作していますか？",
+        "answer": "主にJavaScript（TypeScript）で構築されており、WebRTCなどの技術を用いてデバイス間の直接通信を実現しています。Goals: 1. Provide a smooth file transfer experience. 2. Ensure privacy by avoiding cloud intermediaries. 3. Simplify deployment with zero installation."
+      }
+    ]
   },
   {
     "name": "DocMason",
@@ -130509,6 +130881,81 @@
     ]
   },
   {
+    "name": "Invoice-Downloader",
+    "slug": "invoice-downloader",
+    "category": "accounting",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "メールから請求書を自動収集し、Excelに集約する経費精算準備ツールです。",
+    "description": "このツールは、電子請求書の整理と経費精算の準備を効率化するためのソフトウェアです。メールからPDF、OFD、XML形式の請求書を一括で収集し、OCR技術を用いて内容を識別します。収集したデータは自動的に分類・アーカイブされ、最終的な集計結果をExcelファイルとして生成します。WindowsおよびmacOS向けのデスクトップ版に加え、DSHプラグインも提供されています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/EthanYoQ/Invoice-Downloader/releases/latest",
+    "githubUrl": "https://github.com/EthanYoQ/Invoice-Downloader",
+    "featured": false,
+    "stars": 133,
+    "language": "Python",
+    "githubCreatedAt": "2026-03-02T03:40:29Z",
+    "githubPushedAt": "2026-08-23T19:07:21Z",
+    "useCases": [
+      {
+        "text": "メールから届く請求書の自動収集"
+      },
+      {
+        "text": "PDFやXML形式の請求書データの整理"
+      },
+      {
+        "text": "OCRによる請求内容の自動識別"
+      },
+      {
+        "text": "経費精算のためのExcel集計表作成"
+      },
+      {
+        "text": "請求書の分類とアーカイブ管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "電子請求書"
+      },
+      {
+        "text": "経費精算"
+      },
+      {
+        "text": "OCR"
+      },
+      {
+        "text": "請求書管理"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "Excel連携"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のファイルに対応していますか？",
+        "answer": "PDF、OFD、XML形式の電子請求書に対応しています。これらのファイルをメールから一括で収集し、処理することが可能です。"
+      },
+      {
+        "question": "このツールを使うとどのようなメリットがありますか？",
+        "answer": "手動での請求書の確認やデータ入力の手間を削減できます。OCRによる識別とExcelへの自動集計により、経費精算の準備作業を効率化します。"
+      },
+      {
+        "question": "対応しているOSは何ですか？",
+        "answer": "WindowsおよびmacOS向けのデスクトップアプリケーションが提供されています。また、DSHプラグインとしての利用も可能です。"
+      },
+      {
+        "question": "最終的な出力形式はどのようなものですか？",
+        "answer": "収集・分類した請求書のデータに基づいて、Excel形式の集計ファイル（汇总）を生成します。これにより、社内の経費管理システムへの入力などがスムーズになります。Goals"
+      }
+    ]
+  },
+  {
     "name": "TemplatesNewObject1C",
     "slug": "templatesnewobject1c",
     "category": "devtools",
@@ -130739,6 +131186,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "narwhal",
+    "slug": "narwhal",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "エッジアプリケーション向けの拡張可能なメッセージブローカーです。",
+    "description": "narwhalは、エッジコンピューティング環境での利用を想定した拡張性の高いメッセージブローカーです。Rust言語で実装されており、io-uringのサポートなど高度なパフォーマンスを追求しています。非同期処理やIoTデバイス間の通信に適しており、メッセージの配送サービスとして機能します。開発者はこの基盤を利用して、独自のメッセージングシステムを構築することが可能です。",
+    "license": "BSD-3-Clause",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/ortuman/narwhal",
+    "githubUrl": "https://github.com/ortuman/narwhal",
+    "featured": false,
+    "stars": 133,
+    "language": "Rust",
+    "githubCreatedAt": "2025-10-22T07:12:47Z",
+    "githubPushedAt": "2026-05-15T15:19:56Z",
+    "useCases": [
+      {
+        "text": "エッジコンピューティングにおけるメッセージ配信"
+      },
+      {
+        "text": "IoTデバイス間のデータ通信基盤"
+      },
+      {
+        "text": "非同期処理が必要なバックエンドシステム"
+      },
+      {
+        "text": "カスタムメッセージブローカーの構築"
+      },
+      {
+        "text": "リアルタイムチャットシステムのインフラ"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "メッセージブローカー"
+      },
+      {
+        "text": "Rust"
+      },
+      {
+        "text": "エッジコンピューティング"
+      },
+      {
+        "text": "IoT"
+      },
+      {
+        "text": "非同期処理"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアはどのような環境で動作しますか？",
+        "answer": "エッジアプリケーション向けに設計されているため、リソースが限られた環境や、ネットワークの末端に近いデバイスでの運用に適しています。"
+      },
+      {
+        "question": "主な技術スタックは何ですか？",
+        "answer": "Rust言語で開発されており、高いパフォーマンスを実現するためにio-uringなどの高度なシステムインターフェースを活用しています。"
+      },
+      {
+        "question": "どのような種類のメッセージを扱えますか？",
+        "answer": "具体的なメッセージ形式の制限は記載されていませんが、拡張可能な設計であるため、多様なアプリケーション要件に合わせて構築可能です。"
+      },
+      {
+        "question": "チャット機能そのものが含まれていますか？",
+        "answer": "このソフトウェア自体はメッセージブローカーであり、チャット機能を実現するための基盤として利用されることを想定しています。"
+      }
+    ]
   },
   {
     "name": "Knote",
@@ -131136,6 +131655,156 @@
     "jaSamplePaths": []
   },
   {
+    "name": "CoordClaw",
+    "slug": "coordclaw",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "自然言語でチームを定義し、AIエージェント同士が連携するマルチエージェントシステムです。",
+    "description": "CoordClawは、管理理論と組織論に基づいて構築されたマルチエージェントシステムです。あらかじめ固定されたワークフロー（DAG）を記述するのではなく、自然言語によるチーム定義とメッセージループによる協調動作を実現しています。AIがまるで一人企業のように動く仕組みを提供し、人間が全体を俯瞰して監視できる「神の視点」でのオーバーサイトを可能にします。監査可能な作業ログを通じて、エージェント間のプロセスを透明に管理できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/CoordClaw/CoordClaw",
+    "githubUrl": "https://github.com/CoordClaw/CoordClaw",
+    "featured": false,
+    "stars": 131,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-07-29T12:35:40Z",
+    "githubPushedAt": "2026-08-23T12:38:56Z",
+    "useCases": [
+      {
+        "text": "マルチエージェントによる業務自動化システムの構築"
+      },
+      {
+        "text": "自然言語による組織構造の定義とAIへの反映"
+      },
+      {
+        "text": "メッセージループを用いた動的なAI間連携の実装"
+      },
+      {
+        "text": "監査可能なAI作業ログの管理基盤として"
+      },
+      {
+        "text": "人間が監視・介入を行うAIチーム運営],"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agent-orchestration"
+      },
+      {
+        "text": "ai-agents"
+      },
+      {
+        "text": "ai-management"
+      },
+      {
+        "text": "autonomous-agents"
+      },
+      {
+        "text": "collaboration"
+      },
+      {
+        "text": "llm"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのようにチームを定義しますか？",
+        "answer": "あらかじめ複雑なコードを書くのではなく、自然言語を用いてチームの役割や構造を定義することで、AIエージェント間の協調関係を設定することが可能です。"
+      },
+      {
+        "question": "従来のワークフロー（DAG）との違いは何ですか？",
+        "answer": "固定されたグラフ（DAG）に従うのではなく、メッセージループを通じて各エージェントが動的にやり取りを行うことで、より柔軟な連携を実現している点が特徴です。"
+      },
+      {
+        "question": "人間はどのようにシステムを監視できますか？",
+        "answer": "監査可能な作業ログが提供されるため、人間は「神の視点」からシステム全体の動きを俯瞰し、必要に応じてオーバーサイト（監視）を行うことができます。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "このプロジェクトはTypeScriptを用いて開発されており、MITライセンスの下で公開されています。onite-person companyのように動くAIチームの構築を目指しています。一个"
+      }
+    ]
+  },
+  {
+    "name": "alga-psa",
+    "slug": "alga-psa",
+    "category": "support",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ITサービス提供業者向けの業務自動化（PSA）プラットフォームです。",
+    "description": "alga-psaは、Nine Mindsによって開発されたオープンソースのMSP向けPSAツールです。プロフェッショナル・サービス・オートメーション（PSA）として機能し、業務の効率化を支援します。主な機能にはチケット管理が含まれており、ITサービスの提供や運用管理に特化した設計となっています。TypeScriptで構築されており、拡張性の高いシステム基盤を提供します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi-network-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変したものを社外に公開して使わせる場合は、改変部分のソース公開義務が利用者側に発生します（社内利用のみなら不要）。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.nineminds.com/alga-psa",
+    "githubUrl": "https://github.com/Nine-Minds/alga-psa",
+    "featured": false,
+    "stars": 131,
+    "language": "TypeScript",
+    "githubCreatedAt": "2024-11-04T01:38:27Z",
+    "githubPushedAt": "2026-08-21T23:50:08Z",
+    "useCases": [
+      {
+        "text": "MSPによる顧客管理"
+      },
+      {
+        "text": "サポートチケットの管理"
+      },
+      {
+        "text": "プロフェッショナルサービスの自動化"
+      },
+      {
+        "text": "ITサービス提供業務の効率化"
+      },
+      {
+        "text": "案件進捗の追跡"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "msp"
+      },
+      {
+        "text": "nine-minds"
+      },
+      {
+        "text": "open-source"
+      },
+      {
+        "text": "professional-services-automation"
+      },
+      {
+        "text": "psa"
+      },
+      {
+        "text": "ticketing"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PSAとはどのようなツールですか？",
+        "answer": "PSA（Professional Services Automation）は、プロフェッショナルなサービスを提供する企業が、顧客管理や案件の進捗、請求、リソースの配分などを一元的に管理するための業務自動化ツールです。"
+      },
+      {
+        "question": "このソフトウェアは何を主な目的としていますか？",
+        "answer": "主にMSP（Managed Service Provider）などのITサービス提供業者が、日々の業務フローを効率化し、チケット管理やサービスの運用を円滑に進めることを目的として設計されています。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "このソフトウェアはTypeScriptというプログラミング言語を用いて開発されており、モダンなWeb技術を用いたシステム構成となっています。"
+      },
+      {
+        "question": "オープンソースであることの利点は何ですか？",
+        "answer": "オープンソースとして公開されているため、コミュニティによる開発や改善が行われる可能性があり、特定のベンダーに依存せずにシステムの構造を確認しながら活用できる点が特徴です。Goals"
+      }
+    ]
+  },
+  {
     "name": "SEBLOD",
     "slug": "seblod",
     "category": "cms",
@@ -131209,6 +131878,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "flectra",
+    "slug": "flectra",
+    "category": "crm",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "CRMやERP、在庫管理などの機能を備えたオープンソースの業務システムです。",
+    "description": "flectraは、顧客関係管理（CRM）、企業資源計画（ERP）、在庫管理などを含む統合的な業務アプリケーションです。Pythonで構築されており、販売管理やプロジェクト管理、購買管理といった幅広いビジネスプロセスをカバーします。このリポジトリは公式の読み取り専用ミラーであり、バグ報告や課題に関する詳細は元のGitLabリポジトリを参照する必要があります。オープンソースとして提供されているため、企業の業務要件に合わせた運用検討が可能です。",
+    "license": "LGPL-3.0",
+    "licenseTier": "osi-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変して配布する場合は、同じライセンスでソースを公開する義務があります。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://flectrahq.com",
+    "githubUrl": "https://github.com/flectra-hq/flectra",
+    "featured": false,
+    "stars": 131,
+    "language": "Python",
+    "githubCreatedAt": "2018-11-06T08:22:33Z",
+    "githubPushedAt": "2026-05-19T15:22:43Z",
+    "useCases": [
+      {
+        "text": "顧客関係管理（CRM）"
+      },
+      {
+        "text": "企業資源計画（ERP）"
+      },
+      {
+        "text": "在庫管理"
+      },
+      {
+        "text": "販売・購買管理"
+      },
+      {
+        "text": "プロジェクト管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CRM"
+      },
+      {
+        "text": "ERP"
+      },
+      {
+        "text": "在庫管理"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアでどのような業務を管理できますか？",
+        "answer": "CRM、ERP、在庫管理、プロジェクト管理、購買、販売など、企業の基幹業務に関わる幅広い項目をカバーしています。"
+      },
+      {
+        "question": "バグの報告や技術的な質問はどこにすればよいですか？",
+        "answer": "このリポジトリは読み取り専用のミラーであるため、バグの報告や課題に関する問い合わせは、元のGitLabリポジトリで行う必要があります。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "このアプリケーションはPythonで記述されています。"
+      },
+      {
+        "question": "商用利用が可能かどうか教えてください。",
+        "answer": "ライセンス情報はNOASSERTIONとなっており、具体的な条件については提供されているソースコードのライセンスを確認する必要があります。"
+      }
+    ]
   },
   {
     "name": "pad",
@@ -131503,6 +132244,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "mumla",
+    "slug": "mumla",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Mumble音声会議システム用のAndroidクライアントアプリです。",
+    "description": "このソフトウェアは、オープンソースの音声会議システムであるMumbleを利用するためのAndroid向けアプリケーションです。Javaで開発されており、モバイルデバイスから音声会議に参加することを可能にします。本リポジトリは特定のライブラリのミラーであり、主な機能はチャットやVoIPを通じたコミュニケーションの提供です。Android端末を用いた音声通話環境を構築したい場合に適しています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://mumla-app.gitlab.io/",
+    "githubUrl": "https://github.com/quite/mumla",
+    "featured": false,
+    "stars": 130,
+    "language": "Java",
+    "githubCreatedAt": "2020-04-13T10:31:16Z",
+    "githubPushedAt": "2026-07-26T06:30:11Z",
+    "useCases": [
+      {
+        "text": "Android端末での音声会議への参加"
+      },
+      {
+        "text": "モバイルデバイスを活用したVoIP通信"
+      },
+      {
+        "text": "Mumbleシステムを利用した音声チャット"
+      },
+      {
+        "text": "遠隔地との音声コミュニケーション"
+      },
+      {
+        "text": "モバイル向けの音声会議クライアントの導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "android"
+      },
+      {
+        "text": "chat"
+      },
+      {
+        "text": "client"
+      },
+      {
+        "text": "conference"
+      },
+      {
+        "text": "mumble"
+      },
+      {
+        "text": "voip"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このアプリは何をするためのものですか？",
+        "answer": "Mumbleというオープンソースの音声会議システムをAndroid端末から利用するためのクライアントアプリです。音声通話やチャット機能を提供します。"
+      },
+      {
+        "question": "開発言語は何ですか？",
+        "answer": "Javaで書かれています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "GPL-3.0ライセンスの下で提供されています。"
+      },
+      {
+        "question": "このリポジトリはメインのリポジトリですか？",
+        "answer": "いいえ、これは特定のGitLabリポジトリのミラーであり、問題報告やプルリクエストは元のリポジトリで行う必要があります。"
+      }
+    ]
   },
   {
     "name": "waldiez",
@@ -131883,6 +132699,78 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Flare",
+    "slug": "flare",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "セルフホスト可能な高速なファイル共有プラットフォームです。",
+    "description": "Flareは、自社サーバーへの設置（セルフホスト）を前提としたモダンで高速なファイル共有プラットフォームです。ShareX、KDE Spectacle、Flameshotといったツールとの連携に対応しており、迅速な操作が可能です。セットアップが容易に設計されているため、導入のハードルを低く抑えています。TypeScriptとNext.jsを用いて構築されており、高いパフォーマンスを提供します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/FlintSH/Flare",
+    "githubUrl": "https://github.com/FlintSH/Flare",
+    "featured": false,
+    "stars": 128,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-02-17T06:29:47Z",
+    "githubPushedAt": "2026-08-14T22:19:30Z",
+    "useCases": [
+      {
+        "text": "社内でのファイル共有"
+      },
+      {
+        "text": "スクリーンショットの共有"
+      },
+      {
+        "text": "セルフホストによるデータ管理"
+      },
+      {
+        "text": "チーム内での迅速なファイル送付"
+      },
+      {
+        "text": "特定のキャプチャツールとの連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "Docker"
+      },
+      {
+        "text": "Next.js"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような環境で動作しますか？",
+        "answer": "このソフトウェアはセルフホストを前提として設計されており、Dockerなどの技術を用いて独自のサーバー環境に構築することが可能です。"
+      },
+      {
+        "question": "対応しているキャプチャツールは何ですか？",
+        "answer": "ShareX、KDE Spectacle、Flameshotといった主要なスクリーンショットや画面キャプチャツールとのサポートが含まれています。"
+      },
+      {
+        "question": "セットアップは難しいですか？",
+        "answer": "簡単なセットアップができるように設計されているため、技術的な知識がある環境であればスムーズに導入できる構成になっています。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "TypeScriptを主な言語として使用しており、Next.jsやReactといったモダンなWeb技術を用いて開発されています。"
+      }
+    ]
+  },
+  {
     "name": "mcp-hubspot",
     "slug": "mcp-hubspot",
     "category": "aidev",
@@ -131956,6 +132844,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "inkplate10-weather-cal",
+    "slug": "inkplate10-weather-cal",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Inkplate10を使用した電子ペーパーによるカレンダーと天気予報の表示アプリです。",
+    "description": "このソフトウェアは、ESP32ベースのInkplate10デバイスを使用して、今日の日付や天気予報を表示します。また、都市の様式化された地図も一緒に表示する機能を備えています。Pythonを主な言語として利用しており、電子ペーパーディスプレイを活用した情報表示に適しています。MITライセンスで公開されており、カスタマイズ可能なオープンソースプロジェクトです。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/chrisjtwomey/inkplate10-weather-cal",
+    "githubUrl": "https://github.com/chrisjtwomey/inkplate10-weather-cal",
+    "featured": false,
+    "stars": 128,
+    "language": "Python",
+    "githubCreatedAt": "2022-08-06T19:44:10Z",
+    "githubPushedAt": "2026-08-20T23:40:39Z",
+    "useCases": [
+      {
+        "text": "オフィスでのカレンダー表示"
+      },
+      {
+        "text": "受付カウンターの天気予報掲示"
+      },
+      {
+        "text": "店舗内の日付案内"
+      },
+      {
+        "text": "電子ペーパーを用いた情報表示"
+      },
+      {
+        "text": "都市地図の常設ディスプレイ"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "calendar"
+      },
+      {
+        "text": "e-ink"
+      },
+      {
+        "text": "e-paper"
+      },
+      {
+        "text": "esp32"
+      },
+      {
+        "text": "weather"
+      },
+      {
+        "text": "inkplate"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデバイスで動作しますか？",
+        "answer": "このソフトウェアは、ESP32を搭載したInkplate10という電子ペーパーディスプレイ用のデバイスを使用することを前提としています。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "今日の日付の表示、天気予報の表示、および都市の様式化された地図を表示する機能を備えています。"
+      },
+      {
+        "question": "使用されているプログラミング言語は何ですか？",
+        "answer": "このプロジェクトでは主にPythonが使用されています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスで公開されているため、利用条件に従って活用することが可能です。鱗骨の制約を最小限に抑えたオープンソースソフトウェアです。"
+      }
+    ]
   },
   {
     "name": "innocms",
@@ -132202,6 +133165,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "vyuh",
+    "slug": "vyuh",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "CMSやサーバー駆動型UIを活用したFlutterアプリ開発フレームワークです。",
+    "description": "vyuhは、モジュール式で拡張性が高くスケーラブルなFlutterアプリケーションを構築するためのフレームワークです。CMSやサーバーからの指示に基づいてUIを動的に生成する「Server-driven UI」の仕組みに対応しています。Dart言語を用いて開発され、柔軟な構成でアプリを組み立てることが可能です。大規模なシステムにおいても、モジュール化された設計によって効率的な管理と拡張を実現します。",
+    "license": "Functional Source License",
+    "licenseTier": "source-available",
+    "licenseNote": "ソースは公開されていますが、OSI承認のオープンソースではありません。自社の業務のための利用と、その環境への構築・カスタマイズはできますが、第三者へのホスティング提供や再販はできません。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://vyuh.tech",
+    "githubUrl": "https://github.com/vyuh-tech/vyuh",
+    "featured": false,
+    "stars": 127,
+    "language": "Dart",
+    "githubCreatedAt": "2024-03-14T13:20:08Z",
+    "githubPushedAt": "2026-05-19T16:07:16Z",
+    "useCases": [
+      {
+        "text": "サーバー駆動型UIの実装"
+      },
+      {
+        "text": "CMS連携アプリの開発"
+      },
+      {
+        "text": "スケーラブルなモバイルアプリ構築"
+      },
+      {
+        "text": "モジュール式のアプリアーキテクチャ導入"
+      },
+      {
+        "text": "Flutterを用いた動的コンテンツ配信"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "app"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "dart"
+      },
+      {
+        "text": "flutter"
+      },
+      {
+        "text": "framework"
+      },
+      {
+        "text": "server-driven-ui"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような技術スタックを使用しますか？",
+        "answer": "Dart言語とFlutterフレームワークをベースとしています。これにより、単一のコードベースでモバイルやWeb向けのアプリを効率的に開発することが可能です。"
+      },
+      {
+        "question": "サーバー駆動型UI（Server-driven UI）とは何ですか？",
+        "answer": "アプリケーションのUI構成やロジックをサーバー側から制御する手法です。アプリ本体を更新することなく、サーバー側のデータを変更するだけで画面の表示内容を動的に変更できます。"
+      },
+      {
+        "question": "モジュール式の設計にはどのようなメリットがありますか？",
+        "answer": "機能を独立したモジュールとして構築できるため、特定の機能の追加や修正が他の部分に影響を与えにくくなります。また、大規模なアプリケーションでも保守性と拡張性が向上します。"
+      },
+      {
+        "question": "CMSとの連携は可能ですか？",
+        "answer": "はい、CMS駆動型のアプリを構築することを目的の一つとしているため、外部のコンテンツ管理システムと連携して動的にコンテンツを表示する構成に適しています。ウーリ構造で設計されています。"
+      }
+    ]
+  },
+  {
     "name": "will-be-done",
     "slug": "will-be-done",
     "category": "project",
@@ -132275,6 +133313,168 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "account-analytic",
+    "slug": "account-analytic",
+    "category": "accounting",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ERPシステムOdooで利用可能な会計分析用アドオンです。",
+    "description": "このソフトウェアは、ERPプラットフォームであるOdooにおいて、会計分析に関連する機能を追加するためのアドオンです。PythonやHTMLを用いて構築されており、OCA（Odoo Community Association）のプロジェクトの一部として開発されています。標準的な会計機能に加え、より詳細な分析を行うための拡張性を提供します。企業の財務データに基づいた高度な分析を必要とする環境に適しています。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://github.com/OCA/account-analytic",
+    "githubUrl": "https://github.com/OCA/account-analytic",
+    "featured": false,
+    "stars": 126,
+    "language": "HTML",
+    "githubCreatedAt": "2014-06-16T10:55:18Z",
+    "githubPushedAt": "2026-08-22T00:39:26Z",
+    "useCases": [
+      {
+        "text": "ERPシステムにおける会計分析機能の拡張"
+      },
+      {
+        "text": "財務データの詳細な分析"
+      },
+      {
+        "text": "Odooプラットフォームを活用した会計管理"
+      },
+      {
+        "text": "プロジェクト別のコスト分析"
+      },
+      {
+        "text": "経営判断のための会計レポート作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "accounting"
+      },
+      {
+        "text": "erp"
+      },
+      {
+        "text": "odoo"
+      },
+      {
+        "text": "python"
+      },
+      {
+        "text": "oca"
+      },
+      {
+        "text": "account-analytic"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何をするためのものですか？",
+        "answer": "ERPシステムであるOdooにおいて、会計に関連する分析機能を拡張するためのアドオンです。標準的な機能に加えて、より詳細なデータ分析を可能にするためのツールを提供します。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "主にPythonとHTMLを用いて開発されています。また、OCA（Odoo Community Association）のコミュニティによってメンテナンスや開発が行われているのが特徴です。"
+      },
+      {
+        "question": "導入には何が必要ですか？",
+        "answer": "このソフトウェアはOdooプラットフォーム向けの拡張機能であるため、ベースとなるOdooシステムの環境が必要です。具体的な要件については、提供されているソースコードを確認する必要があります。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "AGPL-3.0ライセンスの下で公開されています。オープンソースソフトウェアとして提供されており、利用条件についてはライセンス条項に従うことになります。"
+      }
+    ],
+    "jaFileCount": 3,
+    "jaSamplePaths": [
+      {
+        "text": "analytic_partner/i18n/ja.po"
+      },
+      {
+        "text": "product_analytic/i18n/ja.po"
+      },
+      {
+        "text": "stock_analytic/i18n/ja.po"
+      }
+    ]
+  },
+  {
+    "name": "ContentBox",
+    "slug": "contentbox",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ColdFusionで動作するモジュール式のCMSフレームワークです。",
+    "description": "ContentBoxは、Enterprise ColdFusion（CFML）環境向けに設計されたモジュール式のコンテンツ管理システム（CMS）です。開発者が独自のアプリケーションを構築するためのフレームワークとして提供されています。modular-cmsという構造を採用しており、機能の拡張性や保守性を意識した設計となっています。ColdFusion言語を用いて、高度なコンテンツ管理機能を備えたシステムを効率的に開発することが可能です。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.contentboxcms.org/",
+    "githubUrl": "https://github.com/Ortus-Solutions/ContentBox",
+    "featured": false,
+    "stars": 126,
+    "language": "ColdFusion",
+    "githubCreatedAt": "2011-07-20T00:11:03Z",
+    "githubPushedAt": "2026-08-10T23:11:35Z",
+    "useCases": [
+      {
+        "text": "ColdFusionを用いたCMSの開発"
+      },
+      {
+        "text": "モジュール式のWebアプリケーション構築"
+      },
+      {
+        "text": "企業向けコンテンツ管理システムの基盤作成"
+      },
+      {
+        "text": "CFMLベースのWebサイト制作"
+      },
+      {
+        "text": "拡張性の高いバックエンドシステムの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "cfml"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "cms-framework"
+      },
+      {
+        "text": "coldfusion"
+      },
+      {
+        "text": "modular-cms"
+      },
+      {
+        "text": "enterprise"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは完成されたアプリですか？",
+        "answer": "いいえ、このソフトウェアは開発者が独自のアプリケーションを構築するためのフレームワークです。業務担当者がそのまますぐに使える完成したアプリではなく、開発ツールとして提供されています。"
+      },
+      {
+        "question": "どのようなプログラミング言語で使用しますか？",
+        "answer": "ColdFusion（CFML）という言語を使用します。Enterprise ColdFusion環境で動作するように設計されているため、対応する実行環境が必要です。"
+      },
+      {
+        "question": "モジュール式とはどのような意味ですか？",
+        "answer": "システムを独立した機能単位（モジュール）として構成できる仕組みのことです。これにより、必要な機能を組み合わせてアプリケーションを構築したり、拡張したりすることが容易になります。"
+      },
+      {
+        "question": "初心者でもすぐに業務で利用できますか？",
+        "answer": "本ソフトウェアは開発者向けのフレームワークであるため、導入にはColdFusionの知識とWeb開発の技術が必要です。単体で機能する画面を持っていないため、システムを構築するための道具として位置づけられます。"
+      }
+    ]
   },
   {
     "name": "nimara-ecommerce",
@@ -132953,6 +134153,225 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "virtual-office",
+    "slug": "virtual-office",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Zoomの会議室の空き状況と出席者を可視化するツールです。",
+    "description": "virtual-officeは、Zoom.usの会議室が現在使用中か、誰が出席しているかを透明化するためのソフトウェアです。このツールを活用することで、会議室の利用状況をリアルタイムで把握できるようになります。リモートワークやオフィス内での共同作業において、スムーズなコミュニケーションを支援します。TypeScriptで開発されており、Apache-2.0ライセンスのもとで提供されています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/TNG/virtual-office",
+    "githubUrl": "https://github.com/TNG/virtual-office",
+    "featured": false,
+    "stars": 124,
+    "language": "TypeScript",
+    "githubCreatedAt": "2020-04-03T13:01:33Z",
+    "githubPushedAt": "2026-08-24T00:36:55Z",
+    "useCases": [
+      {
+        "text": "Zoom会議室の空き状況確認"
+      },
+      {
+        "text": "リモートワークにおける場所の共有"
+      },
+      {
+        "text": "オフィス内の会議スペース管理"
+      },
+      {
+        "text": "チームメンバーの現在地の把握"
+      },
+      {
+        "text": "ビデオ会議の利用状況の可視化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Zoom"
+      },
+      {
+        "text": "仮想オフィス"
+      },
+      {
+        "text": "会議室予約"
+      },
+      {
+        "text": "リモートワーク"
+      },
+      {
+        "text": "共同作業"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールで具体的に何ができるのですか？",
+        "answer": "Zoom.us上の会議室が現在使用中かどうか、およびその中に誰がいるのかという情報を可視化することができます。これにより、会議室の空き状況を把握しやすくなります。"
+      },
+      {
+        "question": "どのような環境で使用できますか？",
+        "answer": "Zoom.usを利用している環境で、会議室の占有状況や出席者の情報を確認するために使用されます。TypeScriptで構築されたソフトウェアです。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で提供されています。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "主な機能は、Zoom会議室の現在の占有状況と出席者の透明性を高めることです。コラボレーションやビデオ会議の管理を支援します。"
+      }
+    ]
+  },
+  {
+    "name": "LeetRooms",
+    "slug": "leetrooms",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "LeetCode上でマルチプレイヤー対応のルームを作成できるツールです。",
+    "description": "このソフトウェアは、プログラミング競技サイトであるLeetCodeにおいて、マルチプレイヤー形式のルームを提供します。TypeScriptで開発されており、チャット機能やコンテスト機能を備えています。ユーザー同士が協力したり競い合ったりするための環境を構築できます。競争プログラミングの学習やイベントの実施に活用できるツールです。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://leetrooms.com",
+    "githubUrl": "https://github.com/marwanhawari/LeetRooms",
+    "featured": false,
+    "stars": 124,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-01-29T07:28:16Z",
+    "githubPushedAt": "2025-06-06T19:57:10Z",
+    "useCases": [
+      {
+        "text": "プログラミング競技の練習用ルーム作成"
+      },
+      {
+        "text": "チームでの共同コーディング演習"
+      },
+      {
+        "text": "コンテスト形式の技術イベント開催"
+      },
+      {
+        "text": "マルチプレイヤー環境でのアルゴリズム学習"
+      },
+      {
+        "text": "チャット機能を備えた共同開発スペースの提供"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "LeetCode"
+      },
+      {
+        "text": "マルチプレイヤー"
+      },
+      {
+        "text": "競争プログラミング"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "チャット機能"
+      },
+      {
+        "text": "コンテスト"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールで具体的に何ができますか？",
+        "answer": "LeetCodeの課題に対して、複数のユーザーが参加できるマルチプレイヤー用のルームを作成できます。チャット機能を活用しながら、他のユーザーと協力したり対戦したりする環境を提供します。"
+      },
+      {
+        "question": "どのような技術スタックで使用されていますか？",
+        "answer": "主な開発言語としてTypeScriptが採用されています。MITライセンスで公開されており、オープンソースソフトウェアとして利用可能です。"
+      },
+      {
+        "question": "学習や教育の現場で使えますか？",
+        "answer": "はい、競争プログラミングの練習やコンテスト機能を備えているため、技術習得のための共同学習環境を構築する際に役立ちます。"
+      },
+      {
+        "question": "チャット機能は含まれていますか？",
+        "answer": "はい、主なトピックの一つとしてチャット機能が含まれており、ルーム内でのコミュニケーションを取りながら進めることが可能です。Goals"
+      }
+    ]
+  },
+  {
+    "name": "quip-export",
+    "slug": "quip-export",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Quip内のすべてのフォルダとドキュメントをエクスポートするツールです。",
+    "description": "このツールは、Quipプラットフォーム上にある全てのフォルダおよびドキュメントを一括でエクスポートすることを目的としています。JavaScriptで記述されており、自動化やバックアップのプロセスに組み込むことが可能です。APIを利用してデータの抽出を行うため、システム間のデータ連携を検討している場合に適しています。コメントやアノテーションを含む情報のバックアップなど、特定のデータ管理ニーズに対応します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/sonnenkern/quip-export",
+    "githubUrl": "https://github.com/sonnenkern/quip-export",
+    "featured": false,
+    "stars": 124,
+    "language": "JavaScript",
+    "githubCreatedAt": "2019-10-18T15:08:32Z",
+    "githubPushedAt": "2026-05-15T08:10:44Z",
+    "useCases": [
+      {
+        "text": "Quipデータのバックアップ"
+      },
+      {
+        "text": "ドキュメントの一括エクスポート"
+      },
+      {
+        "text": "外部システムへのデータ移行"
+      },
+      {
+        "text": "自動化ワークフローへの組み込み"
+      },
+      {
+        "text": "過去の会話履歴の保存"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Quip"
+      },
+      {
+        "text": "エクスポート"
+      },
+      {
+        "text": "バックアップ"
+      },
+      {
+        "text": "自動化"
+      },
+      {
+        "text": "JavaScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデータをエクスポートできますか？",
+        "answer": "Quip上にあるすべてのフォルダおよびドキュメントをエクスポート対象としています。具体的な項目には、アノテーションやコメント、会話の内容などが含まれます。"
+      },
+      {
+        "question": "このツールはGUI（画面）を持っていますか？",
+        "answer": "このソフトウェアはJavaScriptで記述されたツールであり、主に自動化やAPI連携を目的としたものです。ユーザーが直接操作する画面を備えたアプリケーションではありません。"
+      },
+      {
+        "question": "バックアップのために利用することは可能ですか？",
+        "answer": "はい、主なトピックの一つとしてバックアップが含まれており、Quip内のデータを定期的に抽出して保存するなどの用途に適しています。"
+      },
+      {
+        "question": "他のプログラムと連携させることはできますか？",
+        "answer": "JavaScriptで実装されており、APIを利用するため、他のシステムや自動化ツールと組み合わせて利用することが可能です。"
+      }
+    ]
   },
   {
     "name": "mfs",
@@ -133750,6 +135169,78 @@
     "jaSamplePaths": []
   },
   {
+    "name": "ZestSend",
+    "slug": "zestsend",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Cloudflare上で動作する、高機能なWebRTCベースのP2P通信ツールです。",
+    "description": "ZestSendは、Cloudflare上に自前でデプロイ可能なオープンソースのWebRTC点対点接続ツールです。エンドツーエンドの暗号化をサポートしており、匿名でのリアルタイムチャットやファイル転送が可能です。音声通話、ビデオ通話、画面共有、同時視聴、テキストコラボレーション、ホワイトボードといった多彩な機能を備えています。通信にはP2Pによる直接接続のほか、Cloudflare TURNを経由した中継も利用できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://send.ravelloh.com",
+    "githubUrl": "https://github.com/RavelloH/ZestSend",
+    "featured": false,
+    "stars": 121,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-04-13T06:30:42Z",
+    "githubPushedAt": "2026-08-15T07:53:21Z",
+    "useCases": [
+      {
+        "text": "匿名でのリアルタイムチャット"
+      },
+      {
+        "text": "ファイル転送"
+      },
+      {
+        "text": "音声・ビデオ通話"
+      },
+      {
+        "text": "画面共有と同時視聴"
+      },
+      {
+        "text": "共同作業用のホワイトボード"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "WebRTC"
+      },
+      {
+        "text": "P2P通信"
+      },
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "ビデオ会議"
+      },
+      {
+        "text": "画面共有"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなセキュリティ対策が取られていますか？",
+        "answer": "エンドツーエンドの暗号化をサポートしており、匿名でのリアルタイムチャットやデータ通信を行うことができます。"
+      },
+      {
+        "question": "サーバーの構築は必要ですか？",
+        "answer": "Cloudflare上に自前でデプロイすることが可能であり、WebRTCを用いた点対点接続を実現します。"
+      },
+      {
+        "question": "どのような共同作業機能がありますか？",
+        "answer": "テキストによるコラボレーションのほか、画面共有、同時視聴、ホワイトボードなどの機能を備えています。"
+      },
+      {
+        "question": "通信経路にはどのような種類がありますか？",
+        "answer": "デバイス間の直接的なP2P接続に加え、Cloudflare TURNを使用した中継通信にも対応しています。鱗】"
+      }
+    ]
+  },
+  {
     "name": "urungi",
     "slug": "urungi",
     "category": "analytics",
@@ -133970,6 +135461,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "mobile-pc-control-server",
+    "slug": "mobile-pc-control-server",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "スマートフォンからPCのキーボードやマウスを遠隔操作できるWebサーバーです。",
+    "description": "このソフトウェアは、ElectronとNode.jsを用いて構築されたスマートフォン向けのWebサーバーです。スマートフォンのブラウザやアプリを通じて、Windows PCのキーボード操作、マウス操作、およびOCRなどのパーソナライズされたロジック機能を遠隔で実行できます。Socket通信を活用することで、リアルタイムな制御を実現しています。Vue.jsを用いたフロントエンド構成により、PCからスマートフォンへのリモートコントロール環境を提供します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/smilexizheng/mobile-pc-control-server",
+    "githubUrl": "https://github.com/smilexizheng/mobile-pc-control-server",
+    "featured": false,
+    "stars": 121,
+    "language": "Vue",
+    "githubCreatedAt": "2025-03-26T02:49:35Z",
+    "githubPushedAt": "2026-04-14T08:30:08Z",
+    "useCases": [
+      {
+        "text": "スマートフォンのブラウザを使用したPCの遠隔操作"
+      },
+      {
+        "text": "外出先からのマウス・キーボード入力による業務処理"
+      },
+      {
+        "text": "OCR機能を活用した特定の自動化ロジックの実行"
+      },
+      {
+        "text": "音声認識を組み合わせたPC操作の補助"
+      },
+      {
+        "text": "Webサーバーを介したマルチデバイス間の連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "リモートコントロール"
+      },
+      {
+        "text": "スマートフォン操作"
+      },
+      {
+        "text": "Windows制御"
+      },
+      {
+        "text": "Node.js"
+      },
+      {
+        "text": "Electron"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデバイスから操作が可能ですか？",
+        "answer": "スマートフォンのブラウザ、または提供されているWebサービスを通じて、遠隔地からPCを操作することが可能です。"
+      },
+      {
+        "question": "このソフトでできる具体的な操作は何ですか？",
+        "answer": "キーボードの入力やマウスの移動に加え、OCR（光学文字認識）やユーザーが定義した独自のロジック機能を実行できます。"
+      },
+      {
+        "question": "技術的な構成はどうなっていますか？",
+        "answer": "ElectronによってPCクライアント側を構築し、Node.jsでWebサービスを提供しています。フロントエンドにはVue.jsが採用されています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "このソフトウェアはAGPL-3.0ライセンスの下で公開されています。利用の際はライセンス条項を確認してください。Goals"
+      }
+    ]
   },
   {
     "name": "tymly",
@@ -134570,6 +136133,78 @@
     ]
   },
   {
+    "name": "Driftly",
+    "slug": "driftly",
+    "category": "hr",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "従業員の出退勤を記録するための勤怠管理アプリです。",
+    "description": "Driftlyは、ユーザーの出席状況や時間を追跡することを目的としたアプリケーションです。KotlinとJetpack Composeを用いて開発されており、Material Design 3を採用したモダンなインターフェースを備えています。Material Youのデザインシステムに対応しているため、視覚的に洗練された操作感を提供します。オープンソースとして提供されており、勤怠管理の基本機能を備えたツールとして活用可能です。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/DP-Hridayan/Driftly",
+    "githubUrl": "https://github.com/DP-Hridayan/Driftly",
+    "featured": false,
+    "stars": 119,
+    "language": "Kotlin",
+    "githubCreatedAt": "2025-04-25T13:17:10Z",
+    "githubPushedAt": "2026-08-23T01:06:00Z",
+    "useCases": [
+      {
+        "text": "従業員の出退勤記録"
+      },
+      {
+        "text": "勤務時間のトラッキング"
+      },
+      {
+        "text": "シンプルな勤怠管理システムの導入"
+      },
+      {
+        "text": "Material Designを採用したUIでの運用"
+      },
+      {
+        "text": "モバイル環境での出席確認"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "勤怠管理"
+      },
+      {
+        "text": "出席確認"
+      },
+      {
+        "text": "Kotlin"
+      },
+      {
+        "text": "Jetpack Compose"
+      },
+      {
+        "text": "Material Design 3"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このアプリでできることは何ですか？",
+        "answer": "このアプリケーションは、ユーザーの出席状況や出退勤の時間を追跡するための機能を提供します。特定の業務フローをすべて網羅しているわけではありませんが、基本的な勤怠記録の管理を行うためのツールです。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "Android開発などで主流のKotlin言語とJetpack Composeを使用して構築されています。UIデザインにはMaterial Design 3およびMaterial Youを採用しており、現代的なユーザーインターフェースを実現しています。"
+      },
+      {
+        "question": "カスタマイズは可能ですか？",
+        "answer": "このソフトウェアはGPL-3.0ライセンスで公開されているオープンソースプロジェクトです。ソースコードが公開されているため、技術的な知識があれば独自の要件に合わせて調整することが可能です。"
+      },
+      {
+        "question": "どのような企業に適していますか？",
+        "answer": "勤怠管理の基本的なトラッキング機能を必要としている組織に適しています。特にKotlinやJetpack Composeを用いたモダンなデザインを重視する環境において、ベースとなるアプリケーションとして検討できます。"
+      }
+    ]
+  },
+  {
     "name": "chapter",
     "slug": "chapter",
     "category": "crm",
@@ -134643,6 +136278,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "iroffer-dinoex",
+    "slug": "iroffer-dinoex",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "DCCプロトコルを使用したIRCファイルサーバーです。",
+    "description": "このソフトウェアは、IRC（Internet Relay Chat）上でDCC（Direct Client-to-Client）プロトコルを使用してファイルを送信するためのファイルサーバーです。C言語で実装されており、irc-botやxdccといった技術を活用しています。主な機能はファイルの共有であり、特定のネットワーク環境下でのデータ転送をサポートします。開発者はこのツールを基盤として、独自のファイル共有システムを構築することが可能です。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変して配布する場合は、同じライセンスでソースを公開する義務があります。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://project.iroffer.net/projects/iroffer",
+    "githubUrl": "https://github.com/dinoex/iroffer-dinoex",
+    "featured": false,
+    "stars": 119,
+    "language": "C",
+    "githubCreatedAt": "2011-10-23T11:40:38Z",
+    "githubPushedAt": "2026-08-16T09:00:36Z",
+    "useCases": [
+      {
+        "text": "IRCチャット上でのファイル共有システムの構築"
+      },
+      {
+        "text": "DCCプロトコルを活用したデータ転送の実装"
+      },
+      {
+        "text": "irc-botへのファイル配信機能の統合"
+      },
+      {
+        "text": "xdccを利用したネットワーク内でのファイル配布"
+      },
+      {
+        "text": "C言語を用いた軽量なファイルサーバーの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "IRC"
+      },
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "DCC"
+      },
+      {
+        "text": "irc-bot"
+      },
+      {
+        "text": "xdcc"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはGUIを備えていますか？",
+        "answer": "いいえ、このソフトウェアはGUI（グラフィカルな操作画面）を備えていないため、コマンドラインやプログラムからの操作を前提としたツールです。"
+      },
+      {
+        "question": "どのような言語で書かれていますか？",
+        "answer": "主なプログラミング言語としてはCが使用されています。開発者はソースコードを確認し、必要に応じてカスタマイズを行うことができます。"
+      },
+      {
+        "question": "DCCとはどのような技術ですか？",
+        "answer": "DCC（Direct Client-to-Client）は、IRCクライアント間で直接ファイルを転送するためのプロトコルです。このツールはその仕組みを利用してファイル共有を実現します。"
+      },
+      {
+        "question": "商用利用が可能ですか？",
+        "answer": "ライセンスはNOASSERTIONと記載されています。具体的な利用条件については、オープンソースソフトウェアのライセンス条項を詳細に確認する必要があります。"
+      }
+    ]
   },
   {
     "name": "evolutility-ui-react",
@@ -134940,6 +136647,156 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "DisCal-Discord-Bot",
+    "slug": "discal-discord-bot",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Googleカレンダーと連携してイベントの操作や通知を行うDiscordボットです。",
+    "description": "DisCalは、Googleカレンダーと連携してイベントの作成、削除、編集、およびお知らせ機能を提供するDiscordボットです。このツールを導入することで、Discord上から直接カレンダーのスケジュールを管理することが可能になります。主要な機能として、カレンダー情報の更新や通知の自動化が含まれています。Kotlinで開発されており、Googleカレンダーとの高度な連携を実現しています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/DreamExposure/DisCal-Discord-Bot",
+    "githubUrl": "https://github.com/DreamExposure/DisCal-Discord-Bot",
+    "featured": false,
+    "stars": 118,
+    "language": "Kotlin",
+    "githubCreatedAt": "2017-01-02T17:49:53Z",
+    "githubPushedAt": "2026-05-07T06:24:44Z",
+    "useCases": [
+      {
+        "text": "Discord上でのスケジュール確認"
+      },
+      {
+        "text": "カレンダーイベントの作成・編集"
+      },
+      {
+        "text": "予定変更の自動通知"
+      },
+      {
+        "text": "チーム内でのイベント管理"
+      },
+      {
+        "text": "Googleカレンダーとの同期"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "calendar"
+      },
+      {
+        "text": "discord-bot"
+      },
+      {
+        "text": "google-calendar"
+      },
+      {
+        "text": "schedule-management"
+      },
+      {
+        "text": "notification"
+      },
+      {
+        "text": "Kotlin"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなプラットフォームと連携できますか？",
+        "answer": "このツールはGoogleカレンダーとDiscordの2つのプラットフォームを連携させるためのボットです。Discordを通じてカレンダーの操作や通知を受け取ることができます。"
+      },
+      {
+        "question": "このボットでできる主な操作は何ですか？",
+        "answer": "Googleカレンダーに紐づいたイベントの作成、削除、編集ができるほか、イベントに関するお知らせをDiscord上に投稿する機能などが備わっています。"
+      },
+      {
+        "question": "開発言語やライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはKotlinで記述されており、ライセンスはGPL-3.0となっています。オープンソースとして公開されています。"
+      },
+      {
+        "question": "Discordのチャット内でカレンダーを管理するメリットは何ですか？",
+        "answer": "Discordを普段のコミュニケーションツールとして利用している場合、アプリを切り替えることなく、チャット画面から直接スケジュールを確認したり更新したりできる利便性があります。"
+      }
+    ]
+  },
+  {
+    "name": "garlicshare",
+    "slug": "garlicshare",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Torネットワークを利用したプライベートなファイル共有ツールです。",
+    "description": "garlicshareは、Torネットワークを通じてファイルを共有するためのセルフホスト型ソフトウェアです。Go言語で記述されており、クロスプラットフォームに対応しています。高いプライバシーとセキュリティを重視する設計となっており、オン電サービス（onion-service）として動作します。オープンソースとして公開されており、Apache-2.0ライセンスの下で提供されています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://r4ygm.github.io/garlicshare/",
+    "githubUrl": "https://github.com/R4yGM/garlicshare",
+    "featured": false,
+    "stars": 118,
+    "language": "Go",
+    "githubCreatedAt": "2022-01-01T21:11:25Z",
+    "githubPushedAt": "2025-06-18T17:54:02Z",
+    "useCases": [
+      {
+        "text": "高度な匿名性を必要とするファイル共有"
+      },
+      {
+        "text": "Torネットワークを利用した安全なデータ転送"
+      },
+      {
+        "text": "プライバシーを重視したセルフホスト型のファイル配布"
+      },
+      {
+        "text": "セキュリティを優先する機密情報の受け渡し"
+      },
+      {
+        "text": "クロスプラットフォーム環境でのファイル共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "file-sharing"
+      },
+      {
+        "text": "privacy"
+      },
+      {
+        "text": "security"
+      },
+      {
+        "text": "tor"
+      },
+      {
+        "text": "onion-service"
+      },
+      {
+        "text": "open-source"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのようなネットワークを利用しますか？",
+        "answer": "このソフトウェアはTorネットワークを使用して動作します。これにより、プライバシーとセキュリティを重視したファイル共有が可能になります。"
+      },
+      {
+        "question": "サーバーの構築は必要ですか？",
+        "answer": "はい、セルフホスト型のツールであるため、自身の環境にインストールして運用する必要があります。"
+      },
+      {
+        "question": "対応しているOSはありますか？",
+        "answer": "クロスプラットフォームに対応しているため、複数の異なるオペレーティングシステムで利用することが可能です。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で公開されています。オープンソースとして提供されているのが特徴です。"
+      }
+    ]
   },
   {
     "name": "b3s",
@@ -135306,6 +137163,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "dayGLANCE",
+    "slug": "dayglance",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "プライバシーを重視した、カレンダーと目標管理を統合する生産性向上ツールです。",
+    "description": "dayGLANCEは、一日の予定や目標、習慣の進捗を一目で把握できるように設計されたプロダクティビティツールです。カレンダー機能に加え、目標トラッカーや習慣追跡、メモ機能などを備えています。プライバシーを第一に考えた設計となっており、ユーザー自身のデータを安全に管理することに重点を置いています。PWAに対応しているため、ブラウザを通じて手軽に利用することが可能です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://dayglance.app",
+    "githubUrl": "https://github.com/krelltunez/dayGLANCE",
+    "featured": false,
+    "stars": 117,
+    "language": "JavaScript",
+    "githubCreatedAt": "2026-01-24T00:14:14Z",
+    "githubPushedAt": "2026-08-23T23:04:14Z",
+    "useCases": [
+      {
+        "text": "一日のスケジュール管理"
+      },
+      {
+        "text": "個人の目標達成状況の追跡"
+      },
+      {
+        "text": "日々の習慣の記録"
+      },
+      {
+        "text": "プロジェクトの進捗確認"
+      },
+      {
+        "text": "プライバシーを重視したメモの作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "カレンダー"
+      },
+      {
+        "text": "目標管理"
+      },
+      {
+        "text": "習慣トラッキング"
+      },
+      {
+        "text": "生産性向上"
+      },
+      {
+        "text": "プライバシー重視"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このアプリでどのような管理ができますか？",
+        "answer": "カレンダーによる予定管理、目標や習慣のトラッキング、およびメモの記録といった機能を備えています。これらを統合して一日の流れを把握することが可能です。"
+      },
+      {
+        "question": "プライバシーについてはどのように配慮されていますか？",
+        "answer": "このソフトウェアは「privacy-first」を掲げており、ユーザーのプライバシーを保護することを重視した設計になっています。"
+      },
+      {
+        "question": "PWAに対応しているとはどのような意味ですか？",
+        "answer": "Progressive Web App（PWA）に対応しているため、ブラウザを通じてWebアプリとして動作しつつ、ネイティブアプリに近い操作感で利用できることを指します。"
+      },
+      {
+        "question": "主な技術スタックは何ですか？",
+        "answer": "このアプリケーションは主にJavaScriptを用いて開発されており、MITライセンスの下で公開されています。"
+      }
+    ]
   },
   {
     "name": "wiki",
@@ -135758,6 +137687,78 @@
     "jaSamplePaths": []
   },
   {
+    "name": "brain-brew",
+    "slug": "brain-brew",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "CSVファイルとAnkiの間でフラッシュカードを自動生成・抽出するツールです。",
+    "description": "brain-brewは、CSV形式のデータからAnki用のフラッシュカードを自動的に作成したり、逆に抽出したりするためのツールです。Pythonで記述されており、データの操作や変換を効率化することに特化しています。Crowdankiなどの外部サービスとの連携も考慮された設計となっており、大量の学習データを一括で処理する際に役立ちます。手動での入力作業を自動化し、データ管理の正確性を向上させることができます。",
+    "license": "Unlicense",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/jeprecated/brain-brew",
+    "githubUrl": "https://github.com/jeprecated/brain-brew",
+    "featured": false,
+    "stars": 115,
+    "language": "Python",
+    "githubCreatedAt": "2020-04-10T11:24:45Z",
+    "githubPushedAt": "2026-08-07T11:15:06Z",
+    "useCases": [
+      {
+        "text": "CSVデータからのAnkiカード一括生成"
+      },
+      {
+        "text": "学習データの抽出とCSVへの書き出し"
+      },
+      {
+        "text": "Crowdankiとの連携を通じたデータ操作"
+      },
+      {
+        "text": "大量の単語リストの効率的な変換"
+      },
+      {
+        "text": "Pythonを用いたカスタムデータ処理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Anki"
+      },
+      {
+        "text": "フラッシュカード"
+      },
+      {
+        "text": "CSV変換"
+      },
+      {
+        "text": "データ操作"
+      },
+      {
+        "text": "Python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような形式のデータを扱えますか？",
+        "answer": "主にCSV形式のファイルを対象としています。CSV内のデータを解析し、Ankiで利用可能なフラッシュカードへと自動的に変換・抽出を行うことができます。"
+      },
+      {
+        "question": "このツールはGUI（画面）を持っていますか？",
+        "answer": "いいえ、このソフトウェアは開発者や技術者がコマンドライン等から操作することを前提としたツールです。主にデータの変換処理を自動化するために使用されます。"
+      },
+      {
+        "question": "Pythonの知識が必要ですか？",
+        "answer": "はい、主な言語としてPythonが採用されています。ツールの実行やカスタマイズを行うには、基本的なPythonの知識があることが望ましいです。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはUnlicenseで提供されています。これは著作権を放棄するライセンスであり、制約なく利用できることを意味します。"
+      }
+    ]
+  },
+  {
     "name": "knucklehead",
     "slug": "knucklehead",
     "category": "devtools",
@@ -135906,6 +137907,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "rencal",
+    "slug": "rencal",
+    "category": "booking",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "Omarchy向けに構築されたモダンなデスクトップカレンダーアプリです。",
+    "description": "rencalは、現代的なインターフェースを備えたデスクトップ向けのカレンダーアプリケーションです。CalDAVプロトコルやICS形式に対応しており、柔軟なスケジュール管理を可能にします。ローカルファーストの設計思想を採用しているため、データのプライバシーを重視する環境に適しています。TypeScriptで開発されており、MITライセンスのもとで提供されています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://rencal.org",
+    "githubUrl": "https://github.com/t4t5/rencal",
+    "featured": false,
+    "stars": 115,
+    "language": "TypeScript",
+    "githubCreatedAt": "2025-11-12T20:57:58Z",
+    "githubPushedAt": "2026-08-23T16:23:50Z",
+    "useCases": [
+      {
+        "text": "デスクトップでのスケジュール管理"
+      },
+      {
+        "text": "CalDAVを利用したカレンダー同期"
+      },
+      {
+        "text": "ICS形式の予定取り込み"
+      },
+      {
+        "text": "ローカル優先のデータ管理"
+      },
+      {
+        "text": "Linux環境でのカレンダー利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "calendar"
+      },
+      {
+        "text": "caldav"
+      },
+      {
+        "text": "ics"
+      },
+      {
+        "text": "linux"
+      },
+      {
+        "text": "local-first"
+      },
+      {
+        "text": "plaintext"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のカレンダーに対応していますか？",
+        "answer": "CalDAVプロトコルおよびICS形式に対応しており、標準的なカレンダー規格を用いたスケジュール管理が可能です。"
+      },
+      {
+        "question": "データの保存方針はどうなっていますか？",
+        "answer": "ローカルファーストの設計を採用しているため、データをローカル環境を優先して扱う仕組みとなっています。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "TypeScriptを用いて開発されており、モダンなデスクトップアプリケーションとして動作します。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で公開されているオープンソースソフトウェアです。}]}}    {"
+      }
+    ]
   },
   {
     "name": "claude-marketing",
@@ -136363,6 +138439,158 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "Nebulynk",
+    "slug": "nebulynk",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "チームの対話や会議を管理し、AIによるフォローアップも提供するセルフホスト型のコミュニケーションプラットフォームです。",
+    "description": "Nebulynkは、チーム内でのチャット、通話、会議を一元的に管理できるセルフホスト型のアプリケーションです。ユーザーは自前の環境に構築することで、安全なコミュニケーション空間を確保できます。主な機能として、リアルタイムの対話に加え、AIを活用した会議後のフォローアップ機能を提供しています。DiscordやMattermostに代わる選択肢として、チームの円滑な連携をサポートします。",
+    "license": "Business Source License",
+    "licenseTier": "source-available",
+    "licenseNote": "ソースは公開されていますが、OSI承認のオープンソースではありません。自社の業務のための利用と、その環境への構築・カスタマイズはできますが、第三者へのホスティング提供や再販はできません。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://nebulynk.net",
+    "githubUrl": "https://github.com/sapientorius/Nebulynk",
+    "featured": false,
+    "stars": 114,
+    "language": "JavaScript",
+    "githubCreatedAt": "2026-03-06T09:54:19Z",
+    "githubPushedAt": "2026-08-19T20:52:38Z",
+    "useCases": [
+      {
+        "text": "チーム内でのチャットおよび通話"
+      },
+      {
+        "text": "オンライン会議の実施"
+      },
+      {
+        "text": "会議内容のAIによるフォローアップ"
+      },
+      {
+        "text": "セルフホスト環境でのコミュニケーション基盤構築"
+      },
+      {
+        "text": "DiscordやMattermostの代替ツールとしての利用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "chat-application"
+      },
+      {
+        "text": "discord-alternative"
+      },
+      {
+        "text": "mattermost-alternative"
+      },
+      {
+        "text": "meeting-transcription"
+      },
+      {
+        "text": "meetings"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアはどのような形態で提供されますか？",
+        "answer": "Nebulynkはセルフホスト型のアプリケーションです。ユーザー自身のサーバーや環境に構築して利用する仕組みとなっています。"
+      },
+      {
+        "question": "AI機能にはどのようなものがありますか？",
+        "answer": "会議に関するAIアシスタントによるフォローアップ機能が含まれています。これにより、会議後のタスク管理などを効率化することが可能です。"
+      },
+      {
+        "question": "他のツールと比較した特徴は何ですか？",
+        "answer": "DiscordやMattermostの代替として位置づけられており、チャット、通話、会議、そしてAIによるフォローアップを統合的に提供している点が特徴です。"
+      },
+      {
+        "question": "主な対応技術は何ですか？",
+        "answer": "JavaScriptを用いて開発されており、Coolifyとも互換性があることが示されています。システムの構築においてこれらの技術スタックが関連します。"
+      }
+    ]
+  },
+  {
+    "name": "testbeats",
+    "slug": "testbeats",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "テスト結果を主要なチャットツールへ自動通知するツールです。",
+    "description": "testbeatsは、ソフトウェアのテスト結果をMicrosoft Teams、Google Chat、およびSlackに公開するためのツールです。JavaScriptで記述されており、JUnitなどのテスト結果を報告する際に利用されます。開発プロセスにおいて、テストの成否や詳細をリアルタイムで共有するための仕組みを提供します。MITライセンスの下で提供されています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://testbeats.com",
+    "githubUrl": "https://github.com/test-results-reporter/testbeats",
+    "featured": false,
+    "stars": 114,
+    "language": "JavaScript",
+    "githubCreatedAt": "2021-08-30T12:38:26Z",
+    "githubPushedAt": "2026-07-26T08:18:18Z",
+    "useCases": [
+      {
+        "text": "Microsoft Teamsへのテスト結果通知"
+      },
+      {
+        "text": "Google Chatへのテスト結果通知"
+      },
+      {
+        "text": "Slackへのテスト結果通知"
+      },
+      {
+        "text": "JUnitテスト結果の自動報告"
+      },
+      {
+        "text": "テスト結果の可視化と共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chat"
+      },
+      {
+        "text": "google"
+      },
+      {
+        "text": "junit"
+      },
+      {
+        "text": "reporting"
+      },
+      {
+        "text": "results"
+      },
+      {
+        "text": "slack"
+      },
+      {
+        "text": "teams"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのチャットツールに対応していますか？",
+        "answer": "このツールは、Microsoft Teams、Google Chat、およびSlackの3つの主要なチャットプラットフォームへの通知に対応しています。"
+      },
+      {
+        "question": "どのようなテスト結果を公開できますか？",
+        "answer": "説明文に基づくと、JUnitなどのテスト結果を報告することが可能です。開発環境におけるテスト実行結果を外部へ共有する際に使用されます。"
+      },
+      {
+        "question": "このツールの主なプログラミング言語は何ですか？",
+        "answer": "このツールはJavaScriptで記述されています。",
+        "},{": "question",
+        "どのライセンスで提供されていますか？\n": "answer",
+        "このソフトウェアはMITライセンスの下で公開されています。}": []
+      }
+    ]
   },
   {
     "name": "Constructor-Telegram-Bots-Backend",
@@ -137076,6 +139304,87 @@
     ]
   },
   {
+    "name": "Lith",
+    "slug": "lith",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "マルチプラットフォーム対応のWeeChatリレークライアントです。",
+    "description": "Lithは、モバイルを重視した設計となっているWeeChatのリレークライアントです。LinuxやmacOSなどのデスクトップ環境だけでなく、iOSを含むマルチプラットフォームに対応しています。C++およびQt6、QMLを用いて構築されており、クロスプラットフォームでの動作を実現しています。IRCプロトコルを利用したチャット機能を提供します。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://lith.app",
+    "githubUrl": "https://github.com/LithApp/Lith",
+    "featured": false,
+    "stars": 112,
+    "language": "C++",
+    "githubCreatedAt": "2016-09-18T11:38:01Z",
+    "githubPushedAt": "2026-06-09T14:37:25Z",
+    "useCases": [
+      {
+        "text": "モバイル端末とPC間でのWeeChat連携"
+      },
+      {
+        "text": "Linux環境でのIRCクライアント利用"
+      },
+      {
+        "text": "macOSでのマルチプラットフォームなチャット操作"
+      },
+      {
+        "text": "Qt/QMLを用いたクロスプラットフォームなUI構築"
+      },
+      {
+        "text": "iOSデバイスを活用したメッセージ受信"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chat"
+      },
+      {
+        "text": "ios"
+      },
+      {
+        "text": "irc"
+      },
+      {
+        "text": "linux"
+      },
+      {
+        "text": "macos"
+      },
+      {
+        "text": "qml"
+      },
+      {
+        "text": "qt"
+      },
+      {
+        "text": "qt6"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何ができるものですか？",
+        "answer": "Lithは、WeeChatのリレークライアントとして動作するアプリケーションです。モバイル端末を意識した設計となっており、複数のプラットフォームでチャット機能を利用することを目的としています。"
+      },
+      {
+        "question": "対応しているOSは何ですか？",
+        "answer": "提供されている情報に基づくと、Linux、macOS、およびiOSに対応しています。マルチプラットフォームでの利用が可能な設計となっています。"
+      },
+      {
+        "question": "どのような技術で開発されていますか？",
+        "answer": "主なプログラミング言語はC++です。また、GUIやUIの構築にはQt6およびQMLといったフレームワークが使用されています。"
+      },
+      {
+        "question": "IRCクライアントとして利用できますか？",
+        "answer": "はい、主なトピックの一つとしてIRCが含まれており、WeeChatのリレークライアントとしてチャット機能を提供します。"
+      }
+    ]
+  },
+  {
     "name": "beadbox",
     "slug": "beadbox",
     "category": "project",
@@ -137224,6 +139533,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "TabTin",
+    "slug": "tabtin",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "人間と複数のAIエージェントが共存して作業を行うためのワークスペースです。",
+    "description": "TabTinは、ユーザーが人間と共に複数のAIエージェントを操作できるデスクトップ向けのワークスペースを提供します。TypeScriptで開発されており、共同作業の仕組みを重視した設計となっています。このツールを使用することで、単一のAIとの対話にとどまらず、複数のエージェントを統合した環境での業務遂行が可能になります。AI技術を活用した新しいコラボレーションの形を実現するための基盤として機能します。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.tabtin.com/",
+    "githubUrl": "https://github.com/tabtin-ai/TabTin",
+    "featured": false,
+    "stars": 112,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-08-19T02:36:25Z",
+    "githubPushedAt": "2026-08-23T08:41:13Z",
+    "useCases": [
+      {
+        "text": "AIエージェントを用いた共同作業の構築"
+      },
+      {
+        "text": "デスクトップ上でのマルチエージェント管理"
+      },
+      {
+        "text": "AIとの協調ワークフローの開発"
+      },
+      {
+        "text": "複数エージェントを統合した業務自動化"
+      },
+      {
+        "text": "AIを活用したチームコラボレーションの実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agents"
+      },
+      {
+        "text": "ai"
+      },
+      {
+        "text": "collaboration"
+      },
+      {
+        "text": "desktop"
+      },
+      {
+        "text": "workspace"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは完成された業務アプリですか？",
+        "answer": "いいえ、このソフトウェアは人間と複数のAIエージェントが共に働くためのワークスペースを提供するものであり、開発者がエージェント基盤として活用する方向性のツールです。"
+      },
+      {
+        "question": "どのような言語で提供されていますか？",
+        "answer": "このプロジェクトはTypeScriptというプログラミング言語を用いて構築されています。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "人間と複数のAIエージェントが同じワークスペース内で協力して作業を進めるための環境を提供することが主な役割です。"
+      },
+      {
+        "question": "デスクトップでの利用は可能ですか？",
+        "answer": "はい、主なトピックの一つとしてデスクトップが含まれており、デスクトップ環境での操作を想定したワークスペースとなっています。"
+      }
+    ]
   },
   {
     "name": "claude-email",
@@ -137603,6 +139987,153 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "cloud_bbb",
+    "slug": "cloud-bbb",
+    "category": "groupware",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "NextcloudにBigBlueButtonを統合するアプリケーションです。",
+    "description": "このソフトウェアは、クラウドストレージやファイル共有サービスとして知られるNextcloudに、Web会議システムであるBigBlueButtonを統合するためのものです。主要な機能としてビデオ会議やコラボレーション機能を提供し、WeBRTC技術を活用しています。JavaScriptで開発されており、既存のNextcloud環境にシームレスに連携させることを目的としています。ユーザーはNextcloudのインターフェースを通じて、高度なビデオ会議機能を利用できるようになります。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/littleredbutton/cloud_bbb",
+    "githubUrl": "https://github.com/littleredbutton/cloud_bbb",
+    "featured": false,
+    "stars": 111,
+    "language": "JavaScript",
+    "githubCreatedAt": "2020-04-25T20:57:46Z",
+    "githubPushedAt": "2026-08-23T02:57:38Z",
+    "useCases": [
+      {
+        "text": "Nextcloud内でのWeb会議機能の実装"
+      },
+      {
+        "text": "ビデオ会議システムとの統合"
+      },
+      {
+        "text": "リアルタイムな共同作業環境の構築"
+      },
+      {
+        "text": "WeBRTCを活用した通信環境の整備"
+      },
+      {
+        "text": "オンライン会議システムの連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "collaboration"
+      },
+      {
+        "text": "conference"
+      },
+      {
+        "text": "integration"
+      },
+      {
+        "text": "video"
+      },
+      {
+        "text": "webrtc"
+      },
+      {
+        "text": "nextcloud"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何をするためのものですか？",
+        "answer": "Nextcloudというプラットフォームに、BigBlueButtonというWeb会議システムを統合するためのアプリケーションです。これにより、ファイル共有とビデオ会議を同じ環境で利用できるようになります。"
+      },
+      {
+        "question": "どのような技術が使用されていますか？",
+        "answer": "主にJavaScriptを用いて開発されており、リアルタイムなビデオ通信を実現するためにWeBRTC技術を活用しています。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "Nextcloudとの統合を通じて、ビデオ会議やコラボレーション機能を提供します。ユーザーはこれらを統合された環境で利用することが可能です。"
+      },
+      {
+        "question": "どのような種類のソフトウェアですか？",
+        "answer": "Nextcloudの機能を拡張し、業務でそのまま使用できるアプリケーションとして分類されます。特定のプラットフォームと連携して動作する仕組みです。铵"
+      }
+    ]
+  },
+  {
+    "name": "sharecmd",
+    "slug": "sharecmd",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "クラウドストレージの共有リンクを生成するコマンドラインツールです。",
+    "description": "sharecmdは、Golangで記述されたコマンドラインインターフェース（CLI）ツールです。Dropbox、OpenDrive、Seafile、Nextcloud、Box、Google Driveなどの主要なクラウドストレージプロバイダーを使用してファイルを共有するためのリンクを生成します。開発者がターミナルから効率的に操作することを目的として設計されています。Apache-2.0ライセンスの下で公開されており、様々な環境での利用が可能です。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://github.com/mschneider82/sharecmd",
+    "githubUrl": "https://github.com/mschneider82/sharecmd",
+    "featured": false,
+    "stars": 111,
+    "language": "Go",
+    "githubCreatedAt": "2018-11-22T14:24:22Z",
+    "githubPushedAt": "2026-03-09T08:21:29Z",
+    "useCases": [
+      {
+        "text": "コマンドラインからのファイル共有リンク作成"
+      },
+      {
+        "text": "クラウドストレージの統合管理"
+      },
+      {
+        "text": "自動化スクリプトへの組み込み"
+      },
+      {
+        "text": "開発環境における迅速なファイル配布"
+      },
+      {
+        "text": "複数クラウドプロバイダーを横断したリンク生成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CLI"
+      },
+      {
+        "text": "クラウドストレージ"
+      },
+      {
+        "text": "Golang"
+      },
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "コマンドラインツール"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "対応している主なクラウドサービスは何ですか？",
+        "answer": "Dropbox、OpenDrive、Seafile、Nextcloud、Box、Google Driveといった主要なクラウドストレージプロバイダーに対応しています。"
+      },
+      {
+        "question": "このツールはどのような形式で提供されていますか？",
+        "answer": "Golangで書かれたコマンドラインツール（CLI）として提供されており、ターミナルから操作を行う仕組みです。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "Apache-2.0ライセンスの下で公開されているため、オープンソースソフトウェアとして利用可能です。"
+      },
+      {
+        "question": "GUI（画面）は付いていますか？",
+        "answer": "いいえ、このツールはコマンドラインでの操作を前提としたCLIツールであり、グラフィカルなユーザーインターフェースは含まれていません。媒体の共有リンク生成に特化しています。"
+      }
+    ]
   },
   {
     "name": "website",
