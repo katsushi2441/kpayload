@@ -40,7 +40,7 @@ const BASE = `${SITE}/saas`
 const SHELL = {
   refPrefix: 'exbridge-saas',
   base: BASE,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-saas">触れるデモ一覧</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/solution/">業種・業務別ソリューション</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-saas">触れるデモ一覧</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 

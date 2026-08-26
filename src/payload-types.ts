@@ -155,6 +155,7 @@ export interface OssProject {
     | 'dms'
     | 'security'
     | 'meeting'
+    | 'medical'
     | 'lowcode'
     | 'analytics'
     | 'aidev'

@@ -45,6 +45,7 @@ export const OSSProjects: CollectionConfig = {
         // seed が「無効な選択です」で全件失敗していた（2026-08-25）。
         { label: 'セキュリティ・認証', value: 'security' },
         { label: '議事録・文字起こし', value: 'meeting' },
+        { label: '医療・クリニック', value: 'medical' },
         { label: 'ローコード開発', value: 'lowcode' },
         { label: '分析・BI', value: 'analytics' },
         { label: 'AI開発基盤', value: 'aidev' },
