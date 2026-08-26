@@ -47,4 +47,9 @@ if [ "$what" = "ai-system" ] || [ "$what" = "all" ]; then
   put_tree /home/kojima/work/exbridge_jp exbridge_jp ai-system || rc=1
 fi
 
+if [ "$what" = "saas" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: saas/ =="
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp saas || rc=1
+fi
+
 exit $rc

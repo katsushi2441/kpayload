@@ -44,6 +44,7 @@ export const OSSProjects: CollectionConfig = {
         // パスワード管理など。1件しか無かったため選択肢に入れ忘れ、
         // seed が「無効な選択です」で全件失敗していた（2026-08-25）。
         { label: 'セキュリティ・認証', value: 'security' },
+        { label: '議事録・文字起こし', value: 'meeting' },
         { label: 'ローコード開発', value: 'lowcode' },
         { label: '分析・BI', value: 'analytics' },
         { label: 'AI開発基盤', value: 'aidev' },

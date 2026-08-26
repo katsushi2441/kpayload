@@ -1,3430 +1,3503 @@
 [
-  {
-    "name": "Frappe Helpdesk",
-    "slug": "frappe-helpdesk",
-    "category": "support",
-    "featured": true,
-    "summary": "問い合わせ、担当者、SLA、ナレッジを管理できるオープンソースのカスタマーサポート基盤です。",
-    "description": "Frappe Framework上で動くヘルプデスクです。Kurageでは日本語検索の問題修正と日本語翻訳を本家へ提出し、日本向け検証版も公開しています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "日本語翻訳あり。日本語検索修正を本家へ提出済み。",
-    "officialUrl": "https://frappe.io/helpdesk",
-    "githubUrl": "https://github.com/frappe/helpdesk",
-    "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/bwIjMyYjMgoTZsNWa0JXY",
-    "brainLabel": "日本語導入・検索修正の手順書を読む",
-    "useCases": [
-      {
-        "text": "問い合わせ管理"
-      },
-      {
-        "text": "SLA・担当者管理"
-      },
-      {
-        "text": "社内外ナレッジ"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Frappe Helpdesk 日本語"
-      },
-      {
-        "text": "Zendesk 代替 OSS"
-      },
-      {
-        "text": "ヘルプデスク OSS"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Frappe Helpdeskは日本語で使えますか？",
-        "answer": "日本語翻訳を利用できます。Kurageでは日本語検索の修正と翻訳を本家へ提出し、日本向けの導入検証も行っています。"
-      },
-      {
-        "question": "どんなサーバーが必要ですか？",
-        "answer": "Frappe Framework、データベース、キューなどを動かせるVPSまたはクラウド環境が必要です。共用レンタルサーバー向けではありません。"
-      }
-    ],
-    "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-    "funnel": "oss"
-  },
-  {
-    "name": "Plane",
-    "slug": "plane",
-    "category": "project",
-    "featured": true,
-    "summary": "課題、サイクル、モジュール、文書をまとめて管理するオープンソースのプロジェクト管理基盤です。",
-    "description": "Backlog、Jira、Linearなどの代替候補になるセルフホスト型プロジェクト管理です。公式日本語UIを持ち、Kurageでは日本向け導入キットを公開しています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "公式日本語UIあり。Plane JP Deployment Kitを公開。",
-    "officialUrl": "https://plane.so",
-    "githubUrl": "https://github.com/makeplane/plane",
-    "lpUrl": "https://kurage.exbridge.jp/backlog-plane.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/b0MjMyYjMgoTZsNWa0JXY",
-    "brainLabel": "日本向け構築手順書を読む",
-    "useCases": [
-      {
-        "text": "課題・タスク管理"
-      },
-      {
-        "text": "スプリント・サイクル管理"
-      },
-      {
-        "text": "社内文書とプロジェクト管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Plane 日本語"
-      },
-      {
-        "text": "Backlog 代替 OSS"
-      },
-      {
-        "text": "プロジェクト管理 セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Planeは日本語で使えますか？",
-        "answer": "公式版に日本語辞書が収録されています。利用者ごとに言語とタイムゾーンを設定できます。"
-      },
-      {
-        "question": "共用サーバーで動きますか？",
-        "answer": "複数コンテナとPostgreSQL等が必要なため、Dockerを利用できるVPSまたはクラウドVMが必要です。"
-      }
-    ],
-    "sourceLpName": "Backlogの代替を自社サーバーに。Plane日本向け導入キット",
-    "funnel": "oss"
-  },
-  {
-    "name": "Krayin CRM",
-    "slug": "krayin-crm",
-    "category": "crm",
-    "featured": true,
-    "summary": "Laravelで構築された、顧客、リード、商談、活動を管理するオープンソースCRMです。",
-    "description": "Salesforce代替候補になるMITライセンスのCRMです。Kurageでは管理画面とインストーラーの日本語化を行い、本家へ提出しています。",
-    "license": "MIT",
-    "japaneseStatus": "Kurageが2,066キーを日本語化し本家へ提出。",
-    "officialUrl": "https://krayincrm.com",
-    "githubUrl": "https://github.com/krayin/laravel-crm",
-    "lpUrl": "https://kurage.exbridge.jp/salesforce-daitai.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/bxYzNxYjMgoTZsNWa0JXY",
-    "brainLabel": "日本語化・構築手順書を読む",
-    "useCases": [
-      {
-        "text": "顧客・リード管理"
-      },
-      {
-        "text": "商談かんばん"
-      },
-      {
-        "text": "営業活動・見積管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Krayin 日本語"
-      },
-      {
-        "text": "Salesforce 代替 OSS"
-      },
-      {
-        "text": "Laravel CRM"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Krayinは商用利用できますか？",
-        "answer": "MITライセンスで公開されており、ライセンス条件を守れば商用利用や改変が可能です。"
-      },
-      {
-        "question": "日本語版はありますか？",
-        "answer": "Kurageが日本語化したkrayin-jpと導入ガイドを公開しています。"
-      }
-    ],
-    "sourceLpName": "Salesforceの代わりを探している方へ",
-    "funnel": "oss"
-  },
-  {
-    "name": "EspoCRM",
-    "slug": "espocrm",
-    "category": "crm",
-    "featured": true,
-    "summary": "顧客、商談、活動、メール、ワークフローを柔軟に管理できるオープンソースCRMです。",
-    "description": "日本語UIを利用でき、項目や画面を自社の営業フローへ合わせやすいCRMです。SugarCRM Community Edition終了後の移行候補にもなります。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "公式配布に日本語UIを収録。",
-    "officialUrl": "https://www.espocrm.com",
-    "githubUrl": "https://github.com/espocrm/espocrm",
-    "lpUrl": "https://kurage.exbridge.jp/espocrm-kochiku.php",
-    "useCases": [
-      {
-        "text": "顧客・商談管理"
-      },
-      {
-        "text": "活動・メール履歴"
-      },
-      {
-        "text": "自社項目と営業フロー"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "EspoCRM 日本語"
-      },
-      {
-        "text": "CRM OSS"
-      },
-      {
-        "text": "SugarCRM 代替"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "EspoCRMは日本語で使えますか？",
-        "answer": "公式配布に日本語UIが含まれています。業務用語や独自項目は導入時に自社向けへ調整できます。"
-      },
-      {
-        "question": "Salesforceから移行できますか？",
-        "answer": "CSVで出力した顧客や商談を、項目対応を決めたうえで段階的に移行できます。"
-      }
-    ],
-    "sourceLpName": "EspoCRMで作る自社仕様のCRM構築",
-    "funnel": "oss"
-  },
-  {
-    "name": "DocuSeal",
-    "slug": "docuseal",
-    "category": "esign",
-    "featured": true,
-    "summary": "PDFフォームの作成、入力依頼、電子署名をセルフホストできるオープンソース電子署名システムです。",
-    "description": "軽い合意書や社内確認などを自社環境で運用できます。重要契約では法務要件や本人確認を確認し、用途に応じて商用SaaSと使い分けます。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "署名フォームは日本語化可能。管理画面は導入時の確認が必要。",
-    "officialUrl": "https://www.docuseal.com",
-    "githubUrl": "https://github.com/docusealco/docuseal",
-    "lpUrl": "https://kurage.exbridge.jp/denshi-keiyaku-getsugaku-zero.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/b1EDOxYjMgoTZsNWa0JXY",
-    "brainLabel": "日本語構築・運用手順書を読む",
-    "useCases": [
-      {
-        "text": "署名フォーム作成"
-      },
-      {
-        "text": "PDF入力・署名依頼"
-      },
-      {
-        "text": "社内合意・軽量な契約フロー"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "DocuSeal 日本語"
-      },
-      {
-        "text": "電子署名 OSS"
-      },
-      {
-        "text": "DocuSign 代替 セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "DocuSealは無料で使えますか？",
-        "answer": "オープンソース版を自社サーバーへ導入できますが、サーバー、バックアップ、更新、法務確認の運用コストは必要です。"
-      },
-      {
-        "question": "すべての契約に使えますか？",
-        "answer": "契約の種類、本人確認、電子署名法などの要件確認が必要です。重要契約では専門家と商用サービスを含めて判断します。"
-      }
-    ],
-    "sourceLpName": "電子契約に月額を払わない方法（DocuSeal）",
-    "funnel": "oss"
-  },
-  {
-    "name": "Payload CMS",
-    "slug": "payload-cms",
-    "category": "cms",
-    "featured": true,
-    "summary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
-    "description": "構造化コンテンツを管理し、静的サイトやSSRへ配信できます。Kurage Payload CMSはPayloadを編集層、静的HTMLを公開層として利用しています。",
-    "license": "MIT",
-    "japaneseStatus": "管理画面の日本語表示に対応。コンテンツは自由に日本語で管理可能。",
-    "officialUrl": "https://payloadcms.com",
-    "githubUrl": "https://github.com/payloadcms/payload",
-    "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
-    "brainLabel": "Payload CMS日本語構築ガイドを読む",
-    "useCases": [
-      {
-        "text": "ヘッドレスCMS"
-      },
-      {
-        "text": "構造化コンテンツ管理"
-      },
-      {
-        "text": "Next.js業務システムの管理画面"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Payload CMS 日本語"
-      },
-      {
-        "text": "WordPress 代替 ヘッドレスCMS"
-      },
-      {
-        "text": "Next.js CMS"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Payload CMSは日本語コンテンツを扱えますか？",
-        "answer": "扱えます。管理画面の日本語表示と言語別コンテンツの設計が可能です。"
-      },
-      {
-        "question": "SEOに向いていますか？",
-        "answer": "CMS単体ではなく、Next.jsや静的生成側でメタ情報、構造化データ、sitemapを正しく出すことでSEOに強い構成にできます。"
-      }
-    ],
-    "sourceLpName": "WordPressをやめたい（静的化+Payload）",
-    "funnel": "oss"
-  },
-  {
-    "name": "Zabbix",
-    "slug": "zabbix",
-    "category": "monitoring",
-    "featured": true,
-    "summary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
-    "description": "死活、CPU、メモリ、ディスク、サービス状態を収集し、しきい値に応じて障害イベントを通知します。KurageではAI調査レポートと組み合わせて運用しています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "公式日本語UIあり。",
-    "officialUrl": "https://www.zabbix.com/",
-    "githubUrl": "https://github.com/zabbix/zabbix",
-    "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
-    "useCases": [
-      {
-        "text": "サーバー死活・性能監視"
-      },
-      {
-        "text": "ネットワーク監視"
-      },
-      {
-        "text": "障害通知と証拠収集"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Zabbix 構築"
-      },
-      {
-        "text": "サーバー監視 OSS"
-      },
-      {
-        "text": "Zabbix AI 障害対応"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Zabbixは日本語で使えますか？",
-        "answer": "公式UIで日本語を選択できます。監視項目、トリガー、通知先は環境ごとの設計が必要です。"
-      },
-      {
-        "question": "導入すればすぐ監視できますか？",
-        "answer": "監視対象、しきい値、通知、保守停止時の扱いを決める必要があります。初期設定が監視品質を左右します。"
-      }
-    ],
-    "sourceLpName": "サーバー監視・障害通知を安く構築する",
-    "funnel": "oss"
-  },
-  {
-    "name": "Bludit",
-    "slug": "bludit",
-    "category": "cms",
-    "featured": false,
-    "summary": "データベース不要で動く、軽量なフラットファイル型オープンソースCMSです。",
-    "description": "PHPとファイルで動き、障害レポートや社内記録など小規模な情報蓄積に利用できます。Kurageでは監視レポートの保存先として紹介しています。",
-    "license": "MIT",
-    "japaneseStatus": "日本語コンテンツに対応。管理画面翻訳はバージョンを要確認。",
-    "officialUrl": "https://www.bludit.com",
-    "githubUrl": "https://github.com/bludit/bludit",
-    "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
-    "useCases": [
-      {
-        "text": "軽量ブログ"
-      },
-      {
-        "text": "社内レポート保管"
-      },
-      {
-        "text": "DB不要の小規模CMS"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Bludit 日本語"
-      },
-      {
-        "text": "データベース不要 CMS"
-      },
-      {
-        "text": "軽量 CMS OSS"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "BluditはDBサーバーが必要ですか？",
-        "answer": "不要です。コンテンツをファイルで管理するため、PHPが動く小規模サーバーにも設置できます。"
-      },
-      {
-        "question": "大規模サイトにも向きますか？",
-        "answer": "小規模なブログや記録用途に向きます。大量コンテンツや複雑な権限が必要なら別のCMSを検討します。"
-      }
-    ],
-    "sourceLpName": "サーバー監視・障害通知を安く構築する",
-    "funnel": "oss"
-  },
-  {
-    "name": "InvenTree",
-    "slug": "inventree",
-    "category": "inventory",
-    "featured": true,
-    "summary": "部品、在庫、BOM、発注、製造を管理できるオープンソース在庫管理システムです。",
-    "description": "高機能なため、自社の品目体系、保管場所、権限、使う画面に合わせた初期設定が重要です。小規模用途では機能を絞った導入が現実的です。",
-    "license": "MIT",
-    "japaneseStatus": "多言語対応。導入バージョンの日本語翻訳範囲を要確認。",
-    "officialUrl": "https://docs.inventree.org",
-    "githubUrl": "https://github.com/inventree/InvenTree",
-    "lpUrl": "https://kurage.exbridge.jp/zaiko-kanri-yasuku.php",
-    "useCases": [
-      {
-        "text": "品目・在庫管理"
-      },
-      {
-        "text": "BOM・部品表"
-      },
-      {
-        "text": "発注・製造管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "InvenTree 日本語"
-      },
-      {
-        "text": "在庫管理 OSS"
-      },
-      {
-        "text": "部品管理 セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "InvenTreeは小規模店舗でも使えますか？",
-        "answer": "利用できますが高機能です。品目、入出庫、棚卸、発注点など必要な範囲へ絞って設定するのが現実的です。"
-      },
-      {
-        "question": "日本語化できますか？",
-        "answer": "多言語機構があります。未翻訳箇所や自社用語は導入時に確認して調整します。"
-      }
-    ],
-    "sourceLpName": "在庫管理システムを安く導入する方法",
-    "funnel": "oss"
-  },
-  {
-    "name": "LibreOffice",
-    "slug": "libreoffice",
-    "category": "office",
-    "featured": false,
-    "summary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
-    "description": "オフラインで利用でき、Microsoft Office形式の読み書きに対応します。複雑なレイアウトやVBA資産は互換性を事前検証します。",
-    "license": "MPL-2.0 / LGPL-3.0+",
-    "japaneseStatus": "公式日本語UIあり。",
-    "officialUrl": "https://www.libreoffice.org/",
-    "githubUrl": "https://github.com/LibreOffice/core",
-    "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
-    "useCases": [
-      {
-        "text": "文書作成"
-      },
-      {
-        "text": "表計算"
-      },
-      {
-        "text": "プレゼンテーション"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "LibreOffice 日本語"
-      },
-      {
-        "text": "Microsoft Office 代替 無料"
-      },
-      {
-        "text": "オフィスソフト OSS"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "ExcelやWordのファイルを開けますか？",
-        "answer": "読み書きできますが、複雑なレイアウト、マクロ、特殊機能は崩れる場合があるため事前確認が必要です。"
-      },
-      {
-        "question": "商用利用できますか？",
-        "answer": "ライセンス条件に従って企業でも利用できます。配布や改変時は公式ライセンスを確認してください。"
-      }
-    ],
-    "sourceLpName": "オフィスソフトに月額を払わない方法",
-    "funnel": "prototype"
-  },
-  {
-    "name": "SQLite",
-    "slug": "sqlite",
-    "category": "database",
-    "featured": false,
-    "summary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
-    "description": "小規模な業務システム、ローカルアプリ、設定・履歴管理に向きます。大量の同時書き込みや複数サーバー共有が必要な場合はPostgreSQL等を検討します。",
-    "license": "Public Domain",
-    "japaneseStatus": "データとアプリケーション側で日本語を扱えます。",
-    "officialUrl": "https://www.sqlite.org/",
-    "githubUrl": "https://github.com/sqlite/sqlite",
-    "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
-    "useCases": [
-      {
-        "text": "小規模業務DB"
-      },
-      {
-        "text": "組み込みアプリ"
-      },
-      {
-        "text": "サーバーレスなデータ保存"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "SQLite 業務システム"
-      },
-      {
-        "text": "DBサーバー 不要"
-      },
-      {
-        "text": "SQLite 日本語"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "SQLiteは業務システムに使えますか？",
-        "answer": "小規模から中規模で同時書き込みが限定される用途に広く使えます。排他制御、バックアップ、破損対策は必要です。"
-      },
-      {
-        "question": "いつPostgreSQL等へ移るべきですか？",
-        "answer": "大量の同時書き込み、複数サーバーからの共有、複雑な分析が日常化した段階で検討します。"
-      }
-    ],
-    "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
-    "funnel": "prototype"
-  },
-  {
-    "name": "PostgreSQL",
-    "slug": "postgresql",
-    "category": "database",
-    "featured": false,
-    "summary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
-    "description": "複数利用者、複雑な検索、トランザクションが必要な業務システムで利用されます。Planeなど多くのOSSの保存基盤にも採用されています。",
-    "license": "PostgreSQL License",
-    "japaneseStatus": "UTF-8で日本語データを扱えます。",
-    "officialUrl": "https://www.postgresql.org/",
-    "githubUrl": "https://github.com/postgres/postgres",
-    "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
-    "useCases": [
-      {
-        "text": "業務システムDB"
-      },
-      {
-        "text": "高整合性トランザクション"
-      },
-      {
-        "text": "複雑な検索・集計"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "PostgreSQL 業務システム"
-      },
-      {
-        "text": "オープンソース データベース"
-      },
-      {
-        "text": "SQLite PostgreSQL 比較"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "小規模でもPostgreSQLが必要ですか？",
-        "answer": "単一サーバー・少人数ならSQLiteで足りる場合があります。複数接続や高度なDB機能が必要な場合に選びます。"
-      },
-      {
-        "question": "運用で何が必要ですか？",
-        "answer": "バックアップ、更新、監視、権限、接続制限、復旧試験が必要です。"
-      }
-    ],
-    "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
-    "funnel": "prototype"
-  },
-  {
-    "name": "MySQL Community Edition",
-    "slug": "mysql-community",
-    "category": "database",
-    "featured": false,
-    "summary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
-    "description": "PHPやLaravel製OSSとの組み合わせが多く、Krayin CRMなどの保存基盤として利用できます。導入時はバックアップとアクセス制御を設計します。",
-    "license": "GPL-2.0",
-    "japaneseStatus": "UTF-8で日本語データを扱えます。",
-    "officialUrl": "https://www.mysql.com/products/community/",
-    "githubUrl": "https://github.com/mysql/mysql-server",
-    "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
-    "useCases": [
-      {
-        "text": "WebアプリDB"
-      },
-      {
-        "text": "Laravel・PHPシステム"
-      },
-      {
-        "text": "顧客・商品データ管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "MySQL Community Edition"
-      },
-      {
-        "text": "MySQL 業務システム"
-      },
-      {
-        "text": "無料 データベース"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "MySQL Community Editionは無料ですか？",
-        "answer": "コミュニティ版はGPLで公開されています。組み込みや再配布など利用形態に応じてライセンスを確認してください。"
-      },
-      {
-        "question": "共用サーバーでも使えますか？",
-        "answer": "多くの共用サーバーで提供されますが、管理権限、拡張、バックアップ方法には制約があります。"
-      }
-    ],
-    "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
-    "funnel": "prototype"
-  },
-  {
-    "name": "WordPress",
-    "slug": "wordpress",
-    "category": "cms",
-    "featured": false,
-    "summary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
-    "description": "豊富なテーマとプラグインが強みですが、更新、脆弱性対策、バックアップが必要です。静的化やPayload CMSへの移行も選択肢になります。",
-    "license": "GPL-2.0-or-later",
-    "japaneseStatus": "公式日本語版あり。",
-    "officialUrl": "https://wordpress.org/",
-    "githubUrl": "https://github.com/WordPress/wordpress-develop",
-    "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
-    "useCases": [
-      {
-        "text": "企業サイト"
-      },
-      {
-        "text": "ブログ・オウンドメディア"
-      },
-      {
-        "text": "プラグインによる機能拡張"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "WordPress OSS"
-      },
-      {
-        "text": "WordPress セキュリティ"
-      },
-      {
-        "text": "WordPress 代替 CMS"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "WordPressは無料ですか？",
-        "answer": "本体はオープンソースですが、サーバー、テーマ、プラグイン、保守の費用がかかる場合があります。"
-      },
-      {
-        "question": "別CMSへ移行すべきですか？",
-        "answer": "更新負担、表示速度、必要な編集機能を整理し、WordPress継続、静的化、ヘッドレスCMSを比較します。"
-      }
-    ],
-    "sourceLpName": "WordPressをやめたい（静的化+Payload）",
-    "funnel": "oss"
-  },
-  {
-    "name": "Chatwoot",
-    "slug": "chatwoot",
-    "category": "support",
-    "featured": false,
-    "summary": "Webチャット、メール、SNSなどの問い合わせを一つにまとめるセルフホスト対応のカスタマーサポート基盤です。",
-    "description": "ZendeskやIntercomの代替候補です。チャネル統合が強みです。公式リポジトリは原則MITですが、enterprise/配下は別ライセンスのため、利用機能ごとに条件を確認します。",
-    "license": "MIT（enterprise/配下は別ライセンス）",
-    "japaneseStatus": "多言語対応。導入版の翻訳範囲を要確認。",
-    "officialUrl": "https://www.chatwoot.com/",
-    "githubUrl": "https://github.com/chatwoot/chatwoot",
-    "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
-    "useCases": [
-      {
-        "text": "Webチャット"
-      },
-      {
-        "text": "メール・SNS問い合わせ統合"
-      },
-      {
-        "text": "サポート担当者管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Chatwoot 日本語"
-      },
-      {
-        "text": "Zendesk 代替 OSS"
-      },
-      {
-        "text": "チャットサポート セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "ChatwootはZendeskの代わりになりますか？",
-        "answer": "チャットや複数チャネル統合では有力候補です。SLA、ナレッジ、既存連携など必要機能を比較します。"
-      },
-      {
-        "question": "日本語で使えますか？",
-        "answer": "多言語対応ですが、導入する版と画面ごとの翻訳状況を事前確認します。"
-      }
-    ],
-    "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-    "funnel": "oss"
-  },
-  {
-    "name": "Zammad",
-    "slug": "zammad",
-    "category": "support",
-    "featured": false,
-    "summary": "メール、電話、チャットなどの問い合わせをチケットとして管理するオープンソースヘルプデスクです。",
-    "description": "複数チャネルと担当者によるサポート運用に向きます。セルフホストではサーバー、検索基盤、メール連携の運用が必要です。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
-    "officialUrl": "https://zammad.org",
-    "githubUrl": "https://github.com/zammad/zammad",
-    "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
-    "useCases": [
-      {
-        "text": "問い合わせチケット"
-      },
-      {
-        "text": "メール・電話連携"
-      },
-      {
-        "text": "担当者・状態管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Zammad 日本語"
-      },
-      {
-        "text": "ヘルプデスク OSS"
-      },
-      {
-        "text": "Zendesk 代替 セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Zammadはセルフホストできますか？",
-        "answer": "できます。利用規模に応じたサーバー、バックアップ、メール、検索基盤の運用が必要です。"
-      },
-      {
-        "question": "Frappe Helpdeskとの違いは？",
-        "answer": "必要なチャネル、運用画面、検索、日本語対応、既存システム連携を実際のデモで比較します。"
-      }
-    ],
-    "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-    "funnel": "oss"
-  },
-  {
-    "name": "FreeScout",
-    "slug": "freescout",
-    "category": "support",
-    "featured": false,
-    "summary": "共有メールボックスを中心に問い合わせを管理する、軽量なオープンソースヘルプデスクです。",
-    "description": "メール中心の小規模サポートで使いやすい構成です。必要な追加機能、モジュール、メール配送環境を確認して導入します。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
-    "officialUrl": "https://freescout.net",
-    "githubUrl": "https://github.com/freescout-help-desk/freescout",
-    "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
-    "useCases": [
-      {
-        "text": "共有メールボックス"
-      },
-      {
-        "text": "問い合わせ担当・状態管理"
-      },
-      {
-        "text": "小規模サポート窓口"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "FreeScout 日本語"
-      },
-      {
-        "text": "共有メール OSS"
-      },
-      {
-        "text": "Help Scout 代替"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "FreeScoutはどんな会社に向きますか？",
-        "answer": "メール中心の問い合わせを少人数で共有したい会社に向きます。複雑なSLAや多数チャネルには別製品も比較します。"
-      },
-      {
-        "question": "追加費用はありますか？",
-        "answer": "本体以外のモジュール、サーバー、メール、保守に費用が生じる場合があります。"
-      }
-    ],
-    "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Groupware (kvgwc)",
-    "slug": "kvgwc",
-    "category": "groupware",
-    "featured": true,
-    "summary": "共有レンタルサーバーでも動く、MITライセンスの軽量な社内グループウェア基盤です。",
-    "description": "認証、社員、共有スケジュールを持ち、定義ファイルで日報や点検記録などの業務アプリを追加できます。DBサーバーと外部ライブラリを必要としません。",
-    "license": "MIT",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kvgwc",
-    "githubUrl": "https://github.com/katsushi2441/kvgwc",
-    "lpUrl": "https://kurage.exbridge.jp/groupware-kaikiri.php",
-    "brainUrl": "https://brain-market.com/u/bittensorman/a/bzEjNxYjMgoTZsNWa0JXY",
-    "brainLabel": "構築・運用手順書を読む",
-    "useCases": [
-      {
-        "text": "社員・権限管理"
-      },
-      {
-        "text": "共有スケジュール"
-      },
-      {
-        "text": "日報・点検などの社内アプリ"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "グループウェア OSS 日本語"
-      },
-      {
-        "text": "kintone 代替 買い切り"
-      },
-      {
-        "text": "PHP グループウェア"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "共用レンタルサーバーで動きますか？",
-        "answer": "PHPが動く一般的な共用サーバーを想定しています。サーバー仕様と書き込み権限は事前確認します。"
-      },
-      {
-        "question": "業務アプリを追加できますか？",
-        "answer": "定義ファイルで項目と画面を追加できます。複雑な連携や独自処理はソースをカスタマイズします。"
-      }
-    ],
-    "sourceLpName": "サイボウズ・kintoneが無くてもグループウェアは持てる",
-    "funnel": "oss",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
-    "demoUrl": "https://proto.exbridge.jp/kvgwc/"
-  },
-  {
-    "name": "OpenKB",
-    "slug": "openkb",
-    "category": "knowledge",
-    "featured": false,
-    "summary": "文書からWiki形式のナレッジを構築し、エージェントが調査・回答するオープンソースの知識基盤です。",
-    "description": "ベクトルDBだけに依存しないPageIndex型のRAGを検証できます。Kurageでは商品選定や制度説明のPoCに利用し、価格やURLは構造化データと併用しています。",
-    "license": "Apache-2.0",
-    "japaneseStatus": "日本語文書を処理可能。管理・CLIは英語中心。",
-    "officialUrl": "https://github.com/VectifyAI/OpenKB",
-    "githubUrl": "https://github.com/VectifyAI/OpenKB",
-    "lpUrl": "https://kurage.exbridge.jp/ai-chatbot-kaikiri.php",
-    "useCases": [
-      {
-        "text": "社内ナレッジ"
-      },
-      {
-        "text": "文書調査・RAG"
-      },
-      {
-        "text": "AI問い合わせ対応"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "OpenKB 日本語"
-      },
-      {
-        "text": "RAG OSS"
-      },
-      {
-        "text": "社内ナレッジ AI"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "OpenKBだけで価格やURLを正確に回答できますか？",
-        "answer": "要約工程で数値やURLが抜ける場合があります。Kurageではcatalog.jsonなど構造化データを併用します。"
-      },
-      {
-        "question": "ローカルLLMで動かせますか？",
-        "answer": "モデル接続を設定すれば利用できますが、初回コンパイル速度と事実保持を実データで検証する必要があります。"
-      }
-    ],
-    "sourceLpName": "AIチャットボット開発の費用相場と買い切り",
-    "funnel": "oss"
-  },
-  {
-    "name": "Simplenote clients",
-    "slug": "simplenote-clients",
-    "category": "notes",
-    "featured": false,
-    "summary": "Simplenoteの各クライアントはオープンソースですが、同期バックエンドは公開されていません。",
-    "description": "アプリのコードは公開されていますが、同じサービスをそのままセルフホストするためのサーバー一式ではありません。自社管理したい場合は別のOSSまたは代替システムを選びます。",
-    "license": "GPL-2.0（クライアント。同期サーバーは非公開）",
-    "japaneseStatus": "公式日本語UIあり。",
-    "officialUrl": "https://simplenote.com/",
-    "githubUrl": "https://github.com/Automattic/simplenote-electron",
-    "lpUrl": "https://kurage.exbridge.jp/simplenote-daitai.php",
-    "useCases": [
-      {
-        "text": "シンプルなメモ"
-      },
-      {
-        "text": "複数端末同期"
-      },
-      {
-        "text": "クライアント実装の参照"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Simplenote OSS"
-      },
-      {
-        "text": "Simplenote セルフホスト"
-      },
-      {
-        "text": "Simplenote 代替"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Simplenoteを自分のサーバーで動かせますか？",
-        "answer": "公式クライアントは公開されていますが、同期バックエンドは公開されていないため、Simplenote一式をそのままセルフホストはできません。"
-      },
-      {
-        "question": "自社サーバーにメモを置くには？",
-        "answer": "セルフホスト可能な別OSSか、必要機能に絞った代替システムを選びます。"
-      }
-    ],
-    "sourceLpName": "Simplenoteの代わりを自分のサーバーに置く",
-    "funnel": "oss"
-  },
-  {
-    "name": "AIKnowledgeCMS",
-    "slug": "aiknowledgecms",
-    "category": "cms",
-    "featured": true,
-    "summary": "情報収集、選別、レポート公開をエージェントループで継続する自己成長型CMSです。",
-    "description": "SENSE、TRIAGE、REPORTのループで情報を蓄積し、人が毎回記事を作らなくても専門領域の知識ベースを育てます。公開サイト自身でループ結果を見せるリファレンス実装です。",
-    "license": "MIT",
-    "japaneseStatus": "日本語コンテンツと日本語運用に対応。",
-    "officialUrl": "https://aiknowledgecms.exbridge.jp/aiknowledgecms.html",
-    "githubUrl": "https://github.com/katsushi2441/aiknowledgecms",
-    "lpUrl": "https://aiknowledgecms.exbridge.jp/aiknowledgecms.html",
-    "demoUrl": "https://aiknowledgecms.exbridge.jp/loop/",
-    "useCases": [
-      {
-        "text": "専門情報の自動収集"
-      },
-      {
-        "text": "継続的な知識ベース構築"
-      },
-      {
-        "text": "AI運用レポートの公開"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AIKnowledgeCMS OSS"
-      },
-      {
-        "text": "AI CMS 自動運用"
-      },
-      {
-        "text": "ナレッジベース バイブコーディング"
-      }
-    ],
-    "sourceLpName": "AIKnowledgeCMS — エージェントループが運用するCMS",
-    "faqs": [
-      {
-        "question": "AIKnowledgeCMSは自社向けにカスタマイズできますか？",
-        "answer": "収集元、判定基準、カテゴリ、レポート形式、公開承認フローを業務領域に合わせて変更できます。"
-      },
-      {
-        "question": "AIKnowledgeCMSの導入前に何を確認すべきですか？",
-        "answer": "収集対象、公開してよい情報、更新頻度、人が承認する範囲を先に決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "AIMediaPost",
-    "slug": "aimediapost",
-    "category": "media",
-    "featured": false,
-    "summary": "文章を音声とBGM付きのメディアへ変換し、公開作業を支援するAIメディア投稿ツールです。",
-    "description": "入力した文章から音声を生成し、BGMと組み合わせて公開用コンテンツを作ります。定型の告知、短い解説、音声コンテンツ制作を繰り返す用途に向きます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語テキストと日本語音声の制作に対応。",
-    "officialUrl": "https://aimediapost.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/aimediapost",
-    "lpUrl": "https://aimediapost.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "文章の音声化"
-      },
-      {
-        "text": "BGM付き告知コンテンツ"
-      },
-      {
-        "text": "定型メディア投稿の省力化"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AIMediaPost OSS"
-      },
-      {
-        "text": "文章 音声化 BGM"
-      },
-      {
-        "text": "AI メディア投稿 自動化"
-      }
-    ],
-    "sourceLpName": "AIMediaPost — Autonomous Media Publishing",
-    "faqs": [
-      {
-        "question": "AIMediaPostは自社向けにカスタマイズできますか？",
-        "answer": "音声、BGM、尺、テンプレート、投稿先に合わせて制作フローを変更できます。"
-      },
-      {
-        "question": "AIMediaPostの導入前に何を確認すべきですか？",
-        "answer": "利用する音声・BGMの権利、公開先の仕様、必要な音量と尺を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage AIRadio",
-    "slug": "airadio",
-    "category": "media",
-    "featured": true,
-    "summary": "ニュースやキーワードから短いラジオ番組を自動生成するAI音声番組システムです。",
-    "description": "情報源を取得し、番組原稿、音声、番組構成を生成して短いラジオコンテンツへまとめます。テーマを限定した定期番組や社内音声ニュースに応用できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語ニュース、原稿、音声番組の生成に対応。",
-    "officialUrl": "https://airadio.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/airadio",
-    "lpUrl": "https://airadio.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "AIラジオ番組"
-      },
-      {
-        "text": "社内音声ニュース"
-      },
-      {
-        "text": "テーマ別の定期音声配信"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AIRadio OSS"
-      },
-      {
-        "text": "AI ラジオ 自動生成"
-      },
-      {
-        "text": "ニュース 音声番組"
-      }
-    ],
-    "sourceLpName": "Kurage AI VTuber Radio",
-    "faqs": [
-      {
-        "question": "Kurage AIRadioは自社向けにカスタマイズできますか？",
-        "answer": "情報源、番組の口調、出演者構成、音声、BGM、配信頻度を変更できます。"
-      },
-      {
-        "question": "Kurage AIRadioの導入前に何を確認すべきですか？",
-        "answer": "情報源の利用条件、音声とBGMの権利、誤情報を確認する承認工程を決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "AIRadio Scripted-MV",
-    "slug": "airadio-scripted-mv",
-    "category": "media",
-    "featured": false,
-    "summary": "AIRadioの台本をシーン単位の映像へ変換するスクリプト駆動型ミュージックビデオ生成プラグインです。",
-    "description": "台本に沿ってシーン、画像、字幕、音声のタイミングを組み立て、AIRadioの音声を映像コンテンツへ展開します。番組ごとの映像テンプレートを持たせられます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語台本と字幕を利用可能。",
-    "officialUrl": "https://airadio-scripted-mv.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/airadio-scripted-mv",
-    "lpUrl": "https://airadio-scripted-mv.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "ラジオ番組の動画化"
-      },
-      {
-        "text": "台本同期の字幕表示"
-      },
-      {
-        "text": "定型MV・解説映像"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AIRadio Scripted MV OSS"
-      },
-      {
-        "text": "台本 動画生成"
-      },
-      {
-        "text": "音声 字幕 同期"
-      }
-    ],
-    "sourceLpName": "Kurage Project AIRadio Scripted-MV",
-    "faqs": [
-      {
-        "question": "AIRadio Scripted-MVは自社向けにカスタマイズできますか？",
-        "answer": "画面構成、字幕、トランジション、ブランド素材、動画サイズを番組向けに変更できます。"
-      },
-      {
-        "question": "AIRadio Scripted-MVの導入前に何を確認すべきですか？",
-        "answer": "元音声、台本、画像素材、公開先の解像度と尺を用意します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "AIxEC",
-    "slug": "aixec",
-    "category": "commerce",
-    "featured": true,
-    "summary": "商品発見、説明生成、クリック計測、ランキング更新を自動化するAIアフィリエイトEC基盤です。",
-    "description": "複数の商品情報源から候補を収集し、説明文、ランキング、計測リンクを生成して公開します。商材や提携先ごとのデータ形式に合わせた商品パイプラインを構築できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語の商品説明、カテゴリ、管理運用に対応。",
-    "officialUrl": "https://aixec.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/aixec",
-    "lpUrl": "https://aixec.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "商品情報の自動収集"
-      },
-      {
-        "text": "商品ランキングと比較ページ"
-      },
-      {
-        "text": "アフィリエイト導線の計測"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AIxEC OSS"
-      },
-      {
-        "text": "AI EC 自動化"
-      },
-      {
-        "text": "アフィリエイト 商品登録"
-      }
-    ],
-    "sourceLpName": "AI駆動型ネット通販 AIxEC",
-    "faqs": [
-      {
-        "question": "AIxECは自社向けにカスタマイズできますか？",
-        "answer": "商品API、カテゴリ、ランキング基準、説明文、計測、承認フローを商材に合わせて変更できます。"
-      },
-      {
-        "question": "AIxECの導入前に何を確認すべきですか？",
-        "answer": "提携APIの規約、価格更新、広告表記、計測範囲、公開前確認を設計します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage App Store",
-    "slug": "kappstore",
-    "category": "commerce",
-    "featured": true,
-    "summary": "AIエージェントが設置・改変できる業務システムを配布・販売するオープンソースのストア基盤です。",
-    "description": "商品一覧、詳細、注文導線、ダウンロード商品を管理し、業務システムのソースと導入情報を届けます。自社のソフトウェア販売サイトとして構成を変更できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://kappstore.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/kappstore",
-    "lpUrl": "https://kappstore.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "ソフトウェア販売"
-      },
-      {
-        "text": "ダウンロード商品管理"
-      },
-      {
-        "text": "導入マニュアルの提供"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage App Store OSS"
-      },
-      {
-        "text": "ソフトウェア 販売システム"
-      },
-      {
-        "text": "ダウンロード販売 PHP"
-      }
-    ],
-    "sourceLpName": "Kurage App Store — AIが設置できる業務システム",
-    "faqs": [
-      {
-        "question": "Kurage App Storeは自社向けにカスタマイズできますか？",
-        "answer": "商品項目、価格、決済、購入者向け画面、ブランド、納品フローを変更できます。"
-      },
-      {
-        "question": "Kurage App Storeの導入前に何を確認すべきですか？",
-        "answer": "販売条件、決済手段、納品物、利用規約、購入後サポートを決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Architect",
-    "slug": "karchitect",
-    "category": "knowledge",
-    "featured": true,
-    "summary": "会話から実装可能なシステム設計書を作る、ローカルLLM対応の対話型設計スタジオです。",
-    "description": "利用者との対話で目的、利用者、機能、データ、権限、運用条件を整理し、開発エージェントへ渡せる設計資料へまとめます。設計テンプレートを業種別に変更できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語対話と日本語設計書に対応。",
-    "officialUrl": "https://karchitect.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/karchitect",
-    "lpUrl": "https://karchitect.exbridge.jp/",
-    "demoUrl": "https://kurage.exbridge.jp/karchitect.php",
-    "useCases": [
-      {
-        "text": "要件整理"
-      },
-      {
-        "text": "システム設計書生成"
-      },
-      {
-        "text": "開発エージェントへの引き継ぎ"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage Architect OSS"
-      },
-      {
-        "text": "AI システム設計"
-      },
-      {
-        "text": "要件定義 バイブコーディング"
-      }
-    ],
-    "sourceLpName": "Kurage Architect — Conversational System Design Studio",
-    "faqs": [
-      {
-        "question": "Kurage Architectは自社向けにカスタマイズできますか？",
-        "answer": "質問項目、設計書形式、業務用語、承認工程、出力テンプレートを変更できます。"
-      },
-      {
-        "question": "Kurage Architectの導入前に何を確認すべきですか？",
-        "answer": "設計対象、利用者、既存業務、制約、最終承認者を明確にします。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Crypto Brain (kcbrain)",
-    "slug": "kcbrain",
-    "category": "finance",
-    "featured": true,
-    "summary": "複数のOSSトレーディング知能を統合し、暗号資産の分析・リスク判断を返すAPIです。",
-    "description": "テクニカル、センチメント、リスク、ポートフォリオなどの判断機能をAPIとして提供します。取引所認証や注文執行を持たず、自動取引ボディから利用する知能層です。",
-    "license": "MIT",
-    "japaneseStatus": "日本語の入力、説明、Workbenchに対応。",
-    "officialUrl": "https://kcbrain.exbridge.jp/kcbrain.html",
-    "githubUrl": "https://github.com/katsushi2441/kcbrain",
-    "lpUrl": "https://kcbrain.exbridge.jp/kcbrain.html",
-    "demoUrl": "https://kurage.exbridge.jp/kcbrain.php",
-    "useCases": [
-      {
-        "text": "暗号資産市場の分析"
-      },
-      {
-        "text": "取引前リスク判定"
-      },
-      {
-        "text": "自動取引ボットの判断API"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kcbrain OSS"
-      },
-      {
-        "text": "暗号資産 AI 判断 API"
-      },
-      {
-        "text": "NOFX kcbrain"
-      }
-    ],
-    "sourceLpName": "Kurage Crypto Brain — OSSトレーディング知能API",
-    "faqs": [
-      {
-        "question": "Kurage Crypto Brain (kcbrain)は自社向けにカスタマイズできますか？",
-        "answer": "分析スキル、プロンプト、モデル、リスク基準、x402課金、呼び出し元を変更できます。"
-      },
-      {
-        "question": "Kurage Crypto Brain (kcbrain)の導入前に何を確認すべきですか？",
-        "answer": "判断APIは注文を実行しません。市場データ、取引ボディ、損失上限を別途設計します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Capacitor Launcher",
-    "slug": "kclauncher",
-    "category": "mobile",
-    "featured": false,
-    "summary": "設定したURLをiPhone・Androidのホーム画面から開く、Capacitor製の汎用WebViewランチャーです。",
-    "description": "接続先URL、アプリアイコン、名称を変えて、既存Webサービスをモバイルアプリ風に利用できます。PWAとAndroid APKの配布にも対応する構成です。",
-    "license": "ライセンス未設定（公開リポジトリ）",
-    "japaneseStatus": "日本語LPと日本語向け設定に対応。",
-    "officialUrl": "https://kclauncher.exbridge.jp/kclauncher.html",
-    "githubUrl": "https://github.com/katsushi2441/kclauncher",
-    "lpUrl": "https://kclauncher.exbridge.jp/kclauncher.html",
-    "demoUrl": "https://kclauncher.exbridge.jp/iphone/",
-    "useCases": [
-      {
-        "text": "社内Webアプリのランチャー"
-      },
-      {
-        "text": "PWA・Androidアプリ化"
-      },
-      {
-        "text": "ホーム画面からの業務導線"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Capacitor Launcher OSS"
-      },
-      {
-        "text": "WebView アプリ 作成"
-      },
-      {
-        "text": "Webシステム Android化"
-      }
-    ],
-    "sourceLpName": "Kurage Capacitor Launcher",
-    "faqs": [
-      {
-        "question": "Kurage Capacitor Launcherは自社向けにカスタマイズできますか？",
-        "answer": "接続URL、アプリ名、アイコン、権限、画面回転、配布方法を変更できます。"
-      },
-      {
-        "question": "Kurage Capacitor Launcherの導入前に何を確認すべきですか？",
-        "answer": "公開先URL、ログイン方式、端末権限、ストア配布の有無を確認します。"
-      }
-    ],
-    "funnel": "oss",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=e8d0518e44c29a60"
-  },
-  {
-    "name": "Kurage Finanalyst",
-    "slug": "kfinanalyst",
-    "category": "finance",
-    "featured": false,
-    "summary": "ウォッチリストから日本株・米国株・暗号資産・FXの市場レポートを生成するマルチテナントAIアナリストです。",
-    "description": "利用者ごとの監視対象を管理し、FinRobotを参考に複数市場の調査レポートを生成します。分析履歴、根拠リンク、対象市場を業務に合わせて調整できます。",
-    "license": "ライセンス未設定（依存元FinRobotはApache-2.0）",
-    "japaneseStatus": "日本語UIと日本語レポートに対応。",
-    "officialUrl": "https://kfina.exbridge.jp/kfinanalyst.html",
-    "githubUrl": "https://github.com/katsushi2441/kfinanalyst",
-    "lpUrl": "https://kfina.exbridge.jp/kfinanalyst.html",
-    "demoUrl": "https://kurage.exbridge.jp/kfinanalyst.php",
-    "useCases": [
-      {
-        "text": "ウォッチリスト分析"
-      },
-      {
-        "text": "複数市場の定期レポート"
-      },
-      {
-        "text": "根拠付き投資情報の整理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage Finanalyst"
-      },
-      {
-        "text": "AI 市場レポート OSS"
-      },
-      {
-        "text": "日本株 米国株 暗号資産 FX 分析"
-      }
-    ],
-    "sourceLpName": "Kurage Finanalyst — 専属AIアナリスト",
-    "faqs": [
-      {
-        "question": "Kurage Finanalystは自社向けにカスタマイズできますか？",
-        "answer": "対象市場、データ源、レポート項目、分析モデル、通知、利用者権限を変更できます。"
-      },
-      {
-        "question": "Kurage Finanalystの導入前に何を確認すべきですか？",
-        "answer": "投資助言ではなく情報整理として、データ遅延、根拠、免責、利用者権限を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage FreqAI Trade (kfreqai)",
-    "slug": "kfreqai",
-    "category": "finance",
-    "featured": true,
-    "summary": "Freqtrade・FreqAIを土台に、暗号資産戦略の検証と自動取引を行うAIトレーディングシステムです。",
-    "description": "戦略生成、バックテスト、リスク管理、取引記録を一つの運用にまとめます。AIと相談しながら戦略を改善し、数字で検証するバイブトレーディングの実践プロジェクトです。",
-    "license": "GPL-3.0-or-later",
-    "japaneseStatus": "日本語LP、ダッシュボード、運用記事に対応。",
-    "officialUrl": "https://kfreqai.exbridge.jp/kfreqai.html",
-    "githubUrl": "https://github.com/katsushi2441/kfreqai",
-    "lpUrl": "https://kfreqai.exbridge.jp/kfreqai.html",
-    "demoUrl": "https://kurage.exbridge.jp/kfreqai.php?view=summary",
-    "useCases": [
-      {
-        "text": "暗号資産戦略のバックテスト"
-      },
-      {
-        "text": "FreqAIによるシグナル生成"
-      },
-      {
-        "text": "自動取引と運用記録"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kfreqai OSS"
-      },
-      {
-        "text": "Freqtrade FreqAI 日本語"
-      },
-      {
-        "text": "暗号資産 AI 自動取引"
-      }
-    ],
-    "sourceLpName": "Kurage Freq AI Trade — 暗号資産バイブトレーディング",
-    "faqs": [
-      {
-        "question": "Kurage FreqAI Trade (kfreqai)は自社向けにカスタマイズできますか？",
-        "answer": "取引所、対象ペア、戦略、特徴量、リスク制限、Brain接続、レポートを変更できます。"
-      },
-      {
-        "question": "Kurage FreqAI Trade (kfreqai)の導入前に何を確認すべきですか？",
-        "answer": "バックテスト、ペーパートレード、損失上限、API権限を段階的に確認してから実資金へ移行します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage FX AI Trade (kfxai)",
-    "slug": "kfxai",
-    "category": "finance",
-    "featured": true,
-    "summary": "OANDA向けの取引ボディと差し替え可能なAI判断Brainを組み合わせるFX自動取引システムです。",
-    "description": "市場データ、戦略、リスク制御、注文処理を担うOSSボディと、判断だけを返す外部Brainを分離しています。戦略をAIと相談し、検証結果を見ながら改善できます。",
-    "license": "GPL-3.0-or-later",
-    "japaneseStatus": "日本語LP、ダッシュボード、運用記事に対応。",
-    "officialUrl": "https://kfxai.exbridge.jp/kfxai.html",
-    "githubUrl": "https://github.com/katsushi2441/kfxai",
-    "lpUrl": "https://kfxai.exbridge.jp/kfxai.html",
-    "demoUrl": "https://kurage.exbridge.jp/kfxai.php",
-    "useCases": [
-      {
-        "text": "FX戦略の検証"
-      },
-      {
-        "text": "OANDA API自動取引"
-      },
-      {
-        "text": "外部AI Brainとの判断分離"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kfxai OSS"
-      },
-      {
-        "text": "OANDA FX 自動取引"
-      },
-      {
-        "text": "FX AI バイブトレーディング"
-      }
-    ],
-    "sourceLpName": "Kurage FX AI Trade — FXバイブトレーディング",
-    "faqs": [
-      {
-        "question": "Kurage FX AI Trade (kfxai)は自社向けにカスタマイズできますか？",
-        "answer": "通貨ペア、時間足、戦略、損失上限、OANDA環境、Brain接続を変更できます。"
-      },
-      {
-        "question": "Kurage FX AI Trade (kfxai)の導入前に何を確認すべきですか？",
-        "answer": "Practice環境、バックテスト、注文数量、損切り、API権限を確認してから本番へ移行します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage FX Brain (kfxbrain)",
-    "slug": "kfxbrain",
-    "category": "finance",
-    "featured": true,
-    "summary": "複数の金融AI OSSを統合し、FX分析、討論、リスク評価、売買判断を返すAPIです。",
-    "description": "TradingAgents、FinGPT、FinRobotなどの知見を参照し、FX向け判断機能をAPI化しています。ブローカー認証や注文執行を持たないため、取引ボディと分離して利用できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語の入力、説明、Workbenchに対応。",
-    "officialUrl": "https://kfxbrain.exbridge.jp/kfxbrain.html",
-    "githubUrl": "https://github.com/katsushi2441/kfxbrain",
-    "lpUrl": "https://kfxbrain.exbridge.jp/kfxbrain.html",
-    "demoUrl": "https://kurage.exbridge.jp/kfxbrain.php",
-    "useCases": [
-      {
-        "text": "FX市場分析"
-      },
-      {
-        "text": "マルチエージェント討論"
-      },
-      {
-        "text": "取引前リスク判定"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kfxbrain OSS"
-      },
-      {
-        "text": "FX AI 判断 API"
-      },
-      {
-        "text": "TradingAgents FX"
-      }
-    ],
-    "sourceLpName": "Kurage FX Brain — OSSトレーディング知能API",
-    "faqs": [
-      {
-        "question": "Kurage FX Brain (kfxbrain)は自社向けにカスタマイズできますか？",
-        "answer": "判断スキル、利用モデル、データ入力、リスク基準、x402課金を変更できます。"
-      },
-      {
-        "question": "Kurage FX Brain (kfxbrain)の導入前に何を確認すべきですか？",
-        "answer": "判断APIと注文執行を分離し、データ時刻、損失上限、障害時の既定動作を決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage GEO",
-    "slug": "kgeo",
-    "category": "marketing",
-    "featured": true,
-    "summary": "Webサイトを診断し、AI検索で引用・推薦されやすくする改善案を提示する日本語GEO監査システムです。",
-    "description": "ページ構造、回答性、根拠、構造化データ、クロール導線を確認し、SEOに加えてAEO・GEOの改善項目を整理します。診断基準とレポートを業種別に変更できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語サイト診断と日本語レポートに対応。",
-    "officialUrl": "https://kgeo.exbridge.jp/kgeo.html",
-    "githubUrl": "https://github.com/katsushi2441/kgeo",
-    "lpUrl": "https://kgeo.exbridge.jp/kgeo.html",
-    "demoUrl": "https://kurage.exbridge.jp/kgeo.php",
-    "useCases": [
-      {
-        "text": "GEO・AEO監査"
-      },
-      {
-        "text": "AI検索向けコンテンツ改善"
-      },
-      {
-        "text": "構造化データと回答性の確認"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage GEO OSS"
-      },
-      {
-        "text": "GEO 対策 日本語"
-      },
-      {
-        "text": "AI検索 サイト診断"
-      }
-    ],
-    "sourceLpName": "Kurage GEO — AI検索に見つけてもらえるサイトへ",
-    "faqs": [
-      {
-        "question": "Kurage GEOは自社向けにカスタマイズできますか？",
-        "answer": "診断項目、採点、業界別基準、レポート、定期監視、改善ジョブ連携を変更できます。"
-      },
-      {
-        "question": "Kurage GEOの導入前に何を確認すべきですか？",
-        "answer": "対象サイト、重要キーワード、想定質問、競合、計測指標を決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Montage",
-    "slug": "kmontage",
-    "category": "media",
-    "featured": true,
-    "summary": "XやYouTubeの参照動画を分析し、要点抽出から解説ショート動画の公開まで行う動画パイプラインです。",
-    "description": "参照URLから内容を取得し、要点、台本、音声、画像、字幕を組み立ててKurage形式の短い解説動画へ変換します。用途に応じて尺や出演キャラクターを変更できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語台本、音声、字幕、管理画面に対応。",
-    "officialUrl": "https://kmontage.exbridge.jp/kmontage.html",
-    "githubUrl": "https://github.com/katsushi2441/kmontage",
-    "lpUrl": "https://kmontage.exbridge.jp/kmontage.html",
-    "demoUrl": "https://kurage.exbridge.jp/kmontage.php",
-    "useCases": [
-      {
-        "text": "参照動画の要点解説"
-      },
-      {
-        "text": "ショート動画生成"
-      },
-      {
-        "text": "字幕・ナレーション付き動画"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage Montage OSS"
-      },
-      {
-        "text": "URL ショート動画 生成"
-      },
-      {
-        "text": "YouTube X 解説動画"
-      }
-    ],
-    "sourceLpName": "Kurage Montage — URLから解説ショート動画",
-    "faqs": [
-      {
-        "question": "Kurage Montageは自社向けにカスタマイズできますか？",
-        "answer": "動画尺、台本、音声、字幕、画像、ブランド、公開先を変更できます。"
-      },
-      {
-        "question": "Kurage Montageの導入前に何を確認すべきですか？",
-        "answer": "参照動画の利用条件、引用範囲、生成素材の権利、公開前確認を設計します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Stock Brain (ksbrain)",
-    "slug": "ksbrain",
-    "category": "finance",
-    "featured": false,
-    "summary": "根拠を追跡できる日本株・米国株の市場インテリジェンスをAIエージェントへ返すAPIです。",
-    "description": "銘柄情報、ニュース、市場データを根拠付きで整理し、判断材料を構造化して返します。取引実行ではなく、分析と根拠の追跡に重点を置く知能層です。",
-    "license": "Apache-2.0",
-    "japaneseStatus": "日本語入力、日本語レポート、Workbenchに対応。",
-    "officialUrl": "https://ksbrain.exbridge.jp/ksbrain.html",
-    "githubUrl": "https://github.com/katsushi2441/ksbrain",
-    "lpUrl": "https://ksbrain.exbridge.jp/ksbrain.html",
-    "demoUrl": "https://kurage.exbridge.jp/ksbrain.php",
-    "useCases": [
-      {
-        "text": "日本株・米国株の調査"
-      },
-      {
-        "text": "根拠リンク付き市場分析"
-      },
-      {
-        "text": "投資エージェント向けAPI"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "ksbrain OSS"
-      },
-      {
-        "text": "日本株 AI API"
-      },
-      {
-        "text": "根拠付き 株式分析"
-      }
-    ],
-    "sourceLpName": "Kurage Stock Brain — Evidence-first Equity Intelligence",
-    "faqs": [
-      {
-        "question": "Kurage Stock Brain (ksbrain)は自社向けにカスタマイズできますか？",
-        "answer": "対象市場、データ源、分析項目、根拠保存、モデル、課金方式を変更できます。"
-      },
-      {
-        "question": "Kurage Stock Brain (ksbrain)の導入前に何を確認すべきですか？",
-        "answer": "データの取得時刻、出典、欠損時の扱い、投資助言との区分を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage TradingAgents (ktajp)",
-    "slug": "ktajp",
-    "category": "finance",
-    "featured": true,
-    "summary": "複数のAIエージェントが日本株などを分析し、利用者ごとのレポートを提供するWebアプリケーションです。",
-    "description": "調査役、分析役、リスク役などのエージェントが議論し、ウォッチリストごとの市場レポートを生成します。Xログイン、利用者管理、分析課金を含むサービス層です。",
-    "license": "ライセンス未設定（公開リポジトリ）",
-    "japaneseStatus": "日本語UIと日本語分析レポートに対応。",
-    "officialUrl": "https://tajp.exbridge.jp/tajp.html",
-    "githubUrl": "https://github.com/katsushi2441/ktajp",
-    "lpUrl": "https://tajp.exbridge.jp/tajp.html",
-    "demoUrl": "https://kurage.exbridge.jp/ktajp.php",
-    "useCases": [
-      {
-        "text": "ウォッチリスト分析"
-      },
-      {
-        "text": "マルチエージェント投資調査"
-      },
-      {
-        "text": "利用者別の分析履歴"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "ktajp"
-      },
-      {
-        "text": "TradingAgents 日本語"
-      },
-      {
-        "text": "AI 株式分析 マルチエージェント"
-      }
-    ],
-    "sourceLpName": "Kurage TradingAgents — 専属AIアナリスト",
-    "faqs": [
-      {
-        "question": "Kurage TradingAgents (ktajp)は自社向けにカスタマイズできますか？",
-        "answer": "対象市場、エージェント役割、レポート、ログイン、決済、利用上限を変更できます。"
-      },
-      {
-        "question": "Kurage TradingAgents (ktajp)の導入前に何を確認すべきですか？",
-        "answer": "市場データ契約、分析コスト、利用者管理、免責、保存する履歴を決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "TradingAgents-JP",
-    "slug": "tradingagents-jp",
-    "category": "finance",
-    "featured": false,
-    "summary": "監査可能な日本株マルチエージェント分析を検証する、Apache-2.0のMVP実装です。",
-    "description": "複数の分析エージェントが役割分担し、入力、根拠、議論、最終判断を追跡できる形で日本株分析を行います。ktajpの分析コアを検証する公開プロジェクトです。",
-    "license": "Apache-2.0",
-    "japaneseStatus": "日本株向けの日本語分析に対応。",
-    "officialUrl": "https://tajp.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/TradingAgents-JP",
-    "lpUrl": "https://tajp.exbridge.jp/",
-    "useCases": [
-      {
-        "text": "日本株のマルチエージェント分析"
-      },
-      {
-        "text": "分析根拠と議論の監査"
-      },
-      {
-        "text": "TradingAgentsの導入検証"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "TradingAgents-JP OSS"
-      },
-      {
-        "text": "TradingAgents 日本株"
-      },
-      {
-        "text": "マルチエージェント 投資分析"
-      }
-    ],
-    "sourceLpName": "TradingAgents-JP — 日本株マルチエージェント分析",
-    "faqs": [
-      {
-        "question": "TradingAgents-JPは自社向けにカスタマイズできますか？",
-        "answer": "エージェント構成、対象銘柄、データ源、議論手順、出力形式を変更できます。"
-      },
-      {
-        "question": "TradingAgents-JPの導入前に何を確認すべきですか？",
-        "answer": "利用する市場データ、分析時点、モデルコスト、監査ログ、免責を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage URL2GPTResearcher",
-    "slug": "kurl2gr",
-    "category": "marketing",
-    "featured": false,
-    "summary": "URLを起点に深掘り調査を行い、止まったサイトへ継続的な新着コンテンツを供給するシステムです。",
-    "description": "既存ページのテーマを読み取り、GPT Researcher型の調査フローで関連情報と出典を集め、更新記事へまとめます。調査テーマと公開先をサイトごとに変更できます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語調査、日本語記事、日本語UIに対応。",
-    "officialUrl": "https://kurl2gr.exbridge.jp/kurl2gr.html",
-    "githubUrl": "https://github.com/katsushi2441/kurl2gr",
-    "lpUrl": "https://kurl2gr.exbridge.jp/kurl2gr.html",
-    "demoUrl": "https://kurage.exbridge.jp/kurl2gr.php",
-    "useCases": [
-      {
-        "text": "既存サイトの調査記事"
-      },
-      {
-        "text": "出典付きコンテンツ生成"
-      },
-      {
-        "text": "更新停止サイトの再活性化"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kurl2gr OSS"
-      },
-      {
-        "text": "URL GPT Researcher"
-      },
-      {
-        "text": "サイト 記事 自動生成"
-      }
-    ],
-    "sourceLpName": "Kurage URL2GPTResearcher — 止まったサイトに新着を",
-    "faqs": [
-      {
-        "question": "Kurage URL2GPTResearcherは自社向けにカスタマイズできますか？",
-        "answer": "調査範囲、情報源、記事構成、承認、CMS連携、更新頻度を変更できます。"
-      },
-      {
-        "question": "Kurage URL2GPTResearcherの導入前に何を確認すべきですか？",
-        "answer": "対象サイト、引用ルール、信頼する情報源、重複防止、公開承認を決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage AI VTuber Runtime",
-    "slug": "kvtuber",
-    "category": "media",
-    "featured": true,
-    "summary": "台本・自律会話・TTS・リップシンク・配信を扱うAI VTuberランタイムです。",
-    "description": "アバター表示、音声合成、口パク、台本進行、コメント反応、YouTube Live連携を組み合わせ、AIキャラクターによる動画や配信を構築します。",
-    "license": "MIT",
-    "japaneseStatus": "日本語台本、音声、配信UIに対応。",
-    "officialUrl": "https://kvtuber.exbridge.jp/kvtuber.html",
-    "githubUrl": "https://github.com/katsushi2441/kvtuber",
-    "lpUrl": "https://kvtuber.exbridge.jp/kvtuber.html",
-    "demoUrl": "https://kurage.exbridge.jp/kuragev.php",
-    "useCases": [
-      {
-        "text": "AI VTuber配信"
-      },
-      {
-        "text": "台本同期アバター動画"
-      },
-      {
-        "text": "TTS・リップシンク"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "kvtuber OSS"
-      },
-      {
-        "text": "AI VTuber 自作"
-      },
-      {
-        "text": "VRM TTS リップシンク"
-      }
-    ],
-    "sourceLpName": "Kurage AI VTuber — AIの仕事をするVTuber",
-    "faqs": [
-      {
-        "question": "Kurage AI VTuber Runtimeは自社向けにカスタマイズできますか？",
-        "answer": "キャラクター、VRM、音声、表情、台本、コメント反応、配信画面を変更できます。"
-      },
-      {
-        "question": "Kurage AI VTuber Runtimeの導入前に何を確認すべきですか？",
-        "answer": "モデルと音声の利用権、配信先API、モデレーション、緊急停止を設計します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Zabbix",
-    "slug": "kzabbix",
-    "category": "monitoring",
-    "featured": true,
-    "summary": "Zabbix障害をAIが調査し、証拠付きレポートと運用ブログへまとめるインシデント対応システムです。",
-    "description": "Zabbixのイベントを入口に、メトリクス、ログ、サービス状態を読み取り、警告と実害を分けた調査レポートを生成します。読み取りと変更操作を分離した運用を想定します。",
-    "license": "ライセンス未設定（公開リポジトリ）",
-    "japaneseStatus": "日本語の障害調査、通知、運用レポートに対応。",
-    "officialUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
-    "githubUrl": "https://github.com/katsushi2441/kzabbix",
-    "lpUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
-    "demoUrl": "https://kurage.exbridge.jp/zabbix/",
-    "useCases": [
-      {
-        "text": "Zabbix障害の一次調査"
-      },
-      {
-        "text": "証拠付きインシデントレポート"
-      },
-      {
-        "text": "運用ナレッジの蓄積"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage Zabbix OSS"
-      },
-      {
-        "text": "Zabbix AI 障害調査"
-      },
-      {
-        "text": "監視 レポート 自動化"
-      }
-    ],
-    "sourceLpName": "Kurage Zabbix — 障害を見つけて調べて報告",
-    "faqs": [
-      {
-        "question": "Kurage Zabbixは自社向けにカスタマイズできますか？",
-        "answer": "監視項目、調査コマンド、証拠、通知先、承認、レポート形式を変更できます。"
-      },
-      {
-        "question": "Kurage Zabbixの導入前に何を確認すべきですか？",
-        "answer": "AIには読み取り権限を基本とし、再起動や設定変更は人の承認を必須にします。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Short Video Generator",
-    "slug": "kurage",
-    "category": "media",
-    "featured": true,
-    "summary": "X投稿などから台本、画像、音声、字幕を生成し、Kurage形式のショート動画へまとめるシステムです。",
-    "description": "入力コンテンツを取得し、LLMで台本を作り、画像生成、音声合成、HyperFramesレンダリングを通して短い動画を生成・公開します。Kurage動画基盤の中核です。",
-    "license": "MIT",
-    "japaneseStatus": "日本語台本、音声、字幕、管理UIに対応。",
-    "officialUrl": "https://kurage.exbridge.jp/",
-    "githubUrl": "https://github.com/katsushi2441/kurage",
-    "lpUrl": "https://kurage.exbridge.jp/",
-    "demoUrl": "https://kurage.exbridge.jp/kuragev.php",
-    "useCases": [
-      {
-        "text": "SNS投稿の動画化"
-      },
-      {
-        "text": "AI解説ショート動画"
-      },
-      {
-        "text": "画像・音声・字幕の自動生成"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Kurage 動画生成 OSS"
-      },
-      {
-        "text": "AI ショート動画 自動生成"
-      },
-      {
-        "text": "HyperFrames TTS 字幕"
-      }
-    ],
-    "sourceLpName": "Kurage Project — AI Products & Open Source Ecosystem",
-    "faqs": [
-      {
-        "question": "Kurage Short Video Generatorは自社向けにカスタマイズできますか？",
-        "answer": "入力元、台本、キャラクター、画像、音声、字幕、動画尺、公開先を変更できます。"
-      },
-      {
-        "question": "Kurage Short Video Generatorの導入前に何を確認すべきですか？",
-        "answer": "元コンテンツと生成素材の権利、事実確認、公開先規約、生成失敗時の扱いを決めます。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "NOFX Japanese Community Edition",
-    "slug": "nofx",
-    "category": "finance",
-    "featured": true,
-    "summary": "株式、商品、FX、暗号資産を扱うAI取引ターミナルNOFXの日本語コミュニティ版です。",
-    "description": "本家NOFXを日本語化し、kcbrainを判断APIとして選択できる構成とMEXCペーパートレーダーを追加した検証版です。公開フォークとして本家との差分を管理します。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "日本語コミュニティ版。",
-    "officialUrl": "https://nofx.exbridge.jp/nofx.html",
-    "githubUrl": "https://github.com/katsushi2441/nofx",
-    "lpUrl": "https://nofx.exbridge.jp/nofx.html",
-    "useCases": [
-      {
-        "text": "AI取引ターミナルの日本語導入"
-      },
-      {
-        "text": "kcbrainとの接続"
-      },
-      {
-        "text": "MEXCペーパートレード"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "NOFX 日本語"
-      },
-      {
-        "text": "NOFX kcbrain"
-      },
-      {
-        "text": "AI 自動取引 OSS"
-      }
-    ],
-    "sourceLpName": "NOFX 日本語コミュニティ版",
-    "faqs": [
-      {
-        "question": "NOFX Japanese Community Editionは自社向けにカスタマイズできますか？",
-        "answer": "日本語UI、判断プロバイダー、ペーパートレード、対象市場、リスク設定を変更できます。"
-      },
-      {
-        "question": "NOFX Japanese Community Editionの導入前に何を確認すべきですか？",
-        "answer": "本家との差分、AGPL条件、取引所API権限、ペーパーテスト、損失上限を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "URL2AI",
-    "slug": "url2ai",
-    "category": "cms",
-    "featured": false,
-    "summary": "URLを解析し、考察、物語、討論、歌詞など複数形式のAIコンテンツへ変換するメディアエンジンです。",
-    "description": "WebページやSNS URLから内容を取得し、用途ごとの生成画面と公開フローへ渡します。URL2Pub、URL2Brain、OSS Timelineなどを含むURL起点コンテンツ群の基盤です。",
-    "license": "MIT",
-    "japaneseStatus": "日本語UIと日本語コンテンツ生成に対応。",
-    "officialUrl": "https://aiknowledgecms.exbridge.jp/url2ai.html",
-    "githubUrl": "https://github.com/katsushi2441/url2ai",
-    "lpUrl": "https://aiknowledgecms.exbridge.jp/url2ai.html",
-    "demoUrl": "https://aiknowledgecms.exbridge.jp/knowradar.php",
-    "useCases": [
-      {
-        "text": "URL内容の分析"
-      },
-      {
-        "text": "複数形式のAIコンテンツ生成"
-      },
-      {
-        "text": "公開ワークフローの共通基盤"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "URL2AI OSS"
-      },
-      {
-        "text": "URL AI コンテンツ生成"
-      },
-      {
-        "text": "Webページ 要約 考察"
-      }
-    ],
-    "sourceLpName": "URL2AI — URL起点のAIコンテンツエンジン",
-    "faqs": [
-      {
-        "question": "URL2AIは自社向けにカスタマイズできますか？",
-        "answer": "入力URL、抽出方式、生成形式、LLM、保存先、公開先を変更できます。"
-      },
-      {
-        "question": "URL2AIの導入前に何を確認すべきですか？",
-        "answer": "取得先の規約、引用範囲、事実確認、個人情報、公開承認を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage URL2AI Brain",
-    "slug": "url2brain",
-    "category": "marketing",
-    "featured": true,
-    "summary": "URL解析、告知文、ブログ記事、実投稿をAPIとして提供するURL2AI Publisherの知能層です。",
-    "description": "URLから本文を取得し、告知文と記事を生成して、必要に応じて媒体へ投稿します。Web版とAIエージェント向けAPIが同じBrainを共有し、x402課金にも対応します。",
-    "license": "MIT",
-    "japaneseStatus": "日本語のURL解析、告知文、記事生成に対応。",
-    "officialUrl": "https://url2brain.exbridge.jp/url2brain.html",
-    "githubUrl": "https://github.com/katsushi2441/url2brain",
-    "lpUrl": "https://url2brain.exbridge.jp/url2brain.html",
-    "demoUrl": "https://url2ai.exbridge.jp/url2pub.html",
-    "useCases": [
-      {
-        "text": "URL解析API"
-      },
-      {
-        "text": "告知文・ブログ記事生成"
-      },
-      {
-        "text": "x402従量課金AI Agent"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "url2brain OSS"
-      },
-      {
-        "text": "URL 記事生成 API"
-      },
-      {
-        "text": "x402 AI Agent コンテンツ"
-      }
-    ],
-    "sourceLpName": "Kurage URL2AI Brain — URL解析・記事生成・実投稿API",
-    "faqs": [
-      {
-        "question": "Kurage URL2AI Brainは自社向けにカスタマイズできますか？",
-        "answer": "LLM、プロンプト、出力形式、投稿媒体、課金、利用制限を変更できます。"
-      },
-      {
-        "question": "Kurage URL2AI Brainの導入前に何を確認すべきですか？",
-        "answer": "取得可能なURL、投稿権限、生成コスト、重複防止、媒体ごとの規約を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage URL2AI Publisher",
-    "slug": "url2pub",
-    "category": "marketing",
-    "featured": true,
-    "summary": "URLを貼ると告知文と記事を生成し、複数メディアへ配信するPHP製の公開フロントエンドです。",
-    "description": "URL2Brainを呼び出し、Bluesky、はてな、AIxSNS、Bluditなどへ告知と記事を展開します。Xログイン、ウォレット接続、利用特典などの配信導線も組み込めます。",
-    "license": "MIT",
-    "japaneseStatus": "日本語UI、告知文、記事、配信結果表示に対応。",
-    "officialUrl": "https://url2ai.exbridge.jp/url2pub.html",
-    "githubUrl": "https://github.com/katsushi2441/url2pub",
-    "lpUrl": "https://url2ai.exbridge.jp/url2pub.html",
-    "useCases": [
-      {
-        "text": "製品・記事の一括告知"
-      },
-      {
-        "text": "ブログとSNSへの複数媒体配信"
-      },
-      {
-        "text": "URL投稿キャンペーン"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "URL2Pub OSS"
-      },
-      {
-        "text": "URL 複数SNS 投稿"
-      },
-      {
-        "text": "AI 記事 告知 自動配信"
-      }
-    ],
-    "sourceLpName": "Kurage URL2AI Publisher — URLから5メディアへ配信",
-    "faqs": [
-      {
-        "question": "Kurage URL2AI Publisherは自社向けにカスタマイズできますか？",
-        "answer": "配信先、ログイン、投稿文、記事形式、承認、ウォレット特典を変更できます。"
-      },
-      {
-        "question": "Kurage URL2AI Publisherの導入前に何を確認すべきですか？",
-        "answer": "各媒体の認証、投稿上限、失敗時の再実行、重複投稿防止を確認します。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage AI Meishi Analysis",
-    "slug": "kaima",
-    "category": "crm",
-    "featured": false,
-    "summary": "スマホで名刺を撮るとAIが12項目を読み取って下書きし、人が承認した分だけ台帳へ入る名刺管理システムです。",
-    "description": "名刺をスマホで撮って投げると、AIが会社・氏名・部署・役職・電話・メール・住所など12項目を読み取り、下書きとして登録します。台帳に書き込めるのは人が承認したときだけで、AIは下書きの作成しかできません。氏名と会社の表記ゆれを吸収する名寄せ、役職が変わったときの変遷履歴、「誰がいつどこで交換したか」の接点記録を持ちます。PHPとSQLiteの1ファイル構成で、共有レンタルサーバーで動きます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kaima",
-    "githubUrl": "https://github.com/katsushi2441/kaima",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-19T05:44:47Z",
-    "githubPushedAt": "2026-08-19T06:02:05Z",
-    "useCases": [
-      {
-        "text": "名刺をスマホで撮って台帳にする"
-      },
-      {
-        "text": "名寄せして同一人物をまとめる"
-      },
-      {
-        "text": "役職の変遷を履歴で追う"
-      },
-      {
-        "text": "この会社を誰が知っているかを調べる"
-      },
-      {
-        "text": "名刺情報をCSVで書き出す"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "名刺管理 買い切り"
-      },
-      {
-        "text": "Sansan 代替"
-      },
-      {
-        "text": "名刺 OCR 自社サーバー"
-      },
-      {
-        "text": "名刺管理 OSS"
-      },
-      {
-        "text": "AI 名刺 読み取り"
-      },
-      {
-        "text": "名刺 台帳 PHP"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "AIが台帳を直接書き換えることはありますか？",
-        "answer": "ありません。AIができるのは下書きの作成までで、台帳への反映は人が承認したときだけです。ソース内の宣言表が全ての入口を裁いています。"
-      },
-      {
-        "question": "読み取りの間違いはどう防いでいますか？",
-        "answer": "AIに自己採点させず、プログラムが機械的に検証します。メールアドレスは形式に加えてドメインのDNS実在確認まで行い、それらしい誤読を警告します。"
-      },
-      {
-        "question": "名刺画像はどこに置かれますか？",
-        "answer": "自社のサーバー内です。個人情報として扱い、ログイン済みのセッションにだけ配信します。外部のサービスへ送りません。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
-    "sourceLpName": "AI名刺解析・名刺台帳（Kurage AI Meishi Analysis）",
-    "demoUrl": "https://proto.exbridge.jp/kaima/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580"
-  },
-  {
-    "name": "Kurage Memo",
-    "slug": "kmemo",
-    "category": "knowledge",
-    "featured": false,
-    "summary": "本文の1行目がそのままタイトルになる、1ファイルPHPのメモ帳です。",
-    "description": "タイトル欄も保存ボタンもありません。書いた1行目がタイトルになり、入力した端から自動保存します。上の検索欄に打つと全メモを即座に絞り込みます。設定ファイルに1行足すだけで利用者を増やせ、メモの保存先は利用者ごとに完全に別ファイルになります。データベースは不要で、FTPでファイルを置くだけで動きます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kmemo",
-    "githubUrl": "https://github.com/katsushi2441/kmemo",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-24T20:02:16Z",
-    "githubPushedAt": "2026-08-24T20:02:20Z",
-    "useCases": [
-      {
-        "text": "個人用のメモをレンタルサーバーに置く"
-      },
-      {
-        "text": "家族や社内で1台を共用する"
-      },
-      {
-        "text": "全文検索でメモを探す"
-      },
-      {
-        "text": "バックアップZIPで手元に控える"
-      },
-      {
-        "text": "スマホのブラウザから書く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Simplenote 代替"
-      },
-      {
-        "text": "メモ 自社サーバー"
-      },
-      {
-        "text": "1ファイル PHP メモ"
-      },
-      {
-        "text": "メモ 買い切り"
-      },
-      {
-        "text": "メモアプリ OSS"
-      },
-      {
-        "text": "ノート セルフホスト"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "データベースは必要ですか？",
-        "answer": "不要です。JSONファイルとflockで保存します。PHPが動くレンタルサーバーにファイルを置くだけで動きます。"
-      },
-      {
-        "question": "複数人で使えますか？",
-        "answer": "使えます。設定ファイルに利用者を足すと、保存先がその人専用のファイルに分かれます。他人のメモが混ざる経路が構造的にありません。"
-      },
-      {
-        "question": "バックアップはどうしますか？",
-        "answer": "画面からZIPで書き出せます。中にJSONとCSVと復元手順が入っているので、他のツールへ移すこともできます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
-    "sourceLpName": "シンプルメモ（Kurage Memo）",
-    "demoUrl": "https://proto.exbridge.jp/kmemo/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c"
-  },
-  {
-    "name": "Kurage Kintai",
-    "slug": "kkintai",
-    "category": "hr",
-    "featured": false,
-    "summary": "タブレット1台を顔認証タイムレコーダーにする、丸めない台帳の勤怠システムです。",
-    "description": "タブレットのカメラに顔を向けると出退勤が記録されます。顔の照合はサーバー側で行い、打刻の時刻は丸めずそのまま台帳に残します。同意の取得と削除の導線を最初から持ち、給与ソフトへ渡すCSVも出力できます。PHPとSQLiteで動き、専用の打刻機を買わずに始められます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kkintai",
-    "githubUrl": "https://github.com/katsushi2441/kkintai",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-19T18:23:51Z",
-    "githubPushedAt": "2026-08-19T18:24:03Z",
-    "useCases": [
-      {
-        "text": "タブレット1台で出退勤を記録する"
-      },
-      {
-        "text": "打刻を丸めずに台帳へ残す"
-      },
-      {
-        "text": "給与ソフト向けのCSVを出す"
-      },
-      {
-        "text": "顔データの同意と削除を管理する"
-      },
-      {
-        "text": "工場や店舗のようにPCが無い現場で使う"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "勤怠管理 買い切り"
-      },
-      {
-        "text": "顔認証 打刻"
-      },
-      {
-        "text": "KING OF TIME 代替"
-      },
-      {
-        "text": "勤怠 OSS 自社サーバー"
-      },
-      {
-        "text": "タイムカード 電子化"
-      },
-      {
-        "text": "勤怠 PHP"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "顔のデータはどこで照合しますか？",
-        "answer": "サーバー側です。端末に顔データを残さない設計で、同意の取得と削除の導線を持っています。"
-      },
-      {
-        "question": "打刻の時刻は丸められますか？",
-        "answer": "丸めません。実際に打刻された時刻をそのまま台帳に残します。丸めが必要な場合は集計側で行います。"
-      },
-      {
-        "question": "専用の打刻機が必要ですか？",
-        "answer": "不要です。カメラのあるタブレットかPCのブラウザで動きます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
-    "sourceLpName": "顔打刻つき勤怠システム（Kurage Kintai）",
-    "demoUrl": "https://proto.exbridge.jp/kkintai/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be"
-  },
-  {
-    "name": "Kurage HR Post",
-    "slug": "khrpost",
-    "category": "hr",
-    "featured": false,
-    "summary": "人ではなく職に記録を紐づけて、業務の属人化を止める職務・目標・引継ぎ管理システムです。",
-    "description": "職務や目標を「人」ではなく「職（ポジション）」に紐づけて記録します。担当者が変わっても、その職に付いていた職責・目標・手順がそのまま残るため、引き継ぎのたびに知識が失われることがなくなります。社員のマスタは外部のJSONを読むだけなので、既存の人事システムと二重管理になりません。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/khrpost",
-    "githubUrl": "https://github.com/katsushi2441/khrpost",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-20T22:24:46Z",
-    "githubPushedAt": "2026-08-20T22:24:49Z",
-    "useCases": [
-      {
-        "text": "職務と職責を職ごとに定義する"
-      },
-      {
-        "text": "目標とタスクを職に紐づける"
-      },
-      {
-        "text": "担当者が変わっても手順を残す"
-      },
-      {
-        "text": "引き継ぎの抜けを防ぐ"
-      },
-      {
-        "text": "既存の社員マスタをそのまま使う"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "引き継ぎ 属人化"
-      },
-      {
-        "text": "職務記述書 管理"
-      },
-      {
-        "text": "目標管理 買い切り"
-      },
-      {
-        "text": "人事 OSS 自社サーバー"
-      },
-      {
-        "text": "業務 標準化 ツール"
-      },
-      {
-        "text": "ポジション管理"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "社員のマスタを二重に持つことになりませんか？",
-        "answer": "なりません。外部のJSONを読むだけの設計なので、既存の人事システムやCSVをそのまま参照できます。"
-      },
-      {
-        "question": "担当者が退職したら記録はどうなりますか？",
-        "answer": "職に紐づいているので残ります。次の担当者はその職の記録をそのまま引き継げます。"
-      },
-      {
-        "question": "評価制度に使えますか？",
-        "answer": "目標とタスクの記録はできますが、評価の点数付けや査定の仕組みは持っていません。必要なら追加で作ります。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
-    "sourceLpName": "職務・目標・引継ぎ管理（Kurage HR Post）",
-    "demoUrl": "https://proto.exbridge.jp/khrpost/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457"
-  },
-  {
-    "name": "Kurage CRM Agent",
-    "slug": "kcrmagent",
-    "category": "crm",
-    "featured": false,
-    "summary": "日報を投げるとAIが顧客記録の下書きを作り、人が承認した分だけ台帳に入るCRMです。",
-    "description": "営業担当者が日報や商談メモを文章のまま投げると、AIが顧客・案件・次のアクションの下書きを作ります。台帳に反映されるのは人が承認したものだけで、AIは宣言した範囲の外には出られません。入力の手間をゼロに近づけながら、記録の正しさは人が担保する設計です。PHPの1ファイル構成で動きます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kcrmagent",
-    "githubUrl": "https://github.com/katsushi2441/kcrmagent",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-19T02:00:15Z",
-    "githubPushedAt": "2026-08-19T02:36:01Z",
-    "useCases": [
-      {
-        "text": "日報から顧客記録を起こす"
-      },
-      {
-        "text": "商談の内容を台帳に残す"
-      },
-      {
-        "text": "次のアクションを取りこぼさない"
-      },
-      {
-        "text": "入力の手間を減らす"
-      },
-      {
-        "text": "承認の記録を監査ログに残す"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "CRM 買い切り"
-      },
-      {
-        "text": "営業日報 自動化"
-      },
-      {
-        "text": "顧客管理 AI"
-      },
-      {
-        "text": "SFA OSS"
-      },
-      {
-        "text": "入力レス CRM"
-      },
-      {
-        "text": "顧客管理 PHP"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "AIが勝手に顧客データを書き換えませんか？",
-        "answer": "書き換えません。AIは下書きの作成までで、台帳への反映は人の承認が必要です。宣言した範囲の外には出られない作りになっています。"
-      },
-      {
-        "question": "どんな文章を投げればいいですか？",
-        "answer": "普段書いている日報や商談メモのままで構いません。形式を決める必要はありません。"
-      },
-      {
-        "question": "既存のCRMから移行できますか？",
-        "answer": "CSVで取り込めます。項目の対応づけは導入時に調整します。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
-    "sourceLpName": "入力ゼロCRM（Kurage CRM Agent）",
-    "demoUrl": "https://proto.exbridge.jp/kcrmagent/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f"
-  },
-  {
-    "name": "Kurage DB Agent",
-    "slug": "kdbagent",
-    "category": "database",
-    "featured": false,
-    "summary": "設定で宣言した表・列・操作だけを、人にもAIエージェントにも同じ制限で許すDB管理ツールです。",
-    "description": "MySQLとSQLiteに対応した1ファイルのデータベース管理ツールです。設定ファイルで「触ってよい表・列・操作」を宣言し、画面から操作する人も、CLIも、HTTP APIも、AIエージェントも、同じ制限を通ります。範囲を決めてから渡せるので、本番のデータベースに直接つなぐ不安を減らせます。Claude Code連携用のスキルを同梱しています。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kdbagent",
-    "githubUrl": "https://github.com/katsushi2441/kdbagent",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-09T08:15:12Z",
-    "githubPushedAt": "2026-08-09T09:09:05Z",
-    "useCases": [
-      {
-        "text": "本番DBを範囲を決めて触らせる"
-      },
-      {
-        "text": "AIエージェントに安全にDBを渡す"
-      },
-      {
-        "text": "CLIとHTTP APIから同じ制限で操作する"
-      },
-      {
-        "text": "phpMyAdminの代わりに使う"
-      },
-      {
-        "text": "操作の記録を残す"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "phpMyAdmin 代替"
-      },
-      {
-        "text": "DB管理 買い切り"
-      },
-      {
-        "text": "MySQL 管理ツール"
-      },
-      {
-        "text": "AI エージェント DB"
-      },
-      {
-        "text": "データベース 権限 制限"
-      },
-      {
-        "text": "SQLite 管理"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "phpMyAdminと何が違いますか？",
-        "answer": "範囲を先に宣言する点です。設定で許した表・列・操作しか通らないので、想定外の操作が構造的にできません。"
-      },
-      {
-        "question": "AIエージェントに使わせても安全ですか？",
-        "answer": "人が使う場合と同じ制限を通ります。宣言した範囲の外は、人でもAIでも実行できません。"
-      },
-      {
-        "question": "どのデータベースに対応していますか？",
-        "answer": "MySQLとSQLiteです。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
-    "sourceLpName": "データベース管理ツール（kdbagent）",
-    "demoUrl": "https://proto.exbridge.jp/kdbagent/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793"
-  },
-  {
-    "name": "Kurage Light ChatBot",
-    "slug": "klchatbot",
-    "category": "support",
-    "featured": false,
-    "summary": "自社の知識を読ませてFAQ・AI接客・社内向けの質問対応に使える1ファイルPHPのチャットボットです。",
-    "description": "自社の文書やFAQを読み込ませ、その範囲で答えるチャットボットです。知識は決まった順序で読み込む設計にしてあり、LLMのキャッシュが効くため応答が速く費用も抑えられます。Webサイトの接客、社内の問い合わせ対応、製品のFAQなどに使えます。PHPの1ファイルで動き、データベースは不要です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/klchatbot",
-    "githubUrl": "https://github.com/katsushi2441/klchatbot",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-15T19:54:52Z",
-    "githubPushedAt": "2026-08-15T19:54:55Z",
-    "useCases": [
-      {
-        "text": "Webサイトに接客チャットを置く"
-      },
-      {
-        "text": "社内の問い合わせに答えさせる"
-      },
-      {
-        "text": "製品FAQを自動応答にする"
-      },
-      {
-        "text": "資料を読ませて社内ChatGPTにする"
-      },
-      {
-        "text": "一次対応だけ自動化する"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "チャットボット 買い切り"
-      },
-      {
-        "text": "社内 ChatGPT"
-      },
-      {
-        "text": "FAQ 自動応答"
-      },
-      {
-        "text": "AI接客 導入"
-      },
-      {
-        "text": "チャットボット PHP"
-      },
-      {
-        "text": "問い合わせ 自動化"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "知識はどうやって読ませますか？",
-        "answer": "テキストやMarkdownのファイルを置くだけです。決まった順序で読み込むので、LLMのキャッシュが効いて応答が速くなります。"
-      },
-      {
-        "question": "どのAIを使いますか？",
-        "answer": "設定で切り替えられます。ローカルのモデルでも、外部のAPIでも動きます。"
-      },
-      {
-        "question": "知識にないことを聞かれたらどうなりますか？",
-        "answer": "分からないと答えるよう設定できます。作り話をさせない運用が前提です。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
-    "sourceLpName": "AIチャットボット（Kurage Light ChatBot）",
-    "demoUrl": "https://proto.exbridge.jp/klchatbot/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8"
-  },
-  {
-    "name": "Kurage BBS",
-    "slug": "kbbs",
-    "category": "forum",
-    "featured": false,
-    "summary": "X認証と自社ドメインのメール確認で、宣伝を許しつつ荒れない1ファイルPHP掲示板です。",
-    "description": "書き込みにXでの認証と、投稿するURLと同じドメインのメールアドレス確認を求めます。この2つで、なりすましと使い捨てアカウントによる荒らしを防ぎながら、宣伝の投稿を許容できます。管理画面には投稿者のXアカウント・URL・メールが並ぶので、そのまま営業リストとして使えます。データベースは不要です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kbbs",
-    "githubUrl": "https://github.com/katsushi2441/kbbs",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-12T12:48:22Z",
-    "githubPushedAt": "2026-08-13T12:10:24Z",
-    "useCases": [
-      {
-        "text": "宣伝を許す掲示板を運営する"
-      },
-      {
-        "text": "なりすましを防ぐ"
-      },
-      {
-        "text": "投稿者の一覧を営業リストにする"
-      },
-      {
-        "text": "コミュニティの窓口を作る"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "掲示板 設置 無料"
-      },
-      {
-        "text": "宣伝OK 掲示板"
-      },
-      {
-        "text": "X認証 掲示板"
-      },
-      {
-        "text": "掲示板 PHP DB不要"
-      },
-      {
-        "text": "コミュニティ 自社サーバー"
-      },
-      {
-        "text": "掲示板 買い切り"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "なぜX認証とメール確認の両方が要るのですか？",
-        "answer": "片方だけでは使い捨てアカウントで荒らせるためです。投稿するURLと同じドメインのメールを確認することで、実在の運営者だけが宣伝できます。"
-      },
-      {
-        "question": "データベースは必要ですか？",
-        "answer": "不要です。ファイルで保存します。"
-      },
-      {
-        "question": "管理画面で何ができますか？",
-        "answer": "投稿の削除に加えて、投稿者のXアカウント・URL・メールの一覧を見られます。営業先の一覧としても使えます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05",
-    "sourceLpName": "宣伝OK掲示板（kbbs）",
-    "demoUrl": "https://kurage.exbridge.jp/kbbs.php",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05"
-  },
-  {
-    "name": "Kurage CalDAV",
-    "slug": "kcaldav",
-    "category": "groupware",
-    "featured": false,
-    "summary": "フレームワークを使わない1ファイルのCalDAVサーバーです。スマホの標準カレンダーと同期できます。",
-    "description": "CalDAVの仕様を1ファイルのPHPで実装したカレンダーサーバーです。ThunderbirdやiPhone、Androidの標準カレンダーアプリからそのまま同期できます。Baikalのような既存のCalDAVサーバーより設置が軽く、共有レンタルサーバーでも動きます。予定を他社のクラウドに預けたくない場合の選択肢になります。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kcaldav",
-    "githubUrl": "https://github.com/katsushi2441/kcaldav",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-09T20:51:04Z",
-    "githubPushedAt": "2026-08-21T02:21:27Z",
-    "useCases": [
-      {
-        "text": "予定を自社サーバーに置く"
-      },
-      {
-        "text": "iPhoneやAndroidの標準カレンダーと同期する"
-      },
-      {
-        "text": "Thunderbirdと同期する"
-      },
-      {
-        "text": "家族や社内で予定を共有する"
-      },
-      {
-        "text": "Googleカレンダーをやめる"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "CalDAV サーバー 構築"
-      },
-      {
-        "text": "カレンダー 自社サーバー"
-      },
-      {
-        "text": "Googleカレンダー 代替"
-      },
-      {
-        "text": "Baikal 代替"
-      },
-      {
-        "text": "予定表 セルフホスト"
-      },
-      {
-        "text": "CalDAV PHP"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "どの端末から使えますか？",
-        "answer": "CalDAVに対応したアプリなら使えます。iPhoneとAndroidの標準カレンダー、Thunderbirdで動作を確認しています。"
-      },
-      {
-        "question": "データベースは必要ですか？",
-        "answer": "不要です。ファイルで保存します。"
-      },
-      {
-        "question": "Googleカレンダーと同期できますか？",
-        "answer": "双方向の同期は行いません。予定を自社側に持つための仕組みです。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02",
-    "sourceLpName": "カレンダー同期（kcaldav）",
-    "demoUrl": "https://proto.exbridge.jp/kcaldav/kcaldav.php",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02"
-  },
-  {
-    "name": "Kurage Reserve",
-    "slug": "kreserve",
-    "category": "booking",
-    "featured": false,
-    "summary": "ダブルブッキングを排他ロックで防ぐ、サロン・クリニック・士業向けの予約受付システムです。",
-    "description": "予約ページと管理画面のセットです。同じ時間帯に予約が重ならないよう、判定と書き込みを排他ロックの中で行います。電話での予約受付をやめたい店舗や、少人数で運営している事業所を想定しています。PHPのみで動きデータベースは不要です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kreserve",
-    "githubUrl": "https://github.com/katsushi2441/kreserve",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-09T19:18:07Z",
-    "githubPushedAt": "2026-08-09T19:26:07Z",
-    "useCases": [
-      {
-        "text": "Webから予約を受ける"
-      },
-      {
-        "text": "電話での受付をやめる"
-      },
-      {
-        "text": "ダブルブッキングを防ぐ"
-      },
-      {
-        "text": "予約状況を管理画面で見る"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "予約システム 買い切り"
-      },
-      {
-        "text": "RESERVA 代替"
-      },
-      {
-        "text": "予約 自社サーバー"
-      },
-      {
-        "text": "サロン 予約 システム"
-      },
-      {
-        "text": "予約 PHP DB不要"
-      },
-      {
-        "text": "ダブルブッキング 防止"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "ダブルブッキングはどう防いでいますか？",
-        "answer": "空き状況の判定と予約の書き込みを排他ロックの中で行います。同時に申し込まれても、後の一方は失敗します。"
-      },
-      {
-        "question": "決済はできますか？",
-        "answer": "この製品には決済機能がありません。注文と決済までを一つにしたい場合は Kurage PayLink をご覧ください。"
-      },
-      {
-        "question": "メールは届きますか？",
-        "answer": "設定したメールサーバーから通知を送れます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
-    "sourceLpName": "予約・受付システム（kreserve）",
-    "demoUrl": "https://proto.exbridge.jp/kreserve/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2"
-  },
-  {
-    "name": "Kurage TrackGeo",
-    "slug": "ktrackgeo",
-    "category": "analytics",
-    "featured": false,
-    "summary": "自社サイトへの流入を、AIからの参照も含めて記録するアクセス解析です。",
-    "description": "アクセスログを自社のサーバーに記録し、どこから来たのか、どのページを見たのかを追えるようにします。検索エンジンだけでなく、AIの回答経由での参照も記録の対象にしています。他社の解析サービスに依存せず、生のログを自分で持てる点が特徴です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/ktrackgeo",
-    "githubUrl": "https://github.com/katsushi2441/ktrackgeo",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-07T11:29:59Z",
-    "githubPushedAt": "2026-08-07T11:31:02Z",
-    "useCases": [
-      {
-        "text": "流入元を自社で記録する"
-      },
-      {
-        "text": "AI経由の参照を見つける"
-      },
-      {
-        "text": "ページごとの閲覧を追う"
-      },
-      {
-        "text": "解析データを他社に預けない"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "アクセス解析 自社サーバー"
-      },
-      {
-        "text": "Googleアナリティクス 代替"
-      },
-      {
-        "text": "AI 流入 計測"
-      },
-      {
-        "text": "アクセスログ 解析"
-      },
-      {
-        "text": "解析 買い切り"
-      },
-      {
-        "text": "GEO 計測"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Googleアナリティクスの代わりになりますか？",
-        "answer": "流入元とページ閲覧の記録という基本の部分は代わりになります。広告連携や高度な分析機能はありません。"
-      },
-      {
-        "question": "データはどこに置かれますか？",
-        "answer": "自社のサーバーです。外部へ送信しません。"
-      },
-      {
-        "question": "AI経由の流入はどう分かりますか？",
-        "answer": "参照元と利用者の情報から判別できる範囲を記録します。すべてを識別できるわけではありません。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc",
-    "sourceLpName": "AIアクセス解析（ktrackgeo）＋ VWork教材",
-    "demoUrl": "https://proto.exbridge.jp/ktrackgeo/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc"
-  },
-  {
-    "name": "Kurage Check It",
-    "slug": "kcheckit",
-    "category": "monitoring",
-    "featured": false,
-    "summary": "必要な情報を監視して保存し、変化があったら知らせる仕組みです。RSSやAPIを対象にできます。",
-    "description": "見ておきたいページやRSS、APIを定期的に確認し、内容を保存して、変わったときに通知します。競合のお知らせ、法令や制度の更新、取引先の発表などを人手で見に行く作業をなくすための道具です。記録が残るので、いつ何が変わったかを後から追えます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kcheckit",
-    "githubUrl": "https://github.com/katsushi2441/kcheckit",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-06T23:32:33Z",
-    "githubPushedAt": "2026-08-07T03:16:36Z",
-    "useCases": [
-      {
-        "text": "競合サイトの更新を監視する"
-      },
-      {
-        "text": "制度や法令の変更を見逃さない"
-      },
-      {
-        "text": "RSSをまとめて追う"
-      },
-      {
-        "text": "APIの応答を定期的に記録する"
-      },
-      {
-        "text": "変化があったときだけ知らせる"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "サイト 更新 監視"
-      },
-      {
-        "text": "情報収集 自動化"
-      },
-      {
-        "text": "RSS 監視 通知"
-      },
-      {
-        "text": "ページ 変更 検知"
-      },
-      {
-        "text": "監視 買い切り"
-      },
-      {
-        "text": "情報 監視 PHP"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "どんなものを監視できますか？",
-        "answer": "Webページ、RSS、APIの応答です。ログインが必要なページは設定が要ります。"
-      },
-      {
-        "question": "どのくらいの間隔で確認しますか？",
-        "answer": "設定で決められます。サーバーのcronで動かします。"
-      },
-      {
-        "question": "通知はどこに届きますか？",
-        "answer": "メールのほか、設定で外部の通知先へ送れます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730",
-    "sourceLpName": "情報監視システム（kcheckit）＋ VWork教材",
-    "demoUrl": "https://proto.exbridge.jp/kcheckit/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730"
-  },
-  {
-    "name": "Kurage Billing",
-    "slug": "kbilling",
-    "category": "accounting",
-    "featured": false,
-    "summary": "請求書をPDFで発行し、専用URLをメールで送って銀行振込やPayPalで支払ってもらうシステムです。",
-    "description": "請求書をPDFで作り、支払い用のURLをメールで送ります。受け取った側はそのURLから銀行振込またはPayPalで支払えます。入金の確認までを一つの流れで扱えるので、請求と回収が別々の作業になりません。データベースは不要で、外部のサービスに顧客情報を預けません。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kbilling",
-    "githubUrl": "https://github.com/katsushi2441/kbilling",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-05T11:55:23Z",
-    "githubPushedAt": "2026-08-07T03:16:34Z",
-    "useCases": [
-      {
-        "text": "請求書をPDFで発行する"
-      },
-      {
-        "text": "支払い用URLをメールで送る"
-      },
-      {
-        "text": "銀行振込とPayPalで受け取る"
-      },
-      {
-        "text": "入金の確認まで一つで行う"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "請求書 発行 システム"
-      },
-      {
-        "text": "請求 買い切り"
-      },
-      {
-        "text": "入金確認 自動化"
-      },
-      {
-        "text": "請求書 PDF 自動"
-      },
-      {
-        "text": "請求管理 自社サーバー"
-      },
-      {
-        "text": "集金 システム"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "どの支払い方法に対応していますか？",
-        "answer": "銀行振込とPayPalです。他の決済を追加したい場合はカスタマイズになります。"
-      },
-      {
-        "question": "会計ソフトと連携できますか？",
-        "answer": "CSVで書き出せます。直接の連携は行いません。"
-      },
-      {
-        "question": "Kurage PayLinkとの違いは何ですか？",
-        "answer": "こちらは請求書の発行と集金が中心です。PayLinkは注文の受付から請求・決済までを一つにしたものです。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
-    "sourceLpName": "請求書発行・集金システム（kbilling）＋ VWork教材",
-    "demoUrl": "https://proto.exbridge.jp/kbilling/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6"
-  },
-  {
-    "name": "Kurage PayLink",
-    "slug": "kpaylink",
-    "category": "commerce",
-    "featured": false,
-    "summary": "注文を受けると請求書PDFが発行され、そのまま銀行振込やPayPalで決済まで進むページです。",
-    "description": "決まった商品と金額の注文ページを設定ファイルで作ります。注文が入ると請求書のPDFが発行され、支払い用のURLから銀行振込またはPayPalで決済できます。商品数が少なく、注文から入金までを一つにまとめたい事業に向いています。データベースは不要です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kpaylink",
-    "githubUrl": "https://github.com/katsushi2441/kpaylink",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-05T12:42:13Z",
-    "githubPushedAt": "2026-08-07T03:16:37Z",
-    "useCases": [
-      {
-        "text": "決まった商品の注文ページを作る"
-      },
-      {
-        "text": "注文から請求書発行までを自動にする"
-      },
-      {
-        "text": "銀行振込とPayPalで受け取る"
-      },
-      {
-        "text": "少数の商品を売る"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "注文フォーム 決済"
-      },
-      {
-        "text": "請求書 決済 一体"
-      },
-      {
-        "text": "PayPal 注文ページ"
-      },
-      {
-        "text": "買い切り 決済システム"
-      },
-      {
-        "text": "注文 自社サーバー"
-      },
-      {
-        "text": "決済ページ 作成"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "カートは付いていますか？",
-        "answer": "付いていません。決まった商品と金額を扱う設計です。商品数が多い場合はECのオープンソースが向きます。"
-      },
-      {
-        "question": "どの決済に対応していますか？",
-        "answer": "銀行振込とPayPalです。"
-      },
-      {
-        "question": "Kurage Billingとの違いは何ですか？",
-        "answer": "PayLinkは注文の受付から始まります。Billingは既にある取引に対して請求書を出すものです。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
-    "sourceLpName": "商品注文・請求書・決済ページ（kpaylink）＋ VWork教材",
-    "demoUrl": "https://proto.exbridge.jp/kpaylink/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4"
-  },
-  {
-    "name": "Kurage Send Invoice",
-    "slug": "kinvoice",
-    "category": "accounting",
-    "featured": false,
-    "summary": "領収書のPDFを発行し、ダウンロード用のURLをメールで送るシステムです。",
-    "description": "領収書をPDFで作り、ダウンロードできるURLをメールで送ります。PDFを添付しないため、メールの容量制限や添付ファイルの拒否に引っかかりません。発行の記録が残るので、いつ誰に出したかを後から追えます。データベースは不要です。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kinvoice",
-    "githubUrl": "https://github.com/katsushi2441/kinvoice",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-05T06:21:40Z",
-    "githubPushedAt": "2026-08-07T03:16:33Z",
-    "useCases": [
-      {
-        "text": "領収書をPDFで発行する"
-      },
-      {
-        "text": "ダウンロードURLをメールで送る"
-      },
-      {
-        "text": "発行の記録を残す"
-      },
-      {
-        "text": "添付ファイルの拒否を避ける"
-      },
-      {
-        "text": "レンタルサーバーに置く"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "領収書 発行 システム"
-      },
-      {
-        "text": "領収書 PDF 自動"
-      },
-      {
-        "text": "領収書 メール 送信"
-      },
-      {
-        "text": "買い切り 領収書"
-      },
-      {
-        "text": "領収書 管理 自社"
-      },
-      {
-        "text": "インボイス 領収書"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "なぜPDFを添付しないのですか？",
-        "answer": "添付ファイルは容量制限や受信側の設定で届かないことがあるためです。URLを送る形にすると確実に渡せます。"
-      },
-      {
-        "question": "インボイス制度に対応していますか？",
-        "answer": "必要な項目を記載できます。登録番号などは設定に入れてください。制度の解釈は税理士にご確認ください。"
-      },
-      {
-        "question": "発行の記録は残りますか？",
-        "answer": "残ります。いつ誰に発行したかを一覧で確認できます。"
-      }
-    ],
-    "funnel": "oss",
-    "lpUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0",
-    "sourceLpName": "領収書メール送信システム（kinvoice）＋ VWork教材",
-    "demoUrl": "https://proto.exbridge.jp/kinvoice/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0"
-  },
-  {
-    "name": "Kurage Logo Generator",
-    "slug": "klogogen",
-    "category": "media",
-    "featured": false,
-    "summary": "AIでロゴを生成し、SVG・透過PNG・PDFの形式で書き出せるWebサービスです。",
-    "description": "入力した社名や事業内容からロゴの候補をAIで生成し、SVG・透過PNG・PDFで書き出します。ベクター形式で出せるので、名刺や看板など大きさの違う用途にそのまま使えます。生成した画像から輪郭を取り出す処理を入れており、そのままでは使いにくいAI画像を実用的な形に整えます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/klogogen",
-    "githubUrl": "https://github.com/katsushi2441/klogogen",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-24T20:03:04Z",
-    "githubPushedAt": "2026-08-24T20:03:10Z",
-    "useCases": [
-      {
-        "text": "社名からロゴ案を作る"
-      },
-      {
-        "text": "SVGで書き出して拡大に耐える形にする"
-      },
-      {
-        "text": "透過PNGを資料に使う"
-      },
-      {
-        "text": "印刷用にPDFで渡す"
-      },
-      {
-        "text": "ロゴの案を短時間で複数見る"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "ロゴ 作成 AI"
-      },
-      {
-        "text": "ロゴ SVG 生成"
-      },
-      {
-        "text": "ロゴ 無料 自作"
-      },
-      {
-        "text": "ロゴジェネレーター"
-      },
-      {
-        "text": "透過PNG ロゴ"
-      },
-      {
-        "text": "ロゴ 印刷用 PDF"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "生成したロゴは商用利用できますか？",
-        "answer": "利用条件は生成に使うモデルによります。導入時に使うモデルとその条件を確認してください。"
-      },
-      {
-        "question": "SVGはきれいに出ますか？",
-        "answer": "生成画像から輪郭を取り出して変換します。写実的な絵より、単純な形のロゴのほうがきれいに出ます。"
-      },
-      {
-        "question": "何案くらい出せますか？",
-        "answer": "設定と実行時間しだいです。短時間で複数案を並べて比べる使い方を想定しています。"
-      }
-    ],
-    "funnel": "oss"
-  },
-  {
-    "name": "Kurage Game Master",
-    "slug": "kgm",
-    "category": "media",
-    "featured": false,
-    "summary": "AIがゲームマスターを務める、日本語のソロTRPGです。NarrativeEngine-Pを土台にしています。",
-    "description": "一人で遊べるテーブルトークRPGで、進行役をAIが務めます。物語の生成にNarrativeEngine-Pを使い、日本語で遊べるように手を入れています。複数の利用者が同時に別々の物語を進められるようにしてあり、Webから遊べます。",
-    "license": "MIT",
-    "licenseTier": "osi",
-    "japaneseStatus": "日本語で開発・提供。",
-    "officialUrl": "https://github.com/katsushi2441/kgm",
-    "githubUrl": "https://github.com/katsushi2441/kgm",
-    "stars": 0,
-    "language": null,
-    "githubCreatedAt": "2026-08-24T20:03:11Z",
-    "githubPushedAt": "2026-08-24T20:03:15Z",
-    "useCases": [
-      {
-        "text": "一人でTRPGを遊ぶ"
-      },
-      {
-        "text": "AIに進行役をさせる"
-      },
-      {
-        "text": "日本語で物語を生成する"
-      },
-      {
-        "text": "複数人が別々に遊べるようにする"
-      },
-      {
-        "text": "自社サーバーで運営する"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "ソロ TRPG"
-      },
-      {
-        "text": "AI ゲームマスター"
-      },
-      {
-        "text": "TRPG 一人用"
-      },
-      {
-        "text": "物語 生成 AI"
-      },
-      {
-        "text": "TRPG 日本語 Web"
-      },
-      {
-        "text": "AI 物語 ゲーム"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "何人で遊べますか？",
-        "answer": "一人用です。複数の利用者がそれぞれ別の物語を同時に進められます。"
-      },
-      {
-        "question": "どのAIを使いますか？",
-        "answer": "設定で切り替えられます。ローカルのモデルでも動きます。"
-      },
-      {
-        "question": "元になっているソフトは何ですか？",
-        "answer": "NarrativeEngine-P です。日本語化とマルチユーザー化を加えています。"
-      }
-    ],
-    "funnel": "oss"
-  }
+ {
+  "name": "Frappe Helpdesk",
+  "slug": "frappe-helpdesk",
+  "category": "support",
+  "featured": true,
+  "summary": "問い合わせ、担当者、SLA、ナレッジを管理できるオープンソースのカスタマーサポート基盤です。",
+  "description": "Frappe Framework上で動くヘルプデスクです。Kurageでは日本語検索の問題修正と日本語翻訳を本家へ提出し、日本向け検証版も公開しています。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "日本語翻訳あり。日本語検索修正を本家へ提出済み。",
+  "officialUrl": "https://frappe.io/helpdesk",
+  "githubUrl": "https://github.com/frappe/helpdesk",
+  "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bwIjMyYjMgoTZsNWa0JXY",
+  "brainLabel": "日本語導入・検索修正の手順書を読む",
+  "useCases": [
+   {
+    "text": "問い合わせ管理"
+   },
+   {
+    "text": "SLA・担当者管理"
+   },
+   {
+    "text": "社内外ナレッジ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Frappe Helpdesk 日本語"
+   },
+   {
+    "text": "Zendesk 代替 OSS"
+   },
+   {
+    "text": "ヘルプデスク OSS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Frappe Helpdeskは日本語で使えますか？",
+    "answer": "日本語翻訳を利用できます。Kurageでは日本語検索の修正と翻訳を本家へ提出し、日本向けの導入検証も行っています。"
+   },
+   {
+    "question": "どんなサーバーが必要ですか？",
+    "answer": "Frappe Framework、データベース、キューなどを動かせるVPSまたはクラウド環境が必要です。共用レンタルサーバー向けではありません。"
+   }
+  ],
+  "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
+  "funnel": "oss"
+ },
+ {
+  "name": "Plane",
+  "slug": "plane",
+  "category": "project",
+  "featured": true,
+  "summary": "課題、サイクル、モジュール、文書をまとめて管理するオープンソースのプロジェクト管理基盤です。",
+  "description": "Backlog、Jira、Linearなどの代替候補になるセルフホスト型プロジェクト管理です。公式日本語UIを持ち、Kurageでは日本向け導入キットを公開しています。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "公式日本語UIあり。Plane JP Deployment Kitを公開。",
+  "officialUrl": "https://plane.so",
+  "githubUrl": "https://github.com/makeplane/plane",
+  "lpUrl": "https://kurage.exbridge.jp/backlog-plane.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/b0MjMyYjMgoTZsNWa0JXY",
+  "brainLabel": "日本向け構築手順書を読む",
+  "useCases": [
+   {
+    "text": "課題・タスク管理"
+   },
+   {
+    "text": "スプリント・サイクル管理"
+   },
+   {
+    "text": "社内文書とプロジェクト管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Plane 日本語"
+   },
+   {
+    "text": "Backlog 代替 OSS"
+   },
+   {
+    "text": "プロジェクト管理 セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Planeは日本語で使えますか？",
+    "answer": "公式版に日本語辞書が収録されています。利用者ごとに言語とタイムゾーンを設定できます。"
+   },
+   {
+    "question": "共用サーバーで動きますか？",
+    "answer": "複数コンテナとPostgreSQL等が必要なため、Dockerを利用できるVPSまたはクラウドVMが必要です。"
+   }
+  ],
+  "sourceLpName": "Backlogの代替を自社サーバーに。Plane日本向け導入キット",
+  "funnel": "oss"
+ },
+ {
+  "name": "Krayin CRM",
+  "slug": "krayin-crm",
+  "category": "crm",
+  "featured": true,
+  "summary": "Laravelで構築された、顧客、リード、商談、活動を管理するオープンソースCRMです。",
+  "description": "Salesforce代替候補になるMITライセンスのCRMです。Kurageでは管理画面とインストーラーの日本語化を行い、本家へ提出しています。",
+  "license": "MIT",
+  "japaneseStatus": "Kurageが2,066キーを日本語化し本家へ提出。",
+  "officialUrl": "https://krayincrm.com",
+  "githubUrl": "https://github.com/krayin/laravel-crm",
+  "lpUrl": "https://kurage.exbridge.jp/salesforce-daitai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bxYzNxYjMgoTZsNWa0JXY",
+  "brainLabel": "日本語化・構築手順書を読む",
+  "useCases": [
+   {
+    "text": "顧客・リード管理"
+   },
+   {
+    "text": "商談かんばん"
+   },
+   {
+    "text": "営業活動・見積管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Krayin 日本語"
+   },
+   {
+    "text": "Salesforce 代替 OSS"
+   },
+   {
+    "text": "Laravel CRM"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Krayinは商用利用できますか？",
+    "answer": "MITライセンスで公開されており、ライセンス条件を守れば商用利用や改変が可能です。"
+   },
+   {
+    "question": "日本語版はありますか？",
+    "answer": "Kurageが日本語化したkrayin-jpと導入ガイドを公開しています。"
+   }
+  ],
+  "sourceLpName": "Salesforceの代わりを探している方へ",
+  "funnel": "oss"
+ },
+ {
+  "name": "EspoCRM",
+  "slug": "espocrm",
+  "category": "crm",
+  "featured": true,
+  "summary": "顧客、商談、活動、メール、ワークフローを柔軟に管理できるオープンソースCRMです。",
+  "description": "日本語UIを利用でき、項目や画面を自社の営業フローへ合わせやすいCRMです。SugarCRM Community Edition終了後の移行候補にもなります。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "公式配布に日本語UIを収録。",
+  "officialUrl": "https://www.espocrm.com",
+  "githubUrl": "https://github.com/espocrm/espocrm",
+  "lpUrl": "https://kurage.exbridge.jp/espocrm-kochiku.php",
+  "useCases": [
+   {
+    "text": "顧客・商談管理"
+   },
+   {
+    "text": "活動・メール履歴"
+   },
+   {
+    "text": "自社項目と営業フロー"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "EspoCRM 日本語"
+   },
+   {
+    "text": "CRM OSS"
+   },
+   {
+    "text": "SugarCRM 代替"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "EspoCRMは日本語で使えますか？",
+    "answer": "公式配布に日本語UIが含まれています。業務用語や独自項目は導入時に自社向けへ調整できます。"
+   },
+   {
+    "question": "Salesforceから移行できますか？",
+    "answer": "CSVで出力した顧客や商談を、項目対応を決めたうえで段階的に移行できます。"
+   }
+  ],
+  "sourceLpName": "EspoCRMで作る自社仕様のCRM構築",
+  "funnel": "oss"
+ },
+ {
+  "name": "DocuSeal",
+  "slug": "docuseal",
+  "category": "esign",
+  "featured": true,
+  "summary": "PDFフォームの作成、入力依頼、電子署名をセルフホストできるオープンソース電子署名システムです。",
+  "description": "軽い合意書や社内確認などを自社環境で運用できます。重要契約では法務要件や本人確認を確認し、用途に応じて商用SaaSと使い分けます。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "署名フォームは日本語化可能。管理画面は導入時の確認が必要。",
+  "officialUrl": "https://www.docuseal.com",
+  "githubUrl": "https://github.com/docusealco/docuseal",
+  "lpUrl": "https://kurage.exbridge.jp/denshi-keiyaku-getsugaku-zero.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/b1EDOxYjMgoTZsNWa0JXY",
+  "brainLabel": "日本語構築・運用手順書を読む",
+  "useCases": [
+   {
+    "text": "署名フォーム作成"
+   },
+   {
+    "text": "PDF入力・署名依頼"
+   },
+   {
+    "text": "社内合意・軽量な契約フロー"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "DocuSeal 日本語"
+   },
+   {
+    "text": "電子署名 OSS"
+   },
+   {
+    "text": "DocuSign 代替 セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "DocuSealは無料で使えますか？",
+    "answer": "オープンソース版を自社サーバーへ導入できますが、サーバー、バックアップ、更新、法務確認の運用コストは必要です。"
+   },
+   {
+    "question": "すべての契約に使えますか？",
+    "answer": "契約の種類、本人確認、電子署名法などの要件確認が必要です。重要契約では専門家と商用サービスを含めて判断します。"
+   }
+  ],
+  "sourceLpName": "電子契約に月額を払わない方法（DocuSeal）",
+  "funnel": "oss"
+ },
+ {
+  "name": "Payload CMS",
+  "slug": "payload-cms",
+  "category": "cms",
+  "featured": true,
+  "summary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "description": "構造化コンテンツを管理し、静的サイトやSSRへ配信できます。Kurage Payload CMSはPayloadを編集層、静的HTMLを公開層として利用しています。",
+  "license": "MIT",
+  "japaneseStatus": "管理画面の日本語表示に対応。コンテンツは自由に日本語で管理可能。",
+  "officialUrl": "https://payloadcms.com",
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "useCases": [
+   {
+    "text": "ヘッドレスCMS"
+   },
+   {
+    "text": "構造化コンテンツ管理"
+   },
+   {
+    "text": "Next.js業務システムの管理画面"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Payload CMS 日本語"
+   },
+   {
+    "text": "WordPress 代替 ヘッドレスCMS"
+   },
+   {
+    "text": "Next.js CMS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Payload CMSは日本語コンテンツを扱えますか？",
+    "answer": "扱えます。管理画面の日本語表示と言語別コンテンツの設計が可能です。"
+   },
+   {
+    "question": "SEOに向いていますか？",
+    "answer": "CMS単体ではなく、Next.jsや静的生成側でメタ情報、構造化データ、sitemapを正しく出すことでSEOに強い構成にできます。"
+   }
+  ],
+  "sourceLpName": "WordPressをやめたい（静的化+Payload）",
+  "funnel": "oss"
+ },
+ {
+  "name": "Zabbix",
+  "slug": "zabbix",
+  "category": "monitoring",
+  "featured": true,
+  "summary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "description": "死活、CPU、メモリ、ディスク、サービス状態を収集し、しきい値に応じて障害イベントを通知します。KurageではAI調査レポートと組み合わせて運用しています。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "公式日本語UIあり。",
+  "officialUrl": "https://www.zabbix.com/",
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "useCases": [
+   {
+    "text": "サーバー死活・性能監視"
+   },
+   {
+    "text": "ネットワーク監視"
+   },
+   {
+    "text": "障害通知と証拠収集"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Zabbix 構築"
+   },
+   {
+    "text": "サーバー監視 OSS"
+   },
+   {
+    "text": "Zabbix AI 障害対応"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Zabbixは日本語で使えますか？",
+    "answer": "公式UIで日本語を選択できます。監視項目、トリガー、通知先は環境ごとの設計が必要です。"
+   },
+   {
+    "question": "導入すればすぐ監視できますか？",
+    "answer": "監視対象、しきい値、通知、保守停止時の扱いを決める必要があります。初期設定が監視品質を左右します。"
+   }
+  ],
+  "sourceLpName": "サーバー監視・障害通知を安く構築する",
+  "funnel": "oss"
+ },
+ {
+  "name": "Bludit",
+  "slug": "bludit",
+  "category": "cms",
+  "featured": false,
+  "summary": "データベース不要で動く、軽量なフラットファイル型オープンソースCMSです。",
+  "description": "PHPとファイルで動き、障害レポートや社内記録など小規模な情報蓄積に利用できます。Kurageでは監視レポートの保存先として紹介しています。",
+  "license": "MIT",
+  "japaneseStatus": "日本語コンテンツに対応。管理画面翻訳はバージョンを要確認。",
+  "officialUrl": "https://www.bludit.com",
+  "githubUrl": "https://github.com/bludit/bludit",
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "useCases": [
+   {
+    "text": "軽量ブログ"
+   },
+   {
+    "text": "社内レポート保管"
+   },
+   {
+    "text": "DB不要の小規模CMS"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Bludit 日本語"
+   },
+   {
+    "text": "データベース不要 CMS"
+   },
+   {
+    "text": "軽量 CMS OSS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "BluditはDBサーバーが必要ですか？",
+    "answer": "不要です。コンテンツをファイルで管理するため、PHPが動く小規模サーバーにも設置できます。"
+   },
+   {
+    "question": "大規模サイトにも向きますか？",
+    "answer": "小規模なブログや記録用途に向きます。大量コンテンツや複雑な権限が必要なら別のCMSを検討します。"
+   }
+  ],
+  "sourceLpName": "サーバー監視・障害通知を安く構築する",
+  "funnel": "oss"
+ },
+ {
+  "name": "InvenTree",
+  "slug": "inventree",
+  "category": "inventory",
+  "featured": true,
+  "summary": "部品、在庫、BOM、発注、製造を管理できるオープンソース在庫管理システムです。",
+  "description": "高機能なため、自社の品目体系、保管場所、権限、使う画面に合わせた初期設定が重要です。小規模用途では機能を絞った導入が現実的です。",
+  "license": "MIT",
+  "japaneseStatus": "多言語対応。導入バージョンの日本語翻訳範囲を要確認。",
+  "officialUrl": "https://docs.inventree.org",
+  "githubUrl": "https://github.com/inventree/InvenTree",
+  "lpUrl": "https://kurage.exbridge.jp/zaiko-kanri-yasuku.php",
+  "useCases": [
+   {
+    "text": "品目・在庫管理"
+   },
+   {
+    "text": "BOM・部品表"
+   },
+   {
+    "text": "発注・製造管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "InvenTree 日本語"
+   },
+   {
+    "text": "在庫管理 OSS"
+   },
+   {
+    "text": "部品管理 セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "InvenTreeは小規模店舗でも使えますか？",
+    "answer": "利用できますが高機能です。品目、入出庫、棚卸、発注点など必要な範囲へ絞って設定するのが現実的です。"
+   },
+   {
+    "question": "日本語化できますか？",
+    "answer": "多言語機構があります。未翻訳箇所や自社用語は導入時に確認して調整します。"
+   }
+  ],
+  "sourceLpName": "在庫管理システムを安く導入する方法",
+  "funnel": "oss"
+ },
+ {
+  "name": "LibreOffice",
+  "slug": "libreoffice",
+  "category": "office",
+  "featured": false,
+  "summary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "description": "オフラインで利用でき、Microsoft Office形式の読み書きに対応します。複雑なレイアウトやVBA資産は互換性を事前検証します。",
+  "license": "MPL-2.0 / LGPL-3.0+",
+  "japaneseStatus": "公式日本語UIあり。",
+  "officialUrl": "https://www.libreoffice.org/",
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "useCases": [
+   {
+    "text": "文書作成"
+   },
+   {
+    "text": "表計算"
+   },
+   {
+    "text": "プレゼンテーション"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "LibreOffice 日本語"
+   },
+   {
+    "text": "Microsoft Office 代替 無料"
+   },
+   {
+    "text": "オフィスソフト OSS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "ExcelやWordのファイルを開けますか？",
+    "answer": "読み書きできますが、複雑なレイアウト、マクロ、特殊機能は崩れる場合があるため事前確認が必要です。"
+   },
+   {
+    "question": "商用利用できますか？",
+    "answer": "ライセンス条件に従って企業でも利用できます。配布や改変時は公式ライセンスを確認してください。"
+   }
+  ],
+  "sourceLpName": "オフィスソフトに月額を払わない方法",
+  "funnel": "prototype"
+ },
+ {
+  "name": "SQLite",
+  "slug": "sqlite",
+  "category": "database",
+  "featured": false,
+  "summary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "description": "小規模な業務システム、ローカルアプリ、設定・履歴管理に向きます。大量の同時書き込みや複数サーバー共有が必要な場合はPostgreSQL等を検討します。",
+  "license": "Public Domain",
+  "japaneseStatus": "データとアプリケーション側で日本語を扱えます。",
+  "officialUrl": "https://www.sqlite.org/",
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "useCases": [
+   {
+    "text": "小規模業務DB"
+   },
+   {
+    "text": "組み込みアプリ"
+   },
+   {
+    "text": "サーバーレスなデータ保存"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "SQLite 業務システム"
+   },
+   {
+    "text": "DBサーバー 不要"
+   },
+   {
+    "text": "SQLite 日本語"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "SQLiteは業務システムに使えますか？",
+    "answer": "小規模から中規模で同時書き込みが限定される用途に広く使えます。排他制御、バックアップ、破損対策は必要です。"
+   },
+   {
+    "question": "いつPostgreSQL等へ移るべきですか？",
+    "answer": "大量の同時書き込み、複数サーバーからの共有、複雑な分析が日常化した段階で検討します。"
+   }
+  ],
+  "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
+  "funnel": "prototype"
+ },
+ {
+  "name": "PostgreSQL",
+  "slug": "postgresql",
+  "category": "database",
+  "featured": false,
+  "summary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
+  "description": "複数利用者、複雑な検索、トランザクションが必要な業務システムで利用されます。Planeなど多くのOSSの保存基盤にも採用されています。",
+  "license": "PostgreSQL License",
+  "japaneseStatus": "UTF-8で日本語データを扱えます。",
+  "officialUrl": "https://www.postgresql.org/",
+  "githubUrl": "https://github.com/postgres/postgres",
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "useCases": [
+   {
+    "text": "業務システムDB"
+   },
+   {
+    "text": "高整合性トランザクション"
+   },
+   {
+    "text": "複雑な検索・集計"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "PostgreSQL 業務システム"
+   },
+   {
+    "text": "オープンソース データベース"
+   },
+   {
+    "text": "SQLite PostgreSQL 比較"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "小規模でもPostgreSQLが必要ですか？",
+    "answer": "単一サーバー・少人数ならSQLiteで足りる場合があります。複数接続や高度なDB機能が必要な場合に選びます。"
+   },
+   {
+    "question": "運用で何が必要ですか？",
+    "answer": "バックアップ、更新、監視、権限、接続制限、復旧試験が必要です。"
+   }
+  ],
+  "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
+  "funnel": "prototype"
+ },
+ {
+  "name": "MySQL Community Edition",
+  "slug": "mysql-community",
+  "category": "database",
+  "featured": false,
+  "summary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "description": "PHPやLaravel製OSSとの組み合わせが多く、Krayin CRMなどの保存基盤として利用できます。導入時はバックアップとアクセス制御を設計します。",
+  "license": "GPL-2.0",
+  "japaneseStatus": "UTF-8で日本語データを扱えます。",
+  "officialUrl": "https://www.mysql.com/products/community/",
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "useCases": [
+   {
+    "text": "WebアプリDB"
+   },
+   {
+    "text": "Laravel・PHPシステム"
+   },
+   {
+    "text": "顧客・商品データ管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "MySQL Community Edition"
+   },
+   {
+    "text": "MySQL 業務システム"
+   },
+   {
+    "text": "無料 データベース"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "MySQL Community Editionは無料ですか？",
+    "answer": "コミュニティ版はGPLで公開されています。組み込みや再配布など利用形態に応じてライセンスを確認してください。"
+   },
+   {
+    "question": "共用サーバーでも使えますか？",
+    "answer": "多くの共用サーバーで提供されますが、管理権限、拡張、バックアップ方法には制約があります。"
+   }
+  ],
+  "sourceLpName": "小さい会社の業務システムにDBサーバーは要らない",
+  "funnel": "prototype"
+ },
+ {
+  "name": "WordPress",
+  "slug": "wordpress",
+  "category": "cms",
+  "featured": false,
+  "summary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "description": "豊富なテーマとプラグインが強みですが、更新、脆弱性対策、バックアップが必要です。静的化やPayload CMSへの移行も選択肢になります。",
+  "license": "GPL-2.0-or-later",
+  "japaneseStatus": "公式日本語版あり。",
+  "officialUrl": "https://wordpress.org/",
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "useCases": [
+   {
+    "text": "企業サイト"
+   },
+   {
+    "text": "ブログ・オウンドメディア"
+   },
+   {
+    "text": "プラグインによる機能拡張"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "WordPress OSS"
+   },
+   {
+    "text": "WordPress セキュリティ"
+   },
+   {
+    "text": "WordPress 代替 CMS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "WordPressは無料ですか？",
+    "answer": "本体はオープンソースですが、サーバー、テーマ、プラグイン、保守の費用がかかる場合があります。"
+   },
+   {
+    "question": "別CMSへ移行すべきですか？",
+    "answer": "更新負担、表示速度、必要な編集機能を整理し、WordPress継続、静的化、ヘッドレスCMSを比較します。"
+   }
+  ],
+  "sourceLpName": "WordPressをやめたい（静的化+Payload）",
+  "funnel": "oss"
+ },
+ {
+  "name": "Chatwoot",
+  "slug": "chatwoot",
+  "category": "support",
+  "featured": false,
+  "summary": "Webチャット、メール、SNSなどの問い合わせを一つにまとめるセルフホスト対応のカスタマーサポート基盤です。",
+  "description": "ZendeskやIntercomの代替候補です。チャネル統合が強みです。公式リポジトリは原則MITですが、enterprise/配下は別ライセンスのため、利用機能ごとに条件を確認します。",
+  "license": "MIT（enterprise/配下は別ライセンス）",
+  "japaneseStatus": "多言語対応。導入版の翻訳範囲を要確認。",
+  "officialUrl": "https://www.chatwoot.com/",
+  "githubUrl": "https://github.com/chatwoot/chatwoot",
+  "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
+  "useCases": [
+   {
+    "text": "Webチャット"
+   },
+   {
+    "text": "メール・SNS問い合わせ統合"
+   },
+   {
+    "text": "サポート担当者管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Chatwoot 日本語"
+   },
+   {
+    "text": "Zendesk 代替 OSS"
+   },
+   {
+    "text": "チャットサポート セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "ChatwootはZendeskの代わりになりますか？",
+    "answer": "チャットや複数チャネル統合では有力候補です。SLA、ナレッジ、既存連携など必要機能を比較します。"
+   },
+   {
+    "question": "日本語で使えますか？",
+    "answer": "多言語対応ですが、導入する版と画面ごとの翻訳状況を事前確認します。"
+   }
+  ],
+  "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
+  "funnel": "oss"
+ },
+ {
+  "name": "Zammad",
+  "slug": "zammad",
+  "category": "support",
+  "featured": false,
+  "summary": "メール、電話、チャットなどの問い合わせをチケットとして管理するオープンソースヘルプデスクです。",
+  "description": "複数チャネルと担当者によるサポート運用に向きます。セルフホストではサーバー、検索基盤、メール連携の運用が必要です。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
+  "officialUrl": "https://zammad.org",
+  "githubUrl": "https://github.com/zammad/zammad",
+  "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
+  "useCases": [
+   {
+    "text": "問い合わせチケット"
+   },
+   {
+    "text": "メール・電話連携"
+   },
+   {
+    "text": "担当者・状態管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Zammad 日本語"
+   },
+   {
+    "text": "ヘルプデスク OSS"
+   },
+   {
+    "text": "Zendesk 代替 セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Zammadはセルフホストできますか？",
+    "answer": "できます。利用規模に応じたサーバー、バックアップ、メール、検索基盤の運用が必要です。"
+   },
+   {
+    "question": "Frappe Helpdeskとの違いは？",
+    "answer": "必要なチャネル、運用画面、検索、日本語対応、既存システム連携を実際のデモで比較します。"
+   }
+  ],
+  "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
+  "funnel": "oss"
+ },
+ {
+  "name": "FreeScout",
+  "slug": "freescout",
+  "category": "support",
+  "featured": false,
+  "summary": "共有メールボックスを中心に問い合わせを管理する、軽量なオープンソースヘルプデスクです。",
+  "description": "メール中心の小規模サポートで使いやすい構成です。必要な追加機能、モジュール、メール配送環境を確認して導入します。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
+  "officialUrl": "https://freescout.net",
+  "githubUrl": "https://github.com/freescout-help-desk/freescout",
+  "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
+  "useCases": [
+   {
+    "text": "共有メールボックス"
+   },
+   {
+    "text": "問い合わせ担当・状態管理"
+   },
+   {
+    "text": "小規模サポート窓口"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "FreeScout 日本語"
+   },
+   {
+    "text": "共有メール OSS"
+   },
+   {
+    "text": "Help Scout 代替"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "FreeScoutはどんな会社に向きますか？",
+    "answer": "メール中心の問い合わせを少人数で共有したい会社に向きます。複雑なSLAや多数チャネルには別製品も比較します。"
+   },
+   {
+    "question": "追加費用はありますか？",
+    "answer": "本体以外のモジュール、サーバー、メール、保守に費用が生じる場合があります。"
+   }
+  ],
+  "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Groupware (kvgwc)",
+  "slug": "kvgwc",
+  "category": "groupware",
+  "featured": true,
+  "summary": "共有レンタルサーバーでも動く、MITライセンスの軽量な社内グループウェア基盤です。",
+  "description": "認証、社員、共有スケジュールを持ち、定義ファイルで日報や点検記録などの業務アプリを追加できます。DBサーバーと外部ライブラリを必要としません。",
+  "license": "MIT",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kvgwc",
+  "githubUrl": "https://github.com/katsushi2441/kvgwc",
+  "lpUrl": "https://kurage.exbridge.jp/groupware-kaikiri.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzEjNxYjMgoTZsNWa0JXY",
+  "brainLabel": "構築・運用手順書を読む",
+  "useCases": [
+   {
+    "text": "社員・権限管理"
+   },
+   {
+    "text": "共有スケジュール"
+   },
+   {
+    "text": "日報・点検などの社内アプリ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "グループウェア OSS 日本語"
+   },
+   {
+    "text": "kintone 代替 買い切り"
+   },
+   {
+    "text": "PHP グループウェア"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "共用レンタルサーバーで動きますか？",
+    "answer": "PHPが動く一般的な共用サーバーを想定しています。サーバー仕様と書き込み権限は事前確認します。"
+   },
+   {
+    "question": "業務アプリを追加できますか？",
+    "answer": "定義ファイルで項目と画面を追加できます。複雑な連携や独自処理はソースをカスタマイズします。"
+   }
+  ],
+  "sourceLpName": "サイボウズ・kintoneが無くてもグループウェアは持てる",
+  "funnel": "oss",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+  "demoUrl": "https://proto.exbridge.jp/kvgwc/"
+ },
+ {
+  "name": "OpenKB",
+  "slug": "openkb",
+  "category": "knowledge",
+  "featured": false,
+  "summary": "文書からWiki形式のナレッジを構築し、エージェントが調査・回答するオープンソースの知識基盤です。",
+  "description": "ベクトルDBだけに依存しないPageIndex型のRAGを検証できます。Kurageでは商品選定や制度説明のPoCに利用し、価格やURLは構造化データと併用しています。",
+  "license": "Apache-2.0",
+  "japaneseStatus": "日本語文書を処理可能。管理・CLIは英語中心。",
+  "officialUrl": "https://github.com/VectifyAI/OpenKB",
+  "githubUrl": "https://github.com/VectifyAI/OpenKB",
+  "lpUrl": "https://kurage.exbridge.jp/ai-chatbot-kaikiri.php",
+  "useCases": [
+   {
+    "text": "社内ナレッジ"
+   },
+   {
+    "text": "文書調査・RAG"
+   },
+   {
+    "text": "AI問い合わせ対応"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "OpenKB 日本語"
+   },
+   {
+    "text": "RAG OSS"
+   },
+   {
+    "text": "社内ナレッジ AI"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "OpenKBだけで価格やURLを正確に回答できますか？",
+    "answer": "要約工程で数値やURLが抜ける場合があります。Kurageではcatalog.jsonなど構造化データを併用します。"
+   },
+   {
+    "question": "ローカルLLMで動かせますか？",
+    "answer": "モデル接続を設定すれば利用できますが、初回コンパイル速度と事実保持を実データで検証する必要があります。"
+   }
+  ],
+  "sourceLpName": "AIチャットボット開発の費用相場と買い切り",
+  "funnel": "oss"
+ },
+ {
+  "name": "Simplenote clients",
+  "slug": "simplenote-clients",
+  "category": "notes",
+  "featured": false,
+  "summary": "Simplenoteの各クライアントはオープンソースですが、同期バックエンドは公開されていません。",
+  "description": "アプリのコードは公開されていますが、同じサービスをそのままセルフホストするためのサーバー一式ではありません。自社管理したい場合は別のOSSまたは代替システムを選びます。",
+  "license": "GPL-2.0（クライアント。同期サーバーは非公開）",
+  "japaneseStatus": "公式日本語UIあり。",
+  "officialUrl": "https://simplenote.com/",
+  "githubUrl": "https://github.com/Automattic/simplenote-electron",
+  "lpUrl": "https://kurage.exbridge.jp/simplenote-daitai.php",
+  "useCases": [
+   {
+    "text": "シンプルなメモ"
+   },
+   {
+    "text": "複数端末同期"
+   },
+   {
+    "text": "クライアント実装の参照"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Simplenote OSS"
+   },
+   {
+    "text": "Simplenote セルフホスト"
+   },
+   {
+    "text": "Simplenote 代替"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Simplenoteを自分のサーバーで動かせますか？",
+    "answer": "公式クライアントは公開されていますが、同期バックエンドは公開されていないため、Simplenote一式をそのままセルフホストはできません。"
+   },
+   {
+    "question": "自社サーバーにメモを置くには？",
+    "answer": "セルフホスト可能な別OSSか、必要機能に絞った代替システムを選びます。"
+   }
+  ],
+  "sourceLpName": "Simplenoteの代わりを自分のサーバーに置く",
+  "funnel": "oss"
+ },
+ {
+  "name": "AIKnowledgeCMS",
+  "slug": "aiknowledgecms",
+  "category": "cms",
+  "featured": true,
+  "summary": "情報収集、選別、レポート公開をエージェントループで継続する自己成長型CMSです。",
+  "description": "SENSE、TRIAGE、REPORTのループで情報を蓄積し、人が毎回記事を作らなくても専門領域の知識ベースを育てます。公開サイト自身でループ結果を見せるリファレンス実装です。",
+  "license": "MIT",
+  "japaneseStatus": "日本語コンテンツと日本語運用に対応。",
+  "officialUrl": "https://aiknowledgecms.exbridge.jp/aiknowledgecms.html",
+  "githubUrl": "https://github.com/katsushi2441/aiknowledgecms",
+  "lpUrl": "https://aiknowledgecms.exbridge.jp/aiknowledgecms.html",
+  "demoUrl": "https://aiknowledgecms.exbridge.jp/loop/",
+  "useCases": [
+   {
+    "text": "専門情報の自動収集"
+   },
+   {
+    "text": "継続的な知識ベース構築"
+   },
+   {
+    "text": "AI運用レポートの公開"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "AIKnowledgeCMS OSS"
+   },
+   {
+    "text": "AI CMS 自動運用"
+   },
+   {
+    "text": "ナレッジベース バイブコーディング"
+   }
+  ],
+  "sourceLpName": "AIKnowledgeCMS — エージェントループが運用するCMS",
+  "faqs": [
+   {
+    "question": "AIKnowledgeCMSは自社向けにカスタマイズできますか？",
+    "answer": "収集元、判定基準、カテゴリ、レポート形式、公開承認フローを業務領域に合わせて変更できます。"
+   },
+   {
+    "question": "AIKnowledgeCMSの導入前に何を確認すべきですか？",
+    "answer": "収集対象、公開してよい情報、更新頻度、人が承認する範囲を先に決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "AIMediaPost",
+  "slug": "aimediapost",
+  "category": "media",
+  "featured": false,
+  "summary": "文章を音声とBGM付きのメディアへ変換し、公開作業を支援するAIメディア投稿ツールです。",
+  "description": "入力した文章から音声を生成し、BGMと組み合わせて公開用コンテンツを作ります。定型の告知、短い解説、音声コンテンツ制作を繰り返す用途に向きます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語テキストと日本語音声の制作に対応。",
+  "officialUrl": "https://aimediapost.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/aimediapost",
+  "lpUrl": "https://aimediapost.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "文章の音声化"
+   },
+   {
+    "text": "BGM付き告知コンテンツ"
+   },
+   {
+    "text": "定型メディア投稿の省力化"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "AIMediaPost OSS"
+   },
+   {
+    "text": "文章 音声化 BGM"
+   },
+   {
+    "text": "AI メディア投稿 自動化"
+   }
+  ],
+  "sourceLpName": "AIMediaPost — Autonomous Media Publishing",
+  "faqs": [
+   {
+    "question": "AIMediaPostは自社向けにカスタマイズできますか？",
+    "answer": "音声、BGM、尺、テンプレート、投稿先に合わせて制作フローを変更できます。"
+   },
+   {
+    "question": "AIMediaPostの導入前に何を確認すべきですか？",
+    "answer": "利用する音声・BGMの権利、公開先の仕様、必要な音量と尺を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage AIRadio",
+  "slug": "airadio",
+  "category": "media",
+  "featured": true,
+  "summary": "ニュースやキーワードから短いラジオ番組を自動生成するAI音声番組システムです。",
+  "description": "情報源を取得し、番組原稿、音声、番組構成を生成して短いラジオコンテンツへまとめます。テーマを限定した定期番組や社内音声ニュースに応用できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語ニュース、原稿、音声番組の生成に対応。",
+  "officialUrl": "https://airadio.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/airadio",
+  "lpUrl": "https://airadio.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "AIラジオ番組"
+   },
+   {
+    "text": "社内音声ニュース"
+   },
+   {
+    "text": "テーマ別の定期音声配信"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "AIRadio OSS"
+   },
+   {
+    "text": "AI ラジオ 自動生成"
+   },
+   {
+    "text": "ニュース 音声番組"
+   }
+  ],
+  "sourceLpName": "Kurage AI VTuber Radio",
+  "faqs": [
+   {
+    "question": "Kurage AIRadioは自社向けにカスタマイズできますか？",
+    "answer": "情報源、番組の口調、出演者構成、音声、BGM、配信頻度を変更できます。"
+   },
+   {
+    "question": "Kurage AIRadioの導入前に何を確認すべきですか？",
+    "answer": "情報源の利用条件、音声とBGMの権利、誤情報を確認する承認工程を決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "AIRadio Scripted-MV",
+  "slug": "airadio-scripted-mv",
+  "category": "media",
+  "featured": false,
+  "summary": "AIRadioの台本をシーン単位の映像へ変換するスクリプト駆動型ミュージックビデオ生成プラグインです。",
+  "description": "台本に沿ってシーン、画像、字幕、音声のタイミングを組み立て、AIRadioの音声を映像コンテンツへ展開します。番組ごとの映像テンプレートを持たせられます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語台本と字幕を利用可能。",
+  "officialUrl": "https://airadio-scripted-mv.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/airadio-scripted-mv",
+  "lpUrl": "https://airadio-scripted-mv.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "ラジオ番組の動画化"
+   },
+   {
+    "text": "台本同期の字幕表示"
+   },
+   {
+    "text": "定型MV・解説映像"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "AIRadio Scripted MV OSS"
+   },
+   {
+    "text": "台本 動画生成"
+   },
+   {
+    "text": "音声 字幕 同期"
+   }
+  ],
+  "sourceLpName": "Kurage Project AIRadio Scripted-MV",
+  "faqs": [
+   {
+    "question": "AIRadio Scripted-MVは自社向けにカスタマイズできますか？",
+    "answer": "画面構成、字幕、トランジション、ブランド素材、動画サイズを番組向けに変更できます。"
+   },
+   {
+    "question": "AIRadio Scripted-MVの導入前に何を確認すべきですか？",
+    "answer": "元音声、台本、画像素材、公開先の解像度と尺を用意します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "AIxEC",
+  "slug": "aixec",
+  "category": "commerce",
+  "featured": true,
+  "summary": "商品発見、説明生成、クリック計測、ランキング更新を自動化するAIアフィリエイトEC基盤です。",
+  "description": "複数の商品情報源から候補を収集し、説明文、ランキング、計測リンクを生成して公開します。商材や提携先ごとのデータ形式に合わせた商品パイプラインを構築できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語の商品説明、カテゴリ、管理運用に対応。",
+  "officialUrl": "https://aixec.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/aixec",
+  "lpUrl": "https://aixec.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "商品情報の自動収集"
+   },
+   {
+    "text": "商品ランキングと比較ページ"
+   },
+   {
+    "text": "アフィリエイト導線の計測"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "AIxEC OSS"
+   },
+   {
+    "text": "AI EC 自動化"
+   },
+   {
+    "text": "アフィリエイト 商品登録"
+   }
+  ],
+  "sourceLpName": "AI駆動型ネット通販 AIxEC",
+  "faqs": [
+   {
+    "question": "AIxECは自社向けにカスタマイズできますか？",
+    "answer": "商品API、カテゴリ、ランキング基準、説明文、計測、承認フローを商材に合わせて変更できます。"
+   },
+   {
+    "question": "AIxECの導入前に何を確認すべきですか？",
+    "answer": "提携APIの規約、価格更新、広告表記、計測範囲、公開前確認を設計します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage App Store",
+  "slug": "kappstore",
+  "category": "commerce",
+  "featured": true,
+  "summary": "AIエージェントが設置・改変できる業務システムを配布・販売するオープンソースのストア基盤です。",
+  "description": "商品一覧、詳細、注文導線、ダウンロード商品を管理し、業務システムのソースと導入情報を届けます。自社のソフトウェア販売サイトとして構成を変更できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://kappstore.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/kappstore",
+  "lpUrl": "https://kappstore.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "ソフトウェア販売"
+   },
+   {
+    "text": "ダウンロード商品管理"
+   },
+   {
+    "text": "導入マニュアルの提供"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage App Store OSS"
+   },
+   {
+    "text": "ソフトウェア 販売システム"
+   },
+   {
+    "text": "ダウンロード販売 PHP"
+   }
+  ],
+  "sourceLpName": "Kurage App Store — AIが設置できる業務システム",
+  "faqs": [
+   {
+    "question": "Kurage App Storeは自社向けにカスタマイズできますか？",
+    "answer": "商品項目、価格、決済、購入者向け画面、ブランド、納品フローを変更できます。"
+   },
+   {
+    "question": "Kurage App Storeの導入前に何を確認すべきですか？",
+    "answer": "販売条件、決済手段、納品物、利用規約、購入後サポートを決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Architect",
+  "slug": "karchitect",
+  "category": "knowledge",
+  "featured": true,
+  "summary": "会話から実装可能なシステム設計書を作る、ローカルLLM対応の対話型設計スタジオです。",
+  "description": "利用者との対話で目的、利用者、機能、データ、権限、運用条件を整理し、開発エージェントへ渡せる設計資料へまとめます。設計テンプレートを業種別に変更できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語対話と日本語設計書に対応。",
+  "officialUrl": "https://karchitect.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/karchitect",
+  "lpUrl": "https://karchitect.exbridge.jp/",
+  "demoUrl": "https://kurage.exbridge.jp/karchitect.php",
+  "useCases": [
+   {
+    "text": "要件整理"
+   },
+   {
+    "text": "システム設計書生成"
+   },
+   {
+    "text": "開発エージェントへの引き継ぎ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage Architect OSS"
+   },
+   {
+    "text": "AI システム設計"
+   },
+   {
+    "text": "要件定義 バイブコーディング"
+   }
+  ],
+  "sourceLpName": "Kurage Architect — Conversational System Design Studio",
+  "faqs": [
+   {
+    "question": "Kurage Architectは自社向けにカスタマイズできますか？",
+    "answer": "質問項目、設計書形式、業務用語、承認工程、出力テンプレートを変更できます。"
+   },
+   {
+    "question": "Kurage Architectの導入前に何を確認すべきですか？",
+    "answer": "設計対象、利用者、既存業務、制約、最終承認者を明確にします。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Crypto Brain (kcbrain)",
+  "slug": "kcbrain",
+  "category": "finance",
+  "featured": true,
+  "summary": "複数のOSSトレーディング知能を統合し、暗号資産の分析・リスク判断を返すAPIです。",
+  "description": "テクニカル、センチメント、リスク、ポートフォリオなどの判断機能をAPIとして提供します。取引所認証や注文執行を持たず、自動取引ボディから利用する知能層です。",
+  "license": "MIT",
+  "japaneseStatus": "日本語の入力、説明、Workbenchに対応。",
+  "officialUrl": "https://kcbrain.exbridge.jp/kcbrain.html",
+  "githubUrl": "https://github.com/katsushi2441/kcbrain",
+  "lpUrl": "https://kcbrain.exbridge.jp/kcbrain.html",
+  "demoUrl": "https://kurage.exbridge.jp/kcbrain.php",
+  "useCases": [
+   {
+    "text": "暗号資産市場の分析"
+   },
+   {
+    "text": "取引前リスク判定"
+   },
+   {
+    "text": "自動取引ボットの判断API"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kcbrain OSS"
+   },
+   {
+    "text": "暗号資産 AI 判断 API"
+   },
+   {
+    "text": "NOFX kcbrain"
+   }
+  ],
+  "sourceLpName": "Kurage Crypto Brain — OSSトレーディング知能API",
+  "faqs": [
+   {
+    "question": "Kurage Crypto Brain (kcbrain)は自社向けにカスタマイズできますか？",
+    "answer": "分析スキル、プロンプト、モデル、リスク基準、x402課金、呼び出し元を変更できます。"
+   },
+   {
+    "question": "Kurage Crypto Brain (kcbrain)の導入前に何を確認すべきですか？",
+    "answer": "判断APIは注文を実行しません。市場データ、取引ボディ、損失上限を別途設計します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Capacitor Launcher",
+  "slug": "kclauncher",
+  "category": "mobile",
+  "featured": false,
+  "summary": "設定したURLをiPhone・Androidのホーム画面から開く、Capacitor製の汎用WebViewランチャーです。",
+  "description": "接続先URL、アプリアイコン、名称を変えて、既存Webサービスをモバイルアプリ風に利用できます。PWAとAndroid APKの配布にも対応する構成です。",
+  "license": "ライセンス未設定（公開リポジトリ）",
+  "japaneseStatus": "日本語LPと日本語向け設定に対応。",
+  "officialUrl": "https://kclauncher.exbridge.jp/kclauncher.html",
+  "githubUrl": "https://github.com/katsushi2441/kclauncher",
+  "lpUrl": "https://kclauncher.exbridge.jp/kclauncher.html",
+  "demoUrl": "https://kclauncher.exbridge.jp/iphone/",
+  "useCases": [
+   {
+    "text": "社内Webアプリのランチャー"
+   },
+   {
+    "text": "PWA・Androidアプリ化"
+   },
+   {
+    "text": "ホーム画面からの業務導線"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Capacitor Launcher OSS"
+   },
+   {
+    "text": "WebView アプリ 作成"
+   },
+   {
+    "text": "Webシステム Android化"
+   }
+  ],
+  "sourceLpName": "Kurage Capacitor Launcher",
+  "faqs": [
+   {
+    "question": "Kurage Capacitor Launcherは自社向けにカスタマイズできますか？",
+    "answer": "接続URL、アプリ名、アイコン、権限、画面回転、配布方法を変更できます。"
+   },
+   {
+    "question": "Kurage Capacitor Launcherの導入前に何を確認すべきですか？",
+    "answer": "公開先URL、ログイン方式、端末権限、ストア配布の有無を確認します。"
+   }
+  ],
+  "funnel": "oss",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=e8d0518e44c29a60"
+ },
+ {
+  "name": "Kurage Finanalyst",
+  "slug": "kfinanalyst",
+  "category": "finance",
+  "featured": false,
+  "summary": "ウォッチリストから日本株・米国株・暗号資産・FXの市場レポートを生成するマルチテナントAIアナリストです。",
+  "description": "利用者ごとの監視対象を管理し、FinRobotを参考に複数市場の調査レポートを生成します。分析履歴、根拠リンク、対象市場を業務に合わせて調整できます。",
+  "license": "ライセンス未設定（依存元FinRobotはApache-2.0）",
+  "japaneseStatus": "日本語UIと日本語レポートに対応。",
+  "officialUrl": "https://kfina.exbridge.jp/kfinanalyst.html",
+  "githubUrl": "https://github.com/katsushi2441/kfinanalyst",
+  "lpUrl": "https://kfina.exbridge.jp/kfinanalyst.html",
+  "demoUrl": "https://kurage.exbridge.jp/kfinanalyst.php",
+  "useCases": [
+   {
+    "text": "ウォッチリスト分析"
+   },
+   {
+    "text": "複数市場の定期レポート"
+   },
+   {
+    "text": "根拠付き投資情報の整理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage Finanalyst"
+   },
+   {
+    "text": "AI 市場レポート OSS"
+   },
+   {
+    "text": "日本株 米国株 暗号資産 FX 分析"
+   }
+  ],
+  "sourceLpName": "Kurage Finanalyst — 専属AIアナリスト",
+  "faqs": [
+   {
+    "question": "Kurage Finanalystは自社向けにカスタマイズできますか？",
+    "answer": "対象市場、データ源、レポート項目、分析モデル、通知、利用者権限を変更できます。"
+   },
+   {
+    "question": "Kurage Finanalystの導入前に何を確認すべきですか？",
+    "answer": "投資助言ではなく情報整理として、データ遅延、根拠、免責、利用者権限を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage FreqAI Trade (kfreqai)",
+  "slug": "kfreqai",
+  "category": "finance",
+  "featured": true,
+  "summary": "Freqtrade・FreqAIを土台に、暗号資産戦略の検証と自動取引を行うAIトレーディングシステムです。",
+  "description": "戦略生成、バックテスト、リスク管理、取引記録を一つの運用にまとめます。AIと相談しながら戦略を改善し、数字で検証するバイブトレーディングの実践プロジェクトです。",
+  "license": "GPL-3.0-or-later",
+  "japaneseStatus": "日本語LP、ダッシュボード、運用記事に対応。",
+  "officialUrl": "https://kfreqai.exbridge.jp/kfreqai.html",
+  "githubUrl": "https://github.com/katsushi2441/kfreqai",
+  "lpUrl": "https://kfreqai.exbridge.jp/kfreqai.html",
+  "demoUrl": "https://kurage.exbridge.jp/kfreqai.php?view=summary",
+  "useCases": [
+   {
+    "text": "暗号資産戦略のバックテスト"
+   },
+   {
+    "text": "FreqAIによるシグナル生成"
+   },
+   {
+    "text": "自動取引と運用記録"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kfreqai OSS"
+   },
+   {
+    "text": "Freqtrade FreqAI 日本語"
+   },
+   {
+    "text": "暗号資産 AI 自動取引"
+   }
+  ],
+  "sourceLpName": "Kurage Freq AI Trade — 暗号資産バイブトレーディング",
+  "faqs": [
+   {
+    "question": "Kurage FreqAI Trade (kfreqai)は自社向けにカスタマイズできますか？",
+    "answer": "取引所、対象ペア、戦略、特徴量、リスク制限、Brain接続、レポートを変更できます。"
+   },
+   {
+    "question": "Kurage FreqAI Trade (kfreqai)の導入前に何を確認すべきですか？",
+    "answer": "バックテスト、ペーパートレード、損失上限、API権限を段階的に確認してから実資金へ移行します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage FX AI Trade (kfxai)",
+  "slug": "kfxai",
+  "category": "finance",
+  "featured": true,
+  "summary": "OANDA向けの取引ボディと差し替え可能なAI判断Brainを組み合わせるFX自動取引システムです。",
+  "description": "市場データ、戦略、リスク制御、注文処理を担うOSSボディと、判断だけを返す外部Brainを分離しています。戦略をAIと相談し、検証結果を見ながら改善できます。",
+  "license": "GPL-3.0-or-later",
+  "japaneseStatus": "日本語LP、ダッシュボード、運用記事に対応。",
+  "officialUrl": "https://kfxai.exbridge.jp/kfxai.html",
+  "githubUrl": "https://github.com/katsushi2441/kfxai",
+  "lpUrl": "https://kfxai.exbridge.jp/kfxai.html",
+  "demoUrl": "https://kurage.exbridge.jp/kfxai.php",
+  "useCases": [
+   {
+    "text": "FX戦略の検証"
+   },
+   {
+    "text": "OANDA API自動取引"
+   },
+   {
+    "text": "外部AI Brainとの判断分離"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kfxai OSS"
+   },
+   {
+    "text": "OANDA FX 自動取引"
+   },
+   {
+    "text": "FX AI バイブトレーディング"
+   }
+  ],
+  "sourceLpName": "Kurage FX AI Trade — FXバイブトレーディング",
+  "faqs": [
+   {
+    "question": "Kurage FX AI Trade (kfxai)は自社向けにカスタマイズできますか？",
+    "answer": "通貨ペア、時間足、戦略、損失上限、OANDA環境、Brain接続を変更できます。"
+   },
+   {
+    "question": "Kurage FX AI Trade (kfxai)の導入前に何を確認すべきですか？",
+    "answer": "Practice環境、バックテスト、注文数量、損切り、API権限を確認してから本番へ移行します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage FX Brain (kfxbrain)",
+  "slug": "kfxbrain",
+  "category": "finance",
+  "featured": true,
+  "summary": "複数の金融AI OSSを統合し、FX分析、討論、リスク評価、売買判断を返すAPIです。",
+  "description": "TradingAgents、FinGPT、FinRobotなどの知見を参照し、FX向け判断機能をAPI化しています。ブローカー認証や注文執行を持たないため、取引ボディと分離して利用できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語の入力、説明、Workbenchに対応。",
+  "officialUrl": "https://kfxbrain.exbridge.jp/kfxbrain.html",
+  "githubUrl": "https://github.com/katsushi2441/kfxbrain",
+  "lpUrl": "https://kfxbrain.exbridge.jp/kfxbrain.html",
+  "demoUrl": "https://kurage.exbridge.jp/kfxbrain.php",
+  "useCases": [
+   {
+    "text": "FX市場分析"
+   },
+   {
+    "text": "マルチエージェント討論"
+   },
+   {
+    "text": "取引前リスク判定"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kfxbrain OSS"
+   },
+   {
+    "text": "FX AI 判断 API"
+   },
+   {
+    "text": "TradingAgents FX"
+   }
+  ],
+  "sourceLpName": "Kurage FX Brain — OSSトレーディング知能API",
+  "faqs": [
+   {
+    "question": "Kurage FX Brain (kfxbrain)は自社向けにカスタマイズできますか？",
+    "answer": "判断スキル、利用モデル、データ入力、リスク基準、x402課金を変更できます。"
+   },
+   {
+    "question": "Kurage FX Brain (kfxbrain)の導入前に何を確認すべきですか？",
+    "answer": "判断APIと注文執行を分離し、データ時刻、損失上限、障害時の既定動作を決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage GEO",
+  "slug": "kgeo",
+  "category": "marketing",
+  "featured": true,
+  "summary": "Webサイトを診断し、AI検索で引用・推薦されやすくする改善案を提示する日本語GEO監査システムです。",
+  "description": "ページ構造、回答性、根拠、構造化データ、クロール導線を確認し、SEOに加えてAEO・GEOの改善項目を整理します。診断基準とレポートを業種別に変更できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語サイト診断と日本語レポートに対応。",
+  "officialUrl": "https://kgeo.exbridge.jp/kgeo.html",
+  "githubUrl": "https://github.com/katsushi2441/kgeo",
+  "lpUrl": "https://kgeo.exbridge.jp/kgeo.html",
+  "demoUrl": "https://kurage.exbridge.jp/kgeo.php",
+  "useCases": [
+   {
+    "text": "GEO・AEO監査"
+   },
+   {
+    "text": "AI検索向けコンテンツ改善"
+   },
+   {
+    "text": "構造化データと回答性の確認"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage GEO OSS"
+   },
+   {
+    "text": "GEO 対策 日本語"
+   },
+   {
+    "text": "AI検索 サイト診断"
+   }
+  ],
+  "sourceLpName": "Kurage GEO — AI検索に見つけてもらえるサイトへ",
+  "faqs": [
+   {
+    "question": "Kurage GEOは自社向けにカスタマイズできますか？",
+    "answer": "診断項目、採点、業界別基準、レポート、定期監視、改善ジョブ連携を変更できます。"
+   },
+   {
+    "question": "Kurage GEOの導入前に何を確認すべきですか？",
+    "answer": "対象サイト、重要キーワード、想定質問、競合、計測指標を決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Montage",
+  "slug": "kmontage",
+  "category": "media",
+  "featured": true,
+  "summary": "XやYouTubeの参照動画を分析し、要点抽出から解説ショート動画の公開まで行う動画パイプラインです。",
+  "description": "参照URLから内容を取得し、要点、台本、音声、画像、字幕を組み立ててKurage形式の短い解説動画へ変換します。用途に応じて尺や出演キャラクターを変更できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語台本、音声、字幕、管理画面に対応。",
+  "officialUrl": "https://kmontage.exbridge.jp/kmontage.html",
+  "githubUrl": "https://github.com/katsushi2441/kmontage",
+  "lpUrl": "https://kmontage.exbridge.jp/kmontage.html",
+  "demoUrl": "https://kurage.exbridge.jp/kmontage.php",
+  "useCases": [
+   {
+    "text": "参照動画の要点解説"
+   },
+   {
+    "text": "ショート動画生成"
+   },
+   {
+    "text": "字幕・ナレーション付き動画"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage Montage OSS"
+   },
+   {
+    "text": "URL ショート動画 生成"
+   },
+   {
+    "text": "YouTube X 解説動画"
+   }
+  ],
+  "sourceLpName": "Kurage Montage — URLから解説ショート動画",
+  "faqs": [
+   {
+    "question": "Kurage Montageは自社向けにカスタマイズできますか？",
+    "answer": "動画尺、台本、音声、字幕、画像、ブランド、公開先を変更できます。"
+   },
+   {
+    "question": "Kurage Montageの導入前に何を確認すべきですか？",
+    "answer": "参照動画の利用条件、引用範囲、生成素材の権利、公開前確認を設計します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Stock Brain (ksbrain)",
+  "slug": "ksbrain",
+  "category": "finance",
+  "featured": false,
+  "summary": "根拠を追跡できる日本株・米国株の市場インテリジェンスをAIエージェントへ返すAPIです。",
+  "description": "銘柄情報、ニュース、市場データを根拠付きで整理し、判断材料を構造化して返します。取引実行ではなく、分析と根拠の追跡に重点を置く知能層です。",
+  "license": "Apache-2.0",
+  "japaneseStatus": "日本語入力、日本語レポート、Workbenchに対応。",
+  "officialUrl": "https://ksbrain.exbridge.jp/ksbrain.html",
+  "githubUrl": "https://github.com/katsushi2441/ksbrain",
+  "lpUrl": "https://ksbrain.exbridge.jp/ksbrain.html",
+  "demoUrl": "https://kurage.exbridge.jp/ksbrain.php",
+  "useCases": [
+   {
+    "text": "日本株・米国株の調査"
+   },
+   {
+    "text": "根拠リンク付き市場分析"
+   },
+   {
+    "text": "投資エージェント向けAPI"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ksbrain OSS"
+   },
+   {
+    "text": "日本株 AI API"
+   },
+   {
+    "text": "根拠付き 株式分析"
+   }
+  ],
+  "sourceLpName": "Kurage Stock Brain — Evidence-first Equity Intelligence",
+  "faqs": [
+   {
+    "question": "Kurage Stock Brain (ksbrain)は自社向けにカスタマイズできますか？",
+    "answer": "対象市場、データ源、分析項目、根拠保存、モデル、課金方式を変更できます。"
+   },
+   {
+    "question": "Kurage Stock Brain (ksbrain)の導入前に何を確認すべきですか？",
+    "answer": "データの取得時刻、出典、欠損時の扱い、投資助言との区分を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage TradingAgents (ktajp)",
+  "slug": "ktajp",
+  "category": "finance",
+  "featured": true,
+  "summary": "複数のAIエージェントが日本株などを分析し、利用者ごとのレポートを提供するWebアプリケーションです。",
+  "description": "調査役、分析役、リスク役などのエージェントが議論し、ウォッチリストごとの市場レポートを生成します。Xログイン、利用者管理、分析課金を含むサービス層です。",
+  "license": "ライセンス未設定（公開リポジトリ）",
+  "japaneseStatus": "日本語UIと日本語分析レポートに対応。",
+  "officialUrl": "https://tajp.exbridge.jp/tajp.html",
+  "githubUrl": "https://github.com/katsushi2441/ktajp",
+  "lpUrl": "https://tajp.exbridge.jp/tajp.html",
+  "demoUrl": "https://kurage.exbridge.jp/ktajp.php",
+  "useCases": [
+   {
+    "text": "ウォッチリスト分析"
+   },
+   {
+    "text": "マルチエージェント投資調査"
+   },
+   {
+    "text": "利用者別の分析履歴"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ktajp"
+   },
+   {
+    "text": "TradingAgents 日本語"
+   },
+   {
+    "text": "AI 株式分析 マルチエージェント"
+   }
+  ],
+  "sourceLpName": "Kurage TradingAgents — 専属AIアナリスト",
+  "faqs": [
+   {
+    "question": "Kurage TradingAgents (ktajp)は自社向けにカスタマイズできますか？",
+    "answer": "対象市場、エージェント役割、レポート、ログイン、決済、利用上限を変更できます。"
+   },
+   {
+    "question": "Kurage TradingAgents (ktajp)の導入前に何を確認すべきですか？",
+    "answer": "市場データ契約、分析コスト、利用者管理、免責、保存する履歴を決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "TradingAgents-JP",
+  "slug": "tradingagents-jp",
+  "category": "finance",
+  "featured": false,
+  "summary": "監査可能な日本株マルチエージェント分析を検証する、Apache-2.0のMVP実装です。",
+  "description": "複数の分析エージェントが役割分担し、入力、根拠、議論、最終判断を追跡できる形で日本株分析を行います。ktajpの分析コアを検証する公開プロジェクトです。",
+  "license": "Apache-2.0",
+  "japaneseStatus": "日本株向けの日本語分析に対応。",
+  "officialUrl": "https://tajp.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/TradingAgents-JP",
+  "lpUrl": "https://tajp.exbridge.jp/",
+  "useCases": [
+   {
+    "text": "日本株のマルチエージェント分析"
+   },
+   {
+    "text": "分析根拠と議論の監査"
+   },
+   {
+    "text": "TradingAgentsの導入検証"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "TradingAgents-JP OSS"
+   },
+   {
+    "text": "TradingAgents 日本株"
+   },
+   {
+    "text": "マルチエージェント 投資分析"
+   }
+  ],
+  "sourceLpName": "TradingAgents-JP — 日本株マルチエージェント分析",
+  "faqs": [
+   {
+    "question": "TradingAgents-JPは自社向けにカスタマイズできますか？",
+    "answer": "エージェント構成、対象銘柄、データ源、議論手順、出力形式を変更できます。"
+   },
+   {
+    "question": "TradingAgents-JPの導入前に何を確認すべきですか？",
+    "answer": "利用する市場データ、分析時点、モデルコスト、監査ログ、免責を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage URL2GPTResearcher",
+  "slug": "kurl2gr",
+  "category": "marketing",
+  "featured": false,
+  "summary": "URLを起点に深掘り調査を行い、止まったサイトへ継続的な新着コンテンツを供給するシステムです。",
+  "description": "既存ページのテーマを読み取り、GPT Researcher型の調査フローで関連情報と出典を集め、更新記事へまとめます。調査テーマと公開先をサイトごとに変更できます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語調査、日本語記事、日本語UIに対応。",
+  "officialUrl": "https://kurl2gr.exbridge.jp/kurl2gr.html",
+  "githubUrl": "https://github.com/katsushi2441/kurl2gr",
+  "lpUrl": "https://kurl2gr.exbridge.jp/kurl2gr.html",
+  "demoUrl": "https://kurage.exbridge.jp/kurl2gr.php",
+  "useCases": [
+   {
+    "text": "既存サイトの調査記事"
+   },
+   {
+    "text": "出典付きコンテンツ生成"
+   },
+   {
+    "text": "更新停止サイトの再活性化"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kurl2gr OSS"
+   },
+   {
+    "text": "URL GPT Researcher"
+   },
+   {
+    "text": "サイト 記事 自動生成"
+   }
+  ],
+  "sourceLpName": "Kurage URL2GPTResearcher — 止まったサイトに新着を",
+  "faqs": [
+   {
+    "question": "Kurage URL2GPTResearcherは自社向けにカスタマイズできますか？",
+    "answer": "調査範囲、情報源、記事構成、承認、CMS連携、更新頻度を変更できます。"
+   },
+   {
+    "question": "Kurage URL2GPTResearcherの導入前に何を確認すべきですか？",
+    "answer": "対象サイト、引用ルール、信頼する情報源、重複防止、公開承認を決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage AI VTuber Runtime",
+  "slug": "kvtuber",
+  "category": "media",
+  "featured": true,
+  "summary": "台本・自律会話・TTS・リップシンク・配信を扱うAI VTuberランタイムです。",
+  "description": "アバター表示、音声合成、口パク、台本進行、コメント反応、YouTube Live連携を組み合わせ、AIキャラクターによる動画や配信を構築します。",
+  "license": "MIT",
+  "japaneseStatus": "日本語台本、音声、配信UIに対応。",
+  "officialUrl": "https://kvtuber.exbridge.jp/kvtuber.html",
+  "githubUrl": "https://github.com/katsushi2441/kvtuber",
+  "lpUrl": "https://kvtuber.exbridge.jp/kvtuber.html",
+  "demoUrl": "https://kurage.exbridge.jp/kuragev.php",
+  "useCases": [
+   {
+    "text": "AI VTuber配信"
+   },
+   {
+    "text": "台本同期アバター動画"
+   },
+   {
+    "text": "TTS・リップシンク"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "kvtuber OSS"
+   },
+   {
+    "text": "AI VTuber 自作"
+   },
+   {
+    "text": "VRM TTS リップシンク"
+   }
+  ],
+  "sourceLpName": "Kurage AI VTuber — AIの仕事をするVTuber",
+  "faqs": [
+   {
+    "question": "Kurage AI VTuber Runtimeは自社向けにカスタマイズできますか？",
+    "answer": "キャラクター、VRM、音声、表情、台本、コメント反応、配信画面を変更できます。"
+   },
+   {
+    "question": "Kurage AI VTuber Runtimeの導入前に何を確認すべきですか？",
+    "answer": "モデルと音声の利用権、配信先API、モデレーション、緊急停止を設計します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Zabbix",
+  "slug": "kzabbix",
+  "category": "monitoring",
+  "featured": true,
+  "summary": "Zabbix障害をAIが調査し、証拠付きレポートと運用ブログへまとめるインシデント対応システムです。",
+  "description": "Zabbixのイベントを入口に、メトリクス、ログ、サービス状態を読み取り、警告と実害を分けた調査レポートを生成します。読み取りと変更操作を分離した運用を想定します。",
+  "license": "ライセンス未設定（公開リポジトリ）",
+  "japaneseStatus": "日本語の障害調査、通知、運用レポートに対応。",
+  "officialUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
+  "githubUrl": "https://github.com/katsushi2441/kzabbix",
+  "lpUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
+  "demoUrl": "https://kurage.exbridge.jp/zabbix/",
+  "useCases": [
+   {
+    "text": "Zabbix障害の一次調査"
+   },
+   {
+    "text": "証拠付きインシデントレポート"
+   },
+   {
+    "text": "運用ナレッジの蓄積"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage Zabbix OSS"
+   },
+   {
+    "text": "Zabbix AI 障害調査"
+   },
+   {
+    "text": "監視 レポート 自動化"
+   }
+  ],
+  "sourceLpName": "Kurage Zabbix — 障害を見つけて調べて報告",
+  "faqs": [
+   {
+    "question": "Kurage Zabbixは自社向けにカスタマイズできますか？",
+    "answer": "監視項目、調査コマンド、証拠、通知先、承認、レポート形式を変更できます。"
+   },
+   {
+    "question": "Kurage Zabbixの導入前に何を確認すべきですか？",
+    "answer": "AIには読み取り権限を基本とし、再起動や設定変更は人の承認を必須にします。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Short Video Generator",
+  "slug": "kurage",
+  "category": "media",
+  "featured": true,
+  "summary": "X投稿などから台本、画像、音声、字幕を生成し、Kurage形式のショート動画へまとめるシステムです。",
+  "description": "入力コンテンツを取得し、LLMで台本を作り、画像生成、音声合成、HyperFramesレンダリングを通して短い動画を生成・公開します。Kurage動画基盤の中核です。",
+  "license": "MIT",
+  "japaneseStatus": "日本語台本、音声、字幕、管理UIに対応。",
+  "officialUrl": "https://kurage.exbridge.jp/",
+  "githubUrl": "https://github.com/katsushi2441/kurage",
+  "lpUrl": "https://kurage.exbridge.jp/",
+  "demoUrl": "https://kurage.exbridge.jp/kuragev.php",
+  "useCases": [
+   {
+    "text": "SNS投稿の動画化"
+   },
+   {
+    "text": "AI解説ショート動画"
+   },
+   {
+    "text": "画像・音声・字幕の自動生成"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Kurage 動画生成 OSS"
+   },
+   {
+    "text": "AI ショート動画 自動生成"
+   },
+   {
+    "text": "HyperFrames TTS 字幕"
+   }
+  ],
+  "sourceLpName": "Kurage Project — AI Products & Open Source Ecosystem",
+  "faqs": [
+   {
+    "question": "Kurage Short Video Generatorは自社向けにカスタマイズできますか？",
+    "answer": "入力元、台本、キャラクター、画像、音声、字幕、動画尺、公開先を変更できます。"
+   },
+   {
+    "question": "Kurage Short Video Generatorの導入前に何を確認すべきですか？",
+    "answer": "元コンテンツと生成素材の権利、事実確認、公開先規約、生成失敗時の扱いを決めます。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "NOFX Japanese Community Edition",
+  "slug": "nofx",
+  "category": "finance",
+  "featured": true,
+  "summary": "株式、商品、FX、暗号資産を扱うAI取引ターミナルNOFXの日本語コミュニティ版です。",
+  "description": "本家NOFXを日本語化し、kcbrainを判断APIとして選択できる構成とMEXCペーパートレーダーを追加した検証版です。公開フォークとして本家との差分を管理します。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "日本語コミュニティ版。",
+  "officialUrl": "https://nofx.exbridge.jp/nofx.html",
+  "githubUrl": "https://github.com/katsushi2441/nofx",
+  "lpUrl": "https://nofx.exbridge.jp/nofx.html",
+  "useCases": [
+   {
+    "text": "AI取引ターミナルの日本語導入"
+   },
+   {
+    "text": "kcbrainとの接続"
+   },
+   {
+    "text": "MEXCペーパートレード"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "NOFX 日本語"
+   },
+   {
+    "text": "NOFX kcbrain"
+   },
+   {
+    "text": "AI 自動取引 OSS"
+   }
+  ],
+  "sourceLpName": "NOFX 日本語コミュニティ版",
+  "faqs": [
+   {
+    "question": "NOFX Japanese Community Editionは自社向けにカスタマイズできますか？",
+    "answer": "日本語UI、判断プロバイダー、ペーパートレード、対象市場、リスク設定を変更できます。"
+   },
+   {
+    "question": "NOFX Japanese Community Editionの導入前に何を確認すべきですか？",
+    "answer": "本家との差分、AGPL条件、取引所API権限、ペーパーテスト、損失上限を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "URL2AI",
+  "slug": "url2ai",
+  "category": "cms",
+  "featured": false,
+  "summary": "URLを解析し、考察、物語、討論、歌詞など複数形式のAIコンテンツへ変換するメディアエンジンです。",
+  "description": "WebページやSNS URLから内容を取得し、用途ごとの生成画面と公開フローへ渡します。URL2Pub、URL2Brain、OSS Timelineなどを含むURL起点コンテンツ群の基盤です。",
+  "license": "MIT",
+  "japaneseStatus": "日本語UIと日本語コンテンツ生成に対応。",
+  "officialUrl": "https://aiknowledgecms.exbridge.jp/url2ai.html",
+  "githubUrl": "https://github.com/katsushi2441/url2ai",
+  "lpUrl": "https://aiknowledgecms.exbridge.jp/url2ai.html",
+  "demoUrl": "https://aiknowledgecms.exbridge.jp/knowradar.php",
+  "useCases": [
+   {
+    "text": "URL内容の分析"
+   },
+   {
+    "text": "複数形式のAIコンテンツ生成"
+   },
+   {
+    "text": "公開ワークフローの共通基盤"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "URL2AI OSS"
+   },
+   {
+    "text": "URL AI コンテンツ生成"
+   },
+   {
+    "text": "Webページ 要約 考察"
+   }
+  ],
+  "sourceLpName": "URL2AI — URL起点のAIコンテンツエンジン",
+  "faqs": [
+   {
+    "question": "URL2AIは自社向けにカスタマイズできますか？",
+    "answer": "入力URL、抽出方式、生成形式、LLM、保存先、公開先を変更できます。"
+   },
+   {
+    "question": "URL2AIの導入前に何を確認すべきですか？",
+    "answer": "取得先の規約、引用範囲、事実確認、個人情報、公開承認を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage URL2AI Brain",
+  "slug": "url2brain",
+  "category": "marketing",
+  "featured": true,
+  "summary": "URL解析、告知文、ブログ記事、実投稿をAPIとして提供するURL2AI Publisherの知能層です。",
+  "description": "URLから本文を取得し、告知文と記事を生成して、必要に応じて媒体へ投稿します。Web版とAIエージェント向けAPIが同じBrainを共有し、x402課金にも対応します。",
+  "license": "MIT",
+  "japaneseStatus": "日本語のURL解析、告知文、記事生成に対応。",
+  "officialUrl": "https://url2brain.exbridge.jp/url2brain.html",
+  "githubUrl": "https://github.com/katsushi2441/url2brain",
+  "lpUrl": "https://url2brain.exbridge.jp/url2brain.html",
+  "demoUrl": "https://url2ai.exbridge.jp/url2pub.html",
+  "useCases": [
+   {
+    "text": "URL解析API"
+   },
+   {
+    "text": "告知文・ブログ記事生成"
+   },
+   {
+    "text": "x402従量課金AI Agent"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "url2brain OSS"
+   },
+   {
+    "text": "URL 記事生成 API"
+   },
+   {
+    "text": "x402 AI Agent コンテンツ"
+   }
+  ],
+  "sourceLpName": "Kurage URL2AI Brain — URL解析・記事生成・実投稿API",
+  "faqs": [
+   {
+    "question": "Kurage URL2AI Brainは自社向けにカスタマイズできますか？",
+    "answer": "LLM、プロンプト、出力形式、投稿媒体、課金、利用制限を変更できます。"
+   },
+   {
+    "question": "Kurage URL2AI Brainの導入前に何を確認すべきですか？",
+    "answer": "取得可能なURL、投稿権限、生成コスト、重複防止、媒体ごとの規約を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage URL2AI Publisher",
+  "slug": "url2pub",
+  "category": "marketing",
+  "featured": true,
+  "summary": "URLを貼ると告知文と記事を生成し、複数メディアへ配信するPHP製の公開フロントエンドです。",
+  "description": "URL2Brainを呼び出し、Bluesky、はてな、AIxSNS、Bluditなどへ告知と記事を展開します。Xログイン、ウォレット接続、利用特典などの配信導線も組み込めます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語UI、告知文、記事、配信結果表示に対応。",
+  "officialUrl": "https://url2ai.exbridge.jp/url2pub.html",
+  "githubUrl": "https://github.com/katsushi2441/url2pub",
+  "lpUrl": "https://url2ai.exbridge.jp/url2pub.html",
+  "useCases": [
+   {
+    "text": "製品・記事の一括告知"
+   },
+   {
+    "text": "ブログとSNSへの複数媒体配信"
+   },
+   {
+    "text": "URL投稿キャンペーン"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "URL2Pub OSS"
+   },
+   {
+    "text": "URL 複数SNS 投稿"
+   },
+   {
+    "text": "AI 記事 告知 自動配信"
+   }
+  ],
+  "sourceLpName": "Kurage URL2AI Publisher — URLから5メディアへ配信",
+  "faqs": [
+   {
+    "question": "Kurage URL2AI Publisherは自社向けにカスタマイズできますか？",
+    "answer": "配信先、ログイン、投稿文、記事形式、承認、ウォレット特典を変更できます。"
+   },
+   {
+    "question": "Kurage URL2AI Publisherの導入前に何を確認すべきですか？",
+    "answer": "各媒体の認証、投稿上限、失敗時の再実行、重複投稿防止を確認します。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage AI Meishi Analysis",
+  "slug": "kaima",
+  "category": "crm",
+  "featured": false,
+  "summary": "スマホで名刺を撮るとAIが12項目を読み取って下書きし、人が承認した分だけ台帳へ入る名刺管理システムです。",
+  "description": "名刺をスマホで撮って投げると、AIが会社・氏名・部署・役職・電話・メール・住所など12項目を読み取り、下書きとして登録します。台帳に書き込めるのは人が承認したときだけで、AIは下書きの作成しかできません。氏名と会社の表記ゆれを吸収する名寄せ、役職が変わったときの変遷履歴、「誰がいつどこで交換したか」の接点記録を持ちます。PHPとSQLiteの1ファイル構成で、共有レンタルサーバーで動きます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kaima",
+  "githubUrl": "https://github.com/katsushi2441/kaima",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-19T05:44:47Z",
+  "githubPushedAt": "2026-08-19T06:02:05Z",
+  "useCases": [
+   {
+    "text": "名刺をスマホで撮って台帳にする"
+   },
+   {
+    "text": "名寄せして同一人物をまとめる"
+   },
+   {
+    "text": "役職の変遷を履歴で追う"
+   },
+   {
+    "text": "この会社を誰が知っているかを調べる"
+   },
+   {
+    "text": "名刺情報をCSVで書き出す"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "名刺管理 買い切り"
+   },
+   {
+    "text": "Sansan 代替"
+   },
+   {
+    "text": "名刺 OCR 自社サーバー"
+   },
+   {
+    "text": "名刺管理 OSS"
+   },
+   {
+    "text": "AI 名刺 読み取り"
+   },
+   {
+    "text": "名刺 台帳 PHP"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "AIが台帳を直接書き換えることはありますか？",
+    "answer": "ありません。AIができるのは下書きの作成までで、台帳への反映は人が承認したときだけです。ソース内の宣言表が全ての入口を裁いています。"
+   },
+   {
+    "question": "読み取りの間違いはどう防いでいますか？",
+    "answer": "AIに自己採点させず、プログラムが機械的に検証します。メールアドレスは形式に加えてドメインのDNS実在確認まで行い、それらしい誤読を警告します。"
+   },
+   {
+    "question": "名刺画像はどこに置かれますか？",
+    "answer": "自社のサーバー内です。個人情報として扱い、ログイン済みのセッションにだけ配信します。外部のサービスへ送りません。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+  "sourceLpName": "AI名刺解析・名刺台帳（Kurage AI Meishi Analysis）",
+  "demoUrl": "https://proto.exbridge.jp/kaima/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580"
+ },
+ {
+  "name": "Kurage Memo",
+  "slug": "kmemo",
+  "category": "knowledge",
+  "featured": false,
+  "summary": "本文の1行目がそのままタイトルになる、1ファイルPHPのメモ帳です。",
+  "description": "タイトル欄も保存ボタンもありません。書いた1行目がタイトルになり、入力した端から自動保存します。上の検索欄に打つと全メモを即座に絞り込みます。設定ファイルに1行足すだけで利用者を増やせ、メモの保存先は利用者ごとに完全に別ファイルになります。データベースは不要で、FTPでファイルを置くだけで動きます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kmemo",
+  "githubUrl": "https://github.com/katsushi2441/kmemo",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-24T20:02:16Z",
+  "githubPushedAt": "2026-08-24T20:02:20Z",
+  "useCases": [
+   {
+    "text": "個人用のメモをレンタルサーバーに置く"
+   },
+   {
+    "text": "家族や社内で1台を共用する"
+   },
+   {
+    "text": "全文検索でメモを探す"
+   },
+   {
+    "text": "バックアップZIPで手元に控える"
+   },
+   {
+    "text": "スマホのブラウザから書く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Simplenote 代替"
+   },
+   {
+    "text": "メモ 自社サーバー"
+   },
+   {
+    "text": "1ファイル PHP メモ"
+   },
+   {
+    "text": "メモ 買い切り"
+   },
+   {
+    "text": "メモアプリ OSS"
+   },
+   {
+    "text": "ノート セルフホスト"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "データベースは必要ですか？",
+    "answer": "不要です。JSONファイルとflockで保存します。PHPが動くレンタルサーバーにファイルを置くだけで動きます。"
+   },
+   {
+    "question": "複数人で使えますか？",
+    "answer": "使えます。設定ファイルに利用者を足すと、保存先がその人専用のファイルに分かれます。他人のメモが混ざる経路が構造的にありません。"
+   },
+   {
+    "question": "バックアップはどうしますか？",
+    "answer": "画面からZIPで書き出せます。中にJSONとCSVと復元手順が入っているので、他のツールへ移すこともできます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
+  "sourceLpName": "シンプルメモ（Kurage Memo）",
+  "demoUrl": "https://proto.exbridge.jp/kmemo/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c"
+ },
+ {
+  "name": "Kurage Kintai",
+  "slug": "kkintai",
+  "category": "hr",
+  "featured": false,
+  "summary": "タブレット1台を顔認証タイムレコーダーにする、丸めない台帳の勤怠システムです。",
+  "description": "タブレットのカメラに顔を向けると出退勤が記録されます。顔の照合はサーバー側で行い、打刻の時刻は丸めずそのまま台帳に残します。同意の取得と削除の導線を最初から持ち、給与ソフトへ渡すCSVも出力できます。PHPとSQLiteで動き、専用の打刻機を買わずに始められます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kkintai",
+  "githubUrl": "https://github.com/katsushi2441/kkintai",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-19T18:23:51Z",
+  "githubPushedAt": "2026-08-19T18:24:03Z",
+  "useCases": [
+   {
+    "text": "タブレット1台で出退勤を記録する"
+   },
+   {
+    "text": "打刻を丸めずに台帳へ残す"
+   },
+   {
+    "text": "給与ソフト向けのCSVを出す"
+   },
+   {
+    "text": "顔データの同意と削除を管理する"
+   },
+   {
+    "text": "工場や店舗のようにPCが無い現場で使う"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "勤怠管理 買い切り"
+   },
+   {
+    "text": "顔認証 打刻"
+   },
+   {
+    "text": "KING OF TIME 代替"
+   },
+   {
+    "text": "勤怠 OSS 自社サーバー"
+   },
+   {
+    "text": "タイムカード 電子化"
+   },
+   {
+    "text": "勤怠 PHP"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "顔のデータはどこで照合しますか？",
+    "answer": "サーバー側です。端末に顔データを残さない設計で、同意の取得と削除の導線を持っています。"
+   },
+   {
+    "question": "打刻の時刻は丸められますか？",
+    "answer": "丸めません。実際に打刻された時刻をそのまま台帳に残します。丸めが必要な場合は集計側で行います。"
+   },
+   {
+    "question": "専用の打刻機が必要ですか？",
+    "answer": "不要です。カメラのあるタブレットかPCのブラウザで動きます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
+  "sourceLpName": "顔打刻つき勤怠システム（Kurage Kintai）",
+  "demoUrl": "https://proto.exbridge.jp/kkintai/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be"
+ },
+ {
+  "name": "Kurage HR Post",
+  "slug": "khrpost",
+  "category": "hr",
+  "featured": false,
+  "summary": "人ではなく職に記録を紐づけて、業務の属人化を止める職務・目標・引継ぎ管理システムです。",
+  "description": "職務や目標を「人」ではなく「職（ポジション）」に紐づけて記録します。担当者が変わっても、その職に付いていた職責・目標・手順がそのまま残るため、引き継ぎのたびに知識が失われることがなくなります。社員のマスタは外部のJSONを読むだけなので、既存の人事システムと二重管理になりません。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/khrpost",
+  "githubUrl": "https://github.com/katsushi2441/khrpost",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-20T22:24:46Z",
+  "githubPushedAt": "2026-08-20T22:24:49Z",
+  "useCases": [
+   {
+    "text": "職務と職責を職ごとに定義する"
+   },
+   {
+    "text": "目標とタスクを職に紐づける"
+   },
+   {
+    "text": "担当者が変わっても手順を残す"
+   },
+   {
+    "text": "引き継ぎの抜けを防ぐ"
+   },
+   {
+    "text": "既存の社員マスタをそのまま使う"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "引き継ぎ 属人化"
+   },
+   {
+    "text": "職務記述書 管理"
+   },
+   {
+    "text": "目標管理 買い切り"
+   },
+   {
+    "text": "人事 OSS 自社サーバー"
+   },
+   {
+    "text": "業務 標準化 ツール"
+   },
+   {
+    "text": "ポジション管理"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "社員のマスタを二重に持つことになりませんか？",
+    "answer": "なりません。外部のJSONを読むだけの設計なので、既存の人事システムやCSVをそのまま参照できます。"
+   },
+   {
+    "question": "担当者が退職したら記録はどうなりますか？",
+    "answer": "職に紐づいているので残ります。次の担当者はその職の記録をそのまま引き継げます。"
+   },
+   {
+    "question": "評価制度に使えますか？",
+    "answer": "目標とタスクの記録はできますが、評価の点数付けや査定の仕組みは持っていません。必要なら追加で作ります。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
+  "sourceLpName": "職務・目標・引継ぎ管理（Kurage HR Post）",
+  "demoUrl": "https://proto.exbridge.jp/khrpost/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457"
+ },
+ {
+  "name": "Kurage CRM Agent",
+  "slug": "kcrmagent",
+  "category": "crm",
+  "featured": false,
+  "summary": "日報を投げるとAIが顧客記録の下書きを作り、人が承認した分だけ台帳に入るCRMです。",
+  "description": "営業担当者が日報や商談メモを文章のまま投げると、AIが顧客・案件・次のアクションの下書きを作ります。台帳に反映されるのは人が承認したものだけで、AIは宣言した範囲の外には出られません。入力の手間をゼロに近づけながら、記録の正しさは人が担保する設計です。PHPの1ファイル構成で動きます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kcrmagent",
+  "githubUrl": "https://github.com/katsushi2441/kcrmagent",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-19T02:00:15Z",
+  "githubPushedAt": "2026-08-19T02:36:01Z",
+  "useCases": [
+   {
+    "text": "日報から顧客記録を起こす"
+   },
+   {
+    "text": "商談の内容を台帳に残す"
+   },
+   {
+    "text": "次のアクションを取りこぼさない"
+   },
+   {
+    "text": "入力の手間を減らす"
+   },
+   {
+    "text": "承認の記録を監査ログに残す"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "CRM 買い切り"
+   },
+   {
+    "text": "営業日報 自動化"
+   },
+   {
+    "text": "顧客管理 AI"
+   },
+   {
+    "text": "SFA OSS"
+   },
+   {
+    "text": "入力レス CRM"
+   },
+   {
+    "text": "顧客管理 PHP"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "AIが勝手に顧客データを書き換えませんか？",
+    "answer": "書き換えません。AIは下書きの作成までで、台帳への反映は人の承認が必要です。宣言した範囲の外には出られない作りになっています。"
+   },
+   {
+    "question": "どんな文章を投げればいいですか？",
+    "answer": "普段書いている日報や商談メモのままで構いません。形式を決める必要はありません。"
+   },
+   {
+    "question": "既存のCRMから移行できますか？",
+    "answer": "CSVで取り込めます。項目の対応づけは導入時に調整します。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+  "sourceLpName": "入力ゼロCRM（Kurage CRM Agent）",
+  "demoUrl": "https://proto.exbridge.jp/kcrmagent/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f"
+ },
+ {
+  "name": "Kurage DB Agent",
+  "slug": "kdbagent",
+  "category": "database",
+  "featured": false,
+  "summary": "設定で宣言した表・列・操作だけを、人にもAIエージェントにも同じ制限で許すDB管理ツールです。",
+  "description": "MySQLとSQLiteに対応した1ファイルのデータベース管理ツールです。設定ファイルで「触ってよい表・列・操作」を宣言し、画面から操作する人も、CLIも、HTTP APIも、AIエージェントも、同じ制限を通ります。範囲を決めてから渡せるので、本番のデータベースに直接つなぐ不安を減らせます。Claude Code連携用のスキルを同梱しています。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kdbagent",
+  "githubUrl": "https://github.com/katsushi2441/kdbagent",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-09T08:15:12Z",
+  "githubPushedAt": "2026-08-09T09:09:05Z",
+  "useCases": [
+   {
+    "text": "本番DBを範囲を決めて触らせる"
+   },
+   {
+    "text": "AIエージェントに安全にDBを渡す"
+   },
+   {
+    "text": "CLIとHTTP APIから同じ制限で操作する"
+   },
+   {
+    "text": "phpMyAdminの代わりに使う"
+   },
+   {
+    "text": "操作の記録を残す"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "phpMyAdmin 代替"
+   },
+   {
+    "text": "DB管理 買い切り"
+   },
+   {
+    "text": "MySQL 管理ツール"
+   },
+   {
+    "text": "AI エージェント DB"
+   },
+   {
+    "text": "データベース 権限 制限"
+   },
+   {
+    "text": "SQLite 管理"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "phpMyAdminと何が違いますか？",
+    "answer": "範囲を先に宣言する点です。設定で許した表・列・操作しか通らないので、想定外の操作が構造的にできません。"
+   },
+   {
+    "question": "AIエージェントに使わせても安全ですか？",
+    "answer": "人が使う場合と同じ制限を通ります。宣言した範囲の外は、人でもAIでも実行できません。"
+   },
+   {
+    "question": "どのデータベースに対応していますか？",
+    "answer": "MySQLとSQLiteです。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
+  "sourceLpName": "データベース管理ツール（kdbagent）",
+  "demoUrl": "https://proto.exbridge.jp/kdbagent/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793"
+ },
+ {
+  "name": "Kurage Light ChatBot",
+  "slug": "klchatbot",
+  "category": "support",
+  "featured": false,
+  "summary": "自社の知識を読ませてFAQ・AI接客・社内向けの質問対応に使える1ファイルPHPのチャットボットです。",
+  "description": "自社の文書やFAQを読み込ませ、その範囲で答えるチャットボットです。知識は決まった順序で読み込む設計にしてあり、LLMのキャッシュが効くため応答が速く費用も抑えられます。Webサイトの接客、社内の問い合わせ対応、製品のFAQなどに使えます。PHPの1ファイルで動き、データベースは不要です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/klchatbot",
+  "githubUrl": "https://github.com/katsushi2441/klchatbot",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-15T19:54:52Z",
+  "githubPushedAt": "2026-08-15T19:54:55Z",
+  "useCases": [
+   {
+    "text": "Webサイトに接客チャットを置く"
+   },
+   {
+    "text": "社内の問い合わせに答えさせる"
+   },
+   {
+    "text": "製品FAQを自動応答にする"
+   },
+   {
+    "text": "資料を読ませて社内ChatGPTにする"
+   },
+   {
+    "text": "一次対応だけ自動化する"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "チャットボット 買い切り"
+   },
+   {
+    "text": "社内 ChatGPT"
+   },
+   {
+    "text": "FAQ 自動応答"
+   },
+   {
+    "text": "AI接客 導入"
+   },
+   {
+    "text": "チャットボット PHP"
+   },
+   {
+    "text": "問い合わせ 自動化"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "知識はどうやって読ませますか？",
+    "answer": "テキストやMarkdownのファイルを置くだけです。決まった順序で読み込むので、LLMのキャッシュが効いて応答が速くなります。"
+   },
+   {
+    "question": "どのAIを使いますか？",
+    "answer": "設定で切り替えられます。ローカルのモデルでも、外部のAPIでも動きます。"
+   },
+   {
+    "question": "知識にないことを聞かれたらどうなりますか？",
+    "answer": "分からないと答えるよう設定できます。作り話をさせない運用が前提です。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
+  "sourceLpName": "AIチャットボット（Kurage Light ChatBot）",
+  "demoUrl": "https://proto.exbridge.jp/klchatbot/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8"
+ },
+ {
+  "name": "Kurage BBS",
+  "slug": "kbbs",
+  "category": "forum",
+  "featured": false,
+  "summary": "X認証と自社ドメインのメール確認で、宣伝を許しつつ荒れない1ファイルPHP掲示板です。",
+  "description": "書き込みにXでの認証と、投稿するURLと同じドメインのメールアドレス確認を求めます。この2つで、なりすましと使い捨てアカウントによる荒らしを防ぎながら、宣伝の投稿を許容できます。管理画面には投稿者のXアカウント・URL・メールが並ぶので、そのまま営業リストとして使えます。データベースは不要です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kbbs",
+  "githubUrl": "https://github.com/katsushi2441/kbbs",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-12T12:48:22Z",
+  "githubPushedAt": "2026-08-13T12:10:24Z",
+  "useCases": [
+   {
+    "text": "宣伝を許す掲示板を運営する"
+   },
+   {
+    "text": "なりすましを防ぐ"
+   },
+   {
+    "text": "投稿者の一覧を営業リストにする"
+   },
+   {
+    "text": "コミュニティの窓口を作る"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "掲示板 設置 無料"
+   },
+   {
+    "text": "宣伝OK 掲示板"
+   },
+   {
+    "text": "X認証 掲示板"
+   },
+   {
+    "text": "掲示板 PHP DB不要"
+   },
+   {
+    "text": "コミュニティ 自社サーバー"
+   },
+   {
+    "text": "掲示板 買い切り"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "なぜX認証とメール確認の両方が要るのですか？",
+    "answer": "片方だけでは使い捨てアカウントで荒らせるためです。投稿するURLと同じドメインのメールを確認することで、実在の運営者だけが宣伝できます。"
+   },
+   {
+    "question": "データベースは必要ですか？",
+    "answer": "不要です。ファイルで保存します。"
+   },
+   {
+    "question": "管理画面で何ができますか？",
+    "answer": "投稿の削除に加えて、投稿者のXアカウント・URL・メールの一覧を見られます。営業先の一覧としても使えます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05",
+  "sourceLpName": "宣伝OK掲示板（kbbs）",
+  "demoUrl": "https://kurage.exbridge.jp/kbbs.php",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=4bd9a6f3f99cdc05"
+ },
+ {
+  "name": "Kurage CalDAV",
+  "slug": "kcaldav",
+  "category": "groupware",
+  "featured": false,
+  "summary": "フレームワークを使わない1ファイルのCalDAVサーバーです。スマホの標準カレンダーと同期できます。",
+  "description": "CalDAVの仕様を1ファイルのPHPで実装したカレンダーサーバーです。ThunderbirdやiPhone、Androidの標準カレンダーアプリからそのまま同期できます。Baikalのような既存のCalDAVサーバーより設置が軽く、共有レンタルサーバーでも動きます。予定を他社のクラウドに預けたくない場合の選択肢になります。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kcaldav",
+  "githubUrl": "https://github.com/katsushi2441/kcaldav",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-09T20:51:04Z",
+  "githubPushedAt": "2026-08-21T02:21:27Z",
+  "useCases": [
+   {
+    "text": "予定を自社サーバーに置く"
+   },
+   {
+    "text": "iPhoneやAndroidの標準カレンダーと同期する"
+   },
+   {
+    "text": "Thunderbirdと同期する"
+   },
+   {
+    "text": "家族や社内で予定を共有する"
+   },
+   {
+    "text": "Googleカレンダーをやめる"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "CalDAV サーバー 構築"
+   },
+   {
+    "text": "カレンダー 自社サーバー"
+   },
+   {
+    "text": "Googleカレンダー 代替"
+   },
+   {
+    "text": "Baikal 代替"
+   },
+   {
+    "text": "予定表 セルフホスト"
+   },
+   {
+    "text": "CalDAV PHP"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "どの端末から使えますか？",
+    "answer": "CalDAVに対応したアプリなら使えます。iPhoneとAndroidの標準カレンダー、Thunderbirdで動作を確認しています。"
+   },
+   {
+    "question": "データベースは必要ですか？",
+    "answer": "不要です。ファイルで保存します。"
+   },
+   {
+    "question": "Googleカレンダーと同期できますか？",
+    "answer": "双方向の同期は行いません。予定を自社側に持つための仕組みです。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02",
+  "sourceLpName": "カレンダー同期（kcaldav）",
+  "demoUrl": "https://proto.exbridge.jp/kcaldav/kcaldav.php",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02"
+ },
+ {
+  "name": "Kurage Reserve",
+  "slug": "kreserve",
+  "category": "booking",
+  "featured": false,
+  "summary": "ダブルブッキングを排他ロックで防ぐ、サロン・クリニック・士業向けの予約受付システムです。",
+  "description": "予約ページと管理画面のセットです。同じ時間帯に予約が重ならないよう、判定と書き込みを排他ロックの中で行います。電話での予約受付をやめたい店舗や、少人数で運営している事業所を想定しています。PHPのみで動きデータベースは不要です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kreserve",
+  "githubUrl": "https://github.com/katsushi2441/kreserve",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-09T19:18:07Z",
+  "githubPushedAt": "2026-08-09T19:26:07Z",
+  "useCases": [
+   {
+    "text": "Webから予約を受ける"
+   },
+   {
+    "text": "電話での受付をやめる"
+   },
+   {
+    "text": "ダブルブッキングを防ぐ"
+   },
+   {
+    "text": "予約状況を管理画面で見る"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "予約システム 買い切り"
+   },
+   {
+    "text": "RESERVA 代替"
+   },
+   {
+    "text": "予約 自社サーバー"
+   },
+   {
+    "text": "サロン 予約 システム"
+   },
+   {
+    "text": "予約 PHP DB不要"
+   },
+   {
+    "text": "ダブルブッキング 防止"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "ダブルブッキングはどう防いでいますか？",
+    "answer": "空き状況の判定と予約の書き込みを排他ロックの中で行います。同時に申し込まれても、後の一方は失敗します。"
+   },
+   {
+    "question": "決済はできますか？",
+    "answer": "この製品には決済機能がありません。注文と決済までを一つにしたい場合は Kurage PayLink をご覧ください。"
+   },
+   {
+    "question": "メールは届きますか？",
+    "answer": "設定したメールサーバーから通知を送れます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
+  "sourceLpName": "予約・受付システム（kreserve）",
+  "demoUrl": "https://proto.exbridge.jp/kreserve/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2"
+ },
+ {
+  "name": "Kurage TrackGeo",
+  "slug": "ktrackgeo",
+  "category": "analytics",
+  "featured": false,
+  "summary": "自社サイトへの流入を、AIからの参照も含めて記録するアクセス解析です。",
+  "description": "アクセスログを自社のサーバーに記録し、どこから来たのか、どのページを見たのかを追えるようにします。検索エンジンだけでなく、AIの回答経由での参照も記録の対象にしています。他社の解析サービスに依存せず、生のログを自分で持てる点が特徴です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/ktrackgeo",
+  "githubUrl": "https://github.com/katsushi2441/ktrackgeo",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-07T11:29:59Z",
+  "githubPushedAt": "2026-08-07T11:31:02Z",
+  "useCases": [
+   {
+    "text": "流入元を自社で記録する"
+   },
+   {
+    "text": "AI経由の参照を見つける"
+   },
+   {
+    "text": "ページごとの閲覧を追う"
+   },
+   {
+    "text": "解析データを他社に預けない"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "アクセス解析 自社サーバー"
+   },
+   {
+    "text": "Googleアナリティクス 代替"
+   },
+   {
+    "text": "AI 流入 計測"
+   },
+   {
+    "text": "アクセスログ 解析"
+   },
+   {
+    "text": "解析 買い切り"
+   },
+   {
+    "text": "GEO 計測"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "Googleアナリティクスの代わりになりますか？",
+    "answer": "流入元とページ閲覧の記録という基本の部分は代わりになります。広告連携や高度な分析機能はありません。"
+   },
+   {
+    "question": "データはどこに置かれますか？",
+    "answer": "自社のサーバーです。外部へ送信しません。"
+   },
+   {
+    "question": "AI経由の流入はどう分かりますか？",
+    "answer": "参照元と利用者の情報から判別できる範囲を記録します。すべてを識別できるわけではありません。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc",
+  "sourceLpName": "AIアクセス解析（ktrackgeo）＋ VWork教材",
+  "demoUrl": "https://proto.exbridge.jp/ktrackgeo/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc"
+ },
+ {
+  "name": "Kurage Check It",
+  "slug": "kcheckit",
+  "category": "monitoring",
+  "featured": false,
+  "summary": "必要な情報を監視して保存し、変化があったら知らせる仕組みです。RSSやAPIを対象にできます。",
+  "description": "見ておきたいページやRSS、APIを定期的に確認し、内容を保存して、変わったときに通知します。競合のお知らせ、法令や制度の更新、取引先の発表などを人手で見に行く作業をなくすための道具です。記録が残るので、いつ何が変わったかを後から追えます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kcheckit",
+  "githubUrl": "https://github.com/katsushi2441/kcheckit",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-06T23:32:33Z",
+  "githubPushedAt": "2026-08-07T03:16:36Z",
+  "useCases": [
+   {
+    "text": "競合サイトの更新を監視する"
+   },
+   {
+    "text": "制度や法令の変更を見逃さない"
+   },
+   {
+    "text": "RSSをまとめて追う"
+   },
+   {
+    "text": "APIの応答を定期的に記録する"
+   },
+   {
+    "text": "変化があったときだけ知らせる"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "サイト 更新 監視"
+   },
+   {
+    "text": "情報収集 自動化"
+   },
+   {
+    "text": "RSS 監視 通知"
+   },
+   {
+    "text": "ページ 変更 検知"
+   },
+   {
+    "text": "監視 買い切り"
+   },
+   {
+    "text": "情報 監視 PHP"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "どんなものを監視できますか？",
+    "answer": "Webページ、RSS、APIの応答です。ログインが必要なページは設定が要ります。"
+   },
+   {
+    "question": "どのくらいの間隔で確認しますか？",
+    "answer": "設定で決められます。サーバーのcronで動かします。"
+   },
+   {
+    "question": "通知はどこに届きますか？",
+    "answer": "メールのほか、設定で外部の通知先へ送れます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730",
+  "sourceLpName": "情報監視システム（kcheckit）＋ VWork教材",
+  "demoUrl": "https://proto.exbridge.jp/kcheckit/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=232b3c1d11b6a730"
+ },
+ {
+  "name": "Kurage Billing",
+  "slug": "kbilling",
+  "category": "accounting",
+  "featured": false,
+  "summary": "請求書をPDFで発行し、専用URLをメールで送って銀行振込やPayPalで支払ってもらうシステムです。",
+  "description": "請求書をPDFで作り、支払い用のURLをメールで送ります。受け取った側はそのURLから銀行振込またはPayPalで支払えます。入金の確認までを一つの流れで扱えるので、請求と回収が別々の作業になりません。データベースは不要で、外部のサービスに顧客情報を預けません。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kbilling",
+  "githubUrl": "https://github.com/katsushi2441/kbilling",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-05T11:55:23Z",
+  "githubPushedAt": "2026-08-07T03:16:34Z",
+  "useCases": [
+   {
+    "text": "請求書をPDFで発行する"
+   },
+   {
+    "text": "支払い用URLをメールで送る"
+   },
+   {
+    "text": "銀行振込とPayPalで受け取る"
+   },
+   {
+    "text": "入金の確認まで一つで行う"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "請求書 発行 システム"
+   },
+   {
+    "text": "請求 買い切り"
+   },
+   {
+    "text": "入金確認 自動化"
+   },
+   {
+    "text": "請求書 PDF 自動"
+   },
+   {
+    "text": "請求管理 自社サーバー"
+   },
+   {
+    "text": "集金 システム"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "どの支払い方法に対応していますか？",
+    "answer": "銀行振込とPayPalです。他の決済を追加したい場合はカスタマイズになります。"
+   },
+   {
+    "question": "会計ソフトと連携できますか？",
+    "answer": "CSVで書き出せます。直接の連携は行いません。"
+   },
+   {
+    "question": "Kurage PayLinkとの違いは何ですか？",
+    "answer": "こちらは請求書の発行と集金が中心です。PayLinkは注文の受付から請求・決済までを一つにしたものです。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
+  "sourceLpName": "請求書発行・集金システム（kbilling）＋ VWork教材",
+  "demoUrl": "https://proto.exbridge.jp/kbilling/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6"
+ },
+ {
+  "name": "Kurage PayLink",
+  "slug": "kpaylink",
+  "category": "commerce",
+  "featured": false,
+  "summary": "注文を受けると請求書PDFが発行され、そのまま銀行振込やPayPalで決済まで進むページです。",
+  "description": "決まった商品と金額の注文ページを設定ファイルで作ります。注文が入ると請求書のPDFが発行され、支払い用のURLから銀行振込またはPayPalで決済できます。商品数が少なく、注文から入金までを一つにまとめたい事業に向いています。データベースは不要です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kpaylink",
+  "githubUrl": "https://github.com/katsushi2441/kpaylink",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-05T12:42:13Z",
+  "githubPushedAt": "2026-08-07T03:16:37Z",
+  "useCases": [
+   {
+    "text": "決まった商品の注文ページを作る"
+   },
+   {
+    "text": "注文から請求書発行までを自動にする"
+   },
+   {
+    "text": "銀行振込とPayPalで受け取る"
+   },
+   {
+    "text": "少数の商品を売る"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "注文フォーム 決済"
+   },
+   {
+    "text": "請求書 決済 一体"
+   },
+   {
+    "text": "PayPal 注文ページ"
+   },
+   {
+    "text": "買い切り 決済システム"
+   },
+   {
+    "text": "注文 自社サーバー"
+   },
+   {
+    "text": "決済ページ 作成"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "カートは付いていますか？",
+    "answer": "付いていません。決まった商品と金額を扱う設計です。商品数が多い場合はECのオープンソースが向きます。"
+   },
+   {
+    "question": "どの決済に対応していますか？",
+    "answer": "銀行振込とPayPalです。"
+   },
+   {
+    "question": "Kurage Billingとの違いは何ですか？",
+    "answer": "PayLinkは注文の受付から始まります。Billingは既にある取引に対して請求書を出すものです。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
+  "sourceLpName": "商品注文・請求書・決済ページ（kpaylink）＋ VWork教材",
+  "demoUrl": "https://proto.exbridge.jp/kpaylink/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4"
+ },
+ {
+  "name": "Kurage Send Invoice",
+  "slug": "kinvoice",
+  "category": "accounting",
+  "featured": false,
+  "summary": "領収書のPDFを発行し、ダウンロード用のURLをメールで送るシステムです。",
+  "description": "領収書をPDFで作り、ダウンロードできるURLをメールで送ります。PDFを添付しないため、メールの容量制限や添付ファイルの拒否に引っかかりません。発行の記録が残るので、いつ誰に出したかを後から追えます。データベースは不要です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kinvoice",
+  "githubUrl": "https://github.com/katsushi2441/kinvoice",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-05T06:21:40Z",
+  "githubPushedAt": "2026-08-07T03:16:33Z",
+  "useCases": [
+   {
+    "text": "領収書をPDFで発行する"
+   },
+   {
+    "text": "ダウンロードURLをメールで送る"
+   },
+   {
+    "text": "発行の記録を残す"
+   },
+   {
+    "text": "添付ファイルの拒否を避ける"
+   },
+   {
+    "text": "レンタルサーバーに置く"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "領収書 発行 システム"
+   },
+   {
+    "text": "領収書 PDF 自動"
+   },
+   {
+    "text": "領収書 メール 送信"
+   },
+   {
+    "text": "買い切り 領収書"
+   },
+   {
+    "text": "領収書 管理 自社"
+   },
+   {
+    "text": "インボイス 領収書"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "なぜPDFを添付しないのですか？",
+    "answer": "添付ファイルは容量制限や受信側の設定で届かないことがあるためです。URLを送る形にすると確実に渡せます。"
+   },
+   {
+    "question": "インボイス制度に対応していますか？",
+    "answer": "必要な項目を記載できます。登録番号などは設定に入れてください。制度の解釈は税理士にご確認ください。"
+   },
+   {
+    "question": "発行の記録は残りますか？",
+    "answer": "残ります。いつ誰に発行したかを一覧で確認できます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0",
+  "sourceLpName": "領収書メール送信システム（kinvoice）＋ VWork教材",
+  "demoUrl": "https://proto.exbridge.jp/kinvoice/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0"
+ },
+ {
+  "name": "Kurage Logo Generator",
+  "slug": "klogogen",
+  "category": "media",
+  "featured": false,
+  "summary": "AIでロゴを生成し、SVG・透過PNG・PDFの形式で書き出せるWebサービスです。",
+  "description": "入力した社名や事業内容からロゴの候補をAIで生成し、SVG・透過PNG・PDFで書き出します。ベクター形式で出せるので、名刺や看板など大きさの違う用途にそのまま使えます。生成した画像から輪郭を取り出す処理を入れており、そのままでは使いにくいAI画像を実用的な形に整えます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/klogogen",
+  "githubUrl": "https://github.com/katsushi2441/klogogen",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-24T20:03:04Z",
+  "githubPushedAt": "2026-08-24T20:03:10Z",
+  "useCases": [
+   {
+    "text": "社名からロゴ案を作る"
+   },
+   {
+    "text": "SVGで書き出して拡大に耐える形にする"
+   },
+   {
+    "text": "透過PNGを資料に使う"
+   },
+   {
+    "text": "印刷用にPDFで渡す"
+   },
+   {
+    "text": "ロゴの案を短時間で複数見る"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ロゴ 作成 AI"
+   },
+   {
+    "text": "ロゴ SVG 生成"
+   },
+   {
+    "text": "ロゴ 無料 自作"
+   },
+   {
+    "text": "ロゴジェネレーター"
+   },
+   {
+    "text": "透過PNG ロゴ"
+   },
+   {
+    "text": "ロゴ 印刷用 PDF"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "生成したロゴは商用利用できますか？",
+    "answer": "利用条件は生成に使うモデルによります。導入時に使うモデルとその条件を確認してください。"
+   },
+   {
+    "question": "SVGはきれいに出ますか？",
+    "answer": "生成画像から輪郭を取り出して変換します。写実的な絵より、単純な形のロゴのほうがきれいに出ます。"
+   },
+   {
+    "question": "何案くらい出せますか？",
+    "answer": "設定と実行時間しだいです。短時間で複数案を並べて比べる使い方を想定しています。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage Game Master",
+  "slug": "kgm",
+  "category": "media",
+  "featured": false,
+  "summary": "AIがゲームマスターを務める、日本語のソロTRPGです。NarrativeEngine-Pを土台にしています。",
+  "description": "一人で遊べるテーブルトークRPGで、進行役をAIが務めます。物語の生成にNarrativeEngine-Pを使い、日本語で遊べるように手を入れています。複数の利用者が同時に別々の物語を進められるようにしてあり、Webから遊べます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kgm",
+  "githubUrl": "https://github.com/katsushi2441/kgm",
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-08-24T20:03:11Z",
+  "githubPushedAt": "2026-08-24T20:03:15Z",
+  "useCases": [
+   {
+    "text": "一人でTRPGを遊ぶ"
+   },
+   {
+    "text": "AIに進行役をさせる"
+   },
+   {
+    "text": "日本語で物語を生成する"
+   },
+   {
+    "text": "複数人が別々に遊べるようにする"
+   },
+   {
+    "text": "自社サーバーで運営する"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ソロ TRPG"
+   },
+   {
+    "text": "AI ゲームマスター"
+   },
+   {
+    "text": "TRPG 一人用"
+   },
+   {
+    "text": "物語 生成 AI"
+   },
+   {
+    "text": "TRPG 日本語 Web"
+   },
+   {
+    "text": "AI 物語 ゲーム"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "何人で遊べますか？",
+    "answer": "一人用です。複数の利用者がそれぞれ別の物語を同時に進められます。"
+   },
+   {
+    "question": "どのAIを使いますか？",
+    "answer": "設定で切り替えられます。ローカルのモデルでも動きます。"
+   },
+   {
+    "question": "元になっているソフトは何ですか？",
+    "answer": "NarrativeEngine-P です。日本語化とマルチユーザー化を加えています。"
+   }
+  ],
+  "funnel": "oss"
+ },
+ {
+  "name": "Kurage AI MOM",
+  "slug": "kaimom",
+  "category": "meeting",
+  "featured": false,
+  "summary": "会議の録音をアップすると、同じサーバーのwhisper.cppが文字起こしし、AIが議事録の下書きを作り、人が承認したものだけが確定議事録になるシステムです。",
+  "description": "録音ファイル(wav/mp3/m4a等)をブラウザからアップすると、自社サーバー内のWhisper(whisper.cpp)が文字起こしを行います。音声は外部サービスに送信されません。AIが概要・決定事項・ToDo(担当/期限)・課題・次回の下書きを作り、確定議事録を作れるのは人の承認だけです(AI側の入口に承認権限がない設計)。要約AIは自社サーバーのOllama・OpenAI互換API・なしの3択。確定議事録は印刷・Markdown出力に対応し、録音原本と文字起こし全文を保持して監査ログを残します。PHPとSQLiteの1ファイル構成です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://github.com/katsushi2441/kaimom",
+  "githubUrl": "https://github.com/katsushi2441/kaimom",
+  "stars": 0,
+  "language": "PHP",
+  "githubCreatedAt": "2026-08-26T01:50:00Z",
+  "githubPushedAt": "2026-08-26T02:00:00Z",
+  "useCases": [
+   {
+    "text": "対面会議やICレコーダーの録音を文字起こしする"
+   },
+   {
+    "text": "議事録の下書き(決定事項・ToDo)をAIに作らせる"
+   },
+   {
+    "text": "音声を外部クラウドに出さずに議事録化する"
+   },
+   {
+    "text": "確定議事録を印刷・Markdownで配布する"
+   },
+   {
+    "text": "録音原本と議事録を突き合わせて監査する"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "議事録 AI 自社サーバー"
+   },
+   {
+    "text": "whisper 文字起こし"
+   },
+   {
+    "text": "ボイスレコーダー 文字起こし"
+   },
+   {
+    "text": "Notta 代替"
+   },
+   {
+    "text": "議事録 買い切り"
+   },
+   {
+    "text": "文字起こし オフライン"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "音声データは外部に送信されますか？",
+    "answer": "されません。文字起こしは同じサーバー内のwhisper.cppが行います。要約に外部APIを選んだ場合もテキストのみで、音声は送信されません。"
+   },
+   {
+    "question": "AIが議事録を確定させることはありますか？",
+    "answer": "ありません。文字起こしも要約も下書きまでで、確定議事録を作れるのは人の承認だけです。承認者と日時が記録されます。"
+   },
+   {
+    "question": "話者の自動分離はできますか？",
+    "answer": "v1にはありません。話者名が必要な場合は文字起こし全文を人が編集して付けます。"
+   }
+  ],
+  "funnel": "oss",
+  "demoUrl": "https://proto.exbridge.jp/kaimom/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
+  "lpUrl": "https://exbridge.jp/whisper-mojiokoshi.php",
+  "sourceLpName": "AI議事録作成システム（Kurage AI MOM）"
+ }
 ]
