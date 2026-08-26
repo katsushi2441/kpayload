@@ -772,7 +772,7 @@
   "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
   "officialUrl": "https://freescout.net",
   "githubUrl": "https://github.com/freescout-help-desk/freescout",
-  "lpUrl": "https://kurage.exbridge.jp/zendesk-helpdesk.php",
+  "lpUrl": "https://exbridge.jp/toiawase-kanri.php",
   "useCases": [
    {
     "text": "共有メールボックス"
@@ -805,8 +805,9 @@
     "answer": "本体以外のモジュール、サーバー、メール、保守に費用が生じる場合があります。"
    }
   ],
-  "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-  "funnel": "oss"
+  "sourceLpName": "FreeScout 日本語導入キット（共有レンタルサーバー編）",
+  "funnel": "oss",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da"
  },
  {
   "name": "Kurage Groupware (kvgwc)",
