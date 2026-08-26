@@ -3500,5 +3500,127 @@
   "buyUrl": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
   "lpUrl": "https://exbridge.jp/whisper-mojiokoshi.php",
   "sourceLpName": "AI議事録作成システム（Kurage AI MOM）"
+ },
+ {
+  "name": "QloApps",
+  "slug": "qloapps",
+  "category": "booking",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "ホテル運営を丸ごとオンライン化するオープンソースのホテル管理・予約システムです。PMS・予約エンジン・ホテル公式サイトが1つになっています。",
+  "description": "客室・料金プラン・空室カレンダーの管理(PMS)、公式サイトからの直接予約(ブッキングエンジン)、ホテルのWebサイトそのものまでを1本で提供するオープンソースです。OTA(予約サイト)への手数料を減らし、公式サイト直販を増やしたい宿泊施設向け。PrestaShopをベースにしており、複数ホテル・複数通貨・クーポン・季節料金に対応します。GitHubスター14,000超の定番です。",
+  "license": "OSL-3.0",
+  "licenseTier": "osi-network-copyleft",
+  "japaneseStatus": "多言語対応(PrestaShopベース)。日本語UIの翻訳範囲は導入時に要確認。",
+  "officialUrl": "https://qloapps.com/",
+  "githubUrl": "https://github.com/Qloapps/QloApps",
+  "stars": 14237,
+  "language": "PHP",
+  "useCases": [
+   {
+    "text": "公式サイトからの直接予約を受ける"
+   },
+   {
+    "text": "客室・料金・空室をPMSで一元管理する"
+   },
+   {
+    "text": "OTA手数料を減らして直販比率を上げる"
+   },
+   {
+    "text": "小規模ホテル・旅館・ゲストハウスのサイトを持つ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ホテル 予約システム 自社"
+   },
+   {
+    "text": "tripla 代替"
+   },
+   {
+    "text": "PMS オープンソース"
+   },
+   {
+    "text": "宿泊 予約エンジン 無料"
+   },
+   {
+    "text": "ホテル管理システム OSS"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "OTA(楽天トラベル・じゃらん等)との在庫連動はできますか？",
+    "answer": "QloApps単体ではできません。公式サイトの直接予約・PMS・サイト構築が守備範囲で、OTA在庫連動には別途サイトコントローラーの契約が必要です。"
+   },
+   {
+    "question": "日本語で使えますか？",
+    "answer": "PrestaShopベースの多言語仕組みを持ちますが、日本語翻訳の範囲は導入時に確認が必要です。当社で日本語化・構築の支援も可能です。"
+   },
+   {
+    "question": "どんな施設に向いていますか？",
+    "answer": "公式サイトからの直接予約を増やしたい小規模ホテル・旅館・ゲストハウスに向きます。OTA依存度が高く在庫連動が生命線の施設には向きません。"
+   }
+  ]
+ },
+ {
+  "name": "Frappe HR",
+  "slug": "frappe-hr",
+  "category": "hr",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "採用から勤怠・休暇・評価・給与まで13モジュールを備えた、オープンソースの統合人事(HR)システムです。",
+  "description": "ERPNextと同じFrappe Framework上に構築された人事・給与のオープンソースです。社員情報・組織図・採用・入退社、勤怠(打刻・シフト)・休暇、目標と評価(アプレイザル)、経費精算、給与計算までを1つのシステムで扱えます。モバイルアプリあり。GitHubスター8,600超で、当社が日本語化キットを出しているFrappe Helpdeskと同じ開発元エコシステムです。",
+  "license": "GPL-3.0",
+  "licenseTier": "osi-copyleft",
+  "japaneseStatus": "多言語対応。日本語翻訳は部分的(給与は国別設定が必要)。",
+  "officialUrl": "https://frappe.io/hr",
+  "githubUrl": "https://github.com/frappe/hrms",
+  "stars": 8674,
+  "language": "Python",
+  "useCases": [
+   {
+    "text": "社員台帳・組織図・入退社を一元管理する"
+   },
+   {
+    "text": "勤怠・シフト・休暇申請を回す"
+   },
+   {
+    "text": "目標管理と人事評価(アプレイザル)を運用する"
+   },
+   {
+    "text": "人事データを1か所に集めてタレントマネジメントする"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "人事システム オープンソース"
+   },
+   {
+    "text": "タレントマネジメント OSS"
+   },
+   {
+    "text": "HRBrain 代替"
+   },
+   {
+    "text": "タレントパレット 代替"
+   },
+   {
+    "text": "勤怠 評価 無料 システム"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "日本の給与計算(社会保険・源泉徴収)に対応していますか？",
+    "answer": "給与モジュールは国別設定を自分で組む方式です。日本の法定計算をそのまま使える状態ではないため、給与は既存サービスを残し、勤怠・評価・人事台帳から使い始めるのが現実的です。"
+   },
+   {
+    "question": "HRBrainやタレントパレットの完全な代替になりますか？",
+    "answer": "人事データの一元化・目標と評価の運用は代替できます。分析ダッシュボードや科学的人事の支援機能は同等ではありません。"
+   },
+   {
+    "question": "何人まで使えますか？",
+    "answer": "ユーザー数の制限はありません。人数課金が無いのがSaaSとの大きな違いです。"
+   }
+  ]
  }
 ]
