@@ -70,7 +70,7 @@ ${DEMO_CSS}
 a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}.relnews{width:min(1080px,calc(100% - 34px));margin:22px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:16px 20px}.relnews h2{font-size:15px;margin:0 0 8px}.relnews .news-list{margin:0;padding:0;list-style:none;font-size:13.5px}.relnews .news-list li{padding:5px 0;border-bottom:1px dotted var(--line);display:flex;gap:10px;justify-content:space-between}.relnews .news-list li:last-child{border-bottom:0}.relnews .news-date{color:var(--muted);font-size:11.5px;white-space:nowrap}
 .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 26px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;text-decoration:none;font-size:16px}
-.brand-logo{height:30px;width:auto;display:block}
+.brand-logo{width:32px;height:32px;display:block;border-radius:7px}
 .toplinks{display:flex;gap:13px;flex-wrap:wrap;font-size:13px;font-weight:700}
 .hero{background:linear-gradient(120deg,var(--dark),#14343d);color:#fff;padding:52px 0 40px}
 .hero .kicker{color:#7fe3d6;font-size:13px;font-weight:800;letter-spacing:.06em;margin:0 0 10px}
@@ -95,6 +95,7 @@ th{width:32%;color:var(--muted);font-weight:800;font-size:12px}
 .note{font-size:12px;color:var(--muted)}
 footer{margin-top:34px;border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13px}
 @media(max-width:820px){.grid,.cat-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.topbar{padding:10px 14px;gap:10px}.brand{font-size:14.5px;gap:8px}.brand-logo{width:28px;height:28px}.toplinks{gap:10px;font-size:12.5px}.toplinks a:not(:last-child){display:none}.toplinks a:last-child{background:var(--blue);color:#fff;border-radius:999px;padding:7px 14px;text-decoration:none}}
 </style>`
 }
 
@@ -141,7 +142,7 @@ ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</sc
 <script>(function(){var s=document.createElement('script');s.src='${SITE}/simpletrack.php?url='+encodeURIComponent(location.href)+'&ref='+encodeURIComponent(document.referrer);s.async=true;document.head.appendChild(s)})();</script>
 ${NEWS_SCRIPT}
 ${styles()}</head><body>
-<header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo.svg" alt="" width="140" height="30" loading="eager"><span>株式会社エクスブリッジ</span></a>
+<header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo-mark-64.png" alt="" width="32" height="32" loading="eager"><span>株式会社エクスブリッジ</span></a>
 <nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>
 ${body}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
