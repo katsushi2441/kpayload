@@ -121,8 +121,8 @@ ${oss.map((o) => `<tr><th><a href="${SITE}/ai-system/${attr(o.slug)}/?ref=soluti
 </div></section>` : ''}
 
 ${p.products.length ? `<section><div class="panel">
-<h2>すぐ導入できる買い切り製品（ソースコード込み）</h2>
-<p>当社が開発・販売している買い切りの業務システムです。月額はかからず、ソースコードごとお渡しするので自社で改造できます（MITライセンス）。</p>
+<h2>すぐ導入できる買い切り商品（Kurage App Store）</h2>
+<p>当社が販売している買い切り商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。</p>
 <div class="cat-grid">
 ${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>買い切り ${h(pr.price)}（税込）・Kurage App Store</span></a>`).join('')}
 </div>
