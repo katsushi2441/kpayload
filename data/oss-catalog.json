@@ -807,7 +807,9 @@
   ],
   "sourceLpName": "FreeScout 日本語導入キット（共有レンタルサーバー編）",
   "funnel": "oss",
-  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da"
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOyYjMgoTZsNWa0JXY",
+  "brainLabel": "導入手順書をBrainで読む(5,500円)"
  },
  {
   "name": "Kurage Groupware (kvgwc)",
@@ -3499,7 +3501,9 @@
   "demoUrl": "https://proto.exbridge.jp/kaimom/",
   "buyUrl": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
   "lpUrl": "https://exbridge.jp/whisper-mojiokoshi.php",
-  "sourceLpName": "AI議事録作成システム（Kurage AI MOM）"
+  "sourceLpName": "AI議事録作成システム（Kurage AI MOM）",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bxkDOyYjMgoTZsNWa0JXY",
+  "brainLabel": "導入手順書をBrainで読む(55,000円)"
  },
  {
   "name": "QloApps",
@@ -3732,7 +3736,10 @@
     "question": "共有レンタルサーバーで動きますか？",
     "answer": "動きません。Dockerと25番ポートを使うため専用VPS(2コア/4GB〜)が必要です。国内VPSは25番ポートの解除申請(OP25B)が必要な場合があります。"
    }
-  ]
+  ],
+  "lpUrl": "https://exbridge.jp/mail-haishin.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/b0ATMzYjMgoTZsNWa0JXY",
+  "brainLabel": "導入手順書をBrainで読む(5,500円)"
  },
  {
   "name": "Decap CMS",
@@ -3795,6 +3802,9 @@
     "question": "日本語で使えますか？",
     "answer": "使えます。管理画面の日本語UIが公式同梱で、設定1行(locale: 'ja')で切り替わります。当社が編集画面まで日本語表示を実測済みです。"
    }
-  ]
+  ],
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/b2ATMzYjMgoTZsNWa0JXY",
+  "brainLabel": "導入手順書をBrainで読む(5,500円)"
  }
 ]
