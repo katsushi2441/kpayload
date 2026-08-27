@@ -10,6 +10,7 @@
 #   set -a; . /home/kojima/work/aixec/.env; set +a
 #   bash scripts/deploy.sh oss         # kurage: oss/ + vibe-oss.html
 #   bash scripts/deploy.sh ai-system   # exbridge: ai-system/
+#   bash scripts/deploy.sh zenn       # exbridge: zenn/
 #   bash scripts/deploy.sh all
 set -uo pipefail
 
@@ -55,6 +56,11 @@ fi
 if [ "$what" = "saas" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: saas/ =="
   put_tree /home/kojima/work/exbridge_jp exbridge_jp saas || rc=1
+fi
+
+if [ "$what" = "zenn" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: zenn/ =="
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp zenn || rc=1
 fi
 
 exit $rc
