@@ -69,8 +69,8 @@ ${DEMO_CSS}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.85;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
 a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}.relnews{width:min(1080px,calc(100% - 34px));margin:22px auto 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:16px 20px}.relnews h2{font-size:15px;margin:0 0 8px}.relnews .news-list{margin:0;padding:0;list-style:none;font-size:13.5px}.relnews .news-list li{padding:5px 0;border-bottom:1px dotted var(--line);display:flex;gap:10px;justify-content:space-between}.relnews .news-list li:last-child{border-bottom:0}.relnews .news-date{color:var(--muted);font-size:11.5px;white-space:nowrap}
 .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 26px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:800;text-decoration:none}
-.brand-logo{height:44px;width:auto;display:block}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;text-decoration:none;font-size:16px}
+.brand-logo{height:30px;width:auto;display:block}
 .toplinks{display:flex;gap:13px;flex-wrap:wrap;font-size:13px;font-weight:700}
 .hero{background:linear-gradient(120deg,var(--dark),#14343d);color:#fff;padding:52px 0 40px}
 .hero .kicker{color:#7fe3d6;font-size:13px;font-weight:800;letter-spacing:.06em;margin:0 0 10px}
@@ -141,7 +141,7 @@ ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</sc
 <script>(function(){var s=document.createElement('script');s.src='${SITE}/simpletrack.php?url='+encodeURIComponent(location.href)+'&ref='+encodeURIComponent(document.referrer);s.async=true;document.head.appendChild(s)})();</script>
 ${NEWS_SCRIPT}
 ${styles()}</head><body>
-<header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo.svg" alt="株式会社エクスブリッジ" width="205" height="44" loading="eager"></a>
+<header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo.svg" alt="" width="140" height="30" loading="eager"><span>株式会社エクスブリッジ</span></a>
 <nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>
 ${body}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
