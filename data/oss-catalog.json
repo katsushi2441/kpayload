@@ -3670,5 +3670,68 @@
     "answer": "自院サーバーに置くため、データの所在は自院の管理下になります。ただし3省2ガイドライン等への適合は導入形態に依存するため、要件を確認のうえ設計が必要です。"
    }
   ]
+ },
+ {
+  "name": "BillionMail",
+  "slug": "billionmail",
+  "category": "marketing",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "メールサーバー・メルマガ配信・テンプレート・配信解析が1つになったオープンソースです。配信数・アドレス数・ユーザー数の課金がありません。",
+  "description": "自社VPSに立てる一体型のメール配信基盤です。ドメイン・メールボックス管理(Postfix/Dovecot)、メルマガのキャンペーン配信、HTMLテンプレート、開封率・クリック率・バウンスの解析、Webメール(Roundcube)までを同梱し、Docker一式で起動します。管理画面は英語・日本語・中国語が公式対応。月額の配信SaaSと違い、リスト数や通数による課金がありません。到達性の実務(SPF/DKIM/DMARC/逆引き/ウォームアップ)は自分の仕事になる点が導入の本体です。",
+  "license": "AGPL-3.0",
+  "licenseTier": "osi-network-copyleft",
+  "japaneseStatus": "日本語UIを公式同梱(en/ja/zh)。",
+  "officialUrl": "https://billionmail.com/",
+  "githubUrl": "https://github.com/Billionmail/BillionMail",
+  "stars": 15456,
+  "language": "Go",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=495b5aca4ee119db",
+  "sourceLpName": "BillionMail 日本語導入キット（VPS編）",
+  "useCases": [
+   {
+    "text": "会員・顧客向けメルマガを配信数無制限で送る"
+   },
+   {
+    "text": "開封率・クリック率を自社データとして持つ"
+   },
+   {
+    "text": "配信リストを外部SaaSに預けない"
+   },
+   {
+    "text": "独自ドメインのメールサーバーを持つ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "メール配信システム 無料"
+   },
+   {
+    "text": "メルマガ 配信 自社"
+   },
+   {
+    "text": "ブラストメール 代替"
+   },
+   {
+    "text": "メールサーバー オープンソース"
+   },
+   {
+    "text": "BillionMail 日本語"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "月額の配信SaaSと何が違いますか？",
+    "answer": "課金構造が違います。配信数・登録アドレス数・ユーザー数の課金がなく、かかるのはVPS代だけです。一方で迷惑メール判定を避ける実務(SPF/DKIM/DMARC・IPウォームアップ)は自分の仕事になります。"
+   },
+   {
+    "question": "日本語で使えますか？",
+    "answer": "使えます。管理画面は英語・日本語・中国語が公式同梱で、当社の確認時点で主要画面は日本語表示できました。"
+   },
+   {
+    "question": "共有レンタルサーバーで動きますか？",
+    "answer": "動きません。Dockerと25番ポートを使うため専用VPS(2コア/4GB〜)が必要です。国内VPSは25番ポートの解除申請(OP25B)が必要な場合があります。"
+   }
+  ]
  }
 ]
