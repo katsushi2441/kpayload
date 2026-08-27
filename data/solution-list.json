@@ -1013,7 +1013,8 @@
    "openproject",
    "docmost",
    "outline",
-   "kvgwc"
+   "kvgwc",
+   "decap-cms"
   ],
   "products": [
    {
@@ -1025,6 +1026,11 @@
     "name": "職務・引継ぎ管理 Kurage HR Post",
     "url": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
     "price": "55,000円"
+   },
+   {
+    "name": "Decap CMS 日本語導入キット",
+    "url": "https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47",
+    "price": "5,500円"
    }
   ],
   "brain": [],

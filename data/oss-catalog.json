@@ -3733,5 +3733,68 @@
     "answer": "動きません。Dockerと25番ポートを使うため専用VPS(2コア/4GB〜)が必要です。国内VPSは25番ポートの解除申請(OP25B)が必要な場合があります。"
    }
   ]
+ },
+ {
+  "name": "Decap CMS",
+  "slug": "decap-cms",
+  "category": "cms",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "静的サイトにブラウザの管理画面を付けるGitベースのCMSです。記事はリポジトリのMarkdownとして保存され、サーバーもデータベースも不要です。",
+  "description": "GitHub Pages等の静的サイトに、非エンジニア向けの編集画面(admin/)を追加するオープンソースです。記事・画像はGitリポジトリにコミットされ、更新履歴が全て残ります。日本語UIを公式同梱(locale: 'ja'の1行で管理画面が日本語化)。認証はGitHubログインで、OAuthの中継サーバーが1つ必要になります(当社キットはこれをPHP1枚で提供)。WordPressのような常時稼働サーバー・セキュリティ更新が存在しないのが最大の利点です。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語UIを公式同梱(locale設定のみ)。",
+  "officialUrl": "https://decapcms.org/",
+  "githubUrl": "https://github.com/decaporg/decap-cms",
+  "stars": 19318,
+  "language": "JavaScript",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47",
+  "sourceLpName": "Decap CMS 日本語導入キット（GitHub Pages＋PHP中継編）",
+  "useCases": [
+   {
+    "text": "会社サイトのお知らせを自分で更新できるようにする"
+   },
+   {
+    "text": "WordPressの保守・月額から静的サイトへ移行する"
+   },
+   {
+    "text": "制作会社が顧客へ月額ゼロ運用のサイトを納品する"
+   },
+   {
+    "text": "更新履歴をGitで完全に残す"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "decap cms 使い方"
+   },
+   {
+    "text": "netlify cms 後継"
+   },
+   {
+    "text": "wordpress 静的サイト 移行"
+   },
+   {
+    "text": "github pages cms"
+   },
+   {
+    "text": "静的サイト 更新 非エンジニア"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "WordPressの代わりになりますか？",
+    "answer": "お知らせ・実績・ブログ中心のサイトなら代わりになります。フォームや会員機能など「動く仕組み」は静的サイトの外に出す設計になるため、そこは別の道具(買い切りフォーム等)で補います。"
+   },
+   {
+    "question": "サーバーは必要ですか？",
+    "answer": "サイト本体はGitHub Pagesで無料です。GitHubログインの中継(OAuth)に小さなサーバーが1つ必要で、当社キットはPHP1枚を共有レンタルサーバーに置く方式にしています。"
+   },
+   {
+    "question": "日本語で使えますか？",
+    "answer": "使えます。管理画面の日本語UIが公式同梱で、設定1行(locale: 'ja')で切り替わります。当社が編集画面まで日本語表示を実測済みです。"
+   }
+  ]
  }
 ]
