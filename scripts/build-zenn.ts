@@ -56,6 +56,8 @@ type ZennPage = {
     summary: string       // 記事の紹介文（codex）
     points?: string[]     // 記事に書かれている項目（codex）
   }
+  githubUrl?: string
+  inCatalog?: boolean
   ossSummary?: string
   category?: string
   related?: string[]      // 同じOSSの他ページ slug
@@ -95,7 +97,7 @@ const card = (href: string, meta: string, title: string, note: string) => `
 
 function pageHtml(p: ZennPage): string {
   const a = p.article
-  const zennUrl = `https://zenn.dev${a.path}`
+  const zennUrl = a.path.startsWith('http') ? a.path : `https://zenn.dev${a.path}`
   const title = p.pageTitle
   const desc = `${p.keyword}について、Zennに公開されている実践記事「${a.title}」を紹介します。あわせて${p.ossName}の導入情報・SaaSからの置き換え可否・構築代行の入口もまとめました。`
   const url = `${BASE}/${p.slug}.html`
@@ -116,6 +118,7 @@ function pageHtml(p: ZennPage): string {
     ours.push(card(`${SITE}/solution/${x.slug}.html?ref=exbridge-zenn`, '業種・業務別', `${x.name}のITソリューション`,
       'その業種で使われているSaaSと、固定費を減らす道筋。'))
   }
+  if (p.githubUrl) ours.push(card(p.githubUrl, 'GitHub', `${p.ossName} のソースコード`, 'ライセンスと更新状況は元リポジトリで確認できます。'))
   if (p.lpUrl) ours.push(card(`${p.lpUrl}${p.lpUrl.includes('?') ? '&' : '?'}ref=exbridge-zenn`, '解説ページ', `${p.ossName} の導入解説`, '選択肢と費用の考え方をまとめています。'))
   if (p.buyUrl) ours.push(card(p.buyUrl, 'Kurage App Store', `${p.ossName} 日本語導入キット`, '実測手順書とAI用の構築指示書つき。買い切りです。'))
   if (p.brainUrl) ours.push(card(p.brainUrl, 'Brain', p.brainLabel || `${p.ossName} 導入手順書`, '同じ手順書をBrainの記事としても読めます。'))
