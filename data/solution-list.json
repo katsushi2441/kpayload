@@ -806,5 +806,466 @@
     "a": "kreserveはflockロックを使い、同じ予約枠への処理を排他することで、ダブルブッキングを構造的に防ぎます。サロン、クリニック、士業などの予約受付に利用できます。"
    }
   ]
+ },
+ {
+  "slug": "koukoku",
+  "kind": "industry",
+  "name": "広告代理店・マーケティング会社",
+  "kicker": "広告代理店 顧客管理 案件管理",
+  "saasSlugs": [
+   "salesforce",
+   "hubspot",
+   "kintone",
+   "backlog",
+   "slack"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "espocrm",
+   "krayin-crm",
+   "twenty",
+   "mautic",
+   "plane"
+  ],
+  "products": [
+   {
+    "name": "入力ゼロCRM kcrmagent",
+    "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+    "price": "55,000円"
+   },
+   {
+    "name": "AI名刺解析 Kurage AI Meishi",
+    "url": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+    "price": "55,000円"
+   },
+   {
+    "name": "EspoCRM 日本語導入キット",
+    "url": "https://kappstore.exbridge.jp/app.php?id=9d27eb0ebe2fc7e0",
+    "price": "5,500円"
+   },
+   {
+    "name": "Krayin CRM 日本語導入キット",
+    "url": "https://kappstore.exbridge.jp/app.php?id=11e7c1d9a83d1ca3",
+    "price": "5,500円"
+   }
+  ],
+  "brain": [
+   {
+    "label": "Salesforce代替を激安で作る全手順(Brain)",
+    "url": "https://brain-market.com/u/bittensorman/a/bxYzNxYjMgoTZsNWa0JXY"
+   }
+  ],
+  "lps": [],
+  "facts": "広告代理店に業種特化SaaSは少なく、実態はSalesforce/HubSpot/kintoneの人数課金が営業・案件・入稿管理を占める。SFA/CRM(商談パイプライン・顧客台帳)はEspoCRM/Krayin/Twentyで置き換え可能な成熟領域で、日本語導入キットもある。メール配信・MAの基本はMauticで組めるが、広告媒体(Google/Meta)のAPI連携やレポーティング自動化はSaaSや自社開発の領域。案件・入稿進行はPlaneで管理できる。媒体入金と広告費の立替を扱う会計はfreee等の継続が正解。",
+  "lead": "広告代理店やマーケティング会社では、営業、案件、入稿、社内連絡までSaaSが増え、人数課金の月額が積み上がりやすいものです。便利な本体や媒体連携は残しつつ、顧客台帳や案件進行など分離できる業務をOSS・買い切り製品へ移せば、運用を崩さず固定費を減らせます。まずは一業務ずつ切り分けるのが現実的です。",
+  "verdict": "GoogleやMetaなど広告媒体のAPI連携、レポーティング自動化は、既存SaaSまたは自社開発の領域であり、単純には置き換えできません。媒体入金と広告費の立替を扱う会計も、freee等を継続するのが正解です。一方、商談パイプラインや顧客台帳はEspoCRM、Krayin CRM、Twentyへ分離でき、日本語導入キットも使えます。メール配信・MAの基本はMautic、案件・入稿進行はPlaneが候補です。媒体連携の自動化が売上や工数に直結する場合、会計処理の正確性を優先する場合、または少人数で移行・保守負担が削減額を上回る場合は、現行SaaSの継続が妥当です。",
+  "faqs": [
+   {
+    "q": "広告代理店の顧客管理はSalesforceからOSSへ移行できますか？",
+    "a": "商談パイプラインと顧客台帳はEspoCRM、Krayin CRM、Twentyが候補です。活動やメールまで含めるなら要件を整理し、まず一部の営業チームで試してから段階的に移すと安全です。"
+   },
+   {
+    "q": "広告代理店向けCRMの買い切り費用はいくらですか？",
+    "a": "買い切りでは入力ゼロCRM kcrmagentが55,000円、EspoCRMとKrayin CRMの日本語導入キットが各5,500円です。別途、サーバー運用や移行作業の負担も含めて比較します。"
+   },
+   {
+    "q": "広告レポートやメール配信もOSS化できますか？",
+    "a": "基本的なメール配信・MAはMauticで組めます。ただし、GoogleやMetaのAPI連携、媒体横断のレポート自動化は単純移行できないため、SaaS継続か自社開発を検討します。"
+   }
+  ]
+ },
+ {
+  "slug": "shigyo",
+  "kind": "industry",
+  "name": "士業（税理士・社労士・行政書士）",
+  "kicker": "士業 顧客管理 予約 電子契約",
+  "saasSlugs": [
+   "freee",
+   "moneyforward",
+   "cloudsign",
+   "kintone",
+   "chatwork"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "espocrm",
+   "docuseal",
+   "kreserve",
+   "kaimom"
+  ],
+  "products": [
+   {
+    "name": "予約・受付 kreserve",
+    "url": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
+    "price": "55,000円"
+   },
+   {
+    "name": "AI議事録 Kurage AI MOM",
+    "url": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
+    "price": "55,000円"
+   },
+   {
+    "name": "EspoCRM 日本語導入キット",
+    "url": "https://kappstore.exbridge.jp/app.php?id=9d27eb0ebe2fc7e0",
+    "price": "5,500円"
+   }
+  ],
+  "brain": [
+   {
+    "label": "電子契約DocuSeal構築手順(Brain)",
+    "url": "https://brain-market.com/u/bittensorman/a/b1EDOxYjMgoTZsNWa0JXY"
+   },
+   {
+    "label": "AI議事録の導入手順書(Brain)",
+    "url": "https://brain-market.com/u/bittensorman/a/bxkDOyYjMgoTZsNWa0JXY"
+   }
+  ],
+  "lps": [],
+  "facts": "税務・労務の申告連携(freee/MF/e-Gov)は制度直結でSaaS継続が正解。一方、顧問先の台帳・案件管理をkintoneでやっている事務所は多く、ここはEspoCRMで置き換え可能。面談予約はkreserve、顧問先との定型契約の電子署名はDocuSeal(自社サーバー)、面談記録は音声を外に出せない守秘義務との相性でkaimom(院内=所内サーバー完結)が向く。クラウドサインは相手方の受け入れやすさで残す価値がある。",
+  "lead": "税理士、社労士、行政書士の事務所では、申告、電子契約、顧客管理、連絡のSaaS月額が少しずつ積み上がります。制度連携や相手方が使う本体は残し、顧問先台帳、面談予約、記録作成など分離できる業務をOSS・買い切り製品へ移すと、守秘義務にも配慮しながら固定費を減らせます。全面移行ではなく役割分担が要点です。",
+  "verdict": "freee会計、マネーフォワード クラウドやe-Govにつながる税務・労務の申告連携は制度直結であり、置き換えできません。クラウドサインも相手方の受け入れやすさが必要なら残す価値があります。一方、顧問先台帳と案件管理はEspoCRM、面談予約はkreserve、定型契約の電子署名は自社サーバーのDocuSealへ分離できます。面談記録は、音声を外に出さず所内サーバーで完結するkaimomが守秘義務と相性のよい候補です。申告連携の確実性が不可欠な業務、取引先指定の署名手段がある業務、または所内にサーバーを保守できる担当者や委託先がいない場合は、該当SaaSの継続が正解です。",
+  "faqs": [
+   {
+    "q": "税理士事務所の顧客管理をkintoneから移行できますか？",
+    "a": "顧問先台帳や案件管理はEspoCRMへ移せますが、freee会計、マネーフォワード クラウドやe-Govにつながる申告連携は制度直結のため、切り離して継続するのが安全です。"
+   },
+   {
+    "q": "士業向け予約・議事録システムの買い切り費用はいくらですか？",
+    "a": "買い切りの予約・受付 kreserveとAI議事録 Kurage AI MOMは各55,000円、EspoCRM日本語導入キットは5,500円です。サーバー保守や移行作業も含めて判断します。"
+   },
+   {
+    "q": "士業の電子契約はクラウドサインからDocuSealへ移行できますか？",
+    "a": "定型契約はDocuSealを自社サーバーで運用できます。ただし、相手方がクラウドサインを希望する場合や受け入れやすさを優先する場合は、クラウドサインを残す価値があります。"
+   }
+  ]
+ },
+ {
+  "slug": "seizo",
+  "kind": "industry",
+  "name": "製造業・町工場",
+  "kicker": "製造業 生産管理 在庫管理",
+  "saasSlugs": [
+   "kintone",
+   "desknets-neo",
+   "smaregi"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "erpnext",
+   "inventree",
+   "dolibarr",
+   "kdbagent",
+   "kvgwc"
+  ],
+  "products": [
+   {
+    "name": "DB管理ツール kdbagent",
+    "url": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
+    "price": "55,000円"
+   },
+   {
+    "name": "顔打刻つき勤怠 Kurage Kintai",
+    "url": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
+    "price": "55,000円"
+   },
+   {
+    "name": "社内グループウェア kvgwc",
+    "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+    "price": "55,000円"
+   }
+  ],
+  "brain": [],
+  "lps": [],
+  "facts": "中小製造業の実態は「Excel台帳+kintone」。専用の生産管理パッケージは高額で手が出ないことが多い。部品・材料の在庫管理はInvenTree、受発注から製造指示まで広げるならERPNext(製造モジュール)で組める。既存のAccess/Excel台帳をそのまま安全にWeb化する入口としてkdbagentが使える。現場の勤怠は顔打刻、朝礼連絡はkvgwc。設備連携(IoT)や原価の厳密管理は個別開発の領域で、無理にOSSへ寄せない。",
+  "lead": "製造業や町工場では、Excel台帳にkintoneなどを足し、在庫、勤怠、社内連絡のSaaS月額が積み上がりがちです。高額な生産管理を一気に導入せず、既存台帳や必要な本体は残しながら、在庫、Web台帳、勤怠、朝礼連絡など分離できる業務をOSS・買い切り製品へ移すと、現場を止めず固定費を減らせます。",
+  "verdict": "設備連携やIoT、製品別原価の厳密な管理は個別開発の領域であり、汎用OSSだけでは置き換えできません。無理に寄せると現場運用とのずれが生じます。一方、部品・材料の在庫管理はInvenTree、受発注から製造指示まで広げるなら製造モジュールを持つERPNextが候補です。既存のAccessやExcel台帳を安全にWeb化する入口にはkdbagent、現場の顔打刻にはKurage Kintai、朝礼連絡にはkvgwcを使えます。設備との自動連携や厳密な原価計算が必須の場合、既存台帳が安定していて移行効果が小さい場合、またはOSSの保守体制を用意できない場合は、現行システムや個別開発を継続するのが正解です。",
+  "faqs": [
+   {
+    "q": "町工場の在庫管理に使えるOSSはありますか？",
+    "a": "部品、材料、在庫、BOM、発注、製造を管理するならInvenTreeが候補です。受発注から製造指示まで一体で扱いたい場合は、ERPNextの製造モジュールを検討します。"
+   },
+   {
+    "q": "製造業向け買い切りシステムの費用はいくらですか？",
+    "a": "DB管理ツール kdbagent、顔打刻つき勤怠 Kurage Kintai、社内グループウェア kvgwcはいずれも55,000円です。サーバー保守や台帳移行の作業費は別に見積もります。"
+   },
+   {
+    "q": "ExcelやAccessの生産台帳をWeb化できますか？",
+    "a": "kdbagentは、既存のAccessやExcel台帳を安全にWeb化する入口として使えます。まず対象の表、列、操作を限定し、現場で照合してから利用範囲を広げる進め方が現実的です。"
+   }
+  ]
+ },
+ {
+  "slug": "web-seisaku",
+  "kind": "industry",
+  "name": "IT・Web制作会社",
+  "kicker": "Web制作 案件管理 情報共有",
+  "saasSlugs": [
+   "backlog",
+   "slack",
+   "notion",
+   "kintone",
+   "asana"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "plane",
+   "openproject",
+   "docmost",
+   "outline",
+   "kvgwc"
+  ],
+  "products": [
+   {
+    "name": "社内グループウェア kvgwc",
+    "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+    "price": "55,000円"
+   },
+   {
+    "name": "職務・引継ぎ管理 Kurage HR Post",
+    "url": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
+    "price": "55,000円"
+   }
+  ],
+  "brain": [],
+  "lps": [],
+  "facts": "技術者がいる業態なのでOSS移行の適性が最も高い。案件・課題管理はPlane(Backlog/Asana代替)かOpenProject、社内WikiはDocmost/Outline(Notion代替)が成熟。少人数ならBacklogの月額は小さく移行の手間が勝つこともある——人数が増えてユーザー課金が効き始めた段階が移行の分岐点。クライアントごとの引継ぎ・担当履歴はHR Postの職単位管理が効く。Slackの代替(Mattermost等)は運用負荷が高く、無理に勧めない。",
+  "lead": "IT・Web制作会社では、案件管理、チャット、Wiki、顧客管理を人数課金のSaaSでそろえ、チームの成長とともに月額が積み上がります。使い慣れた本体や顧客との連絡手段は残し、案件・課題管理、社内Wiki、引継ぎなど分離できる業務をOSS・買い切り製品へ移すと、技術力を生かして固定費を抑えられます。",
+  "verdict": "Slackは代替製品の運用負荷が高く、顧客や外部メンバーとの連絡網もあるため、無理な置き換えは勧めません。少人数のBacklogも月額負担が小さく、移行の手間に見合わない場合があります。一方、案件・課題管理はPlaneまたはOpenProject、社内WikiはDocmostまたはOutlineへ分離できます。クライアントごとの引継ぎや担当履歴はKurage HR Postの職単位管理、軽い社内連絡はkvgwcが候補です。人数が増えてユーザー課金の影響が大きくなり、OSSを保守できる技術者がいるときが移行の分岐点です。外部との連絡網がSlackに定着している場合や、削減額より移行・保守工数が大きい場合は現行SaaSの継続が正解です。",
+  "faqs": [
+   {
+    "q": "BacklogやAsanaの代わりに使えるOSSはありますか？",
+    "a": "案件・課題管理はPlaneまたはOpenProject、社内WikiはDocmostまたはOutlineが候補です。既存データと権限を整理し、一案件や一部文書から試して段階的に移します。"
+   },
+   {
+    "q": "Web制作会社向け買い切りツールの費用はいくらですか？",
+    "a": "社内グループウェア kvgwcと職務・引継ぎ管理 Kurage HR Postは各55,000円です。導入後のサーバー保守と移行工数を加え、人数課金の削減額と比較します。"
+   },
+   {
+    "q": "制作会社はSlackもOSSへ移行したほうがよいですか？",
+    "a": "外部メンバーとの連絡網がSlackに定着しているなら、継続が妥当です。代替の運用負荷が高いため、先に案件管理や社内Wikiだけを分離し、チャットは無理に移しません。"
+   }
+  ]
+ },
+ {
+  "slug": "oroshi",
+  "kind": "industry",
+  "name": "卸売・商社",
+  "kicker": "卸売 受発注 請求管理",
+  "saasSlugs": [
+   "kintone",
+   "infomart",
+   "salesforce",
+   "misoca",
+   "sansan"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "dolibarr",
+   "erpnext",
+   "espocrm",
+   "kbilling",
+   "kaima"
+  ],
+  "products": [
+   {
+    "name": "請求書発行 kbilling",
+    "url": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
+    "price": "55,000円"
+   },
+   {
+    "name": "注文・請求・決済 kpaylink",
+    "url": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
+    "price": "55,000円"
+   },
+   {
+    "name": "AI名刺解析 Kurage AI Meishi",
+    "url": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+    "price": "55,000円"
+   }
+  ],
+  "brain": [],
+  "lps": [],
+  "facts": "BtoBプラットフォーム(インフォマート)のような取引網は、取引先が使っている限り抜けられない。自社側で完結する業務——得意先台帳(EspoCRM)、見積〜受注〜請求の流れ(Dolibarr/ERPNext)、定型商品の注文受付と請求(kpaylink/kbilling)、展示会名刺の台帳化(kaima)——は買い切り・OSSに移せる。Sansanの人数課金はAI名刺解析で代替できるケースが多い。",
+  "lead": "卸売・商社では、取引先との接点や営業、請求、名刺管理ごとにSaaSを導入し、便利になる一方で月額料金が積み上がりがちです。複数部門で利用者が増えるほど負担も見えにくくなります。取引網を担う本体は残し、自社だけで完結して分離できる業務をOSSや買い切り製品へ移すことで、業務を止めずに毎月の固定費を減らせます。",
+  "verdict": "BtoBプラットフォーム（インフォマート）のような取引網は、取引先が利用している限り置き換えできません。ここは無理に外さない判断が必要です。一方、得意先台帳はEspoCRM、見積から受注、請求までの流れはDolibarrやERPNextへ分離できます。定型商品の注文受付と請求はkpaylinkやkbilling、展示会名刺の台帳化はkaimaが候補です。Sansanの人数課金も、運用次第ではAI名刺解析で代替できるケースが多いです。取引先指定の仕組みがある場合、取引網への参加自体に価値がある場合、社内にOSSの保守担当を置けない場合は、該当SaaSを継続するのが正解です。まず自社側で完結する業務だけを切り出すのが現実的です。",
+  "faqs": [
+   {
+    "q": "卸売業の受発注システムはOSSに置き換えられますか？",
+    "a": "自社内で完結する見積、受注、請求の流れはDolibarrやERPNextへ移せます。取引先が使うBtoBプラットフォーム（インフォマート）は取引網そのものなので残し、二重入力を避ける運用設計が必要です。"
+   },
+   {
+    "q": "卸売業のSaaS費用を減らすには何から始めますか？",
+    "a": "人数課金と利用者数を棚卸しし、得意先台帳、定型商品の注文・請求、名刺管理を切り分けます。買い切りはkbilling、kpaylink、Kurage AI Meishiが各55,000円です。導入後の保守費も含めて比較します。"
+   },
+   {
+    "q": "展示会でもらった名刺をSansan以外で管理できますか？",
+    "a": "kaimaなら、スマホ撮影した名刺をAIが12項目まで読み取り、人が承認した情報だけを台帳に登録できます。Sansanの取引網や共有運用が不要なら、AI名刺解析へ分離できるケースが多いです。"
+   }
+  ]
+ },
+ {
+  "slug": "jinzai",
+  "kind": "industry",
+  "name": "人材紹介・派遣",
+  "kicker": "人材紹介 求職者管理",
+  "saasSlugs": [
+   "salesforce",
+   "kintone",
+   "hubspot"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "espocrm",
+   "krayin-crm",
+   "twenty",
+   "frappe-hr"
+  ],
+  "products": [
+   {
+    "name": "入力ゼロCRM kcrmagent",
+    "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+    "price": "55,000円"
+   },
+   {
+    "name": "AI名刺解析 Kurage AI Meishi",
+    "url": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+    "price": "55,000円"
+   },
+   {
+    "name": "Krayin CRM 日本語導入キット",
+    "url": "https://kappstore.exbridge.jp/app.php?id=11e7c1d9a83d1ca3",
+    "price": "5,500円"
+   }
+  ],
+  "brain": [
+   {
+    "label": "Salesforce代替を激安で作る全手順(Brain)",
+    "url": "https://brain-market.com/u/bittensorman/a/bxYzNxYjMgoTZsNWa0JXY"
+   }
+  ],
+  "lps": [],
+  "facts": "人材業の中核は「求職者と求人企業の2つの台帳+マッチング進行」で、実態はSalesforce/kintoneのカスタマイズ。この構造はCRMのパイプライン管理そのものなので、EspoCRM/Krayinを求職者・求人の2レーン運用に改造する形で置き換えられる(当社のバイブOSSカスタマイズの得意領域)。派遣の勤怠・給与・派遣法対応(抵触日管理等)は専用SaaS/社労士連携が正解で、OSSに寄せない。",
+  "lead": "人材紹介・派遣では、求職者管理、求人企業管理、営業進捗などにSaaSを重ねると、担当者の増加に伴って月額料金も膨らみます。制度対応を担う本体は残し、求職者と求人の台帳やマッチング進行など、分離できる業務をOSS・買い切りへ移せば、運用品質を保ちながら継続的な固定費を抑えられます。",
+  "verdict": "派遣の勤怠、給与、派遣法対応は置き換えを勧めません。抵触日管理などの制度対応は、専用SaaSや社労士連携を継続するのが安全です。一方、人材業の中核である求職者台帳、求人企業台帳、マッチング進行はCRMのパイプライン管理と同じ構造です。EspoCRMやKrayinを求職者と求人の2レーン運用に改造すれば、Salesforceやkintoneで行っているカスタマイズ部分を置き換えられます。入力負担を減らす候補にはkcrmagentもあります。ただし、派遣法対応まで一体で管理したい場合、給与や勤怠との連携を重視する場合、社内でOSSを保守できない場合は専用SaaSの継続が正解です。紹介業務と派遣管理を分けて判断することが重要です。",
+  "faqs": [
+   {
+    "q": "人材紹介のSalesforceはOSSに置き換えられますか？",
+    "a": "求職者と求人企業の2つの台帳、マッチング進行は、EspoCRMやKrayinを2レーン運用に改造して置き換えられます。ただし既存の入力項目、権限、進行段階を先に棚卸しし、段階的に移行する必要があります。"
+   },
+   {
+    "q": "人材紹介システムの費用を抑える方法はありますか？",
+    "a": "営業担当者の人数課金が大きい場合は、求職者・求人企業の台帳と進行管理をOSSへ分離します。買い切りでは入力ゼロCRM kcrmagentが55,000円、Krayin CRM 日本語導入キットが5,500円です。"
+   },
+   {
+    "q": "派遣の勤怠や抵触日管理もOSS化できますか？",
+    "a": "派遣の勤怠、給与、抵触日管理などの派遣法対応は、OSSへ寄せない方が安全です。専用SaaSと社労士連携を継続し、人材紹介側の求職者・求人台帳やマッチング進行だけを分離してください。"
+   }
+  ]
+ },
+ {
+  "slug": "groupware",
+  "kind": "gyomu",
+  "name": "グループウェア・社内情報共有",
+  "kicker": "kintone 代替 グループウェア 無料",
+  "saasSlugs": [
+   "kintone",
+   "cybozu-office",
+   "garoon",
+   "desknets-neo",
+   "line-works",
+   "notion"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "kvgwc",
+   "docmost",
+   "outline",
+   "kdbagent"
+  ],
+  "products": [
+   {
+    "name": "社内グループウェア kvgwc",
+    "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+    "price": "55,000円"
+   },
+   {
+    "name": "シンプルメモ Kurage Memo",
+    "url": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
+    "price": "55,000円"
+   },
+   {
+    "name": "DB管理ツール kdbagent",
+    "url": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
+    "price": "55,000円"
+   }
+  ],
+  "brain": [
+   {
+    "label": "kvgwc構築手順書(Brain)",
+    "url": "https://brain-market.com/u/bittensorman/a/bzEjNxYjMgoTZsNWa0JXY"
+   }
+  ],
+  "lps": [],
+  "facts": "kintone/サイボウズの人数×月額は、社員が増えるほど効く固定費。ただしkintone最大の強み「現場が自分でアプリを増やす」はどのOSSでも完全再現できない(これはkintoneページでも明言している)。スケジュール・掲示板・ワークフローの基本はkvgwc(1ユーザー課金なし・共有レンタルサーバー可)、社内Wiki・ドキュメントはDocmost/Outline、表形式のデータ管理はkdbagentで既存DBを安全にWeb化する形が現実的。全社一斉移行ではなく部署単位の併走から始めるのが定石。",
+  "lead": "グループウェアや社内情報共有は、社員が増えるほど人数単位のSaaS月額が積み上がり、掲示板や文書共有だけでも固定費が膨らみます。現場が自作するアプリ基盤などの本体は残し、予定、掲示、社内Wiki、表データ管理といった分離できる業務をOSS・買い切りへ移すと、継続費を抑えられます。",
+  "verdict": "kintone最大の強みである、現場が自分でアプリを増やせる仕組みは、どのOSSでも完全には再現できません。この使い方が定着している部署は置き換えない方がよいです。一方、スケジュール、掲示板、ワークフローの基本機能は、1ユーザー課金がなく共有レンタルサーバーでも動くkvgwcへ分離できます。社内Wikiや文書はDocmostまたはOutline、表形式のデータ管理はkdbagentで既存DBを安全にWeb化する方法が現実的です。ただし、利用部門が頻繁にアプリを追加・変更する場合、全社共通の運用が完成している場合、移行と保守を担う人がいない場合は継続が正解です。全社一斉移行ではなく、用途が単純な部署から併走させて判断します。",
+  "faqs": [
+   {
+    "q": "kintoneをOSSで完全に置き換えられますか？",
+    "a": "完全な置き換えは困難です。現場が自分でアプリを増やす強みはOSSで完全再現できません。予定や掲示板はkvgwc、社内WikiはDocmostやOutline、表データはkdbagentへ用途別に分けるのが現実的です。"
+   },
+   {
+    "q": "グループウェアの費用はどう減らせますか？",
+    "a": "人数課金の対象者と実際の用途を確認し、予定、掲示、ワークフローだけの部署からkvgwcへ移します。社内グループウェア kvgwcは買い切り55,000円で、1ユーザー課金はありません。保守費も含めて比較します。"
+   },
+   {
+    "q": "グループウェアは全社一斉に移行すべきですか？",
+    "a": "全社一斉移行は避け、用途が単純な部署で既存SaaSと併走するのが定石です。予定、掲示、文書、表データを分けて試し、権限、検索、更新担当、障害時の対応を確認してから対象部署を広げます。"
+   }
+  ]
+ },
+ {
+  "slug": "project-kanri",
+  "kind": "gyomu",
+  "name": "案件・プロジェクト管理",
+  "kicker": "プロジェクト管理 ツール 無料",
+  "saasSlugs": [
+   "backlog",
+   "asana",
+   "trello",
+   "jooto"
+  ],
+  "extraSaas": [],
+  "ossPicks": [
+   "plane",
+   "openproject",
+   "kvgwc"
+  ],
+  "products": [
+   {
+    "name": "社内グループウェア kvgwc",
+    "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+    "price": "55,000円"
+   }
+  ],
+  "brain": [],
+  "lps": [],
+  "facts": "案件・タスク管理はOSSの成熟領域。Plane(かんばん・サイクル・文書が一体、当社が日本語導入キットの実績あり)とOpenProject(ガント・工程の老舗)が二枚看板。BacklogのWiki・Git連携込みの使い方や、社外メンバーを多数招待する使い方はSaaSが楽。人数課金が効き始める10人超が移行の分岐点で、ソースが手元に残るため課題テンプレや自動化を自社仕様にできる。",
+  "lead": "案件・プロジェクト管理では、担当者や社外メンバーが増えるにつれてSaaSの月額が積み上がり、タスク管理だけでも固定費が重くなります。WikiやGit連携、外部招待を担う本体は必要に応じて残し、社内の課題、工程、文書など分離できる業務をOSS・買い切りへ移すと、継続費を抑えられます。",
+  "verdict": "BacklogをWikiやGit連携込みで使う場合や、社外メンバーを多数招待する場合は、運用の手軽さまで含めて置き換えできないことがあります。一方、案件・タスク管理はOSSが成熟した領域です。かんばん、サイクル、文書を一体で扱うPlaneと、ガントや工程管理に実績があるOpenProjectが中心候補です。ソースが手元に残るため、課題テンプレートや自動化を自社仕様にできます。人数課金の影響が出始める10人超は、移行を比較する分岐点です。ただし、外部招待が多い場合、Git連携とWikiを一体運用している場合、サーバー保守よりSaaSの手軽さを優先する場合は継続が正解です。まず社内案件だけで併走し、運用負担を確認します。",
+  "faqs": [
+   {
+    "q": "BacklogからOSSへ移行できますか？",
+    "a": "社内の課題、かんばん、工程、文書はPlaneやOpenProjectへ移行できます。ただしBacklogのWikiやGit連携を一体で使っている場合は、連携方法と過去データの扱いを確認し、社内案件から併走するのが安全です。"
+   },
+   {
+    "q": "プロジェクト管理SaaSの費用は何人から見直すべきですか？",
+    "a": "人数課金が効き始める10人超が移行検討の分岐点です。PlaneやOpenProjectの運用費、サーバー保守、移行作業も含めて比較します。単純な社内共有なら、買い切り55,000円のkvgwcも候補です。"
+   },
+   {
+    "q": "PlaneとOpenProjectはどう選べばよいですか？",
+    "a": "かんばん、サイクル、文書を一体で扱いたい場合はPlane、ガントや工程を重視する場合はOpenProjectが候補です。社外メンバーの招待が多い場合は、既存SaaSの方が運用しやすいこともあります。"
+   }
+  ]
  }
 ]
