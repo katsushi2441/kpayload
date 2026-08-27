@@ -46,6 +46,38 @@ SCHEMA = {
     "additionalProperties": False,
 }
 
+PROMPT_BODY = """あなたは日本語のテクニカルライターです。Zennに公開されている記事を読んで、その記事を紹介するページの材料を作ってください。
+
+## 対象のオープンソース
+名前: {name}
+説明: {desc}
+
+## Zennの記事
+タイトル: {title}
+公開日: {date}
+著者: {author}
+本文（抜粋）:
+{body}
+
+## 作ってほしいもの
+
+- relevant: この記事が「{name}」を扱っているならtrue。名前が一致しているだけで別物ならfalse。
+- theme: 記事の主題を表す英小文字とハイフンだけの短い語（URLの一部になる）。例: getting-started / self-host / customize / performance / migration。2〜3語まで。
+- keyword: 日本語の検索キーワード。「{name} ○○」の形。この記事を探している人が実際に打ちそうな語にする。
+- pageTitle: ページの見出し。keywordを含み、36〜52字程度。煽らず内容を表す。末尾に社名や記号を付けない。
+- lead: このページのリード文。2〜3文（110〜170字）。このキーワードで来た人がこの記事から何を得られるかを書く。
+- summary: 記事の紹介文。2〜3文（100〜160字）。本文に書かれている範囲だけで書く。
+- points: 記事に書かれている項目を3〜4個。1個15〜40字の体言止め。
+
+## 厳守すること
+
+- 本文に書かれていないことを足さない。推測で機能・結論・数値を書かない。
+- 記事の主張は著者のものとして書く（「〜と報告されています」「〜の手順が書かれています」）。当社の意見として断定しない。
+- 宣伝・営業文を書かない。価格や自社サービスに触れない。
+- 「必見」「完全」「最強」「決定版」のような煽り言葉を使わない。
+- themeは必ず英小文字・数字・ハイフンのみ。
+"""
+
 PROMPT = """あなたは日本語のテクニカルライターです。Zennに公開されている記事と、その記事が紹介しているオープンソースについて、紹介ページの材料を作ってください。
 
 ## Zennの記事
@@ -105,8 +137,23 @@ def load_source():
     return list(pairs.values()), arts, posts
 
 
-def run_codex(title, date, author, name, github, desc, tries=2):
-    prompt = PROMPT.format(title=title, date=date, author=author, name=name, github=github, desc=desc or "(説明なし)")
+def load_catalog_bodies():
+    """カタログ掲載OSSの記事（本文つき）。Zenn APIで取得済みのものを読むだけ。"""
+    f = f"{SRC}/catalog_bodies.json"
+    if not os.path.exists(f):
+        return []
+    out = []
+    for path, v in json.load(open(f, encoding="utf-8")).items():
+        out.append({"path": path, **v})
+    return out
+
+
+def run_codex(title, date, author, name, github, desc, body=None, tries=2):
+    if body:
+        prompt = PROMPT_BODY.format(title=title, date=date, author=author, name=name,
+                                    desc=desc or "(説明なし)", body=body[:3600])
+    else:
+        prompt = PROMPT.format(title=title, date=date, author=author, name=name, github=github, desc=desc or "(説明なし)")
     with tempfile.TemporaryDirectory() as td:
         sf, of = f"{td}/schema.json", f"{td}/out.json"
         json.dump(SCHEMA, open(sf, "w"))
@@ -153,19 +200,35 @@ def main():
     done_links = {p["article"]["path"] for p in pages}
     used = {p["slug"] for p in pages}
 
-    todo = [p for p in pairs if p["article"]["link"] not in done_links]
-    todo.sort(key=lambda p: (p["post"] is None, p["article"].get("pubDate", "")), reverse=False)
+    # カタログ掲載OSSの記事（本文つき）を先に処理する。
+    # 当社の /oss/ /ai-system/ /saas/ /solution/ へ確実にリンクできるページになるため。
+    cat_items = []
+    for b in load_catalog_bodies():
+        if b["path"] in done_links:
+            continue
+        cat_items.append({
+            "kind": "catalog", "ossSlug": b["ossSlug"], "github": (catalog.get(b["ossSlug"], {}) or {}).get("githubUrl", ""),
+            "article": {"title": b["title"], "link": b["path"], "pubDate": (b.get("published_at") or "")[:10],
+                        "user": b.get("user"), "liked": b.get("liked"), "emoji": b.get("emoji")},
+            "body": b.get("body"), "post": None,
+        })
+    cat_items.sort(key=lambda x: -(x["article"].get("liked") or 0))
+
+    rest = [{**p, "kind": "pair", "body": None} for p in pairs if p["article"]["link"] not in done_links]
+    rest.sort(key=lambda p: (p["post"] is None, p["article"].get("pubDate", "")), reverse=False)
+
+    todo = cat_items + rest
     if limit:
         todo = todo[:limit]
-    print(f"生成対象: {len(todo)}件")
+    print(f"生成対象: {len(todo)}件（カタログ掲載OSSの本文つき {len(cat_items)}件を優先）")
 
     made = 0
     for i, p in enumerate(todo):
         a = p["article"]
-        m = re.search(r"github\.com/([^/]+)/([^/#?]+)", p["github"])
+        m = re.search(r"github\.com/([^/]+)/([^/#?]+)", p.get("github") or "")
         repo = f"{m.group(1)}/{m.group(2)}" if m else ""
-        name = m.group(2) if m else (p["nid"] or "")
-        oss_slug = by_repo.get(repo.lower())
+        name = m.group(2) if m else (p.get("nid") or "")
+        oss_slug = p.get("ossSlug") or by_repo.get(repo.lower())
         cat = catalog.get(oss_slug, {}) if oss_slug else {}
         desc = cat.get("summary") or (projects.get(oss_slug, {}) or {}).get("summary") or ""
         if not desc and p["post"]:
@@ -173,7 +236,7 @@ def main():
         if cat.get("name"):
             name = cat["name"]
 
-        res = run_codex(a["title"], a.get("pubDate", ""), a.get("user", ""), name, p["github"], desc)
+        res = run_codex(a["title"], a.get("pubDate", ""), a.get("user", ""), name, p.get("github") or "", desc, body=p.get("body"))
         if not res or not res.get("relevant"):
             print(f"  skip {name} / {a['title'][:34]}", flush=True)
             continue
@@ -197,7 +260,7 @@ def main():
                 "user": a.get("user"), "name": a.get("user"),
                 "summary": res["summary"], "points": res.get("points", [])[:4],
             },
-            "githubUrl": p["github"],
+            "githubUrl": p.get("github") or (catalog.get(oss_slug, {}) or {}).get("githubUrl", ""),
             "ossSummary": desc[:400],
             "category": cat.get("category") or (projects.get(oss_slug, {}) or {}).get("category") or "other",
             "inCatalog": bool(oss_slug),
