@@ -6831,13 +6831,13 @@
     "jaSamplePaths": []
   },
   {
-    "name": "luigi",
+    "name": "Luigi",
     "slug": "luigi",
     "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "Pythonで複雑なバッチジョブのパイプラインを構築するためのツールです。",
-    "description": "Luigiは、一連のバッチ処理からなる複雑なワークフローを構築・管理するPythonモジュールです。依存関係の解決やワークフローの管理、視覚化といった機能を提供します。Hadoopへのサポートも標準で備わっています。データ処理の工程を整理し、効率的に実行するための基盤として活用できます。",
+    "summary": "Spotifyが公開する、Pythonのバッチ処理とデータパイプラインの依存関係・実行順序を管理するオープンソースツールです。",
+    "description": "Luigiは、複数のPythonバッチジョブを依存関係に沿って実行し、失敗した処理の再実行や進行状況の可視化を行うワークフロー管理OSSです。定期集計、ETL、機械学習の前処理など、順番を守って動かす必要があるデータ処理をコードで管理できます。",
     "license": "Apache-2.0",
     "licenseTier": "osi",
     "licenseNote": null,
@@ -6868,43 +6868,46 @@
     ],
     "keywords": [
       {
-        "text": "hadoop"
+        "text": "Luigi Python"
       },
       {
-        "text": "luigi"
+        "text": "Luigi 使い方"
       },
       {
-        "text": "orchestration-framework"
+        "text": "Python バッチ処理"
       },
       {
-        "text": "python"
+        "text": "データパイプライン OSS"
       },
       {
-        "text": "scheduling"
+        "text": "ETL ワークフロー"
       },
       {
-        "text": "batch-jobs"
+        "text": "Spotify Luigi"
       }
     ],
     "faqs": [
       {
-        "question": "Luigiでどのようなことができるのですか？",
-        "answer": "Pythonを使用して、複数のバッチジョブが連動する複雑なパイプラインを構築できます。ジョブ間の依存関係の解決やワークフロー全体の管理、処理工程の視覚化などの機能が含まれています。"
+        "question": "Luigiとは何ですか？",
+        "answer": "Spotifyが公開しているPython製のワークフロー管理OSSです。複数のバッチジョブについて、依存関係、実行順序、完了状態をコードで管理できます。"
       },
       {
-        "question": "Hadoopとの連携は可能ですか？",
-        "answer": "はい、LuigiにはHadoopへのサポートが組み込まれているため、Hadoop環境を含むデータ処理パイプラインの構築に利用することが可能です。"
+        "question": "Luigiはどのような処理に使えますか？",
+        "answer": "定期集計、ETL、ログ処理、機械学習の前処理など、複数工程を決められた順番で実行するデータパイプラインに利用できます。"
       },
       {
-        "question": "どのような言語で動作しますか？",
-        "answer": "このツールはPythonモジュールとして提供されているため、Python環境において動作します。",
-        "}, {": "questionm:",
-        "依存関係の解決とは何を指しますか？\n": "answerm:",
-        "複数のジョブを順番に実行する際や、特定の処理が終わってから次を開始するといった前提条件（依存関係）を正しく管理し、適切な順序でワークフローを実行するための機能です。铵": 0
+        "question": "Luigiに管理画面はありますか？",
+        "answer": "Luigi Central Schedulerの可視化画面で、タスクの状態や依存関係を確認できます。業務向け画面や通知が必要な場合は別途組み込みます。"
+      },
+      {
+        "question": "Luigiは日本語で使えますか？",
+        "answer": "処理定義はPythonコードで行います。標準画面に日本語ロケールは確認できないため、日本語の運用画面や通知が必要な場合は追加開発が必要です。"
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": []
+    "jaSamplePaths": [],
+    "seoTitle": "Luigiとは？Pythonバッチ処理・データパイプラインの使い方 | Kurage",
+    "seoDescription": "LuigiはSpotifyが公開するPython製OSSです。バッチ処理、ETL、データパイプラインの依存関係、実行順序、再実行、可視化の仕組みと日本語導入の要点を解説します。"
   },
   {
     "name": "activitywatch",
@@ -58957,13 +58960,13 @@
     "jaSamplePaths": []
   },
   {
-    "name": "codealmanac",
+    "name": "CodeAlmanac",
     "slug": "codealmanac",
     "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "AIコーディングエージェント向けのコードベースWikiです。",
-    "description": "このツールは、コード自体からは読み取ることが難しい意思決定の経緯や処理の流れ、不変条件、注意点などを記録するためのWikiです。AIコーディングエージェントがより正確にプロジェクトを理解できるように設計されています。TypeScriptで構築されており、開発者が効率的にドキュメントを管理できる環境を提供します。複雑なコードベースにおいて、人間とAIの両方にとって重要なコンテキストを補完する役割を果たします。",
+    "summary": "AIコーディングエージェントに、コードだけでは分からない設計意図・制約・処理フローを伝えるコードベースWikiです。",
+    "description": "CodeAlmanacは、AIコーディングエージェント向けにコードベースの背景知識を整理するオープンソースWikiです。設計上の意思決定、処理フロー、不変条件、注意点を文書化し、Claude CodeなどのAIが既存コードを理解するときのコンテキストを補います。TypeScriptで構築され、Apache-2.0で公開されています。",
     "license": "Apache-2.0",
     "japaneseStatus": "日本語ファイルなし",
     "officialUrl": "https://codealmanac.com",
@@ -58992,44 +58995,46 @@
     ],
     "keywords": [
       {
-        "text": "AI"
+        "text": "CodeAlmanac"
       },
       {
-        "text": "Claude"
+        "text": "CodeAlmanac 使い方"
       },
       {
-        "text": "CLI"
+        "text": "AI コーディング Wiki"
       },
       {
-        "text": "Codebase"
+        "text": "コードベース ドキュメント"
       },
       {
-        "text": "Coding-agents"
+        "text": "Claude Code コンテキスト"
       },
       {
-        "text": "Developer-tools"
+        "text": "設計意図 文書化"
       }
     ],
     "faqs": [
       {
-        "question": "このツールは何を記録するためのものですか？",
-        "answer": "コードから直接読み取ることが難しい、設計上の意思決定、処理の流れ、システム的な制約（不変条件）、および開発者が注意すべき落とし穴などを記録するために使用します。"
+        "question": "CodeAlmanacとは何ですか？",
+        "answer": "AIコーディングエージェントがコードを正しく理解できるよう、設計意図、制約、処理フロー、注意点を整理するコードベースWikiです。"
       },
       {
-        "question": "主な対象者は誰ですか？",
-        "answer": "主にAIコーディングエージェントを活用してソフトウェア開発を行うエンジニアや、複雑なコードベースのドキュメントを整理したい開発チームが対象です。"
+        "question": "通常のREADMEとの違いは何ですか？",
+        "answer": "READMEが導入方法や概要を扱うのに対し、CodeAlmanacはコードから読み取りにくい意思決定の理由、不変条件、処理間の関係を継続的に記録する用途に向きます。"
       },
       {
-        "question": "どのような技術スタックで提供されていますか？",
-        "answer": "このプロジェクトはTypeScriptで記述されており、Apache-2.0ライセンスの下で公開されているオープンソースソフトウェアです。"
+        "question": "Claude Codeでも利用できますか？",
+        "answer": "Claude Codeを含むAIコーディングエージェントへ、既存システムの背景知識を渡す用途に利用できます。実際の連携方法は開発環境に合わせて設計します。"
       },
       {
-        "question": "なぜ通常のドキュメントではなくこれが必要なのですか？",
-        "answer": "AIエージェントがより正確にコードを理解し、適切な修正や生成を行えるようにするためには、単なるコードの構造だけでなく、背景にある意図や制約を体系的に伝える必要があるためです。Goals"
+        "question": "日本語の設計情報も登録できますか？",
+        "answer": "Wikiへ保存する設計情報は日本語で記述できます。管理画面自体の日本語ロケールは確認できないため、必要に応じて日本語化します。"
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": []
+    "jaSamplePaths": [],
+    "seoTitle": "CodeAlmanacとは？AIコーディング向けコードベースWiki | Kurage",
+    "seoDescription": "CodeAlmanacはAIコーディングエージェント向けのコードベースWikiです。設計意図、制約、処理フローをClaude Codeなどへ伝える使い方と日本語対応を解説します。"
   },
   {
     "name": "go-drive",
@@ -205438,13 +205443,13 @@
     ]
   },
   {
-    "name": "Inventory-Sorter",
+    "name": "Inventory Sorter",
     "slug": "inventory-sorter",
     "category": "devtools",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "Minecraft向けのインベントリ管理用ツールです。",
-    "description": "Inventory Sorterは、ゲーム「Minecraft」においてアイテムの整理を支援するためのツールです。Java言語で開発されており、MITライセンスのもとで公開されています。主な機能としてインベントリの管理が含まれています。特定のゲーム環境内でのアイテム操作を効率化することを目的に設計されたソフトウェアです。",
+    "summary": "Minecraft Java版で持ち物やチェスト内のアイテム整理を支援する、MITライセンスのインベントリ並べ替えModです。",
+    "description": "Inventory Sorterは、Minecraft Java版のインベントリやチェスト内にあるアイテムを整理しやすくするModです。Javaで開発され、MITライセンスで公開されています。日本語ロケールを含み、導入前には対応するMinecraft、Fabric、Forgeなどのバージョン条件を公式情報で確認する必要があります。",
     "license": "MIT",
     "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://inventorysorter.meza.gg",
@@ -205473,19 +205478,19 @@
     ],
     "keywords": [
       {
-        "text": "Inventory-Sorter"
+        "text": "Inventory Sorter"
       },
       {
-        "text": "Minecraft"
+        "text": "Inventory Sorter 使い方"
       },
       {
-        "text": "inventory-management"
+        "text": "Inventory Sorter 日本語"
       },
       {
-        "text": "minecraft-mod"
+        "text": "Minecraft インベントリ整理 Mod"
       },
       {
-        "text": "Java"
+        "text": "Minecraft Java Mod"
       },
       {
         "text": "MIT License"
@@ -205514,7 +205519,9 @@
       {
         "text": "src/main/resources/assets/inventorysorter/lang/ja_jp.json"
       }
-    ]
+    ],
+    "seoTitle": "Inventory Sorterとは？Minecraft Modの使い方・日本語対応 | Kurage",
+    "seoDescription": "Inventory SorterはMinecraft Java版の持ち物を整理するModです。できること、日本語対応、MITライセンス、導入前に確認する対応バージョンを日本語で紹介します。"
   },
   {
     "name": "linkly-ai-skills",

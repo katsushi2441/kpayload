@@ -65,6 +65,14 @@ export const OSSProjects: CollectionConfig = {
     },
     { name: 'summary', label: '一文要約', type: 'textarea', required: true },
     { name: 'description', label: '詳しい説明', type: 'textarea', required: true },
+    {
+      name: 'seoTitle', label: 'OSS詳細ページ SEOタイトル', type: 'text',
+      admin: { description: '空欄の場合はOSS名から自動生成します。kurage.exbridge.jp/oss/で使用します。' },
+    },
+    {
+      name: 'seoDescription', label: 'OSS詳細ページ description', type: 'textarea',
+      admin: { description: '空欄の場合は一文要約から自動生成します。' },
+    },
     { name: 'license', label: 'ライセンス', type: 'text', required: true },
     { name: 'japaneseStatus', label: '日本語対応', type: 'text', required: true },
     { name: 'officialUrl', label: '公式URL', type: 'text', required: true },

@@ -166,6 +166,14 @@ export interface OssProject {
   funnel: 'oss' | 'prototype';
   summary: string;
   description: string;
+  /**
+   * 空欄の場合はOSS名から自動生成します。kurage.exbridge.jp/oss/で使用します。
+   */
+  seoTitle?: string | null;
+  /**
+   * 空欄の場合は一文要約から自動生成します。
+   */
+  seoDescription?: string | null;
   license: string;
   japaneseStatus: string;
   officialUrl: string;
@@ -317,6 +325,8 @@ export interface OssProjectsSelect<T extends boolean = true> {
   funnel?: T;
   summary?: T;
   description?: T;
+  seoTitle?: T;
+  seoDescription?: T;
   license?: T;
   japaneseStatus?: T;
   officialUrl?: T;

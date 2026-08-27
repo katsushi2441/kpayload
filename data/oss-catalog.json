@@ -719,8 +719,8 @@
   "slug": "zammad",
   "category": "support",
   "featured": false,
-  "summary": "メール、電話、チャットなどの問い合わせをチケットとして管理するオープンソースヘルプデスクです。",
-  "description": "複数チャネルと担当者によるサポート運用に向きます。セルフホストではサーバー、検索基盤、メール連携の運用が必要です。",
+  "summary": "メール、電話、チャットの問い合わせを一元管理できる、セルフホスト対応のオープンソースヘルプデスクです。",
+  "description": "Zammadは、メール、電話、チャットなど複数チャネルの問い合わせをチケットとして一元管理するオープンソースのヘルプデスクです。担当者、状態、優先度、履歴を共有でき、Zendeskなどのクラウド型サービスの代替候補になります。セルフホスト運用では、サーバー、検索基盤、メール連携、バックアップ、日本語表示範囲の確認が必要です。",
   "license": "AGPL-3.0",
   "japaneseStatus": "多言語対応。日本語翻訳範囲を要確認。",
   "officialUrl": "https://zammad.org",
@@ -742,10 +742,19 @@
     "text": "Zammad 日本語"
    },
    {
+    "text": "Zammad 導入"
+   },
+   {
+    "text": "Zammad 使い方"
+   },
+   {
     "text": "ヘルプデスク OSS"
    },
    {
-    "text": "Zendesk 代替 セルフホスト"
+    "text": "Zendesk 代替 OSS"
+   },
+   {
+    "text": "セルフホスト 問い合わせ管理"
    }
   ],
   "faqs": [
@@ -759,7 +768,9 @@
    }
   ],
   "sourceLpName": "Zendeskの月額をやめる=Frappe Helpdesk日本語化",
-  "funnel": "oss"
+  "funnel": "oss",
+  "seoTitle": "Zammadとは？日本語対応・導入とZendesk代替OSS | Kurage",
+  "seoDescription": "Zammadはセルフホストできるオープンソースヘルプデスクです。日本語対応、問い合わせチケット、メール連携、Zendesk代替としての導入・カスタマイズ要点を解説します。"
  },
  {
   "name": "FreeScout",
