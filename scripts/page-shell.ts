@@ -112,7 +112,7 @@ export function kurageAiFab(canonical: string, refPrefix: string, base: string):
 <style>#kai-fab{position:fixed;right:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#12a99f,#0a726b);color:#fff;text-decoration:none;border-radius:999px;padding:8px 18px 8px 8px;box-shadow:0 12px 30px rgba(10,80,75,.35);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;animation:kaiPulse 2.6s ease-in-out infinite}#kai-fab img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:2px solid rgba(255,255,255,.85);background:#fff;flex:none}#kai-fab .kai-txt{display:flex;flex-direction:column;line-height:1.2}#kai-fab .kai-txt b{font-size:14px;font-weight:900}#kai-fab .kai-txt i{font-size:10.5px;font-style:normal;opacity:.92}#kai-fab:hover{transform:translateY(-2px)}@keyframes kaiPulse{0%,100%{box-shadow:0 12px 30px rgba(10,80,75,.35)}50%{box-shadow:0 14px 44px rgba(18,169,159,.6)}}@media(max-width:520px){#kai-fab .kai-txt i{display:none}#kai-fab{padding:7px 15px 7px 7px}#kai-fab img{width:40px;height:40px}}</style>`
 }
 
-export type ShellOpts = { refPrefix: string; base: string; footerLinks: string }
+export type ShellOpts = { refPrefix: string; base: string; footerLinks: string; ogImage?: string }
 /**
  * 関連ニュースの差し込み口。中身は exbridge.jp/ai-it-news/ の news-widget.js が
  * news-index.json を読んで描画する。
@@ -134,7 +134,7 @@ export function shell(title: string, desc: string, canonical: string, body: stri
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website"><meta property="og:site_name" content="株式会社エクスブリッジ">
 <meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(desc)}">
-<meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${SITE}/images/ai-development-ogp.png">
+<meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${attr(opts.ogImage || `${SITE}/images/ai-development-ogp.png`)}">
 <meta name="twitter:card" content="summary_large_image">
 ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</script>`).join('\n')}
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA}"></script>

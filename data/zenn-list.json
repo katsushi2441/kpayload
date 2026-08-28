@@ -3770,6 +3770,618 @@
   "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
   "category": "media",
   "inCatalog": true,
+  "related": [
+   "ffmpeg-encoding-performance",
+   "ffmpeg-video-service-basics",
+   "ffmpeg-webm-to-mp4",
+   "ffmpeg-webm-reencode",
+   "ffmpeg-subtitle-translation"
+  ]
+ },
+ {
+  "slug": "voicevox-python-setup",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "python-setup",
+  "keyword": "VOICEVOX Python",
+  "pageTitle": "VOICEVOX Pythonで音声合成する環境構築とサンプル実行手順",
+  "lead": "VOICEVOX Pythonで音声合成を試したい人向けに、LinuxとApple Silicon Macでの環境構築を紹介します。PythonバインディングやONNX Runtime、辞書の準備から、音声ファイルの生成・再生まで、記事公開時点の手順を確認できます。",
+  "article": {
+   "title": "PythonとVOICEVOXで音声合成",
+   "path": "/karaage0703/articles/0187d1d1f4d139",
+   "published_at": "2023-04-09",
+   "user": "karaage0703",
+   "name": "karaage0703",
+   "summary": "VOICEVOXコアのPythonバインディングを使い、LinuxとApple Silicon Macで音声合成環境を構築する手順が書かれています。必要ファイルの導入、サンプルによるWAV生成、指定したテキストを合成して再生する最小限のスクリプトが紹介されています。",
+   "points": [
+    "LinuxとApple Silicon Macでの環境構築",
+    "PythonバインディングとONNX Runtimeの導入",
+    "Open JTalk辞書を使ったWAV生成",
+    "合成音声を再生する最小構成のスクリプト"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-ai-voice-chat",
+   "voicevox-task-notification",
+   "voicevox-video-generation",
+   "voicevox-docker-nodejs",
+   "voicevox-linux-setup"
+  ]
+ },
+ {
+  "slug": "ffmpeg-encoding-performance",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "encoding-performance",
+  "keyword": "FFmpeg GIFエンコード高速化",
+  "pageTitle": "FFmpeg GIFエンコード高速化をcgo実装から学ぶインターン開発記録",
+  "lead": "FFmpeg GIFエンコード高速化を調べる人向けに、ImageFluxでGIFアニメーションをMP4へ変換したインターン事例を紹介します。Goバインディングでの試行からcgoによるエンコーダー実装、テスト画像で12〜19倍の高速化に至った取り組みをたどれます。",
+  "article": {
+   "title": "ピクシブのインターンに参加してアニメーションのエンコードをGIFから12倍高速にした",
+   "path": "/momeemt/articles/pixiv-summer-boot-camp-2022",
+   "published_at": "2022-10-05",
+   "user": "momeemt",
+   "name": "momeemt",
+   "summary": "ピクシブの8日間のインターンで、GIF画像をImageFlux上でH.264エンコードして配信可能にする課題へ取り組んだ記録です。go-ffmpegで出力したMP4が開けなかった経緯と、cgoでFFmpegのサンプルを参考にエンコーダーを実装した過程が報告されています。",
+   "points": [
+    "ImageFluxでのGIFからH.264への変換課題",
+    "go-ffmpegで生成したMP4の破損と方針転換",
+    "cgoとFFmpegサンプルによるエンコーダー実装",
+    "テストGIFで12〜19倍の変換高速化"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "ffmpeg-react-video-editor",
+   "ffmpeg-video-service-basics",
+   "ffmpeg-webm-to-mp4",
+   "ffmpeg-webm-reencode",
+   "ffmpeg-subtitle-translation"
+  ]
+ },
+ {
+  "slug": "voicevox-ai-voice-chat",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "ai-voice-chat",
+  "keyword": "VOICEVOX ChatGPT 会話",
+  "pageTitle": "VOICEVOX ChatGPT 会話をWhisper APIと連携して実装する手順",
+  "lead": "VOICEVOX ChatGPT 会話の仕組みを作りたい人に向け、マイク音声の文字起こしからAIの返答生成、読み上げまでの流れを紹介します。Whisper API、ChatGPT API、VOICEVOXの連携方法と、音声合成・再生に使うPythonコードの要点を確認できます。",
+  "article": {
+   "title": "Whisper API, ChatGPT API, VOICEVOXを使ってAIと会話する",
+   "path": "/umyomyomyon/articles/5f07abe67a289b",
+   "published_at": "2023-03-06",
+   "user": "umyomyomyon",
+   "name": "umyomyomyon",
+   "summary": "記事では、マイク入力をWhisper APIで文字起こしし、ChatGPT APIの返答をVOICEVOXで読み上げる手順が紹介されています。音声合成用クエリとWAVファイルの取得、PyAudioによる再生、各処理を組み合わせた実装がコード付きで説明されています。",
+   "points": [
+    "Whisper APIによるマイク音声の文字起こし",
+    "ChatGPT APIへの会話履歴の送信と返答取得",
+    "VOICEVOXの2つのAPIによるWAV生成",
+    "PyAudioを使ったWAV音声の再生処理"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-python-setup",
+   "voicevox-task-notification",
+   "voicevox-video-generation",
+   "voicevox-docker-nodejs",
+   "voicevox-linux-setup"
+  ]
+ },
+ {
+  "slug": "voicevox-task-notification",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "task-notification",
+  "keyword": "VOICEVOX 音声通知",
+  "pageTitle": "VOICEVOX 音声通知をClaude Skillsで実装するスキル作成例の紹介",
+  "lead": "VOICEVOX 音声通知をClaude Skillsと組み合わせ、長時間タスクの完了をずんだもんの声で知らせる仕組みの作成例を紹介します。SKILL.mdに定義する通知手順や報告文のガイドライン、skill-creatorを使ったスキル作成の流れを把握できます。",
+  "article": {
+   "title": "Claude Skillsを使ってみた - システムプロンプト的なカスタマイズが面白い",
+   "path": "/lnest_knowledge/articles/2912bc87bc83d5",
+   "published_at": "2025-10-17",
+   "user": "danielvo",
+   "name": "danielvo",
+   "summary": "記事では、Claude Skillsをシステムプロンプトに近い機能として捉え、VOICEVOX MCPサーバーと組み合わせたタスク完了時の音声通知スキルが紹介されています。完了音の再生、ずんだもんによる短い成果報告、skill-creatorでSKILL.mdを生成する流れが記載されています。",
+   "points": [
+    "VOICEVOX MCPによるタスク完了通知",
+    "ずんだもん音声での簡潔な成果報告",
+    "完了音と読み上げを組み合わせた通知手順",
+    "skill-creatorを使ったSKILL.md作成フロー"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-python-setup",
+   "voicevox-ai-voice-chat",
+   "voicevox-video-generation",
+   "voicevox-docker-nodejs",
+   "voicevox-linux-setup"
+  ]
+ },
+ {
+  "slug": "voicevox-video-generation",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "video-generation",
+  "keyword": "VOICEVOX 動画生成",
+  "pageTitle": "VOICEVOX 動画生成をGitHub更新の解説動画ワークフローから学ぶ",
+  "lead": "「VOICEVOX 動画生成」で、GitHub Changelogをキャラクター解説動画に変える構成を知りたい人向けの紹介です。GitHub Copilot Agent Skillsでの台本作成、VOICEVOXでの音声合成、Remotionでの動画合成をつなぐ流れと、著者が得た改善の知見を把握できます。",
+  "article": {
+   "title": "GitHub のアップデートを、Youtube ショート感覚でダラダラ見られる動画にしてみた",
+   "path": "/microsoft/articles/github-update-movie-agent",
+   "published_at": "2026-04-26",
+   "user": "maru401",
+   "name": "maru401",
+   "summary": "この記事では、GitHub ChangelogのURLから1〜2分の解説動画を生成する仕組みが紹介されています。Agent Skillが台本生成と各スクリプトの実行を担い、VOICEVOXでシーンごとの音声を作り、Remotionでスライド・キャラ・字幕をmp4にまとめる流れが説明されています。",
+   "points": [
+    "Agent Skill・VOICEVOX・Remotionの3段構成",
+    "VOICEVOX APIによるシーン別wav音声の生成",
+    "Markdownにまとめた台本作成と工程実行のルール",
+    "スライド・字幕・キャラを組み合わせた動画合成"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-python-setup",
+   "voicevox-ai-voice-chat",
+   "voicevox-task-notification",
+   "voicevox-docker-nodejs",
+   "voicevox-linux-setup"
+  ]
+ },
+ {
+  "slug": "voicevox-docker-nodejs",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "docker-nodejs",
+  "keyword": "VOICEVOX Docker 音声合成",
+  "pageTitle": "VOICEVOX Docker 音声合成をNode.jsから実行する記事の紹介",
+  "lead": "VOICEVOX Docker 音声合成の構成を探している人向けに、Docker Composeでエンジンを起動し、Node.jsから音声ファイルを生成する流れを紹介します。APIクライアントによるクエリ作成からWAVファイルへの書き出しまで、記事で扱われた実装手順を把握できます。",
+  "article": {
+   "title": "Re VOICEVOXで高クオリティな音声合成を... | Docker & nodejs 編",
+   "path": "/ddpn08/articles/fd92b7cf2be16f",
+   "published_at": "2022-05-19",
+   "user": "ddpn08",
+   "name": "ddpn08",
+   "summary": "この記事では、VOICEVOX EngineのDockerイメージをDocker Composeで起動し、Node.jsから音声合成APIを利用する手順が解説されています。文字列からクエリと音声を順に生成し、ArrayBufferをBufferへ変換してWAVファイルに保存するコードが紹介されています。",
+   "points": [
+    "Docker Composeによる音声合成エンジンの起動",
+    "CPU・NVIDIA GPU向けイメージの指定",
+    "Node.js用APIクライアントの導入",
+    "合成音声のWAVファイルへの書き出し"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-python-setup",
+   "voicevox-ai-voice-chat",
+   "voicevox-task-notification",
+   "voicevox-video-generation",
+   "voicevox-linux-setup"
+  ]
+ },
+ {
+  "slug": "ffmpeg-video-service-basics",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "video-service-basics",
+  "keyword": "FFmpeg 動画サービス構築",
+  "pageTitle": "FFmpeg 動画サービス構築の基礎をMP4とffprobeの確認から学ぶ",
+  "lead": "「FFmpeg 動画サービス構築」を基礎から学びたい人に向け、ローカルでのMP4再生から始める学習手順が紹介されています。コンテナとコーデックの違い、ffprobeによる映像・音声形式の確認、エンコードが必要になる背景を順に把握できます。",
+  "article": {
+   "title": "動画サービス構築の勉強について",
+   "path": "/nobezawa/articles/teach-play-video",
+   "published_at": "2021-10-06",
+   "user": "nobezawa",
+   "name": "nobezawa",
+   "summary": "初めて動画サービスを構築した著者の経験をもとに、ローカル再生、エンコードやコーデック、インフラ配信、CDNの順で学ぶ方法が書かれています。MP4の中身をFFmpeg付属のffprobeで確認し、ブラウザなどの対応形式を見極める例も紹介されています。",
+   "points": [
+    "ローカル環境でのMP4動画再生手順",
+    "MP4コンテナとコーデックの違い",
+    "ffprobeによる映像・音声形式の確認",
+    "利用環境に応じたエンコードの必要性"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "ffmpeg-react-video-editor",
+   "ffmpeg-encoding-performance",
+   "ffmpeg-webm-to-mp4",
+   "ffmpeg-webm-reencode",
+   "ffmpeg-subtitle-translation"
+  ]
+ },
+ {
+  "slug": "comfyui-hunyuan-video",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "hunyuan-video",
+  "keyword": "ComfyUI HunyuanVideo",
+  "pageTitle": "ComfyUI HunyuanVideoをローカル環境で動かす導入・設定手順",
+  "lead": "「ComfyUI HunyuanVideo」でローカル動画生成の手順を探している方向けに、GGUF版モデルの導入方法を紹介します。Mac StudioとRTX 3060環境でのモデル配置、ワークフローのノード差し替え、OOMを避けるフレーム数の調整例を確認できます。",
+  "article": {
+   "title": "ローカル環境でHunyuanVideoを動かしてみる",
+   "path": "/robustonian/articles/hunyuanvideo_mac",
+   "published_at": "2024-12-23",
+   "user": "robustonian",
+   "name": "robustonian",
+   "summary": "この記事では、ComfyUIを使ってGGUF版HunyuanVideoをMacとNvidia環境で動かす手順が説明されています。必要な追加ノードとモデルの配置、ワークフローの変更方法に加え、各環境で著者が確認した生成条件やエラーも報告されています。",
+   "points": [
+    "ComfyUIと追加カスタムノードの導入手順",
+    "Mac・Nvidia環境別のモデル配置方法",
+    "GGUF用ローダーへのノード差し替え",
+    "RTX 3060でのOOMとフレーム数調整例"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-flux-ai-setup",
+   "comfyui-sdxl-workflow",
+   "comfyui-workflow-automation",
+   "comfyui-claude-code-integration",
+   "comfyui-custom-expression-ui"
+  ]
+ },
+ {
+  "slug": "ffmpeg-webm-to-mp4",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "webm-to-mp4",
+  "keyword": "FFmpeg WebM MP4 変換",
+  "pageTitle": "FFmpeg WebM MP4 変換をmacOSの右クリックメニューに追加する手順",
+  "lead": "FFmpeg WebM MP4 変換をmacOSのFinderの右クリックメニューから実行したい人向けに、記事で紹介されている設定内容をまとめます。HomebrewによるFFmpegの導入から、Automatorのクイックアクション設定、zshスクリプトの記述と保存までの流れを把握できます。",
+  "article": {
+   "title": "macOS の右クリックメニューから WebM を MP4 に変換する",
+   "path": "/kaleidot725/articles/2021-11-22-convert-wemb-to-mp4",
+   "published_at": "2021-11-22",
+   "user": "kaleidot725",
+   "name": "kaleidot725",
+   "summary": "記事では、HomebrewでFFmpegをインストールし、AutomatorでFinder向けのクイックアクションを作成する手順が紹介されています。入力を引数としてzshスクリプトへ渡し、WebMファイルと同じ場所に同名のMP4を出力する設定が書かれています。",
+   "points": [
+    "Homebrewを使ったFFmpegのインストール",
+    "Finder向けクイックアクションの作成",
+    "zshと引数渡しを使うAutomator設定",
+    "WebMからMP4へ変換するスクリプト"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "ffmpeg-react-video-editor",
+   "ffmpeg-encoding-performance",
+   "ffmpeg-video-service-basics",
+   "ffmpeg-webm-reencode",
+   "ffmpeg-subtitle-translation"
+  ]
+ },
+ {
+  "slug": "ffmpeg-webm-reencode",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "webm-reencode",
+  "keyword": "FFmpeg WebM再エンコード",
+  "pageTitle": "FFmpeg WebM再エンコードでLive2D録画の背景透過を保つ手順",
+  "lead": "記事では、「FFmpeg WebM再エンコード」を調べる人に向けて、MediaRecorderで録画したLive2D映像を再処理する理由とコマンド例が紹介されています。再生時間がInfinityになる問題やデコードエラーへの対応、背景透過を保つための指定を手順に沿って把握できます。",
+  "article": {
+   "title": "Live2Dで口パクやモーションさせて録画したい！",
+   "path": "/seya/articles/31b3cba16cf932",
+   "published_at": "2024-12-25",
+   "user": "seya",
+   "name": "seya",
+   "summary": "著者は、Live2Dの口パクとモーションをMediaRecorderでWebMに録画し、Playwrightでヘッドレス実行する手順を示しています。録画後は、再生時間がInfinityになる問題とデコードエラーに対応するため、FFmpegでアルファ付きのまま再エンコードしたと報告しています。",
+   "points": [
+    "MediaRecorderによる透過WebM録画",
+    "Playwrightを使ったヘッドレス録画",
+    "FFmpegによるWebMの再エンコード",
+    "アルファを保つlibvpx-vp9の入力指定"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "ffmpeg-react-video-editor",
+   "ffmpeg-encoding-performance",
+   "ffmpeg-video-service-basics",
+   "ffmpeg-webm-to-mp4",
+   "ffmpeg-subtitle-translation"
+  ]
+ },
+ {
+  "slug": "voicevox-linux-setup",
+  "ossSlug": "voicevox",
+  "ossName": "VOICEVOX",
+  "theme": "linux-setup",
+  "keyword": "VOICEVOX Linux",
+  "pageTitle": "VOICEVOX Linux環境で試すエンジン起動とAPI音声合成の手順",
+  "lead": "VOICEVOX Linux環境で音声合成を試したい人に向け、Docker内のWineでエンジンを起動し、HTTP APIへcurlでリクエストする流れを紹介します。話者の切り替えや、別途起動したElectron製フロントエンドから接続する手順も確認できます。",
+  "article": {
+   "title": "テキスト読み上げソフトウェアのVOICEVOXをLinuxで使ってみて思ったこと",
+   "path": "/tantan_tanuki/articles/78428a29aab2d2",
+   "published_at": "2021-08-18",
+   "user": "tantan_tanuki",
+   "name": "tantan_tanuki",
+   "summary": "記事では、Windows版のVOICEVOXエンジンをDocker内のWineで起動し、APIドキュメントの表示からcurlによる音声生成・再生までを検証したと報告されています。さらに、接続先を書き換えたフロントエンドの起動手順と、構成上の課題に関する著者の所感が紹介されています。",
+   "points": [
+    "Docker内のWineによるエンジン起動",
+    "curlを使った音声合成と再生",
+    "speaker指定による話者の切り替え",
+    "Electron製フロントエンドの接続設定"
+   ]
+  },
+  "githubUrl": "https://github.com/VOICEVOX/voicevox_engine",
+  "ossSummary": "日本語の音声合成エンジンです。読み上げ音声を自社サーバーで生成でき、キャラクター音声も選べます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "voicevox-python-setup",
+   "voicevox-ai-voice-chat",
+   "voicevox-task-notification",
+   "voicevox-video-generation",
+   "voicevox-docker-nodejs"
+  ]
+ },
+ {
+  "slug": "ffmpeg-subtitle-translation",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "subtitle-translation",
+  "keyword": "FFmpeg 字幕翻訳",
+  "pageTitle": "FFmpeg 字幕翻訳の環境構築とWhisper・DeepL連携手順を紹介",
+  "lead": "「FFmpeg 字幕翻訳」で動画や音声の文字起こしから翻訳字幕の作成までを調べている人向けに、Whisper・DeepL・FFmpegを組み合わせる流れを紹介します。必要な環境構築、SRTとテキストの出力、ローカル環境とGoogle Colabでの準備を把握できます。",
+  "article": {
+   "title": "動画や音声をサクッと翻訳して字幕をつける",
+   "path": "/thinkingsinc/articles/1fd5c803e37c0a",
+   "published_at": "2024-08-02",
+   "user": "metal_stone",
+   "name": "metal_stone",
+   "summary": "記事では、Whisperで動画を文字起こしし、DeepL APIで翻訳した字幕を付けるツールの実装手順が紹介されています。FFmpegの導入とパス設定、Whisperのインストール、SRT・テキストファイルへの出力方法が解説されています。",
+   "points": [
+    "FFmpegのインストールとパス設定",
+    "Whisperによる動画・音声の文字起こし",
+    "DeepL APIを使った字幕翻訳",
+    "翻訳前後のSRT・テキスト出力"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "ffmpeg-react-video-editor",
+   "ffmpeg-encoding-performance",
+   "ffmpeg-video-service-basics",
+   "ffmpeg-webm-to-mp4",
+   "ffmpeg-webm-reencode"
+  ]
+ },
+ {
+  "slug": "comfyui-flux-ai-setup",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "flux-ai-setup",
+  "keyword": "ComfyUI Flux AI 導入方法",
+  "pageTitle": "ComfyUI Flux AI 導入方法とメモリ最適化を解説したZenn記事の紹介",
+  "lead": "「ComfyUI Flux AI 導入方法」を探している人向けに、必要なモデル、CLIP、VAEファイルの入手先と配置場所を整理します。ComfyUIでのノード設定から、RAMが不足する場合のfp8設定、画像生成を始めるまでの流れを記事に沿って確認できます。",
+  "article": {
+   "title": "ComfyUIでFlux AIを使う方法：詳細ガイド",
+   "path": "/sunwood_ai_labs/articles/using-flux-ai-with-comfyui-detailed-guide",
+   "published_at": "2024-08-03",
+   "user": "sunwood_ai_labs",
+   "name": "sunwood_ai_labs",
+   "summary": "この記事では、ComfyUI上でFlux AIを使うために必要なシステム要件と、モデル・CLIP・VAEの各ファイルをダウンロードして所定のフォルダへ配置する手順が説明されています。さらに、ワークフローの設定、weight_dtypeをfp8にするメモリ最適化、プロンプト入力から生成までの流れが紹介されています。",
+   "points": [
+    "Flux AI利用に必要なRAM要件",
+    "モデル・CLIP・VAEの配置先",
+    "ComfyUIのノードとワークフロー設定",
+    "fp8によるメモリ使用量の最適化"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-hunyuan-video",
+   "comfyui-sdxl-workflow",
+   "comfyui-workflow-automation",
+   "comfyui-claude-code-integration",
+   "comfyui-custom-expression-ui"
+  ]
+ },
+ {
+  "slug": "comfyui-sdxl-workflow",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "sdxl-workflow",
+  "keyword": "ComfyUI SDXLワークフロー",
+  "pageTitle": "ComfyUI SDXLワークフローのプリセット管理と顔・手の自動修正",
+  "lead": "「ComfyUI SDXLワークフロー」を探している人向けに、モデル別設定をTOMLプリセットで切り替え、ワイルドカードで生成パターンを増やす構成が紹介されています。さらに、FaceDetailerを使い、YOLO検出後に顔と手を二段階で再描画する流れや、RTX 5070 Tiでの動作例を確認できます。",
+  "article": {
+   "title": "202603 私のComfyUI SDXLのワークフロー",
+   "path": "/musoukun/articles/116e857fc4dea8",
+   "published_at": "2026-03-10",
+   "user": "musoukun",
+   "name": "musoukun",
+   "summary": "著者が運用するSDXL画像生成について、プリセット読込からプロンプト構築、画像生成、顔・手の修正、保存までの流れが説明されています。TOMLによるモデル別設定、ワイルドカードとPromptManagerの組み合わせ、FaceDetailerによる部分再描画の方法が紹介されています。",
+   "points": [
+    "TOMLで管理するモデル別プリセット",
+    "ワイルドカードによる外見や背景の変更",
+    "疎結合にしたプロンプトの組み立て",
+    "FaceDetailerによる顔と手の自動修正"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-hunyuan-video",
+   "comfyui-flux-ai-setup",
+   "comfyui-workflow-automation",
+   "comfyui-claude-code-integration",
+   "comfyui-custom-expression-ui"
+  ]
+ },
+ {
+  "slug": "comfyui-workflow-automation",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "workflow-automation",
+  "keyword": "ComfyUI ワークフロー自動化",
+  "pageTitle": "ComfyUI ワークフロー自動化を支えるCLI自作の設計判断と実装例を学ぶ",
+  "lead": "ComfyUI ワークフロー自動化を検討している人に向けて、外部CLIからHTTP APIを呼び出し、既存環境に触れずに実行する設計が紹介されています。GUI形式からAPI形式への変換や、シード・プロンプトの上書き、バッチ実行、進捗監視など、自作ツールの構成と実装上の要点を把握できます。",
+  "article": {
+   "title": "ComfyUI CLIを自作してワークフロー実行を自動化する",
+   "path": "/toki_mwc/articles/comfyui-cli-build-automation",
+   "published_at": "2026-03-25",
+   "user": "toki_mwc",
+   "name": "toki_mwc",
+   "summary": "記事では、公式のcomfy-cliとは用途を分け、ComfyUIとは別プロセスで動く「comfyui-cli」を自作した経緯と技術構成が説明されています。実行・変換・状態監視などのコマンドに加え、GUIからAPIへの変換におけるリンク解決、ウィジェット値の対応、SetNode・GetNode処理の実装が紹介されています。",
+   "points": [
+    "既存環境に触れない外部CLIの設計",
+    "Typer・httpx・websockets・Richの技術構成",
+    "実行・変換・モデル・キュー・出力管理のコマンド群",
+    "GUIからAPIへの変換とSetNode・GetNode解決の実装"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-hunyuan-video",
+   "comfyui-flux-ai-setup",
+   "comfyui-sdxl-workflow",
+   "comfyui-claude-code-integration",
+   "comfyui-custom-expression-ui"
+  ]
+ },
+ {
+  "slug": "comfyui-claude-code-integration",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "claude-code-integration",
+  "keyword": "ComfyUI Claude Code連携",
+  "pageTitle": "ComfyUI Claude Code連携で自宅GPUから画像生成する仕組みと構成",
+  "lead": "「ComfyUI Claude Code連携」を調べている人向けに、自宅GPUサーバーへ自然言語やスラッシュコマンドから画像生成を依頼する構成を紹介します。必要なハードウェアとソフトウェア、SkillとCommandの配置、ComfyUI APIへリクエストを送る流れを把握できます。",
+  "article": {
+   "title": "Claude Codeの「Skill」で、自宅GPUサーバーからAIキャラ画像を自動生成する",
+   "path": "/miraclest/articles/claude-code-comfyui-skill-intro",
+   "published_at": "2026-05-04",
+   "user": "miraclest",
+   "name": "miraclest",
+   "summary": "記事では、自宅で常駐させたComfyUIをClaude CodeのSkillから呼び出し、AIキャラクター画像を生成する仕組みが説明されています。VRAMなどの前提条件、Windows・Linux・Proxmoxの構成例、SKILL.mdとPythonスクリプトを使う拡張の全体像が示されています。",
+   "points": [
+    "自宅GPUでComfyUIを常駐運用する構成",
+    "Claude Code SkillとCommandの配置",
+    "ComfyUI APIへ画像生成を送る実行フロー",
+    "VRAM容量を含むハードウェア要件"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-hunyuan-video",
+   "comfyui-flux-ai-setup",
+   "comfyui-sdxl-workflow",
+   "comfyui-workflow-automation",
+   "comfyui-custom-expression-ui"
+  ]
+ },
+ {
+  "slug": "comfyui-custom-expression-ui",
+  "ossSlug": "comfyui",
+  "ossName": "ComfyUI",
+  "theme": "custom-expression-ui",
+  "keyword": "ComfyUI 表情編集UI",
+  "pageTitle": "ComfyUI 表情編集UIをNext.jsで自作する構成・環境と実行手順",
+  "lead": "ComfyUI 表情編集UIを探している人向けに、AdvancedLivePortraitをNext.jsの自作フロントから動かす構成を紹介します。フロントエンドとPythonバックエンドの技術選定、動作環境、リポジトリの取得から環境構築まで、記事で確認できる内容を整理します。",
+  "article": {
+   "title": "【Next.js】ポートレートの表情を編集する自作UIを作ってみた【ComfyUI-AdvancedLivePortrait】",
+   "path": "/asap/articles/c49551ff14d5e9",
+   "published_at": "2024-09-11",
+   "user": "asap",
+   "name": "asap",
+   "summary": "記事では、ComfyUI-AdvancedLivePortraitをWeb UIに依存しないPythonスクリプトで動かし、Next.js製UIからポートレートの表情を編集した事例が紹介されています。M2 MacとRTX 3060搭載Ubuntuによる構成、リポジトリ取得と環境構築の手順が書かれています。",
+   "points": [
+    "Next.jsとPythonによるフロント・バック構成",
+    "M2 MacとRTX 3060搭載Ubuntuでの動作環境",
+    "Google ColabとCPUでの動作確認",
+    "リポジトリ取得から各環境構築までの手順"
+   ]
+  },
+  "githubUrl": "https://github.com/comfyanonymous/ComfyUI",
+  "ossSummary": "画像・動画生成のモデルを、ノードをつないで組み立てるGUIです。生成の手順そのものを保存して再利用できます。",
+  "category": "media",
+  "inCatalog": true,
+  "related": [
+   "comfyui-hunyuan-video",
+   "comfyui-flux-ai-setup",
+   "comfyui-sdxl-workflow",
+   "comfyui-workflow-automation",
+   "comfyui-claude-code-integration"
+  ]
+ },
+ {
+  "slug": "coqui-xtts-aws-neuron-inference",
+  "ossSlug": "coqui-xtts",
+  "ossName": "Coqui TTS（XTTS）",
+  "theme": "aws-neuron-inference",
+  "keyword": "Coqui TTS（XTTS） AWS Neuron",
+  "pageTitle": "Coqui TTS（XTTS） AWS NeuronでXTTS v2を動かす実装手順",
+  "lead": "「Coqui TTS（XTTS） AWS Neuron」で実装方法を探す人向けに、XTTS v2の複合モデル構成と推論経路を整理します。GPTとHifiDecoderのコンパイル戦略、既存PyTorchコードへの統合、固定長入力への対応について、記事で示された考え方と手順を把握できます。",
+  "article": {
+   "title": "XTTS v2 を AWS Neuron で動かす",
+   "path": "/tosshi/articles/53cc505a8d85e2",
+   "published_at": "2026-02-14",
+   "user": "tosshi",
+   "name": "tosshi",
+   "summary": "この記事では、XTTS v2を構成するGPTとHifiDecoderをそれぞれAWS Neuronでコンパイルし、Inf2上の推論パイプラインへ組み込む実験が紹介されています。torch_neuronx.trace()の制約、Forward Override、固定長入力への対応手順が解説されています。",
+   "points": [
+    "GPTとHifiDecoderの役割と推論コールフロー",
+    "Neuron化するコンポーネントの選定戦略",
+    "Forward Overrideによる既存コードへの統合",
+    "torch_neuronx.trace()向け固定長入力への対応"
+   ]
+  },
+  "githubUrl": "https://github.com/coqui-ai/TTS",
+  "ossSummary": "多言語対応の音声合成ツールキットです。少量の音声から話者の声を再現する使い方もできます。",
+  "category": "media",
+  "inCatalog": true,
   "related": []
  }
 ]

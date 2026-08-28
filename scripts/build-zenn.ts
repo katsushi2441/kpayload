@@ -37,6 +37,7 @@ const BASE = `${SITE}/zenn`
 const SHELL = {
   refPrefix: 'exbridge-zenn',
   base: BASE,
+  ogImage: `${SITE}/images/zenn-ogp.png`,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">OSSの実践記事から探す</a>　<a href="${KURAGE}/oss/?ref=exbridge-zenn">業務OSSカタログ</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/solution/">業種・業務別ソリューション</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
@@ -130,6 +131,16 @@ function pageHtml(p: ZennPage): string {
   <div class="vl">${h(v.title)}</div>
 </a>`).join('')
 
+  // よくある質問（表示とJSON-LDで同じ内容を使う）
+  const faqs: Array<{ q: string; a: string }> = [
+    { q: `${p.ossName} は商用利用できますか？`,
+      a: `${p.ossName} はオープンソースとして公開されています。ライセンスの条件（改変版を配布する場合の義務など）は元のリポジトリで確認してください。当社のカタログページでは、ライセンスの区分と実務上の注意点をまとめています。` },
+    { q: `${p.keyword} で調べています。まず何を読めばよいですか？`,
+      a: `このページで紹介しているZennの記事「${a.title}」が、実際に手を動かした人の記録です。導入の可否や費用の考え方まで含めて判断したい場合は、あわせて当社のカタログページをご覧ください。` },
+    { q: `自分で導入するのが難しい場合はどうすればよいですか？`,
+      a: `当社がOSSの導入・日本語化・サーバー構築を代行しています（税込110,000円〜）。相談は無料で、Zoomでの打ち合わせにも対応しています。「そのOSSは御社には向かない」という結論になることもあり、その場合はそうお伝えします。` },
+  ]
+
   const ld = [
     {
       '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${url}#page`,
@@ -150,6 +161,13 @@ function pageHtml(p: ZennPage): string {
         { '@type': 'ListItem', position: 2, name: 'OSSの実践記事から探す', item: `${BASE}/` },
         { '@type': 'ListItem', position: 3, name: p.keyword, item: url },
       ],
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'FAQPage', '@id': `${url}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question', name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
     },
   ]
 
@@ -187,6 +205,13 @@ ${rel.length ? `<section>
   <h2>${h(p.ossName)} の他のテーマ</h2>
   <ul class="rel">${rel.map((r) => `<li><a href="${BASE}/${attr(r.slug)}.html">${h(r.keyword)}</a></li>`).join('')}</ul>
 </section>` : ''}
+
+<section>
+  <h2>よくある質問</h2>
+  <div class="faq">
+    ${faqs.map((f) => `<div class="qa"><div class="q">${h(f.q)}</div><div class="a">${h(f.a)}</div></div>`).join('')}
+  </div>
+</section>
 
 <section class="cta">
   <h2>読んだうえで、自分でやるか任せるか</h2>
@@ -237,6 +262,11 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 .vp::after{content:"";position:absolute;left:16px;top:11px;border-left:12px solid #0a726b;border-top:8px solid transparent;border-bottom:8px solid transparent}
 .vl{padding:9px 11px 12px;font-size:13px;font-weight:700;color:#1d3038;line-height:1.5}
 .rel{margin:0;padding-left:20px;font-size:14px;line-height:2}
+.faq{display:grid;gap:9px}
+.qa{background:#fff;border:1px solid #dcebe9;border-radius:11px;padding:13px 15px}
+.qa .q{font-weight:800;font-size:14px;margin-bottom:5px}
+.qa .q::before{content:"Q. ";color:#0a9a8f}
+.qa .a{font-size:13px;color:#5f7078;line-height:1.75}
 .cta{background:#f3faf9;border:1px solid #dcebe9;border-radius:14px;padding:18px}
 .ctarow{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
 .btn{display:inline-block;background:#0a9a8f;color:#fff;font-weight:800;font-size:13.5px;padding:10px 17px;border-radius:99px;text-decoration:none}
