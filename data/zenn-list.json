@@ -137,7 +137,9 @@
   "ossSummary": "■ 概要（1行） 構造体内に保持する子要素のメソッドを、親構造体に対して自動的に擬似的に実装（委譲）するためのマクロ群です。 ■ 特徴・用途（2〜3行） 高度なコンポジション（合成）を可能にし、デザインパターンとしての委譲（Delegation）をマクロレベルで実現します。特に、構造体の子要素が特定のインターフェース（Trait）を実装している場合、親構造体側にコードボイラープレートなしでそのインターフェースを公開できる点が強力です。`no_std`対応であるため、組み込みシステムや環境制約が厳しい領域での利用が想定されます。 ■ 結論（1行） コンポジションによる機能継承を大幅に簡略化し、大規模なシステム設計においてコードの疎結合性を維持しつつ高い再利用性を実現します。",
   "category": "other",
   "inCatalog": false,
-  "related": []
+  "related": [
+   "auto-delegate-release-update"
+  ]
  },
  {
   "slug": "mikanos-rs-window-drawing",
@@ -275,6 +277,3469 @@
   },
   "githubUrl": "https://github.com/elmtw/bevy_async_system",
   "ossSummary": "■ 概要（1行） Bevyのシステム実行フローに、時間遅延や順次実行（シーケンス）を組み込むためのコルーチンライクな機構を提供する。 ■ 特徴・用途（2〜3行） `Reactor`を中心とした`wait`や`delay`といったアクションにより、アニメーションや複雑なゲームロジックのステップ進行など、時間依存性の高いワークフローを、可読性の高い疑似非同期コードで記述できる。また、`no_std`サポートは、一般的なゲームループ外の環境を含む広範なプラットフォームでの利用を可能にする高いポータビリティを示す。 ■ 結論（1行） 従来のディスパッチ型システムでは複雑になりがちな、状態遷移やタイミング制御を、構造的な変更を最小限に抑えつつ実装できる強力なツールである。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "mysql-community-primary-key-design",
+  "ossSlug": "mysql-community",
+  "ossName": "MySQL Community Edition",
+  "theme": "primary-key-design",
+  "keyword": "MySQL Community Edition 主キー設計",
+  "pageTitle": "MySQL Community Edition 主キー設計におけるIDと日時カラムの選び方",
+  "lead": "「MySQL Community Edition 主キー設計」を調べる人に向け、連番整数とUUID v1・v4・v7の特徴や選定基準を紹介します。MySQL固有のクラスターインデックスを踏まえ、AUTO_INCREMENTとUUID、CHAR(36)とBINARY(16)の使い分けを記事から把握できます。",
+  "article": {
+   "title": "Postgres と MySQL における id, created_at, updated_at に関するベストプラクティス",
+   "path": "/yumemi_inc/articles/rdb-ids-and-timestamps-best-practices",
+   "published_at": "2022-06-16",
+   "user": "mpyw",
+   "name": "mpyw",
+   "summary": "本記事では、Postgresとの比較を交えながら、MySQLの主キーに連番整数またはUUIDを採用する際の判断軸が解説されています。著者は、クラスターインデックスによる非単調増加値の性能劣化を踏まえ、AUTO_INCREMENTを最も簡単な選択肢、分散発行ではUUID v7またはv1としています。",
+   "points": [
+    "連番整数とUUID各バージョンの比較",
+    "MySQLのクラスターインデックスと性能劣化",
+    "AUTO_INCREMENTとUUIDの選定基準",
+    "CHAR(36)とBINARY(16)の使い分け"
+   ]
+  },
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "ossSummary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "related": [
+   "mysql-community-deadlock-handling",
+   "mysql-community-innodb-locking",
+   "mysql-community-innodb-deadlock",
+   "mysql-community-index-performance"
+  ]
+ },
+ {
+  "slug": "wordpress-theme-development",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "theme-development",
+  "keyword": "WordPress テーマ作成",
+  "pageTitle": "WordPress テーマ作成の流れをWebエンジニア向けに解説する記事",
+  "lead": "「WordPress テーマ作成」の進め方を知りたいWebエンジニアに向けて、テーマ構築を順番に体験できる記事を紹介します。WordPressとPHPに対する著者の見方から、Localを使ったローカル環境の準備、サーバーへの導入方法までを確認できます。",
+  "article": {
+   "title": "WordPressのテーマを作る羽目になったWebエンジニアへ",
+   "path": "/antez/articles/8e576daf822a84",
+   "published_at": "2022-04-27",
+   "user": "antez",
+   "name": "antez",
+   "summary": "Webエンジニアが抱きがちなWordPressやPHPへの印象を取り上げ、効率化の観点からWordPressを選ぶ考え方が述べられています。テーマ作成を順番に進める構成で、Localによる開発環境の準備やサーバーへのインストール手順が書かれています。",
+   "points": [
+    "WordPressとPHPへの印象と著者の見解",
+    "テーマ作成を順番に進める記事構成",
+    "Localを使ったローカル環境の準備",
+    "サーバーへのWordPress導入手順"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-headless-cms-comparison",
+   "wordpress-vite-development",
+   "wordpress-successor-cms",
+   "wordpress-wordpress-performance",
+   "wordpress-ai-code-maintenance"
+  ]
+ },
+ {
+  "slug": "sqlite-aws-cost-reduction",
+  "ossSlug": "sqlite",
+  "ossName": "SQLite",
+  "theme": "aws-cost-reduction",
+  "keyword": "SQLite AWS コスト削減",
+  "pageTitle": "SQLite AWS コスト削減事例に学ぶECS・RDSからの移行手順",
+  "lead": "「SQLite AWS コスト削減」を検討する人に向け、ECS＋RDSからLambda＋EFSへ社内システムを移した事例を紹介します。PostgreSQLからSQLiteへの変更点、Prismaの設定や配列型の正規化、データ移行、Lambda対応の流れを把握できます。",
+  "article": {
+   "title": "ECSとRDSをやめて、AWSコストを9割削減しました",
+   "path": "/beenos_tech/articles/lambda-sqlite-application",
+   "published_at": "2025-01-22",
+   "user": "galette",
+   "name": "galette",
+   "summary": "この記事では、社内システムをECS＋RDSからLambda＋EFSへ移し、EFS上でSQLiteを利用した事例が報告されています。Prismaの設定変更、PostgreSQL固有の配列型への対応、Seederを使ったデータ移行、Dockerfile変更の手順が書かれています。",
+   "points": [
+    "EFS上でSQLiteを利用するAWS構成",
+    "PrismaのSQLite向け設定変更",
+    "配列型の正規化とクエリの修正",
+    "Seederと手動クエリによるデータ移行"
+   ]
+  },
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "ossSummary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "39344a73feef49c4",
+    "title": "Your executable is a SQLite database — AIニュース 2026-08-25"
+   },
+   {
+    "id": "078ba030fa9444de",
+    "title": "SQLiteとは？実行ファイルがデータベースである理由と仕組みを解説"
+   },
+   {
+    "id": "959886d2df114348",
+    "title": "SQLiteとは？実行ファイルがデータベースである驚きの仕組みと理由"
+   }
+  ],
+  "related": [
+   "sqlite-rails-cloud-run",
+   "sqlite-llm-context-design",
+   "sqlite-browser-orm",
+   "sqlite-ai-data-design"
+  ]
+ },
+ {
+  "slug": "postgresql-index-structure",
+  "ossSlug": "postgresql",
+  "ossName": "PostgreSQL",
+  "theme": "index-structure",
+  "keyword": "PostgreSQL インデックス構造",
+  "pageTitle": "PostgreSQL インデックス構造をMySQL（InnoDB）との違いから理解する",
+  "lead": "PostgreSQL インデックス構造の基礎を、MySQL（InnoDB）との比較を通して学べる記事です。二分探索木や平衡二分木からB-Tree、B+Treeへと順を追い、データ検索を高速化する仕組みと各構造の特徴を理解できます。",
+  "article": {
+   "title": "インデックスとは何？MySQL(InnoDB)とPostgreSQLのインデックスの違いとは？調べてみました",
+   "path": "/calloc134/articles/4f96b0fe093489",
+   "published_at": "2024-09-19",
+   "user": "calloc134",
+   "name": "calloc134",
+   "summary": "この記事では、インデックスの役割を説明したうえで、二分探索木、平衡二分木、B-Tree、B+Treeの特徴が順に解説されています。MySQL（InnoDB）とPostgreSQLで採用されるB+Treeについて、葉ノードの連結やデータ配置の特徴が紹介されています。",
+   "points": [
+    "データアクセスを高速化するインデックスの役割",
+    "二分探索木と平衡二分木の基本構造",
+    "B-TreeからB+Treeへの構造上の変化",
+    "MySQLとPostgreSQLで使われるB+Treeの特徴"
+   ]
+  },
+  "githubUrl": "https://github.com/postgres/postgres",
+  "ossSummary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "7dc76480cc4d4854",
+    "title": "PGSimCityとは？PostgreSQLの内部構造を可視化するシミュレーションツールの特徴"
+   },
+   {
+    "id": "67d3f3b190f74d2c",
+    "title": "PostgreSQLとは？PGSimCityが解説する仕組みと内部構造"
+   }
+  ],
+  "related": [
+   "postgresql-jsonb-validation",
+   "postgresql-mysql-postgresql-migration",
+   "postgresql-opensearch-to-postgis"
+  ]
+ },
+ {
+  "slug": "wordpress-headless-cms-comparison",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "headless-cms-comparison",
+  "keyword": "WordPress ヘッドレスCMS 比較",
+  "pageTitle": "WordPress ヘッドレスCMS 比較から学ぶNuxt.js・Next.jsの構築方法",
+  "lead": "WordPress ヘッドレスCMS 比較を検討する人向けに、WordPress本体、Vue（Nuxt.js）、React（Next.js）による構築の違いを整理します。著者が試作したブログ構成をもとに、開発環境、配信方式、更新時のビルド、運用上のメリットとデメリットを把握できます。",
+  "article": {
+   "title": "WordPress / Vue(Nuxt.js) / React(Next.js)の3つの方法でWebサイト構築してみたメモ",
+   "path": "/kote2/articles/eac7f15443265c",
+   "published_at": "2021-03-05",
+   "user": "kote2",
+   "name": "kote2",
+   "summary": "この記事では、WordPressを通常のCMSとして使う構成と、Nuxt.jsまたはNext.jsからHeadless CMSとして使う構成が比較されています。各方式の言語、配信形態、サーバー、学習コスト、更新時のビルド方法に加え、試作サイトとLighthouse監査結果が紹介されています。",
+   "points": [
+    "WordPress本体と2種類のSSG構成の比較",
+    "Nuxt.jsによる全ページビルドの運用",
+    "Next.jsのISRを用いた部分ビルド",
+    "各方式の開発環境とメリット・デメリット"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-theme-development",
+   "wordpress-vite-development",
+   "wordpress-successor-cms",
+   "wordpress-wordpress-performance",
+   "wordpress-ai-code-maintenance"
+  ]
+ },
+ {
+  "slug": "sqlite-rails-cloud-run",
+  "ossSlug": "sqlite",
+  "ossName": "SQLite",
+  "theme": "rails-cloud-run",
+  "keyword": "SQLite Rails 8 本番運用",
+  "pageTitle": "SQLite Rails 8 本番運用をCloud RunとCloud Storageで試す手順",
+  "lead": "「SQLite Rails 8 本番運用」を検討する人向けに、Cloud RunへRailsアプリをデプロイし、Cloud Storageへデータファイルを保存する構成と設定手順を紹介します。インスタンス数の制限やSecret Managerの設定、著者が確認した費用の内訳まで把握できます。",
+  "article": {
+   "title": "Rails 8で本番利用可能になったSQLiteをつかうとGoogle Cloudでほぼ無料で運用ができそうな件",
+   "path": "/kiyokato/articles/6d4b6f629768b7",
+   "published_at": "2025-01-30",
+   "user": "kiyokato",
+   "name": "kiyokato",
+   "summary": "Rails 8のSQLiteアプリをCloud Runで動かし、Cloud Storageを「/rails/storage」へマウントする手順が説明されています。最大インスタンス数を1にして動作を確認し、1週間後の費用は1日約0.1円、内訳はすべてArtifact Repositoryだったと報告されています。",
+   "points": [
+    "Rails 8によるSQLiteアプリの作成手順",
+    "Cloud Storageへのデータ保存設定",
+    "Cloud Runへのコンテナデプロイ手順",
+    "最大1インスタンス構成での費用確認"
+   ]
+  },
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "ossSummary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "39344a73feef49c4",
+    "title": "Your executable is a SQLite database — AIニュース 2026-08-25"
+   },
+   {
+    "id": "078ba030fa9444de",
+    "title": "SQLiteとは？実行ファイルがデータベースである理由と仕組みを解説"
+   },
+   {
+    "id": "959886d2df114348",
+    "title": "SQLiteとは？実行ファイルがデータベースである驚きの仕組みと理由"
+   }
+  ],
+  "related": [
+   "sqlite-aws-cost-reduction",
+   "sqlite-llm-context-design",
+   "sqlite-browser-orm",
+   "sqlite-ai-data-design"
+  ]
+ },
+ {
+  "slug": "mysql-community-deadlock-handling",
+  "ossSlug": "mysql-community",
+  "ossName": "MySQL Community Edition",
+  "theme": "deadlock-handling",
+  "keyword": "MySQL Community Edition デッドロック対策",
+  "pageTitle": "MySQL Community Edition デッドロック対策と発生原因を実例で学ぶ",
+  "lead": "MySQL Community Editionで、トランザクションを使用していても発生し得るデッドロックの原因と対応方法を学べます。出金履歴登録サービスのコードとテストを通じて、SELECT...FOR UPDATEによるロックの挙動や、対応時に考慮すべき問題点を確認できます。",
+  "article": {
+   "title": "MySQLで発生し得る思わぬデッドロックと対応方法",
+   "path": "/shuntagami/articles/ea44a20911b817",
+   "published_at": "2022-07-03",
+   "user": "shuntagami",
+   "name": "shuntagami",
+   "summary": "出金上限を判定して履歴を登録する処理を例に、同時リクエストでデッドロックが発生する仕組みが解説されています。取得結果がNULLの場合のネクストキーロックを原因として示し、再試行や分離レベルの変更、テーブルロックなどの対応方法と問題点が紹介されています。",
+   "points": [
+    "出金履歴登録サービスによる再現手順",
+    "同時リクエストで起きるデッドロック",
+    "NULL取得時のネクストキーロック",
+    "対応方法と分離レベル変更の問題点"
+   ]
+  },
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "ossSummary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "related": [
+   "mysql-community-primary-key-design",
+   "mysql-community-innodb-locking",
+   "mysql-community-innodb-deadlock",
+   "mysql-community-index-performance"
+  ]
+ },
+ {
+  "slug": "mysql-community-innodb-locking",
+  "ossSlug": "mysql-community",
+  "ossName": "MySQL Community Edition",
+  "theme": "innodb-locking",
+  "keyword": "MySQL Community Edition ロック範囲",
+  "pageTitle": "MySQL Community Edition ロック範囲をInnoDBの具体例から理解する",
+  "lead": "MySQL Community EditionのInnoDBで、SELECT ... FOR UPDATEが想定以上の範囲をロックし、INSERT待ちを生む仕組みが解説されています。レコードロック、ギャップロック、ネクストキーロックの違いを、非ユニークインデックスとタグ更新処理の例から整理できます。",
+  "article": {
+   "title": "MySQL (InnoDB) のロック範囲に気をつけよう",
+   "path": "/socialplus/articles/2e16da32f39a0c",
+   "published_at": "2025-10-30",
+   "user": "otsuboa",
+   "name": "otsuboa",
+   "summary": "記事では、MySQL 8.0.43のInnoDBとREPEATABLE READを前提に、価格インデックスへのSELECT ... FOR UPDATEで複数のINSERTが待たされる例が示されています。さらに、ブログ記事のタグ更新を並列実行した際にデッドロックが発生する例が紹介されています。",
+   "points": [
+    "レコード・ギャップ・ネクストキーロックの整理",
+    "非ユニークインデックスで広がるロック範囲",
+    "INSERTがロック待ちになる具体例",
+    "タグ更新の並列実行で起こるデッドロック例"
+   ]
+  },
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "ossSummary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "related": [
+   "mysql-community-primary-key-design",
+   "mysql-community-deadlock-handling",
+   "mysql-community-innodb-deadlock",
+   "mysql-community-index-performance"
+  ]
+ },
+ {
+  "slug": "sqlite-llm-context-design",
+  "ossSlug": "sqlite",
+  "ossName": "SQLite",
+  "theme": "llm-context-design",
+  "keyword": "SQLite 生成AI開発",
+  "pageTitle": "SQLite 生成AI開発でRAGとレビュー情報を構造化・キャッシュするアーキテクチャ設計例",
+  "lead": "SQLiteを生成AI向けのコード生成基盤にどう組み込むかを、ローカルRAGとGitHubレビューのキャッシュという具体例から把握できます。レイヤードアーキテクチャの課題と、関連情報を相対パスで絞り込む提案を通じて、LLMへ渡すコンテキストを構造化する考え方が分かります。",
+  "article": {
+   "title": "生成AIの時代にレイヤードアーキテクチャは古いかなと思った",
+   "path": "/kooo5252/articles/2e9e45bdab99b1",
+   "published_at": "2025-04-09",
+   "user": "kooo5252",
+   "name": "kooo5252",
+   "summary": "生成AIが参照する情報を機能階層と相対パスで絞り込む「Vertical Slice Layered Architecture」が提案されています。SQLiteには外部クラスの文書やPRレビューを構造的に保存し、RAG検索やAPIキャッシュに利用する設計例が示されています。",
+   "points": [
+    "生成AI向けコンテキスト絞り込みの設計",
+    "SQLiteを用いた外部クラス情報の管理",
+    "PRレビューコメントの構造的なキャッシュ",
+    "Vertical Sliceと階層構造の組み合わせ"
+   ]
+  },
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "ossSummary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "39344a73feef49c4",
+    "title": "Your executable is a SQLite database — AIニュース 2026-08-25"
+   },
+   {
+    "id": "078ba030fa9444de",
+    "title": "SQLiteとは？実行ファイルがデータベースである理由と仕組みを解説"
+   },
+   {
+    "id": "959886d2df114348",
+    "title": "SQLiteとは？実行ファイルがデータベースである驚きの仕組みと理由"
+   }
+  ],
+  "related": [
+   "sqlite-aws-cost-reduction",
+   "sqlite-rails-cloud-run",
+   "sqlite-browser-orm",
+   "sqlite-ai-data-design"
+  ]
+ },
+ {
+  "slug": "wordpress-vite-development",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "vite-development",
+  "keyword": "WordPress Vite開発環境",
+  "pageTitle": "WordPress Vite開発環境をwp-envで構築する方法とHMRの仕組み",
+  "lead": "WordPress Vite開発環境を探している人向けに、wp-envでDocker上へWordPressを構築し、ViteのHMRを利用する構成が分かります。静的HTML制作からクラシックテーマ開発へ移る流れや、開発時とビルド時で参照先を切り替える仕組みを把握できます。",
+  "article": {
+   "title": "wp-envとViteで作る爆速WordPress開発環境",
+   "path": "/crayfisher_zari/articles/f2d38f536eaf02",
+   "published_at": "2024-02-01",
+   "user": "crayfisher_zari",
+   "name": "crayfisher_zari",
+   "summary": "この記事では、wp-envとViteを組み合わせ、SCSSとTypeScriptの変更をHMRでWordPress画面へ反映する開発環境が紹介されています。静的開発用とWordPress用のVite設定の切り替え、WP_DEBUGに応じた資材の参照方法、必要環境や構成が説明されています。",
+   "points": [
+    "wp-envによるDocker上のWordPress構築",
+    "Viteのモード別ビルド入力設定",
+    "WP_DEBUGを使った参照先の切り替え",
+    "HMRによるSCSS・TypeScriptの即時反映"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-theme-development",
+   "wordpress-headless-cms-comparison",
+   "wordpress-successor-cms",
+   "wordpress-wordpress-performance",
+   "wordpress-ai-code-maintenance"
+  ]
+ },
+ {
+  "slug": "mysql-community-innodb-deadlock",
+  "ossSlug": "mysql-community",
+  "ossName": "MySQL Community Edition",
+  "theme": "innodb-deadlock",
+  "keyword": "MySQL Community Edition デッドロック",
+  "pageTitle": "MySQL Community Edition デッドロックの原因をInnoDBのロック構造から読み解く",
+  "lead": "「MySQL Community Edition デッドロック」で原因を調べる人に向け、InnoDBのインデックスとロックアーキテクチャを順に学べる記事を紹介します。実際の事例と実行可能なSQLから、二つのトランザクションがデッドロックに至る流れを説明するための知識が得られます。",
+  "article": {
+   "title": "InnoDB のロックアーキテクチャを理解してデッドロックを説明できるようにする",
+   "path": "/finatext/articles/2fee2f35fe9d9f",
+   "published_at": "2024-08-26",
+   "user": "at_grandpa",
+   "name": "at_grandpa",
+   "summary": "著者はMySQL 8.4.0、InnoDB、REPEATABLE READの環境で、scoresテーブルを使ったデッドロックの再現手順を示しています。B+Treeや各種インデックスを押さえたうえで、実際のロック例から原因を解明する構成です。",
+   "points": [
+    "二つのトランザクションによるデッドロックの再現",
+    "InnoDBのB+Treeインデックス構造",
+    "クラスタ・セカンダリインデックスの違い",
+    "複合インデックスとロック例による原因解明"
+   ]
+  },
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "ossSummary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "related": [
+   "mysql-community-primary-key-design",
+   "mysql-community-deadlock-handling",
+   "mysql-community-innodb-locking",
+   "mysql-community-index-performance"
+  ]
+ },
+ {
+  "slug": "wordpress-successor-cms",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "successor-cms",
+  "keyword": "WordPress 後継CMS",
+  "pageTitle": "WordPress 後継CMS「EmDash」のセットアップと操作感を紹介",
+  "lead": "WordPress 後継CMSを探している人に向けて、EmDashのセットアップから管理画面の操作、記事反映、デプロイまでを試した記事を紹介します。WordPressライクな編集体験やPasskey、AI連携、JSONによる記事管理について、著者が実際に確認した内容を把握できます。",
+  "article": {
+   "title": "WordPress後継CMS「EmDash」を触ってみる",
+   "path": "/z4ck_key/articles/try-emdash-cms",
+   "published_at": "2026-04-02",
+   "user": "z4ck_key",
+   "name": "z4ck_key",
+   "summary": "この記事では、EmDashのプロジェクト作成手順と、WordPressに似た管理画面や投稿作成UIの使用感が報告されています。Passkeyを使う初期設定、Claude CodeとSKILLSによる記事生成、JSON形式の記事データについても紹介されています。",
+   "points": [
+    "対話形式によるEmDashプロジェクトの作成手順",
+    "WordPressライクな管理画面と投稿作成UI",
+    "Passkeyを用いた初期セットアップと認証",
+    "SKILLSによるAI連携とJSON形式の記事管理"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-theme-development",
+   "wordpress-headless-cms-comparison",
+   "wordpress-vite-development",
+   "wordpress-wordpress-performance",
+   "wordpress-ai-code-maintenance"
+  ]
+ },
+ {
+  "slug": "wordpress-wordpress-performance",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "wordpress-performance",
+  "keyword": "WordPress パフォーマンス改善",
+  "pageTitle": "WordPress パフォーマンス改善を支えるWACK Stackの構成と発想",
+  "lead": "大規模なウェブメディアにおけるWordPress パフォーマンス改善の課題と、著者が考案したWACK Stackの発想を紹介します。プラグインやSQL、PHPコード、CDNキャッシュに起因する問題と、WordPressを生かした構成を検討する際の視点が得られます。",
+  "article": {
+   "title": "ウェブメディアの開発に最高かもしれない WACK Stack の紹介",
+   "path": "/5t111111/articles/wack-stack-introduction",
+   "published_at": "2024-01-09",
+   "user": "5t111111",
+   "name": "5t111111",
+   "summary": "記事では、記事総数1万件以上、月間数千万〜数億PV規模を想定し、WordPress運用で生じるデータ量やSQL、PHPコードの肥大化、CDN依存の課題が報告されています。その対策案として、WordPress・Astro・CDN・Kyselyで構成するWACK Stackが紹介されています。",
+   "points": [
+    "大規模メディアで生じるWordPressの性能課題",
+    "SQLクエリやPHPコード肥大化のリスク",
+    "CDNキャッシュへの過度な依存が招く問題",
+    "WordPress・Astro・CDN・Kyselyの構成案"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-theme-development",
+   "wordpress-headless-cms-comparison",
+   "wordpress-vite-development",
+   "wordpress-successor-cms",
+   "wordpress-ai-code-maintenance"
+  ]
+ },
+ {
+  "slug": "postgresql-jsonb-validation",
+  "ossSlug": "postgresql",
+  "ossName": "PostgreSQL",
+  "theme": "jsonb-validation",
+  "keyword": "PostgreSQL JSONB バリデーション",
+  "pageTitle": "PostgreSQL JSONB バリデーションをCHECK制約で実装する実践方法",
+  "lead": "PostgreSQL JSONB バリデーションをデータベース側で行う方法を探している人向けに、JSON SchemaとCHECK制約を組み合わせる手順が紹介されています。拡張機能とPL/pgSQLの選択肢、制約内の関数を修正する際の注意点も把握できます。",
+  "article": {
+   "title": "【PostgreSQL】いかにして JSONB を安全に扱うか",
+   "path": "/yumemi_inc/articles/eba113a2483c14",
+   "published_at": "2024-10-21",
+   "user": "fuwasegu",
+   "name": "fuwasegu",
+   "summary": "この記事では、JSONBを安全に扱う工夫として、JSON Schemaによる検証をCHECK制約に組み込む方法が解説されています。supabase/pg_jsonschemaのjsonb_matches_schema()を使ったテーブル定義と、挿入時の検証例が紹介されています。",
+   "points": [
+    "JSONBとJSON Schemaを組み合わせた検証方法",
+    "拡張機能とPL/pgSQLによる実装の比較",
+    "pg_jsonschemaを用いたCHECK制約の定義",
+    "検証関数を修正する際の制約再適用の注意点"
+   ]
+  },
+  "githubUrl": "https://github.com/postgres/postgres",
+  "ossSummary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "7dc76480cc4d4854",
+    "title": "PGSimCityとは？PostgreSQLの内部構造を可視化するシミュレーションツールの特徴"
+   },
+   {
+    "id": "67d3f3b190f74d2c",
+    "title": "PostgreSQLとは？PGSimCityが解説する仕組みと内部構造"
+   }
+  ],
+  "related": [
+   "postgresql-index-structure",
+   "postgresql-mysql-postgresql-migration",
+   "postgresql-opensearch-to-postgis"
+  ]
+ },
+ {
+  "slug": "wordpress-ai-code-maintenance",
+  "ossSlug": "wordpress",
+  "ossName": "WordPress",
+  "theme": "ai-code-maintenance",
+  "keyword": "WordPress AIコード保守",
+  "pageTitle": "WordPress AIコード保守で半年後も読めるようにする設計判断と構造管理の工夫",
+  "lead": "WordPressのプラグインやテーマをAIエージェント中心で開発し、後から保守しにくくなった経験をもとにした記事です。設計判断の残し方、生成された差分を読む機会の作り方、プロジェクト内の構造や流儀を揃える考え方を学べます。",
+  "article": {
+   "title": "AIに8割書かせたコードを、半年後の自分が保守できるようにするために実際にやっていること",
+   "path": "/rapls/articles/7456767a19af06",
+   "published_at": "2026-06-07",
+   "user": "rapls",
+   "name": "rapls",
+   "summary": "AIに大部分を書かせたWordPressテーマを半年後に修正できなかった経験から、保守性を損なった3つの原因が整理されています。CLAUDE.mdやAGENTS.mdに採用理由と却下理由を残すなど、未来の自分がコードを読み解くための手当てが紹介されています。",
+   "points": [
+    "会話の中で消える設計判断の記録",
+    "生成されたコードを読まずに進む問題",
+    "セッションごとに異なる実装流儀の統一",
+    "指示ファイルを使った軽量なADR運用"
+   ]
+  },
+  "githubUrl": "https://github.com/WordPress/wordpress-develop",
+  "ossSummary": "世界中で利用されるオープンソースのWebサイト・ブログ管理システムです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   },
+   {
+    "id": "96f4b1e30bae4cf8",
+    "title": "WordPressの保守から卒業する方法"
+   }
+  ],
+  "related": [
+   "wordpress-theme-development",
+   "wordpress-headless-cms-comparison",
+   "wordpress-vite-development",
+   "wordpress-successor-cms",
+   "wordpress-wordpress-performance"
+  ]
+ },
+ {
+  "slug": "postgresql-mysql-postgresql-migration",
+  "ossSlug": "postgresql",
+  "ossName": "PostgreSQL",
+  "theme": "mysql-postgresql-migration",
+  "keyword": "PostgreSQL MySQL移行",
+  "pageTitle": "PostgreSQL MySQL移行の実践記録：RLS採用から本番切替と障害対策まで",
+  "lead": "「PostgreSQL MySQL移行」を調べる人に向け、本番稼働中のRailsサービスで採られた移行方針と手順を紹介します。ActiveRecord経由のコピーを選んだ理由、段階的な切り替え、DB間の仕様差、リリース後の障害と再発防止から、移行時に確認すべき観点を把握できます。",
+  "article": {
+   "title": "マルチテナント化のために本番稼働中のMySQLをPostgreSQLに移行した話（マルチテナント化連載 第2回・PostgreSQL移行編）",
+   "path": "/counterworks/articles/0eb98271af2991",
+   "published_at": "2026-06-09",
+   "user": "shimx",
+   "name": "shimx",
+   "summary": "記事では、RLSを用いたマルチテナントの二重防御を実現するため、RDS for MySQLからAurora PostgreSQLへ移行した経緯が報告されています。ActiveRecordによるデータコピーの実装、本番切り替え、仕様差の注意点、移行後に発覚した障害と再発防止策が説明されています。",
+   "points": [
+    "RLS採用を起点としたPostgreSQL移行判断",
+    "ActiveRecord経由の冪等なデータコピー実装",
+    "環境別・顧客別に進める段階的な本番切り替え",
+    "DB仕様差と移行後障害から得た再発防止策"
+   ]
+  },
+  "githubUrl": "https://github.com/postgres/postgres",
+  "ossSummary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "7dc76480cc4d4854",
+    "title": "PGSimCityとは？PostgreSQLの内部構造を可視化するシミュレーションツールの特徴"
+   },
+   {
+    "id": "67d3f3b190f74d2c",
+    "title": "PostgreSQLとは？PGSimCityが解説する仕組みと内部構造"
+   }
+  ],
+  "related": [
+   "postgresql-index-structure",
+   "postgresql-jsonb-validation",
+   "postgresql-opensearch-to-postgis"
+  ]
+ },
+ {
+  "slug": "sqlite-browser-orm",
+  "ossSlug": "sqlite",
+  "ossName": "SQLite",
+  "theme": "browser-orm",
+  "keyword": "SQLite ブラウザ ORM",
+  "pageTitle": "SQLite ブラウザ ORMで試すTypeORMとabsurd-sqlの構成",
+  "lead": "SQLiteをブラウザ内で永続化し、TypeScriptからORM経由で扱う構成を知りたい人向けの記事です。sql.js、absurd-sql、TypeORMを接続し、Web Worker上で動かすために必要となった環境設定や実装例を確認できます。",
+  "article": {
+   "title": "typeorm + absurd-sql on Browser のロマン構成",
+   "path": "/mizchi/articles/typeorm-sqljs-absurd-js-example",
+   "published_at": "2021-09-10",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "ブラウザで動くSQLiteのWasmビルドであるsql.jsに、IndexedDBバックエンドのabsurd-sqlとTypeORMを組み合わせた事例が紹介されています。Web Worker対応のためのモックや、ページサイズなどを設定して接続するコードが掲載されています。",
+   "points": [
+    "sql.jsとabsurd-sqlの基礎知識",
+    "TypeORMを選んだ理由とPrismaの検討",
+    "IndexedDBへSQLiteを永続化する構成",
+    "Web Worker向けの環境モックと初期化"
+   ]
+  },
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "ossSummary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "39344a73feef49c4",
+    "title": "Your executable is a SQLite database — AIニュース 2026-08-25"
+   },
+   {
+    "id": "078ba030fa9444de",
+    "title": "SQLiteとは？実行ファイルがデータベースである理由と仕組みを解説"
+   },
+   {
+    "id": "959886d2df114348",
+    "title": "SQLiteとは？実行ファイルがデータベースである驚きの仕組みと理由"
+   }
+  ],
+  "related": [
+   "sqlite-aws-cost-reduction",
+   "sqlite-rails-cloud-run",
+   "sqlite-llm-context-design",
+   "sqlite-ai-data-design"
+  ]
+ },
+ {
+  "slug": "zabbix-event-noc-monitoring",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "event-noc-monitoring",
+  "keyword": "Zabbix パトライト連携",
+  "pageTitle": "Zabbix パトライト連携でイベントNOCの障害通知を可視化した学生の体験記",
+  "lead": "「Zabbix パトライト連携」をイベントNOCで実践した学生の体験記を紹介します。ZabbixのWebhookメディアタイプにJavaScriptを記述し、機器障害時の点灯と警報音を設定する流れや、ES5相当の実行環境で直面した制約を把握できます。",
+  "article": {
+   "title": "インフラ知識ゼロの学生が、イベントNOCで監視システム諸々をキメてきた話",
+   "path": "/toramutton/articles/uec-enoc2026",
+   "published_at": "2026-05-05",
+   "user": "toramutton",
+   "name": "toramutton",
+   "summary": "インフラ知識がほぼない状態でNOCチームに参加した著者が、イベント向けWi-Fiと監視環境を構築した記録です。ZabbixからパトライトのREST APIを呼び出すWebhookコードの実装に加え、Uptime Kumaによる死活監視や異機種AP間のローミング設計も報告されています。",
+   "points": [
+    "ZabbixのWebhookメディアタイプによる通知実装",
+    "JavaScriptからのパトライトREST API呼び出し",
+    "ES5相当の実行環境におけるvar利用の制約",
+    "Uptime KumaとSlackによる死活監視の構築"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-saml-authentication",
+   "zabbix-appliance-install",
+   "zabbix-docker-setup",
+   "zabbix-appliance-settings",
+   "zabbix-nature-remo-monitoring"
+  ]
+ },
+ {
+  "slug": "libreoffice-pdf-conversion-performance",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "pdf-conversion-performance",
+  "keyword": "LibreOffice PDF変換 高速化",
+  "pageTitle": "LibreOffice PDF変換 高速化のための常駐起動と設定上の注意点",
+  "lead": "LibreOfficeによるPDF変換の遅さを、sofficeの起動コストに着目して改善した事例を紹介します。常駐起動の手順に加え、同じプロセスを利用するための設定や、同時変換ができなくなる際の注意点を確認できます。",
+  "article": {
+   "title": "サーバー上でlibreofficeを使ったpdf変換を高速化する勘所",
+   "path": "/yksn/articles/d3eb91a88e1b04",
+   "published_at": "2022-02-17",
+   "user": "yksn",
+   "name": "yksn",
+   "summary": "記事では、sofficeを「--quickstart」で事前に常駐起動し、PDF変換を約3〜5秒から約0.5秒へ短縮した検証結果が報告されています。systemdの設定例と、UserInstallation指定やラッパーライブラリ利用時の注意点も説明されています。",
+   "points": [
+    "sofficeの起動コストに関する検証",
+    "--quickstartによる常駐起動の手順",
+    "systemdサービスファイルの設定例",
+    "UserInstallation指定と同時変換の注意点"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-chromebook-install",
+   "libreoffice-installation-guide",
+   "libreoffice-digital-signature",
+   "libreoffice-manjaro-install",
+   "libreoffice-chart-creation"
+  ]
+ },
+ {
+  "slug": "mysql-community-index-performance",
+  "ossSlug": "mysql-community",
+  "ossName": "MySQL Community Edition",
+  "theme": "index-performance",
+  "keyword": "MySQL Community Edition インデックス",
+  "pageTitle": "MySQL Community Edition インデックスの仕組みと検索が速くなる理由を解説",
+  "lead": "MySQL Community Editionのインデックスが検索を速める理由を、辞書の索引にたとえながら学べます。B-TreeとB+Treeの構造、O(n)とO(log n)の違いに加え、100万件のusersテーブルを使った測定手順とインデックスなしの実行結果が紹介されています。",
+  "article": {
+   "title": "【初学者向け】インデックスとは？なぜ速くなる？",
+   "path": "/linkedge/articles/7eef3d98cc54b3",
+   "published_at": "2026-08-26",
+   "user": "ruppy",
+   "name": "ruppy",
+   "summary": "この記事では、インデックス未作成時の線形探索と、作成時に使われるB+Tree構造の探索方法が比較されています。MySQLで100万件のusersテーブルを検索するハンズオンでは、SQL、EXPLAINの確認方法、インデックスなしで0.209秒かかった結果が示されています。",
+   "points": [
+    "辞書の索引にたとえたインデックスの基本",
+    "線形探索とB+Tree探索の計算量の違い",
+    "B-TreeとB+Treeの構造上の違い",
+    "100万件のデータを使った検索性能の測定"
+   ]
+  },
+  "githubUrl": "https://github.com/mysql/mysql-server",
+  "ossSummary": "Webシステムで広く利用されるオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "related": [
+   "mysql-community-primary-key-design",
+   "mysql-community-deadlock-handling",
+   "mysql-community-innodb-locking",
+   "mysql-community-innodb-deadlock"
+  ]
+ },
+ {
+  "slug": "payload-cms-local-setup",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "local-setup",
+  "keyword": "Payload CMS ローカル環境",
+  "pageTitle": "Payload CMS ローカル環境の立ち上げから初期設定までの手順を紹介",
+  "lead": "Payload CMS ローカル環境を用意し、管理画面やサンプルコンテンツを確認したい人向けの記事です。プロジェクト作成時の選択項目から、Docker Composeでの起動、管理者ユーザー作成、データベースのシード実行までの流れを把握できます。",
+  "article": {
+   "title": "Payloadを最短でローカル環境に立ち上げ触ってみる",
+   "path": "/ksk1kd/articles/a9d7f480619954",
+   "published_at": "2025-04-27",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "記事では、create-payload-appでwebsiteテンプレートとMongoDBを選び、Docker ComposeでPayloadを起動する手順が紹介されています。管理者ユーザーの作成後にデータベースをシードし、フロント画面でサンプルコンテンツを確認する流れも説明されています。",
+   "points": [
+    "create-payload-appによるプロジェクト作成",
+    "MongoDB接続先とwebsiteテンプレートの設定",
+    "Docker Composeを使ったローカル環境の起動",
+    "管理者ユーザー作成とサンプルデータの投入"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-acquisition-rationale",
+   "payload-cms-schedule-publish",
+   "payload-cms-approval-workflow",
+   "payload-cms-field-types",
+   "payload-cms-collection-frontend"
+  ]
+ },
+ {
+  "slug": "zabbix-saml-authentication",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "saml-authentication",
+  "keyword": "Zabbix SAML認証",
+  "pageTitle": "Zabbix SAML認証をKeycloakで設定する手順とログイン確認の流れ",
+  "lead": "Zabbix SAML認証をKeycloakと連携して設定したい人向けに、証明書の準備からクライアント、マッパー、Zabbix側の認証項目までを確認できます。SSOログインの試し方に加え、ユーザー属性とZabbix登録メールアドレスを一致させる要点も把握できます。",
+  "article": {
+   "title": "Keycloakを使ってZabbixをSAML認証でログインする",
+   "path": "/ttrip/articles/4cf70ab91ddf6a",
+   "published_at": "2020-12-05",
+   "user": "ttrip",
+   "name": "ttrip",
+   "summary": "この記事では、KeycloakにZabbix用のSAMLクライアントとマッパーを作成し、ユーザー属性を設定する手順が紹介されています。Zabbix側での証明書配置、SAML認証項目の入力、SSOログイン確認、一部のトラブルシューティングも書かれています。",
+   "points": [
+    "Zabbix側で使用する証明書の作成と配置",
+    "KeycloakのSAMLクライアント設定",
+    "ユーザーを紐付けるマッパーと属性の設定",
+    "Zabbix側のSAML認証設定とログイン確認"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-event-noc-monitoring",
+   "zabbix-appliance-install",
+   "zabbix-docker-setup",
+   "zabbix-appliance-settings",
+   "zabbix-nature-remo-monitoring"
+  ]
+ },
+ {
+  "slug": "payload-cms-acquisition-rationale",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "acquisition-rationale",
+  "keyword": "Payload CMS Figma買収",
+  "pageTitle": "Payload CMS Figma買収の背景をNext.jsやTypeScriptの特徴から考察",
+  "lead": "Payload CMS Figma買収の背景を知りたい人に向け、Figma Sitesの発表から買収までの流れを整理します。Next.js App RouterやTypeScript設定、ヘッドレス構成など、著者が両社の親和性をどう捉えているかを把握できます。",
+  "article": {
+   "title": "FigmaはなぜPayload CMSを買収したのか",
+   "path": "/ksk1kd/articles/21957b7f88bb3c",
+   "published_at": "2025-06-19",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "FigmaがPayloadを買収した背景について、Figma SitesのCMS機能をめぐる動向とPayloadの技術的特徴から考察した記事です。ホスティング環境やReact・Next.jsとの親和性、コードで設定できる点などが選定理由として挙げられています。",
+   "points": [
+    "Figma Sites発表後のCMS関連の動向",
+    "Next.js App Routerを採用した構成",
+    "TypeScriptで管理するCMS設定",
+    "FigmaとPayloadの技術的親和性に関する考察"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-local-setup",
+   "payload-cms-schedule-publish",
+   "payload-cms-approval-workflow",
+   "payload-cms-field-types",
+   "payload-cms-collection-frontend"
+  ]
+ },
+ {
+  "slug": "zabbix-appliance-install",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "appliance-install",
+  "keyword": "Zabbix Appliance 導入",
+  "pageTitle": "Zabbix Appliance 導入手順をESXiでの仮想マシン構築例から確認する",
+  "lead": "Zabbix Appliance 導入を検討している人向けに、VMware ESXiへ仮想マシンとして登録し、起動するまでの流れを紹介します。提供形態の違い、VMDKの変換とVMXの編集、起動後のIP確認やネットワーク設定を記事に沿って把握できます。",
+  "article": {
+   "title": "Zabbix Applianceを導入してみた",
+   "path": "/payapayao/articles/install-zabbix",
+   "published_at": "2021-02-23",
+   "user": "payapayao",
+   "name": "payapayao",
+   "summary": "記事では、Zabbix 5.0.8のApplianceをESXiへ導入する手順が説明されています。VMDKをvmkfstoolsで複製し、VMXを編集して仮想マシンを登録した後、IPアドレスとネットワークを設定する流れが報告されています。",
+   "points": [
+    "Zabbixの主な5種類の提供形態",
+    "vmkfstoolsによるVMDKの変換手順",
+    "ESXi向けVMX設定と仮想マシン登録",
+    "起動後のIP確認とネットワーク設定"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-event-noc-monitoring",
+   "zabbix-saml-authentication",
+   "zabbix-docker-setup",
+   "zabbix-appliance-settings",
+   "zabbix-nature-remo-monitoring"
+  ]
+ },
+ {
+  "slug": "zabbix-docker-setup",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "docker-setup",
+  "keyword": "Zabbix Docker構築",
+  "pageTitle": "Zabbix Docker構築、1コマンドでZabbixマネージャーを起動する手順",
+  "lead": "「Zabbix Docker構築」を調べている方向けに、Docker環境上でzabbix-applianceコンテナを1コマンドで起動する流れを紹介します。ポート公開、起動確認、Web画面へのログイン、コンテナ内でのZabbix Serverバージョン確認まで、記事で扱われる操作を把握できます。",
+  "article": {
+   "title": "【Docker】Dockerに1発でZabbixマネージャーを立てる。",
+   "path": "/supersatton/articles/4a4cb0e4559479",
+   "published_at": "2021-05-10",
+   "user": "supersatton",
+   "name": "supersatton",
+   "summary": "記事では、CentOS 7.6上の構築済みDocker環境を前提に、zabbix-appliance:latestを起動するコマンドとdocker psによる確認手順が書かれています。さらに、Web画面へのアクセスと初期アカウントでのログイン、コンテナ内でのバージョン確認例が紹介されています。",
+   "points": [
+    "zabbix-applianceコンテナの起動",
+    "docker psによるコンテナ稼働確認",
+    "Web画面へのアクセスと初期ログイン",
+    "コンテナ内でのZabbix Serverバージョン確認"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-event-noc-monitoring",
+   "zabbix-saml-authentication",
+   "zabbix-appliance-install",
+   "zabbix-appliance-settings",
+   "zabbix-nature-remo-monitoring"
+  ]
+ },
+ {
+  "slug": "zabbix-appliance-settings",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "appliance-settings",
+  "keyword": "Zabbix 初期設定",
+  "pageTitle": "Zabbix 初期設定の手順を解説、日本語化とIFTTT通知連携の設定例",
+  "lead": "Zabbix 初期設定について、記事で紹介されているZabbix Applianceへのopen-vm-tools導入、タイムゾーン変更、日本語表示の有効化を確認できます。さらに、IFTTTのWebhookを使ったプッシュ通知用メディアタイプの作成・テスト手順も把握できます。",
+  "article": {
+   "title": "Zabbixの諸設定",
+   "path": "/payapayao/articles/setting-zabbix",
+   "published_at": "2021-02-28",
+   "user": "payapayao",
+   "name": "payapayao",
+   "summary": "著者がZabbix Applianceにopen-vm-toolsを導入し、タイムゾーンとユーザー言語を設定する手順を紹介しています。あわせて、IFTTTのAppletとZabbixのWebhook型メディアタイプを作成し、テスト通知まで確認する流れが書かれています。",
+   "points": [
+    "open-vm-toolsのインストール手順",
+    "タイムゾーンをAsia/Tokyoへ変更する設定",
+    "日本語パッケージ導入とユーザー言語の変更",
+    "IFTTT通知用メディアタイプの作成とテスト"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-event-noc-monitoring",
+   "zabbix-saml-authentication",
+   "zabbix-appliance-install",
+   "zabbix-docker-setup",
+   "zabbix-nature-remo-monitoring"
+  ]
+ },
+ {
+  "slug": "zabbix-nature-remo-monitoring",
+  "ossSlug": "zabbix",
+  "ossName": "Zabbix",
+  "theme": "nature-remo-monitoring",
+  "keyword": "Zabbix Nature Remo",
+  "pageTitle": "Zabbix Nature Remo連携でセンサーデータを蓄積・グラフ化する手順",
+  "lead": "Zabbix Nature Remo連携で、温度・湿度・照度・人感センサーの値を継続的に記録したい人向けの記事です。アクセストークンとデバイスIDの取得から、テンプレートの導入、ホスト設定、蓄積データのグラフ追加までの手順を確認できます。",
+  "article": {
+   "title": "Nature Remoのセンサーで取得したデータをzabbixで管理する",
+   "path": "/northeggman/articles/f18a85ab822639",
+   "published_at": "2021-06-08",
+   "user": "northeggman",
+   "name": "northeggman",
+   "summary": "Nature Remoの公開APIを利用するZabbixテンプレートを導入し、4種類のセンサー情報を蓄積する手順が紹介されています。トークンとデバイスIDの取得、テンプレートのインポート、ホストのマクロ設定、各センサーのグラフ作成が説明されています。",
+   "points": [
+    "Nature Remoのアクセストークン取得",
+    "公開APIを使ったデバイスIDの確認",
+    "監視テンプレートのインポートとホスト設定",
+    "温度・湿度・照度・人感データのグラフ作成"
+   ]
+  },
+  "githubUrl": "https://github.com/zabbix/zabbix",
+  "ossSummary": "サーバー、ネットワーク、アプリケーションを常時監視するオープンソース監視基盤です。",
+  "category": "monitoring",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/server-kanshi-yasuku.php",
+  "videos": [
+   {
+    "id": "b239d3ce4612438b",
+    "title": "AIで障害対応を自動化する！Zabbix×ローカルLLMの実装術"
+   }
+  ],
+  "related": [
+   "zabbix-event-noc-monitoring",
+   "zabbix-saml-authentication",
+   "zabbix-appliance-install",
+   "zabbix-docker-setup",
+   "zabbix-appliance-settings"
+  ]
+ },
+ {
+  "slug": "libreoffice-chromebook-install",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "chromebook-install",
+  "keyword": "LibreOffice Chromebook インストール",
+  "pageTitle": "LibreOffice Chromebook インストール手順を基礎から解説する記事",
+  "lead": "ChromebookでLibreOfficeを使うために、Linux環境の準備からパッケージ更新、日本語化パッケージを含むインストールまでの流れを確認できます。起動方法や表示言語の設定に加え、記事公開時点で残るバージョンと日本語入力の注意点も把握できます。",
+  "article": {
+   "title": "ChromebookでOfficeを。(基礎編)",
+   "path": "/densan_techblog/articles/bb3c001fbe8533",
+   "published_at": "2025-07-24",
+   "user": "densan_kamiyat",
+   "name": "densan_kamiyat",
+   "summary": "ChromebookのLinux環境をセットアップし、Debianのバージョン確認とパッケージ更新を経て、LibreOffice本体と日本語化パッケージを導入する手順が書かれています。起動後の表示言語設定と、記事公開時点では日本語入力ができないという注意点も報告されています。",
+   "points": [
+    "ChromebookへのLinux環境のセットアップ",
+    "Debianのバージョン確認とパッケージ更新",
+    "LibreOffice本体と日本語化パッケージの導入",
+    "ランチャーからの起動と表示言語の設定"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-pdf-conversion-performance",
+   "libreoffice-installation-guide",
+   "libreoffice-digital-signature",
+   "libreoffice-manjaro-install",
+   "libreoffice-chart-creation"
+  ]
+ },
+ {
+  "slug": "libreoffice-installation-guide",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "installation-guide",
+  "keyword": "LibreOffice インストール方法",
+  "pageTitle": "LibreOffice インストール方法をAWS・Ubuntu環境別に紹介",
+  "lead": "「LibreOffice インストール方法」を調べている人向けに、AWSのYUM環境とUbuntuベースのDocker環境での導入手順を確認できます。日本語フォントの追加やフォルダ権限の設定、PHPからExcelをPDFへ変換する実行例も把握できます。",
+  "article": {
+   "title": "【LibreOffice】インストール方法",
+   "path": "/okina/articles/bd471678468771",
+   "published_at": "2022-10-05",
+   "user": "okina",
+   "name": "okina",
+   "summary": "記事では、AWS環境でamazon-linux-extrasとYUMを使い、LibreOffice日本語版とIPAフォントを導入する手順が紹介されています。UbuntuのDockerでの手動・Dockerfileによる導入と、PHPからsofficeを実行してExcelをPDFへ変換する例も掲載されています。",
+   "points": [
+    "AWSのYUM環境における導入手順",
+    "IPA日本語フォントのインストール",
+    "UbuntuのDocker環境での導入方法",
+    "PHPによるExcelからPDFへの変換例"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-pdf-conversion-performance",
+   "libreoffice-chromebook-install",
+   "libreoffice-digital-signature",
+   "libreoffice-manjaro-install",
+   "libreoffice-chart-creation"
+  ]
+ },
+ {
+  "slug": "payload-cms-schedule-publish",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "schedule-publish",
+  "keyword": "Payload CMS スケジュール公開",
+  "pageTitle": "Payload CMS スケジュール公開の設定方法とジョブキュー実行の仕組み",
+  "lead": "Payload CMS スケジュール公開の有効化に必要なversions・draftsの設定と、ジョブキューを定期実行する方法を把握できます。管理画面での日時指定から、cron・limit・queueの指定、公開時フックで再検証エラーが起きた場合のAPI実行による回避策まで紹介されています。",
+  "article": {
+   "title": "Payloadのスケジュール公開機能の設定方法と実行の仕組み",
+   "path": "/ksk1kd/articles/8d3821b7783b67",
+   "published_at": "2025-05-16",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "この記事では、コレクションでschedulePublishを有効にし、管理画面から公開日時を指定する手順が紹介されています。さらに、payload.config.tsでdefaultキューを1分おきに最大100件処理する設定例と、revalidatePath()などでエラーが起きる場合のAPI実行方法が説明されています。",
+   "points": [
+    "versions・drafts・schedulePublishの有効化設定",
+    "管理画面から公開日時を指定する操作手順",
+    "cron・limit・queueによるジョブキューの定期実行設定",
+    "再検証エラー時のAPIエンドポイント実行による回避方法"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-local-setup",
+   "payload-cms-acquisition-rationale",
+   "payload-cms-approval-workflow",
+   "payload-cms-field-types",
+   "payload-cms-collection-frontend"
+  ]
+ },
+ {
+  "slug": "payload-cms-approval-workflow",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "approval-workflow",
+  "keyword": "Payload CMS 承認ワークフロー",
+  "pageTitle": "Payload CMS 承認ワークフローをフック機能で簡易実装する手順を解説",
+  "lead": "Payload CMS 承認ワークフローを、コレクションのフック機能で簡易的に実装する方法を紹介します。下書き・承認待ち・公開という流れの設計から、公開時に承認待ちフラグを自動解除するコードと動作確認まで把握できます。",
+  "article": {
+   "title": "Payloadのフック機能について簡易的な承認ワークフローを実装して理解する",
+   "path": "/ksk1kd/articles/7ca641df9e10b1",
+   "published_at": "2025-05-05",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "Payloadのコレクションに承認待ちチェックボックスを追加し、簡易的な承認ワークフローを表現する手順が書かれています。beforeChangeフックを使い、公開時に承認待ちフラグを自動でOFFにする実装と確認結果が紹介されています。",
+   "points": [
+    "下書き・承認待ち・公開のライフサイクル設計",
+    "承認待ちチェックボックスのフィールド設定",
+    "beforeChangeフックによる公開時のフラグ解除",
+    "管理画面から公開した際の動作確認"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-local-setup",
+   "payload-cms-acquisition-rationale",
+   "payload-cms-schedule-publish",
+   "payload-cms-field-types",
+   "payload-cms-collection-frontend"
+  ]
+ },
+ {
+  "slug": "payload-cms-field-types",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "field-types",
+  "keyword": "Payload CMS フィールドタイプ",
+  "pageTitle": "Payload CMS フィールドタイプの3分類と管理画面UI・Joinの仕組み",
+  "lead": "「Payload CMS フィールドタイプ」で情報を探す人向けに、Data Fields、Presentational Fields、Virtual Fieldsの違いが解説されています。Collapsible、Row、Tabsによる管理画面UIの整え方と、Joinで被参照情報を表示する考え方を把握できます。",
+  "article": {
+   "title": "Payloadのフィールドタイプの分類",
+   "path": "/ksk1kd/articles/25acba76f26821",
+   "published_at": "2025-05-02",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "この記事では、Payloadのフィールドがデータ保存用、管理画面のUI調整用、データベースに保存されない情報の表示用という3種に分類されると説明されています。あわせて、Collapsible、Row、Tabsの設定例と、Joinで被参照情報を表示する仕組みが紹介されています。",
+   "points": [
+    "Payloadにおけるフィールドタイプの3分類",
+    "管理画面を整えるPresentational Fieldsの設定例",
+    "Collapsible・Row・TabsのUI上の役割",
+    "Joinによる被参照情報の表示とユースケース"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-local-setup",
+   "payload-cms-acquisition-rationale",
+   "payload-cms-schedule-publish",
+   "payload-cms-approval-workflow",
+   "payload-cms-collection-frontend"
+  ]
+ },
+ {
+  "slug": "libreoffice-digital-signature",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "digital-signature",
+  "keyword": "LibreOffice 電子署名",
+  "pageTitle": "LibreOffice 電子署名をLinuxとマイナンバーカードで行う手順",
+  "lead": "Linux環境でマイナンバーカードを使い、LibreOffice文書やPDFへ電子署名する際の準備と操作を把握できます。Ubuntu 22.04とLibreOffice 7.4での実例に加え、PINの使い分け、JPKI証明書、TSA設定、24.2・24.8での失敗報告も確認できます。",
+  "article": {
+   "title": "Linux & NFC & マイナンバーカード & LibreOffice",
+   "path": "/sorehaomosiroi/articles/sorehaomosiroi-20240120_linux_nfc_myna_office",
+   "published_at": "2024-01-20",
+   "user": "sorehaomosiroi",
+   "name": "sorehaomosiroi",
+   "summary": "Ubuntu 22.04とLibreOffice 7.4を使い、マイナンバーカードで文書とPDFへ署名した手順が紹介されています。JPKIのCA証明書登録、PINの区別、TSA設定、PDF Studio Viewerでの検証に加え、24.2と24.8で署名できなかった追記もあります。",
+   "points": [
+    "UbuntuへのJPKI認証局証明書の登録",
+    "文書署名で使う2種類のPINの対応関係",
+    "PDF出力時のRFC3161 TSA設定手順",
+    "LibreOffice 24.2・24.8での署名失敗報告"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-pdf-conversion-performance",
+   "libreoffice-chromebook-install",
+   "libreoffice-installation-guide",
+   "libreoffice-manjaro-install",
+   "libreoffice-chart-creation"
+  ]
+ },
+ {
+  "slug": "payload-cms-collection-frontend",
+  "ossSlug": "payload-cms",
+  "ossName": "Payload CMS",
+  "theme": "collection-frontend",
+  "keyword": "Payload CMS コレクション",
+  "pageTitle": "Payload CMS コレクション定義からNext.jsでの一覧・詳細表示まで",
+  "lead": "「Payload CMS コレクション」の定義方法と、登録したお知らせをNext.js App Routerのフロント画面に表示する流れを把握できます。多言語ラベル、日付フィールドの管理画面UI、詳細・一覧ページの実装箇所を順に確認したい人向けです。",
+  "article": {
+   "title": "Payloadでコレクションを定義してフロント画面に表示する",
+   "path": "/ksk1kd/articles/485dcfe6327e66",
+   "published_at": "2025-04-29",
+   "user": "ksk1kd",
+   "name": "ksk1kd",
+   "summary": "記事では、タイトル・本文・公開日を持つ「お知らせ」コレクションを別ファイルで定義し、payload.config.tsへ読み込む手順が紹介されています。さらに、管理画面でのサンプル登録から、Next.js App Routerによる詳細・一覧ページの実装までが説明されています。",
+   "points": [
+    "お知らせコレクションのフィールド定義",
+    "日本語・英語ラベルと公開日UIの設定",
+    "payload.config.tsへの定義追加",
+    "App Routerによる詳細・一覧ページの実装"
+   ]
+  },
+  "githubUrl": "https://github.com/payloadcms/payload",
+  "ossSummary": "Next.jsとTypeScriptでコンテンツ管理、API、認証、管理画面を構築できるオープンソースCMSです。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/wordpress-yametai.php",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/bzITOxYjMgoTZsNWa0JXY",
+  "brainLabel": "Payload CMS日本語構築ガイドを読む",
+  "related": [
+   "payload-cms-local-setup",
+   "payload-cms-acquisition-rationale",
+   "payload-cms-schedule-publish",
+   "payload-cms-approval-workflow",
+   "payload-cms-field-types"
+  ]
+ },
+ {
+  "slug": "libreoffice-manjaro-install",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "manjaro-install",
+  "keyword": "LibreOffice Manjaro インストール",
+  "pageTitle": "LibreOffice Manjaro インストール手順と日本語パッケージの導入方法",
+  "lead": "Manjaro LinuxでLibreOfficeを日本語環境に導入したい人向けに、GUIと端末を使ったインストール方法を確認できます。日本語パッケージの検索語やpacmanコマンド、提案パッケージを画面で確認する際の考え方が分かります。",
+  "article": {
+   "title": "Manjaro Linux for Japanese Users: オフィス向けアプリ",
+   "path": "/phoepsilonix/articles/manjaro-linux-for-japanese-users-02",
+   "published_at": "2021-01-29",
+   "user": "phoepsilonix",
+   "name": "phoepsilonix",
+   "summary": "記事では、Manjaro Linuxに日本語対応のLibreOfficeを導入する手順が書かれています。「ソフトウェアの追加と削除」での検索方法と、端末からlibreoffice-freshおよび日本語パッケージをインストールするコマンドが紹介されています。",
+   "points": [
+    "ソフトウェア追加・削除画面からの導入手順",
+    "「libreoffice ja」による検索方法",
+    "pacmanを使った端末インストールコマンド",
+    "提案パッケージを画面で選ぶ際の方針"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-pdf-conversion-performance",
+   "libreoffice-chromebook-install",
+   "libreoffice-installation-guide",
+   "libreoffice-digital-signature",
+   "libreoffice-chart-creation"
+  ]
+ },
+ {
+  "slug": "postgresql-opensearch-to-postgis",
+  "ossSlug": "postgresql",
+  "ossName": "PostgreSQL",
+  "theme": "opensearch-to-postgis",
+  "keyword": "PostgreSQL PostGIS移行",
+  "pageTitle": "PostgreSQL PostGIS移行で学ぶジオフェンス検索基盤の見直し",
+  "lead": "PostgreSQL PostGIS移行を検討する際に、OpenSearchを使ったジオフェンス検索基盤が抱えていたコストと同期パイプラインの課題を把握できます。約107万件の地点情報をPostGISへ移した背景や、APIの仕様変更・停止なしで進めた事例から、移行判断の観点を学べます。",
+  "article": {
+   "title": "ジオフェンス検索を OpenSearch から PostGIS に切り替えた話",
+   "path": "/cariot_dev/articles/2411e22e45029a",
+   "published_at": "2026-08-26",
+   "user": "jino",
+   "name": "jino",
+   "summary": "車両管理システムCariotのジオフェンス検索を、DynamoDBとOpenSearchの2ストア構成からAurora PostgreSQL Serverless v2とPostGISの単一テーブルへ移行した事例が紹介されています。固定費、同期処理の暴走ループ、ストア間ドリフトなど、旧構成の課題が報告されています。",
+   "points": [
+    "円とポリゴンを扱うジオフェンス検索要件",
+    "OpenSearch専用ノード構成の固定費と余剰リソース",
+    "全件再インデックスを伴う多段同期の障害構造",
+    "PostGIS単一テーブルへの無停止移行事例"
+   ]
+  },
+  "githubUrl": "https://github.com/postgres/postgres",
+  "ossSummary": "高い整合性と拡張性を持つオープンソースのリレーショナルデータベースです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "7dc76480cc4d4854",
+    "title": "PGSimCityとは？PostgreSQLの内部構造を可視化するシミュレーションツールの特徴"
+   },
+   {
+    "id": "67d3f3b190f74d2c",
+    "title": "PostgreSQLとは？PGSimCityが解説する仕組みと内部構造"
+   }
+  ],
+  "related": [
+   "postgresql-index-structure",
+   "postgresql-jsonb-validation",
+   "postgresql-mysql-postgresql-migration"
+  ]
+ },
+ {
+  "slug": "libreoffice-chart-creation",
+  "ossSlug": "libreoffice",
+  "ossName": "LibreOffice",
+  "theme": "chart-creation",
+  "keyword": "LibreOffice グラフ作成",
+  "pageTitle": "LibreOffice グラフ作成の手順と1万7000行CSVでのCPU負荷の記録",
+  "lead": "LibreOffice グラフ作成の基本操作を、Calcでの列選択からグラフウィザードの設定、軸や凡例の調整まで順に把握できます。1万行を超えるデータを扱う際のCPU負荷や、著者がEC2上で確認した処理時間の違いも参考にできます。",
+  "article": {
+   "title": "LibreOfficeでグラフを作成する",
+   "path": "/honeycom/articles/fd7513f551c1c3",
+   "published_at": "2021-10-19",
+   "user": "honeycom",
+   "name": "honeycom",
+   "summary": "この記事では、LibreOffice 7.2.2.2を使い、Y軸の列を選んでグラフを挿入し、X軸の範囲を手入力で修正する手順が紹介されています。凡例の配置や軸、色の編集に加え、1万7000行のCSVをEC2で扱った際のCPU負荷も報告されています。",
+   "points": [
+    "Y軸列の選択とグラフウィザードの操作",
+    "X軸のカテゴリー範囲を手入力する方法",
+    "凡例・軸・グラフ色の調整例",
+    "EC2上でのCPU負荷と処理時間の記録"
+   ]
+  },
+  "githubUrl": "https://github.com/LibreOffice/core",
+  "ossSummary": "文書、表計算、プレゼンテーション、データベース機能を提供するオープンソースのオフィススイートです。",
+  "category": "office",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/muryou-office-soft.php",
+  "related": [
+   "libreoffice-pdf-conversion-performance",
+   "libreoffice-chromebook-install",
+   "libreoffice-installation-guide",
+   "libreoffice-digital-signature",
+   "libreoffice-manjaro-install"
+  ]
+ },
+ {
+  "slug": "simplenote-clients-google-keep-comparison",
+  "ossSlug": "simplenote-clients",
+  "ossName": "Simplenote clients",
+  "theme": "google-keep-comparison",
+  "keyword": "Simplenote clients Google Keep 比較",
+  "pageTitle": "Simplenote clients Google Keep 比較から見るメモ活用の違い",
+  "lead": "Simplenote clientsとGoogle Keepの違いを知り、アウトプットを前提にしたメモ選びの観点を得られます。シンプルなテキスト入力、クラウド同期、検索やタグ、リマインダー、画像・音声など、記事で比較されている機能と使い分けを確認できます。",
+  "article": {
+   "title": "メモはアウトプット前提。整理や管理のメモは不要。",
+   "path": "/aoikoala/articles/f93c21e1274054",
+   "published_at": "2024-09-09",
+   "user": "aoikoala",
+   "name": "aoikoala",
+   "summary": "著者はSimplenoteとGoogle Keepの特徴を挙げ、整理せずアウトプットする用途やアーカイブ機能、対応OS、クラウド同期の観点から比較しています。テキスト中心ならSimplenote、多様な形式で記録するならGoogle Keepが適しているとの見方が示されています。",
+   "points": [
+    "Simplenoteのシンプルな操作性と同期機能",
+    "Google Keepのリマインダーと画像・音声メモ",
+    "アウトプット目的に応じた両アプリの比較",
+    "アーカイブ機能と対応OSの違い"
+   ]
+  },
+  "githubUrl": "https://github.com/Automattic/simplenote-electron",
+  "ossSummary": "Simplenoteの各クライアントはオープンソースですが、同期バックエンドは公開されていません。",
+  "category": "notes",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/simplenote-daitai.php",
+  "related": []
+ },
+ {
+  "slug": "decap-cms-environment-config",
+  "ossSlug": "decap-cms",
+  "ossName": "Decap CMS",
+  "theme": "environment-config",
+  "keyword": "Decap CMS 環境別設定",
+  "pageTitle": "Decap CMS 環境別設定をGatsbyの環境変数で切り替える方法を紹介",
+  "lead": "Decap CMSの設定を開発・本番・ステージング環境ごとに切り替えたい人向けの記事です。cms.jsによるconfig.ymlの上書き方法と、Gatsbyで環境変数をクライアント側へ渡すためのプラグイン設定を確認できます。",
+  "article": {
+   "title": "Decap CMSの設定ファイルを環境ごとに書き換える",
+   "path": "/glassonion1/articles/a2a4b971be3943",
+   "published_at": "2024-02-10",
+   "user": "glassonion1",
+   "name": "glassonion1",
+   "summary": "config.ymlのbackend.branchをcms.jsから上書きし、NODE_ENVに応じてブランチを切り替える手順が紹介されています。ステージング環境ではgatsby-plugin-env-variablesを使い、ENVをクライアントコードへ渡す方法も説明されています。",
+   "points": [
+    "cms.jsによるconfig.ymlの設定上書き",
+    "NODE_ENVに応じたブランチの切り替え",
+    "manualInitを有効にするGatsby設定",
+    "ステージング用環境変数のクライアント側への受け渡し"
+   ]
+  },
+  "githubUrl": "https://github.com/decaporg/decap-cms",
+  "ossSummary": "静的サイトにブラウザの管理画面を付けるGitベースのCMSです。記事はリポジトリのMarkdownとして保存され、サーバーもデータベースも不要です。",
+  "category": "cms",
+  "inCatalog": true,
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47",
+  "brainUrl": "https://brain-market.com/u/bittensorman/a/b2ATMzYjMgoTZsNWa0JXY",
+  "brainLabel": "導入手順書をBrainで読む(5,500円)",
+  "videos": [
+   {
+    "id": "c8320be39efb433b",
+    "title": "WordPress卒業！Decap CMSで自社サイトを1時間で公開する方法"
+   },
+   {
+    "id": "4fe1e81cf2ac49e9",
+    "title": "WordPress卒業！AI×Decap CMSで月額0円サイト構築術"
+   }
+  ],
+  "related": []
+ },
+ {
+  "slug": "sqlite-ai-data-design",
+  "ossSlug": "sqlite",
+  "ossName": "SQLite",
+  "theme": "ai-data-design",
+  "keyword": "SQLite 個人プロジェクト",
+  "pageTitle": "SQLite 個人プロジェクトで正本を一つに保つAI時代のデータ設計と実装例",
+  "lead": "この記事では、SQLiteを個人プロジェクトの唯一の正本にし、AIエージェントだけが書き込む設計が紹介されています。読み取り専用画面との分離、状態遷移をコードで守る方法、曖昧な名寄せを要確認に回す実装から、整合性を保つ構成と適用条件を把握できます。",
+  "article": {
+   "title": "個人プロジェクトの正本はSQLite1個で足りる — 「AIが唯一の書き手」時代のデータ設計",
+   "path": "/kokotatan/articles/sqlite-single-writer-design",
+   "published_at": "2026-08-27",
+   "user": "kokotatan",
+   "name": "kokotatan",
+   "summary": "著者は、生活記録の正本をローカルのSQLiteファイル1個に集約し、書き込みをAIエージェントに限定する構成を報告しています。node:sqliteによる接続例に加え、状態遷移の制約、曖昧な名寄せ、整合性確認やスキーマ版数などの運用上の工夫が紹介されています。",
+   "points": [
+    "AIエージェントだけが書き込む単一正本構成",
+    "状態遷移規則をコードに集約する実装",
+    "曖昧な名寄せを要確認へ逃がす型設計",
+    "整合性確認・版数管理・秘密情報マスクの運用"
+   ]
+  },
+  "githubUrl": "https://github.com/sqlite/sqlite",
+  "ossSummary": "サーバープロセスを必要とせず、単一ファイルで利用できるパブリックドメインのデータベースエンジンです。",
+  "category": "database",
+  "inCatalog": true,
+  "lpUrl": "https://kurage.exbridge.jp/db-server-iranai.php",
+  "videos": [
+   {
+    "id": "39344a73feef49c4",
+    "title": "Your executable is a SQLite database — AIニュース 2026-08-25"
+   },
+   {
+    "id": "078ba030fa9444de",
+    "title": "SQLiteとは？実行ファイルがデータベースである理由と仕組みを解説"
+   },
+   {
+    "id": "959886d2df114348",
+    "title": "SQLiteとは？実行ファイルがデータベースである驚きの仕組みと理由"
+   }
+  ],
+  "related": [
+   "sqlite-aws-cost-reduction",
+   "sqlite-rails-cloud-run",
+   "sqlite-llm-context-design",
+   "sqlite-browser-orm"
+  ]
+ },
+ {
+  "slug": "auto-delegate-release-update",
+  "ossSlug": "auto-delegate",
+  "ossName": "auto-delegate",
+  "theme": "release-update",
+  "keyword": "auto-delegate 新バージョン",
+  "pageTitle": "auto-delegate 新バージョンの概要と活用の観点が分かる記事紹介",
+  "lead": "「auto-delegate 新バージョン」で情報を探している人向けに、リリース告知記事から得られそうな観点を整理します。マクロによるトレイト実装の委譲や、構造体の責務分割、no_std環境での活用を考える手がかりになります。",
+  "article": {
+   "title": "auto-delegateの新バージョンをリリースしたので宣伝",
+   "path": "https://zenn.dev/elm/articles/2ac3108fa12dc1",
+   "published_at": "2024-02-16",
+   "user": "elm",
+   "name": "elm",
+   "summary": "auto-delegateの新バージョンを紹介する告知記事とみられます。親構造体から子メンバーへトレイトのメソッド呼び出しを委譲する仕組みを踏まえ、更新の背景や変更内容を知る入口として参考になりそうです。",
+   "points": [
+    "新バージョンで示される変更内容",
+    "トレイト実装の委譲による記述量削減",
+    "構造体の責務分割と疎結合な設計",
+    "no_std環境での利用可能性"
+   ]
+  },
+  "githubUrl": "https://github.com/not-elm/auto-delegate",
+  "ossSummary": "■ 概要（1行） 構造体（親）に、内部のメンバー（子）が実装するトレイトのメソッド呼び出しを自動で代行（デリゲート）させるマクロベースの機構。 ■ 特徴・用途（2〜3行） * **ボイラープレート削減とコンポジションの強化:** 複数の機能が分散するシステムにおいて、親構造体でそれらのインターフェースを一元的に公開する際に、手動での`impl`記述を不要にします。 * **疎結合な設計の実現:** 機能ごとの責務を独立したコンポーネント（子構造体）に分割しつつ、それらを親の単一のエントリポイントを通じて利用可能にします。 * **組み込み環境への適応:** `no_std`に対応しているため、標準ライブラリに依存しない組み込みシステムや軽量なランタイム環境での利用が可能です。 ■ 結論（1行） クラスコンポジションと自動トレイト実装を組み合わせることで、モジュール性・拡張性を維持しつつ、イ",
+  "category": "other",
+  "inCatalog": false,
+  "related": [
+   "auto-delegate-rust-auto-delegation"
+  ]
+ },
+ {
+  "slug": "valibot-version-migration",
+  "ossSlug": "valibot",
+  "ossName": "valibot",
+  "theme": "version-migration",
+  "keyword": "valibot マイグレーション",
+  "pageTitle": "valibot マイグレーション対応から見るv0.31.0移行記事の概要と注目点",
+  "lead": "「valibot マイグレーション」でv0.31.0への移行情報を探す人向けに、yanskun氏の記事から読み取れそうな論点を紹介します。本文未確認のため詳細は断定せず、TypeScript向けバリデーションライブラリの更新対応を検討する際の入口として整理します。",
+  "article": {
+   "title": "Valibot の v0.31.0 への Migration 対応をした。",
+   "path": "https://zenn.dev/yanskun/articles/valibot-migrate-to-031",
+   "published_at": "2024-09-25",
+   "user": "yanskun",
+   "name": "yanskun",
+   "summary": "2024年9月25日公開の本記事は、Valibotをv0.31.0へ移行する際の対応について書かれているとみられます。TypeScriptのデータ検証スキーマを扱うプロジェクトで、バージョン更新時の観点を知る手がかりになりそうです。",
+   "points": [
+    "v0.31.0移行時に確認したい変更点",
+    "既存スキーマへの影響を捉える観点",
+    "TypeScriptの型推論との関係性",
+    "バージョン更新対応を進める際の着眼点"
+   ]
+  },
+  "githubUrl": "https://github.com/fabian-hiller/valibot",
+  "ossSummary": "■ 概要（1行） TypeScriptを対象とした、軽量で高速なデータ検証（バリデーション）を定義するためのライブラリです。 ■ 特徴・用途（2〜3行） 宣言的なスキーマ定義により、データの構造検証と同時にTypeScriptによる型推論を実現します。ランタイムのオーバーヘッドを最小限に抑える設計が特徴であり、API入力やユーザー入力など、堅牢なデータチェックが求められる場面に最適です。 ■ 結論（1行） Zodなどのライブラリと比較し、パフォーマンスと軽量性を重視するプロジェクトに高い適性があります。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "nvim-lspconfig-config-management",
+  "ossSlug": "nvim-lspconfig",
+  "ossName": "nvim-lspconfig",
+  "theme": "config-management",
+  "keyword": "nvim-lspconfig 設定管理",
+  "pageTitle": "nvim-lspconfig 設定管理でデフォルトとカスタムを柔軟に読み込む方法",
+  "lead": "nvim-lspconfigの設定管理を整理し、言語サーバーごとのデフォルト設定と独自設定を柔軟に使い分けたい人向けの紹介です。記事タイトルから、設定ファイルの読み込み方や管理構成を考える際の手がかりが得られるとみられます。",
+  "article": {
+   "title": "nvim-lspconfig の LSP 毎の設定を、デフォルト/カスタムを柔軟にロードする管理方法",
+   "path": "https://zenn.dev/yanskun/articles/nvim-lspconfig-servers-config",
+   "published_at": "2024-10-01",
+   "user": "yanskun",
+   "name": "yanskun",
+   "summary": "nvim-lspconfigで、LSPごとのデフォルト設定とカスタム設定を柔軟にロードする管理方法について書かれているとみられる記事です。NeovimのLSP設定を整理したい場合の参考になりそうです。",
+   "points": [
+    "LSPごとの設定ファイルを管理する考え方",
+    "デフォルト設定と独自設定の使い分け",
+    "設定を柔軟にロードする構成の検討",
+    "nvim-lspconfigを前提とした設定整理"
+   ]
+  },
+  "githubUrl": "https://github.com/neovim/nvim-lspconfig",
+  "ossSummary": "■ 概要（1行） NeovimのLSPクライアント（`vim.lsp`）が、多様な言語サーバー（例：TypeScript, Luaなど）を正しく動作・設定するための設定（コンフィグ）をまとめたライブラリです。 ■ 特徴・用途（2〜3行） 膨大な数のLSPサーバーに対して、個別のセットアップボイラープレートを記述する手間を大幅に削減します。また、技術的に重要な点として、NeovimコアAPIが進化するに伴い（特にNvim 0.11+以降）、古い`require('lspconfig')`の使用を避け、ネイティブな`vim.lsp.config`を用いた移行を強力にガイドしています。 ■ 結論（1行） LSPを活用したモダンなNeovim環境構築において、実質的に必須の基盤モジュールであり、APIの変更点（移行ガイド）の理解が重要です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "obsidian-smart-co-ai-integration",
+  "ossSlug": "obsidian-smart-co",
+  "ossName": "obsidian-smart-co",
+  "theme": "ai-integration",
+  "keyword": "obsidian-smart-co AI連携",
+  "pageTitle": "obsidian-smart-co AI連携で広がるObsidianの知識構造化",
+  "lead": "「obsidian-smart-co AI連携」を手がかりに、ObsidianとAIプラグインを組み合わせることで、知識の関連付けや構造化にどのような可能性が生まれるかを捉えるためのページです。記事タイトルとOSSの概要から、ローカルファイル中心のPKMや複雑な情報整理を考える際の着眼点が得られそうです。",
+  "article": {
+   "title": "ObsidianとAIプラグインの連携による可能性",
+   "path": "https://zenn.dev/y16ra/articles/e17dd3349836c3",
+   "published_at": "2024-10-07",
+   "user": "y16ra",
+   "name": "y16ra",
+   "summary": "2024年10月7日公開のy16ra氏の記事で、ObsidianとAIプラグインの連携がもたらす可能性について書かれているとみられます。obsidian-smart-coによる関連付けや知識構造化を考えるうえで、参考となる観点が扱われている可能性があります。",
+   "points": [
+    "ObsidianとAIプラグインの連携可能性",
+    "文脈やメタデータを用いた関係性のモデル化",
+    "ローカルPKMを半構造化して扱う視点",
+    "開発者・研究者の複雑な知識整理への適合性"
+   ]
+  },
+  "githubUrl": "https://github.com/brianpetro/obsidian-smart-co",
+  "ossSummary": "■ 概要（1行） Obsidian上で高度な関連付けや知識構造化を可能にする、動作環境に依存したワークフロー支援型プラグインです。 ■ 特徴・用途（2〜3行） 標準のリンク機能に加え、特定の文脈やメタデータを活用して情報間の関係性をモデル化し、ノード（知識）の網羅性と発見性を高めます。ローカルファイルベースのPKMを、半構造化データベースのように運用したいユーザーに最適です。 データ構造の定義や検索ロジックにカスタム性を持たせるため、より複雑なドメイン知識の整理に適しています。 ■ 結論（1行） Obsidianの基本的なリンク機能に限界を感じ、「構造化された思考の可視化」を求め、ワークフローを強化したい開発者・研究者に有用性が高いです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "zerox-python-ai-ocr",
+  "ossSlug": "zerox",
+  "ossName": "zerox",
+  "theme": "python-ai-ocr",
+  "keyword": "zerox AI OCR",
+  "pageTitle": "zerox AI OCRをPythonで試す記事の概要と事前に確認したいポイント",
+  "lead": "「zerox AI OCR」で情報を探している人向けに、Pythonからzeroxを試す際に注目したい観点を整理します。記事タイトルとOSSの説明から、Vision対応LLMを用いた文書のMarkdown化、対応形式やAIバックエンド、精度を考えるうえでの前処理といった論点を把握できます。",
+  "article": {
+   "title": "【python】zeroxのAI OCR試してみる！",
+   "path": "https://zenn.dev/peishim/articles/13e92f1682551d",
+   "published_at": "2024-11-03",
+   "user": "peishim",
+   "name": "peishim",
+   "summary": "2024年11月公開のこの記事では、PythonでzeroxのAI OCRを試す内容が扱われているとみられます。本文は未確認のため、具体的な実装手順や検証結果には踏み込まず、OSSの概要から想定できる注目点を紹介します。",
+   "points": [
+    "Vision対応LLMによる文書構造化の考え方",
+    "PDFやDOCXからMarkdownへの抽出",
+    "主要AIバックエンドの切り替えやすさ",
+    "精度と前処理最適化の関係"
+   ]
+  },
+  "githubUrl": "https://github.com/getomni-ai/zerox",
+  "ossSummary": "■ 概要 LLMのマルチモーダル能力（Vision）を活用し、PDFやDOCXなどの多様なドキュメントから、レイアウト情報を含む構造化されたMarkdown形式でコンテンツを抽出するパイプライン。 ■ 特徴・用途 複雑なレイアウト（表や図）の構造化を、従来のOCR処理後のLLMによる解釈層に依存させる点でアプローチが優れています。OpenAI、Gemini、Azureなど主要なAIバックエンドの切り替えが容易であり、迅速なPoCやデータパイプライン構築に最適です。 ■ 結論 実装は非常に迅速ですが、極めて高精度な情報抽出や、特定のレイアウトに対する堅牢性を求める場合は、前処理（画像分割、リサイズ、あるいは専門的なレイアウト分析モデル）の最適化が必要となる可能性があります。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gibberish-text-troubleshooting",
+  "ossSlug": "gibberish-text",
+  "ossName": "gibberish_text",
+  "theme": "troubleshooting",
+  "keyword": "gibberish_text Hello ガード",
+  "pageTitle": "gibberish_text Hello ガードの挙動と判定条件を考える記事紹介",
+  "lead": "「gibberish_text Hello ガード」と検索した人に向けて、短く自然に見える文字列が支離滅裂と判定される可能性について考える材料を紹介します。記事タイトルとOSSの概要から、コヒーレンス判定の特性や、しきい値などの調整観点を知るきっかけになりそうです。",
+  "article": {
+   "title": "guardrails-aiのgibberish_textでHelloがガードされる",
+   "path": "https://zenn.dev/hellohazime/articles/guardrails_ai_gibberish_text",
+   "published_at": "2025-01-21",
+   "user": "hellohazime",
+   "name": "hellohazime",
+   "summary": "guardrails-aiのgibberish_textによって「Hello」がガードされる事象について書かれているとみられる記事です。短い入力に対する判定の捉え方や、検証レベルを調整する際の注意点を考える参考になりそうです。",
+   "points": [
+    "短い自然文が判定対象になる可能性",
+    "コヒーレンス評価と文字列長の関係",
+    "thresholdを確認する際の観点",
+    "sentence単位の検証方法への着目"
+   ]
+  },
+  "githubUrl": "https://github.com/guardrails-ai/gibberish_text",
+  "ossSummary": "■ 概要（1行） LLMが生成したテキストの「支離滅裂さ（Gibberish）」を判定し、文章のコヒーレンスを検証するガードレールバリデーターです。 ■ 特徴・用途（2〜3行） 単なるフォーマットチェックではなく、埋め込みモデルやトランスフォーマーを活用して言語的な自然さ（コヒーレンス）をスコアリングします。`threshold`や`validation_method=\"sentence\"`といったパラメータ制御により、検証レベルを細かくチューニングできる点が強みです。 LLMの出力をパイプラインの早期段階でフィルタリングし、信頼性の低いレスポンスが下流のシステムに渡るのを防ぎます。 ■ 結論（1行） 実運用において、生成AIの出力品質を一段上のロバスト性で担保するための必須的な品質ゲートウェイとなります。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "j-moshi-google-colab",
+  "ossSlug": "j-moshi",
+  "ossName": "j-moshi",
+  "theme": "google-colab",
+  "keyword": "j-moshi Google Colab L4 動かし方",
+  "pageTitle": "j-moshi Google Colab L4 動かし方を知るための記事紹介",
+  "lead": "「j-moshi Google Colab L4 動かし方」で実行環境に関する情報を探す人に向け、該当するZenn記事の位置づけを紹介します。タイトルからは、L4環境のGoogle Colab上で、日本語向けフルデュプレックス音声対話システムを動かす内容が扱われているとみられます。",
+  "article": {
+   "title": "J-MoshiをGoogleColab(L4)で動かす",
+   "path": "https://zenn.dev/galapagos/articles/jmoshi_colab",
+   "published_at": "2025-01-24",
+   "user": "hellohazime",
+   "name": "hellohazime",
+   "summary": "hellohazime氏が2025年1月24日に公開した、j-moshiをGoogle ColabのL4環境で動かすことを主題とする記事です。日本語音声対話モデルの実行環境を検討する際の参考になる内容とみられます。",
+   "points": [
+    "Google ColabのL4環境での実行という主題",
+    "日本語向けフルデュプレックス音声対話の位置づけ",
+    "発話オーバーラップや相槌に対応するモデルの特徴",
+    "記事本文で確認したい実行条件と操作の流れ"
+   ]
+  },
+  "githubUrl": "https://github.com/nu-dialogue/j-moshi",
+  "ossSummary": "■ 概要 日本語に特化した、発話オーバーラップや相槌を可能とするフルデュプレックスな音声対話システムである。 ■ 特徴・用途 英語モデル（Moshi）をベースに日本語対話データでファインチューニングされており、人間的な自然なターンテイキングが実現している点が技術的に優位。特に、高度な会話シミュレーションやキャラクターロールプレイなど、リアルタイムかつ非線形な対話処理が求められる用途に適用できる。 ■ 結論 単なるQAシステムを超えた、会話の機微を捉えた高度な対話モデルとして、研究的な検証価値が高い。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gomi-safer-rm-alternative",
+  "ossSlug": "gomi",
+  "ossName": "gomi",
+  "theme": "safer-rm-alternative",
+  "keyword": "gomi 安全なrm代替",
+  "pageTitle": "gomi 安全なrm代替ツールの特徴とゴミ箱機能を知るためのZenn記事紹介",
+  "lead": "「gomi 安全なrm代替」を調べている人向けに、Zenn記事から得られそうな情報を紹介します。本文は未確認のため、タイトルとOSSの説明をもとに、仮想ゴミ箱、XDG Trash spec準拠、TUIによる復元といった理解の観点を整理します。",
+  "article": {
+   "title": "UNIX rm コマンドのより安全な代替ツール「gomi」",
+   "path": "https://zenn.dev/babarot/articles/replacement-for-rm-command",
+   "published_at": "2025-01-29",
+   "user": "babarot",
+   "name": "babarot",
+   "summary": "本記事では、UNIXのrmに代わる安全性を意識したCLIツール「gomi」が扱われているとみられます。タイトルとOSS情報から、仮想ゴミ箱による削除、クロスプラットフォーム対応、TUIでの可視化や復元が主な手がかりになりそうです。",
+   "points": [
+    "rmの直接削除を避ける仮想ゴミ箱の考え方",
+    "XDG Trash spec準拠と対応環境の観点",
+    "TUIによる削除済みファイルの可視化と復元",
+    "Goの並列処理が大規模操作に与える特性"
+   ]
+  },
+  "githubUrl": "https://github.com/babarot/gomi",
+  "ossSummary": "■ 概要（1行） UNIXの`rm`コマンドに仮想のゴミ箱機能を付加した、Go言語製の安全性を追求したCLIユーティリティ。 ■ 特徴・用途（2〜3行） XDG Trash specへの準拠とクロスプラットフォーム対応が実現されており、OS環境を問わず標準的なトラッシュ機構を提供します。CLI上でTUIを提供し、ファイル操作の可視化と復元プロセスを強化するとともに、Goによる並列処理の採用は、大規模なファイル操作における速度と信頼性を保証しています。 ■ 結論（1行） 開発環境におけるオペレーションの安全性を劇的に高める、実用性と技術的な堅牢性を兼ね備えたニッチなツールです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "cline-ec-site-development",
+  "ossSlug": "cline",
+  "ossName": "cline",
+  "theme": "ec-site-development",
+  "keyword": "cline ECサイト開発",
+  "pageTitle": "cline ECサイト開発をClineとMCPによるデモ制作記事から読み解くための案内",
+  "lead": "cline ECサイト開発やMCPとの組み合わせを調べている人向けに、2025年2月公開のZenn記事を紹介します。タイトルからは、ClineとMCPを用いたデモECサイト制作が主題とみられ、AI開発エージェントの活用場面を考える手がかりが得られそうです。",
+  "article": {
+   "title": "ClineとMCPを使ってdemoのecサイトを作る",
+   "path": "https://zenn.dev/sizukutamago/articles/f494041ebc8e2a",
+   "published_at": "2025-02-02",
+   "user": "sizukutamago",
+   "name": "sizukutamago",
+   "summary": "sizukutamago氏によるZenn記事で、ClineとMCPを使ったデモECサイト制作について書かれているとみられます。Clineの自律的なツール利用が、開発作業の組み立てにどう関わるかを知る入口になりそうです。",
+   "points": [
+    "ClineとMCPを組み合わせる開発の観点",
+    "デモECサイト制作における活用場面",
+    "自律型AI開発エージェントの役割",
+    "ファイル操作やコマンド実行を含む開発像"
+   ]
+  },
+  "githubUrl": "https://github.com/cline/cline",
+  "ossSummary": "■ 概要（1行） CLIとエディタ環境を組み合わせて使用する、Claude Sonnetベースの高度な自律型AI開発エージェントです。 ■ 特徴・用途（2〜3行） エージェントがファイル作成・編集、ターミナルでのコマンド実行、ブラウザ利用といった多様な「ツール」を段階的に組み合わせて利用できる点が最大の特徴です。これにより、複雑なソフトウェア開発やデバッグ作業を、開発者が手動でステップを追う必要なく、自律的に実行・計画・修正することが可能になります。 ■ 結論（1行） 開発プロセス全体を「オーケストレーション」の観点から自動化し、開発者の認知負荷を大幅に削減する次世代のペアプログラミングアシスタントとなる可能性を秘めています。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gh-recall-activity-summary",
+  "ossSlug": "gh-recall",
+  "ossName": "gh-recall",
+  "theme": "activity-summary",
+  "keyword": "gh-recall 使い方",
+  "pageTitle": "gh-recall 使い方とGitHub活動をOllamaで振り返る仕組みの紹介",
+  "lead": "gh-recall 使い方を調べている人向けに、GitHub CLIでPR・Issue・Commitの活動を集め、Ollamaで要約する構成を知る手がかりを紹介します。記事タイトルとOSSの説明から、先週の作業を振り返るCLI拡張の狙いや、ローカルLLM連携の観点が得られるとみられます。",
+  "article": {
+   "title": "GitHub API x Ollama で、自分が先週何やったかを思い出してくれる GitHub CLI Extension を作った",
+   "path": "https://zenn.dev/yanskun/articles/gh-cli-extension-recall",
+   "published_at": "2025-02-04",
+   "user": "yanskun",
+   "name": "yanskun",
+   "summary": "この記事では、GitHub上の過去の活動を取得し、Ollamaで要約するGitHub CLI拡張「gh-recall」の開発について書かれているとみられます。作業内容の振り返りを支える、データ収集とローカルLLM連携の一例として参考になりそうです。",
+   "points": [
+    "PR・Issue・Commitを対象とする活動取得の構成",
+    "GitHub CLI拡張として利用する仕組み",
+    "Ollamaによるローカルな活動要約の考え方",
+    "先週の開発作業を振り返る活用場面"
+   ]
+  },
+  "githubUrl": "https://github.com/yanskun/gh-recall",
+  "ossSummary": "■ 概要（1行） GitHub CLI拡張機能として、過去の活動（PR、Issue、Commit）を取得し、ローカルLLM（Ollama）で要約するレコールの仕組みを提供します。 ■ 特徴・用途（2〜3行） データ取得層にGitHub CLIを、抽象化・処理層にローカルLLMを組み込む、モダンな「データ収集＋AI要約」パイプラインを構築しています。専用のCLIコマンドとして機能するため、ターミナル環境での生産性向上に直結し、LLMの利用状況をローカルで管理できる点が技術的に優れています。 ■ 結論（1行） ローカルLLMのエコシステム（Ollama）を活用した、開発者向け実用性の高いCLIツールであり、個人開発や開発環境のパーソナライゼーションの一例として評価できます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "laravel-framework-upgrade",
+  "ossSlug": "laravel",
+  "ossName": "laravel",
+  "theme": "framework-upgrade",
+  "keyword": "laravel 12 アップグレード",
+  "pageTitle": "laravel 12 アップグレードで確認したい変更点と移行時の実務的な観点",
+  "lead": "laravel 12 アップグレードに関する情報を探している人向けに、2025年2月公開のアップグレードメモを紹介します。タイトルからは、Laravel 12への移行時に確認した事項や注意点を整理するための観点が得られる記事とみられます。",
+  "article": {
+   "title": "Laravel 12 Upgrade Memo",
+   "path": "https://zenn.dev/at_yasu/articles/laravel_12_upgrade_memo",
+   "published_at": "2025-02-26",
+   "user": "at_yasu",
+   "name": "at_yasu",
+   "summary": "at_yasu氏による「Laravel 12 Upgrade Memo」の紹介です。本文は未確認ですが、タイトルから、Laravel 12へのアップグレードに際して把握した内容をメモ形式でまとめた記事とみられます。",
+   "points": [
+    "Laravel 12への移行で確認したい変更点",
+    "アップグレード前後の確認事項の整理",
+    "既存アプリケーションへの影響を見る観点",
+    "移行メモとして参照する際の着眼点"
+   ]
+  },
+  "githubUrl": "https://github.com/laravel/laravel",
+  "ossSummary": "■ 概要 PHPをベースとした、記述が洗練されエレガントな構文を持つフルスタックWebアプリケーションフレームワーク。 ■ 特徴・用途 強力な依存性注入コンテナ（DI Container）やEloquent ORMなど、高度な設計パターンを標準機能として提供し、開発の生産性を劇的に向上させます。キュー（Queues）やイベントブロードキャスティングなどの機能が組み込まれているため、スケーラビリティを意識した大規模なバックエンドシステム構築に非常に適しています。 ■ 結論 「開発体験」と「実用性」を両立しており、特に迅速かつ大規模なWebサービス構築を求める開発チームにとって、高い効率を発揮するフレームワークです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "bevy-baby-desktop-mascot",
+  "ossSlug": "bevy-baby",
+  "ossName": "bevy_baby",
+  "theme": "desktop-mascot",
+  "keyword": "bevy_baby デスクトップマスコット開発",
+  "pageTitle": "bevy_baby デスクトップマスコット開発とBevyによるOSS設計の紹介",
+  "lead": "bevy_baby デスクトップマスコット開発について調べている人向けに、Bevyを基盤とするOSSの狙いや、3D表示を備えたデスクトップエージェントという位置づけを把握するためのページです。記事タイトルと公開情報から、開発事例を見る際に注目したい技術要素や拡張性の観点を整理します。",
+  "article": {
+   "title": "【bevy_baby】Bevyを使ってデスクトップマスコットを開発中です【OSS】",
+   "path": "https://zenn.dev/elm/articles/260d0e8caa5957",
+   "published_at": "2025-03-05",
+   "user": "elm",
+   "name": "elm",
+   "summary": "この記事では、Bevyを使って開発中のデスクトップマスコットOSS「bevy_baby」が紹介されているとみられます。本文未確認のため詳細は断定せず、公開情報をもとにVRM描画、MOD、AI連携といった関連観点を案内します。",
+   "points": [
+    "Bevyを基盤とするデスクトップ表現",
+    "VRMモデルのリアルタイム描画",
+    "TypeScript SDKなどによるMOD拡張",
+    "MCPサーバーを介したAI連携"
+   ]
+  },
+  "githubUrl": "https://github.com/not-elm/bevy_baby",
+  "ossSummary": "■ 概要 Bevyを基盤とし、AI連携、カスタムMODシステムを備えたクロスプラットフォームのインタラクティブ3Dデスクトップエージェントフレームワークである。 ■ 特徴・用途 Bevyの持つ高度なグラフィックス処理能力を活かしたVRMモデルのリアルタイムレンダリングが可能です。MOD開発においては、TypeScript SDK、HTTP API、WebViewを組み合わせることで、レンダリング層に依存しない柔軟なロジック（UX、データ処理、外部連携）の実装が実現されています。また、組み込みのMCPサーバーを介したAIエージェントとの連携は、本プロジェクトを単なるデコレーションツールではなく、外部情報源と対話する「機能を持つエージェントレイヤー」として機能させています。 ■ 結論 大規模な外部システムとのインターフェース層（Agent Layer）として高い拡張性を持ち、技術的に非常に洗練",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "dify-workflow-editor",
+  "ossSlug": "dify",
+  "ossName": "dify",
+  "theme": "workflow-editor",
+  "keyword": "dify ワークフローエディタ",
+  "pageTitle": "dify ワークフローエディタの実装を読み解くための記事紹介と注目したい観点",
+  "lead": "「dify ワークフローエディタ」を調べている人に向け、エディタの実装を題材にしたZenn記事を紹介します。タイトルからは、AIエージェントやRAGパイプラインを構築する統合開発プラットフォームdifyについて、画面を支える実装の見方や理解の手がかりを得られる記事とみられます。",
+  "article": {
+   "title": "Difyのワークフローエディタの実装をみてみよう",
+   "path": "https://zenn.dev/koyo_k0/articles/95d1ec496e2781",
+   "published_at": "2025-03-29",
+   "user": "koyo_k0",
+   "name": "koyo_k0",
+   "summary": "koyo_k0氏が2025年3月29日に公開した、difyのワークフローエディタ実装に目を向けた記事とみられます。タイトルから、統合開発プラットフォームのエディタがどのように作られているかを知る入口になる内容と考えられます。",
+   "points": [
+    "ワークフローエディタの実装という着眼点",
+    "difyの構成を読み解くための入口",
+    "画面を支えるコードへの理解の手がかり",
+    "OSSの実装を追う際に注目したい観点"
+   ]
+  },
+  "githubUrl": "https://github.com/langgenius/dify",
+  "ossSummary": "AIエージェントやRAGパイプラインを構築するための統合開発プラットフォームです。",
+  "category": "aidev",
+  "inCatalog": true,
+  "related": []
+ },
+ {
+  "slug": "bevy-vrm1-vrm-integration",
+  "ossSlug": "bevy-vrm1",
+  "ossName": "bevy_vrm1",
+  "theme": "vrm-integration",
+  "keyword": "bevy_vrm1 使い方",
+  "pageTitle": "bevy_vrm1 使い方：BevyでVRM・VRMAを扱う記事の紹介",
+  "lead": "「bevy_vrm1 使い方」を調べている人向けに、Bevy上でVRM 1.0モデルとVRMAアニメーションを扱う際の着眼点を整理します。記事タイトルとOSSの説明から、Spring BoneやLook At、ECSとの関係、開発初期段階ゆえの注意点を読み取る手がかりが得られそうです。",
+  "article": {
+   "title": "BevyでもVRMとVRMAを使いたい！",
+   "path": "https://zenn.dev/elm/articles/7bca06581677c4",
+   "published_at": "2025-06-02",
+   "user": "elm",
+   "name": "elm",
+   "summary": "この記事は、BevyでもVRMとVRMAを利用したいというテーマで、bevy_vrm1が扱われているとみられます。本文未確認のため詳細は断定できませんが、対応形式やアバター表現、導入判断の観点を知る入口になりそうです。",
+   "points": [
+    "VRM 1.0とVRMAの対応範囲",
+    "Spring BoneとLook Atの位置づけ",
+    "BevyのECSに沿った設計上の観点",
+    "開発初期段階に伴う採用時の注意点"
+   ]
+  },
+  "githubUrl": "https://github.com/not-elm/bevy_vrm1",
+  "ossSummary": "■ 概要（1行） RustのBevyエンジン上で、業界標準となるVRMモデル（メッシュ・リギング）およびVRMAアニメーションを扱うためのクレートです。 ■ 特徴・用途（2〜3行） 高度なアバター表現を可能にする「Spring Bone」や、視線追跡を実現する「Look At」など、リアルタイム性の高い機構をネイティブでサポートしています。BevyのECS（Entity Component System）パラダイムに組み込まれているため、データ指向なシステム設計が容易です。 ただし、開発初期段階であり、対応バージョンがVRM 1.0に限定されている点に留意が必要です。 ■ 結論（1行） 高度な写実的アバター表現をBevyで実現したい場合に非常に有用ですが、不安定性や対応範囲の制限を考慮した採用が推奨されます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "goalias-import-alias",
+  "ossSlug": "goalias",
+  "ossName": "goalias",
+  "theme": "import-alias",
+  "keyword": "goalias importエイリアス統一",
+  "pageTitle": "goalias importエイリアス統一を支えるLSPとgopls活用の考え方",
+  "lead": "goalias importエイリアス統一を調べている人に向けて、LSPとgoplsを使ったCLIツールの狙いや、文字列置換とは異なるリファクタリングの考え方を紹介します。記事本文は未確認のため、タイトルと公開情報から読み取れる範囲で、大規模なGoコードベースにおける表記揺れ対策の観点を整理します。",
+  "article": {
+   "title": "Go の import エイリアスを統一するツール goalias を作った話",
+   "path": "https://zenn.dev/jackchuka/articles/d6ae93b45bd3f5",
+   "published_at": "2025-07-22",
+   "user": "jackchuka",
+   "name": "jackchuka",
+   "summary": "この記事では、Goのimportエイリアスを統一するgoaliasの開発背景や、LSPとgoplsを活用する設計について書かれているとみられます。コードベース全体で表記をそろえる際の課題と、コンテキストを考慮した変更の考え方を知る手掛かりになりそうです。",
+   "points": [
+    "Goにおけるimportエイリアスの表記揺れ",
+    "LSPとgoplsを活用する設計上の狙い",
+    "文字列置換とリファクタリングの違い",
+    "大規模コードベースでの規約統一の観点"
+   ]
+  },
+  "githubUrl": "https://github.com/jackchuka/goalias",
+  "ossSummary": "■ 概要（1行） LSP（Language Server Protocol）と`gopls`を活用し、Goのコードベース全体にわたるインポートエイリアスの表記揺れを高速かつ正確に統一するためのCLIツール。 ■ 特徴・用途（2〜3行） 単なる文字列置換に留まらず、言語サーバーを経由することでコンテキストを考慮した高精度なリファクタリングが可能です。これにより、大規模なモジュール全体で一貫した構造を保ちつつ、エイリアスを一括で管理・変更できます。 使用する際は、`gopls`の安定した解析能力に依存するため、開発環境の品質が要求されます。 ■ 結論（1行） 複数の開発者が関わる大規模なGoプロジェクトで、インポート構造の規約統一と品質維持を徹底したい場合に、非常に有用なDevOps/開発補助ツールとなります。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gql-ingest-graphql-data-ingestion",
+  "ossSlug": "gql-ingest",
+  "ossName": "gql-ingest",
+  "theme": "graphql-data-ingestion",
+  "keyword": "gql-ingest GraphQLデータ投入",
+  "pageTitle": "gql-ingest GraphQLデータ投入の課題とCLIツール開発の背景を知る",
+  "lead": "「gql-ingest GraphQLデータ投入」で情報を探している人向けに、記事タイトルとOSSの説明から読み取れる範囲を整理します。GraphQL APIへのデータ投入ツールを作る背景や、設定ベースのCLI、並列処理・リトライ・競合制御といった設計観点に触れた記事とみられます。",
+  "article": {
+   "title": "GraphQL API にデータを投入するツールがなかったので作った話",
+   "path": "https://zenn.dev/jackchuka/articles/4d506fd67590bf",
+   "published_at": "2025-07-23",
+   "user": "jackchuka",
+   "name": "jackchuka",
+   "summary": "記事では、GraphQL APIへデータを投入する既存ツールが見当たらなかったことを背景に、gql-ingestの開発が紹介されているとみられます。設定に基づく投入処理や運用時の信頼性を支える機能が、主な観点になっている可能性があります。",
+   "points": [
+    "GraphQL APIへのデータ投入が抱える課題",
+    "設定ベースで多様なデータ形式を扱う構成",
+    "並列処理と指数バックオフによるリトライ設計",
+    "エンティティ・行レベルの競合制御と冪等性"
+   ]
+  },
+  "githubUrl": "https://github.com/jackchuka/gql-ingest",
+  "ossSummary": "■ 概要（1行） 多様な形式のデータソースを、設定に基づきGraphQL APIのミューテーションに効率的に投入するためのCLIツールです。 ■ 特徴・用途（2〜3行） GraphQLへのデータ投入（データパイプライン/ETL）プロセスを一元管理できる点が最大の強みです。特に、単なるデータ変換に留まらず、「並列処理」「冪等性を持つリトライ機構（指数バックオフ）」「競合制御（エンティティ/行レベル）」といった、**本番環境でのデータロードに必須となる高度な耐障害性**が組み込まれている点が技術的に評価できます。設定ファイルによるデータ形式の多角的なサポートと、TypeScriptによる型安全な開発体験を提供します。 ■ 結論（1行） GraphQLバックエンドへのバッチデータ投入（Ingestion）というニッチかつ複雑な課題に対して、高信頼性と開発者体験を両立させた、実用性の高いソリューシ",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "kit-file-colocation",
+  "ossSlug": "kit",
+  "ossName": "kit",
+  "theme": "file-colocation",
+  "keyword": "kit コロケーション",
+  "pageTitle": "kit コロケーションをSvelteKitで実現する背景と活用の観点を紹介する記事",
+  "lead": "「kit コロケーション」で情報を探す人に向け、SvelteKitでコロケーションが可能になった経緯や、利用時の観点が紹介されているとみられる記事です。ファイルシステムベースの構成を持つSvelteKitで、関連するコードを近くに置く設計を検討する際の手がかりが得られそうです。",
+  "article": {
+   "title": "モダンフレームワークSvelteKitでのコロケーションができるようになったので紹介する",
+   "path": "https://zenn.dev/explaza/articles/ccdce0c1cefe13",
+   "published_at": "2025-09-17",
+   "user": "mkazutaka",
+   "name": "mkazutaka",
+   "summary": "モダンフレームワークSvelteKitでコロケーションが可能になったことを紹介する記事とみられます。タイトルからは、ファイル配置を軸にした開発体験の変化や、関連コードをまとめる設計上の考え方を知るきっかけになりそうです。",
+   "points": [
+    "SvelteKitにおけるコロケーションの位置づけ",
+    "ファイル配置と関連コードの整理という観点",
+    "変更によって想定される開発体験の捉え方",
+    "導入検討時に確認したいコロケーションの適用範囲"
+   ]
+  },
+  "githubUrl": "https://github.com/sveltejs/kit",
+  "ossSummary": "■ 概要 Svelteコンパイラを基盤とし、フルスタックなWebアプリケーション構築を可能にするモダンなフレームワーク。 ■ 特徴・用途 コンパイラ指向のアプローチにより、実行時ランタイムのオーバーヘッドを極限まで削減し、高い実行パフォーマンスを実現します。また、様々なデプロイアダプター（Cloudflare, Vercel, Node.jsなど）を標準提供しているため、静的サイトからエッジコンピューティングまで多様な環境に柔軟に対応します。ファイルシステムベースのルーティングとサーバーエンドポイント機能が組み込まれており、フルスタックな開発体験をシームレスに提供します。 ■ 結論 高いパフォーマンスと開発者体験を両立させたい、スケーラブルでモダンなWebアプリケーション開発の強力な選択肢です。",
+  "category": "other",
+  "inCatalog": false,
+  "videos": [
+   {
+    "id": "a2733c5ebffd4fc8",
+    "title": "見落としで損害が出る前に。自動監視ツールkcheckitの正体"
+   }
+  ],
+  "related": []
+ },
+ {
+  "slug": "zsh-npm-global-recorder-global-package-tracking",
+  "ossSlug": "zsh-npm-global-recorder",
+  "ossName": "zsh-npm-global-recorder",
+  "theme": "global-package-tracking",
+  "keyword": "zsh-npm-global-recorder npmパッケージ自動記録",
+  "pageTitle": "zsh-npm-global-recorder npmパッケージ自動記録の仕組みと環境再現",
+  "lead": "「zsh-npm-global-recorder npmパッケージ自動記録」で情報を探す人向けに、グローバルインストールしたnpmパッケージを記録する狙いを整理します。記事タイトルとOSSの説明から、.default-npm-packagesやDotfiles、miseを用いた環境再現との関係を把握できそうです。",
+  "article": {
+   "title": "グローバルインストールしたnpm packagesを .default-npm-packagesに自動で追加するzsh-pluginを作った",
+   "path": "https://zenn.dev/yanskun/articles/zsh-npm-global-recorder",
+   "published_at": "2025-09-26",
+   "user": "yanskun",
+   "name": "yanskun",
+   "summary": "この記事では、グローバルに導入したnpmパッケージを.default-npm-packagesへ自動追加するZshプラグインが紹介されているとみられます。パッケージ名の正規化や、Dotfiles・miseを使った環境再現との関わりが扱われている可能性があります。",
+   "points": [
+    "グローバルnpmパッケージを記録する目的",
+    ".default-npm-packagesとの連携観点",
+    "バージョンやタグを含む名前の正規化",
+    "Dotfiles・miseによる環境再現への活用"
+   ]
+  },
+  "githubUrl": "https://github.com/yanskun/zsh-npm-global-recorder",
+  "ossSummary": "■ 概要（1行） シェル実行時のグローバルnpmパッケージのインストール/アンインストールをトラッキングし、再現可能なリストファイルとして管理するZshプラグイン。 ■ 特徴・用途（2〜3行） npmのバージョンやタグをパッケージ名に正規化し、Dotfiles管理や`mise`といった環境再現ワークフローにシームレスに組み込めます。特に、シンボリックリンクの更新を考慮した挙動は、複雑なシェル環境における堅牢な実装がなされています。 ■ 結論（1行） 開発環境の再現性を極限まで高めたいエンジニアや、Dotfiles/IaC的なアプローチを採用するチームにとって非常に有用なユーティリティです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gh-dep-dependency-pr-management",
+  "ossSlug": "gh-dep",
+  "ossName": "gh-dep",
+  "theme": "dependency-pr-management",
+  "keyword": "gh-dep 依存PR管理",
+  "pageTitle": "gh-dep 依存PR管理を効率化するGitHub CLI拡張の概要と使いどころ",
+  "lead": "「gh-dep 依存PR管理」で情報を探す人に向け、GitHub CLI拡張としての位置づけや、Dependabot／Renovateが作るPRをまとめて扱う用途を整理します。タイトルとOSSの説明から、TUIによるグルーピング、承認、マージの効率化という記事の焦点を把握できます。",
+  "article": {
+   "title": "GitHubの依存アップデートPRをまとめて捌くCLI拡張「gh-dep」を作りました",
+   "path": "https://zenn.dev/jackchuka/articles/65592ccfb8c548",
+   "published_at": "2025-10-07",
+   "user": "jackchuka",
+   "name": "jackchuka",
+   "summary": "この記事では、自動生成された依存関係PRのレビューとマージを支援する「gh-dep」が紹介されているとみられます。大量のPRを整理し、TUIから承認やマージをまとめて扱うワークフローが主題と考えられます。",
+   "points": [
+    "依存関係PRをグルーピングする考え方",
+    "TUIで承認・マージをまとめて扱う用途",
+    "GitHub API操作を抽象化する位置づけ",
+    "モノレポや複数リポジトリでの活用観点"
+   ]
+  },
+  "githubUrl": "https://github.com/jackchuka/gh-dep",
+  "ossSummary": "■ 概要（1行） GitHub CLIを拡張した、自動生成された依存関係のPRレビューとマージを一元化・自動化するワークフローツール。 ■ 特徴・用途（2〜3行） Dependabot/Renovateが出す大量のPRを、パターンやパッケージ単位でグルーピングし、TUIを通じてバッチ承認およびマージ操作を効率的に実行できます。GitHub APIへの直接的な操作を抽象化し、依存性のライフサイクル管理のオペレーショナルオーバーヘッドを大幅に削減します。 ■ 結論（1行） 大規模なモノレポや複数のリポジトリを扱うチームにおいて、依存関係のアップグレード工数を劇的に削減するニッチな「ワークフロー加速器」です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "tus-php-laravel-integration",
+  "ossSlug": "tus-php",
+  "ossName": "tus-php",
+  "theme": "laravel-integration",
+  "keyword": "tus-php Laravel連携",
+  "pageTitle": "tus-php Laravel連携の実装メモから読み取れる導入の観点整理",
+  "lead": "「tus-php Laravel連携」を調べている人向けに、PHPで再開可能なファイルアップロードを扱う際の検討材料を紹介します。記事タイトルから、Laravel環境での導入や実装時に確認した内容をたどれる可能性があります。",
+  "article": {
+   "title": "TUS Laravel/PHP Memo",
+   "path": "https://zenn.dev/at_yasu/articles/c79f301258bca6",
+   "published_at": "2025-11-07",
+   "user": "at_yasu",
+   "name": "at_yasu",
+   "summary": "「TUS Laravel/PHP Memo」という題名から、tus-phpをLaravelまたはPHP環境で扱う際のメモがまとめられているとみられます。再開可能アップロードの実装を検討する際の参考になりそうです。",
+   "points": [
+    "Laravelとtus-phpの連携観点",
+    "PHPでの再開可能アップロードの考え方",
+    "TUSプロトコル採用時の確認事項",
+    "既存バックエンドへの組み込み方針"
+   ]
+  },
+  "githubUrl": "https://github.com/ankitpokhrel/tus-php",
+  "ossSummary": "■ 概要（1行） TUS (The Upload Server) プロトコルに準拠した、PHPネイティブな再開可能（Resumable）ファイルアップロードのサーバー実装ライブラリ。 ■ 特徴・用途（2〜3行） * **標準化された高信頼性:** TUSプロトコルを採用することで、ネットワークが不安定な状況や大規模ファイル転送時でもアップロードを安全に再開できます。 * **PHPスタック内での完結:** 外部サービスや複雑なデータフローを組むことなく、純粋なPHPコードベースでレジュームアップロード機能を実現したい場合に最適です。 * **既存フレームワークとの親和性:** LaravelやSymfonyなどの主要フレームワークとの統合例が提供されており、既存のバックエンドシステムへの組み込みが比較的容易です。 ■ 結論（1行） PHP環境において、堅牢性・信頼性が最も求められる大容量フ",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "alt-soracom-data-reader-mcp-data-integration",
+  "ossSlug": "alt-soracom-data-reader-mcp",
+  "ossName": "alt-soracom-data-reader-mcp",
+  "theme": "data-integration",
+  "keyword": "alt-soracom-data-reader-mcp データ分析",
+  "pageTitle": "alt-soracom-data-reader-mcp データ分析を始めるためのMCP活用例",
+  "lead": "「alt-soracom-data-reader-mcp データ分析」を調べている人向けに、SORACOMのデータ・ファイル・カメラ管理APIをMCPでまとめて扱う構成の手がかりを紹介します。記事タイトルとOSSの概要から、データ収集を共通化する狙いや、分析環境との役割分担を考える材料が得られるとみられます。",
+  "article": {
+   "title": "[SORACOM]データ分析用SORACOM MCPを作成してみた",
+   "path": "https://zenn.dev/lnest_knowledge/articles/867f4133070c0e",
+   "published_at": "2025-12-06",
+   "user": "straydog",
+   "name": "straydog",
+   "summary": "この記事では、SORACOMの複数APIを統一的に扱うデータ分析用MCPの作成について書かれているとみられます。個別APIの違いを抽象化するデータ収集レイヤーとして、alt-soracom-data-reader-mcpの位置付けを把握する材料になります。",
+   "points": [
+    "SORACOMの異種APIを統合する設計意図",
+    "MCPによるデータ取得インターフェースの共通化",
+    "分析処理とデータ収集レイヤーの役割分担",
+    "ETLやストリーミング処理との機能境界"
+   ]
+  },
+  "githubUrl": "https://github.com/leaveanest/alt-soracom-data-reader-mcp",
+  "ossSummary": "■ 概要 SORACOMの各種専門API（データ、ファイル、カメラ管理）を統合し、データ分析のための統一的なインターフェースを提供するデータ収集レイヤーである。 ■ 特徴・用途 多数の異種APIを抽象化し、データ収集の初期開発工数を大幅に削減する。これにより、分析者が個々のAPI仕様を追うことなく、統一されたプロトコル（MCP）を通じてデータにアクセスできる。一方で、データ取得に特化しており、収集後のデータ加工や大規模なワークフロー処理（ストリーミング処理など）を内部で提供しているかは不明瞭である。 ■ 結論 SORACOMデータ分析の強力なスタートラインを提供するが、長期的な運用を見据えたデータパイプライン（ETL/ELT）としての機能強化が必要である。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "vite-plugin-moonbit-frontend-integration",
+  "ossSlug": "vite-plugin-moonbit",
+  "ossName": "vite-plugin-moonbit",
+  "theme": "frontend-integration",
+  "keyword": "vite-plugin-moonbit フロントエンド開発",
+  "pageTitle": "vite-plugin-moonbit フロントエンド開発をViteに統合する際の参考記事",
+  "lead": "「vite-plugin-moonbit フロントエンド開発」を調べている人向けに、MoonBitのビルドシステムをViteへ統合する考え方を知る手がかりとなる記事です。タイトルとOSSの概要から、HMRやJS・WASM-GC対応、独自のインポート方式に関する情報が得られるとみられます。",
+  "article": {
+   "title": "vite-plugin-moonbit で moonbit でフロントエンドを作る",
+   "path": "https://zenn.dev/mizchi/articles/moonbit-vite-plugin",
+   "published_at": "2025-12-25",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "mizchi氏が、vite-plugin-moonbitを用いたMoonBitによるフロントエンド開発について紹介した記事とみられます。Viteとの連携や開発環境を構成する際の着眼点をつかむ材料になりそうです。",
+   "points": [
+    "MoonBitとViteを連携させる位置付け",
+    "外部ビルドシステムにおけるHMR対応",
+    "JSとWASM-GCのターゲット選択",
+    "mbt:によるカスタムインポートの仕組み"
+   ]
+  },
+  "githubUrl": "https://github.com/mizchi/vite-plugin-moonbit",
+  "ossSummary": "■ 概要（1行） Viteの標準的な開発ワークフローに、MoonBitという独自のアプリケーションビルドシステムを統合するためのプラグインです。 ■ 特徴・用途（2〜3行） 外部のビルドシステムをHMR（Hot Module Replacement）対応させることで、開発体験（DX）を劇的に向上させています。特にJSとWASM-GCの両ターゲットに対応している点は、実行環境の柔軟性と拡張性の高さを証明しています。カスタムインポート（`mbt:`）の仕組みは、フレームワーク固有の依存解決パスをViteに組み込むための、洗練された解決策です。 ■ 結論（1行） MoonBitを利用した開発を想定するプロジェクトにおいて、開発環境の統合レイヤーとして非常に有用であり、セットアップの工数を大きく削減できます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "rag-sample-mastra-rag",
+  "ossSlug": "rag-sample",
+  "ossName": "rag-sample",
+  "theme": "mastra-rag",
+  "keyword": "rag-sample Mastra RAG実装",
+  "pageTitle": "rag-sample Mastra RAG実装から見る論文理解AIアシスタントの構成",
+  "lead": "「rag-sample Mastra RAG実装」を調べている人向けに、Transformer論文を題材としたAIアシスタントの構成を捉えるための材料を紹介します。記事タイトルとOSSの説明から、データ取得、分割・埋め込み、保存、検索・生成というRAGの各工程を学ぶ観点が得られるとみられます。",
+  "article": {
+   "title": "MastraでRAGを実装する - Transformer論文を理解するAIアシスタントを作ろう",
+   "path": "https://zenn.dev/karamage/articles/efc9ea80671e59",
+   "published_at": "2026-01-08",
+   "user": "karamage",
+   "name": "karamage",
+   "summary": "この記事では、Mastraを用いてTransformer論文を理解するAIアシスタントを作る過程が扱われているとみられます。rag-sampleを通じて、RAGの前処理と問い合わせ処理を分けて捉えるための実装例が紹介されている可能性があります。",
+   "points": [
+    "RAGの前処理と問い合わせ処理の役割分担",
+    "学術論文を対象としたデータ処理の観点",
+    "埋め込み生成とベクトルストア保存の関係",
+    "Mastraを用いたRAG構成の捉え方"
+   ]
+  },
+  "githubUrl": "https://github.com/karamage/rag-sample",
+  "ossSummary": "本OSS「rag-sample」は、RAG（Retrieval-Augmented Generation）のプロセスを非常に構造的かつ完結的に実装したサンプルコードであり、LLMアプリケーション開発の技術的な骨子を学ぶ上で優れた教材となります。 技術者向けに特に注目すべき3点を以下に考察します。 --- ### 1. エンドツーエンドのパイプライン実装の完結性 本プロジェクトの最大の特徴は、RAGの理想的なワークフロー（データ取得 → 分割/埋め込み → ストレージ → 検索/生成）をすべて単一のリポジトリ内に実装している点です。特に、データセット（学術論文）のダウンロードからチャンキング、OpenAIでの埋め込み生成、そしてLibSQLへのベクトルストア保存という**前処理（Indexing）**のステップが分離されており、これを実行することで「実動可能なベクトルストア」が構築されます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "my-claude-agent-sdk-getting-started",
+  "ossSlug": "my-claude-agent-sdk",
+  "ossName": "my-claude-agent-sdk",
+  "theme": "getting-started",
+  "keyword": "my-claude-agent-sdk バグ自動修正",
+  "pageTitle": "my-claude-agent-sdk バグ自動修正をTypeScriptで学ぶ入門",
+  "lead": "「my-claude-agent-sdk バグ自動修正」を調べている人向けに、TypeScriptからClaude Agent SDKへ入門する際の論点を整理します。記事タイトルからは、Claude Codeの機能を活用したAIエージェントによるバグ修正が扱われているとみられ、関連技術や試作の方向性をつかむ手がかりになりそうです。",
+  "article": {
+   "title": "TypeScriptで始めるClaude Agent SDK入門 - Claude Codeの機能を使いAIエージェントでバグを自動修正する",
+   "path": "https://zenn.dev/karamage/articles/21e55b0f9336d2",
+   "published_at": "2026-01-10",
+   "user": "karamage",
+   "name": "karamage",
+   "summary": "この記事は、TypeScriptでClaude Agent SDKを使い始め、Claude Codeの機能を利用するAIエージェントを題材にした入門記事とみられます。my-claude-agent-sdkを通じ、バグ自動修正を考える際の着眼点が紹介されている可能性があります。",
+   "points": [
+    "TypeScriptでSDKを使い始める際の着眼点",
+    "Claude Codeの機能とAIエージェントの関係",
+    "バグ自動修正を題材にしたエージェント活用像",
+    "my-claude-agent-sdkと記事テーマの対応"
+   ]
+  },
+  "githubUrl": "https://github.com/karamage/my-claude-agent-sdk",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "mdschema-markdown-validation",
+  "ossSlug": "mdschema",
+  "ossName": "mdschema",
+  "theme": "markdown-validation",
+  "keyword": "mdschema Markdown検証",
+  "pageTitle": "mdschema Markdown検証で考える、今の時代に書き方を強制する意味と文書品質",
+  "lead": "「mdschema Markdown検証」で情報を探す人に向け、YAMLスキーマとASTを用いて文書構造を確かめる考え方を整理します。記事タイトルとOSSの説明から、Markdownの書き方をそろえる意義や、宣言的な検証を開発ワークフローへ取り入れる際の論点をつかめるとみられます。",
+  "article": {
+   "title": "今の時代にマークダウンの書き方を強制すること",
+   "path": "https://zenn.dev/jackchuka/articles/9a2c7b7c811c22",
+   "published_at": "2026-01-28",
+   "user": "jackchuka",
+   "name": "jackchuka",
+   "summary": "この記事では、Markdownの書き方を強制することの意味を、mdschemaのような構造検証ツールと関連づけて扱っているとみられます。ASTによる文脈に応じた検証や、YAMLスキーマを軸に品質と一貫性を保つ観点を読み取れる可能性があります。",
+   "points": [
+    "YAMLスキーマによる宣言的な文書検証",
+    "ASTを使ったコンテキスト認識型チェック",
+    "書き方の統一とチーム内一貫性の関係",
+    "テンプレート生成を含む作成工程の自動化"
+   ]
+  },
+  "githubUrl": "https://github.com/jackchuka/mdschema",
+  "ossSummary": "■ 概要（1行） MarkdownドキュメントをYAMLスキーマ定義に基づいて構造的かつ宣言的に検証するCLIツール。 ■ 特徴・用途（2〜3行） 単なる文字列検査ではなく、AST（抽象構文木）パーシングを利用したコンテキスト認識型の検証が可能で、リンク、見出し階層、YAMLフロントマターなど、ドキュメントの各要素を網羅的にチェックできる点が技術的に優位。スキーマに基づいたテンプレート生成機能も持ち、ドキュメント作成ワークフロー全体の自動化に貢献する。 ■ 結論（1行） ドキュメントの構造的整合性や品質をコードのように保証し、大規模な開発チームで高い一貫性が求められるプロジェクトに非常に有用である。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "bit-local-development",
+  "ossSlug": "bit",
+  "ossName": "bit",
+  "theme": "local-development",
+  "keyword": "bit ローカル開発",
+  "pageTitle": "bit ローカル開発を支えるGit互換AIサンドボックスの概要と検討時の観点",
+  "lead": "「bit ローカル開発」を調べる人に向けて、MoonBit上の実験的VCSが目指すGitHubライクな開発管理の概要をつかむためのページです。記事では、ローカルでのプルリクエストやIssue管理、メタデータ同期を検討する際の観点が扱われているとみられます。",
+  "article": {
+   "title": "Bit - Git 互換のAIサンドボックス",
+   "path": "https://zenn.dev/mizchi/articles/introduce-bit-by-moonbit",
+   "published_at": "2026-02-06",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "mizchi氏による「Bit - Git 互換のAIサンドボックス」を紹介します。タイトルとOSSの説明から、MoonBitで構築された実験的VCSと、外部クラウドに依存しないローカル開発ワークフローについて書かれているとみられます。",
+   "points": [
+    "MoonBit上に構築された実験的VCSの位置付け",
+    "ローカルでのプルリクエストとIssue管理",
+    "bit relay syncによるメタデータ同期の考慮点",
+    "PoC・教育用途として評価する際の安定性"
+   ]
+  },
+  "githubUrl": "https://github.com/mizchi/bit",
+  "ossSummary": "■ 概要（1行） MoonBit上に構築された実験的なVCSであり、ローカルでGitHubライクなプルリクエストやIssueトラッキング機能を提供することを目的としています。 ■ 特徴・用途（2〜3行） 外部クラウドサービスに依存しない、完全にローカルな開発ワークフロー（PR/Issue管理）を可能にしている点が最大の技術的特徴です。これにより、オフライン環境や外部接続が制限される環境での開発プロセス管理に適しています。しかし、メタデータ同期は別途 `bit relay sync` を介する必要があり、データの一貫性と信頼性に対する考慮が必要です。 ■ 結論（1行） ワークフローの革新的なアプローチを持つPoCですが、安定性やプロダクション利用の観点から、現時点ではPoC/教育利用に限定すべきハイリスクな実装です。",
+  "category": "other",
+  "inCatalog": false,
+  "videos": [
+   {
+    "id": "06ec70a9c8744f13",
+    "title": "bitsandbytesの新量子化手法とは？GLM 5.3を高速推論する技術を解説"
+   },
+   {
+    "id": "1287a38f0c9c4b0e",
+    "title": "AI時代のリスク：Nesbittが指摘する新たな脆弱性"
+   }
+  ],
+  "related": []
+ },
+ {
+  "slug": "unity-cli-cli-automation",
+  "ossSlug": "unity-cli",
+  "ossName": "unity-cli",
+  "theme": "cli-automation",
+  "keyword": "unity-cli エディタ自動化",
+  "pageTitle": "unity-cli エディタ自動化でUnityEditorをCLI操作する方法を知る",
+  "lead": "unity-cli エディタ自動化を調べている人向けに、Unity Editorを外部からCLI操作するツールの目的や想定用途をつかむためのページです。記事タイトルとOSSの概要から、Play／Stop制御、ログ取得、メニュー実行、UI Toolkit操作、静的API呼び出しとの関係を整理します。",
+  "article": {
+   "title": "UnityEditorをCLIで操作するツールを作った",
+   "path": "https://zenn.dev/bigdra/articles/c399e88f1d8b71",
+   "published_at": "2026-02-11",
+   "user": "bigdra",
+   "name": "bigdra",
+   "summary": "2026年2月11日にbigdra氏が公開した、UnityEditorをCLIで操作するツールについての記事です。unity-cliによるエディタ操作や開発プロセス自動化の背景・用途が紹介されているとみられます。",
+   "points": [
+    "Unity EditorをCLIから外部制御する狙い",
+    "Play／Stop制御とログ取得の位置づけ",
+    "UI Toolkit操作と静的API呼び出しの用途",
+    "回帰テストやCI/CD統合への応用観点"
+   ]
+  },
+  "githubUrl": "https://github.com/bigdra50/unity-cli",
+  "ossSummary": "■ 概要 Unity Editorの機能をCLIから外部制御し、開発プロセスを自動化するための包括的なラッパーツール。 ■ 特徴・用途 Play/Stop制御やログ取得といった基本的な操作に加え、メニュー実行、UI Toolkitの要素操作、そして膨大な静的APIを動的に呼び出すことが可能です。これにより、手動では困難な、回帰テスト、エディタワークフローの自動化、CI/CDパイプラインへの統合を高度に実現できます。 ■ 結論 Unity Editorの高度なエディタ機能やAPIを完全にスクリプト化し、大規模な自動テスト・ワークフロー構築のコアコンポーネントとして機能します。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "agent-skills-mcp-server-skill-execution",
+  "ossSlug": "agent-skills-mcp-server",
+  "ossName": "agent-skills-mcp-server",
+  "theme": "skill-execution",
+  "keyword": "agent-skills-mcp-server MCPサーバー",
+  "pageTitle": "agent-skills-mcp-server MCPサーバーによるスキル実行基盤の紹介",
+  "lead": "「agent-skills-mcp-server MCPサーバー」で情報を探す人に向け、Agent Skillsの管理・実行基盤として想定される役割を整理します。記事タイトルとOSS説明から、MCPによるスキル仕様の外部化、マルチプロバイダー対応、検索・型安全性など、読む際の着眼点をつかめます。",
+  "article": {
+   "title": "Agent Skillsを実行するMCPサーバーを作ってみた",
+   "path": "https://zenn.dev/ncdc/articles/556ef827c4675f",
+   "published_at": "2026-02-11",
+   "user": "ibaraki",
+   "name": "ibaraki",
+   "summary": "この記事は、Agent Skillsを実行するMCPサーバーの構築について書かれているとみられます。紹介対象のOSSは、スキル管理・実行、多言語セマンティック検索、複数LLMプロバイダーとの接続を主題に据えた基盤として説明されています。",
+   "points": [
+    "MCPを介したスキル仕様の外部化という設計観点",
+    "複数LLMプロバイダーを統一する接続レイヤー",
+    "多言語セマンティック検索を支える技術構成",
+    "型安全性と最新Pythonツールチェーンの位置づけ"
+   ]
+  },
+  "githubUrl": "https://github.com/k-ibaraki/agent-skills-mcp-server",
+  "ossSummary": "■ 概要：Anthropicの公式仕様に準拠した、高度にガバナンスされたマルチプロバイダー対応のエージェントスキル管理・実行バックエンド。 ■ 特徴・用途： 1. **ガバナンスと拡張性**: MCP（Model Context Protocol）を介してスキル仕様を外部化し、Anthropic公式仕様に準拠することで、大規模かつ安全なスキルエコシステムの構築を可能にする。 2. **高度な検索と接続性**: ChromaDBとsentence-transformersによる多言語対応のセマンティック検索に加え、LiteLLM経由でAnthropic、AWS、Googleなど複数のLLMプロバイダーを統一的なAPIレイヤーでサポートする。 3. **信頼性と開発体験**: Pydanticによる完全な型安全性を確保し、さらに`uv`やPython 3.13+といった最新のツールチェーンを採",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "kaggle-techniques-ojt-validation-strategy",
+  "ossSlug": "kaggle-techniques-ojt",
+  "ossName": "kaggle-techniques-ojt",
+  "theme": "validation-strategy",
+  "keyword": "kaggle-techniques-ojt split戦略",
+  "pageTitle": "kaggle-techniques-ojt split戦略から学ぶ機械学習の評価設計",
+  "lead": "「kaggle-techniques-ojt split戦略」を調べている人向けに、機械学習でモデル手法より先に検討したい評価設計の観点を紹介します。記事では、データ分割による評価バイアスやデータリークへの注意、K-Foldを用いる意義について学べるとみられます。",
+  "article": {
+   "title": "【新入社員研修/機械学習】手法の前に、まず split 戦略を疑う",
+   "path": "https://zenn.dev/hirayuki/articles/a57a1879d3ed9d",
+   "published_at": "2026-02-20",
+   "user": "hirayuki",
+   "name": "hirayuki",
+   "summary": "新入社員研修を題材に、機械学習の手法選びに先立ってsplit戦略を見直す重要性が書かれているとみられます。教材リポジトリを通じ、Simple SplitやStratified KFoldなどの評価設計を比較する観点が扱われているようです。",
+   "points": [
+    "モデル選定より先に考える評価設計",
+    "分割方法によって生じる評価バイアス",
+    "データリークを避けるための視点",
+    "K-Foldによる推論のロバスト性"
+   ]
+  },
+  "githubUrl": "https://github.com/hirayukis/kaggle-techniques-ojt",
+  "ossSummary": "■ 概要 機械学習モデル構築における「評価設計（Validation Strategy）」の重要性を、実践的な比較を通じて学習するための教材リポジトリ。 ■ 特徴・用途 データセットの分割戦略（Simple Split, Stratified KFold）や、推論のロバスト性を高めるK-Foldの概念を、具体的な指標の差で比較できます。特に、単なるモデルチューニング以前に、「評価バイアス」や「データリーク」を防ぐための設計思想を体系的に習得するのに役立ちます。 ■ 結論 実務で「過学習ではないが、評価が不健全なモデル」を避けたい技術者にとって、非常に基礎的かつ重要な知識定着のための教材です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "bit-relay-p2p-collaboration",
+  "ossSlug": "bit-relay",
+  "ossName": "bit-relay",
+  "theme": "p2p-collaboration",
+  "keyword": "bit-relay P2Pコラボレーション開発",
+  "pageTitle": "bit-relay P2Pコラボレーション開発におけるリレーの役割と活用観点",
+  "lead": "「bit-relay P2Pコラボレーション開発」を調べる人に向けて、bitとリレーサーバーを組み合わせた分散型の共同開発という記事の主題を紹介します。タイトルとOSSの説明から、エッジ環境への配置、レビューやCI/CD連携、NAT越しのGit操作を考える際の視点が得られそうです。",
+  "article": {
+   "title": "bit + bit-relay で P2P でのコラボレーション開発を実現する",
+   "path": "https://zenn.dev/mizchi/articles/decentrized-git-for-agents",
+   "published_at": "2026-02-23",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "mizchi氏による記事で、bitとbit-relayを使ったP2P型のコラボレーション開発について書かれているとみられます。分散環境での接続や共同作業を支えるリレーの役割を考える入口になりそうです。",
+   "points": [
+    "bitとリレーを組み合わせる全体像",
+    "P2P共同開発における接続性の観点",
+    "レビュー・CI/CD連携の位置づけ",
+    "NAT越しのGit操作を支える仕組み"
+   ]
+  },
+  "githubUrl": "https://github.com/bit-vcs/bit-relay",
+  "ossSummary": "■ 概要（1行） MoonBitなどの生成物に依存しない、TypeScriptベースの高度に多機能な分散型協調作業のためのリレーサーバーです。 ■ 特徴・用途（2〜3行） 1. **クロスプラットフォームなデプロイメント:** DenoやCloudflare Workers/Durable Objectといったモダンなエッジコンピューティング環境にネイティブ対応しており、インフラの制約を最小化しています。 2. **複合的なワークフロー管理:** 単なるメッセージングに留まらず、Reviewプロセス、外部CI/CD（GitHub）連携、キャッシュ同期など、分散型のワークフローを包括的にAPIレベルでサポートしています。 3. **高度な接続性ソリューション:** 「Git Serve Session」機能により、NAT/ファイアウォール越しのGit操作（clone/fetch）をリレー経由",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "llm-key-ring-secure-api-keys",
+  "ossSlug": "llm-key-ring",
+  "ossName": "llm-key-ring",
+  "theme": "secure-api-keys",
+  "keyword": "llm-key-ring APIキー管理",
+  "pageTitle": "llm-key-ring APIキー管理をmacOS Keychainで考える記事紹介",
+  "lead": "「llm-key-ring APIキー管理」で情報を探す人向けに、macOS Keychainを使って平文保存を避けるという記事の主題を紹介します。本文は未確認のため、タイトルとOSSの説明から読み取れる範囲で、APIキーの保管から利用時までの安全性を考える観点を整理します。",
+  "article": {
+   "title": "もう.envにAPIキーを平文で置くのはやめた — macOS Keychain管理CLI「LLM Key Ring」",
+   "path": "https://zenn.dev/yottayoshida/articles/llm-key-ring-secure-api-key-management",
+   "published_at": "2026-03-01",
+   "user": "yottayoshida",
+   "name": "yottayoshida",
+   "summary": "この記事では、.envにAPIキーを平文で置く課題と、macOS Keychainを利用するCLI「LLM Key Ring」が扱われているとみられます。保存時だけでなく、キーの受け渡しや実行時の漏洩リスクを抑える設計が主題と考えられます。",
+   "points": [
+    "macOS KeychainによるAPIキーの暗号化保存",
+    "zeroizeやクリップボード自動消去による残留対策",
+    "TTY前提のガードによる非対話的な抽出への防御",
+    "lkr execを用いた環境変数への限定的なキー注入"
+   ]
+  },
+  "githubUrl": "https://github.com/yottayoshida/llm-key-ring",
+  "ossSummary": "■ 概要（1行） macOSネイティブのKeychainを利用し、LLM APIキーの管理・利用時における漏洩リスクを徹底的に排除するRustベースのCLIツール。 ■ 特徴・用途（2〜3行） 1. **多層的なセキュアストレージ:** 単なるシークレットマネージャーに留まらず、macOS Keychainによる暗号化保存に加え、実行メモリからのキー情報削除（`zeroize`）やクリップボードの自動クリアなど、利用フェーズ全体でセキュリティ対策を講じている。 2. **ランタイム・コンテキスト保護:** TTY環境での利用を前提とし、非対話的な環境からのキーの抽出（pipingなど）を防御するガード機構を実装している点が高く評価できる。 3. **安全な実行環境提供:** `lkr exec`による環境変数注入は、アプリケーションへのキー渡しの最も安全な方法を提供し、またクレデンシャルを",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "noman-natural-language-cli",
+  "ossSlug": "noman",
+  "ossName": "noman",
+  "theme": "natural-language-cli",
+  "keyword": "noman CLI引数生成",
+  "pageTitle": "noman CLI引数生成の考え方と活用場面をオープンソース開発記事から知る",
+  "lead": "「noman CLI引数生成」で情報を探す人に向け、自然言語をCLIコマンドと引数へ変換する発想や、複雑な記法の学習負担を軽減する用途をつかむための紹介です。記事タイトルとOSSの説明を手掛かりに、期待できる利点とLLM依存ゆえの検証観点を整理します。",
+  "article": {
+   "title": "自然言語でCLI引数だけを生成する「noman」を作った",
+   "path": "https://zenn.dev/azihsoyn/articles/d15189d1815b55",
+   "published_at": "2026-03-13",
+   "user": "azihsoyn",
+   "name": "azihsoyn",
+   "summary": "2026年3月公開の開発記事で、自然言語からCLI引数だけを生成する「noman」の制作背景や着想が扱われているとみられます。複雑なCLI操作を補助する考え方と、LLM出力を利用する際の確認ポイントを知る入口になりそうです。",
+   "points": [
+    "自然言語をCLI引数へ変換する発想",
+    "複雑なフラグ記法の学習負担を減らす用途",
+    "jqなどの構文生成への応用可能性",
+    "LLM出力の精度と実行前検証の重要性"
+   ]
+  },
+  "githubUrl": "https://github.com/azihsoyn/noman",
+  "ossSummary": "■ 概要（1行） 大規模言語モデル（LLM）を利用し、自然言語のプロンプトをターゲットCLIコマンドとその引数に自動変換するインターフェース。 ■ 特徴・用途（2〜3行） 複雑なコマンドラインツールの使い方を直感的に解決する「言語翻訳レイヤー」を提供します。これにより、`man`ページや複雑なフラグの記法を覚える必要がなくなり、ターミナル操作の学習コストを劇的に下げます。`jq`のようなデータ処理パイプライン構築におけるプロンプトベースの構文生成が特に強力です。 ■ 結論（1行） CLIのアクセシビリティをLLMで飛躍的に向上させる革新的なコンセプトですが、実行精度やエッジケースのハンドリングにLLM依存のリスクが伴うため、実用化には堅牢な検証が必要です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "unilyze-code-metrics-cli",
+  "ossSlug": "unilyze",
+  "ossName": "unilyze",
+  "theme": "code-metrics-cli",
+  "keyword": "unilyze コードメトリクス",
+  "pageTitle": "unilyze コードメトリクスをCLIから計測するUnity向け記事の紹介",
+  "lead": "「unilyze コードメトリクス」でUnityプロジェクトの品質をCLIから把握したい人に向けた紹介ページです。記事タイトルとOSSの説明から、静的解析、依存関係の可視化、CI/CD連携を検討する際の着眼点が得られそうです。",
+  "article": {
+   "title": "CLIからUnityのコードメトリクスを計測したい",
+   "path": "https://zenn.dev/bigdra/articles/unilyze-unity-code-metrics",
+   "published_at": "2026-03-17",
+   "user": "bigdra",
+   "name": "bigdra",
+   "summary": "2026年3月17日にbigdra氏が公開した、UnityのコードメトリクスをCLIから計測する話題の記事です。unilyzeを通じた静的解析や依存関係の把握について書かれているとみられ、導入検討の手がかりになりそうです。",
+   "points": [
+    "Unity向けコードメトリクス計測の位置づけ",
+    "CLIによる静的解析の活用観点",
+    "タイプ間依存関係を可視化する意義",
+    "CI/CDや品質トレンド分析との接点"
+   ]
+  },
+  "githubUrl": "https://github.com/bigdra50/unilyze",
+  "ossSummary": "■ 概要（1行） Unityプロジェクトに特化した、依存関係解析とコード品質の静的解析・可視化を可能にするCLIツールです。 ■ 特徴・用途（2〜3行） 単なるコード品質計測に留まらず、タイプ間の依存関係性をグラフとして可視化できるため、大規模なリファクタリング計画やアーキテクチャのボトルネック特定に役立ちます。SARIF出力対応など、CI/CDパイプラインへの統合や、変更履歴（diff）を追跡した品質トレンド分析に非常に強力です。 ■ 結論（1行） Unityのコードベース健全性（Code Health）を定量的に把握し、技術的負債の早期発見と可視化を目指す、DevOpsプロセスに組み込みやすいツールです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "xlmelt-command-guide",
+  "ossSlug": "xlmelt",
+  "ossName": "xlmelt",
+  "theme": "command-guide",
+  "keyword": "xlmelt コマンド解説",
+  "pageTitle": "xlmelt コマンド解説―ExcelをAI向けJSON・HTMLへ変換する構想",
+  "lead": "「xlmelt コマンド解説」を探している人に向け、Excel文書をAIで扱いやすいJSON／HTMLへ変換する際のコマンド群と、今後の構想を把握する手がかりをまとめます。タイトルとOSSの説明からは、LLMに依存しない構造検出や半構造化データ処理の考え方にも触れる記事とみられます。",
+  "article": {
+   "title": "xlmelt詳細ガイド ― ExcelをAI向けJSON/HTMLに変換するコマンド全解説と今後の構想",
+   "path": "https://zenn.dev/marimo_marine23/articles/4114543b15d2ba",
+   "published_at": "2026-03-17",
+   "user": "marimo_marine23",
+   "name": "marimo_marine23",
+   "summary": "本記事では、xlmeltの各コマンドと、ExcelをJSON／HTMLへ変換する仕組み、今後の構想が扱われているとみられます。OSSの説明とあわせると、openpyxlとルールベース処理による構造検出を考える入口になりそうです。",
+   "points": [
+    "Excel文書をJSON／HTMLへ変換する目的",
+    "xlmeltのコマンド体系を捉える観点",
+    "LLM非依存のヒューリスティックな構造検出",
+    "半構造化Excelを意味構造へ整理する発想"
+   ]
+  },
+  "githubUrl": "https://github.com/marimo-marine23/xlmelt",
+  "ossSummary": "以下に、技術者向けの3点の考察を提示します。 --- ### 📝 技術考察：xlmelt (Technical Analysis) #### 1. LLM非依存の構造検出（Heuristic-based Schema Inference） 最も評価できる点は、文書構造の検出に大規模言語モデル（LLM）の推論能力に頼らず、`openpyxl`によるメタデータ解析とルールベースのロジック（ヒューリスティクス）を活用している点です。これにより、外部APIへの依存、レイテンシの増大、APIコストといった運用上の大きなボトルネックを回避できます。これは、企業内システム（特にセキュリティやコストが重視される現場）でデータ前処理パイプラインを構築する上で、極めて実用的なアプローチです。 #### 2. 半構造化データ処理の課題解決（Semi-structured Data Wrangling） 本ツール",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "dev-tools-plugin-problem-discovery",
+  "ossSlug": "dev-tools-plugin",
+  "ossName": "dev-tools-plugin",
+  "theme": "problem-discovery",
+  "keyword": "dev-tools-plugin 課題発見",
+  "pageTitle": "dev-tools-plugin 課題発見をバイブコーディング時に支える考え方",
+  "lead": "「dev-tools-plugin 課題発見」で調べる人に向け、バイブコーディングで実装を急ぐ前に、本当に解くべき課題を見極めるという記事の主題を紹介します。複数AIによる思考検証や品質チェックを備えるOSSとの関係を、タイトルと公開情報から読み取れる範囲で整理します。",
+  "article": {
+   "title": "バイブコーディング時に、本当に解くべき課題を見つけるためのSKILL",
+   "path": "https://zenn.dev/sizukutamago/articles/9a3abe64c4deff",
+   "published_at": "2026-03-17",
+   "user": "sizukutamago",
+   "name": "sizukutamago",
+   "summary": "この記事では、バイブコーディング時の課題発見を支えるSKILLが主題になっているとみられます。dev-tools-pluginの多層的なAIコラボレーションや品質チェックが、思考の検証と開発上のガードレールにどう関係するかを考える手がかりになりそうです。",
+   "points": [
+    "バイブコーディングで優先すべき課題の見極め",
+    "複数AIによる設計段階の思考検証",
+    "品質チェックを組み込むガードレール",
+    "コード生成前に問いを吟味する視点"
+   ]
+  },
+  "githubUrl": "https://github.com/sizukutamago/dev-tools-plugin",
+  "ossSummary": "■ 概要 複数のAIモデル、リンター、デバッグ機能を単一のプラグインシステムに統合し、開発サイクル全体を高度に自動化するエコシステムツール。 ■ 特徴・用途 多層的なAIコラボレーション（自律ディベートや複数モデルレビュー）を提供することで、単なるコード生成以上の、設計フェーズでの思考検証を強制できる点が強力です。また、`biome`や`dependency-cruiser`といった標準的な品質チェックを組み込むことで、知識の習得だけでなく、ベストプラクティスを自動的にワークフローに組み込んでいます。 ■ 結論 AIを活用した「思考の外部化」と「開発プロセスの自動ガードレール設置」を実現する、高度な開発生産性レイヤーを提供しています。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "gr-stars-tui-visualization",
+  "ossSlug": "gr-stars",
+  "ossName": "gr-stars",
+  "theme": "tui-visualization",
+  "keyword": "gr-stars 開発事例",
+  "pageTitle": "gr-stars 開発事例：GoとBubble TeaによるGitHub可視化CLI",
+  "lead": "「gr-stars 開発事例」を探す人に向け、GoとBubble Teaを用いたGitHub人気リポジトリ可視化CLIの構成や着眼点を知る手がかりとなる記事です。タイトルとOSSの説明からは、TUIによる棒グラフ・表での比較や、GitHub検索クエリの活用について触れているとみられます。",
+  "article": {
+   "title": "Go + Bubble Tea で GitHub の人気リポジトリを可視化する CLI ツールを作った",
+   "path": "https://zenn.dev/fumi_engineer/articles/gr-stars-github-visualizer",
+   "published_at": "2026-03-18",
+   "user": "fumi_engineer",
+   "name": "fumi_engineer",
+   "summary": "本記事では、GitHub APIを利用するCLIツール「gr-stars」の開発が扱われているとみられます。GoとBubble TeaによるTUI実装を軸に、人気リポジトリの情報をターミナルで可視化する題材が紹介されていると考えられます。",
+   "points": [
+    "GoとBubble Teaを用いたTUI開発の観点",
+    "GitHub APIとトークン利用を考慮した設計",
+    "棒グラフ・表による人気リポジトリ比較",
+    "GitHub検索クエリを調査へ生かす視点"
+   ]
+  },
+  "githubUrl": "https://github.com/engineer-fumi/gr-stars",
+  "ossSummary": "■ 概要 GitHub APIを利用し、人気リポジトリのスター数などをターミナル上で視覚化するCLIツール。 ■ 特徴・用途 TUI (Terminal User Interface)を採用しているため、ブラウザを開かずにデータの比較（棒グラフ/表）とナビゲーションが可能です。単なる一覧表示に留まらず、高度なGitHub検索クエリを組み込める点が強力で、技術スタッキングやトレンドの調査に最適です。Go言語での実装と、GitHub Tokenの推奨により、APIレート制限を考慮した堅牢な設計が期待できます。 ■ 結論 開発者が技術動向や競合のPopular Repoを効率的に「ウォッチ」する、非常に実用性の高い開発生産性ツールです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "git-worktreeinclude-oss-introduction",
+  "ossSlug": "git-worktreeinclude",
+  "ossName": "git-worktreeinclude",
+  "theme": "oss-introduction",
+  "keyword": "git-worktreeinclude 使い方",
+  "pageTitle": "git-worktreeinclude 使い方とワークツリー間の設定同期",
+  "lead": "git-worktreeincludeの使い方を調べている人向けに、複数のGitワークツリー間でignoredファイルを同期する考え方をつかめそうな記事です。対象ファイルの選び方や、tracked filesを除外する設計を知る手がかりになるとみられます。",
+  "article": {
+   "title": "git-worktreeinclude という OSS を作りました",
+   "path": "https://zenn.dev/satococoa/articles/d26b2a4235234c",
+   "published_at": "2026-03-18",
+   "user": "satococoa",
+   "name": "satococoa",
+   "summary": "satococoa氏が作成したOSS「git-worktreeinclude」の紹介記事です。タイトルとOSSの説明から、.worktreeincludeルールを使ったignoredファイルの同期や、安全性への配慮が扱われているとみられます。",
+   "points": [
+    "複数ワークツリー間での設定同期の考え方",
+    "gitignore互換ルールによる対象ファイルの指定",
+    "tracked filesをコピー対象から除く設計",
+    "ローカル環境固有ファイルを共有する用途"
+   ]
+  },
+  "githubUrl": "https://github.com/satococoa/git-worktreeinclude",
+  "ossSummary": "■ 概要（1行） 複数のワークツリー間で、Gitが管理対象外（ignored）と見なす設定ファイルやローカル環境固有のファイルを同期するためのユーティリティ。 ■ 特徴・用途（2〜3行） 標準のGit操作では扱いにくい、`.env`やエディタ設定などの「無視すべき環境設定」を、`.gitignore`互換の`.worktreeinclude`ルールを用いて安全に跨ワークツリー間で同期可能です。追跡されているファイル（tracked files）は常にコピー対象から除外されるため、Gitのデータ整合性を保証しつつ、開発環境のローカルパリティを維持できます。 ■ 結論（1行） 開発環境が複数のコンテキスト（ステージ、ローカル環境、特定の機能ブランチ）に分かれ、一貫した設定ファイルの適用が求められる場合に非常に有用です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "actrun-static-analysis",
+  "ossSlug": "actrun",
+  "ossName": "actrun",
+  "theme": "static-analysis",
+  "keyword": "actrun 静的検査",
+  "pageTitle": "actrun 静的検査の新機能を知る：visとlintによるワークフロー確認",
+  "lead": "「actrun 静的検査」で情報を探す人に向け、v0.18で紹介されたとみられるactrun visとactrun lintの位置づけを整理します。GitHub Actionsワークフローをローカルで確認・デバッグする際に、これらの機能がどのような観点に関わるかをつかむ手がかりになります。",
+  "article": {
+   "title": "actrun v0.18 の新機能: actrun vis, actrun lint でワークフローを静的検査する",
+   "path": "https://zenn.dev/mizchi/articles/actrun-useful-tips",
+   "published_at": "2026-03-19",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "この記事では、actrun v0.18の新機能として、actrun visとactrun lintを用いたGitHub Actionsワークフローの静的検査が扱われているとみられます。ローカル実行前の確認やデバッグとの関係を知るための紹介記事と考えられます。",
+   "points": [
+    "actrun visとlintそれぞれの位置づけ",
+    "ワークフロー静的検査の対象となる観点",
+    "ローカル実行やデバッグとの使い分け",
+    "v0.18で加わった新機能の全体像"
+   ]
+  },
+  "githubUrl": "https://github.com/mizchi/actrun",
+  "ossSummary": "■ 概要（1行） ローカル環境でGitHub ActionsのCI/CDワークフローをシミュレーション・実行するための、高互換性を持つ専用ランナー。 ■ 特徴・用途（2〜3行） GitHub ActionsのパブリックAPI契約（Public API Contract）を厳密に維持しつつ、MoonBitといった最新ランタイムを活用することで、開発機での高速なローカル実行やデバッグを可能にしています。Nix, Docker, npxなど多様な環境への導入オプションが用意されており、再現性の高い開発環境構築に極めて有用です。 ■ 結論（1行） ローカルでのCIシミュレーションの精度と利便性を最大化したいチームや、カスタム開発環境を構築するエンジニアに最適です。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "skillctx-skill-sharing",
+  "ossSlug": "skillctx",
+  "ossName": "skillctx",
+  "theme": "skill-sharing",
+  "keyword": "skillctx スキル共有",
+  "pageTitle": "skillctx スキル共有における設定分離と移植性を考えるZenn記事の紹介",
+  "lead": "「skillctx スキル共有」で情報を探す人向けに、Agent Skillのコードと環境依存の設定値を分ける考え方を紹介します。記事本文は未確認のため、タイトルとOSS説明から、共有時の設定管理やプレースホルダーによる値の注入、移植性を捉える観点を整理します。",
+  "article": {
+   "title": "Agent Skillをうまく共有することについて真剣に考えてみた",
+   "path": "https://zenn.dev/jackchuka/articles/1e5c1ba6f8b30c",
+   "published_at": "2026-03-20",
+   "user": "jackchuka",
+   "name": "jackchuka",
+   "summary": "タイトルから、Agent Skillを共有する際の課題について検討した記事とみられます。skillctxの説明を踏まえると、コードと環境依存設定の分離、プレースホルダーを介した値の解決、配布時の移植性が関連テーマと考えられます。",
+   "points": [
+    "スキル共有時に生じる環境依存設定の扱い",
+    "プレースホルダーによる設定値抽象化の考え方",
+    "ユーザー共通設定から値を解決・注入する仕組み",
+    "作成者と利用者の双方から見た移植性"
+   ]
+  },
+  "githubUrl": "https://github.com/jackchuka/skillctx",
+  "ossSummary": "■ 概要（1行） エージェントスキル（AIを活用した小規模機能群）のコードと環境依存の設定値を分離し、移植性を高めるための共通設定フレームワークです。 ■ 特徴・用途（2〜3行） コード内のハードコードされた変数を`{placeholder}`として抽象化し、実行時にユーザー共通の設定ファイルから値を自動で解決・注入します。これにより、スキル作成者は自身の環境に依存しない形でスキルを配布でき、利用者側も初回セットアップの手間が劇的に削減されます。 ■ 結論（1行） 分散型のエージェントスキル群における設定管理レイヤーを提供することで、AI/自動化エージェントの開発サイクルを実用レベルで加速させる基盤技術となり得ます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "devin-mcp-integration",
+  "ossSlug": "devin-mcp",
+  "ossName": "devin-mcp",
+  "theme": "integration",
+  "keyword": "devin-mcp Rust MCPサーバー",
+  "pageTitle": "devin-mcp Rust MCPサーバーでDevin AI連携を実現する仕組みを紹介",
+  "lead": "「devin-mcp Rust MCPサーバー」で情報を探す人向けに、Devin AIとの対話をMCP準拠で扱うOSSの位置づけを紹介します。タイトルと公開情報から、Rustによる実装や開発環境との連携を考える際の観点が得られそうです。",
+  "article": {
+   "title": "Rust で Devin AI の MCP サーバーを作った",
+   "path": "https://zenn.dev/mjinno/articles/devin-mcp-rust-mcp-server",
+   "published_at": "2026-03-23",
+   "user": "mjinno",
+   "name": "mjinno",
+   "summary": "この記事では、Rustで作られたDevin AI向けMCPサーバー「devin-mcp」が扱われているとみられます。セッション管理や標準I/O接続を通じた開発環境への統合が主題と考えられます。",
+   "points": [
+    "RustによるMCPサーバー実装の位置づけ",
+    "Devin AIのセッション管理との関係",
+    "Claude CodeやCursorとの接続可能性",
+    "標準I/Oを介した統合の考え方"
+   ]
+  },
+  "githubUrl": "https://github.com/mjinno09/devin-mcp",
+  "ossSummary": "■ 概要（1行） Devin AIとの対話を標準化する、Model Context Protocol (MCP)準拠のセッション管理サーバーです。 ■ 特徴・用途（2〜3行） 各種IDEやAIエージェントクライアント（Claude Code, Cursor等）から標準I/O経由で接続できるプロトコルレイヤーとして機能します。これにより、セッションの作成、ステータス確認、メッセージ送信といったDevin AIの複雑なワークフローを標準コマンド群としてラップし、開発環境への組み込みを容易にしています。 ■ 結論（1行） 最先端のAI開発ツール（Devin AI）を、既存の開発ワークフローやマルチエージェント環境へシームレスに統合するためのブリッジレイヤーとして極めて価値が高いです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "vector-db-showdown-vector-db-selection",
+  "ossSlug": "vector-db-showdown",
+  "ossName": "vector-db-showdown",
+  "theme": "vector-db-selection",
+  "keyword": "vector-db-showdown ベクトルDB比較",
+  "pageTitle": "vector-db-showdown ベクトルDB比較で考える状況別の選び方",
+  "lead": "「vector-db-showdown ベクトルDB比較」で情報を探す人に向け、Chroma・pgvector・Pineconeを精度だけでなく利用状況から選ぶという記事の主題を紹介します。各候補の優劣を断定せず、選定時にどのような観点を持つ記事なのかを把握する手がかりになります。",
+  "article": {
+   "title": "Chroma・pgvector・Pinecone——精度じゃなくて状況で選ぶベクトルDB",
+   "path": "https://zenn.dev/helloworld/articles/9a87b842d867ad",
+   "published_at": "2026-03-24",
+   "user": "helloworld",
+   "name": "helloworld",
+   "summary": "helloworld氏による2026年3月24日公開の記事で、Chroma・pgvector・Pineconeの選択を、精度一辺倒ではなく状況に応じて考える主題とみられます。vector-db-showdownとの関係や、比較・選定の入口として確認したい観点を紹介します。",
+   "points": [
+    "記事タイトルから読み取れるベクトルDB選定の視点",
+    "3つの候補を比較する際に確認したい前提条件",
+    "精度だけに依存しない選択基準という主題",
+    "vector-db-showdownと比較記事の関連性"
+   ]
+  },
+  "githubUrl": "https://github.com/shumatsumonobu/vector-db-showdown",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "rag-from-scratch-rag-implementation",
+  "ossSlug": "rag-from-scratch",
+  "ossName": "rag-from-scratch",
+  "theme": "rag-implementation",
+  "keyword": "rag-from-scratch LangChain RAG実装",
+  "pageTitle": "rag-from-scratch LangChainで学ぶRAG実装の考え方",
+  "lead": "記事本文には立ち入らず、提示されたタイトルとOSSの説明を対応づけて整理しています。LangChainを使ったRAG実装を探している人が、rag-from-scratchの学習用コードと照らしながら、インデックス、検索、生成の全体像やローカル検証の観点をつかむ手がかりになりそうです。",
+  "article": {
+   "title": "【RAG入門③】LangChainでRAGを実装する",
+   "path": "https://zenn.dev/norma/articles/e02471c0900da5",
+   "published_at": "2026-03-25",
+   "user": "norma",
+   "name": "norma",
+   "summary": "「【RAG入門③】LangChainでRAGを実装する」という題名から、LangChainを用いたRAG実装が扱われているとみられます。紹介対象のrag-from-scratchは、RAGの各工程を純粋なPythonとローカル環境で段階的に確かめる学習用実装群です。",
+   "points": [
+    "LangChainによるRAG実装の位置づけ",
+    "インデックス・検索・生成の工程整理",
+    "埋め込みと類似度計算を確認する観点",
+    "Ollamaを用いたローカル検証の可能性"
+   ]
+  },
+  "githubUrl": "https://github.com/norma2627/rag-from-scratch",
+  "ossSummary": "■ 概要：LLMフレームワークに依存せず、純粋なPythonとローカル環境でRAGの各工程を段階的に理解するための学習用実装群です。 ■ 特徴・用途： 1. RAGのパイプライン（インデックス→検索→生成）の各要素を抽象化せず、埋め込みや類似度計算といったコアロジックレベルから動作を検証できます。 2. Ollamaを使用しているため、外部APIへの依存度が低く、機密情報を扱うローカル環境での実験やデバッグが可能です。 3. チャンクやベクトル、類似度スコアを明示的に「覗き見る」過程が組み込まれており、なぜその結果が出たのかという根拠理解に優れています。 ■ 結論：RAGの実装経験が浅い技術者や、LLMシステム設計の理論的な裏付けを深く学びたいエンジニアにとって最適な教材的リソースです。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "hindsight-self-host-memory",
+  "ossSlug": "hindsight",
+  "ossName": "hindsight",
+  "theme": "self-host-memory",
+  "keyword": "hindsight セルフホスト",
+  "pageTitle": "hindsight セルフホストで考える長期記憶AIバーテンダーの仕組み",
+  "lead": "「hindsight セルフホスト」で記憶を持つAIエージェントの構成例を探している人向けに、AIバーテンダーという題材から長期記憶の役割を考える手がかりを紹介します。記事本文は未確認ですが、タイトルから、経験を蓄積して応答に生かす仕組みや、セルフホストで扱う際の着眼点が示されているとみられます。",
+  "article": {
+   "title": "「いつもの」が通じるAIバーテンダー——Hindsightで作るセルフホスト記憶AI",
+   "path": "https://zenn.dev/helloworld/articles/62f535ef6434a8",
+   "published_at": "2026-03-25",
+   "user": "helloworld",
+   "name": "helloworld",
+   "summary": "helloworld氏による2026年3月25日公開の記事で、Hindsightを用いたセルフホスト型の記憶AIが扱われているとみられます。「いつもの」が通じるAIバーテンダーを題材に、長期記憶をエージェントへ組み込む発想を紹介している可能性があります。",
+   "points": [
+    "AIバーテンダーにおける長期記憶の位置づけ",
+    "Hindsightをセルフホストする構成の着眼点",
+    "経験を応答へ生かすメモリ設計の考え方",
+    "会話履歴の検索と継続的な学習の違い"
+   ]
+  },
+  "githubUrl": "https://github.com/vectorize-io/hindsight",
+  "ossSummary": "■ 概要（1行） 長期的な学習と自己修正能力をエージェントに付与するための、高度な記憶システムです。 ■ 特徴・用途（2〜3行） 単なる会話履歴の検索（RAG）に留まらず、経験から知識を抽出しエージェントが「学習」するメカニズムを提供します。既存のRAGや知識グラフが持つメモリの局所性・更新性の課題を克服し、複雑な長期間タスク実行のための「長期記憶層」として機能します。 ■ 結論（1行） 自律的に知識を積み上げ、洗練されていく次世代の高度なAIエージェント開発における、決定的なメモリコンポーネントとなり得ます。",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "cl-harness-engineering",
+  "ossSlug": "cl",
+  "ossName": "cl",
+  "theme": "harness-engineering",
+  "keyword": "cl ハーネスエンジニアリング",
+  "pageTitle": "cl ハーネスエンジニアリングとRalph Loopの接点を紹介記事から探る",
+  "lead": "「cl ハーネスエンジニアリング」で情報を探す人向けに、Ralph Loopを入口とする記事と、Anthropicモデル向けCLI・SDKであるclの接点を整理します。本文未読のため具体的な実装手順には踏み込まず、AI活用を支える仕組みとして何を確認できそうかを紹介します。",
+  "article": {
+   "title": "とりあえず ralph loopからはじめるハーネスエンジニアリング",
+   "path": "https://zenn.dev/explaza/articles/100d753df57fa7",
+   "published_at": "2026-04-02",
+   "user": "mkazutaka",
+   "name": "mkazutaka",
+   "summary": "この記事は、Ralph Loopからハーネスエンジニアリングを考える内容とみられます。clが紹介されている前提では、AnthropicモデルをPythonから扱うCLI・SDKが、その文脈でどう位置づけられるかを知る手がかりになりそうです。",
+   "points": [
+    "Ralph Loopとclの関係性",
+    "ハーネスエンジニアリングの捉え方",
+    "Python向けCLI・SDKの位置づけ",
+    "システムプロンプトやTool Useとの接点"
+   ]
+  },
+  "githubUrl": "https://github.com/anthropics/cl",
+  "ossSummary": "■ 概要 AnthropicのAIモデル（Claudeなど）をPython環境から利用するための、高機能なCLIおよびSDKです。 ■ 特徴・用途 APIの呼び出しに必要なボイラープレートコードを大幅に削減し、システムプロンプトや関数呼び出し（Tool Use）といった高度な機能連携を容易にします。これにより、PoCから本番環境へのAI機能組み込み速度を劇的に向上させることが可能です。 ■ 結論 Anthropicモデルを活用したアプリケーションを構築する際の標準的なファーストステップとして、導入価値が非常に高いライブラリです。",
+  "category": "other",
+  "inCatalog": false,
+  "videos": [
+   {
+    "id": "1052df0a53fe4a84",
+    "title": "Claude Codeで「勝てる」AI広告工場を作る方法"
+   },
+   {
+    "id": "9795431c2d4949c0",
+    "title": "Claude Codeで月収2万ドル稼ぐAIエージェンシーの正解"
+   },
+   {
+    "id": "79dcbd306425435c",
+    "title": "Claude Codeで月収を最大化するAIエージェンシーの正解"
+   }
+  ],
+  "related": []
+ },
+ {
+  "slug": "feed-curator-ai-rss-reader",
+  "ossSlug": "feed-curator",
+  "ossName": "feed-curator",
+  "theme": "ai-rss-reader",
+  "keyword": "feed-curator AI RSSリーダー",
+  "pageTitle": "feed-curator AI RSSリーダーの仕組みとパーソナライズの考え方",
+  "lead": "「feed-curator AI RSSリーダー」を調べている人向けに、Claude Codeを活用したRSSキュレーションの狙いや、閲覧履歴に基づく関連度評価・トピック整理の考え方をつかむ材料をまとめます。Node.js製のCLI／Web UI構成や、外部AI処理に伴う安定性・利用制限の検討点も把握できそうです。",
+  "article": {
+   "title": "Claude CodeでAI RSSリーダーを作ったら、その日にInoreaderを解約した",
+   "path": "https://zenn.dev/caphtech/articles/feed-curator-ai-rss-with-claude-code",
+   "published_at": "2026-04-02",
+   "user": "rizumita",
+   "name": "rizumita",
+   "summary": "個人向けAI RSSリーダーをClaude Codeで構築し、既存サービスから乗り換えた体験が紹介されているとみられる記事です。feed-curatorの自動キュレーションや要約、パーソナライズの発想を知る手がかりになりそうです。",
+   "points": [
+    "Claude Codeを使うAI処理の構成",
+    "閲覧履歴に基づく関連度スコア付与",
+    "トピッククラスタリングと自動要約",
+    "外部CLI依存に伴う安定性と利用制限"
+   ]
+  },
+  "githubUrl": "https://github.com/rizumita/feed-curator",
+  "ossSummary": "■ 概要（1行） Claude Codeを用いた高度なパーソナライゼーション機能を持ち、RSSフィードの自動キュレーションと要約を提供する開発者向けツール。 ■ 特徴・用途（2〜3行） 技術的な最大の強みは、ユーザーの閲覧履歴を学習し、コンテンツの関連度スコア付与とトピッククラスタリングをLLM（Claude Code）に担わせている点です。これにより、単なるフィードアグリゲーターを超え、真にパーソナライズされた情報インプット層として機能します。アーキテクチャ的には、Node.jsベースのCLI/Web UI構成であり、AI処理部分を外部CLIに依存させることで、バックエンドの複雑さを軽減しています。ただし、高度なAI機能に依存しているため、出力の安定性やコスト管理（CLI経由の利用制限やレートリミット）をシステム設計で考慮する必要があります。 ■ 結論（1行） フィードの消費プロセスをシ",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "next-js-app-engine-deploy",
+  "ossSlug": "next-js",
+  "ossName": "next.js",
+  "theme": "app-engine-deploy",
+  "keyword": "next.js Google App Engine デプロイ",
+  "pageTitle": "next.js Google App Engine デプロイ記事の概要と読む前の確認観点",
+  "lead": "「next.js Google App Engine デプロイ」で情報を探している人に向け、Next.js製アプリをGoogle App Engineへ配置する際の考え方を知る手がかりになる記事です。公開時点の構成や前提を意識しながら、デプロイ方法を検討するための参考情報が得られそうです。",
+  "article": {
+   "title": "Next.jsで作ったアプリをGoogle App Engineにデプロイする",
+   "path": "https://zenn.dev/satococoa/articles/e43ae1d60074c3",
+   "published_at": "2020-12-28",
+   "user": "satococoa",
+   "name": "satococoa",
+   "summary": "satococoa氏が2020年12月に公開した、Next.jsで作ったアプリのGoogle App Engineへのデプロイを主題とする記事です。本文未確認のため詳細は断定できませんが、両者を組み合わせた公開方法について書かれているとみられます。",
+   "points": [
+    "Next.jsアプリのデプロイ先としてのGAE",
+    "Google App Engineへ配置する際の前提",
+    "2020年12月公開時点の技術情報",
+    "現在の公式情報と照合する際の観点"
+   ]
+  },
+  "githubUrl": "https://github.com/vercel/next.js",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "study-rust-getting-started",
+  "ossSlug": "study-rust",
+  "ossName": "study-rust",
+  "theme": "getting-started",
+  "keyword": "study-rust Hello World",
+  "pageTitle": "study-rust Hello World入門：Rust学習を始める際の参考記事",
+  "lead": "「study-rust Hello World」で情報を探している人に向け、Rust学習の初回記事として想定される位置づけを紹介します。タイトルから読み取れるHello World到達までの範囲を手がかりに、学習を始める際の参考になるかを判断するための材料を整理します。",
+  "article": {
+   "title": "Rustお勉強 No.1 〜Hello Worldまで〜",
+   "path": "https://zenn.dev/mjinno/articles/4db0f1d37e85ee0828f5",
+   "published_at": "2021-03-21",
+   "user": "mjinno",
+   "name": "mjinno",
+   "summary": "mjinno氏が2021年3月21日に公開した、Rust学習の第1回に当たるとみられる記事です。タイトルからは、study-rustを題材にHello Worldまでの導入について書かれているとみられます。具体的な内容は本文での確認が必要です。",
+   "points": [
+    "Rust学習の初回記事としての位置づけ",
+    "Hello World到達までを読む際の着眼点",
+    "study-rustと記事テーマの関連性",
+    "初学者が参考記事を選ぶ際の判断材料"
+   ]
+  },
+  "githubUrl": "https://github.com/MasahikoJinno/study-rust",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "dbt-unit-testing-model-logic-testing",
+  "ossSlug": "dbt-unit-testing",
+  "ossName": "dbt-unit-testing",
+  "theme": "model-logic-testing",
+  "keyword": "dbt-unit-testing モデルロジックテスト",
+  "pageTitle": "dbt-unit-testing モデルロジックテストの実装方法を知るための記事紹介",
+  "lead": "dbt-unit-testingを使って、dbtモデルのロジックテストをどのように実装するのか調べている人向けの紹介ページです。記事タイトルからは、モデルのロジックをテストする際の考え方や実装の手がかりを得られる内容とみられます。",
+  "article": {
+   "title": "dbt-unit-testing を使ってモデルのロジックテストを実装する",
+   "path": "https://zenn.dev/lexiko/articles/dbt-unit-testing",
+   "published_at": "2023-02-24",
+   "user": "lexiko",
+   "name": "lexiko",
+   "summary": "lexiko氏が2023年2月に公開した、dbt-unit-testingによるモデルのロジックテスト実装を扱うとみられる記事です。導入や実装を検討する際の参考情報として紹介します。",
+   "points": [
+    "モデルのロジックテストに関する基本的な観点",
+    "dbt-unit-testingを用いた実装の方向性",
+    "テスト対象となるモデルロジックの捉え方",
+    "導入を検討する際に確認したい記事の範囲"
+   ]
+  },
+  "githubUrl": "https://github.com/EqualExperts/dbt-unit-testing",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "redash-git-docker-compose-setup",
+  "ossSlug": "redash-git",
+  "ossName": "redash.git",
+  "theme": "docker-compose-setup",
+  "keyword": "redash.git Docker Compose構築",
+  "pageTitle": "redash.git Docker Compose構築を扱うZenn記事の概要と確認ポイント",
+  "lead": "「redash.git Docker Compose構築」で情報を探す人向けに、monokaai氏のZenn記事を紹介します。タイトルから、Redash環境をDocker Composeで構築する話題が中心とみられ、導入方法を検討する際の情報源として何が得られそうかを把握できます。",
+  "article": {
+   "title": "Redash環境をDocker Composeで構築",
+   "path": "https://zenn.dev/monokaai/articles/516a5a2245eb75",
+   "published_at": "2023-09-28",
+   "user": "monokaai",
+   "name": "monokaai",
+   "summary": "2023年9月28日公開の、Redash環境をDocker Composeで構築することを題材にしたとみられる記事です。Redashのコンテナ環境に関心がある人が、読む目的や確認したい観点を整理するための参考になります。",
+   "points": [
+    "Docker Composeを用いたRedash環境構築の題材",
+    "構築前に確認したい前提条件や準備事項",
+    "記事公開時点と現在の構成差を見極める視点",
+    "公式リポジトリ情報と併せて読む観点"
+   ]
+  },
+  "githubUrl": "https://github.com/getredash/redash.git",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "style-bert-vits2-timeout-troubleshooting",
+  "ossSlug": "style-bert-vits2",
+  "ossName": "Style-Bert-VITS2",
+  "theme": "timeout-troubleshooting",
+  "keyword": "Style-Bert-VITS2 タイムアウト",
+  "pageTitle": "Style-Bert-VITS2 タイムアウトの原因確認と解決の手がかり",
+  "lead": "Style-Bert-VITS2でpyopenjtalk_workerのTimeoutErrorに遭遇した人向けに、問題を切り分ける手がかりを得られそうな記事です。タイトルからは、タイムアウトが起きた際の確認点や解決に向けた知見が扱われているとみられます。",
+  "article": {
+   "title": "Style-Bert-VITS2のpyopenjtalk_workerでのTimeoutErrorを解決する",
+   "path": "https://zenn.dev/asap/articles/531b0ae8275d16",
+   "published_at": "2025-07-26",
+   "user": "asap",
+   "name": "asap",
+   "summary": "Style-Bert-VITS2のpyopenjtalk_workerで発生するTimeoutErrorと、その解決について書かれているとみられる記事です。同様のエラーを調査する際の参考情報として紹介します。",
+   "points": [
+    "pyopenjtalk_workerで起きるエラーの状況",
+    "TimeoutError発生時の切り分け観点",
+    "Style-Bert-VITS2環境での確認事項",
+    "解決に向けて参照できる技術的知見"
+   ]
+  },
+  "githubUrl": "https://github.com/litagin02/Style-Bert-VITS2",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "zenn-topic-summarize-mcp-development",
+  "ossSlug": "zenn-topic-summarize",
+  "ossName": "zenn-topic-summarize",
+  "theme": "mcp-development",
+  "keyword": "zenn-topic-summarize Claude Code",
+  "pageTitle": "zenn-topic-summarize Claude CodeでMCPサーバーを開発した記事の紹介",
+  "lead": "「zenn-topic-summarize Claude Code」で情報を探す人に向けて、Claude Codeを用いたMCPサーバー開発を題材とするZenn記事を紹介します。タイトルから読み取れる範囲で、OSSと開発テーマの関係や、読む際に注目したい観点を整理します。",
+  "article": {
+   "title": "Claude Codeを使ってMCPサーバーを開発した",
+   "path": "https://zenn.dev/tree_and_tree/articles/6b45f416866932",
+   "published_at": "2025-07-29",
+   "user": "tree_and_tree",
+   "name": "tree_and_tree",
+   "summary": "2025年7月29日にtree_and_tree氏が公開した、Claude Codeを使ったMCPサーバー開発に関する記事です。zenn-topic-summarizeが紹介されていることから、このOSSの開発をめぐる内容が書かれているとみられます。",
+   "points": [
+    "Claude CodeとMCPサーバー開発の関係",
+    "zenn-topic-summarizeが紹介される背景",
+    "OSS開発におけるAI支援の位置づけ",
+    "記事タイトルから確認できる対象範囲"
+   ]
+  },
+  "githubUrl": "https://github.com/YusukeHayashiii/zenn-topic-summarize",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "kaniko-build-tool-migration",
+  "ossSlug": "kaniko",
+  "ossName": "kaniko",
+  "theme": "build-tool-migration",
+  "keyword": "kaniko 開発停止",
+  "pageTitle": "kaniko 開発停止を受けたdocker buildxへの移行事例を紹介",
+  "lead": "「kaniko 開発停止」をきっかけに代替手段を探している人向けに、docker buildxとdocker-container driverへの乗り換えを扱った記事を紹介します。本文未確認のため、タイトルから読み取れる移行テーマと、読む際に注目したい観点を整理します。",
+  "article": {
+   "title": "Kaniko が開発停止されてしまったので docker buildx + docker-container driver に乗り換えた話",
+   "path": "https://zenn.dev/mixi/articles/retire-kaniko-and-use-docker-container-driver",
+   "published_at": "2025-09-05",
+   "user": "gecko655",
+   "name": "gecko655",
+   "summary": "GoogleContainerToolsのkanikoが開発停止となったことを受け、docker buildxとdocker-container driverへ乗り換えた事例について書かれているとみられます。移行の背景や構成上の考え方を知る手がかりになりそうです。",
+   "points": [
+    "kanikoの開発停止を受けた移行背景",
+    "docker buildxを代替候補とする観点",
+    "docker-container driverを選ぶ意図",
+    "既存ビルド環境から乗り換える際の論点"
+   ]
+  },
+  "githubUrl": "https://github.com/GoogleContainerTools/kaniko",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "js-mbt-typescript-alternative",
+  "ossSlug": "js-mbt",
+  "ossName": "js.mbt",
+  "theme": "typescript-alternative",
+  "keyword": "js.mbt MoonBitでTypeScript代替",
+  "pageTitle": "js.mbt MoonBitでTypeScript代替を考えるための参考記事ガイド",
+  "lead": "「js.mbt MoonBitでTypeScript代替」を調べている人向けに、mizchi氏のZenn記事を紹介します。タイトルからは、TypeScriptの代わりにMoonBitを書くという発想や、その際にjs.mbtがどう関わるのかを考える材料が得られそうです。",
+  "article": {
+   "title": "mizchi/js.mbt で TS の代わりに Moonbit を書く",
+   "path": "https://zenn.dev/mizchi/articles/introduce-mizchi-js",
+   "published_at": "2025-12-07",
+   "user": "mizchi",
+   "name": "mizchi",
+   "summary": "mizchi氏による、js.mbtとMoonBitをTypeScriptの代替という観点から取り上げた記事とみられます。MoonBitによる開発に関心がある人が、選択肢や考え方を探る際の参考になりそうです。",
+   "points": [
+    "MoonBitをTypeScript代替として捉える視点",
+    "js.mbtが担う役割の概要",
+    "導入を検討する際の前提整理",
+    "既存のTypeScript開発との比較軸"
+   ]
+  },
+  "githubUrl": "https://github.com/mizchi/js.mbt",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "han-axiom-digital-stability",
+  "ossSlug": "han-axiom",
+  "ossName": "HAN-Axiom",
+  "theme": "digital-stability",
+  "keyword": "HAN-Axiom デジタルの長期安定性",
+  "pageTitle": "HAN-Axiom デジタルの長期安定性を工学的な視点から考える記事紹介",
+  "lead": "「HAN-Axiom デジタルの長期安定性」を調べている人向けに、離散的な仕組みが工学上の長期安定性とどう結び付けて論じられている可能性があるかを紹介します。記事本文は未確認のため、タイトルと公開情報から、読む際に注目したい概念の関係や論点の入口を整理します。",
+  "article": {
+   "title": "なぜデジタル（離散）の方が工学的に長期安定するのか？",
+   "path": "https://zenn.dev/tokuni/articles/2c17f7a5d83153",
+   "published_at": "2026-01-01",
+   "user": "tokuni",
+   "name": "tokuni",
+   "summary": "2026年1月1日にtokuni氏が公開した、デジタル（離散）と工学的な長期安定性の関係を主題とする記事とみられます。HAN-Axiomとの関連を踏まえ、離散性や安定性をどのような観点で捉えるのかが焦点になる可能性があります。",
+   "points": [
+    "デジタルと離散という語の位置付け",
+    "工学的な長期安定性を捉えるための観点",
+    "HAN-Axiomと記事テーマの関連性",
+    "主張と前提を区別して読む姿勢"
+   ]
+  },
+  "githubUrl": "https://github.com/M-Tokun/HAN-Axiom",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "hono-typed-rest-rest-client",
+  "ossSlug": "hono-typed-rest",
+  "ossName": "hono-typed-rest",
+  "theme": "rest-client",
+  "keyword": "hono-typed-rest 使い方",
+  "pageTitle": "hono-typed-rest 使い方を探す人向けのREST型安全クライアント紹介",
+  "lead": "「hono-typed-rest 使い方」を探す人に向け、Honoの型推論を生かしつつ、RPCとは異なるREST形式の型安全クライアントという主題を紹介します。記事タイトルから読み取れる範囲で、どのような課題意識と選択肢が示されているとみられるかを整理します。",
+  "article": {
+   "title": "Honoの型推論は好きだけどRPCの書き方が苦手な人のための、RESTな型安全クライアント「hono-typed-rest」を作った",
+   "path": "https://zenn.dev/andyyyy64/articles/d8ffe5f26d4a56",
+   "published_at": "2026-01-16",
+   "user": "andyyyy64",
+   "name": "andyyyy64",
+   "summary": "Honoの型推論を好む一方、RPCの書き方に難しさを感じる開発者に向けて、hono-typed-restというOSSを作った背景や狙いが扱われているとみられます。RESTな型安全クライアントという位置づきを知る手がかりになる記事です。",
+   "points": [
+    "Honoの型推論とRPC記法への課題意識",
+    "REST形式の型安全クライアントという位置づけ",
+    "hono-typed-restが想定する開発者像",
+    "OSS作成の背景を読み解く観点"
+   ]
+  },
+  "githubUrl": "https://github.com/Andyyyy64/hono-typed-rest",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "livingarchitectmodel-ai-architecture-design",
+  "ossSlug": "livingarchitectmodel",
+  "ossName": "LivingArchitectModel",
+  "theme": "ai-architecture-design",
+  "keyword": "LivingArchitectModel 設計",
+  "pageTitle": "LivingArchitectModel 設計の考え方をClaude Codeとの関係から知る",
+  "lead": "「LivingArchitectModel 設計」で情報を探す人に向けて、Claude Codeを設計者として捉える発想と、Living Architect Modelの位置づけを知る手がかりを紹介します。記事タイトルから読み取れる範囲で、OSSとAI支援による設計の関係を考える際の注目点を整理します。",
+  "article": {
+   "title": "Claude Code を「設計者」にする — Living Architect Model の紹介",
+   "path": "https://zenn.dev/metral/articles/d94f1ece73f540",
+   "published_at": "2026-02-15",
+   "user": "metral",
+   "name": "metral",
+   "summary": "metral氏によるZenn記事では、Claude Codeを「設計者」にするという観点から、Living Architect Modelが紹介されているとみられます。具体的な機能や手順には踏み込まず、タイトルから想定できる主題と読む際の観点を案内します。",
+   "points": [
+    "Claude Codeを設計者として捉える発想",
+    "Living Architect Modelの位置づけ",
+    "AI支援とソフトウェア設計の関係",
+    "OSSの背景を理解するための観点"
+   ]
+  },
+  "githubUrl": "https://github.com/sougetuOte/LivingArchitectModel",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "opentiger-parallel-agent-ops",
+  "ossSlug": "opentiger",
+  "ossName": "openTiger",
+  "theme": "parallel-agent-ops",
+  "keyword": "openTiger AIエージェント並列運用",
+  "pageTitle": "openTiger AIエージェント並列運用基盤の設計思想と開発背景を知る",
+  "lead": "「openTiger AIエージェント並列運用」で情報を探す人向けに、Zenn記事が示唆する開発テーマを紹介します。複数のAIエージェントを止めずに動かす基盤づくりについて、どのような設計上の論点や運用課題が扱われているとみられるかを、タイトルから読み取れる範囲で整理します。",
+  "article": {
+   "title": "\"止まらない\"AIエージェント並列運用基盤を本気で作った",
+   "path": "https://zenn.dev/andyyyy64/articles/5a136c42b63a51",
+   "published_at": "2026-02-22",
+   "user": "andyyyy64",
+   "name": "andyyyy64",
+   "summary": "この記事は、openTigerというオープンソースを題材に、AIエージェントの並列運用基盤を本格的に構築した取り組みを紹介しているとみられます。「止まらない」運用を目指す背景や設計上の観点を知る手がかりになりそうです。",
+   "points": [
+    "並列運用基盤が対象とする課題",
+    "「止まらない」を支える設計上の論点",
+    "openTigerとAIエージェント運用の関係",
+    "OSSとして公開された取り組みの背景"
+   ]
+  },
+  "githubUrl": "https://github.com/Andyyyy64/openTiger",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "ace-step-1-5-music-generation",
+  "ossSlug": "ace-step-1-5",
+  "ossName": "ACE-Step-1.5",
+  "theme": "music-generation",
+  "keyword": "ACE-Step-1.5 音楽生成の仕組み",
+  "pageTitle": "ACE-Step-1.5 音楽生成の仕組みを学ぶローカルAIの技術解説",
+  "lead": "ACE-Step-1.5 音楽生成の仕組みを知りたい人に向け、ローカル環境での音楽生成・編集と、その背景にある技術を捉える手がかりを紹介します。記事タイトルからは、ツール紹介に加え、音楽生成AIの仕組みを理解するための解説が扱われているとみられます。",
+  "article": {
+   "title": "音楽の生成・編集が可能な高性能ローカル音楽生成AI【ACE-Step-1.5】から音楽生成AIの仕組みを完全に理解する",
+   "path": "https://zenn.dev/asap/articles/6a717d7a68ec02",
+   "published_at": "2026-03-16",
+   "user": "asap",
+   "name": "asap",
+   "summary": "2026年3月16日にasap氏が公開した、ACE-Step-1.5を題材にローカルでの音楽生成・編集と音楽生成AIの仕組みを解説した記事とみられます。導入方法や具体的な操作範囲は、本文で確認する必要があります。",
+   "points": [
+    "ローカル音楽生成AIとしての位置づけ",
+    "音楽の生成・編集機能を捉える観点",
+    "音楽生成AIの仕組みを理解する手がかり",
+    "タイトル情報と本文確認事項の切り分け"
+   ]
+  },
+  "githubUrl": "https://github.com/ace-step/ACE-Step-1.5",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "csiro-biomass-agentic-solution-kaggle-agentic-workflow",
+  "ossSlug": "csiro-biomass-agentic-solution",
+  "ossName": "csiro-biomass-agentic-solution",
+  "theme": "kaggle-agentic-workflow",
+  "keyword": "csiro-biomass-agentic-solution Kaggle金メダル",
+  "pageTitle": "csiro-biomass-agentic-solution Kaggle金メダル獲得事例の紹介",
+  "lead": "「csiro-biomass-agentic-solution Kaggle金メダル」で調べている人に向けて、Claude CodeやCodexを用いたKaggle参加事例を知る手がかりを紹介します。記事タイトルから、生成AIを活用した開発や分析の進め方と、公開されたOSSとの関係を読み取れそうです。",
+  "article": {
+   "title": "Claude Code / CodexでKaggle金メダルを取った話",
+   "path": "https://zenn.dev/chiman/articles/b233cc808d6af3",
+   "published_at": "2026-03-16",
+   "user": "chiman",
+   "name": "chiman",
+   "summary": "この記事では、Claude CodeやCodexを活用してKaggleで金メダルを獲得した事例について書かれているとみられます。関連OSSとして公開されたcsiro-biomass-agentic-solutionの背景を知る資料になりそうです。",
+   "points": [
+    "Claude CodeとCodexの活用背景",
+    "Kaggle金メダル獲得事例の位置づけ",
+    "公開OSSとコンペ参加内容の関係",
+    "エージェント型アプローチの考え方"
+   ]
+  },
+  "githubUrl": "https://github.com/Chihiro-n/csiro-biomass-agentic-solution",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "credential-guard-prompt-injection-defense",
+  "ossSlug": "credential-guard",
+  "ossName": "credential-guard",
+  "theme": "prompt-injection-defense",
+  "keyword": "credential-guard プロンプトインジェクション対策",
+  "pageTitle": "credential-guard プロンプトインジェクション対策とhooksによる防壁",
+  "lead": "credential-guardを使ったプロンプトインジェクション対策を調べている人向けに、Claude Codeのhooksで機密ファイルを守る防壁について書かれたとみられる記事を紹介します。想定される脅威と、開発環境に保護策を設ける際の着眼点を知る手がかりになりそうです。",
+  "article": {
+   "title": "プロンプトインジェクション一発で機密ファイルが飛ぶ——Claude Codeのhooksで防壁を作った話",
+   "path": "https://zenn.dev/hoshimurayuto/articles/credential-guard",
+   "published_at": "2026-03-17",
+   "user": "hoshimurayuto",
+   "name": "hoshimurayuto",
+   "summary": "プロンプトインジェクションによる機密ファイルの流出リスクを背景に、Claude Codeのhooksで防壁を作る取り組みが扱われているとみられます。credential-guardの用途や設計意図を考える材料になりそうな記事です。",
+   "points": [
+    "プロンプトインジェクションが招く機密流出リスク",
+    "Claude Codeのhooksを使う防御の考え方",
+    "credential-guardが担うとみられる役割",
+    "開発環境へ防壁を組み込む際の着眼点"
+   ]
+  },
+  "githubUrl": "https://github.com/HoshimuraYuto/credential-guard",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "lobster-wiki-markdown-wiki",
+  "ossSlug": "lobster-wiki",
+  "ossName": "lobster-wiki",
+  "theme": "markdown-wiki",
+  "keyword": "lobster-wiki Markdown Wiki",
+  "pageTitle": "lobster-wiki Markdown Wikiの作り方を知るための記事紹介ガイド",
+  "lead": "「lobster-wiki Markdown Wiki」で情報を探す人向けに、Zenn記事「MarkdownだけでWikiを作ろう」の位置づけを紹介します。本文未確認のため、Markdownを用いたWiki作成とlobster-wikiの関係を、タイトルから読み取れる範囲で整理します。",
+  "article": {
+   "title": "MarkdownだけでWikiを作ろう",
+   "path": "https://zenn.dev/kyome/articles/9937ce78b948bc",
+   "published_at": "2026-04-01",
+   "user": "kyome",
+   "name": "kyome",
+   "summary": "2026年4月1日にkyomeさんが公開した、MarkdownによるWiki作成を主題とする記事とみられます。lobster-wikiがどのような文脈で紹介されるのかを知り、導入前の情報収集を進める手がかりになる内容が想定されます。",
+   "points": [
+    "MarkdownによるWiki作成という記事の主題",
+    "lobster-wikiと記事テーマの関連性",
+    "OSSが紹介される文脈を確認する視点",
+    "本文確認時に見極めたい対象読者と前提"
+   ]
+  },
+  "githubUrl": "https://github.com/Hacknock/lobster-wiki",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "clau-guardrail-rules",
+  "ossSlug": "clau",
+  "ossName": "clau",
+  "theme": "guardrail-rules",
+  "keyword": "clau ガードレール",
+  "pageTitle": "clau ガードレールで知るClaude Code実運用の事故対策と守り方",
+  "lead": "「clau ガードレール」を探している人向けに、Claude Codeの実運用で起こり得る事故と、その対策として公開されたguard-rulesの位置づけを確認するための紹介です。記事タイトルとリポジトリ情報から、運用上のリスクやルール整備を考える際の観点が得られる内容とみられます。",
+  "article": {
+   "title": "Claude Code実運用ベースのガードレール集 guard-rules を公開しました——Claude Codeで実際に起きた事故と対策",
+   "path": "https://zenn.dev/76hata/articles/claude-code-guard-rules-accident-lessons",
+   "published_at": "2026-04-05",
+   "user": "76hata",
+   "name": "76hata",
+   "summary": "この記事では、Claude Codeの実運用で起きた事故と対策を背景に、ガードレール集guard-rulesが紹介されているとみられます。guard-rulesとclauの関係や具体的な収録内容は、本文とリポジトリでの確認が必要です。",
+   "points": [
+    "Claude Code実運用で想定される事故の種類",
+    "事故対策としてのガードレールの位置づけ",
+    "guard-rulesとclauの関係性",
+    "導入前に確認したい適用範囲と前提"
+   ]
+  },
+  "githubUrl": "https://github.com/76Hata/clau",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "videos": [
+   {
+    "id": "1052df0a53fe4a84",
+    "title": "Claude Codeで「勝てる」AI広告工場を作る方法"
+   },
+   {
+    "id": "9795431c2d4949c0",
+    "title": "Claude Codeで月収2万ドル稼ぐAIエージェンシーの正解"
+   },
+   {
+    "id": "79dcbd306425435c",
+    "title": "Claude Codeで月収を最大化するAIエージェンシーの正解"
+   }
+  ],
+  "related": []
+ },
+ {
+  "slug": "psd-mcp-psd-workflow",
+  "ossSlug": "psd-mcp",
+  "ossName": "psd-mcp",
+  "theme": "psd-workflow",
+  "keyword": "psd-mcp PSDファイル対応",
+  "pageTitle": "psd-mcp PSDファイル対応をMCPサーバーの観点から知る記事紹介",
+  "lead": "「PSDを受け取った後の扱いを効率化したい」「psd-mcpがどのような課題を対象にするのか知りたい」という人向けの紹介です。記事タイトルから、PSDを扱う場面とMCPサーバーの関係、その活用の方向性を知る手がかりが得られるとみられます。",
+  "article": {
+   "title": "「PSDもらったんですけど…」を終わらせるMCPサーバー",
+   "path": "https://zenn.dev/kimmaru/articles/ab8b7522db596e",
+   "published_at": "2026-04-05",
+   "user": "kimmaru",
+   "name": "kimmaru",
+   "summary": "kimmaru氏による、PSDを受け取った際の課題とMCPサーバーを結び付けた記事です。タイトルから、オープンソースのpsd-mcpを通じたPSDファイル対応について書かれているとみられます。",
+   "points": [
+    "PSD受領後に想定される課題の捉え方",
+    "psd-mcpとMCPサーバーの関係",
+    "PSDファイル対応への活用可能性",
+    "オープンソースを試す際の着眼点"
+   ]
+  },
+  "githubUrl": "https://github.com/KimMaru10/psd-mcp",
+  "ossSummary": "",
+  "category": "other",
+  "inCatalog": false,
+  "related": []
+ },
+ {
+  "slug": "cadevolve-evolutionary-data-generation",
+  "ossSlug": "cadevolve",
+  "ossName": "CADEvolve",
+  "theme": "evolutionary-data-generation",
+  "keyword": "CADEvolve データ生成",
+  "pageTitle": "CADEvolve データ生成とCADコードの進化的アプローチを知る記事紹介",
+  "lead": "CADEvolve データ生成について調べている人に向け、CADコードへ進化的アプローチを用いるという記事の主題を紹介します。タイトルとOSS名から読み取れる範囲を整理し、CADEvolveとデータ生成の関係を考えるために、本文を読む際の着眼点を示します。",
+  "article": {
+   "title": "CADコードの進化的アプローチを使ったデータ生成１",
+   "path": "https://zenn.dev/takeofuture/articles/2c5e1bfc690e52",
+   "published_at": "2026-04-06",
+   "user": "takeofuture",
+   "name": "takeofuture",
+   "summary": "takeofuture氏による2026年4月6日公開の記事で、CADコードの進化的アプローチを使ったデータ生成が扱われているとみられます。CADEvolveというOSSを手掛かりに、CADコードとデータ生成の結び付きを考える記事として紹介します。",
+   "points": [
+    "CADコードに対する進化的アプローチの位置付け",
+    "CADEvolveとデータ生成の関係性",
+    "タイトルから想定される生成対象の捉え方",
+    "シリーズ形式をうかがわせる記事タイトル"
+   ]
+  },
+  "githubUrl": "https://github.com/zhemdi/CADEvolve",
+  "ossSummary": "",
   "category": "other",
   "inCatalog": false,
   "related": []
