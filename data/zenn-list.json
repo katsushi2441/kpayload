@@ -3743,5 +3743,33 @@
   "category": "other",
   "inCatalog": false,
   "related": []
+ },
+ {
+  "slug": "ffmpeg-react-video-editor",
+  "ossSlug": "ffmpeg",
+  "ossName": "FFmpeg",
+  "theme": "react-video-editor",
+  "keyword": "FFmpeg 動画編集",
+  "pageTitle": "FFmpeg 動画編集の活用例から見るReact製FrameScriptの構成",
+  "lead": "FFmpeg 動画編集の活用例を探している人に向け、ReactとRustで構成されたFrameScriptの記事を紹介します。ChromiumのヘッドレスモードとFFmpegによる書き出しや、Reactコンポーネントで動画を組み立てる仕組みを確認できます。",
+  "article": {
+   "title": "動画編集ソフトを作ってみた！【React】【Rust】",
+   "path": "/bea4dev/articles/0726392004a890",
+   "published_at": "2026-01-01",
+   "user": "bea4dev",
+   "name": "bea4dev",
+   "summary": "この記事では、ElectronとRustを基盤とし、Reactコンポーネントで動画を構成するFrameScriptが紹介されています。ChromiumのヘッドレスモードとFFmpegを使った書き出しに加え、手続き的にアニメーションを表現するuseAnimation APIの狙いが説明されています。",
+   "points": [
+    "ChromiumとFFmpegによる動画書き出し",
+    "Reactコンポーネントを用いた動画構成",
+    "AIが作成した描画コンポーネントの活用例",
+    "useAnimationによる手続き的な状態変化"
+   ]
+  },
+  "githubUrl": "https://github.com/FFmpeg/FFmpeg",
+  "ossSummary": "動画と音声を変換・結合・加工するための定番ツールです。AI生成した素材を1本の動画にまとめる工程で使います。",
+  "category": "media",
+  "inCatalog": true,
+  "related": []
  }
 ]
