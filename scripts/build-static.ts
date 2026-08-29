@@ -44,6 +44,22 @@ type Project = {
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = path.join(root, 'dist', 'oss')
+
+// そのOSSを日本語で立てる導入キットを Kurage App Store で売っている場合の対応表。
+// カタログの読者がいちばん詰まるのは「入れ方」なので、該当があるページからだけ案内する。
+const KAPP_KITS: Record<string, { id: string; label: string }> = {
+  espocrm: { id: '9d27eb0ebe2fc7e0', label: 'EspoCRM 日本語導入キットを見る' },
+  freescout: { id: '6d0e2c491e4170da', label: 'FreeScout 日本語導入キットを見る' },
+  billionmail: { id: '495b5aca4ee119db', label: 'BillionMail 日本語導入キットを見る' },
+  'decap-cms': { id: 'a3b60acb11b65f47', label: 'Decap CMS 日本語導入キットを見る' },
+}
+const kappKitLink = (slug: string) => {
+  const kit = KAPP_KITS[slug]
+  return kit
+    ? `<a class="btn" href="https://kappstore.exbridge.jp/app.php?id=${kit.id}&ref=oss-${attr(slug)}">${h(kit.label)}</a>`
+    : ''
+}
+
 const publicBase = 'https://kurage.exbridge.jp'
 const catalogBase = `${publicBase}/oss`
 const mascot = `${publicBase}/images/kurage-mascot-simple-v2.png`
@@ -207,10 +223,10 @@ function shell(title: string, description: string, canonical: string, body: stri
 <meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="website"><meta property="og:site_name" content="Kurage Payload CMS"><meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(description)}"><meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${mascot}"><meta name="twitter:card" content="summary_large_image">
 ${structuredData.map((item) => `<script type="application/ld+json">${json(item)}</script>`).join('\n')}
 ${styles()}${analytics()}</head><body>
-<header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a class="btn optional" href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a class="btn optional" href="https://exbridge.jp/contact.php?ref=kurage-oss">相談する</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
+<header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a class="btn optional" href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a class="btn optional" href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム</a><a class="btn optional" href="https://exbridge.jp/contact.php?ref=kurage-oss">相談する</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
 ${body}
 <img src="${publicBase}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
-<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
+<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
 </body></html>`
 }
 
@@ -315,6 +331,7 @@ function detailPage(project: Project, projects: Project[]): string {
     project.githubUrl ? `<a class="btn" href="${attr(project.githubUrl)}" target="_blank" rel="noopener">GitHub</a>` : '',
     project.lpUrl && project.lpUrl !== project.officialUrl ? `<a class="btn" href="${attr(project.lpUrl)}">製品・紹介ページ</a>` : '',
     project.brainUrl ? `<a class="btn" data-brain-for="${attr(project.slug)}" href="${attr(project.brainUrl)}" target="_blank" rel="noopener">${h(project.brainLabel || '構築手順書をBrainで読む')}</a>` : '',
+    kappKitLink(project.slug),
     DEMOS[project.slug] ? `<a class="btn btn-main" href="${demoUrl(project.slug, `oss-${project.slug}-aside`)}" target="_blank" rel="noopener">日本語デモを触る</a>` : '',
     project.demoUrl ? `<a class="btn" href="${attr(project.demoUrl)}" target="_blank" rel="noopener">デモを確認</a>` : '',
   ].filter(Boolean).join('')
