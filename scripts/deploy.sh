@@ -58,6 +58,11 @@ if [ "$what" = "saas" ] || [ "$what" = "all" ]; then
   put_tree /home/kojima/work/exbridge_jp exbridge_jp saas || rc=1
 fi
 
+if [ "$what" = "helpdesk" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: helpdesk/ =="
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp helpdesk || rc=1
+fi
+
 if [ "$what" = "zenn" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: zenn/ =="
   put_tree /home/kojima/work/exbridge_jp exbridge_jp zenn || rc=1
