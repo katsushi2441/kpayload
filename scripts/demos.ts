@@ -35,6 +35,13 @@ export const DEMOS: Record<string, Demo> = {
     pass: 'demo2026',
     point: '当社が全2,066キーを日本語化したものです。リードのかんばん表示と見積作成を確かめられます。',
   },
+  twenty: {
+    anchor: 'twenty',
+    url: `${PROTO}/twenty/`,
+    user: 'demo@exbridge.jp',
+    pass: 'KurageDemo2026',
+    point: 'GitHubスター5.5万のSalesforce代替。UIは公式が日本語化済みで、そのまま日本語で触れます。「株式会社エクスブリッジ」を検索して、日本語検索の当たり方も確かめられます。',
+  },
 }
 
 export const hasDemo = (slug: string): boolean => slug in DEMOS
