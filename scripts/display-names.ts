@@ -98,6 +98,13 @@ export const DISPLAY_NAMES: Record<string, string> = {
   bookstack: 'BookStack',
   freescout: 'FreeScout',
   suitecrm: 'SuiteCRM',
+  // 2026-08-31 追加: /ai-system/c/ の比較表に出てリポジトリ名のままだったもの。
+  // いずれも公式サイトの表記に合わせている（発明はしない）。
+  'idurar-erp-crm': 'IDURAR ERP CRM',
+  'ever-gauzy': 'Ever Gauzy',
+  communityserver: 'ONLYOFFICE Community Server',
+  glpi: 'GLPI',
+  dokuwiki: 'DokuWiki',
 }
 
 /** カタログの1件に正式表記を当てる（無ければそのまま） */

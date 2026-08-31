@@ -16,7 +16,7 @@ export type Project = {
   license: string; licenseTier?: string | null; licenseNote?: string | null
   japaneseStatus: string; officialUrl: string; githubUrl?: string | null
   stars?: number | null; language?: string | null; funnel?: string | null
-  jaFileCount?: number | null
+  jaFileCount?: number | null; githubPushedAt?: string | null; featured?: boolean | null
   useCases?: TextItem[] | null; keywords?: TextItem[] | null
 }
 
@@ -42,6 +42,21 @@ export const ORG = {
   sameAs: ['https://x.com/xb_bittensor', 'https://github.com/katsushi2441'],
 }
 export const orgLd = () => ({ '@context': 'https://schema.org', ...ORG })
+
+/**
+ * 検索結果での見た目の文字数。全角1文字・半角0.5文字で数えて切り上げる。
+ * 自社のkseo（app/audit_rules.py の visible_length）と同じ数え方にしてある。
+ * title 全角32・description 全角120 を超えると末尾が切れる。
+ */
+export const visibleLength = (s: string): number => {
+  let n = 0
+  for (const ch of s) n += /[\x00-\xff\uff61-\uff9f]/.test(ch) ? 0.5 : 1
+  return Math.ceil(n)
+}
+
+/** 候補を長いほうから順に試して、上限に収まった最初のものを返す */
+export const fitLength = (limit: number, ...cands: string[]): string =>
+  cands.find((c) => visibleLength(c) <= limit) ?? cands[cands.length - 1]
 // 日付は日本時間で出す。UTCのままだと 09:00 JST より前に生成したページが
 // 前日の日付になり、「最終更新日」が1日ずれる（2026-08-24 に実際にずれた）。
 export const TODAY = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10)
@@ -93,6 +108,7 @@ th{width:32%;color:var(--muted);font-weight:800;font-size:12px}
 .cat-card{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 15px;text-decoration:none;color:var(--ink)}
 .cat-card b{display:block;font-size:14px}.cat-card span{font-size:12px;color:var(--muted)}
 .note{font-size:12px;color:var(--muted)}
+.demo-tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;white-space:nowrap;margin-left:4px}
 footer{margin-top:34px;border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13px}
 @media(max-width:820px){.grid,.cat-grid{grid-template-columns:1fr}}
 @media(max-width:680px){.topbar{padding:10px 14px;gap:10px}.brand{font-size:14.5px;gap:8px}.brand-logo{width:28px;height:28px}.toplinks{gap:10px;font-size:12.5px}.toplinks a:not(:last-child){display:none}.toplinks a:last-child{background:var(--blue);color:#fff;border-radius:999px;padding:7px 14px;text-decoration:none}}
