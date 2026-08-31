@@ -129,6 +129,7 @@ export interface OssProject {
   slug: string;
   category:
     | 'crm'
+    | 'gis'
     | 'support'
     | 'project'
     | 'inventory'

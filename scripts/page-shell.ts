@@ -16,7 +16,8 @@ export type Project = {
   license: string; licenseTier?: string | null; licenseNote?: string | null
   japaneseStatus: string; officialUrl: string; githubUrl?: string | null
   stars?: number | null; language?: string | null; funnel?: string | null
-  jaFileCount?: number | null; githubPushedAt?: string | null; featured?: boolean | null
+  jaFileCount?: number | null; githubPushedAt?: string | null; githubCreatedAt?: string | null
+  featured?: boolean | null
   useCases?: TextItem[] | null; keywords?: TextItem[] | null
 }
 
@@ -111,6 +112,15 @@ th{width:32%;color:var(--muted);font-weight:800;font-size:12px}
 .demo-tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;white-space:nowrap;margin-left:4px}
 footer{margin-top:34px;border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13px}
 @media(max-width:820px){.grid,.cat-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+.stack-table thead{display:none}
+.stack-table tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+.stack-table tr:last-child{border-bottom:0}
+.stack-table th,.stack-table td{display:block;width:auto;border:0;padding:1px 0}
+.stack-table th{font-size:15px;color:var(--ink)}
+.stack-table td{font-size:14px}
+.stack-table td::before{content:attr(data-label);display:block;margin-top:6px;font-size:11px;font-weight:800;color:var(--muted)}
+}
 @media(max-width:680px){.topbar{padding:10px 14px;gap:10px}.brand{font-size:14.5px;gap:8px}.brand-logo{width:28px;height:28px}.toplinks{gap:10px;font-size:12.5px}.toplinks a:not(:last-child){display:none}.toplinks a:last-child{background:var(--blue);color:#fff;border-radius:999px;padding:7px 14px;text-decoration:none}}
 </style>`
 }

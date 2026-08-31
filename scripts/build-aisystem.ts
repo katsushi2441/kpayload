@@ -54,15 +54,43 @@ function ctaBlock(cap: Capability, name: string, subject?: string): string {
 </div>`
 }
 
+/** GitHubの日付を「2026年8月」の形にする。取れなければ null */
+function ymOf(s?: string | null): string | null {
+  const t = Date.parse(String(s || ''))
+  if (Number.isNaN(t)) return null
+  const d = new Date(t)
+  return `${d.getFullYear()}年${d.getMonth() + 1}月`
+}
+
 function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
   const url = `${BASE}/${p.slug}/`
   const uses = items(p.useCases)
-  const title = `${cap.label}を${p.name}で実現する｜AIでできること | 株式会社エクスブリッジ`
-  const desc = `${cap.question}という課題を、${p.name}を土台にして解決します。${p.summary} 名古屋のシステム開発会社が、初日無料のヒアリングから動くシステムの導入まで行います。`
+  const since = ymOf(p.githubCreatedAt)
+  const lastPush = ymOf(p.githubPushedAt)
+  // このページにしか無い実測値。定型文だけのページにしないための材料。
+  const facts = [
+    since ? `GitHubでの公開は${since}` : '',
+    p.language ? `主な開発言語は${p.language}` : '',
+    typeof p.stars === 'number' && p.stars > 0 ? `GitHubスターは${p.stars.toLocaleString('en-US')}` : '',
+    lastPush ? `最終更新は${lastPush}` : '',
+  ].filter(Boolean)
+  // 詳細ページに来る検索はほぼ指名検索（codealmanac / decap cms / vikunja タスク管理…）。
+  // 製品名を先頭に出す。従来は「顧客管理（CRM）をTwentyで実現する」で製品名が中ほどにあり、
+  // 「twenty crm」(月170・競合低)では90日間1回も表示されなかった。
+  const title = fitLength(32,
+    `${p.name}とは｜${cap.label}に使える無料のオープンソース`,
+    `${p.name}とは｜${cap.label}のオープンソース`,
+    `${p.name}｜${cap.label}のオープンソース`,
+    `${p.name}｜${cap.label}`)
+  const desc = fitLength(120,
+    `${p.name}は、${cap.label}に使えるオープンソースです。${p.summary}ライセンスと日本語対応を実測して掲載。名古屋のシステム開発会社が日本語化から導入まで行います。初日の相談は無料です。`,
+    `${p.name}は、${cap.label}に使えるオープンソースです。${p.summary}ライセンスと日本語対応の実測つき。日本語化から導入まで対応します。`,
+    `${p.name}は、${cap.label}に使えるオープンソースです。ライセンスと日本語対応の実測つき。日本語化から導入まで対応します。`,
+    `${p.name}は、${cap.label}に使えるオープンソースです。日本語対応を実測して掲載しています。`)
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">AIでできること / ${h(cap.label)}</p>
-<h1>${h(cap.label)}を、<br>${h(p.name)}で実現する。</h1>
-<p class="lead">${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。ゼロから作るより早く、月額のユーザー課金もありません。</p>
+<h1>${h(p.name)}とは？<br>${h(cap.label)}に使えるオープンソース</h1>
+<p class="lead">${h(p.name)}は、${h(cap.label)}に使えるオープンソースです。${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。<strong>ソフト自体は無料</strong>で、ゼロから作るより早く、月額のユーザー課金もありません。</p>
 ${DEMOS[p.slug] ? `<p><a class="btn btn-main" href="${demoUrl(p.slug, `ai-system-hero-${p.slug}`)}" target="_blank" rel="noopener">${h(p.name)}の日本語デモを触る</a></p>` : ''}
 </div></section>
 ${relatedNews('oss', p.slug)}
@@ -70,8 +98,15 @@ ${relatedNews('oss', p.slug)}
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / <a href="${BASE}/c/${attr(cap.key)}/">${h(cap.label)}</a> / ${h(p.name)}</nav>
 
 <section><div class="panel">
+<h2>${h(p.name)}とは？</h2>
+<p>${h(p.name)}とは、${h(p.summary)}${h(cap.label)}の用途に使えるオープンソースで、ソースコードが公開されているため自社のサーバーに置いて動かせます。<strong>ソフト自体の費用はかかりません</strong>。</p>
+${facts.length ? `<p>${h(facts.join('、'))}です（当社がGitHubの公開情報から確認した値、${TODAY_JA}時点）。</p>` : ''}
+<p>${h(jaVerdict(p))}${DEMOS[p.slug] ? `当社が日本語化したものを、ログイン情報つきで公開しています。` : ''}</p>
+</div></section>
+
+<section><div class="panel">
 <h2>${h(cap.label)}とは？</h2>
-<p>${h(cap.label)}とは、${h(cap.question)}という状態を、仕組みで解消することです。${h(p.name)}は、この用途に使えるオープンソースのひとつです。${h(p.summary)}</p>
+<p>${h(cap.label)}とは、${h(cap.question)}という状態を、仕組みで解消することです。${h(p.name)}は、この用途に使えるオープンソースのひとつです。</p>
 <ul class="checks">${uses.slice(0, 5).map((u) => `<li>${h(u)}</li>`).join('')}</ul>
 </div></section>
 
@@ -89,6 +124,8 @@ ${relatedNews('oss', p.slug)}
 ${p.language ? `<tr><th>主な言語</th><td>${h(p.language)}</td></tr>` : ''}
 ${typeof p.stars === 'number' ? `<tr><th>GitHubスター</th><td>${p.stars.toLocaleString('en-US')}</td></tr>` : ''}
 <tr><th>日本語ロケール</th><td>${h(p.japaneseStatus)}${typeof p.jaFileCount === 'number' ? `（${p.jaFileCount}ファイル）` : ''}</td></tr>
+${since ? `<tr><th>公開開始</th><td>${h(since)}</td></tr>` : ''}
+${lastPush ? `<tr><th>最終更新</th><td>${h(lastPush)}</td></tr>` : ''}
 </tbody></table></div>
 <p class="note">GitHubの公開ファイル一覧から日本語ロケールの実ファイルを数えた結果です。配布用のビルド成果物は除いています。技術的な詳細は<a href="${KURAGE}/oss/${attr(p.slug)}/?ref=exbridge-ai-system">${h(p.name)}のOSS情報</a>にまとめています。</p>
 </div></section>
@@ -124,6 +161,8 @@ ${siblings.map((s) => `<tr><th><a href="${BASE}/${attr(s.slug)}/">${h(s.name)}</
 </main>`
 
   const faqs = [
+    { q: `${p.name}は無料で使えますか？`, a: `ソフト自体は無料です。${p.name}はライセンス${p.license}のオープンソースとして公開されていて、条件を守れば費用をかけずに自社のサーバーに置いて使えます。${p.licenseNote ? p.licenseNote : ''}かかるのはサーバー代と、日本語化や自社向けの変更にかかる費用です。ユーザー数に応じた月額課金はありません。` },
+    { q: `${p.name}は日本語で使えますか？`, a: `${jaVerdict(p)}判定は、GitHubの公開ファイル一覧から日本語ロケールの実ファイルを数えた結果です（配布用のビルド成果物は除外）。日本語化が必要な場合は、当社がその作業を含めて導入します。` },
     { q: `${cap.label}は${p.name}で本当にできますか？`, a: `${p.summary} この用途に使えるオープンソースとして公開されており、当社ではこれを土台に日本語化と自社向けの変更を行って導入します。` },
     { q: '費用はどのくらいかかりますか？', a: '名古屋市内であれば、1日3時間×5日間の計15時間・税別15万円のお試し導入があります。初日3時間のヒアリングと提案は無料で、進めるとお決めいただいた場合のみ費用が発生します。' },
     { q: '作ったものは自社のものになりますか？', a: 'なります。ソースコード一式をお渡しします。以後は自社で改造しても、他社に依頼しても構いません。当社に縛られる契約にはしません。' },
@@ -278,7 +317,15 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
   const reasonOf = (p: Project) => {
     const r: string[] = []
     if (Number(p.stars || 0) > 0) r.push(`GitHubスター${Number(p.stars).toLocaleString('en-US')}`)
-    r.push(hasJaFile(p) ? `日本語ロケールあり（${p.japaneseStatus}）` : '日本語ロケールなし＝日本語化から着手')
+    // 「未調査」を「なし」と書くと事実誤認になる（Twentyは実際には全訳済みだった）
+    const s = p.japaneseStatus || ''
+    const n = typeof p.jaFileCount === 'number' ? `${p.jaFileCount}ファイル` : ''
+    r.push(
+      s === '日本語ファイルなし' ? '日本語ロケールなし＝日本語化から着手'
+      : s === '日本語ファイルあり' ? `日本語ロケールあり${n ? `（${n}）` : ''}`
+      : s === '日本語ファイルが一部のみ' ? `日本語ロケールは一部のみ${n ? `（${n}）` : ''}`
+      : s === '未調査' || !s ? '日本語ロケールは未調査'
+      : s)
     if (p.license) r.push(`ライセンス${p.license}`)
     const m = monthsSincePush(p)
     if (m !== null) r.push(m < 3 ? '開発は現在も活発' : m < 12 ? `最終更新は約${Math.round(m)}か月前` : '更新はやや停滞')
@@ -315,22 +362,22 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 <section><div class="panel">
 <h2>${h(cap.label)}のオープンソース、まずどれを見ればよいですか？</h2>
 <p>${total}件すべてを比べる必要はありません。当社が実測した<strong>規模（GitHubスター）・日本語ロケールの有無・そのまま触れるデモがあるか</strong>の3点で、当てはまりの強い上位から${picks.length}件を挙げます。名前がその分類の一般名詞のままのものと、1年以上更新が止まっているものは外しています。どれもソフト自体は無料なので、気になったものは自社サーバーに置いて試せます。</p>
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>どんなものか</th><th>選ぶ根拠（当社の実測）</th></tr></thead><tbody>
-${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>${DEMOS[p.slug] ? ` <a class="demo-tag" href="${demoUrl(p.slug, `ai-system-pick-${cap.key}`)}" target="_blank" rel="noopener">デモを触る</a>` : ''}</th><td>${h(p.summary)}</td><td>${h(reasonOf(p))}</td></tr>`).join('')}
+<div class="table-wrap"><table class="stack-table"><thead><tr><th>名前</th><th>どんなものか</th><th>選ぶ根拠（当社の実測）</th></tr></thead><tbody>
+${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>${DEMOS[p.slug] ? ` <a class="demo-tag" href="${demoUrl(p.slug, `ai-system-pick-${cap.key}`)}" target="_blank" rel="noopener">デモを触る</a>` : ''}</th><td data-label="どんなものか">${h(p.summary)}</td><td data-label="選ぶ根拠（当社の実測）">${h(reasonOf(p))}</td></tr>`).join('')}
 </tbody></table></div>
 <p class="note">この並びは実測値による機械的な順位で、広告や紹介料による順位付けはしていません（${TODAY_JA}時点）。${total}件すべての一覧は<a href="#list">このページの下</a>にあります。</p>
 </div></section>
 <section><div class="panel">
 <h2>有料のクラウドサービスと、オープンソースは何が違いますか？</h2>
 <p>違いは主に、<strong>費用のかかり方・データの置き場所・変更できる範囲</strong>の3つです。${h(cap.label)}を無料で始めたい場合、この表のどちらが自社に合うかを先に決めると迷わなくなります。</p>
-<div class="table-wrap"><table><thead><tr><th>比べる点</th><th>オープンソース（自社サーバー）</th><th>有料のクラウドサービス</th></tr></thead><tbody>
-<tr><th>ソフトの費用</th><td><strong>無料</strong>。ソースコードが公開されている</td><td>ユーザー数×月額。人が増えると増える</td></tr>
-<tr><th>実際にかかる費用</th><td>サーバー代と、導入・日本語化・改造の費用</td><td>月額利用料（＋初期費用）</td></tr>
-<tr><th>データの置き場所</th><td>自社が決めたサーバー</td><td>提供会社のサーバー</td></tr>
-<tr><th>画面・項目の変更</th><td>ソースを直せる範囲すべて</td><td>提供会社が用意した設定の範囲まで</td></tr>
-<tr><th>日本語</th><td>掲載${total}件のうち${noJa}件（${jaPct}%）は日本語ロケールなし。日本語化が要る</td><td>国内サービスなら最初から日本語</td></tr>
-<tr><th>サポート</th><td>自社、または委託先が見る</td><td>提供会社のサポート窓口</td></tr>
-<tr><th>やめるとき</th><td>データもソフトも手元に残る</td><td>解約前にデータの持ち出しが要る</td></tr>
+<div class="table-wrap"><table class="stack-table"><thead><tr><th>比べる点</th><th>オープンソース（自社サーバー）</th><th>有料のクラウドサービス</th></tr></thead><tbody>
+<tr><th>ソフトの費用</th><td data-label="オープンソース（自社サーバー）"><strong>無料</strong>。ソースコードが公開されている</td><td data-label="有料のクラウドサービス">ユーザー数×月額。人が増えると増える</td></tr>
+<tr><th>実際にかかる費用</th><td data-label="オープンソース（自社サーバー）">サーバー代と、導入・日本語化・改造の費用</td><td data-label="有料のクラウドサービス">月額利用料（＋初期費用）</td></tr>
+<tr><th>データの置き場所</th><td data-label="オープンソース（自社サーバー）">自社が決めたサーバー</td><td data-label="有料のクラウドサービス">提供会社のサーバー</td></tr>
+<tr><th>画面・項目の変更</th><td data-label="オープンソース（自社サーバー）">ソースを直せる範囲すべて</td><td data-label="有料のクラウドサービス">提供会社が用意した設定の範囲まで</td></tr>
+<tr><th>日本語</th><td data-label="オープンソース（自社サーバー）">掲載${total}件のうち${noJa}件（${jaPct}%）は日本語ロケールなし。日本語化が要る</td><td data-label="有料のクラウドサービス">国内サービスなら最初から日本語</td></tr>
+<tr><th>サポート</th><td data-label="オープンソース（自社サーバー）">自社、または委託先が見る</td><td data-label="有料のクラウドサービス">提供会社のサポート窓口</td></tr>
+<tr><th>やめるとき</th><td data-label="オープンソース（自社サーバー）">データもソフトも手元に残る</td><td data-label="有料のクラウドサービス">解約前にデータの持ち出しが要る</td></tr>
 </tbody></table></div>
 <p>当社は、この表の左側（オープンソースを自社サーバーに置く形）を選んだ会社に対して、日本語化・画面の変更・既存システムとの連携を行っています。右側のほうが向いていると判断した場合は、その旨をお伝えします。</p>
 </div></section>

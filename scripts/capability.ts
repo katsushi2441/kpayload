@@ -305,6 +305,11 @@ export const CAPABILITIES: Capability[] = [
     rx: /(会員(管理|名簿)|会費|団体|\bnpo\b|協会|自治会)/i },
   { group: 'industry', key: 'construction', label: '建設・工事の管理', question: '現場の状況が事務所に届かない',
     rx: /(建設|工事|現場(管理|作業)|施工|建築)/i },
+  // 地図・位置情報 (2026-09-01 追加。カタログにGIS系がほぼ無い空白をkshoken構築と同時に埋める)
+  { group: 'data', key: 'gis', label: '地図・位置情報の活用（GIS）', question: '住所や位置のデータを地図で見られていない',
+    rx: /(\bgis\b|地図|マップ|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|タイル|isochrone)/i },
+  { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', question: '出店や営業エリアを勘で決めている',
+    rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店|立地分析|demographics? analysis)/i },
 ]
 
 export const OTHER: Capability = {
@@ -332,6 +337,7 @@ export const CATEGORY_GROUP: Record<string, string> = {
   forum: 'comm', groupware: 'comm', support: 'support', hr: 'hr', lms: 'hr',
   dms: 'document', survey: 'document', inventory: 'logistics',
   booking: 'schedule', lowcode: 'ops', analytics: 'data', esign: 'workflow',
+  gis: 'data',
 }
 
 /** category が一致したときの加点。要約に1回出たのと同じ重み。 */

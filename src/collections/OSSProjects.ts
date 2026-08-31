@@ -17,6 +17,7 @@ export const OSSProjects: CollectionConfig = {
       name: 'category', label: 'カテゴリ', type: 'select', required: true,
       options: [
         { label: '顧客・営業管理', value: 'crm' },
+        { label: '地図・位置情報（GIS）', value: 'gis' },
         { label: 'サポート・ヘルプデスク', value: 'support' },
         { label: 'プロジェクト管理', value: 'project' },
         { label: '在庫管理', value: 'inventory' },
