@@ -4087,5 +4087,77 @@
    }
   ],
   "funnel": "oss"
+ },
+ {
+  "name": "Kurage 商圏分析",
+  "slug": "kshoken",
+  "category": "shoken",
+  "featured": true,
+  "summary": "住所を入れると、徒歩・車N分の到達圏に対して国勢調査500mメッシュの人口・年齢構成・世帯数と経済センサスの事業所数を1画面で出す商圏分析システムです。",
+  "description": "出店判断・営業テリトリー設計の一次調査向け。到達圏は円ではなくOpenStreetMapの道路網ベース(Valhalla)で計算し、500mメッシュ統計を商圏との交差面積で按分します。データは国が無償公開しているe-Stat地域メッシュ統計(2020年国勢調査・2021年経済センサス)で、全国151区画を自動取得するスクリプトを同梱。投入検証は全国466,145メッシュ・合計人口126,146,099人=国勢調査の総人口と完全一致。地図はMapLibre+国土地理院タイル、ジオコーディングは国土地理院API(無料・キー不要)、本体はPython/FastAPI+PostGISです。月額のデータ利用料・地図API課金はありません。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://kurage.exbridge.jp/kshoken.php/",
+  "githubUrl": "https://github.com/katsushi2441/kshoken",
+  "stars": 0,
+  "language": "Python",
+  "githubCreatedAt": "2026-08-31T21:20:00Z",
+  "githubPushedAt": "2026-08-31T21:20:00Z",
+  "useCases": [
+   {
+    "text": "出店候補地の徒歩10分圏の人口・年齢構成を出す"
+   },
+   {
+    "text": "営業テリトリーごとの人口・事業所数を同一基準で比較する"
+   },
+   {
+    "text": "FC・代理店への提案資料に商圏人口の根拠を付ける"
+   },
+   {
+    "text": "人口メッシュと自社データを重ねた立地分析の土台にする"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "商圏分析"
+   },
+   {
+    "text": "到達圏"
+   },
+   {
+    "text": "GIS"
+   },
+   {
+    "text": "人口メッシュ"
+   },
+   {
+    "text": "出店"
+   },
+   {
+    "text": "立地分析"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "音声データは外部に送信されますか？",
+    "answer": "されません。文字起こしは同じサーバー内のwhisper.cppが行います。要約に外部APIを選んだ場合もテキストのみで、音声は送信されません。"
+   },
+   {
+    "question": "AIが議事録を確定させることはありますか？",
+    "answer": "ありません。文字起こしも要約も下書きまでで、確定議事録を作れるのは人の承認だけです。承認者と日時が記録されます。"
+   },
+   {
+    "question": "話者の自動分離はできますか？",
+    "answer": "v1にはありません。話者名が必要な場合は文字起こし全文を人が編集して付けます。"
+   }
+  ],
+  "funnel": "oss",
+  "demoUrl": "",
+  "buyUrl": "",
+  "lpUrl": "",
+  "sourceLpName": "",
+  "brainUrl": "",
+  "brainLabel": ""
  }
 ]

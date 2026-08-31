@@ -67,6 +67,7 @@ const gaId = 'G-BP0650KDFR'
 
 const categoryLabels: Record<string, string> = {
   gis: '地図・位置情報（GIS）',
+  shoken: '商圏分析',
   crm: '顧客・営業管理', support: 'サポート', project: 'プロジェクト管理', inventory: '在庫管理',
   esign: '電子契約', cms: 'CMS・情報発信', monitoring: '監視・運用', groupware: 'グループウェア',
   media: '動画・音声・配信', finance: '投資・市場分析', marketing: 'マーケティング',

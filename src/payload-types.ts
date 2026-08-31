@@ -130,6 +130,7 @@ export interface OssProject {
   category:
     | 'crm'
     | 'gis'
+    | 'shoken'
     | 'support'
     | 'project'
     | 'inventory'

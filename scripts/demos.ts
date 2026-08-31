@@ -35,6 +35,13 @@ export const DEMOS: Record<string, Demo> = {
     pass: 'demo2026',
     point: '当社が全2,066キーを日本語化したものです。リードのかんばん表示と見積作成を確かめられます。',
   },
+  kshoken: {
+    anchor: 'kshoken',
+    url: 'https://kurage.exbridge.jp/kshoken.php/',
+    user: '',
+    pass: '',
+    point: 'ログイン不要でそのまま使えます。住所を入れると徒歩10分圏の人口・年齢構成・世帯・事業所数が地図つきで出ます。',
+  },
   twenty: {
     anchor: 'twenty',
     url: `${PROTO}/twenty/`,

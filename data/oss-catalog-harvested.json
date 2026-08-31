@@ -1380,7 +1380,7 @@
     "license": "AGPL-3.0",
     "licenseTier": "osi-network-copyleft",
     "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変したものを社外に公開して使わせる場合は、改変部分のソース公開義務が利用者側に発生します（社内利用のみなら不要）。",
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルあり",
     "officialUrl": "https://twenty.com",
     "githubUrl": "https://github.com/twentyhq/twenty",
     "featured": false,
@@ -1441,6 +1441,21 @@
       {
         "question": "Salesforceと比較してどのような点が特徴ですか？",
         "answer": "Salesforceに対するオープンソースの代替案として位置づけられています。標準的なCRM機能を提供しつつ、AIとの親和性が高い設計になっている点が特徴です。"
+      }
+    ],
+    "jaFileCount": 275,
+    "jaSamplePaths": [
+      {
+        "text": "packages/twenty-front/src/locales/ja-JP.po"
+      },
+      {
+        "text": "packages/twenty-server/src/engine/core-modules/i18n/locales/ja-JP.po"
+      },
+      {
+        "text": "packages/twenty-emails/src/locales/ja-JP.po"
+      },
+      {
+        "text": "packages/twenty-website/src/locales/ja.po"
       }
     ]
   },
@@ -6502,94 +6517,6 @@
     ]
   },
   {
-    "name": "decap-cms",
-    "slug": "decap-cms",
-    "category": "sitegen",
-    "funnel": "prototype",
-    "kind": "dev-tool",
-    "summary": "静的サイトジェネレータ向けのGitベースのコンテンツ管理システムです。",
-    "description": "decap-cmsは、Gitをバックエンドとして利用する静的サイトジェネレータ用のCMSです。JavaScriptで構築されており、Netlify CMSなどの仕組みを継承しています。ユーザーはGitリポジトリを通じてコンテンツを管理し、更新内容を反映させることができます。Jamstackアーキテクチャを採用したWebサイトの運用に適したツールです。",
-    "license": "MIT",
-    "japaneseStatus": "日本語ファイルが一部のみ",
-    "officialUrl": "https://decapcms.org",
-    "githubUrl": "https://github.com/decaporg/decap-cms",
-    "featured": false,
-    "stars": 19307,
-    "language": "JavaScript",
-    "githubCreatedAt": "2015-01-20T05:47:47Z",
-    "githubPushedAt": "2026-08-21T14:26:23Z",
-    "useCases": [
-      {
-        "text": "静的サイトのコンテンツ編集"
-      },
-      {
-        "text": "GitベースのヘッドレスCMS構築"
-      },
-      {
-        "text": "Jamstackを用いたWebサイト運用"
-      },
-      {
-        "text": "Netlify CMSからの移行"
-      },
-      {
-        "text": "JavaScriptを用いたカスタム管理画面の開発"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "cms"
-      },
-      {
-        "text": "content-management-system"
-      },
-      {
-        "text": "decap-cms"
-      },
-      {
-        "text": "git-based-cms"
-      },
-      {
-        "text": "headless-cms"
-      },
-      {
-        "text": "jamstack"
-      },
-      {
-        "text": "javascript"
-      },
-      {
-        "text": "netlify-cms"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "どのような仕組みでコンテンツを管理しますか？",
-        "answer": "Gitリポジトリをバックエンドとして利用する仕組みです。ユーザーが管理画面から内容を変更すると、それがGitのコミットとして保存され、静的サイトジェネレータによって公開ページが更新されます。"
-      },
-      {
-        "question": "このツールはどのようなWebサイトに適していますか？",
-        "answer": "Jamstackアーキテクチャを採用した静的サイトジェネレータ（SSG）を利用するプロジェクトに適しています。特にGitをベースとしたワークフローでコンテンツを運用したい場合に有効です。"
-      },
-      {
-        "question": "Netlify CMSとの関係はどうなっていますか？",
-        "answer": "decap-cmsは、Netlify CMSのフォーク（派生）から生まれたプロジェクトです。そのため、Netlify CMSと互換性のある機能や構成を備えています。"
-      },
-      {
-        "question": "主な開発言語は何ですか？",
-        "answer": "このソフトウェアは主にJavaScriptを用いて構築されています。フロントエンドの開発環境やツールとして活用するための技術スタックが含まれています。"
-      }
-    ],
-    "jaFileCount": 2,
-    "jaSamplePaths": [
-      {
-        "text": "packages/decap-cms-locales/src/ja"
-      },
-      {
-        "text": "packages/decap-cms-locales/src/ja/index.js"
-      }
-    ]
-  },
-  {
     "name": "simplex-chat",
     "slug": "simplex-chat",
     "category": "groupware",
@@ -6831,13 +6758,13 @@
     "jaSamplePaths": []
   },
   {
-    "name": "Luigi",
+    "name": "luigi",
     "slug": "luigi",
     "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "Spotifyが公開する、Pythonのバッチ処理とデータパイプラインの依存関係・実行順序を管理するオープンソースツールです。",
-    "description": "Luigiは、複数のPythonバッチジョブを依存関係に沿って実行し、失敗した処理の再実行や進行状況の可視化を行うワークフロー管理OSSです。定期集計、ETL、機械学習の前処理など、順番を守って動かす必要があるデータ処理をコードで管理できます。",
+    "summary": "Pythonで複雑なバッチジョブのパイプラインを構築するためのツールです。",
+    "description": "Luigiは、一連のバッチ処理からなる複雑なワークフローを構築・管理するPythonモジュールです。依存関係の解決やワークフローの管理、視覚化といった機能を提供します。Hadoopへのサポートも標準で備わっています。データ処理の工程を整理し、効率的に実行するための基盤として活用できます。",
     "license": "Apache-2.0",
     "licenseTier": "osi",
     "licenseNote": null,
@@ -6868,46 +6795,43 @@
     ],
     "keywords": [
       {
-        "text": "Luigi Python"
+        "text": "hadoop"
       },
       {
-        "text": "Luigi 使い方"
+        "text": "luigi"
       },
       {
-        "text": "Python バッチ処理"
+        "text": "orchestration-framework"
       },
       {
-        "text": "データパイプライン OSS"
+        "text": "python"
       },
       {
-        "text": "ETL ワークフロー"
+        "text": "scheduling"
       },
       {
-        "text": "Spotify Luigi"
+        "text": "batch-jobs"
       }
     ],
     "faqs": [
       {
-        "question": "Luigiとは何ですか？",
-        "answer": "Spotifyが公開しているPython製のワークフロー管理OSSです。複数のバッチジョブについて、依存関係、実行順序、完了状態をコードで管理できます。"
+        "question": "Luigiでどのようなことができるのですか？",
+        "answer": "Pythonを使用して、複数のバッチジョブが連動する複雑なパイプラインを構築できます。ジョブ間の依存関係の解決やワークフロー全体の管理、処理工程の視覚化などの機能が含まれています。"
       },
       {
-        "question": "Luigiはどのような処理に使えますか？",
-        "answer": "定期集計、ETL、ログ処理、機械学習の前処理など、複数工程を決められた順番で実行するデータパイプラインに利用できます。"
+        "question": "Hadoopとの連携は可能ですか？",
+        "answer": "はい、LuigiにはHadoopへのサポートが組み込まれているため、Hadoop環境を含むデータ処理パイプラインの構築に利用することが可能です。"
       },
       {
-        "question": "Luigiに管理画面はありますか？",
-        "answer": "Luigi Central Schedulerの可視化画面で、タスクの状態や依存関係を確認できます。業務向け画面や通知が必要な場合は別途組み込みます。"
-      },
-      {
-        "question": "Luigiは日本語で使えますか？",
-        "answer": "処理定義はPythonコードで行います。標準画面に日本語ロケールは確認できないため、日本語の運用画面や通知が必要な場合は追加開発が必要です。"
+        "question": "どのような言語で動作しますか？",
+        "answer": "このツールはPythonモジュールとして提供されているため、Python環境において動作します。",
+        "}, {": "questionm:",
+        "依存関係の解決とは何を指しますか？\n": "answerm:",
+        "複数のジョブを順番に実行する際や、特定の処理が終わってから次を開始するといった前提条件（依存関係）を正しく管理し、適切な順序でワークフローを実行するための機能です。铵": 0
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": [],
-    "seoTitle": "Luigiとは？Pythonバッチ処理・データパイプラインの使い方 | Kurage",
-    "seoDescription": "LuigiはSpotifyが公開するPython製OSSです。バッチ処理、ETL、データパイプラインの依存関係、実行順序、再実行、可視化の仕組みと日本語導入の要点を解説します。"
+    "jaSamplePaths": []
   },
   {
     "name": "activitywatch",
@@ -7350,6 +7274,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "WrenAI",
+    "slug": "wrenai",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "自然言語をSQLに変換してダッシュボードやチャートを生成するGenBI基盤です。",
+    "description": "WrenAIは、AIエージェント向けのオープンソースなGenerative BI（GenBI）プラットフォームです。オープンコンテキストレイヤーを通じて、自然言語による質問を信頼できるSQL、ダッシュボード、およびチャートに変換します。BigQuery、Snowflake、PostgreSQL、ClickHouse、Amazon Redshift、Databricksなど、20以上のデータソースに対応しています。高度なコンテキストエンジニアリングを活用することで、データに基づいた正確な分析を実現します。",
+    "license": "AGPL-3.0（一部は別ライセンス）",
+    "licenseTier": "dual",
+    "licenseNote": "本体はオープンソースですが、一部の機能やファイルが別ライセンス（多くは有償の企業向け機能）です。どこまで無償で使えるかは、導入前に対象機能ごとに確認します。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.getwren.ai/en/open-core",
+    "githubUrl": "https://github.com/Canner/WrenAI",
+    "featured": false,
+    "stars": 17354,
+    "language": "Python",
+    "githubCreatedAt": "2024-03-13T06:18:20Z",
+    "githubPushedAt": "2026-08-21T11:25:17Z",
+    "useCases": [
+      {
+        "text": "自然言語によるデータクエリの自動化"
+      },
+      {
+        "text": "マルチソースからのダッシュボード生成"
+      },
+      {
+        "text": "SQLを介さないビジネスインテリジェンスの構築"
+      },
+      {
+        "text": "AIエージェントへのデータアクセス機能の実装"
+      },
+      {
+        "text": "大規模データベースからの動的なチャート作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "GenBI"
+      },
+      {
+        "text": "text-to-SQL"
+      },
+      {
+        "text": "AIエージェント"
+      },
+      {
+        "text": "ダッシュボード"
+      },
+      {
+        "text": "コンテキストエンジニアリング"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデータソースに対応していますか？",
+        "answer": "BigQuery、Snowflake、PostgreSQL、ClickHouse、Amazon Redshift、Databricksを含む20以上の主要なデータソースに対応しています。"
+      },
+      {
+        "question": "このツールでできることは何ですか？",
+        "answer": "ユーザーの自然言語による質問を理解し、それに基づいて信頼性の高いSQLの生成、ダッシュボードの作成、およびチャートの表示を自動で行います。"
+      },
+      {
+        "question": "どのような技術スタックを使用していますか？",
+        "answer": "主にPythonで開発されており、オープンなコンテキストレイヤーを通じてAIエージェントとデータを連携させる仕組みを提供しています。"
+      },
+      {
+        "question": "ビジネスインテリジェンスにおいてどのような役割を果たしますか？",
+        "answer": "データへのアクセス権限を管理しながら、高度なGenBI機能を提供し、技術的な知識がなくても自然言語でデータ分析ができる環境を構築する基盤として機能します。的一一致します。"
+      }
+    ]
   },
   {
     "name": "maxun",
@@ -8418,97 +8414,6 @@
     ]
   },
   {
-    "name": "BillionMail",
-    "slug": "billionmail",
-    "category": "marketing",
-    "funnel": "oss",
-    "kind": "business-app",
-    "summary": "月額費用なしで利用可能なセルフホスト型のメールサーバーおよびマーケティングツールです。",
-    "description": "BillionMailは、メールサーバー、ニュースレター配信、およびメールマーケティング機能を提供するオープンソースソフトウェアです。すべての機能を自社環境に構築できるセルフホスト型であり、月額費用が発生しないのが特徴です。開発者にも優しい設計となっており、Go言語で構築されています。DovecotやPostfixといった主要な技術をベースとした構成となっています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "日本語ファイルあり",
-    "officialUrl": "http://www.billionmail.com/",
-    "githubUrl": "https://github.com/Billionmail/BillionMail",
-    "featured": false,
-    "stars": 15434,
-    "language": "Go",
-    "githubCreatedAt": "2025-02-14T06:25:45Z",
-    "githubPushedAt": "2026-06-11T06:44:04Z",
-    "useCases": [
-      {
-        "text": "独自のメールサーバーの構築"
-      },
-      {
-        "text": "ニュースレターの配信"
-      },
-      {
-        "text": "メールマーケティング活動"
-      },
-      {
-        "text": "月額費用を抑えたメール基盤の運用"
-      },
-      {
-        "text": "セルフホスト環境でのメール管理"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "メールサーバー"
-      },
-      {
-        "text": "ニュースレター"
-      },
-      {
-        "text": "メールマーケティング"
-      },
-      {
-        "text": "Dovecot"
-      },
-      {
-        "text": "Postfix"
-      },
-      {
-        "text": "Go言語"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "このソフトウェアの主な特徴は何ですか？",
-        "answer": "BillionMailは、メールサーバー、ニュースレター配信、メールマーケティング機能を備えたオープンソースソフトウェアです。すべての機能を自社でホストできるため、月額費用をかけずに運用することが可能です。"
-      },
-      {
-        "question": "どのような技術スタックで構築されていますか？",
-        "answer": "このソフトウェアはGo言語で記述されており、メールサーバーの主要なコンポーネントとしてDovecotやPostfixといった技術に関連しています。開発者にとっても扱いやすい設計が採用されています。"
-      },
-      {
-        "question": "月額費用は発生しますか？",
-        "answer": "オープンソースソフトウェアであり、セルフホストで利用するため、月額の利用料金はかかりません。自社でサーバーを管理・運用する形態をとることでコストを抑えることができます。"
-      },
-      {
-        "question": "どのような用途で利用できますか？",
-        "answer": "主にメールサーバーの構築やニュースレターの配信、さらには広範なメールマーケティング活動に使用できます。自社専用のメール基盤を構築したい場合に適したツールです。"
-      }
-    ],
-    "jaFileCount": 5,
-    "jaSamplePaths": [
-      {
-        "text": "README-ja.md"
-      },
-      {
-        "text": "core/frontend/src/i18n/lang/ja.json"
-      },
-      {
-        "text": "core/languages/all/ja.json"
-      },
-      {
-        "text": "core/languages/ja"
-      },
-      {
-        "text": "core/languages/ja/server.json"
-      }
-    ]
-  },
-  {
     "name": "NodeBB",
     "slug": "nodebb",
     "category": "forum",
@@ -9285,81 +9190,77 @@
     "jaSamplePaths": []
   },
   {
-    "name": "QloApps",
-    "slug": "qloapps",
-    "category": "cms",
+    "name": "QGIS",
+    "slug": "qgis",
+    "category": "gis",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "ホテル運営と予約管理をオンラインで統合するオープンソースシステムです。",
-    "description": "QloAppsは、ホテルのビジネスをオンライン展開するための無料かつオープンソースの管理・予約システムです。このシステムには、宿泊施設管理システム（PMS）、予約エンジン、そして魅力的なホテル用ウェブサイトが含まれています。QloAppsを活用することで、業務プロセスを効率化し、ホテル運営者と宿泊客の両方に優れた体験を提供することが可能です。",
-    "license": "OSL-3.0",
-    "japaneseStatus": "日本語ファイルが一部のみ",
-    "officialUrl": "https://qloapps.com",
-    "githubUrl": "https://github.com/Qloapps/QloApps",
+    "summary": "地理情報を扱うためのオープンソースなGISソフトウェアです。",
+    "description": "QGISは、地理情報システム（GIS）を提供する無料のオープンソースソフトウェアです。Windows、Linux、macOSといった複数のプラットフォームに対応しています。ユーザーは地図データや空間データを高度に解析・可視化することができます。C++で開発されており、豊富な機能を備えた汎用的なツールです。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://qgis.org",
+    "githubUrl": "https://github.com/qgis/QGIS",
     "featured": false,
-    "stars": 14236,
-    "language": "PHP",
-    "githubCreatedAt": "2015-11-02T17:16:28Z",
-    "githubPushedAt": "2026-08-14T15:04:55Z",
+    "stars": 14310,
+    "language": "C++",
+    "githubCreatedAt": "2011-05-02T08:06:26Z",
+    "githubPushedAt": "2026-08-31T19:48:55Z",
     "useCases": [
       {
-        "text": "ホテルの宿泊施設管理"
+        "text": "地理情報の可視化"
       },
       {
-        "text": "オンライン予約エンジンの運用"
+        "text": "地図データの作成"
       },
       {
-        "text": "ホテル公式サイトの構築"
+        "text": "空間データの分析"
       },
       {
-        "text": "中央予約システムの構築"
+        "text": "多プラットフォームでのGIS利用"
       },
       {
-        "text": "宿泊施設の業務プロセスの効率化"
+        "text": "オープンソースを活用した地図管理"
       }
     ],
     "keywords": [
       {
-        "text": "ホテル予約システム"
+        "text": "GIS"
       },
       {
-        "text": "PMS"
+        "text": "地理情報システム"
       },
       {
-        "text": "予約エンジン"
+        "text": "地図作成"
       },
       {
-        "text": "宿泊施設管理"
+        "text": "オープンソース"
       },
       {
-        "text": "ホテルウェブサイト"
+        "text": "QGIS"
+      },
+      {
+        "text": "空間データ"
       }
     ],
     "faqs": [
       {
-        "question": "QloAppsにはどのような機能が含まれていますか？",
-        "answer": "QloAppsは、宿泊施設管理システム（PMS）、予約エンジン、およびホテル向けのウェブサイトの3つの主要なコンポーネントを提供しています。これらを統合することで、ホテルのオンラインビジネスを包括的にサポートします。"
+        "question": "どのようなOSで動作しますか？",
+        "answer": "QGISはクロスプラットフォームに対応しており、Windows、Linux、macOSのいずれの環境でも利用することが可能です。"
       },
       {
-        "question": "このソフトウェアを利用する主なメリットは何ですか？",
-        "answer": "業務プロセスを合理化し、ホテル運営者と宿泊客の両方の体験を向上させることができます。オープンソースとして提供されており、ホテルのビジネスをオンラインへ移行するための基盤となります。"
+        "question": "このソフトウェアは有料ですか？",
+        "answer": "QGISはオープンソースソフトウェアであり、無料で提供されています。GPL-2.0ライセンスの下で公開されています。"
       },
       {
-        "question": "どのような技術で構築されていますか？",
-        "answer": "このシステムはPHPというプログラミング言語を用いて開発されています。また、OSL-3.0のライセンスの下で公開されているオープンソースソフトウェアです。"
+        "question": "どのような言語で構築されていますか？",
+        "answer": "このソフトウェアの主な開発言語はC++です。高いパフォーマンスと機能を両立させるために採用されています。"
       },
       {
-        "question": "予約システムの管理について教えてください。",
-        "answer": "QloAppsは中央管理や中央予約システム（CRS）の機能を備えています。これにより、複数の予約経路を統合的に管理し、効率的なホテル運営を実現することが可能です。"
-      }
-    ],
-    "jaFileCount": 2,
-    "jaSamplePaths": [
-      {
-        "text": "js/fullcalendar/locales/ja.js"
-      },
-      {
-        "text": "js/tiny_mce/langs/ja.js"
+        "question": "主な機能は何ですか？",
+        "answer": "地理情報システム（GIS）として、地図データの表示、解析、編集などを行うためのツール群が含まれています。"
       }
     ]
   },
@@ -10560,6 +10461,81 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "kepler.gl",
+    "slug": "kepler-gl",
+    "category": "analytics",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "大規模なデータセットを分析するための強力なオープンソースの地理空間解析ツールです。",
+    "description": "Kepler.glは、大規模なデータセットを扱うための高度な地理空間解析ツールを提供します。TypeScriptで構築されており、地図上でのデータの可視化に特化しています。Mapboxとの連携など、高度な空間情報の処理が可能です。オープンソースとして提供されているため、柔軟なカスタマイズや統合が期待できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "http://kepler.gl",
+    "githubUrl": "https://github.com/keplergl/kepler.gl",
+    "featured": false,
+    "stars": 11994,
+    "language": "TypeScript",
+    "githubCreatedAt": "2018-02-28T21:36:16Z",
+    "githubPushedAt": "2026-08-31T19:01:20Z",
+    "useCases": [
+      {
+        "text": "大規模な地理空間データの可視化"
+      },
+      {
+        "text": "データセットの空間分析"
+      },
+      {
+        "text": "地図上での動的なデータ表示"
+      },
+      {
+        "text": "Mapboxを活用した地理情報解析"
+      },
+      {
+        "text": "TypeScriptを用いたカスタムマップ開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "data-visualization"
+      },
+      {
+        "text": "geospatial"
+      },
+      {
+        "text": "kepler"
+      },
+      {
+        "text": "mapbox"
+      },
+      {
+        "text": "visualization"
+      },
+      {
+        "text": "TypeScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のデータを扱うことができますか？",
+        "answer": "大規模なデータセットを対象とした地理空間データの分析や可視化を行うことができます。具体的なデータ形式については、ドキュメントを確認する必要がありますが、地図に関連する位置情報を含むデータに適しています。"
+      },
+      {
+        "question": "このツールは誰のためのものですか？",
+        "answer": "主に開発者やデータアナリスト向けに設計されています。単体で完結する業務アプリではなく、地理空間データの可視化基盤として機能するため、システムへの組み込みや高度な分析を行う際に活用されます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で提供されているオープンソースソフトウェアです。これにより、商用利用を含めた幅広い用途での活用が可能となっています。"
+      },
+      {
+        "question": "Mapboxとの関係はどのようなものですか？",
+        "answer": "このツールはMapboxに関連するトピックとして分類されており、地図のレンダリングや地理空間データの表示において、Mapboxの技術を活用した高度な可視化を実現します。Goals"
+      }
+    ]
   },
   {
     "name": "DiscordChatExporter",
@@ -13069,7 +13045,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "idurar-erp-crm",
+    "name": "IDURAR ERP CRM",
     "slug": "idurar-erp-crm",
     "category": "accounting",
     "funnel": "oss",
@@ -16386,7 +16362,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "glpi",
+    "name": "GLPI",
     "slug": "glpi",
     "category": "support",
     "funnel": "oss",
@@ -19511,7 +19487,7 @@
     ]
   },
   {
-    "name": "dokuwiki",
+    "name": "DokuWiki",
     "slug": "dokuwiki",
     "category": "knowledge",
     "funnel": "oss",
@@ -20131,6 +20107,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "geoserver",
+    "slug": "geoserver",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "地理空間データをWeb上で配信するためのオープンソースサーバーです。",
+    "description": "GeoServerは、地図データや地理空間情報をWeb経由で提供するための標準的なソフトウェアです。Javaで構築されており、WMSやWFSといった主要なWebマッピング規格に対応しています。このツールを使用することで、複雑な地図データの管理と公開を効率的に行うことが可能です。開発者は、動的なマップ情報の配信基盤としてGeoServerを活用できます。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変して配布する場合は、同じライセンスでソースを公開する義務があります。",
+    "japaneseStatus": "未調査",
+    "officialUrl": "http://geoserver.org/",
+    "githubUrl": "https://github.com/geoserver/geoserver",
+    "featured": false,
+    "stars": 4446,
+    "language": "Java",
+    "githubCreatedAt": "2011-11-10T19:56:06Z",
+    "githubPushedAt": "2026-08-31T03:46:44Z",
+    "useCases": [
+      {
+        "text": "地理空間データのWeb配信"
+      },
+      {
+        "text": "地図情報のWebマッピング"
+      },
+      {
+        "text": "WMS/WFS規格への対応"
+      },
+      {
+        "text": "Javaベースの地図システム構築"
+      },
+      {
+        "text": "位置情報データの公開"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "geoserver"
+      },
+      {
+        "text": "java"
+      },
+      {
+        "text": "mapping"
+      },
+      {
+        "text": "maps"
+      },
+      {
+        "text": "wcs"
+      },
+      {
+        "text": "web-mapping"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "GeoServerは何ができるツールですか？",
+        "answer": "地理空間データをWeb上で配信するためのサーバーです。WMSやWFSなどの標準規格を用いて、地図データや位置情報をブラウザなどで利用可能な形式で提供する役割を担います。"
+      },
+      {
+        "question": "どのようなプログラミング言語を使用していますか？",
+        "answer": "このソフトウェアはJavaで開発されています。そのため、Javaの実行環境があるシステムにおいて動作させることができます。"
+      },
+      {
+        "question": "サポートしている主要なWeb規格は何ですか？",
+        "answer": "主なトピックとして、WCS（Web Coverage Service）、WFS（Web Feature Service）、および一般的なWebマッピング技術への対応が挙げられています。"
+      },
+      {
+        "question": "このソフトウェアはどのような種類のデータに適していますか？",
+        "answer": "地図情報や地理空間データを扱うためのツールです。Web上でのマッピングや、位置情報の管理・配信を目的としたシステム構築に適しています。Goals"
+      }
+    ]
+  },
+  {
     "name": "typedb",
     "slug": "typedb",
     "category": "aidev",
@@ -20438,7 +20489,7 @@
     ]
   },
   {
-    "name": "ever-gauzy",
+    "name": "Ever Gauzy",
     "slug": "ever-gauzy",
     "category": "accounting",
     "funnel": "oss",
@@ -25771,7 +25822,7 @@
     ]
   },
   {
-    "name": "CommunityServer",
+    "name": "ONLYOFFICE Community Server",
     "slug": "communityserver",
     "category": "crm",
     "funnel": "oss",
@@ -32446,6 +32497,81 @@
       {
         "question": "中小企業ではどのように検討できますか？",
         "answer": "AIチャットやMCP対応クライアントを業務で利用するための導入候補、または検証対象として検討できます。"
+      }
+    ]
+  },
+  {
+    "name": "postgis",
+    "slug": "postgis",
+    "category": "database",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "PostgreSQLで地理空間データを扱うための拡張機能です。",
+    "description": "PostGISは、オープンソースのデータベースであるPostgreSQLに地理空間的な機能を追加する拡張機能です。このツールを導入することで、位置情報や地図データに関する高度なクエリを実行できるようになります。主にC言語やPLpgSQLを用いて構築されており、空間データの処理に適した機能を備えています。地理空間情報システム（GIS）の開発において不可欠な基盤技術の一つです。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://postgis.net",
+    "githubUrl": "https://github.com/postgis/postgis",
+    "featured": false,
+    "stars": 2216,
+    "language": "PLpgSQL",
+    "githubCreatedAt": "2012-05-22T13:31:25Z",
+    "githubPushedAt": "2026-08-31T01:39:37Z",
+    "useCases": [
+      {
+        "text": "位置情報の検索"
+      },
+      {
+        "text": "地図データの管理"
+      },
+      {
+        "text": "地理空間分析の実行"
+      },
+      {
+        "text": "空間クエリによるデータ抽出"
+      },
+      {
+        "text": "GISアプリケーションの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "c"
+      },
+      {
+        "text": "geospatial"
+      },
+      {
+        "text": "gis"
+      },
+      {
+        "text": "plpgsql"
+      },
+      {
+        "text": "postgis"
+      },
+      {
+        "text": "postgresql"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PostGISは何の拡張機能ですか？",
+        "answer": "PostgreSQLデータベースに地理空間（位置情報や地図データなど）を扱うための機能を追加するための拡張機能です。"
+      },
+      {
+        "question": "どのような言語でサポートされていますか？",
+        "answer": "主にPLpgSQLなどのプログラミング言語を用いて、地理空間的な処理を記述することが可能です。"
+      },
+      {
+        "question": "このツールは単体で画面を持ちますか？",
+        "answer": "いいえ、PostGIS自体にユーザーインターフェース（画面）はありません。データベースの拡張機能として動作します。"
+      },
+      {
+        "question": "どのようなデータ形式を扱えますか？",
+        "answer": "地理空間データ（geospatial data）を扱うための機能を備えており、地図情報の管理や解析に適しています。"
       }
     ]
   },
@@ -58960,13 +59086,13 @@
     "jaSamplePaths": []
   },
   {
-    "name": "CodeAlmanac",
+    "name": "codealmanac",
     "slug": "codealmanac",
     "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "AIコーディングエージェントに、コードだけでは分からない設計意図・制約・処理フローを伝えるコードベースWikiです。",
-    "description": "CodeAlmanacは、AIコーディングエージェント向けにコードベースの背景知識を整理するオープンソースWikiです。設計上の意思決定、処理フロー、不変条件、注意点を文書化し、Claude CodeなどのAIが既存コードを理解するときのコンテキストを補います。TypeScriptで構築され、Apache-2.0で公開されています。",
+    "summary": "AIコーディングエージェント向けのコードベースWikiです。",
+    "description": "このツールは、コード自体からは読み取ることが難しい意思決定の経緯や処理の流れ、不変条件、注意点などを記録するためのWikiです。AIコーディングエージェントがより正確にプロジェクトを理解できるように設計されています。TypeScriptで構築されており、開発者が効率的にドキュメントを管理できる環境を提供します。複雑なコードベースにおいて、人間とAIの両方にとって重要なコンテキストを補完する役割を果たします。",
     "license": "Apache-2.0",
     "japaneseStatus": "日本語ファイルなし",
     "officialUrl": "https://codealmanac.com",
@@ -58995,46 +59121,44 @@
     ],
     "keywords": [
       {
-        "text": "CodeAlmanac"
+        "text": "AI"
       },
       {
-        "text": "CodeAlmanac 使い方"
+        "text": "Claude"
       },
       {
-        "text": "AI コーディング Wiki"
+        "text": "CLI"
       },
       {
-        "text": "コードベース ドキュメント"
+        "text": "Codebase"
       },
       {
-        "text": "Claude Code コンテキスト"
+        "text": "Coding-agents"
       },
       {
-        "text": "設計意図 文書化"
+        "text": "Developer-tools"
       }
     ],
     "faqs": [
       {
-        "question": "CodeAlmanacとは何ですか？",
-        "answer": "AIコーディングエージェントがコードを正しく理解できるよう、設計意図、制約、処理フロー、注意点を整理するコードベースWikiです。"
+        "question": "このツールは何を記録するためのものですか？",
+        "answer": "コードから直接読み取ることが難しい、設計上の意思決定、処理の流れ、システム的な制約（不変条件）、および開発者が注意すべき落とし穴などを記録するために使用します。"
       },
       {
-        "question": "通常のREADMEとの違いは何ですか？",
-        "answer": "READMEが導入方法や概要を扱うのに対し、CodeAlmanacはコードから読み取りにくい意思決定の理由、不変条件、処理間の関係を継続的に記録する用途に向きます。"
+        "question": "主な対象者は誰ですか？",
+        "answer": "主にAIコーディングエージェントを活用してソフトウェア開発を行うエンジニアや、複雑なコードベースのドキュメントを整理したい開発チームが対象です。"
       },
       {
-        "question": "Claude Codeでも利用できますか？",
-        "answer": "Claude Codeを含むAIコーディングエージェントへ、既存システムの背景知識を渡す用途に利用できます。実際の連携方法は開発環境に合わせて設計します。"
+        "question": "どのような技術スタックで提供されていますか？",
+        "answer": "このプロジェクトはTypeScriptで記述されており、Apache-2.0ライセンスの下で公開されているオープンソースソフトウェアです。"
       },
       {
-        "question": "日本語の設計情報も登録できますか？",
-        "answer": "Wikiへ保存する設計情報は日本語で記述できます。管理画面自体の日本語ロケールは確認できないため、必要に応じて日本語化します。"
+        "question": "なぜ通常のドキュメントではなくこれが必要なのですか？",
+        "answer": "AIエージェントがより正確にコードを理解し、適切な修正や生成を行えるようにするためには、単なるコードの構造だけでなく、背景にある意図や制約を体系的に伝える必要があるためです。Goals"
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": [],
-    "seoTitle": "CodeAlmanacとは？AIコーディング向けコードベースWiki | Kurage",
-    "seoDescription": "CodeAlmanacはAIコーディングエージェント向けのコードベースWikiです。設計意図、制約、処理フローをClaude Codeなどへ伝える使い方と日本語対応を解説します。"
+    "jaSamplePaths": []
   },
   {
     "name": "go-drive",
@@ -205443,13 +205567,13 @@
     ]
   },
   {
-    "name": "Inventory Sorter",
+    "name": "Inventory-Sorter",
     "slug": "inventory-sorter",
     "category": "devtools",
     "funnel": "prototype",
     "kind": "dev-tool",
-    "summary": "Minecraft Java版で持ち物やチェスト内のアイテム整理を支援する、MITライセンスのインベントリ並べ替えModです。",
-    "description": "Inventory Sorterは、Minecraft Java版のインベントリやチェスト内にあるアイテムを整理しやすくするModです。Javaで開発され、MITライセンスで公開されています。日本語ロケールを含み、導入前には対応するMinecraft、Fabric、Forgeなどのバージョン条件を公式情報で確認する必要があります。",
+    "summary": "Minecraft向けのインベントリ管理用ツールです。",
+    "description": "Inventory Sorterは、ゲーム「Minecraft」においてアイテムの整理を支援するためのツールです。Java言語で開発されており、MITライセンスのもとで公開されています。主な機能としてインベントリの管理が含まれています。特定のゲーム環境内でのアイテム操作を効率化することを目的に設計されたソフトウェアです。",
     "license": "MIT",
     "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://inventorysorter.meza.gg",
@@ -205478,19 +205602,19 @@
     ],
     "keywords": [
       {
-        "text": "Inventory Sorter"
+        "text": "Inventory-Sorter"
       },
       {
-        "text": "Inventory Sorter 使い方"
+        "text": "Minecraft"
       },
       {
-        "text": "Inventory Sorter 日本語"
+        "text": "inventory-management"
       },
       {
-        "text": "Minecraft インベントリ整理 Mod"
+        "text": "minecraft-mod"
       },
       {
-        "text": "Minecraft Java Mod"
+        "text": "Java"
       },
       {
         "text": "MIT License"
@@ -205519,9 +205643,7 @@
       {
         "text": "src/main/resources/assets/inventorysorter/lang/ja_jp.json"
       }
-    ],
-    "seoTitle": "Inventory Sorterとは？Minecraft Modの使い方・日本語対応 | Kurage",
-    "seoDescription": "Inventory SorterはMinecraft Java版の持ち物を整理するModです。できること、日本語対応、MITライセンス、導入前に確認する対応バージョンを日本語で紹介します。"
+    ]
   },
   {
     "name": "linkly-ai-skills",

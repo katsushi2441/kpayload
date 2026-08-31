@@ -105,6 +105,8 @@ export const DISPLAY_NAMES: Record<string, string> = {
   communityserver: 'ONLYOFFICE Community Server',
   glpi: 'GLPI',
   dokuwiki: 'DokuWiki',
+  geoserver: 'GeoServer',
+  postgis: 'PostGIS',
 }
 
 /** カタログの1件に正式表記を当てる（無ければそのまま） */

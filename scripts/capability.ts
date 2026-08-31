@@ -307,7 +307,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(建設|工事|現場(管理|作業)|施工|建築)/i },
   // 地図・位置情報 (2026-09-01 追加。カタログにGIS系がほぼ無い空白をkshoken構築と同時に埋める)
   { group: 'data', key: 'gis', label: '地図・位置情報の活用（GIS）', question: '住所や位置のデータを地図で見られていない',
-    rx: /(\bgis\b|地図|マップ|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|タイル|isochrone)/i },
+    rx: /(\bgis\b|地図|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|isochrone|測位|ジオフェンス)/i },  // 「マップ」はロードマップ/サイトマップ/マインドマップを誤爆するので入れない(2026-09-01実測)
   { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', question: '出店や営業エリアを勘で決めている',
     rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店|立地分析|demographics? analysis)/i },
 ]
@@ -338,6 +338,7 @@ export const CATEGORY_GROUP: Record<string, string> = {
   dms: 'document', survey: 'document', inventory: 'logistics',
   booking: 'schedule', lowcode: 'ops', analytics: 'data', esign: 'workflow',
   gis: 'data',
+  shoken: 'data',
 }
 
 /** category が一致したときの加点。要約に1回出たのと同じ重み。 */

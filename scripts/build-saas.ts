@@ -156,7 +156,7 @@ function demoBlock(s: Saas, oss: Project[]): string {
   return `<section><div class="panel demo-panel">
 <h2>${h(s.name)}の代わりになるか、いま触って確かめられます</h2>
 <p>上の候補のうち${withDemo.length}件は、当社が日本語化して稼働させたものを公開しています。<strong>問い合わせも資料請求も要りません。</strong>${h(s.name)}で今やっている作業が同じようにできるか、ご自分の目で確かめてください。</p>
-${withDemo.map((p) => `<div class="card" style="margin:0 0 10px"><h3>${h(p.name)}</h3><p>${h(DEMOS[p.slug].point)}</p><dl class="demo-cred"><div><dt>ユーザー</dt><dd><code>${h(DEMOS[p.slug].user)}</code></dd></div><div><dt>パスワード</dt><dd><code>${h(DEMOS[p.slug].pass)}</code></dd></div></dl><p class="demo-actions"><a class="btn btn-main" href="${demoUrl(p.slug, `saas-${s.slug}`)}" target="_blank" rel="noopener">${h(p.name)}のデモを開く</a> <a class="btn" href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}の詳細</a></p></div>`).join('')}
+${withDemo.map((p) => `<div class="card" style="margin:0 0 10px"><h3>${h(p.name)}</h3><p>${h(DEMOS[p.slug].point)}</p>${DEMOS[p.slug].user ? `<dl class="demo-cred"><div><dt>ユーザー</dt><dd><code>${h(DEMOS[p.slug].user)}</code></dd></div><div><dt>パスワード</dt><dd><code>${h(DEMOS[p.slug].pass)}</code></dd></div></dl>` : `<p class="note">ログイン不要でそのまま使えます。</p>`}<p class="demo-actions"><a class="btn btn-main" href="${demoUrl(p.slug, `saas-${s.slug}`)}" target="_blank" rel="noopener">${h(p.name)}のデモを開く</a> <a class="btn" href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-${attr(s.slug)}">${h(p.name)}の詳細</a></p></div>`).join('')}
 <p class="demo-note">デモのためメールは送信されません。データは公開の場所にあるので、実在の個人情報は入れないでください。定期的に初期化します。　<a href="${PROTO}/?ref=saas-${attr(s.slug)}">他のデモも見る</a></p>
 </div></section>`
 }
