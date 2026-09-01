@@ -32,6 +32,7 @@ const BASE = `${SITE}/ai-system`
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
+import { KAPP_KITS, kappKitLink } from './kapp-kits'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
 
@@ -39,7 +40,7 @@ import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
 const SHELL = {
   refPrefix: 'exbridge-ai-system',
   base: `${SITE}/ai-system`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>　<a href="https://kappstore.exbridge.jp/?ref=exbridge-ai-system">買い切りの業務システム（Kurage App Store）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 
@@ -131,6 +132,10 @@ ${lastPush ? `<tr><th>最終更新</th><td>${h(lastPush)}</td></tr>` : ''}
 </div></section>
 
 ${demoPanel(p.slug, p.name, `ai-system-${p.slug}`)}
+
+${KAPP_KITS[p.slug] ? `<section><div class="panel"><h2>${h(p.name)}を自分で入れるなら</h2>
+<p>当社が実際に設置して詰まった箇所を含む手順一式を、Kurage App Storeで販売しています。開発を依頼せず自社で立てたい場合はこちらが早道です。</p>
+${kappKitLink(p.slug, `ai-system-${attr(p.slug)}`, 'btn btn-main')}</div></section>` : ''}
 
 <section><div class="panel">
 <h2>進め方は？</h2>

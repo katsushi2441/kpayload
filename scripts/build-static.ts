@@ -42,23 +42,13 @@ type Project = {
   funnel?: string | null
 }
 
+import { kappKitLink as kitLink } from './kapp-kits'
+
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = path.join(root, 'dist', 'oss')
 
-// そのOSSを日本語で立てる導入キットを Kurage App Store で売っている場合の対応表。
-// カタログの読者がいちばん詰まるのは「入れ方」なので、該当があるページからだけ案内する。
-const KAPP_KITS: Record<string, { id: string; label: string }> = {
-  espocrm: { id: '9d27eb0ebe2fc7e0', label: 'EspoCRM 日本語導入キットを見る' },
-  freescout: { id: '6d0e2c491e4170da', label: 'FreeScout 日本語導入キットを見る' },
-  billionmail: { id: '495b5aca4ee119db', label: 'BillionMail 日本語導入キットを見る' },
-  'decap-cms': { id: 'a3b60acb11b65f47', label: 'Decap CMS 日本語導入キットを見る' },
-}
-const kappKitLink = (slug: string) => {
-  const kit = KAPP_KITS[slug]
-  return kit
-    ? `<a class="btn" href="https://kappstore.exbridge.jp/app.php?id=${kit.id}&ref=oss-${attr(slug)}">${h(kit.label)}</a>`
-    : ''
-}
+// OSSのslug→商品の対応表は scripts/kapp-kits.ts に1か所だけ置く(/ai-system/ と共用)。
+const kappKitLink = (slug: string) => kitLink(slug, `oss-${attr(slug)}`)
 
 const publicBase = 'https://kurage.exbridge.jp'
 const catalogBase = `${publicBase}/oss`
