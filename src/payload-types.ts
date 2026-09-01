@@ -131,6 +131,7 @@ export interface OssProject {
     | 'crm'
     | 'gis'
     | 'shoken'
+    | 'civic'
     | 'support'
     | 'project'
     | 'inventory'

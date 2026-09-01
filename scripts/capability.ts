@@ -310,6 +310,8 @@ export const CAPABILITIES: Capability[] = [
     rx: /(\bgis\b|地図|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|isochrone|測位|ジオフェンス)/i },  // 「マップ」はロードマップ/サイトマップ/マインドマップを誤爆するので入れない(2026-09-01実測)
   { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', question: '出店や営業エリアを勘で決めている',
     rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店|立地分析|demographics? analysis)/i },
+  { group: 'industry', key: 'civic', label: '政治・市民参加・合意形成', question: '支援者や住民の声を集めて活かす仕組みがない',
+    rx: /(政治|選挙|議会|市民参加|パブリック?コメント|民主主義|熟議|広聴|後援会|自治体.{0,6}(参加|意見)|participatory|democracy|civic|advocacy|petition)/i },
 ]
 
 export const OTHER: Capability = {
@@ -339,6 +341,7 @@ export const CATEGORY_GROUP: Record<string, string> = {
   booking: 'schedule', lowcode: 'ops', analytics: 'data', esign: 'workflow',
   gis: 'data',
   shoken: 'data',
+  civic: 'industry',
 }
 
 /** category が一致したときの加点。要約に1回出たのと同じ重み。 */

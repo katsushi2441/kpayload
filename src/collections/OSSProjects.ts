@@ -19,6 +19,7 @@ export const OSSProjects: CollectionConfig = {
         { label: '顧客・営業管理', value: 'crm' },
         { label: '地図・位置情報（GIS）', value: 'gis' },
         { label: '商圏分析', value: 'shoken' },
+        { label: '政治・市民参加', value: 'civic' },
         { label: 'サポート・ヘルプデスク', value: 'support' },
         { label: 'プロジェクト管理', value: 'project' },
         { label: '在庫管理', value: 'inventory' },

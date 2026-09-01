@@ -107,6 +107,12 @@ export const DISPLAY_NAMES: Record<string, string> = {
   dokuwiki: 'DokuWiki',
   geoserver: 'GeoServer',
   postgis: 'PostGIS',
+  'civicrm-core': 'CiviCRM',
+  decidim: 'Decidim',
+  consuldemocracy: 'Consul Democracy',
+  polis: 'Pol.is',
+  'kouchou-ai': '広聴AI',
+  polimoney: 'Polimoney',
 }
 
 /** カタログの1件に正式表記を当てる（無ければそのまま） */
@@ -120,4 +126,6 @@ export const displayName = (slug: string, current: string): string =>
  */
 export const CATEGORY_FIX: Record<string, string> = {
   medusa: 'commerce',
+  // 広聴AIは意見集約の完成システムだが、gemma4がdev-toolと誤分類した(2026-09-01)
+  'kouchou-ai': 'civic',
 }

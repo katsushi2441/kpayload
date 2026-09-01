@@ -39,7 +39,7 @@ import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
 const SHELL = {
   refPrefix: 'exbridge-ai-system',
   base: `${SITE}/ai-system`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 
