@@ -404,8 +404,8 @@ ${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>$
 <p class="note">この並びは実測値による機械的な順位で、広告や紹介料による順位付けはしていません（${TODAY_JA}時点）。${total}件すべての一覧は<a href="#list">このページの下</a>にあります。</p>
 </div></section>
 ${kitCards ? `<section><div class="panel">
-<h2>${h(noun)}のOSSを自分で入れるなら（日本語導入・運用キット）</h2>
-<p>この分類のうち、当社が実際に立てて、手順書・設計テンプレート・docker構成・バックアップまでまとめたものです。開発を依頼せず自社で立てたい場合の早道です。</p>
+<h2>${h(noun)}を自分で入れるなら（導入キット・買い切り製品）</h2>
+<p>この分類のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきの買い切り製品です。開発を依頼せず自社で立てたい場合の早道です。</p>
 ${kitCards}
 </div></section>` : ''}
 ${saasHits.length ? `<section><div class="panel">

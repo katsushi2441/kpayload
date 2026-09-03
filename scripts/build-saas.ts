@@ -259,8 +259,8 @@ ${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-$
 ${s.note ? `<div class="card" style="margin-top:14px"><h3>${h(s.name)}を置き換えるときの注意</h3><p>${h(s.note)}</p></div>` : ''}
 </div></section>
 ${kitCards ? `<section><div class="panel">
-<h2>自分で入れるなら（日本語導入・運用キット）</h2>
-<p>上の候補のうち、当社が実際に立てて、手順書・設計テンプレート・docker構成・バックアップまでまとめたものです。開発を依頼せず自社で${h(s.name)}から移りたい場合の早道です。</p>
+<h2>自分で入れるなら（導入キット・買い切り製品）</h2>
+<p>上の候補のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきの買い切り製品です。開発を依頼せず自社で${h(s.name)}から移りたい場合の早道です。</p>
 ${kitCards}
 </div></section>` : ''}
 ${capLinks(s)}
