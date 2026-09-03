@@ -684,3 +684,5 @@ await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
   `\n</urlset>\n`)
 
 payload.logger.info(`ai-system: ${projects.length}ページ + できること${usedCaps.length}枚 + index/sitemap`)
+
+process.exit(0)
