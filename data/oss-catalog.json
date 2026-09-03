@@ -4412,5 +4412,70 @@
     "funnel": "oss",
     "seoTitle": "Plankaとは｜Trello代替の自社サーバー型カンバンOSS・日本語導入とライセンスの注意",
     "seoDescription": "Plankaはリアルタイム反映のカンバンOSS。docker数分起動、日本語88%と当社の翻訳パッチ、BASE_URL白画面の落とし穴、第三者向けホスティングは商用ライセンスという線引きを実測で解説。"
+  },
+  {
+    "name": "Docspell",
+    "slug": "docspell",
+    "category": "office",
+    "featured": false,
+    "summary": "スキャンした書類・メール添付・PDFを自動で取り込み、OCRと全文検索で整理する書類管理OSS。メールボックスの定期取り込みと、複数担当者で書庫を共有する設計が特徴です。",
+    "description": "DocspellはElm+Scala製の書類管理OSS（AGPL-3.0・GitHubスター約2,300）。スキャナ・監視フォルダ・メール（IMAP）から書類を自動取り込みし、OCR（日本語可）と全文検索（Solr）、取引先・日付・タグ・カスタム項目の自動推定、期限通知、共有リンクを備えます。docker compose（公式 docspell/docker）で本体・処理役・PostgreSQL・Solr・監視フォルダの5コンテナ。UI言語は英独仏のみで日本語がありませんでしたが、当社が画面の1,056語を訳し、Elmの159ファイルに日本語定義を自動生成して本家と同じビルドで型検査を通し、日本語UIを実装しました（本家へPR提案・翻訳データと生成スクリプトは docspell-jp で公開）。導入・日本語UI・メール取り込み設計までを実録記事にまとめています: https://katsushi2441.github.io/vwork/articles/2026-09-04-docspell-japanese-guide.html",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "本家は英独仏のみで日本語なし。当社が1,056語を訳しElm 158モジュールにjaを生成、ビルド検証済み。docspell-jp(github.com/katsushi2441/docspell-jp)で公開・本家へPR提案中。",
+    "officialUrl": "https://docspell.org",
+    "githubUrl": "https://github.com/eikek/docspell",
+    "useCases": [
+      {
+        "text": "請求書・契約書のスキャン管理"
+      },
+      {
+        "text": "メール添付の請求書を自動取り込み"
+      },
+      {
+        "text": "OCR＋全文検索で書類を探す"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Docspell 日本語"
+      },
+      {
+        "text": "Docspell 使い方"
+      },
+      {
+        "text": "Docspell docker"
+      },
+      {
+        "text": "Paperless-ngx 代替"
+      },
+      {
+        "text": "書類管理 OSS 自社サーバー"
+      },
+      {
+        "text": "スキャン 書類 OCR OSS"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Docspellは日本語で使えますか？",
+        "answer": "本家には日本語がありませんが、当社が日本語UIを実装しました（1,056語・Elm 158モジュール）。本家へ提案中で、今すぐ使う方法も公開しています。OCRの言語設定は別で、日本語を選べます。"
+      },
+      {
+        "question": "Paperless-ngxとの違いは？",
+        "answer": "メールボックスを定期的に読んで添付を自動取り込みする機能と、複数担当者で1つの書庫を共有する設計が特徴です。用途と運用で選びます。"
+      },
+      {
+        "question": "サーバーの要件は？",
+        "answer": "dockerが動くLinuxサーバー1台。本体・処理役・PostgreSQL・Solr・監視フォルダの5コンテナで、OCRを回すためメモリに余裕があるとよいです。"
+      },
+      {
+        "question": "同じ書類が二重に入りませんか？",
+        "answer": "取り込み後にメールを移動する／フォルダのファイルを消す設定が要です。当社の導入では入口ごとに取り込み後の扱いを決めます。"
+      }
+    ],
+    "sourceLpName": "書類管理を自社サーバーに",
+    "funnel": "oss",
+    "seoTitle": "Docspellとは｜メール添付・スキャン書類を自動取り込みする書類管理OSS・日本語UIを実装",
+    "seoDescription": "DocspellはOCR・全文検索・メール自動取り込みの書類管理OSS。日本語が無かった画面1,056語を訳しElmで実装、ビルド検証済み。docker5コンテナの導入と取り込み設計を実測で解説。"
   }
 ]
