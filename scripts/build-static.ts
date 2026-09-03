@@ -50,6 +50,19 @@ const distRoot = path.join(root, 'dist', 'oss')
 // OSSのslug→商品の対応表は scripts/kapp-kits.ts に1か所だけ置く(/ai-system/ と共用)。
 const kappKitLink = (slug: string) => kitLink(slug, `oss-${attr(slug)}`)
 
+// exbridge.jp/ai-system/c/<分類>/ への内部リンク用（build-aisystem.ts が書き出す）。
+// 無ければリンクを出さないだけで、ビルドは止めない。
+type CapMap = { caps: Record<string, { label: string; noun: string | null }>; primary: Record<string, string> }
+const capMap: CapMap = await fs.readFile(path.join(root, 'data', 'capability-map.json'), 'utf8')
+  .then((s) => JSON.parse(s) as CapMap)
+  .catch(() => ({ caps: {}, primary: {} }))
+const capabilityLink = (slug: string): string => {
+  const key = capMap.primary[slug]
+  const cap = key ? capMap.caps[key] : undefined
+  if (!key || !cap) return ''
+  return `<a class="btn" href="https://exbridge.jp/ai-system/c/${attr(key)}/?ref=kurage-oss-${attr(slug)}">${h(cap.noun || cap.label)}のオープンソース一覧・比較</a>`
+}
+
 const publicBase = 'https://kurage.exbridge.jp'
 const catalogBase = `${publicBase}/oss`
 const mascot = `${publicBase}/images/kurage-mascot-simple-v2.png`
@@ -327,6 +340,7 @@ function detailPage(project: Project, projects: Project[]): string {
     project.lpUrl && project.lpUrl !== project.officialUrl ? `<a class="btn" href="${attr(project.lpUrl)}">製品・紹介ページ</a>` : '',
     project.brainUrl ? `<a class="btn" data-brain-for="${attr(project.slug)}" href="${attr(project.brainUrl)}" target="_blank" rel="noopener">${h(project.brainLabel || '構築手順書をBrainで読む')}</a>` : '',
     kappKitLink(project.slug),
+    capabilityLink(project.slug),
     DEMOS[project.slug] ? `<a class="btn btn-main" href="${demoUrl(project.slug, `oss-${project.slug}-aside`)}" target="_blank" rel="noopener">日本語デモを触る</a>` : '',
     project.demoUrl ? `<a class="btn" href="${attr(project.demoUrl)}" target="_blank" rel="noopener">デモを確認</a>` : '',
   ].filter(Boolean).join('')

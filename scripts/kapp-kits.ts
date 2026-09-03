@@ -31,6 +31,8 @@ export const KAPP_KITS: Record<string, KappKit> = {
   planka: { id: '1364b33c7d1cde58', label: 'Planka 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-planka-japanese-guide.html' },
   docspell: { id: '7f9481c10a09b560', label: 'Docspell 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-docspell-japanese-guide.html' },
   // 導入キットではなく「そのOSSを使って当社が作った買い切り製品」。
+  // kkintai は勤怠分類(/ai-system/c/attendance/・GSC 11.8位)の出口。分類ページのカード列にも出す。
+  kkintai: { id: 'f0f56c6e4da881be', label: '顔打刻つき勤怠管理 Kurage Kintai（買い切り）を見る', price: '税込55,000円（買い切り）', product: true },
   whisper: { id: 'cd1eda3248c87920', label: 'whisper.cppで動く買い切りのAI議事録を見る', product: true },
   postgis: { id: 'a5ac4b9f1fdb6d19', label: 'PostGISで作った商圏分析システム(買い切り)を見る', product: true },
   kshoken: { id: 'a5ac4b9f1fdb6d19', label: '設置手順つきの買い切り版を見る', product: true },
@@ -41,6 +43,37 @@ export function kappKitLink(slug: string, ref: string, cls = 'btn'): string {
   const kit = KAPP_KITS[slug]
   if (!kit) return ''
   return `<a class="${cls}" href="https://kappstore.exbridge.jp/app.php?id=${kit.id}&ref=${ref}">${kit.label}</a>`
+}
+
+/**
+ * 複数のキットをカード列で出す。分類一覧(/ai-system/c/)やSaaS代替(/saas/)のように
+ * 1ページに複数OSSが並ぶ場所用。製品(product)は除く。該当が無ければ空文字。
+ * name は呼び出し側でエスケープ済みのものを渡す。
+ */
+export function kappKitCards(list: Array<{ slug: string; name: string }>, ref: string): string {
+  const seen = new Set<string>()
+  // 同じ id の製品(postgis/kshoken)が2枚並ばないよう id でも重複を除く
+  const seenId = new Set<string>()
+  const rows = list.filter((p) => KAPP_KITS[p.slug] && !seen.has(p.slug) && seen.add(p.slug)
+    && !seenId.has(KAPP_KITS[p.slug].id) && seenId.add(KAPP_KITS[p.slug].id))
+  if (!rows.length) return ''
+  return `<div class="grid">${rows.map((p) => {
+    const kit = KAPP_KITS[p.slug]
+    const article = kit.article
+      ? `<a class="btn" href="${kit.article}?ref=${ref}" target="_blank" rel="noopener">導入の実録記事</a>`
+      : ''
+    const lead = kit.product
+      ? `同じ用途で当社が作った、設置手順つきの買い切り製品。開発を依頼せず自社で動かしたい場合の早道です。`
+      : `当社が実際に立てて詰まった箇所まで含めた手順書・設計テンプレート・docker構成・バックアップスクリプトの一式。`
+    return `<div class="card"><h3>${kit.label.replace(/を見る$/, '')}</h3><p>${lead}${kit.price ? `<strong>${kit.price}</strong>。` : ''}</p><div class="kit-actions"><a class="btn btn-main" href="https://kappstore.exbridge.jp/app.php?id=${kit.id}&ref=${ref}">${kit.product ? '製品を見る' : 'キットを見る'}</a>${article}</div></div>`
+  }).join('')}</div>`
+}
+
+/** キット名の一覧（本文の言い回し用）。該当が無ければ空文字。 */
+export function kappKitNames(list: Array<{ slug: string; name: string }>): string {
+  const seen = new Set<string>()
+  return list.filter((p) => KAPP_KITS[p.slug] && !KAPP_KITS[p.slug].product && !seen.has(p.slug) && seen.add(p.slug))
+    .map((p) => p.name).join('・')
 }
 
 /**

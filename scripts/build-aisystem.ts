@@ -27,12 +27,27 @@ import { displayName } from './display-names'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = path.join(root, 'dist', 'ai-system')
+
+// SaaS代替ページ(/saas/)との相互リンク用。分類ページから「いま使っているサービス名」で引ける入口へ渡す。
+type SaasRow = { slug: string; name: string; category: string; ossCats: string[]; volume: number }
+const SAAS_LIST = JSON.parse(await fs.readFile(path.join(root, 'data', 'saas-list.json'), 'utf8')) as SaasRow[]
+// saas-list.json の ossCats はカタログ側の分類名。できること(capability)の key と名前が違うものをここで橋渡しする。
+const SAAS_CAT_OF_CAP: Record<string, string[]> = {
+  bi: ['analytics'], task: ['project'], helpdesk: ['support'], wiki: ['knowledge'], manual: ['knowledge'],
+  attendance: ['hr'], payroll: ['hr'], mailmarketing: ['marketing'], ec: ['commerce'], pos: ['commerce'],
+  paperless: ['dms'], invoice: ['accounting'], team: ['groupware'], calendar: ['groupware'],
+}
+function saasFor(cap: Capability): SaasRow[] {
+  const cats = new Set([cap.key, cap.group, ...(SAAS_CAT_OF_CAP[cap.key] || [])])
+  return SAAS_LIST.filter((s) => s.ossCats.some((c) => cats.has(c)) || cats.has(s.category))
+    .sort((a, b) => b.volume - a.volume).slice(0, 6)
+}
 const BASE = `${SITE}/ai-system`
 
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
-import { kappKitPanel } from './kapp-kits'
+import { kappKitPanel, kappKitCards, kappKitNames } from './kapp-kits'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
 
@@ -248,13 +263,18 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
   const cut = total > shown.length
   // 検索結果で末尾が切れると、いちばん効く語（無料・比較）が読者に届かない。
   // 全角32以内に収まる形を長いほうから選ぶ。社名はGoogleが自動で付けるので入れない。
+  // 検索語は「勤怠管理システム オープンソース」「タスク管理 OSS」の形（GSC実測）。
+  // 分類名(label)ではなく検索で使われる一般名(noun)を主語にし、「オープンソース」と「OSS」の両方を入れる。
+  const noun = cap.noun || cap.label
+  const terms = cap.terms || []
   const title = fitLength(32,
-    `${cap.label}のオープンソース${total}件｜無料で使える製品を比較`,
-    `${cap.label}のオープンソース${total}件｜無料で使えるもの`,
-    `${cap.label}のオープンソース${total}件を比較`,
-    `${cap.label}のオープンソース${total}件`)
+    `${noun}のオープンソース（OSS）${total}件｜無料で使える製品を比較`,
+    `${noun}のオープンソース（OSS）${total}件を比較`,
+    `${noun}のオープンソース${total}件｜無料で使えるもの`,
+    `${noun}のオープンソース${total}件を比較`,
+    `${noun}のオープンソース${total}件`)
   const desc = fitLength(120,
-    `${cap.question}という課題に使える無料のオープンソースを${total}件掲載。有料クラウドとの違い、日本語対応とライセンスの実測、選び方まで。名古屋のシステム開発会社が導入まで行います。初日の相談は無料です。`,
+    `${noun}をオープンソース（OSS）で。${cap.question}という課題に使える無料のオープンソースを${total}件掲載。ライセンス・日本語対応・更新状況の実測つきで比較。名古屋のシステム開発会社が導入まで行います。`,
     `${cap.question}という課題に使える無料のオープンソースを${total}件掲載。有料クラウドとの違い、日本語対応の実測、選び方まで。名古屋のシステム開発会社が導入まで行います。`,
     `${cap.question}という課題に使える無料のオープンソースを${total}件掲載。有料クラウドとの違いと選び方、日本語対応の実測つき。`)
 
@@ -345,6 +365,19 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
     { q: '費用はどのくらいかかりますか？', a: '名古屋市内であれば、1日3時間×5日間の計15時間・税別15万円のお試し導入があります。初日3時間のヒアリングと提案は無料で、進めるとお決めいただいた場合のみ費用が発生します。作るものが決まっている場合は税込110,000円からのプロトタイプ制作もあります。' },
     { q: 'どれを選べばよいかわからないのですが、相談だけでもよいですか？', a: '構いません。初日3時間のヒアリングは無料です。現場のやり方を見せていただいたうえで、どれを土台にするか、そもそもオープンソースを使わないほうがよいかを含めて提案します。' },
   ]
+  // 検索で実際に使われている言い回し（cap.terms）に、実測値で答える問いを先頭に足す。
+  const kitList = all.map((p) => ({ slug: p.slug, name: h(p.name) }))
+  const kitCards = kappKitCards(kitList, `ai-system-c-${cap.key}`)
+  const kitNames = kappKitNames(kitList)
+  if (terms.length) {
+    faqs.unshift(
+      { q: `${noun}のオープンソース（OSS）で、日本語で使えるものはありますか？`,
+        a: `あります。掲載${total}件のうち${hasJa}件は、GitHubの公開ファイルに日本語ロケールが実在しました（${TODAY_JA}時点）。当社の実測で上位に挙げたのは${picks.slice(0, 3).map((p) => p.name).join('・')}です。日本語ロケールが無いものでも、当社が日本語化して導入できます。` },
+      { q: `${noun}のOSSを自社サーバーで動かすには、何が必要ですか？`,
+        a: `Linuxのサーバー1台（VPSで可）、docker、HTTPS用のリバースプロキシ、日次バックアップの4点です。多くの製品はデータベースを別コンテナで持つため、月数百円の共有レンタルサーバーでは動きません。${kitNames ? `${kitNames}については、当社が実際に立てた手順書とテンプレートを日本語導入・運用キットとして販売しています。` : '手順は各製品の公式ドキュメントに沿って進めます。'}` },
+    )
+  }
+  const saasHits = saasFor(cap)
 
   // この分類が経営課題のどれに効くかは ISSUES にある分だけ出す。
   // 96枚に同じ一般論を貼ると、ページの見分けがつかなくなるので作文しない。
@@ -353,8 +386,8 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">AIでできること / ${h(groupLabel)}</p>
-<h1>${h(cap.label)}に使える<br>オープンソース${total}件</h1>
-<p class="lead">${h(cap.question)}——その課題に使えるオープンソースを${total}件、ライセンスと日本語対応を実測して並べました。<strong>ソフト自体はどれも無料</strong>で、自社サーバーに置いて使えます。ユーザー数に応じた月額課金はありません。名古屋市内なら、計15時間・税別15万円で導入まで試せます。</p>
+<h1>${h(noun)}に使える<br>オープンソース（OSS）${total}件</h1>
+<p class="lead">${terms.length ? `${h(noun)}をオープンソース（OSS）で用意したい方向けの一覧です。` : ''}${h(cap.question)}——その課題に使えるオープンソースを${total}件、ライセンス・日本語対応・更新状況を実測して並べました。<strong>ソフト自体はどれも無料</strong>で、自社サーバーに置いて使えます。ユーザー数に応じた月額課金はありません。名古屋市内なら、計15時間・税別15万円で導入まで試せます。</p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / ${h(cap.label)}</nav>
@@ -370,6 +403,16 @@ ${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>$
 </tbody></table></div>
 <p class="note">この並びは実測値による機械的な順位で、広告や紹介料による順位付けはしていません（${TODAY_JA}時点）。${total}件すべての一覧は<a href="#list">このページの下</a>にあります。</p>
 </div></section>
+${kitCards ? `<section><div class="panel">
+<h2>${h(noun)}のOSSを自分で入れるなら（日本語導入・運用キット）</h2>
+<p>この分類のうち、当社が実際に立てて、手順書・設計テンプレート・docker構成・バックアップまでまとめたものです。開発を依頼せず自社で立てたい場合の早道です。</p>
+${kitCards}
+</div></section>` : ''}
+${saasHits.length ? `<section><div class="panel">
+<h2>いま使っている有料サービスの代わりを探しているなら</h2>
+<p>サービス名から、同じ業務に使えるオープンソースを引けるページもあります。費用の仕組みの違いと、置き換えの候補、使い続けたほうがよい場合まで書いています。</p>
+<p class="note">${saasHits.map((s) => `<a href="${SITE}/saas/${attr(s.slug)}.html?ref=ai-system-c-${attr(cap.key)}">${h(s.name)}の代わりになるオープンソース</a>`).join('　')}</p>
+</div></section>` : ''}
 <section><div class="panel">
 <h2>有料のクラウドサービスと、オープンソースは何が違いますか？</h2>
 <p>違いは主に、<strong>費用のかかり方・データの置き場所・変更できる範囲</strong>の3つです。${h(cap.label)}を無料で始めたい場合、この表のどちらが自社に合うかを先に決めると迷わなくなります。</p>
@@ -400,8 +443,8 @@ ${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>$
 <h2 id="list">掲載している${total}件をすべて見る</h2>
 <p>この一覧とは、${h(cap.label)}という用途に当てはまるオープンソースを、当てはまりの強い順に並べたもののことです。${cut ? `全${total}件のうち上位${shown.length}件を掲載しています。` : ''}名前をクリックすると、その土台で何をどう作るかの説明に移ります。</p>
 ${shown.some((p) => DEMOS[p.slug]) ? `<p class="demo-line">このうち${shown.filter((p) => DEMOS[p.slug]).length}件は、当社が日本語化したものを<a href="${PROTO}/?ref=ai-system-c-${attr(cap.key)}">デモサイト</a>で公開しています。ログイン情報も出しているので、問い合わせなしでそのまま触れます。</p>` : ''}
-<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
-${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.japaneseStatus)}</td><td>${DEMOS[p.slug] ? `<a href="${demoUrl(p.slug, `ai-system-c-${cap.key}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
+<div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>スター</th><th>最終更新</th><th>日本語</th><th>デモ</th></tr></thead><tbody>
+${shown.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a></th><td>${h(p.summary)}</td><td>${h(p.license || '—')}</td><td>${typeof p.stars === 'number' ? p.stars.toLocaleString('en-US') : '—'}</td><td>${h(ymOf(p.githubPushedAt) || '—')}</td><td>${h(p.japaneseStatus)}</td><td>${DEMOS[p.slug] ? `<a href="${demoUrl(p.slug, `ai-system-c-${cap.key}`)}" target="_blank" rel="noopener">触れる</a>` : '—'}</td></tr>`).join('')}
 </tbody></table></div>
 </div></section>
 ${issueBlock ? `<section><div class="panel">
@@ -653,6 +696,14 @@ function listOf(cap: Capability): Project[] {
     .map((x) => x.p)
 }
 const counts = new Map(usedCaps.map((c) => [c.key, listOf(c).length]))
+
+// kurage /oss/<slug>/ から exbridge の分類ページへ内部リンクを張るための対応表。
+// build-static.ts が読む。ページのある分類だけ書く（404へのリンクを作らない）。
+await fs.writeFile(path.join(root, 'data', 'capability-map.json'), JSON.stringify({
+  generatedAt: TODAY,
+  caps: Object.fromEntries(usedCaps.map((c) => [c.key, { label: c.label, noun: c.noun || null }])),
+  primary: Object.fromEntries(projects.map((p) => [p.slug, capOf.get(p.slug)!.key])),
+}))
 
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })

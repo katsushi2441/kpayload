@@ -23,6 +23,14 @@ export type Capability = {
   question: string
   rx: RegExp
   group: string
+  /**
+   * 検索で実際に使われている一般名（GSC実測）。title/H1 はこれを主語にする。
+   * label は分類名として短くしてあるので、「勤怠管理システム オープンソース」のような
+   * 検索語と一致しない（2026-09-04 実測: 表示318・クリック0・平均12〜56位）。
+   */
+  noun?: string
+  /** GSCで表示が付いている実クエリ。FAQの問いと本文の言い回しに使う。作文しない。 */
+  terms?: string[]
 }
 
 /** index と一覧ページのナビゲーションに使う大分類。見出しを作ってAEOの引用単位を切る。 */
@@ -75,11 +83,11 @@ export const CAPABILITIES: Capability[] = [
     rx: /(ライブチャット|有人チャット|web接客|チャットサポート|訪問者との)/i },
 
   // 顧客管理・営業
-  { group: 'sales', key: 'crm', label: '顧客管理（CRM）', question: '顧客情報がExcelに散らばっている',
+  { group: 'sales', key: 'crm', label: '顧客管理（CRM）', noun: '顧客管理システム（CRM）', terms: ['顧客管理 オープンソース', 'オープンソース CRM', 'CRM OSS 日本語'], question: '顧客情報がExcelに散らばっている',
     rx: /(\bcrm\b|顧客(管理|情報|関係|データ))/i },
   { group: 'sales', key: 'sfa', label: '営業支援・商談管理', question: '商談の進み具合が見えない',
     rx: /(営業(支援|活動|管理)|商談|パイプライン|リード(管理|獲得)?|\bsfa\b|見込み客)/i },
-  { group: 'sales', key: 'mailmarketing', label: 'メール配信・メルマガ', question: '案内メールを手作業で送っている',
+  { group: 'sales', key: 'mailmarketing', label: 'メール配信・メルマガ', noun: 'メール配信システム', terms: ['メール配信システム オープンソース', 'メール配信システム OSS', 'メルマガ配信 セルフホスト'], question: '案内メールを手作業で送っている',
     rx: /(メール配信|メルマガ|ニュースレター|メールマーケティング|一斉送信|配信リスト)/i },
   { group: 'sales', key: 'marketing', label: 'マーケティング施策の管理', question: '施策の効果がわからないまま続けている',
     rx: /(マーケティング|キャンペーン(管理|運用)?|広告運用|集客施策|リードナーチャ)/i },
@@ -101,11 +109,11 @@ export const CAPABILITIES: Capability[] = [
     rx: /(メディアサイト|ニュースサイト|記事サイト|オンラインマガジン|出版)/i },
   { group: 'web', key: 'sitebuilder', label: 'ページ制作・サイトビルダー', question: 'ページを作るたびに制作会社に頼んでいる',
     rx: /(ランディングページ|\blp\b|ページビルダー|サイトビルダー|ドラッグ(&|＆|アンド)?ドロップでページ|ウェブサイト(制作|作成))/i },
-  { group: 'web', key: 'cms', label: 'コンテンツ管理（CMS）', question: 'サイト更新を自社でやりたい',
+  { group: 'web', key: 'cms', label: 'コンテンツ管理（CMS）', noun: 'CMS', terms: ['オープンソース CMS', 'CMS OSS 日本語'], question: 'サイト更新を自社でやりたい',
     rx: /(\bcms\b|コンテンツ管理|記事(管理|公開)|webサイトの(コンテンツ|更新|管理))/i },
 
   // EC・販売
-  { group: 'commerce', key: 'ec', label: 'ECサイトの構築', question: 'ネット販売を自社で持ちたい',
+  { group: 'commerce', key: 'ec', label: 'ECサイトの構築', noun: 'ECサイト', terms: ['ECサイト オープンソース', 'ECサイト構築 OSS'], question: 'ネット販売を自社で持ちたい',
     rx: /(ec(サイト|構築|プラットフォーム)?|eコマース|ネットショップ|オンラインショップ|通販|カート)/i },
   { group: 'commerce', key: 'pos', label: 'POS・店舗レジ', question: 'レジと売上管理がつながっていない',
     rx: /(\bpos\b|レジ|店舗(での)?販売|売上管理)/i },
@@ -143,9 +151,9 @@ export const CAPABILITIES: Capability[] = [
     rx: /(チェックリスト|点検|検査(記録|管理)|巡回|監査)/i },
 
   // プロジェクト・タスク管理
-  { group: 'project', key: 'project', label: 'プロジェクト管理', question: '案件の進捗が見えない',
+  { group: 'project', key: 'project', label: 'プロジェクト管理', noun: 'プロジェクト管理ツール', terms: ['プロジェクト管理 オープンソース', 'プロジェクト管理ツール OSS'], question: '案件の進捗が見えない',
     rx: /(プロジェクト(管理|の(進捗|管理))?)/i },
-  { group: 'project', key: 'task', label: 'タスク・ToDo管理', question: '誰が何をやっているかわからない',
+  { group: 'project', key: 'task', label: 'タスク・ToDo管理', noun: 'タスク管理ツール', terms: ['タスク管理 OSS', 'タスク管理ツール オープンソース', 'ToDo セルフホスト'], question: '誰が何をやっているかわからない',
     rx: /(タスク管理|\btodo\b|やること|作業(管理|割り当て))/i },
   { group: 'project', key: 'issue', label: '課題・不具合の管理', question: '不具合の報告が埋もれる',
     rx: /(課題管理|チケット(管理|システム)?|issue|バグ(管理|追跡)|不具合)/i },
@@ -191,7 +199,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(保守|設備管理|メンテナンス|\bcmms\b|修理履歴)/i },
 
   // 勤怠・人事・労務
-  { group: 'hr', key: 'attendance', label: '勤怠管理', question: '勤怠がタイムカードのまま',
+  { group: 'hr', key: 'attendance', label: '勤怠管理', noun: '勤怠管理システム', terms: ['勤怠管理システム オープンソース', '勤怠管理 OSS', '勤怠管理システム 無料 自社サーバー'], question: '勤怠がタイムカードのまま',
     rx: /(勤怠|出退勤|打刻|出勤|タイムカード)/i },
   { group: 'hr', key: 'hr', label: '人事・従業員情報の管理', question: '従業員の情報が紙のファイルにある',
     rx: /(人事|従業員(情報|管理|データ)|人材管理|\bhrm?\b|組織図)/i },
@@ -205,7 +213,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(人事評価|目標管理|\bokr\b|1on1|評価制度)/i },
 
   // データ活用・分析
-  { group: 'data', key: 'bi', label: 'BI・ダッシュボード', question: '経営数字を見るのに毎回集計している',
+  { group: 'data', key: 'bi', label: 'BI・ダッシュボード', noun: 'BIツール・ダッシュボード', terms: ['BIツール オープンソース', 'ダッシュボードツール OSS', 'BI 無料 オープンソース'], question: '経営数字を見るのに毎回集計している',
     rx: /(\bbi\b|ビジネスインテリジェンス|ダッシュボード)/i },
   { group: 'data', key: 'visualize', label: 'データの可視化', question: '数字が表のままで判断に使えない',
     rx: /(可視化|グラフ(化|作成)|チャート|見える化)/i },
@@ -249,7 +257,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(通知|アラート|プッシュ通知|\bsms\b|リマインド)/i },
 
   // 生成AI・AIエージェントの活用
-  { group: 'ai', key: 'aiagent', label: 'AIエージェントの構築', question: 'AIに作業そのものを任せたい',
+  { group: 'ai', key: 'aiagent', label: 'AIエージェントの構築', noun: 'AIエージェント', terms: ['AIエージェント オープンソース', 'AIエージェント OSS'], question: 'AIに作業そのものを任せたい',
     rx: /(aiエージェント|エージェント|自律的|autonomous|マルチエージェント)/i },
   { group: 'ai', key: 'rag', label: '社内文書のAI検索（RAG）', question: '社内文書をAIに答えさせたい',
     rx: /(\brag\b|検索拡張|社内文書(を|の)ai|文書検索ai|独自データ(を|で)ai)/i },

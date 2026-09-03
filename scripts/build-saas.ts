@@ -30,12 +30,35 @@ import { getPayload } from 'payload'
 import config from '../src/payload.config'
 import { SITE, KURAGE, TRIAL } from './site'
 import { DEMOS, PROTO, demoUrl } from './demos'
+import { kappKitCards } from './kapp-kits'
+import { CAPABILITIES } from './capability'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, type Project } from './page-shell'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = path.join(root, 'dist', 'saas')
 const BASE = `${SITE}/saas`
+
+// できること(/ai-system/c/)への相互リンク。分類ページは build-aisystem が先に生成している前提で、
+// 実在するディレクトリだけにリンクする（404を作らない）。
+const capDirs = new Set<string>(await fs.readdir(path.join(root, 'dist', 'ai-system', 'c')).catch(() => [] as string[]))
+// saas-list.json の ossCats はカタログ側の分類名。できることの key と違うものを橋渡しする。
+const CAP_OF_SAAS_CAT: Record<string, string[]> = {
+  analytics: ['bi', 'visualize'], project: ['project', 'task', 'kanban'], support: ['helpdesk', 'faq'], knowledge: ['wiki', 'manual'],
+  hr: ['attendance', 'payroll'], marketing: ['mailmarketing', 'marketing'], commerce: ['ec', 'pos'], dms: ['dms', 'paperless'],
+  accounting: ['accounting', 'invoice'], groupware: ['team', 'calendar'], contract: ['esign'],
+}
+function capLinks(s: Saas): string {
+  const keys = new Set<string>()
+  for (const c of s.ossCats) for (const k of CAP_OF_SAAS_CAT[c] || [c]) keys.add(k)
+  const caps = CAPABILITIES.filter((c) => keys.has(c.key) && capDirs.has(c.key))
+  if (!caps.length) return ''
+  return `<section><div class="panel">
+<h2>やりたいことから探すなら</h2>
+<p>${h(s.name)}に限らず、同じ業務に使えるオープンソース（OSS）をライセンス・日本語対応・更新状況の実測つきで比較した一覧です。</p>
+<p class="note">${caps.map((c) => `<a href="${SITE}/ai-system/c/${attr(c.key)}/?ref=saas-${attr(s.slug)}">${h(c.noun || c.label)}のオープンソース一覧・比較</a>`).join('　')}</p>
+</div></section>`
+}
 
 const SHELL = {
   refPrefix: 'exbridge-saas',
@@ -163,10 +186,15 @@ ${withDemo.map((p) => `<div class="card" style="margin:0 0 10px"><h3>${h(p.name)
 
 function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): string {
   const url = `${BASE}/${s.slug}.html`
-  const title = `${s.name}の費用と、同じことをオープンソースでやる選択肢｜${s.vendor}のサービスを検討中の方へ | 株式会社エクスブリッジ`
-  const desc = `${s.name}（${s.vendor}）の料金は利用人数×月額で毎年かかり続けます。同じ業務をオープンソースで行えばライセンス費はかからず、ソースコードは自社に残ります。${oss.length}件の候補を、ライセンスと日本語対応の実測つきで掲載。名古屋のシステム開発会社が導入まで行います。`
+  // 検索語は「notion オープンソース」「backlog oss」「trello 料金」の形（GSC実測 2026-09-04）。
+  // 「代わりになるオープンソース（OSS）」を先頭に置き、費用の話は後ろに回す。
+  const title = `${s.name}の代わりになるオープンソース（OSS）${oss.length}件｜費用の見直し | 株式会社エクスブリッジ`
+  const desc = `${s.name}のオープンソース版・OSSの代替を探している方へ。${s.name}（${s.vendor}）の料金は利用人数×月額で毎年かかり続けます。同じ業務をオープンソースで行えばライセンス費はかからず、ソースコードは自社に残ります。${oss.length}件の候補を、ライセンスと日本語対応の実測つきで掲載。`
+  const kitCards = kappKitCards(oss.map((p) => ({ slug: p.slug, name: h(p.name) })), `saas-${s.slug}`)
 
   const faqs = [
+    { q: `${s.name}のオープンソース版（OSS）はありますか？`,
+      a: `${s.name}そのもののソースコードは公開されていませんが、同じ用途で使えるオープンソースはあります。当社が挙げているのは${oss.slice(0, 3).map((p) => p.name).join('・')}${oss.length > 3 ? `ほか${oss.length - 3}件` : ''}で、いずれもソースコードが公開されていて自社サーバーに置いて使えます。ライセンスと日本語対応は本文の表に実測を載せています。` },
     { q: `${s.name}の代わりにオープンソースを使うと、何が変わりますか？`,
       a: `毎年かかり続ける利用料が、最初の構築費用とサーバー代に置き換わります。ソースコードは自社に残るので、値上げや仕様変更に振り回されません。一方で、障害対応やバージョン更新は自社（または当社）の責任になります。人数が少なく標準機能で足りるうちは、${s.name}をそのまま使うほうが安く済むこともあります。` },
     { q: 'なぜ今、その選択肢が現実的になったのですか？',
@@ -181,8 +209,8 @@ function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): str
 
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">SaaSとオープンソース</p>
-<h1>${h(s.name)}の費用を、<br>オープンソースで見直す。</h1>
-<p class="lead">${h(s.name)}は${h(s.what)}便利なサービスですが、料金は<strong>利用する人数×月額</strong>で、使い続ける限りかかり続けます。同じ業務をオープンソースで行えば、ライセンス費はかからず、ソースコードは自社に残ります。ここでは${oss.length}件の候補を、ライセンスと日本語対応の実測つきで並べました。</p>
+<h1>${h(s.name)}の代わりになる<br>オープンソース（OSS）${oss.length}件</h1>
+<p class="lead">${h(s.name)}は${h(s.what)}便利なサービスですが、料金は<strong>利用する人数×月額</strong>で、使い続ける限りかかり続けます。同じ業務をオープンソースで行えば、ライセンス費はかからず、ソースコードは自社に残ります。ここでは${h(s.name)}の代わりになるオープンソース（OSS）${oss.length}件を、ライセンスと日本語対応の実測つきで並べました。</p>
 <p><a class="btn btn-main" href="${TRIAL}?ref=saas-${attr(s.slug)}">AI導入お試し実験を見る</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=saas-${attr(s.slug)}">OSSのカスタマイズ（110,000円〜）</a></p>
 </div></section>
 ${relatedNews('saas', s.slug)}
@@ -230,6 +258,12 @@ ${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-$
 <p class="note">並びはライセンスの自由度が高い順です。「制限なし」のものは、当社が改変して納品することに制約がありません。「再販不可」のものは御社が自社の業務で使う分には問題ありませんが、第三者へのホスティング提供はできません。日本語欄が「日本語ファイルなし」であれば、日本語化から着手します。</p>
 ${s.note ? `<div class="card" style="margin-top:14px"><h3>${h(s.name)}を置き換えるときの注意</h3><p>${h(s.note)}</p></div>` : ''}
 </div></section>
+${kitCards ? `<section><div class="panel">
+<h2>自分で入れるなら（日本語導入・運用キット）</h2>
+<p>上の候補のうち、当社が実際に立てて、手順書・設計テンプレート・docker構成・バックアップまでまとめたものです。開発を依頼せず自社で${h(s.name)}から移りたい場合の早道です。</p>
+${kitCards}
+</div></section>` : ''}
+${capLinks(s)}
 ${demoBlock(s, oss)}
 
 <section><div class="panel">
