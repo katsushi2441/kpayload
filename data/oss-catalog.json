@@ -4347,5 +4347,70 @@
     "funnel": "oss",
     "seoTitle": "Docmostとは｜Notion・Confluence代替の自社サーバー型社内Wiki OSS・日本語導入",
     "seoDescription": "Docmostは共同編集・スペース・全文検索を備えた社内Wiki OSS。docker数分起動、日本語UI100%、日本語検索の穴と対策、Notion/Confluence移行、無料版と有料版の境界を実測で解説。"
+  },
+  {
+    "name": "Planka",
+    "slug": "planka",
+    "category": "project",
+    "featured": false,
+    "summary": "Trelloの代替になる、自社サーバーで動くカンバン型タスク管理OSS。プロジェクト→ボード→リスト→カードの構造、担当者・ラベル・期限・チェックリスト・添付、リアルタイム反映を備えます。",
+    "description": "PlankaはJavaScript製のカンバン型タスク管理OSS（GitHubスター約12,500）。Trelloと同じ操作感で、docker2コンテナ（本体＋PostgreSQL）で数分で起動します。ライセンスはPLANKA Community License v1.1で、自社内利用・自社ホスティングは無償ですが、第三者向けにホスティングして提供する用途は商用ライセンスが必要です。当社の実測（公式dockerイメージ・2026年9月）では日本語UIの翻訳率は約88%（483キー中56キー未訳・自動ログアウトや2要素認証など認証系）で、残り56キーを当社が全訳して公開・本家へ提案しています。BASE_URLが実URLと違うと画面が真っ白になる落とし穴、初回ログインの規約同意（API経路）も含め、導入から社内展開までを実録記事にまとめています: https://katsushi2441.github.io/vwork/articles/2026-09-04-planka-japanese-guide.html",
+    "license": "PLANKA Community License v1.1（商用ライセンスあり）",
+    "japaneseStatus": "本家同梱の日本語は実測約88%（483キー中56キー未訳）。残り56キーを当社が全訳し planka-jp(github.com/katsushi2441/planka-jp) で公開、本家へPR提案中。",
+    "officialUrl": "https://planka.app",
+    "githubUrl": "https://github.com/plankanban/planka",
+    "useCases": [
+      {
+        "text": "チームのカンバン運用（Trello代替）"
+      },
+      {
+        "text": "案件・期間ごとのボード管理"
+      },
+      {
+        "text": "担当者・期限・ラベルでの進捗共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Planka 日本語"
+      },
+      {
+        "text": "Planka 使い方"
+      },
+      {
+        "text": "Planka docker"
+      },
+      {
+        "text": "Trello 代替 OSS"
+      },
+      {
+        "text": "カンバン セルフホスト"
+      },
+      {
+        "text": "Planka ライセンス"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Plankaは日本語で使えますか？",
+        "answer": "使えます。設定の言語で日本語を選ぶだけです。翻訳率は実測約88%で、残り56キー（自動ログアウト・2要素認証など）を当社が全訳して公開しています。"
+      },
+      {
+        "question": "Plankaは無料で商用利用できますか？",
+        "answer": "自社内での利用や自社のためのホスティングは無償です。Plankaをホスティングして第三者にサービス提供する用途や組織をまたいだ共有は商用ライセンスが必要です（PLANKA Community License v1.1）。"
+      },
+      {
+        "question": "画面が真っ白になります",
+        "answer": "BASE_URLが実際に開いているURLと違うのが典型的な原因です。実URL（HTTPS）に合わせて再起動してください。"
+      },
+      {
+        "question": "サーバーの要件は？",
+        "answer": "dockerが動くLinuxサーバー1台。本体とPostgreSQLの2コンテナです。リアルタイム反映のためリバースプロキシでWebSocketを通します。"
+      }
+    ],
+    "sourceLpName": "Trelloの代替を自社サーバーに",
+    "funnel": "oss",
+    "seoTitle": "Plankaとは｜Trello代替の自社サーバー型カンバンOSS・日本語導入とライセンスの注意",
+    "seoDescription": "Plankaはリアルタイム反映のカンバンOSS。docker数分起動、日本語88%と当社の翻訳パッチ、BASE_URL白画面の落とし穴、第三者向けホスティングは商用ライセンスという線引きを実測で解説。"
   }
 ]
