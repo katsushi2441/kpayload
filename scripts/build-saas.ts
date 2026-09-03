@@ -352,3 +352,5 @@ payload.logger.info(`saas: ${saasList.length}ページ + index/sitemap`)
 if (thin.length) {
   payload.logger.warn(`推薦できるOSSが2件未満: ${thin.map((x) => x.s.slug).join(', ')}`)
 }
+
+process.exit(0)
