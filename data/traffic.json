@@ -1,5 +1,2942 @@
 {
-  "measuredAt": "2026-08-20",
-  "days": 90,
-  "traffic": {}
+  "measuredAt": "2026-09-01",
+  "days": 28,
+  "traffic": {
+    "corteza": {
+      "clicks": 3,
+      "impressions": 8
+    },
+    "codealmanac": {
+      "clicks": 2,
+      "impressions": 49
+    },
+    "deepwiki-open": {
+      "clicks": 2,
+      "impressions": 8
+    },
+    "docmost": {
+      "clicks": 2,
+      "impressions": 7
+    },
+    "github-wiki-action": {
+      "clicks": 2,
+      "impressions": 3
+    },
+    "leantime": {
+      "clicks": 2,
+      "impressions": 7
+    },
+    "openkb": {
+      "clicks": 2,
+      "impressions": 10
+    },
+    "plane": {
+      "clicks": 2,
+      "impressions": 19
+    },
+    "planka": {
+      "clicks": 2,
+      "impressions": 7
+    },
+    "puck": {
+      "clicks": 2,
+      "impressions": 5
+    },
+    "saltcorn": {
+      "clicks": 2,
+      "impressions": 5
+    },
+    "sftpgo": {
+      "clicks": 2,
+      "impressions": 6
+    },
+    "activitywatch": {
+      "clicks": 1,
+      "impressions": 10
+    },
+    "agorakit": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "anyquery": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "appsmith": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "arscontexta": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "atomic-crm": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "atomic": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "bettershift": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "btcpayserver": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "budibase": {
+      "clicks": 1,
+      "impressions": 5
+    },
+    "calnode": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "chatcrystal": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "claude-task-viewer": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "ctx": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "djangocrm-django-crm": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "drawpile": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "e2a": {
+      "clicks": 1,
+      "impressions": 6
+    },
+    "evershelf": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "facebook-ads-library-mcp": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "feather": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "filament-cms": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "flux-sched": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "flux": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "focalboard": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "freescout": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "graphic-walker": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "grocy-desktop": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "i-librarian-free": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "inventree": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "kanban-tui": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "kaneo": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "keystatic": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "klog": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "kvgwc": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "ledger-cli-dashboard": {
+      "clicks": 1,
+      "impressions": 10
+    },
+    "lemmy": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "linear-claude-skill": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "llmwiki": {
+      "clicks": 1,
+      "impressions": 5
+    },
+    "luya": {
+      "clicks": 1,
+      "impressions": 13
+    },
+    "markdown-plan": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "moodle": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "multiboard": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "nexrender": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "niharshrotri-llm-wiki": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "nocodb": {
+      "clicks": 1,
+      "impressions": 7
+    },
+    "nodyx": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "obsidian-time-ruler": {
+      "clicks": 1,
+      "impressions": 10
+    },
+    "obsidian-wiki": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "openolat": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "papermerge": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "payload-cms": {
+      "clicks": 1,
+      "impressions": 7
+    },
+    "pharo-wiki": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "pi-llm-wiki": {
+      "clicks": 1,
+      "impressions": 5
+    },
+    "pocketrisu": {
+      "clicks": 1,
+      "impressions": 3
+    },
+    "ralph": {
+      "clicks": 1,
+      "impressions": 5
+    },
+    "swarmvault": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "technocore-chat": {
+      "clicks": 1,
+      "impressions": 7
+    },
+    "tududi": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "updog": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "vaultwarden": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "vibe-coding-with-base44": {
+      "clicks": 1,
+      "impressions": 2
+    },
+    "vikunja": {
+      "clicks": 1,
+      "impressions": 11
+    },
+    "vim-wakatime": {
+      "clicks": 1,
+      "impressions": 8
+    },
+    "vimwiki": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "vocechat-web": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "vscode-front-matter": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "weknora": {
+      "clicks": 1,
+      "impressions": 4
+    },
+    "znuny": {
+      "clicks": 1,
+      "impressions": 1
+    },
+    "aaf-easydiary": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "aardio-erp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "affine-mcp-server": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "affine": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "agendav": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "agent-chat-ui": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "agent-ui": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "agentic-signal": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "agnai": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "ai-business-skills": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ai-website-builder": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "aibitat": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "aimeos": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "aionui": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "aitii-tekisuto": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "allura": {
+      "clicks": 0,
+      "impressions": 13
+    },
+    "alpine-moodle": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "altersend": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "amplication": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "answer": {
+      "clicks": 0,
+      "impressions": 10
+    },
+    "anything-llm": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "app-grocy": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "app-server": {
+      "clicks": 0,
+      "impressions": 16
+    },
+    "appflowy-web": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "appflowy": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "ask-anything": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "asp-net-core-cms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "astro-notion-blog": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "astron-rpa": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "asyncjobs": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "automagik-dev-forge": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "autosocial": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "ava": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "azuredevops-wikipdfexport": {
+      "clicks": 0,
+      "impressions": 8
+    },
+    "baserow": {
+      "clicks": 0,
+      "impressions": 9
+    },
+    "bbs": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "bead-me-up-scotty": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "beautyquests": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "beikeshop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "berkeleytime": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "besser": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "billionmail": {
+      "clicks": 0,
+      "impressions": 15
+    },
+    "binner": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "blazer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "bomwiki": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "bookingscraper": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "bookstack": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "botui": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "brightbean-studio": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "cal-diy": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "calendar": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "calendarapp": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "calver": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "candy-hub": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "caniemail": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "carbonio-mailbox": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ccpm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "cforum": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chaibuilder-core": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chakt-kmp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chamilo-lms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "charcoal-cms": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "chat-downloader": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chat-md": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "chatbi": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chatbotx": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "chattt": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chatty": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chitchatter": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "chorus": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "chroncal": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "churchcrm-crm": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "ck": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "classicpress": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "classroomio": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "claude-mega-brain": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "claude-ops": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "clay": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "clickup-cli": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "clipbucket-v5": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "clocktemp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "cloudflare-partykit": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "cms-pico": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "cmseek": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "cobalt": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "cockpit-file-sharing": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "coco-server": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "code-sync": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "codemap": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "codexray": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "codimd": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "collabmd": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "commerceplate": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "commonplace": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "commuter": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "conda-store": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "condo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "constructor-telegram-bots-backend": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "contao": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "content": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "convos": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "copilotforxcode": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "cortex-hub": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "courselit": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "craftgen": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "crewai-studio": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "crm-application": {
+      "clicks": 0,
+      "impressions": 9
+    },
+    "croc": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "crossmacro": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "crowdanki": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "crowi": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "cryptgeon": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "cube": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "currency": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "customermates": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "cylc-flow": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "d365fo-mcp-server": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dankcalendar": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "dataease": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "dayglance": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "daylight-calendar-ics": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "dbapi": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dbt-metabase": {
+      "clicks": 0,
+      "impressions": 14
+    },
+    "debrid-services-comparison": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "decap-cms": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "deco": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "decompilation-wiki": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dectask": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "delivery-carrier": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "des-ctf-knowledge": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "design-studio": {
+      "clicks": 0,
+      "impressions": 16
+    },
+    "deskcommcrm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "desktopeditors": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "dex": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dgiot": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dimension-ui": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "directus": {
+      "clicks": 0,
+      "impressions": 7
+    },
+    "discord-wiki-bot": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "discordchatexporter": {
+      "clicks": 0,
+      "impressions": 6
+    },
+    "discourse": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "django-business-logic": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "django-erp-framework": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "django-ledger": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "django-salesman": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dnn-platform": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "docker-zoom-us": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "docuseal": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dolibarr": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dolidroid": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "dotcms-core": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "dxl-commerce-agent": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "e107": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "easyappointments": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ecs-deploy": {
+      "clicks": 0,
+      "impressions": 15
+    },
+    "edict": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "effectpatterns": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ejabberd": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "element-call": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "empiricalwiki": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "engineercms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "engramory": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "eris": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "erp-pro": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "erp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "erplab": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "erpnext": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "erpsaas": {
+      "clicks": 0,
+      "impressions": 11
+    },
+    "espocrm": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "etar-calendar": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "etherpad": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "evershop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "evidence": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "evitadb": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "evo-crm-community": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "exact": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "excalidraw": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ezbookkeeping": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "f-revocrm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "fab-manager": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "faraday": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "fastsend": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "ffmpeg": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "figma-html": {
+      "clicks": 0,
+      "impressions": 16
+    },
+    "filament-invoices": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "filebrowser": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "filehosting-video-stream": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "filester": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "finopenpos": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "fira": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "firefly-iii": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "firestr": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "fizzy": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "fjsp-instances": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flare": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flaskbb": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flatnotes": {
+      "clicks": 0,
+      "impressions": 8
+    },
+    "flectra": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flocafe": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flowbaker": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flowershow": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flutter-crm": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "flutter-gpt-box": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "flutter-pos": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "fluux-messenger": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "fofax": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "formbricks": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "forumium": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "foundry": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "framework": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "frappe-builder": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "frappe-claude-skill-package": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "frappe-helpdesk": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "frappe": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "free-telegram-store-bot": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "freeitsm": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "freeodwiki": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "freshrss": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "frontend-developer-coding-challenge": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "frosty": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "fspec": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "ganttproject": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "gdevelop": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "geoflow": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "gfile": {
+      "clicks": 0,
+      "impressions": 52
+    },
+    "giraffile": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "git-stats": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "git-team": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "github-blog": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "github-issue-due-dates-action": {
+      "clicks": 0,
+      "impressions": 7
+    },
+    "givewp": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "glpi": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "glyph": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "gnugk": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "go-calendar": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "go-cms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "gofi": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "gooseforum": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "goshop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "gossip": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "grafana": {
+      "clicks": 0,
+      "impressions": 6
+    },
+    "grapesjs": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "grav-plugin-admin": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "grav": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "grid-form": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "grocy": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "groupoffice": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "growi": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "halo-theme-higan-hz": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "hamstercms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "headless-ecommerce": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "hedgedoc": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "herbie": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "heyform": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "hledger-mode": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "hledger": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "honohub": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "horilla-hr": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "howm": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "hrms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "hubble-frontend-pwa": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "hubot": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "iceburgcrm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ics-tools": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "idurar-erp-crm": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "ig-harness-oss": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "ilias": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "india-compliance": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "initiative": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "innocms": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "innoshop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "insta-p8": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "intershop-pwa": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "inventory-sorter": {
+      "clicks": 0,
+      "impressions": 51
+    },
+    "inventree-part-import": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "iris3": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "iroffer-dinoex": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "itop": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "jawa": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "jeecgboot": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "jitsi-meet": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "joplin": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "jsherp": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "jsignpdf": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "jspwiki": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "just-dashboard": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "jvs-knowledge-ui": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "kaima": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kanban-markdown-vscode-extension": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "kanban-md": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kanban-python": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "kanboard": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "karchitect": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kashcal": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kb-prolog": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "kb": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "kcaldav": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "keystone": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kimai": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kingdee-k3cloud-mcp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kingdeemcp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kinvoice": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kite": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "kitsu-docker": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kiwiirc": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kmontage": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "knowledge-garden": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "knowledge": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "kompl": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "krayin-crm": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "kreserve": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "ktajp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "kun-galgame-forum": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "langwatch": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "laravel-crm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "laravel-survey": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lark": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "layra": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "le-chat-php": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "leanspec": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ledger-autosync": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lektor": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "libreoffice": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lifterlms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "limbas": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "linphone-desktop": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "linx-server": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "liveblocks": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "llm-wiki-manager": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "llm-wiki-plugin": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "llm-wiki": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "llmunity": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lobehub": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lobsters": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "logicaldoc-community": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "lookerbot": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lowcode-tools": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "lowflow-design": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "magento2-cronjobmanager": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mageos-magento2": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "magick": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "maho": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "maibot": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "mailtrain": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mangadventure": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "manufacture": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "markdeep": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "markdown-confluence": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "markdown-ninja": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "markplane": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "maui-store-app": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "maxun": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mc-magento": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "mcp-logseq": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "mcp-server-odoo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mediacms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "medusa-eats": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "medusa-mobile-react-native": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "medusa": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "meegle-cli": {
+      "clicks": 0,
+      "impressions": 6
+    },
+    "meet": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mehmetgoekce-llm-wiki": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "memo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "merchant": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "merk": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mern-ecommerce": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mern-marketplace": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "messenger-ios-chat-swift-firestore": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "metabase": {
+      "clicks": 0,
+      "impressions": 13
+    },
+    "meteor3deditor": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "metricflow": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "microweber": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mindos": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "minute": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "mirotalk": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "mirotalkwebrtc": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mizban": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "modernwms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "modulardoc": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "monadic-chat": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mongooseim": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "monica": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "moore-wechat-article-downloader": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "mosaico": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "ms365-calendar": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mumla": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "mw-config": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mybb": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "myduckserver": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "mysql-community": {
+      "clicks": 0,
+      "impressions": 28
+    },
+    "nearbeach": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nearby-transfer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nebulabroadcast-nebula": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "neofollower-smm-panel-api": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nesta": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "nextcloud-calendar": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nextcloud-deck": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "nextjs-woocommerce": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "niltalk": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nio": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nitro": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "nndeploy": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nobuf": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "noco-form": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "node-red": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "nodebb": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "nookipedia-api": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "nopcommerce": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "noteriv": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "notion-hugo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "notra": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "obsidian-base-board": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "obsidian-bases-kanban": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "obsidian-notemd": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "obsidian-pm": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "obsidian-project-planner": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "obsidian-tile-line-base": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "obsidian-to-ical-plugin": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "ocamlverse-github-io": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "ocis": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "ocular": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "officehub": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "omeka-s": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "onchat-web": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "onedev": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "onedrive-uploader": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "onionshare-android": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "online-invoice": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "open-oscar-server": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "open-pencil": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "open-reverselab": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "opencode-copilot-chat": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openconstructionerp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "opencrew": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "openemr": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "openlore": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "opennamu": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openpapyrus": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "openplace": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openresto": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openrouteservice": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openssh-portable": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "opentagviewer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "openvidu": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "operating-unit": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "operon": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "optimizerasters": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "orangehrm": {
+      "clicks": 0,
+      "impressions": 6
+    },
+    "organize": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "oshayr-llm-wiki": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "osmosmemo": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "otterwiki": {
+      "clicks": 0,
+      "impressions": 11
+    },
+    "ouijit": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ourbigbook": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "outline": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "p2p-live-share": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "paca": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "packingproof-desktop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pagescms": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "pagible": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pairdrop-android": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "panel": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "paperless-ngx": {
+      "clicks": 0,
+      "impressions": 7
+    },
+    "part-db-server": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "partykit": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "passbolt-api": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "permacoop": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "persepolis": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "php-grapesjs": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pikpaktui": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "piwigo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "plaintextaccounting": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "plandeck": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "plandev": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "plasmic": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "plik": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "portable-data-stack-dagster": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "portofino": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "pos": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "postgresql": {
+      "clicks": 0,
+      "impressions": 16
+    },
+    "poznote": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "projectile": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "psitransfer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "publii": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pureedgesim": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pydici": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "pyerp": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "python-wifi-survey-heatmap": {
+      "clicks": 0,
+      "impressions": 8
+    },
+    "qbactivator": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "quary": {
+      "clicks": 0,
+      "impressions": 9
+    },
+    "quickdav": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "r6-operator-counters": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "rabbitchat": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "rag-assistant-for-zotero": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "rclone": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "react-visual-design": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "reactive-xaf": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "redash": {
+      "clicks": 0,
+      "impressions": 28
+    },
+    "redmine-mcp-server": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "refine": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "reflection": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "renku": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "reporting-engine": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "repowiki": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "richie": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "risuai": {
+      "clicks": 0,
+      "impressions": 18
+    },
+    "robrix": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "rosariosis": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "rpub": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "rustledger": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "saea": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sag": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sahtoutcms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "saiku": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sakai": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "saleor": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "scorm-h5p-wrapper": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "scout": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "scribe-android": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "scribe": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "scrumlr-io": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "seafile": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "seeder": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "seerai": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sentient-os": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "serendipity": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "shadcn-crm-dashboard": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "sillytavern-deeplore": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sillytavern": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "silverstripe-cms": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "sim": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "simplcommerce": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "simple-data-explorer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "simplex-chat": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "single-file-wbs": {
+      "clicks": 0,
+      "impressions": 8
+    },
+    "sitepins": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "siyuan": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "skald": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "skeeks-cms-cms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "skeleton": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sky": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "skysend": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "slack-knowledge-assistant": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "small-pos-open-source": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "smf": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sml": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "smooth-files-gallery": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "social": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "socialclaw": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "solidinvoice": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "solon-ai": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "someday": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "sonicjs": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "spidergram": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "stash": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "stream-cli": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "streaming-room": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "studiocms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "suitecrm": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "sunmao-ui": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "super-productivity": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "superset": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "surveybrainbody": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "sveltia-cms": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "swe-agent": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sylius-standard": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "sylius": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "synaplan": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "syncthing-macos": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "talkyard": {
+      "clicks": 0,
+      "impressions": 7
+    },
+    "task-board": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "taskosaur": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tasks-md": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "teable": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tego": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "texlyre-infrastructure": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "three-editor": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tigase-server": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "tiki": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "time-series-reasoning-survey": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "time-to-leave": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "timetree-exporter": {
+      "clicks": 0,
+      "impressions": 16
+    },
+    "tock": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "towncrier": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tranzit": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "trello-cli": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tribe": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "trilium": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tryoffdiff": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "turbo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "tuwunel": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "twenty-crm-mcp-server": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "twitch-tui": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "tymeslot": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "typedb-studio": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "typedb": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "typemill": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "typo3": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ui-builder": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "uigo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ujcms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "umbraco-cms": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "unbody": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "understand-anything": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "uniboard": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "upgopher": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "v6-dooring-public": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vcs-game-maker": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vdirsyncer": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "vedastro": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "velociraptor": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vim-chat": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "visualstudio-wakatime": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vmgl": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vnsh": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "voicevox": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "vscode-java-dependency": {
+      "clicks": 0,
+      "impressions": 12
+    },
+    "vscode-project-manager": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wagtail": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "waldiez": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wallfacer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wandbot": {
+      "clicks": 0,
+      "impressions": 4
+    },
+    "warmbly": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "warpinator-windows": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "wcf": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "webrtc-video-conference-simple-peer": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "webui-tavernai-charas": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "webwhiz": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wechatexporter": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "weektodo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wekan": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "whatsapp-ai-bot": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wiki-vim": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wikipedia-mirror": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wikit": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wikmd": {
+      "clicks": 0,
+      "impressions": 11
+    },
+    "windmill": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "winter": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wondercms": {
+      "clicks": 0,
+      "impressions": 3
+    },
+    "woonuxt": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "wq": {
+      "clicks": 0,
+      "impressions": 5
+    },
+    "wrenai": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "x-harness-oss": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "xibo": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "xsched": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "yamlist": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "yams": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "zammad": {
+      "clicks": 0,
+      "impressions": 26
+    },
+    "zero-share": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "ziit": {
+      "clicks": 0,
+      "impressions": 2
+    },
+    "zissa-wiki": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "zk": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "zulip-terminal": {
+      "clicks": 0,
+      "impressions": 1
+    },
+    "zusam": {
+      "clicks": 0,
+      "impressions": 1
+    }
+  }
 }

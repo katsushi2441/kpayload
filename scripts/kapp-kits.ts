@@ -24,6 +24,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   'krayin-crm': { id: '11e7c1d9a83d1ca3', label: 'Krayin CRM 日本語導入キットを見る', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-02-krayin-japanese-merged.html' },
   libredesk: { id: '104c05db7779a709', label: 'LibreDesk 日本語導入キットを見る' },
   'kouchou-ai': { id: '53493d74a09cfd8c', label: '広聴AI 完全ローカル導入キットを見る' },
+  codealmanac: { id: 'b81d730eb535b454', label: 'CodeAlmanac 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-codealmanac-linux-guide.html' },
   // 2026-09-04 受け皿強化4本（Google流入のあるOSS名→商品ページへの導線）
   vikunja: { id: '767ea5a2f7963f2a', label: 'Vikunja 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-vikunja-japanese-guide.html' },
   docmost: { id: '7495b31ca104b483', label: 'Docmost 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-docmost-japanese-guide.html' },
