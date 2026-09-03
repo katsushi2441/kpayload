@@ -4163,5 +4163,59 @@
     "sourceLpName": "",
     "brainUrl": "",
     "brainLabel": ""
+  },
+  {
+    "name": "CodeAlmanac",
+    "slug": "codealmanac",
+    "category": "aidev",
+    "featured": false,
+    "summary": "AIコーディングエージェントが維持する、コードベースの生きたwiki。設計判断・障害・不変条件をmarkdownでrepo内に蓄積します。",
+    "description": "CodeAlmanacは、Claude CodeやCodexなどのAIコーディングエージェントに「コードに書けない文脈」を持たせるオープンソースです。リポジトリ内のalmanac/ディレクトリにmarkdownのwikiを持ち、エージェントとの会話から知識を自動収穫(Sync)・手入れ(Garden)するバックグラウンドジョブが動きます。Y Combinator S26企業が開発。公式はmacOS専用でしたが、当社がsystemd対応を実装し本家へPR #73を提出済みで、Linuxでも当社フォークから利用できます。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "UI・ドキュメントは英語のみ。公式はmacOS専用→当社がLinux対応(systemdユーザータイマー)を実装し本家PR #73として提出済み。",
+    "officialUrl": "https://codealmanac.com",
+    "githubUrl": "https://github.com/AlmanacCode/codealmanac",
+    "lpUrl": "https://katsushi2441.github.io/vwork/articles/2026-09-03-codealmanac-linux-guide.html",
+    "useCases": [
+      {
+        "text": "AIエージェントの文脈維持"
+      },
+      {
+        "text": "設計判断・障害の記録"
+      },
+      {
+        "text": "コードベースwiki"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "codealmanac"
+      },
+      {
+        "text": "CodeAlmanac 使い方"
+      },
+      {
+        "text": "CodeAlmanac Linux"
+      },
+      {
+        "text": "Claude Code 記憶"
+      },
+      {
+        "text": "AIエージェント コンテキスト"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CodeAlmanacはLinuxで使えますか？",
+        "answer": "公式はmacOS専用(launchd依存)ですが、当社がsystemdユーザータイマー対応を実装し、本家にPR #73として提出済みです。マージまでの間は当社フォーク(katsushi2441/codealmanac のfeat/linux-systemd-schedulerブランチ)からインストールすればLinuxで動作します。"
+      },
+      {
+        "question": "何が記録されるのですか？",
+        "answer": "コードに書けない文脈——設計判断の理由、過去の障害、守るべき不変条件、ファイル横断のワークフロー——がrepo内のmarkdown wikiとして蓄積され、Gitで普通にレビューできます。"
+      }
+    ],
+    "funnel": "oss",
+    "seoTitle": "CodeAlmanacとは？使い方とLinux対応 | Kurage",
+    "seoDescription": "AIコーディングエージェント用コードベースwiki「CodeAlmanac」の仕組みと使い方。macOS専用だったLinux対応を当社が実装し本家PR提出済み。日本語解説。"
   }
 ]
