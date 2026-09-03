@@ -4217,5 +4217,135 @@
     "funnel": "oss",
     "seoTitle": "CodeAlmanacとは？使い方とLinux対応 | Kurage",
     "seoDescription": "AIコーディングエージェント用コードベースwiki「CodeAlmanac」の仕組みと使い方。macOS専用だったLinux対応を当社が実装し本家PR提出済み。日本語解説。"
+  },
+  {
+    "name": "Vikunja",
+    "slug": "vikunja",
+    "category": "project",
+    "featured": false,
+    "summary": "Todoist・Trello・Microsoft To-Doの代替になる、自社サーバーで動くタスク管理OSS。リスト／カンバン／ガント／テーブルの4ビュー、CalDAV同期、他サービスからの移行機能を備えます。",
+    "description": "Vikunja（ヴィクーニャ）はGo製のオープンソースタスク管理ツールです（AGPL-3.0・GitHubスター約5,250）。プロジェクト・期限・優先度・ラベル・担当者・添付・保存フィルタを持ち、リスト／カンバン／ガント／テーブルの4つの表示を切り替えられます。Todoist・Trello・Microsoft To-Doからのインポート、CalDAVでのスマートフォン同期、チーム共有、OpenID Connect／LDAP認証に対応します。docker最小構成（SQLite）なら5分で起動し、人数が増えたらPostgreSQLに移せます。当社の実測（v2.6.0）では日本語UIの翻訳率は91%で、残り135キーを当社が全訳し本家Crowdinへ投入を進めています。導入から日本語設定、移行、CalDAV同期、社内展開の設計までを実録記事にまとめています: https://katsushi2441.github.io/vwork/articles/2026-09-03-vikunja-japanese-guide.html",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "本家同梱の日本語は実測91%（1,246／1,364キー）。残り135キーを当社が全訳し、翻訳パッチと docker 構成を vikunja-jp(github.com/katsushi2441/vikunja-jp) で公開。本家Crowdinへ投入中。",
+    "officialUrl": "https://vikunja.io",
+    "githubUrl": "https://github.com/go-vikunja/vikunja",
+    "useCases": [
+      {
+        "text": "チームのタスク・案件管理（カンバン／ガント）"
+      },
+      {
+        "text": "Todoist・Trelloからの移行"
+      },
+      {
+        "text": "スマホ標準カレンダーとのCalDAV同期"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Vikunja 日本語"
+      },
+      {
+        "text": "Vikunja 使い方"
+      },
+      {
+        "text": "Vikunja docker"
+      },
+      {
+        "text": "Todoist 代替 OSS"
+      },
+      {
+        "text": "Trello 代替 セルフホスト"
+      },
+      {
+        "text": "タスク管理 OSS 自社サーバー"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Vikunjaは日本語で使えますか？",
+        "answer": "使えます。設定のローカライズで日本語を選ぶだけです。翻訳率は実測91%で、残りの英語を消す翻訳パッチを当社が vikunja-jp で公開し、本家Crowdinへも投入を進めています。"
+      },
+      {
+        "question": "Todoist や Trello から移行できますか？",
+        "answer": "できます。設定の「他のサービスからのインポート」でTodoist・Trello・Microsoft To-Doから取り込めます。完了タスクの扱いと担当者のメール突合が要点です。"
+      },
+      {
+        "question": "サーバーの要件は？",
+        "answer": "docker が動くLinuxサーバー1台で足ります。最小構成はSQLiteでDBサーバー不要、人数が増えたらPostgreSQLに切り替えられます。"
+      },
+      {
+        "question": "スマホで使えますか？",
+        "answer": "CalDAVを内蔵しているので、iPhoneのリマインダーやAndroid(DAVx⁵)、Thunderbirdと同期できます。実測で動作を確認しています。"
+      }
+    ],
+    "sourceLpName": "Todoist・Trelloの代替を自社サーバーに",
+    "funnel": "oss",
+    "seoTitle": "Vikunjaとは｜Todoist・Trello代替の自社サーバー型タスク管理OSS・日本語導入",
+    "seoDescription": "Vikunjaはカンバン・ガント・CalDAV同期を備えたタスク管理OSS。docker5分起動、日本語翻訳率91%と当社の翻訳パッチ、Todoist/Trello移行、社内展開の勘所を実測で解説。"
+  },
+  {
+    "name": "Docmost",
+    "slug": "docmost",
+    "category": "knowledge",
+    "featured": false,
+    "summary": "Notion・Confluenceの代替になる、自社サーバーで動く社内Wiki・ドキュメント共有OSS。リアルタイム共同編集、スペース、ページ階層、Draw.io/Excalidraw/Mermaidの図、全文検索、Markdown入出力を備えます。",
+    "description": "DocmostはTypeScript製のオープンソースWiki（AGPL-3.0・GitHubスター約21,500）。スペース（部署単位の本棚）とページ階層で文書を整理し、複数人で同時編集できます。docker3コンテナ（本体＋PostgreSQL＋Redis）で数分で起動。無料のCommunity版で共同編集・スペース・全文検索・Markdown入出力・公開共有まで使え、SSO・細かい権限・Confluence直接インポートは有料版です。当社の実測（v0.95.0）では日本語UIは翻訳率100%。ただし日本語の全文検索は複合語（例:「議事録」「契約更新」）を拾えないことがあり、タイトルに空白を入れる・キーワード行を置く等の書き方で回避できます。導入・日本語設定・検索対策・移行・社内展開の設計を実録記事にまとめています: https://katsushi2441.github.io/vwork/articles/2026-09-03-docmost-japanese-guide.html",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "本家同梱の日本語は実測100%（1,339／1,339キー）。設定で日本語を選ぶだけ。ただし日本語全文検索に複合語の穴があり、当社の書き方規約で回避（記事参照）。",
+    "officialUrl": "https://docmost.com",
+    "githubUrl": "https://github.com/docmost/docmost",
+    "useCases": [
+      {
+        "text": "社内Wiki・手順書・議事録の共有"
+      },
+      {
+        "text": "Notion・Confluenceからの移行"
+      },
+      {
+        "text": "部署ごとのスペースと権限管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Docmost 日本語"
+      },
+      {
+        "text": "Docmost 使い方"
+      },
+      {
+        "text": "Docmost docker"
+      },
+      {
+        "text": "Notion 代替 OSS"
+      },
+      {
+        "text": "Confluence 代替 セルフホスト"
+      },
+      {
+        "text": "社内Wiki OSS 自社サーバー"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Docmostは日本語で使えますか？",
+        "answer": "使えます。翻訳率は実測100%で、設定の言語で日本語を選ぶだけです。日本語の全文検索には複合語の穴があるため、タイトルに空白を入れるなどの書き方で補います。"
+      },
+      {
+        "question": "Notion や Confluence から移行できますか？",
+        "answer": "NotionはMarkdown書き出し→無料版のMarkdownインポートで完結します。Confluenceは有料版の直接インポートか、HTML書き出しからの変換です。"
+      },
+      {
+        "question": "無料版でどこまで使えますか？",
+        "answer": "リアルタイム共同編集・スペース・全文検索・Markdown/HTML入出力・公開共有・メール通知まで無料です。SSO・細かい権限・AI・Confluence直接インポートは有料版です。"
+      },
+      {
+        "question": "サーバーの要件は？",
+        "answer": "dockerが動くLinuxサーバー1台。本体・PostgreSQL・Redisの3コンテナで、添付はS3互換ストレージにも逃がせます。"
+      }
+    ],
+    "sourceLpName": "Notion・Confluenceの代替を自社サーバーに",
+    "funnel": "oss",
+    "seoTitle": "Docmostとは｜Notion・Confluence代替の自社サーバー型社内Wiki OSS・日本語導入",
+    "seoDescription": "Docmostは共同編集・スペース・全文検索を備えた社内Wiki OSS。docker数分起動、日本語UI100%、日本語検索の穴と対策、Notion/Confluence移行、無料版と有料版の境界を実測で解説。"
   }
 ]

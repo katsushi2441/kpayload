@@ -6229,85 +6229,6 @@
     "jaSamplePaths": []
   },
   {
-    "name": "Docmost",
-    "slug": "docmost",
-    "category": "knowledge",
-    "funnel": "oss",
-    "kind": "business-app",
-    "summary": "社内向けのナレッジ共有やドキュメント管理ができるオープンソースのWikiソフトウェアです。",
-    "description": "Docmostは、共同編集が可能なWikiおよびドキュメント作成のためのオープンソースソフトウェアです。ConfluenceやNotionといった商用ツールの代替として利用できる機能を備えています。知識ベースの構築やドキュメントの整理に特化しており、チームでの情報共有を円滑にします。TypeScriptで開発されており、Draw.ioやMiroのような図面描画機能との連携も考慮されています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "日本語ファイルが一部のみ",
-    "officialUrl": "https://docmost.com",
-    "githubUrl": "https://github.com/docmost/docmost",
-    "featured": false,
-    "stars": 21433,
-    "language": "TypeScript",
-    "githubCreatedAt": "2023-08-03T15:35:48Z",
-    "githubPushedAt": "2026-08-21T18:29:35Z",
-    "useCases": [
-      {
-        "text": "社内Wikiの構築"
-      },
-      {
-        "text": "技術ドキュメントの管理"
-      },
-      {
-        "text": "ナレッジベースの作成"
-      },
-      {
-        "text": "プロジェクト情報の共有"
-      },
-      {
-        "text": "チーム内での共同編集"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "Confluence代替"
-      },
-      {
-        "text": "Notion代替"
-      },
-      {
-        "text": "Wikiソフト"
-      },
-      {
-        "text": "ドキュメント管理"
-      },
-      {
-        "text": "ナレッジベース"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "このソフトウェアは何ができるツールですか？",
-        "answer": "Docmostは、チームで共同編集ができるWikiやドキュメントを管理するためのオープンソースソフトウェアです。情報の集約や知識の共有を行うためのプラットフォームとして機能します。"
-      },
-      {
-        "question": "ConfluenceやNotionとの違いは何ですか？",
-        "answer": "Docmostは、ConfluenceやNotionといった商用ツールの代替となるオープンソースの選択肢として提供されています。同様のドキュメント管理や共同編集の機能を備えています。"
-      },
-      {
-        "question": "どのような技術で構築されていますか？",
-        "answer": "このソフトウェアはTypeScriptを用いて開発されています。また、Draw.ioやMiroといった図面描画ツールに関連するトピックも含まれています。"
-      },
-      {
-        "question": "主な用途は何ですか？",
-        "answer": "主にドキュメントの作成、知識ベース（ナレッジベース）の構築、およびチーム内での共同作業における情報共有などに利用されます。"
-      }
-    ],
-    "jaFileCount": 2,
-    "jaSamplePaths": [
-      {
-        "text": "apps/client/public/locales/ja-JP"
-      },
-      {
-        "text": "apps/client/public/locales/ja-JP/translation.json"
-      }
-    ]
-  },
-  {
     "name": "Wekan",
     "slug": "wekan",
     "category": "project",
@@ -19491,85 +19412,6 @@
       },
       {
         "text": "languages/i18n/botpasswords/ja.json"
-      }
-    ]
-  },
-  {
-    "name": "Vikunja",
-    "slug": "vikunja",
-    "category": "project",
-    "funnel": "oss",
-    "kind": "business-app",
-    "summary": "独自のサーバー環境で運用できるタスク管理アプリケーションです。",
-    "description": "vikunjaは、ユーザーが所有権を保持した状態で利用できるタスクマネージャーです。セルフホストに対応しており、自前のサーバー上で動作させることが可能です。プロジェクト管理やToDoリストの作成、進捗管理といった基本的な機能を提供します。Go言語とVue.jsで構築されており、APIも公開されています。",
-    "license": "AGPL-3.0",
-    "japaneseStatus": "日本語ファイルが一部のみ",
-    "officialUrl": "https://vikunja.io",
-    "githubUrl": "https://github.com/go-vikunja/vikunja",
-    "featured": false,
-    "stars": 5130,
-    "language": "Go",
-    "githubCreatedAt": "2018-11-28T19:52:27Z",
-    "githubPushedAt": "2026-08-22T01:45:10Z",
-    "useCases": [
-      {
-        "text": "プロジェクト全体のタスク管理"
-      },
-      {
-        "text": "個人のToDoリスト作成"
-      },
-      {
-        "text": "セルフホスト環境でのタスク管理"
-      },
-      {
-        "text": "APIを利用した外部システム連携"
-      },
-      {
-        "text": "チーム内での業務進捗の共有"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "タスク管理"
-      },
-      {
-        "text": "プロジェクト管理"
-      },
-      {
-        "text": "TODOリスト"
-      },
-      {
-        "text": "セルフホスト"
-      },
-      {
-        "text": "Go言語"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "このソフトウェアの主な特徴は何ですか？",
-        "answer": "ユーザー自身が所有権を持ち、自前のサーバーに構築して運用できる「セルフホスト」可能なタスクマネージャーである点が大きな特徴です。"
-      },
-      {
-        "question": "どのような技術で開発されていますか？",
-        "answer": "バックエンドにはGo言語、フロントエンドにはVue.jsが採用されており、APIも提供されているため柔軟な連携が可能です。"
-      },
-      {
-        "question": "タスク管理以外にできることはありますか？",
-        "answer": "プロジェクトマネジメント機能が含まれているため、単なるToDoリストとしてだけでなく、より大きなプロジェクトの管理にも活用できます。"
-      },
-      {
-        "question": "ライセンスはどうなっていますか？",
-        "answer": "このソフトウェアはAGPL-3.0ライセンスの下で提供されています。利用にあたってはライセンスの詳細を確認してください。"
-      }
-    ],
-    "jaFileCount": 2,
-    "jaSamplePaths": [
-      {
-        "text": "frontend/src/i18n/lang/ja-JP.json"
-      },
-      {
-        "text": "pkg/i18n/lang/ja-JP.json"
       }
     ]
   },
@@ -38089,7 +37931,7 @@
     ]
   },
   {
-    "name": "decidim",
+    "name": "Decidim",
     "slug": "decidim",
     "category": "civic",
     "funnel": "oss",
@@ -42409,7 +42251,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "consuldemocracy",
+    "name": "Consul Democracy",
     "slug": "consuldemocracy",
     "category": "civic",
     "funnel": "oss",
@@ -49150,7 +48992,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "polis",
+    "name": "Pol.is",
     "slug": "polis",
     "category": "civic",
     "funnel": "oss",
@@ -56635,6 +56477,80 @@
     "jaSamplePaths": []
   },
   {
+    "name": "DrWatson.jl",
+    "slug": "drwatson-jl",
+    "category": "automation",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "科学的調査やプロジェクトを支援するアシスタントツールです。",
+    "description": "DrWatson.jlは、科学的な問いに対する調査や研究活動をサポートするためのサイドキックとして設計されています。プロジェクト管理やシミュレーションのセットアップなど、研究プロセスにおける様々な工程を支援します。Julia言語で構築されており、高度な計算を必要とする科学分野での活用に適しています。プロジェクトのアシスタントとして機能し、研究者のワークフローを円滑に進めるためのツールを提供します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://juliadynamics.github.io/DrWatson.jl/stable/",
+    "githubUrl": "https://github.com/JuliaDynamics/DrWatson.jl",
+    "featured": false,
+    "stars": 930,
+    "language": "Julia",
+    "githubCreatedAt": "2019-01-29T16:05:41Z",
+    "githubPushedAt": "2026-07-05T18:21:51Z",
+    "useCases": [
+      {
+        "text": "科学的調査のサポート"
+      },
+      {
+        "text": "プロジェクト管理"
+      },
+      {
+        "text": "シミュレーションのセットアップ"
+      },
+      {
+        "text": "科学研究の支援"
+      },
+      {
+        "text": "研究プロセスの効率化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Julia"
+      },
+      {
+        "text": "科学研究"
+      },
+      {
+        "text": "プロジェクト管理"
+      },
+      {
+        "text": "シミュレーション"
+      },
+      {
+        "text": "セットアップツール"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような目的で使用されますか？",
+        "answer": "主に科学的な調査や研究活動をサポートするためのアシスタントとして設計されています。プロジェクトの管理や、シミュレーションを実行するためのセットアップなど、研究に関連する様々な工程を支援するために使用されます。"
+      },
+      {
+        "question": "どのプログラミング言語で動作しますか？",
+        "answer": "このソフトウェアはJuliaというプログラミング言語で構築されています。科学計算や数値解析に強みを持つ言語であり、高度なシミュレーションやデータ処理を行う環境に適しています。"
+      },
+      {
+        "question": "プロジェクト管理機能にはどのようなものがありますか？",
+        "answer": "具体的な項目については詳細な記述はありませんが、プロジェクトのアシスタントとして、研究や調査の進捗を管理するためのツールが含まれていることが示されています。"
+      },
+      {
+        "question": "科学以外の分野でも利用できますか？",
+        "answer": "説明文では「科学的な問い（scientific inquiries）」へのサポートが強調されています。主なトピックには科学研究やシミュレーションが含まれており、それらの分野での活用を想定した設計となっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "safebucket",
     "slug": "safebucket",
     "category": "dms",
@@ -61591,81 +61507,6 @@
     "jaSamplePaths": []
   },
   {
-    "name": "codealmanac",
-    "slug": "codealmanac",
-    "category": "aidev",
-    "funnel": "prototype",
-    "kind": "dev-tool",
-    "summary": "AIコーディングエージェント向けのコードベースWikiです。",
-    "description": "このツールは、コード自体からは読み取ることが難しい意思決定の経緯や処理の流れ、不変条件、注意点などを記録するためのWikiです。AIコーディングエージェントがより正確にプロジェクトを理解できるように設計されています。TypeScriptで構築されており、開発者が効率的にドキュメントを管理できる環境を提供します。複雑なコードベースにおいて、人間とAIの両方にとって重要なコンテキストを補完する役割を果たします。",
-    "license": "Apache-2.0",
-    "japaneseStatus": "日本語ファイルなし",
-    "officialUrl": "https://codealmanac.com",
-    "githubUrl": "https://github.com/AlmanacCode/codealmanac",
-    "featured": false,
-    "stars": 804,
-    "language": "TypeScript",
-    "githubCreatedAt": "2026-04-16T05:31:42Z",
-    "githubPushedAt": "2026-07-25T00:00:46Z",
-    "useCases": [
-      {
-        "text": "AIコーディングエージェントへのコンテキスト提供"
-      },
-      {
-        "text": "設計上の意思決定の記録"
-      },
-      {
-        "text": "複雑な処理フローのドキュメント化"
-      },
-      {
-        "text": "開発時の注意点（Gotchas）の共有"
-      },
-      {
-        "text": "コードベースの不変条件の定義"
-      }
-    ],
-    "keywords": [
-      {
-        "text": "AI"
-      },
-      {
-        "text": "Claude"
-      },
-      {
-        "text": "CLI"
-      },
-      {
-        "text": "Codebase"
-      },
-      {
-        "text": "Coding-agents"
-      },
-      {
-        "text": "Developer-tools"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "このツールは何を記録するためのものですか？",
-        "answer": "コードから直接読み取ることが難しい、設計上の意思決定、処理の流れ、システム的な制約（不変条件）、および開発者が注意すべき落とし穴などを記録するために使用します。"
-      },
-      {
-        "question": "主な対象者は誰ですか？",
-        "answer": "主にAIコーディングエージェントを活用してソフトウェア開発を行うエンジニアや、複雑なコードベースのドキュメントを整理したい開発チームが対象です。"
-      },
-      {
-        "question": "どのような技術スタックで提供されていますか？",
-        "answer": "このプロジェクトはTypeScriptで記述されており、Apache-2.0ライセンスの下で公開されているオープンソースソフトウェアです。"
-      },
-      {
-        "question": "なぜ通常のドキュメントではなくこれが必要なのですか？",
-        "answer": "AIエージェントがより正確にコードを理解し、適切な修正や生成を行えるようにするためには、単なるコードの構造だけでなく、背景にある意図や制約を体系的に伝える必要があるためです。Goals"
-      }
-    ],
-    "jaFileCount": 0,
-    "jaSamplePaths": []
-  },
-  {
     "name": "go-drive",
     "slug": "go-drive",
     "category": "dms",
@@ -62824,7 +62665,97 @@
     "jaSamplePaths": []
   },
   {
-    "name": "civicrm-core",
+    "name": "receiptline",
+    "slug": "receiptline",
+    "category": "media",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Markdown形式で領収書を生成するためのツールです。",
+    "description": "Markdown記法を用いてデジタル領収書を作成できるソフトウェアです。印刷可能なデータとして出力するだけでなく、レシートプリンター用のコマンドや画像ファイル（PNG）の生成も可能です。JavaScriptで構築されており、特定のハードウェアへの対応も含まれています。開発者はこのツールを活用して、独自の領収書発行システムを効率的に構築できます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://github.com/receiptline/receiptline",
+    "githubUrl": "https://github.com/receiptline/receiptline",
+    "featured": false,
+    "stars": 772,
+    "language": "JavaScript",
+    "githubCreatedAt": "2020-06-09T11:04:58Z",
+    "githubPushedAt": "2026-07-31T14:12:08Z",
+    "useCases": [
+      {
+        "text": "デジタル領収書の作成"
+      },
+      {
+        "text": "レシートプリンター用コマンドの生成"
+      },
+      {
+        "text": "PNG形式での領収書画像出力"
+      },
+      {
+        "text": "キオスク端末での領収書発行"
+      },
+      {
+        "text": "キッチン用表示システムの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "Markdown"
+      },
+      {
+        "text": "領収書"
+      },
+      {
+        "text": "レシートプリンター"
+      },
+      {
+        "text": "ESC/POS"
+      },
+      {
+        "text": "画像生成"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような形式で入力しますか？",
+        "answer": "Markdown記法を使用して内容を入力します。これにより、構造化されたテキストを簡単に領収書のレイアウトに変換することが可能です。"
+      },
+      {
+        "question": "出力できるファイル形式は何ですか？",
+        "answer": "印刷可能なデジタル領収書に加え、レシートプリンター用のコマンドやPNG画像として出力することが可能です。"
+      },
+      {
+        "question": "特定のプリンターに対応していますか？",
+        "answer": "説明文にはepsonやescposといったトピックが含まれており、これらの規格に関連するコマンドの生成に対応しています。"
+      },
+      {
+        "question": "どのような技術で動いていますか？",
+        "answer": "JavaScriptを主な言語として使用しており、Web環境やNode.jsなどの実行環境で活用できる構成になっています。铵"
+      }
+    ],
+    "jaFileCount": 28,
+    "jaSamplePaths": [
+      {
+        "text": "example/cloud/ja_epson_sdp.js"
+      },
+      {
+        "text": "example/cloud/ja_star_cloudprnt.js"
+      },
+      {
+        "text": "example/data/ja"
+      },
+      {
+        "text": "example/data/ja/column_border1.receipt"
+      },
+      {
+        "text": "example/data/ja/column_border2.receipt"
+      }
+    ]
+  },
+  {
+    "name": "CiviCRM",
     "slug": "civicrm-core",
     "category": "civic",
     "funnel": "oss",
@@ -80416,6 +80347,83 @@
       {
         "question": "ライセンスはどうなっていますか？",
         "answer": "このソフトウェアはBSD-3-Clauseライセンスの下で公開されています。オープンソースとして利用可能な条件で提供されています。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "laravel-blog",
+    "slug": "laravel-blog",
+    "category": "lowcode",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Laravelウェブサイトにブログ機能を簡単に追加できるCMSパッケージです。",
+    "description": "このツールは、PHPのフレームワークであるLaravelを使用して構築されたウェブサイトにブログシステムを統合するためのものです。Laravel Blog Packageとして提供されており、既存のアプリケーションにブログ機能を追加する最も簡単な方法の一つです。管理画面（admin）やコンテンツ管理システム（CMS）としての機能を備えています。開発者はこのパッケージを利用することで、ゼロからブログ機能を実装する手間を省くことができます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.binshops.com",
+    "githubUrl": "https://github.com/binshops/laravel-blog",
+    "featured": false,
+    "stars": 485,
+    "language": "PHP",
+    "githubCreatedAt": "2020-04-16T15:47:55Z",
+    "githubPushedAt": "2025-04-16T12:32:04Z",
+    "useCases": [
+      {
+        "text": "Laravelサイトへのブログ機能追加"
+      },
+      {
+        "text": "CMS機能の実装"
+      },
+      {
+        "text": "ブログ記事の管理システムの構築"
+      },
+      {
+        "text": "PHPベースのWebアプリケーション拡張"
+      },
+      {
+        "text": "コンテンツ管理基盤の導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "laravel"
+      },
+      {
+        "text": "blog"
+      },
+      {
+        "text": "cms"
+      },
+      {
+        "text": "php"
+      },
+      {
+        "text": "laravel-package"
+      },
+      {
+        "text": "admin"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは単体で動作するアプリですか？",
+        "answer": "いいえ、これはLaravelフレームワーク上で動作するパッケージです。既存のLaravelアプリケーションに組み込んで使用することを前提としています。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "ブログシステムを構築するための主要な機能が含まれており、特に管理画面やコンテンツ管理（CMS）としての側面を備えています。"
+      },
+      {
+        "question": "導入にはプログラミングの知識が必要ですか？",
+        "answer": "Laravelフレームワークを使用しているため、基本的にはPHPおよびLaravelの知識を持つ開発者が導入・設定を行う必要があります。"
+      },
+      {
+        "question": "ブログ以外の用途にも使えますか？",
+        "answer": "説明文ではブログシステムへの追加が主な目的とされていますが、CMSとしての側面も持っているため、コンテンツ管理の仕組みとして活用可能です。Goals"
       }
     ],
     "jaFileCount": 0,
@@ -131886,7 +131894,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "kouchou-ai",
+    "name": "広聴AI",
     "slug": "kouchou-ai",
     "category": "civic",
     "funnel": "prototype",
@@ -143034,6 +143042,80 @@
     "jaSamplePaths": []
   },
   {
+    "name": "xmpp",
+    "slug": "xmpp",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Go言語で実装されたXMPPプロトコルのソフトウェアです。",
+    "description": "このソフトウェアは、拡張可能なメッセージングおよびプレゼンスプロトコル（XMPP）をGo言語で実装したものです。チャットやJabberといった通信規格に対応しています。開発者が独自のメッセージングシステムを構築するための基盤として利用されます。BSD-2-Clauseライセンスの下で提供されています。",
+    "license": "BSD-2-Clause",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://pkg.go.dev/mellium.im/xmpp",
+    "githubUrl": "https://github.com/mellium/xmpp",
+    "featured": false,
+    "stars": 140,
+    "language": "Go",
+    "githubCreatedAt": "2018-02-24T19:19:45Z",
+    "githubPushedAt": "2025-11-20T02:09:55Z",
+    "useCases": [
+      {
+        "text": "独自チャットシステムの構築"
+      },
+      {
+        "text": "XMPPプロトコルの実装"
+      },
+      {
+        "text": "Go言語を用いたメッセージングサーバーの開発"
+      },
+      {
+        "text": "Jabber互換の通信機能の実装"
+      },
+      {
+        "text": "リアルタイムなプレゼンス情報の管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chat"
+      },
+      {
+        "text": "jabber"
+      },
+      {
+        "text": "xmpp"
+      },
+      {
+        "text": "Go"
+      },
+      {
+        "text": "messaging protocol"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアはそのままチャットアプリとして使えますか？",
+        "answer": "このソフトウェアはXMPPプロトコルの実装であり、開発者がシステムを構築するためのツールです。単体で完成したユーザーインターフェースを持つ業務アプリではありません。"
+      },
+      {
+        "question": "どのプログラミング言語を使用していますか？",
+        "answer": "このソフトウェアはGo言語（Golang）を使用して実装されています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "BSD-2-Clauseライセンスの下で公開されています。"
+      },
+      {
+        "question": "XMPPとはどのようなものですか？",
+        "answer": "拡張可能なメッセージングおよびプレゼンスプロトコル（Extensible Messaging and Presence Protocol）の略称です。チャットやJabberなどの通信規格として利用されます。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "onedrive-uploader",
     "slug": "onedrive-uploader",
     "category": "aidev",
@@ -153431,7 +153513,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "polimoney",
+    "name": "Polimoney",
     "slug": "polimoney",
     "category": "civic",
     "funnel": "oss",
@@ -159020,6 +159102,83 @@
       {
         "question": "ライセンスはどうなっていますか？",
         "answer": "MITライセンスで公開されているため、内容を確認しながら自由な範囲で活用することが可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "django-admin-collaborator",
+    "slug": "django-admin-collaborator",
+    "category": "lowcode",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "Django管理画面でWebSocketsを用いたリアルタイムな共同編集を可能にするツールです。",
+    "description": "このソフトウェアは、Djangoの管理画面において複数のユーザーが同時にコンテンツを編集できる機能を提供します。WebSocketsを利用することで、リアルタイムな共同編集を実現しています。主な技術スタックとしてASGIやDjango Channelsが含まれており、並行的な編集操作に対応しています。JavaScriptを用いてフロントエンドの動作を制御し、スムーズな共同作業環境を構築します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://pypi.org/project/django-admin-collaborator/",
+    "githubUrl": "https://github.com/Brktrlw/django-admin-collaborator",
+    "featured": false,
+    "stars": 104,
+    "language": "JavaScript",
+    "githubCreatedAt": "2025-04-08T09:37:39Z",
+    "githubPushedAt": "2026-05-12T08:22:40Z",
+    "useCases": [
+      {
+        "text": "Django管理画面での複数人同時編集"
+      },
+      {
+        "text": "リアルタイムなコンテンツ更新の共有"
+      },
+      {
+        "text": "WebSocketsを活用した共同作業基盤の構築"
+      },
+      {
+        "text": "並行的なデータ入力作業の効率化"
+      },
+      {
+        "text": "Djangoプロジェクトへの共同編集機能の実装"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "django"
+      },
+      {
+        "text": "admin-interface"
+      },
+      {
+        "text": "collaboration"
+      },
+      {
+        "text": "real-time"
+      },
+      {
+        "text": "web sockets"
+      },
+      {
+        "text": "asgi"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような環境で動作しますか？",
+        "answer": "Djangoフレームワークを使用しており、WebSocketsをサポートするためのASGIおよびDjango Channelsの構成が必要です。JavaScriptを用いてフロントエンドの共同編集機能を制御します。"
+      },
+      {
+        "question": "複数のユーザーが同時に同じ箇所を編集できますか？",
+        "answer": "はい、このツールは並行的な同時編集（concurrent-editing）に対応しており、WebSocketsを通じてリアルタイムな共同編集を実現することを目的としています。"
+      },
+      {
+        "question": "管理画面以外の部分にも適用できますか？",
+        "answer": "提供されている説明に基づくと、Djangoの管理画面（admin-interface）における共同編集を主な対象としています。他のページへの適用については個別の実装を確認する必要があります。"
+      },
+      {
+        "question": "このソフトウェアのライセンスはどうなっていますか？",
+        "answer": "MITライセンスで公開されています。オープンソースソフトウェアとして利用可能です。onite_editing_limitations"
       }
     ],
     "jaFileCount": 0,
