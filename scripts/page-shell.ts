@@ -104,7 +104,7 @@ th{width:32%;color:var(--muted);font-weight:800;font-size:12px}
 .table-wrap{overflow-x:auto}
 .cta{background:linear-gradient(135deg,#e8faf6,#fff8e5);border:1px solid #bddfd9;border-radius:13px;padding:22px;margin:22px 0}
 .btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:11px;font-weight:800;text-decoration:none;font-size:14px;border:1px solid var(--line);background:#fff;margin:6px 8px 0 0}
-.btn-main{background:var(--blue);color:#fff;border-color:var(--blue)}
+.kit-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.btn-main{background:var(--blue);color:#fff;border-color:var(--blue)}
 .cat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
 .cat-card{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 15px;text-decoration:none;color:var(--ink)}
 .cat-card b{display:block;font-size:14px}.cat-card span{font-size:12px;color:var(--muted)}

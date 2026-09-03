@@ -32,7 +32,7 @@ const BASE = `${SITE}/ai-system`
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
-import { KAPP_KITS, kappKitLink } from './kapp-kits'
+import { kappKitPanel } from './kapp-kits'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
 
@@ -133,9 +133,7 @@ ${lastPush ? `<tr><th>最終更新</th><td>${h(lastPush)}</td></tr>` : ''}
 
 ${demoPanel(p.slug, p.name, `ai-system-${p.slug}`)}
 
-${KAPP_KITS[p.slug] ? `<section><div class="panel"><h2>${h(p.name)}を自分で入れるなら</h2>
-<p>当社が実際に設置して詰まった箇所を含む手順一式を、Kurage App Storeで販売しています。開発を依頼せず自社で立てたい場合はこちらが早道です。</p>
-${kappKitLink(p.slug, `ai-system-${attr(p.slug)}`, 'btn btn-main')}</div></section>` : ''}
+${((kit) => (kit ? `<section><div class="panel kit">${kit}</div></section>` : ''))(kappKitPanel(p.slug, `ai-system-${attr(p.slug)}`, h(p.name)))}
 
 <section><div class="panel">
 <h2>進め方は？</h2>
