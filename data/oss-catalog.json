@@ -4543,5 +4543,525 @@
     "seoTitle": "AIショートドラマ制作OSS「Short Drama Production」｜縦型・日本語導入",
     "seoDescription": "縦型ショートドラマ・AIショートドラマを自社で作るためのオープンソース制作管制。脚本→分鏡→MiniMax H3生成→粗編集→QCを承認つきで回す。生成費は5秒約19円（当社実測）。日本語導入とカスタマイズは名古屋のエクスブリッジ。",
     "sourceLpName": "縦型ショートドラマ・SNS動画の制作（解説）"
+  },
+  {
+    "name": "QGIS",
+    "slug": "qgis",
+    "category": "gis",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "地図上で人口メッシュや到達圏を重ねて商圏分析ができる、デスクトップ型のオープンソースGISです。無料で、日本語UIが公式に含まれます。",
+    "description": "QGISは、地理情報システム（GIS）を提供する無料のオープンソースソフトウェアです。Windows、Linux、macOSといった複数のプラットフォームに対応しています。ユーザーは地図データや空間データを高度に解析・可視化することができます。C++で開発されており、豊富な機能を備えた汎用的なツールです。 商圏分析では、国勢調査の500mメッシュ統計と店舗の到達圏（バッファや道路網）を重ねて、圏内の人口・世帯・事業所を集計する使い方ができます。当社はQGISと国勢調査メッシュだけで無料の商圏分析を行う手順を記事で公開し、同じ計算を住所入力だけで行う Kurage 商圏分析 も提供しています。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://qgis.org",
+    "githubUrl": "https://github.com/qgis/QGIS",
+    "featured": false,
+    "stars": 14310,
+    "language": "C++",
+    "githubCreatedAt": "2011-05-02T08:06:26Z",
+    "githubPushedAt": "2026-08-31T19:48:55Z",
+    "useCases": [
+      {
+        "text": "出店候補地の商圏分析（人口・世帯・事業所の集計）"
+      },
+      {
+        "text": "営業エリアの設計と可視化"
+      },
+      {
+        "text": "行政の公開データ（メッシュ統計）の地図化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "商圏分析 QGIS"
+      },
+      {
+        "text": "商圏分析 無料"
+      },
+      {
+        "text": "QGIS 使い方 日本語"
+      },
+      {
+        "text": "人口メッシュ 集計"
+      },
+      {
+        "text": "GIS オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "QGISで商圏分析はできますか？",
+        "answer": "できます。国勢調査の500mメッシュ統計（e-Stat）と、店舗を中心にしたバッファまたは道路網ベースの到達圏を重ねて、圏内の人口・世帯・事業所を集計します。ソフトは無料で、日本語UIも含まれます。手順は当社の記事にまとめています。"
+      },
+      {
+        "question": "QGISと有料の商圏分析ツールの違いは？",
+        "answer": "データ（国勢調査・経済センサス）は同じ公開統計です。有料ツールは操作が整っている分、月額や年額がかかります。QGISは無料ですが操作に慣れが要るので、当社は「住所と分数だけ」で同じ計算をする Kurage 商圏分析 を買い切りで提供しています。"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "images/flags/ja.svg"
+      }
+    ]
+  },
+  {
+    "name": "PostGIS",
+    "slug": "postgis",
+    "category": "database",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "PostgreSQLで地理空間データを扱う拡張。商圏ポリゴンと人口メッシュの交差面積で按分する、商圏分析の計算基盤に使えます。",
+    "description": "PostGISは、オープンソースのデータベースであるPostgreSQLに地理空間的な機能を追加する拡張機能です。このツールを導入することで、位置情報や地図データに関する高度なクエリを実行できるようになります。主にC言語やPLpgSQLを用いて構築されており、空間データの処理に適した機能を備えています。地理空間情報システム（GIS）の開発において不可欠な基盤技術の一つです。 商圏分析では、到達圏ポリゴンと国勢調査メッシュの交差面積を求めて人口・世帯・事業所を按分する計算をSQLで行えます。Kurage 商圏分析はこの方式で全国466,145メッシュ（合計人口126,146,099人＝国勢調査総人口と一致）を扱っています。",
+    "license": "GPL-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://postgis.net",
+    "githubUrl": "https://github.com/postgis/postgis",
+    "featured": false,
+    "stars": 2216,
+    "language": "PLpgSQL",
+    "githubCreatedAt": "2012-05-22T13:31:25Z",
+    "githubPushedAt": "2026-08-31T01:39:37Z",
+    "useCases": [
+      {
+        "text": "商圏分析の集計基盤（メッシュ統計×到達圏の面積按分）"
+      },
+      {
+        "text": "住所・位置データの検索と集計"
+      },
+      {
+        "text": "地図サービスのバックエンド"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "PostGIS 商圏分析"
+      },
+      {
+        "text": "空間データベース"
+      },
+      {
+        "text": "メッシュ統計 按分"
+      },
+      {
+        "text": "GIS データベース オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PostGISは何の拡張機能ですか？",
+        "answer": "PostgreSQLデータベースに地理空間（位置情報や地図データなど）を扱うための機能を追加するための拡張機能です。"
+      },
+      {
+        "question": "どのような言語でサポートされていますか？",
+        "answer": "主にPLpgSQLなどのプログラミング言語を用いて、地理空間的な処理を記述することが可能です。"
+      },
+      {
+        "question": "このツールは単体で画面を持ちますか？",
+        "answer": "いいえ、PostGIS自体にユーザーインターフェース（画面）はありません。データベースの拡張機能として動作します。"
+      },
+      {
+        "question": "どのようなデータ形式を扱えますか？",
+        "answer": "地理空間データ（geospatial data）を扱うための機能を備えており、地図情報の管理や解析に適しています。"
+      }
+    ],
+    "jaFileCount": 5,
+    "jaSamplePaths": [
+      {
+        "text": "doc/po/ja"
+      },
+      {
+        "text": "doc/po/ja/Makefile.in"
+      },
+      {
+        "text": "doc/po/ja/glossary.tbx"
+      },
+      {
+        "text": "doc/po/ja/postgis-manual.po"
+      },
+      {
+        "text": "doc/po/ja/texstyle.sty"
+      }
+    ]
+  },
+  {
+    "name": "openrouteservice",
+    "slug": "openrouteservice",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "OpenStreetMapの道路網で経路・到達圏（isochrones）を計算できるルートプランニングAPI。商圏分析の「徒歩10分圏」を円ではなく道路網で描けます。",
+    "description": "このソフトウェアは、豊富な機能を備えたオープンソースのルートプランナーAPIを提供します。主要な機能として、経路探索（directions-api）、等時線（isochrones）、距離行列（matrix）などが含まれています。OpenStreetMap（OSM）およびrouting-engineをベースとして構築されています。Javaで開発されており、高度なルーティング機能をシステムに組み込むことが可能です。 到達圏（isochrones）のAPIを持つため、商圏分析で店舗からの徒歩・車N分圏を道路網ベースで求める用途に使えます。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://openrouteservice.org",
+    "githubUrl": "https://github.com/GIScience/openrouteservice",
+    "featured": false,
+    "stars": 1962,
+    "language": "Java",
+    "githubCreatedAt": "2017-09-11T15:49:01Z",
+    "githubPushedAt": "2026-08-31T12:26:35Z",
+    "useCases": [
+      {
+        "text": "商圏分析の到達圏（徒歩・車N分圏）計算"
+      },
+      {
+        "text": "配送・訪問の経路計画"
+      },
+      {
+        "text": "複数拠点の到達時間比較"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "到達圏 API"
+      },
+      {
+        "text": "isochrone オープンソース"
+      },
+      {
+        "text": "商圏分析 到達圏"
+      },
+      {
+        "text": "ルート検索 オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなデータに基づいてルートを計算しますか？",
+        "answer": "このツールは、オープンソースの地図データであるOpenStreetMap（OSM）を利用して経路を計画します。"
+      },
+      {
+        "question": "提供されている主な機能には何がありますか？",
+        "answer": "経路探索（directions-api）、特定の地点から一定時間内に到達できる範囲を示す等時線（isochrones）、および複数の地点間の距離や時間を算出する行列（matrix）などの機能が含まれています。"
+      },
+      {
+        "question": "このツールはどのような言語で開発されていますか？",
+        "answer": "このソフトウェアはJavaを用いて開発されています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このプロジェクトはGPL-3.0ライセンスの下で公開されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "kepler.gl",
+    "slug": "kepler-gl",
+    "category": "analytics",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "大規模な位置データをブラウザで可視化する地理空間解析ツール。商圏・エリアマーケティングの分布を地図に重ねて見るのに向きます。",
+    "description": "Kepler.glは、大規模なデータセットを扱うための高度な地理空間解析ツールを提供します。TypeScriptで構築されており、地図上でのデータの可視化に特化しています。Mapboxとの連携など、高度な空間情報の処理が可能です。オープンソースとして提供されているため、柔軟なカスタマイズや統合が期待できます。 店舗・顧客・人口の分布を地図に重ねて、商圏やエリアマーケティングの状況を可視化する用途に使えます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "http://kepler.gl",
+    "githubUrl": "https://github.com/keplergl/kepler.gl",
+    "featured": false,
+    "stars": 11994,
+    "language": "TypeScript",
+    "githubCreatedAt": "2018-02-28T21:36:16Z",
+    "githubPushedAt": "2026-08-31T19:01:20Z",
+    "useCases": [
+      {
+        "text": "商圏・顧客分布の地図可視化"
+      },
+      {
+        "text": "エリアマーケティングの分析結果の共有"
+      },
+      {
+        "text": "位置データの探索的分析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "商圏 可視化"
+      },
+      {
+        "text": "エリアマーケティング ツール オープンソース"
+      },
+      {
+        "text": "地理空間 可視化"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類のデータを扱うことができますか？",
+        "answer": "大規模なデータセットを対象とした地理空間データの分析や可視化を行うことができます。具体的なデータ形式については、ドキュメントを確認する必要がありますが、地図に関連する位置情報を含むデータに適しています。"
+      },
+      {
+        "question": "このツールは誰のためのものですか？",
+        "answer": "主に開発者やデータアナリスト向けに設計されています。単体で完結する業務アプリではなく、地理空間データの可視化基盤として機能するため、システムへの組み込みや高度な分析を行う際に活用されます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスの下で提供されているオープンソースソフトウェアです。これにより、商用利用を含めた幅広い用途での活用が可能となっています。"
+      },
+      {
+        "question": "Mapboxとの関係はどのようなものですか？",
+        "answer": "このツールはMapboxに関連するトピックとして分類されており、地図のレンダリングや地理空間データの表示において、Mapboxの技術を活用した高度な可視化を実現します。Goals"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "src/localization/src/translations/ja.ts"
+      }
+    ]
+  },
+  {
+    "name": "Valhalla",
+    "slug": "valhalla",
+    "category": "gis",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "OpenStreetMap用の経路探索エンジン。到達圏（isochrone）APIで「徒歩10分圏」を道路網ベースで描けるため、商圏分析の到達圏計算に使えます。",
+    "description": "Valhalla（MIT）は経路探索・行列・到達圏（isochrone）のAPIを持つC++製のルーティングエンジンです。商圏分析では、店舗を中心に徒歩・車N分で到達できる範囲を円ではなく道路網で求める用途に使えます。Kurage 商圏分析は到達圏の計算にValhallaを採用し、当社のサーバーで日本全国の道路網を動かしています（2026年9月時点・GitHubスター約6,100）。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://valhalla.github.io/valhalla/",
+    "githubUrl": "https://github.com/valhalla/valhalla",
+    "stars": 6159,
+    "language": "C++",
+    "githubCreatedAt": "2016-01-19T00:00:00Z",
+    "githubPushedAt": "2026-09-02T00:00:00Z",
+    "useCases": [
+      {
+        "text": "商圏分析の到達圏（徒歩・車N分圏）計算"
+      },
+      {
+        "text": "配送・訪問経路の最適化"
+      },
+      {
+        "text": "地図サービスの経路検索"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "到達圏 計算 オープンソース"
+      },
+      {
+        "text": "isochrone"
+      },
+      {
+        "text": "商圏分析 道路網"
+      },
+      {
+        "text": "ルーティングエンジン OpenStreetMap"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Valhallaで商圏分析の到達圏は作れますか？",
+        "answer": "作れます。isochrone APIに店舗の緯度経度と時間（例: 徒歩10分）を渡すと、道路網ベースの到達範囲がポリゴンで返ります。Kurage 商圏分析はこの方式で到達圏を描き、国勢調査メッシュと重ねて人口を集計しています。"
+      },
+      {
+        "question": "日本の道路データで動きますか？",
+        "answer": "動きます。OpenStreetMapの日本データを取り込んでタイルを作れば、全国の徒歩・車の到達圏を計算できます。当社は自社サーバーで日本全国分を運用しています。"
+      }
+    ]
+  },
+  {
+    "name": "pgRouting",
+    "slug": "pgrouting",
+    "category": "gis",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "PostGISに経路探索を足す拡張。pgr_drivingDistance で到達圏をSQLで求められ、商圏分析の集計をデータベース内で完結できます。",
+    "description": "pgRouting（GPL-2.0）はPostgreSQL/PostGIS上で最短経路や到達距離（driving distance）を計算する拡張です。商圏分析では、道路網を取り込んだうえで店舗からN分で到達できるノードを求め、その範囲で人口メッシュを集計する、という流れをSQLだけで組めます（2026年9月時点・GitHubスター約1,400）。",
+    "license": "GPL-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://pgrouting.org/",
+    "githubUrl": "https://github.com/pgRouting/pgrouting",
+    "stars": 1428,
+    "language": "C++",
+    "githubCreatedAt": "2010-11-04T00:00:00Z",
+    "githubPushedAt": "2026-08-22T00:00:00Z",
+    "useCases": [
+      {
+        "text": "商圏分析の到達圏をSQLで計算"
+      },
+      {
+        "text": "配送圏・サービス提供圏の設計"
+      },
+      {
+        "text": "道路網データの経路解析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "pgRouting 到達圏"
+      },
+      {
+        "text": "商圏分析 PostGIS"
+      },
+      {
+        "text": "driving distance"
+      },
+      {
+        "text": "経路探索 データベース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "pgRoutingで商圏の到達圏を出すには？",
+        "answer": "道路網をPostGISに取り込み、pgr_drivingDistance に出発点とコスト（時間や距離）を渡すと、到達できるノード群が返ります。それを外形にして人口メッシュと交差させれば、SQLだけで商圏の集計まで完結します。"
+      }
+    ]
+  },
+  {
+    "name": "OSMnx",
+    "slug": "osmnx",
+    "category": "gis",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "OpenStreetMapの道路網をPythonで取得・解析するライブラリ。徒歩N分の到達圏（isochrone）地図を数十行で作れ、商圏分析の試作に向きます。",
+    "description": "OSMnx（MIT）は道路網の取得・モデル化・解析・可視化をPythonで行うライブラリです。公式の例に到達圏（isochrone）地図の作成があり、商圏分析の「徒歩10分圏に何があるか」をノートブックで素早く試せます（2026年9月時点・GitHubスター約5,800）。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://osmnx.readthedocs.io/",
+    "githubUrl": "https://github.com/gboeing/osmnx",
+    "stars": 5837,
+    "language": "Python",
+    "githubCreatedAt": "2016-07-24T00:00:00Z",
+    "githubPushedAt": "2026-07-31T00:00:00Z",
+    "useCases": [
+      {
+        "text": "商圏分析の試作（到達圏地図）"
+      },
+      {
+        "text": "道路網・施設データの取得と解析"
+      },
+      {
+        "text": "都市・エリアの歩行圏分析"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "osmnx 到達圏"
+      },
+      {
+        "text": "商圏分析 Python"
+      },
+      {
+        "text": "isochrone python"
+      },
+      {
+        "text": "道路網 解析 オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "OSMnxは商圏分析の本番に使えますか？",
+        "answer": "試作と検証に向きます。数十行のPythonで到達圏地図が作れるので、候補地の比較やロジックの確認に使い、本番はValhallaやpgRoutingのようなサーバー型に移すのが当社の進め方です。"
+      }
+    ]
+  },
+  {
+    "name": "H3",
+    "slug": "h3",
+    "category": "gis",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "地球を六角形のグリッドに分けて位置を索引する仕組み。人口や売上を六角形単位で集計・比較でき、商圏分析やエリアマーケティングの単位に使えます。",
+    "description": "H3（Apache-2.0）はUber発の六角形階層グリッドです。商圏分析では、人口メッシュや顧客の位置を六角形セルに集計して、店舗ごとの商圏の重なりやエリア間の比較を同じ単位で行えます。多くの言語向けバインディングがあります（2026年9月時点・GitHubスター約6,500）。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://h3geo.org/",
+    "githubUrl": "https://github.com/uber/h3",
+    "stars": 6521,
+    "language": "C",
+    "githubCreatedAt": "2017-12-21T00:00:00Z",
+    "githubPushedAt": "2026-09-03T00:00:00Z",
+    "useCases": [
+      {
+        "text": "商圏・エリアマーケティングの集計単位"
+      },
+      {
+        "text": "顧客・売上の位置データの集約"
+      },
+      {
+        "text": "需要の地図可視化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "H3 六角形グリッド"
+      },
+      {
+        "text": "商圏分析 集計"
+      },
+      {
+        "text": "エリアマーケティング 分析"
+      },
+      {
+        "text": "地理空間 索引"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "H3は商圏分析でどう使いますか？",
+        "answer": "人口や顧客の位置を六角形セルに集計して、店舗ごとの商圏の重なりやエリア間の比較を同じ単位で行います。円や行政区画より均質に比べられるのが利点です。"
+      }
+    ]
+  },
+  {
+    "name": "Nominatim",
+    "slug": "nominatim",
+    "category": "gis",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "OpenStreetMapのデータで住所→緯度経度（ジオコーディング）を行う検索エンジン。商圏分析で顧客リストや候補地の住所を地図上の点にする前処理に使えます。",
+    "description": "Nominatim（GPL-3.0）はOpenStreetMapのデータを使った住所検索・逆ジオコーディングのサーバーです。商圏分析では、顧客住所や出店候補地を緯度経度に変換して到達圏やメッシュ統計と重ねる前処理に使えます。日本の住所は国土地理院のAPI（無料）のほうが精度が出る場合があり、Kurage 商圏分析は国土地理院APIを採用しています（2026年9月時点・GitHubスター約4,500）。",
+    "license": "GPL-3.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://nominatim.org/",
+    "githubUrl": "https://github.com/osm-search/Nominatim",
+    "stars": 4456,
+    "language": "Python",
+    "githubCreatedAt": "2012-03-03T00:00:00Z",
+    "githubPushedAt": "2026-09-02T00:00:00Z",
+    "useCases": [
+      {
+        "text": "商圏分析の前処理（住所の緯度経度化）"
+      },
+      {
+        "text": "顧客リストの地図化"
+      },
+      {
+        "text": "店舗検索・住所検索"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ジオコーディング オープンソース"
+      },
+      {
+        "text": "住所 緯度経度 変換"
+      },
+      {
+        "text": "商圏分析 住所"
+      },
+      {
+        "text": "Nominatim"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "日本の住所のジオコーディングに向いていますか？",
+        "answer": "使えますが、日本の住所表記では国土地理院のAPI（無料・キー不要）のほうが精度が出る場合があります。Kurage 商圏分析は国土地理院APIを採用しています。自前でサーバーを持ちたい場合や海外住所を含む場合にNominatimが向きます。"
+      }
+    ]
   }
 ]
