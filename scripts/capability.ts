@@ -271,7 +271,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(校閲|校正|文章(生成|作成)|要約|翻訳|ライティング)/i },
   { group: 'ai', key: 'aiimage', label: '画像の生成・編集', question: '画像素材の用意が追いつかない',
     rx: /(画像(生成|編集|処理|加工)|イラスト|写真(編集|加工)|デザイン生成)/i },
-  { group: 'ai', key: 'aivoice', label: '音声合成・文字起こし', question: '録音や読み上げを人がやっている',
+  { group: 'ai', key: 'aivoice', label: '音声合成・文字起こし', noun: '文字起こしAI', terms: ['whisper 文字起こし', '文字起こし ai 無料', '議事録 ai 無料'], question: '録音や読み上げを人がやっている',  // 2026-09-04 実測: whisper 文字起こし4,400(中)/whisper cpp1,000(低)/議事録 ai 無料1,600
     rx: /(音声(合成|認識|処理)|文字起こし|\btts\b|読み上げ|書き起こし)/i },
   // ショートドラマ (2026-09-04 追加。キーワードプランナー実測: 縦型ショートドラマ1,000/月・競合低、ショートドラマ 制作会社260、AI ショートドラマ140)
   { group: 'ai', key: 'shortdrama', label: 'ショートドラマ・短尺動画の制作', noun: 'ショートドラマ制作', terms: ['縦型ショートドラマ', 'AI ショートドラマ', 'ショートドラマ 制作'], question: 'SNS向けの短い動画を作り続ける手が足りない',
@@ -280,7 +280,7 @@ export const CAPABILITIES: Capability[] = [
     rx: /(動画|映像|字幕)/i },
   { group: 'ai', key: 'vectordb', label: 'ベクトル検索・類似検索', question: '言葉が違うと社内検索で見つからない',
     rx: /(ベクトル|埋め込み|embedding|類似(検索|度)|セマンティック)/i },
-  { group: 'ai', key: 'search', label: '全文検索の仕組み', question: '検索しても目的の資料に辿り着けない',
+  { group: 'ai', key: 'search', label: '全文検索の仕組み', noun: '全文検索システム', terms: ['全文検索 システム', 'namazu 全文検索', 'fess 全文検索', 'pdf 全文検索'], question: '検索しても目的の資料に辿り着けない',  // 2026-09-04 実測: namazu1,600(低)/fess1,000(低)/全文検索 システム50
     rx: /(全文検索|検索エンジン|検索(基盤|機能|システム))/i },
 
   // システムの運用・内製化

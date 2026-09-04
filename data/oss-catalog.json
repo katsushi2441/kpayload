@@ -5063,5 +5063,238 @@
         "answer": "使えますが、日本の住所表記では国土地理院のAPI（無料・キー不要）のほうが精度が出る場合があります。Kurage 商圏分析は国土地理院APIを採用しています。自前でサーバーを持ちたい場合や海外住所を含む場合にNominatimが向きます。"
       }
     ]
+  },
+  {
+    "name": "Whisper（OpenAI）",
+    "slug": "whisper",
+    "category": "media",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "音声を文字に起こすオープンソースの音声認識モデル。日本語を含む多言語に対応し、録音ファイルから会議の文字起こしができます。無料で自社サーバーに置けます。",
+    "description": "Whisper（MIT）はOpenAIが公開した音声認識モデルで、日本語を含む約100言語の文字起こしと翻訳ができます。モデルはtiny〜large-v3まであり、大きいほど精度が高く処理が重くなります。GPUがあるとlargeでも実用速度で動きます。会議の録音を文字に起こしてAIに要約させれば、AI議事録の土台になります。当社はC++移植版のwhisper.cppを自社サーバーで動かし、買い切りのAI議事録「Kurage AI MOM」を提供しています（2026年9月時点・GitHubスター約108,000）。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/openai/whisper",
+    "useCases": [
+      {
+        "text": "会議録音の文字起こし（AI議事録の土台）"
+      },
+      {
+        "text": "動画・音声コンテンツの字幕作成"
+      },
+      {
+        "text": "コールセンター録音のテキスト化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "whisper 文字起こし"
+      },
+      {
+        "text": "whisper 文字起こし 使い方"
+      },
+      {
+        "text": "文字起こし ai 無料"
+      },
+      {
+        "text": "議事録 ai 無料"
+      },
+      {
+        "text": "音声認識 オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Whisperは日本語の文字起こしに使えますか？",
+        "answer": "使えます。日本語は対応言語に含まれ、largeモデルなら会議の発話も実用的な精度で文字になります。固有名詞や専門用語は誤りやすいので、後段のAI要約で文脈から補正するか、用語辞書で置換する運用が現実的です。"
+      },
+      {
+        "question": "無料で使えますか？費用はどこにかかりますか？",
+        "answer": "ソフトとモデルは無料（MIT）です。費用は動かすサーバー（GPUがあると速い）だけで、クラウドの文字起こしAPIのような分単位の課金はありません。自社サーバーに置けば録音を外に出さずに済みます。"
+      },
+      {
+        "question": "whisper.cppとの違いは？",
+        "answer": "本家はPython＋PyTorchで、GPU前提で速く動きます。whisper.cppはC++移植版で、CPUだけのサーバーでも動き、依存が少なく常駐サービスにしやすいのが利点です。当社のAI議事録はwhisper.cppを採用しています。"
+      }
+    ],
+    "githubUrl": "https://github.com/openai/whisper",
+    "stars": 108383,
+    "language": "Python",
+    "githubCreatedAt": "2022-09-16T00:00:00Z",
+    "githubPushedAt": "2026-08-31T00:00:00Z"
+  },
+  {
+    "name": "whisper.cpp",
+    "slug": "whisper-cpp",
+    "category": "media",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "OpenAI WhisperのC++移植版。CPUだけのサーバーでも日本語の文字起こしが動き、依存が少ないので自社サーバーの常駐サービスにしやすい。AI議事録の土台に使えます。",
+    "description": "whisper.cpp（MIT）はWhisperモデルをC/C++で動かす実装で、PyTorchやGPUが無くても文字起こしができます。量子化したモデルを使えばメモリも小さく、Linuxサーバーで常駐させて録音を受け付ける形にしやすいのが特徴です。当社の買い切りAI議事録「Kurage AI MOM」は、同じサーバーのwhisper.cppで文字起こしをしてからAIが議事録を書く構成で、録音を外部に送りません（2026年9月時点・GitHubスター約53,000）。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/ggml-org/whisper.cpp",
+    "useCases": [
+      {
+        "text": "自社サーバーで動くAI議事録（録音→文字起こし→要約）"
+      },
+      {
+        "text": "GPUの無いサーバーでの文字起こし"
+      },
+      {
+        "text": "録音を社外に出さない文字起こし"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "whisper cpp"
+      },
+      {
+        "text": "whisper.cpp 日本語"
+      },
+      {
+        "text": "whisper 文字起こし 使い方"
+      },
+      {
+        "text": "文字起こし 自社サーバー"
+      },
+      {
+        "text": "議事録 ai オンプレ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "whisper.cppはGPUなしで日本語の文字起こしができますか？",
+        "answer": "できます。CPUだけで動き、モデルの大きさで速度と精度を選べます。当社はサーバーに常駐させ、録音をアップロードすると文字起こし→AI議事録まで自動で進む形で運用しています。"
+      },
+      {
+        "question": "本家のWhisperとどちらを選ぶべきですか？",
+        "answer": "GPUのあるサーバーで最高精度を出すなら本家、CPUサーバーで軽く常駐させるならwhisper.cppです。精度は同じモデルなら大きく変わりません。"
+      },
+      {
+        "question": "議事録まで自動でできますか？",
+        "answer": "文字起こしの後にAIが要点・決定事項・宿題を書き出す形にすれば自動化できます。当社の Kurage AI MOM はその構成を買い切りで提供しています。"
+      }
+    ],
+    "githubUrl": "https://github.com/ggml-org/whisper.cpp",
+    "stars": 53428,
+    "language": "C++",
+    "githubCreatedAt": "2022-09-25T00:00:00Z",
+    "githubPushedAt": "2026-08-31T00:00:00Z"
+  },
+  {
+    "name": "Namazu",
+    "slug": "namazu",
+    "category": "knowledge",
+    "funnel": "oss",
+    "featured": false,
+    "summary": "日本語の全文検索システムの定番オープンソース。数万件のPDFや文書を索引し、キーワードで該当箇所を返します。AIチャットの検索役として、技術資料や過去の見積の「聞けば答える」仕組みに使えます。",
+    "description": "Namazu（GPL）は日本で長く使われてきた日本語全文検索システムです。mknmzで文書（HTML・PDF・テキストなど）を索引し、CGIやコマンドで検索します。キーワードで確実に当てる方式なので、専門用語や型番で探す技術資料に向き、どの語がどこに当たったかを説明できます。当社はNamazuを検索役、買い切りのAIチャットボット（Kurage Light ChatBot）を回答役にして、科学系の技術専門雑誌数年分・数万ファイルのPDFを「聞けば答える」ナレッジにした開発実績があります。営業部門向けには過去の見積・報告書を索引し、類似案件の引き合いに見積つきで答える形でも使われています。",
+    "license": "GPL-2.0",
+    "japaneseStatus": "日本語UIで提供（日本発の全文検索システム）",
+    "officialUrl": "https://www.namazu.org/",
+    "useCases": [
+      {
+        "text": "技術資料・社内文書の全文検索×AIチャット"
+      },
+      {
+        "text": "過去の見積・報告書から類似案件を答える営業ナレッジ"
+      },
+      {
+        "text": "古いNamazu環境の延命・置き換え相談"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "namazu"
+      },
+      {
+        "text": "namazu 全文検索"
+      },
+      {
+        "text": "全文検索 システム"
+      },
+      {
+        "text": "pdf 全文検索"
+      },
+      {
+        "text": "社内文書 検索 ai"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Namazuはまだ使えますか？後継は何ですか？",
+        "answer": "使えます。枯れているぶん動作が安定し、日本語のキーワード検索として十分実用です。新しく立てるなら、日本発でOpenSearchを土台にしたFessが後継候補です。当社はどちらもAIチャットの検索役として接続できます。"
+      },
+      {
+        "question": "NamazuとAIを組み合わせると何ができますか？",
+        "answer": "利用者の質問からAIが検索語を組み立ててNamazuに問い合わせ、当たった箇所だけを根拠に日本語で答えます。ベクトルDBもGPUも要らず、専門用語・型番に強く、出典を示せます。当社は数万件の技術資料PDFで実用化しました。"
+      },
+      {
+        "question": "スキャンしたPDFも検索できますか？",
+        "answer": "本文が文字として入っているPDFが対象です。画像だけのPDFは先にOCRで文字化する必要があります。"
+      }
+    ],
+    "language": "Perl/C",
+    "lpUrl": "https://katsushi2441.github.io/vwork/blog/2026-09-04-namazu-ai-chat-knowledge.html"
+  },
+  {
+    "name": "Fess",
+    "slug": "fess",
+    "category": "knowledge",
+    "funnel": "oss",
+    "featured": false,
+    "summary": "日本発のオープンソース全文検索サーバー。OpenSearchを土台に、Webサイト・ファイルサーバー・PDFをクロールして検索できます。日本語UIと日本語ドキュメントが公式にあり、Namazuの後継候補です。",
+    "description": "Fess（Apache-2.0）はCodeLibsが開発する全文検索サーバーで、Webサイトやファイルサーバー、データベースをクロールして索引し、ブラウザの管理画面から運用できます。検索エンジンはOpenSearchで、日本語の形態素解析に対応します。ドキュメントも日本語で整っており、Namazuからの置き換え先として現実的です。当社はNamazuで実用化した「全文検索×AIチャット」の構成を、Fessを検索役にしても接続できます（2026年9月時点・GitHubスター約1,100・活発に更新）。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語UI・日本語ドキュメントを本家が提供（日本発）",
+    "officialUrl": "https://fess.codelibs.org/ja/",
+    "useCases": [
+      {
+        "text": "社内サイト・ファイルサーバーの全文検索"
+      },
+      {
+        "text": "技術資料PDFの検索×AIチャット"
+      },
+      {
+        "text": "Namazuからの置き換え"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "fess 全文検索"
+      },
+      {
+        "text": "fess"
+      },
+      {
+        "text": "全文検索 オープンソース"
+      },
+      {
+        "text": "全文検索 システム"
+      },
+      {
+        "text": "社内 検索 システム"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Fessは日本語で使えますか？",
+        "answer": "使えます。日本発のプロジェクトで、管理画面・検索画面の日本語UIと日本語ドキュメントが公式にあります。日本語の形態素解析にも対応します。"
+      },
+      {
+        "question": "Namazuとどちらを選ぶべきですか？",
+        "answer": "既にNamazuの索引と運用があるなら延命でも困りません。新しく立てる、Webやファイルサーバーもまとめて検索したい、管理画面で運用したい、という場合はFessです。どちらも当社のAIチャットの検索役にできます。"
+      },
+      {
+        "question": "必要なサーバーは？",
+        "answer": "FessとOpenSearchの2コンテナで動き、公式のdocker composeがあります。メモリはOpenSearchのために余裕が要ります。"
+      }
+    ],
+    "githubUrl": "https://github.com/codelibs/fess",
+    "stars": 1128,
+    "language": "Java",
+    "githubCreatedAt": "2013-09-13T00:00:00Z",
+    "githubPushedAt": "2026-09-03T00:00:00Z"
   }
 ]
