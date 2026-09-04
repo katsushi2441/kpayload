@@ -320,7 +320,7 @@ export const CAPABILITIES: Capability[] = [
   { group: 'data', key: 'gis', label: '地図・位置情報の活用（GIS）', question: '住所や位置のデータを地図で見られていない',
     rx: /(\bgis\b|地図|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|isochrone|測位|ジオフェンス)/i },  // 「マップ」はロードマップ/サイトマップ/マインドマップを誤爆するので入れない(2026-09-01実測)
   { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', noun: '商圏分析ツール', terms: ['商圏分析 ツール', '商圏分析 無料', '商圏 分析 gis'], question: '出店や営業エリアを勘で決めている',  // 2026-09-04 キーワードプランナー実測: 商圏1,600/商圏 分析480/商圏 分析 ツール210/商圏 分析 無料70
-    rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店|立地分析|demographics? analysis)/i },
+    rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店(判断|計画|候補|戦略)|立地分析|demographics? analysis)/i },  // 「出店」単独はECテンプレ(ネットショップ出店)を誤爆したので複合語に限定(2026-09-04)
   { group: 'industry', key: 'civic', label: '政治・市民参加・合意形成', question: '支援者や住民の声を集めて活かす仕組みがない',
     rx: /(政治|選挙|議会|市民参加|パブリック?コメント|民主主義|熟議|広聴|後援会|自治体.{0,6}(参加|意見)|participatory|democracy|civic|advocacy|petition)/i },
 ]
