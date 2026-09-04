@@ -30,6 +30,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   docmost: { id: '7495b31ca104b483', label: 'Docmost 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-docmost-japanese-guide.html' },
   planka: { id: '1364b33c7d1cde58', label: 'Planka 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-planka-japanese-guide.html' },
   docspell: { id: '7f9481c10a09b560', label: 'Docspell 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-docspell-japanese-guide.html' },
+  pdfmathtranslate: { id: '8adb859f30cb8cc5', label: 'PDFMathTranslate 日本語導入・運用キットを見る', price: '税込5,500円（買い切り）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-pdf-translation-selfhosted.html' },
   // 導入キットではなく「そのOSSを使って当社が作った買い切り製品」。
   // kkintai は勤怠分類(/ai-system/c/attendance/・GSC 11.8位)の出口。分類ページのカード列にも出す。
   kkintai: { id: 'f0f56c6e4da881be', label: '顔打刻つき勤怠管理 Kurage Kintai（買い切り）を見る', price: '税込55,000円（買い切り）', product: true },

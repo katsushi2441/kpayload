@@ -267,6 +267,9 @@ export const CAPABILITIES: Capability[] = [
     rx: /(チャット(ui|画面|インター)|生成aiの(利用|画面)|chatgpt(代替|クローン|のような))/i },
   { group: 'ai', key: 'prompt', label: 'プロンプトの管理と評価', question: 'AIの出力品質が安定しない',
     rx: /(プロンプト)/i },
+  // 文書翻訳 (2026-09-04 追加。キーワードプランナー実測: pdf 翻訳18,100/月・競合中・CPC60〜245円、pdf 翻訳 無料2,900、論文 翻訳1,600、pdf 和訳1,000)
+  { group: 'ai', key: 'translate', label: '文書の翻訳', noun: 'PDF翻訳・文書翻訳', terms: ['pdf 翻訳', 'pdf 翻訳 無料', '論文 翻訳', '翻訳 オンプレミス'], question: '英語の資料を読むのに時間がかかる',
+    rx: /(翻訳|多言語化|machine translation|translat(e|ion)|和訳)/i },
   { group: 'ai', key: 'aiwrite', label: '文章の生成・要約・校閲', question: '文章作成に時間がかかる',
     rx: /(校閲|校正|文章(生成|作成)|要約|翻訳|ライティング)/i },
   { group: 'ai', key: 'aiimage', label: '画像の生成・編集', question: '画像素材の用意が追いつかない',

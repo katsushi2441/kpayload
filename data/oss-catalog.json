@@ -5301,5 +5301,180 @@
     "githubCreatedAt": "2013-09-13T00:00:00Z",
     "githubPushedAt": "2026-09-03T00:00:00Z",
     "lpUrl": "https://katsushi2441.github.io/vwork/articles/2026-09-04-fess-fulltext-search-ai-chat.html"
+  },
+  {
+    "name": "PDFMathTranslate",
+    "slug": "pdfmathtranslate",
+    "category": "knowledge",
+    "funnel": "oss",
+    "featured": false,
+    "summary": "英語のPDFを、レイアウト・数式・図表を保ったまま日本語にするオープンソース。翻訳エンジンを自社サーバーのローカルLLMや完全オフラインに切り替えられるので、文書を社外に出さずに翻訳できます。",
+    "description": "PDFMathTranslate（コマンド名 pdf2zh・AGPL-3.0・GitHubスター約36,700）は、PDFのレイアウトを解析して本文だけを翻訳エンジンに渡し、元の位置に訳文を流し込む道具です。数式・図表・箇条書き・節番号・式番号・引用番号を保ったまま、日本語版と対訳版の2つのPDFを出します。翻訳エンジンはDeepLやOpenAIのほか、自社サーバーのローカルLLM（Ollama）や完全オフライン（Argos Translate）を選べるため、未公開の仕様書や契約書を社外に出さずに翻訳できます。当社の実測（2026年9月）では、英語の学術論文15ページ（2.2MB・数式と表つき）を自社GPUのローカルLLMで179秒（11秒/ページ）・追加費用0円で日本語化し、数式と引用番号がすべて保たれることを確認しました。導入時の注意点として、依存パッケージの破壊的更新でそのままでは起動しないこと、思考型モデルでは設定ひとつで5.8倍（81秒→14秒/ページ）変わることを実測しています。",
+    "license": "AGPL-3.0",
+    "licenseNote": "自社サーバーで自社が使う分にソースの公開義務はありません。改変版を社外にサービスとして提供する場合は条件があります。",
+    "japaneseStatus": "日本語ファイルなし（UIは英語・中国語。翻訳先として日本語に対応）",
+    "officialUrl": "https://github.com/Byaidu/PDFMathTranslate",
+    "githubUrl": "https://github.com/Byaidu/PDFMathTranslate",
+    "stars": 36687,
+    "language": "Python",
+    "githubCreatedAt": "2024-09-06T00:00:00Z",
+    "githubPushedAt": "2026-09-04T00:00:00Z",
+    "lpUrl": "https://katsushi2441.github.io/vwork/articles/2026-09-04-pdf-translation-selfhosted.html",
+    "useCases": [
+      {
+        "text": "英語の技術資料・仕様書を社外に出さずに日本語化"
+      },
+      {
+        "text": "海外の論文をレイアウトごと日本語で読む"
+      },
+      {
+        "text": "海外メーカーのマニュアルの社内展開"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "pdf 翻訳"
+      },
+      {
+        "text": "pdf 翻訳 無料"
+      },
+      {
+        "text": "論文 翻訳"
+      },
+      {
+        "text": "pdf 和訳"
+      },
+      {
+        "text": "pdf 翻訳 レイアウト"
+      },
+      {
+        "text": "翻訳 オンプレミス"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PDFの翻訳でレイアウトは崩れませんか？",
+        "answer": "崩れません。当社が英語の学術論文15ページで確認した範囲では、数式（LaTeX組版のまま）・式番号・節番号・図表の位置・引用番号・箇条書きの階層がすべて保たれました。崩れやすいのは、1文字ずつ縦に配置された領域と2段組の段またぎの文です。"
+      },
+      {
+        "question": "翻訳する文書が社外に出ませんか？",
+        "answer": "翻訳エンジンの選び方で決まります。自社サーバーのローカルLLM（Ollama）か完全オフライン（Argos Translate）を選べば、文書は社外に出ません。既定はGoogle翻訳なので、社内文書を扱うときは必ず指定を変えてください。"
+      },
+      {
+        "question": "どのくらいの速さ・費用ですか？",
+        "answer": "当社の実測では、15ページの英語論文を自社GPUのローカルLLMで179秒（11秒/ページ）・追加費用0円で日本語化しました。クラウドAPIを使う場合は本文の文字数で課金されます。"
+      },
+      {
+        "question": "スキャンしたPDFも翻訳できますか？",
+        "answer": "できません。文字が入っているPDFが対象です。画像だけのPDFは、先にOCRで文字層を付ける必要があります。pdftotextで文字が取れるかで判別できます。"
+      }
+    ],
+    "seoTitle": "PDF翻訳をオープンソースで｜レイアウト保持・社外に出さない",
+    "seoDescription": "英語PDFをレイアウト・数式ごと日本語にするOSS「PDFMathTranslate」。翻訳を自社サーバーで完結でき文書が社外に出ません。15ページ3分・費用0円の実測つき。日本語導入は名古屋のエクスブリッジ。",
+    "sourceLpName": "英語PDFを社外に出さず日本語で読む（実測記事）"
+  },
+  {
+    "name": "LibreTranslate",
+    "slug": "libretranslate",
+    "category": "knowledge",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "自社サーバーに置ける翻訳API。クラウドの翻訳サービスを使わずに、社内システムから翻訳機能を呼べます。ブラウザから使う画面も付属します。",
+    "description": "LibreTranslate（AGPL-3.0・GitHubスター約16,300）は、機械翻訳をAPIとして自社サーバーで提供するオープンソースです。翻訳の中身は Argos Translate（MIT）で、モデルをローカルに置くためネットワークに出ずに動きます。DeepLやGoogle翻訳のAPIを置き換える用途、社内システムに翻訳機能を組み込む用途に向きます。文書のレイアウトを保った翻訳が目的ならPDFMathTranslateを、APIとして翻訳機能が欲しい場合はこちらを選びます。",
+    "license": "AGPL-3.0",
+    "japaneseStatus": "日本語ファイルなし（翻訳先として日本語に対応）",
+    "officialUrl": "https://libretranslate.com/",
+    "githubUrl": "https://github.com/LibreTranslate/LibreTranslate",
+    "stars": 16290,
+    "language": "Python",
+    "githubCreatedAt": "2020-12-19T00:00:00Z",
+    "githubPushedAt": "2026-09-03T00:00:00Z",
+    "useCases": [
+      {
+        "text": "自社サーバーで動く翻訳API"
+      },
+      {
+        "text": "社内システムへの翻訳機能の組み込み"
+      },
+      {
+        "text": "クラウド翻訳APIの置き換え"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "翻訳 api 自社サーバー"
+      },
+      {
+        "text": "deepl 代替"
+      },
+      {
+        "text": "翻訳 オンプレミス"
+      },
+      {
+        "text": "機械翻訳 オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "クラウドの翻訳APIの代わりになりますか？",
+        "answer": "用途によります。自社サーバーで動き文書が外に出ない点は代替になりますが、翻訳品質はDeepLなどの商用サービスに及びません。固有名詞や専門用語が崩れやすいので、用語集での補正が要ります。"
+      },
+      {
+        "question": "日本語に対応していますか？",
+        "answer": "対応しています。英語と日本語の翻訳モデルが用意されており、ローカルに導入して使えます。"
+      }
+    ]
+  },
+  {
+    "name": "Argos Translate",
+    "slug": "argos-translate",
+    "category": "knowledge",
+    "funnel": "prototype",
+    "featured": false,
+    "summary": "完全オフラインで動く翻訳ライブラリ。MITライセンスで、GPUもネットワークも不要。機密文書の翻訳や、閉じたネットワークでの利用に向きます。",
+    "description": "Argos Translate（MIT・GitHubスター約6,400）は、Pythonで動くオフライン翻訳ライブラリです。言語ごとのモデルをローカルに導入すると、以後ネットワークに一切出ずに翻訳できます。CPUだけで動くのでGPUも不要です。LibreTranslate の翻訳エンジンとしても使われています。当社の実測では、英語→日本語のモデル導入は4秒で完了しました。品質はLLMによる翻訳に及ばず、固有名詞や専門用語が崩れます（「Transformer」を「トランス」と訳すなど）。ライセンスがMITなので、AGPLを避けたい構成でも使えます。",
+    "license": "MIT",
+    "japaneseStatus": "日本語ファイルなし（翻訳先として日本語に対応）",
+    "officialUrl": "https://www.argosopentech.com/",
+    "githubUrl": "https://github.com/argosopentech/argos-translate",
+    "stars": 6427,
+    "language": "Python",
+    "githubCreatedAt": "2020-04-07T00:00:00Z",
+    "githubPushedAt": "2026-08-08T00:00:00Z",
+    "useCases": [
+      {
+        "text": "閉じたネットワークでの翻訳"
+      },
+      {
+        "text": "GPUの無い環境での翻訳"
+      },
+      {
+        "text": "機密文書の翻訳"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "オフライン 翻訳"
+      },
+      {
+        "text": "翻訳 ネットワーク不要"
+      },
+      {
+        "text": "翻訳 ライブラリ python"
+      },
+      {
+        "text": "機械翻訳 mit"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "本当にネットワークに出ませんか？",
+        "answer": "モデルを一度導入すれば出ません。導入時だけモデルのダウンロードが必要です。閉じたネットワークで使う場合は、外に出られる環境で導入してからモデルごと持ち込みます。"
+      },
+      {
+        "question": "翻訳の品質はどうですか？",
+        "answer": "一般的な文は読めますが、固有名詞や専門用語は崩れます。当社の実測では「Transformer」が「トランス」と訳されました。GPUがあるならローカルLLMのほうが品質は上です。"
+      }
+    ]
   }
 ]
