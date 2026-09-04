@@ -5245,7 +5245,7 @@
     "funnel": "oss",
     "featured": false,
     "summary": "日本発のオープンソース全文検索サーバー。OpenSearchを土台に、Webサイト・ファイルサーバー・PDFをクロールして検索できます。日本語UIと日本語ドキュメントが公式にあり、Namazuの後継候補です。",
-    "description": "Fess（Apache-2.0）はCodeLibsが開発する全文検索サーバーで、Webサイトやファイルサーバー、データベースをクロールして索引し、ブラウザの管理画面から運用できます。検索エンジンはOpenSearchで、日本語の形態素解析に対応します。ドキュメントも日本語で整っており、Namazuからの置き換え先として現実的です。当社はNamazuで実用化した「全文検索×AIチャット」の構成を、Fessを検索役にしても接続できます（2026年9月時点・GitHubスター約1,100・活発に更新）。",
+    "description": "Fess（Apache-2.0）はCodeLibsが開発する全文検索サーバーで、Webサイトやファイルサーバー、データベースをクロールして索引し、ブラウザの管理画面から運用できます。検索エンジンはOpenSearchで、日本語の形態素解析に対応します。ドキュメントも日本語で整っており、Namazuからの置き換え先として現実的です。当社の実測（2026年9月・Fess 15.8.0）: docker 2コンテナで約2分で起動、日本語の技術記事PDF45本（16MB）を約40秒で索引、検索の応答は7〜31ms。ローカルLLM（gemma4）を回答役にして10問聞いたところ、正解のPDFが上位5件に入ったのは10/10、答えが正解だったのは9/10でした（検索結果の要約文だけを渡すと4/10。ヒットした本文の該当箇所を切り出して渡すのが要点）。管理APIで組む場合の罠3つ（作成はPOST・含めるパスにディレクトリを含める・権限に{role}guestが必要）も記事にまとめています。GitHubスター約1,100・活発に更新。",
     "license": "Apache-2.0",
     "japaneseStatus": "日本語UI・日本語ドキュメントを本家が提供（日本発）",
     "officialUrl": "https://fess.codelibs.org/ja/",
@@ -5287,14 +5287,19 @@
         "answer": "既にNamazuの索引と運用があるなら延命でも困りません。新しく立てる、Webやファイルサーバーもまとめて検索したい、管理画面で運用したい、という場合はFessです。どちらも当社のAIチャットの検索役にできます。"
       },
       {
+        "question": "AIチャットにつなぐと精度はどのくらいですか？",
+        "answer": "当社の実測では、技術記事45本のPDFに対する10問で、正解のPDFが上位5件に入ったのは10/10、答えが正解だったのは9/10でした。検索結果の要約文だけをAIに渡すと4/10で、ヒットした本文の該当箇所を切り出して渡すのが要点です。"
+      },
+      {
         "question": "必要なサーバーは？",
-        "answer": "FessとOpenSearchの2コンテナで動き、公式のdocker composeがあります。メモリはOpenSearchのために余裕が要ります。"
+        "answer": "FessとOpenSearchの2コンテナで動き、公式のdocker composeがあります。ホスト側で vm.max_map_count=262144 の設定が要り、メモリはOpenSearchのために余裕が必要です。"
       }
     ],
     "githubUrl": "https://github.com/codelibs/fess",
     "stars": 1128,
     "language": "Java",
     "githubCreatedAt": "2013-09-13T00:00:00Z",
-    "githubPushedAt": "2026-09-03T00:00:00Z"
+    "githubPushedAt": "2026-09-03T00:00:00Z",
+    "lpUrl": "https://katsushi2441.github.io/vwork/articles/2026-09-04-fess-fulltext-search-ai-chat.html"
   }
 ]
