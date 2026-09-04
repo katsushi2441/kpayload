@@ -4477,5 +4477,71 @@
     "funnel": "oss",
     "seoTitle": "Docspellとは｜メール添付・スキャン書類を自動取り込みする書類管理OSS・日本語UIを実装",
     "seoDescription": "DocspellはOCR・全文検索・メール自動取り込みの書類管理OSS。日本語が無かった画面1,056語を訳しElmで実装、ビルド検証済み。docker5コンテナの導入と取り込み設計を実測で解説。"
+  },
+  {
+    "name": "Short Drama Production",
+    "slug": "short-drama-production",
+    "category": "media",
+    "funnel": "oss",
+    "featured": false,
+    "summary": "AIショートドラマの制作を、大綱→登場人物→美術→脚本→演出→技術分鏡→サンプル→承認→一括生成→粗編集→QCの段階で管理するオープンソースの制作管制です。MiniMax H3への接続と、失敗・返工の追跡を備えます。",
+    "description": "Short Drama Production（suihe1/short-drama-production・Apache-2.0・GitHubスター約136）は、AI動画生成を「追跡でき、承認でき、返工できる」ショートドラマの制作ラインにするためのスキル（Codex向け）です。大綱・登場人物・美術・脚本・演出・技術分鏡・H3タスク・音声・粗編集・QCを、production.json という1つの状態ファイルで管理し、上流（人物や場面）を直すと下流の素材が自動で「古い」扱いになって再承認を求めます。MiniMax公式APIとCompShareのH3実行アダプタ、Fish Audioの音声資産管理、FFmpegによる順次粗編集、有料生成の前に必ず利用者の確認を取る費用境界を内蔵します。既定は16:9・1920×1080・24fps。当社の実測では、同梱テストは21/21合格、動画素材の生成費はfalのH3 Max Turbo（480p）で5秒あたり通常約19円（2026年9月7日までの割引中は約5円）、自社GPU（RTX 3090・ComfyUI）では2.3秒の素材に約2分でした。UIとドキュメントは中国語で、日本語ファイルはありません。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/suihe1/short-drama-production",
+    "githubUrl": "https://github.com/suihe1/short-drama-production",
+    "lpUrl": "https://exbridge.jp/solution/short-drama.html",
+    "useCases": [
+      {
+        "text": "商品・サービスの困りごとを30〜60秒のドラマにしたSNS広告"
+      },
+      {
+        "text": "採用向けの職場紹介ショートドラマ"
+      },
+      {
+        "text": "AI動画素材を、脚本・分鏡・承認つきで大量に作る制作ライン"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "縦型ショートドラマ"
+      },
+      {
+        "text": "AI ショートドラマ"
+      },
+      {
+        "text": "ショートドラマ 制作"
+      },
+      {
+        "text": "ショートドラマ 作り方"
+      },
+      {
+        "text": "AI 動画 CM 自社制作"
+      },
+      {
+        "text": "MiniMax H3 ショートドラマ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Short Drama Productionは日本語で使えますか？",
+        "answer": "リポジトリのUI・ドキュメント・スキル本文は中国語で、日本語ファイルはありません。制作の流れ自体は言語に依存しないので、日本語の脚本・台詞で運用できます。当社は日本語の手順とローカル生成（自社GPU・falのH3）への差し替えを整備して導入します。"
+      },
+      {
+        "question": "動画の生成にはいくらかかりますか？",
+        "answer": "当社の実測では、falのH3 Max Turbo（480p）で5秒あたり通常約19円、2026年9月7日までの割引中は約5円です。60秒のドラマを12クリップで作ると通常約230円、割引中は約60円になります。自社GPU（RTX 3090）なら電気代だけですが、2.3秒の素材に約2分かかります。"
+      },
+      {
+        "question": "縦型（9:16）のショートドラマは作れますか？",
+        "answer": "既定は16:9です。画角を変える・派生版を作る仕組み（landscape参照）があるので、9:16の縦型はその設定を反転させて作ります。当社はSNS広告向けに縦型を前提にした構成で導入します。"
+      },
+      {
+        "question": "商用利用はできますか？",
+        "answer": "ソフト自体はApache-2.0で商用利用・改変が自由です。生成した動画の条件は動画モデル側に従い、MiniMax H3は「MiniMax H3」の表記が必要です。Fish Audioの公開音色には評価専用の制限があるため、当社は自社の音声（Audio8）に置き換えて運用します。"
+      }
+    ],
+    "seoTitle": "AIショートドラマ制作OSS「Short Drama Production」｜縦型・日本語導入",
+    "seoDescription": "縦型ショートドラマ・AIショートドラマを自社で作るためのオープンソース制作管制。脚本→分鏡→MiniMax H3生成→粗編集→QCを承認つきで回す。生成費は5秒約19円（当社実測）。日本語導入とカスタマイズは名古屋のエクスブリッジ。",
+    "sourceLpName": "縦型ショートドラマ・SNS動画の制作（解説）"
   }
 ]

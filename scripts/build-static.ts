@@ -144,6 +144,11 @@ function jaVerdict(project: Project): string {
   if (project.japaneseStatus === '日本語ファイルなし') {
     return `${project.name}のリポジトリに日本語ロケールのファイルは見つかりませんでした。日本語で運用するには日本語化から着手する必要があります。`
   }
+  // 手作り掲載は「本家同梱の日本語は実測91%…」のような実測の文をそのまま持つ。
+  // これを「未調査」と表示していた(2026-09-04 Vikunjaで実測)。文があるならそれが判定。
+  if (project.japaneseStatus && project.japaneseStatus !== '未調査') {
+    return `${project.name}の日本語対応は当社が実際に立てて確かめました。${project.japaneseStatus}`
+  }
   return `${project.name}の日本語ロケールは未調査です。ファイル一覧が大きく取得しきれなかった場合にこの表示になります。`
 }
 

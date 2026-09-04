@@ -47,6 +47,7 @@ const CAP_OF_SAAS_CAT: Record<string, string[]> = {
   analytics: ['bi', 'visualize'], project: ['project', 'task', 'kanban'], support: ['helpdesk', 'faq'], knowledge: ['wiki', 'manual'],
   hr: ['attendance', 'payroll'], marketing: ['mailmarketing', 'marketing'], commerce: ['ec', 'pos'], dms: ['dms', 'paperless'],
   accounting: ['accounting', 'invoice'], groupware: ['team', 'calendar'], contract: ['esign'],
+  media: ['shortdrama', 'aivideo'],
 }
 function capLinks(s: Saas): string {
   const keys = new Set<string>()

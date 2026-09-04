@@ -75,6 +75,8 @@ export function jaVerdict(p: Project): string {
   if (p.japaneseStatus === '日本語ファイルあり') return `${p.name}には日本語のファイルが${n ?? 0}件あり、日本語で使える見込みがあります。`
   if (p.japaneseStatus === '日本語ファイルが一部のみ') return `${p.name}の日本語ファイルは${n ?? 0}件だけで、実務で使うには日本語化が必要です。`
   if (p.japaneseStatus === '日本語ファイルなし') return `${p.name}には日本語のファイルがありません。日本語化から始める必要があります。`
+  // 手作り掲載は実測の文（例:「本家同梱の日本語は実測91%…」）をそのまま持つ。未調査と誤表示しない(2026-09-04)。
+  if (p.japaneseStatus && p.japaneseStatus !== '未調査') return `${p.name}の日本語対応は当社が実際に立てて確かめました。${p.japaneseStatus}`
   return `${p.name}の日本語対応は未調査です。`
 }
 

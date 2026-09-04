@@ -273,6 +273,9 @@ export const CAPABILITIES: Capability[] = [
     rx: /(画像(生成|編集|処理|加工)|イラスト|写真(編集|加工)|デザイン生成)/i },
   { group: 'ai', key: 'aivoice', label: '音声合成・文字起こし', question: '録音や読み上げを人がやっている',
     rx: /(音声(合成|認識|処理)|文字起こし|\btts\b|読み上げ|書き起こし)/i },
+  // ショートドラマ (2026-09-04 追加。キーワードプランナー実測: 縦型ショートドラマ1,000/月・競合低、ショートドラマ 制作会社260、AI ショートドラマ140)
+  { group: 'ai', key: 'shortdrama', label: 'ショートドラマ・短尺動画の制作', noun: 'ショートドラマ制作', terms: ['縦型ショートドラマ', 'AI ショートドラマ', 'ショートドラマ 制作'], question: 'SNS向けの短い動画を作り続ける手が足りない',
+    rx: /(ショートドラマ|短剧|short.?drama|縦型動画|ショート動画|短尺動画|short.?(form )?video|動画生成|動画を生成|text-to-video|image-to-video|video generation)/i },
   { group: 'ai', key: 'aivideo', label: '動画の生成・編集', question: '動画制作に手が回らない',
     rx: /(動画|映像|字幕)/i },
   { group: 'ai', key: 'vectordb', label: 'ベクトル検索・類似検索', question: '言葉が違うと社内検索で見つからない',

@@ -386,3 +386,6 @@ await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
   urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/solution/') ? '0.9' : u.endsWith('/') ? '0.8' : '0.7'}</priority></url>`).join('\n') +
   `\n</urlset>\n`)
 payload.logger.info(`solution: 既存${pages.length} + 業種ハブ${matrix.industries.length} + ペア${pairCount} + index/sitemap = ${urls.length}URL`)
+
+// Payloadの接続が残りプロセスが終わらない(build-aisystemと同じ。2026-09-04に10分ハングを実測)。書き出し後に明示終了する。
+process.exit(0)

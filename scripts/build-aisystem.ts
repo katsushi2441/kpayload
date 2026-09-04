@@ -36,6 +36,7 @@ const SAAS_CAT_OF_CAP: Record<string, string[]> = {
   bi: ['analytics'], task: ['project'], helpdesk: ['support'], wiki: ['knowledge'], manual: ['knowledge'],
   attendance: ['hr'], payroll: ['hr'], mailmarketing: ['marketing'], ec: ['commerce'], pos: ['commerce'],
   paperless: ['dms'], invoice: ['accounting'], team: ['groupware'], calendar: ['groupware'],
+  shortdrama: ['media'], aivideo: ['media'],
 }
 function saasFor(cap: Capability): SaasRow[] {
   const cats = new Set([cap.key, cap.group, ...(SAAS_CAT_OF_CAP[cap.key] || [])])
