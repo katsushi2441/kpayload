@@ -1,623 +1,650 @@
 {
- "gyomu": [
-  {
-   "slug": "kintai",
-   "name": "勤怠管理",
-   "cats": [
-    "hr"
-   ],
-   "rx": "勤怠|タイムカード|打刻|シフト|attendance",
-   "pain": "タイムカードと紙のシフト表で、締め日の集計に時間を取られている",
-   "products": [
+  "gyomu": [
     {
-     "name": "Kurage 顔打刻勤怠 (kkintai)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "yoyaku",
-   "name": "予約・受付",
-   "cats": [
-    "booking"
-   ],
-   "rx": "予約|booking|カレンダー予約",
-   "pain": "電話予約の聞き取りとダブルブッキングに追われている",
-   "products": [
-    {
-     "name": "Kurage 予約・受付 (kreserve)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
-     "price": "55,000円"
+      "slug": "kintai",
+      "name": "勤怠管理",
+      "cats": [
+        "hr"
+      ],
+      "rx": "勤怠|タイムカード|打刻|シフト|attendance",
+      "pain": "タイムカードと紙のシフト表で、締め日の集計に時間を取られている",
+      "products": [
+        {
+          "name": "Kurage 顔打刻勤怠 (kkintai)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "自前CalDAV予定表 (kcaldav)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "gijiroku",
-   "name": "会議の議事録",
-   "cats": [
-    "meeting"
-   ],
-   "rx": "議事録|文字起こし|whisper|音声認識|会議の録音|transcri",
-   "pain": "会議の議事録づくりに毎回30分以上かかり、結局書かれないまま流れる",
-   "products": [
-    {
-     "name": "Whisper議事録 Kurage AI MOM",
-     "url": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "toiawase",
-   "name": "問い合わせ対応",
-   "cats": [
-    "support"
-   ],
-   "rx": "問い合わせ|ヘルプデスク|helpdesk|チケット|メール共有",
-   "pain": "問い合わせメールを個人の受信箱で受けていて、対応漏れ・二重返信が起きる",
-   "products": [
-    {
-     "name": "FreeScout 日本語導入キット",
-     "url": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da",
-     "price": "5,500円"
+      "slug": "yoyaku",
+      "name": "予約・受付",
+      "cats": [
+        "booking"
+      ],
+      "rx": "予約|booking|カレンダー予約",
+      "pain": "電話予約の聞き取りとダブルブッキングに追われている",
+      "products": [
+        {
+          "name": "Kurage 予約・受付 (kreserve)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=362c94ab4e1384f2",
+          "price": "55,000円"
+        },
+        {
+          "name": "自前CalDAV予定表 (kcaldav)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=43950141618ddb02",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "LibreDesk 日本語導入キット",
-     "url": "https://kappstore.exbridge.jp/app.php?id=104c05db7779a709",
-     "price": "5,500円"
+      "slug": "gijiroku",
+      "name": "会議の議事録",
+      "cats": [
+        "meeting"
+      ],
+      "rx": "議事録|文字起こし|whisper|音声認識|会議の録音|transcri",
+      "pain": "会議の議事録づくりに毎回30分以上かかり、結局書かれないまま流れる",
+      "products": [
+        {
+          "name": "Whisper議事録 Kurage AI MOM",
+          "url": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "AIチャットボット (klchatbot)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "kokyaku",
-   "name": "顧客管理",
-   "cats": [
-    "crm"
-   ],
-   "rx": "",
-   "pain": "顧客情報がExcelと個人の記憶に散らばっていて、担当が休むと止まる",
-   "products": [
-    {
-     "name": "入力ゼロCRM (Kurage CRM Agent)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
-     "price": "55,000円"
+      "slug": "toiawase",
+      "name": "問い合わせ対応",
+      "cats": [
+        "support"
+      ],
+      "rx": "問い合わせ|ヘルプデスク|helpdesk|チケット|メール共有",
+      "pain": "問い合わせメールを個人の受信箱で受けていて、対応漏れ・二重返信が起きる",
+      "products": [
+        {
+          "name": "FreeScout 日本語導入キット",
+          "url": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da",
+          "price": "5,500円"
+        },
+        {
+          "name": "LibreDesk 日本語導入キット",
+          "url": "https://kappstore.exbridge.jp/app.php?id=104c05db7779a709",
+          "price": "5,500円"
+        },
+        {
+          "name": "AIチャットボット (klchatbot)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "EspoCRM 日本語導入キット",
-     "url": "https://kappstore.exbridge.jp/app.php?id=9d27eb0ebe2fc7e0",
-     "price": "5,500円"
+      "slug": "kokyaku",
+      "name": "顧客管理",
+      "cats": [
+        "crm"
+      ],
+      "rx": "",
+      "pain": "顧客情報がExcelと個人の記憶に散らばっていて、担当が休むと止まる",
+      "products": [
+        {
+          "name": "入力ゼロCRM (Kurage CRM Agent)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+          "price": "55,000円"
+        },
+        {
+          "name": "EspoCRM 日本語導入キット",
+          "url": "https://kappstore.exbridge.jp/app.php?id=9d27eb0ebe2fc7e0",
+          "price": "5,500円"
+        },
+        {
+          "name": "Krayin CRM 日本語導入キット",
+          "url": "https://kappstore.exbridge.jp/app.php?id=11e7c1d9a83d1ca3",
+          "price": "5,500円"
+        }
+      ]
     },
     {
-     "name": "Krayin CRM 日本語導入キット",
-     "url": "https://kappstore.exbridge.jp/app.php?id=11e7c1d9a83d1ca3",
-     "price": "5,500円"
-    }
-   ]
-  },
-  {
-   "slug": "seikyu",
-   "name": "請求書発行・集金",
-   "cats": [
-    "accounting"
-   ],
-   "rx": "請求書|invoice|見積書|決済リンク",
-   "pain": "請求書の作成・送付・入金確認が月末に集中し、回収漏れが怖い",
-   "products": [
-    {
-     "name": "請求書ソフト買い切り (kbilling)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
-     "price": "55,000円"
+      "slug": "seikyu",
+      "name": "請求書発行・集金",
+      "cats": [
+        "accounting"
+      ],
+      "rx": "請求書|invoice|見積書|決済リンク",
+      "pain": "請求書の作成・送付・入金確認が月末に集中し、回収漏れが怖い",
+      "products": [
+        {
+          "name": "請求書ソフト買い切り (kbilling)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
+          "price": "55,000円"
+        },
+        {
+          "name": "注文→請求→決済 (kpaylink)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
+          "price": "55,000円"
+        },
+        {
+          "name": "領収書PDF発行 (kinvoice)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "注文→請求→決済 (kpaylink)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=5b55bb2c808eead4",
-     "price": "55,000円"
+      "slug": "meishi",
+      "name": "名刺管理",
+      "cats": [],
+      "rx": "名刺|business card",
+      "pain": "もらった名刺が箱に溜まったままで、会社の資産になっていない",
+      "products": [
+        {
+          "name": "AI名刺解析 (kaima)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "領収書PDF発行 (kinvoice)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=61febea74f9c74b0",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "meishi",
-   "name": "名刺管理",
-   "cats": [],
-   "rx": "名刺|business card",
-   "pain": "もらった名刺が箱に溜まったままで、会社の資産になっていない",
-   "products": [
-    {
-     "name": "AI名刺解析 (kaima)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=4679d4cf90699580",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "groupware",
-   "name": "社内の情報共有",
-   "cats": [
-    "groupware"
-   ],
-   "rx": "",
-   "pain": "連絡が口頭とLINEと掲示板に分かれ、見た人と見ていない人が生まれる",
-   "products": [
-    {
-     "name": "買い切りグループウェア (kvgwc)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "bunsho",
-   "name": "書類の電子化・文書管理",
-   "cats": [
-    "dms"
-   ],
-   "rx": "",
-   "pain": "紙の書類とスキャンPDFが混在し、探す時間が積み上がっている",
-   "products": [
-    {
-     "name": "Simplenote型メモ (Kurage Memo)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "keiyaku",
-   "name": "電子契約",
-   "cats": [
-    "esign"
-   ],
-   "rx": "電子署名|電子契約|e-?sign",
-   "pain": "契約書の郵送・押印の往復で、着手が1週間遅れる",
-   "products": []
-  },
-  {
-   "slug": "wiki",
-   "name": "マニュアル・手順書",
-   "cats": [
-    "knowledge"
-   ],
-   "rx": "",
-   "pain": "作業手順が人によって違い、新人教育のたびに同じ説明をしている",
-   "products": [
-    {
-     "name": "AIチャットボット (klchatbot)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "anken",
-   "name": "案件・工程管理",
-   "cats": [
-    "project"
-   ],
-   "rx": "",
-   "pain": "どの案件がどこまで進んでいるか、担当者に聞かないと分からない",
-   "products": []
-  },
-  {
-   "slug": "zaiko",
-   "name": "在庫・発注",
-   "cats": [
-    "inventory"
-   ],
-   "rx": "在庫|発注|倉庫|入出庫",
-   "pain": "在庫はExcel台帳で、欠品と過剰在庫が同時に起きる",
-   "products": []
-  },
-  {
-   "slug": "hikitsugi",
-   "name": "引き継ぎ・属人化対策",
-   "cats": [],
-   "rx": "引き継ぎ|引継|属人化|ナレッジベース|オンボーディング",
-   "pain": "その人しかできない仕事があり、退職のたびに知識が消える",
-   "products": [
-    {
-     "name": "職務・引継ぎ管理 (Kurage HR Post)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
-     "price": "55,000円"
+      "slug": "groupware",
+      "name": "社内の情報共有",
+      "cats": [
+        "groupware"
+      ],
+      "rx": "",
+      "pain": "連絡が口頭とLINEと掲示板に分かれ、見た人と見ていない人が生まれる",
+      "products": [
+        {
+          "name": "買い切りグループウェア (kvgwc)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
+          "price": "55,000円"
+        }
+      ]
     },
     {
-     "name": "Whisper議事録 Kurage AI MOM",
-     "url": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
-     "price": "55,000円"
-    }
-   ]
-  },
-  {
-   "slug": "shoken",
-   "name": "商圏分析・出店判断",
-   "cats": [
-    "shoken",
-    "gis"
-   ],
-   "rx": "商圏|到達圏|人口メッシュ|立地",
-   "pain": "出店や営業エリアの判断が、経験と勘に頼ったままになっている",
-   "products": [
+      "slug": "bunsho",
+      "name": "書類の電子化・文書管理",
+      "cats": [
+        "dms"
+      ],
+      "rx": "",
+      "pain": "紙の書類とスキャンPDFが混在し、探す時間が積み上がっている",
+      "products": [
+        {
+          "name": "Simplenote型メモ (Kurage Memo)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
+          "price": "55,000円"
+        }
+      ]
+    },
     {
-     "name": "Kurage 商圏分析 (kshoken)",
-     "url": "https://kappstore.exbridge.jp/app.php?id=a5ac4b9f1fdb6d19",
-     "price": "55,000円"
+      "slug": "keiyaku",
+      "name": "電子契約",
+      "cats": [
+        "esign"
+      ],
+      "rx": "電子署名|電子契約|e-?sign",
+      "pain": "契約書の郵送・押印の往復で、着手が1週間遅れる",
+      "products": []
+    },
+    {
+      "slug": "wiki",
+      "name": "マニュアル・手順書",
+      "cats": [
+        "knowledge"
+      ],
+      "rx": "",
+      "pain": "作業手順が人によって違い、新人教育のたびに同じ説明をしている",
+      "products": [
+        {
+          "name": "AIチャットボット (klchatbot)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
+          "price": "55,000円"
+        }
+      ]
+    },
+    {
+      "slug": "anken",
+      "name": "案件・工程管理",
+      "cats": [
+        "project"
+      ],
+      "rx": "",
+      "pain": "どの案件がどこまで進んでいるか、担当者に聞かないと分からない",
+      "products": []
+    },
+    {
+      "slug": "zaiko",
+      "name": "在庫・発注",
+      "cats": [
+        "inventory"
+      ],
+      "rx": "在庫|発注|倉庫|入出庫",
+      "pain": "在庫はExcel台帳で、欠品と過剰在庫が同時に起きる",
+      "products": []
+    },
+    {
+      "slug": "hikitsugi",
+      "name": "引き継ぎ・属人化対策",
+      "cats": [],
+      "rx": "引き継ぎ|引継|属人化|ナレッジベース|オンボーディング",
+      "pain": "その人しかできない仕事があり、退職のたびに知識が消える",
+      "products": [
+        {
+          "name": "職務・引継ぎ管理 (Kurage HR Post)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
+          "price": "55,000円"
+        },
+        {
+          "name": "Whisper議事録 Kurage AI MOM",
+          "url": "https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920",
+          "price": "55,000円"
+        }
+      ]
+    },
+    {
+      "slug": "shoken",
+      "name": "商圏分析・出店判断",
+      "cats": [
+        "shoken",
+        "gis"
+      ],
+      "rx": "商圏|到達圏|人口メッシュ|立地",
+      "pain": "出店や営業エリアの判断が、経験と勘に頼ったままになっている",
+      "products": [
+        {
+          "name": "Kurage 商圏分析 (kshoken)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=a5ac4b9f1fdb6d19",
+          "price": "55,000円"
+        }
+      ]
+    },
+    {
+      "slug": "genba-kiroku",
+      "name": "現場記録・作業報告の集約",
+      "cats": [
+        "hr",
+        "project"
+      ],
+      "rx": "現場(報告|記録|管理)|作業報告|日報|チェックリスト|点検(記録|表)|写真報告|巡回",
+      "pain": "現場からの報告が紙とLINEでばらばらに届き、集計や請求のたびに転記している",
+      "products": [
+        {
+          "name": "顔打刻つき勤怠 Kurage Kintai",
+          "url": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
+          "price": "55,000円"
+        },
+        {
+          "name": "入力ゼロCRM Kurage CRM Agent",
+          "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
+          "price": "55,000円"
+        },
+        {
+          "name": "請求書ソフト kbilling",
+          "url": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
+          "price": "55,000円"
+        }
+      ]
     }
-   ]
-  }
- ],
- "industries": [
-  {
-   "slug": "kaigo",
-   "name": "介護事業所",
-   "kicker": "訪問・通所・施設",
-   "context": "人手不足がもっとも深刻な業種のひとつで、記録・請求・シフトの事務が現場の時間を奪っています。介護報酬請求は制度対応が命なので専用ソフトを残し、そのまわりの事務を安くするのが現実的です。",
-   "skip": [
-    "meishi"
-   ]
-  },
-  {
-   "slug": "hoiku",
-   "name": "保育園・幼稚園",
-   "kicker": "認可・認可外・こども園",
-   "context": "連絡帳・お便り・シフト・写真販売と、先生の事務は年々増えています。保護者向けの本体アプリは残し、園内の事務だけを買い切りに移す形が向いています。",
-   "skip": [
-    "meishi",
-    "shoken",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "biyou",
-   "name": "美容室・サロン",
-   "kicker": "美容室・ネイル・エステ",
-   "context": "予約と顧客カルテが経営の中心で、ホットペッパー等の集客網は簡単には外せません。自店の顧客台帳と業務連絡を自前に持つと、掲載費への依存を下げられます。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "gijiroku"
-   ]
-  },
-  {
-   "slug": "inshoku",
-   "name": "飲食店",
-   "kicker": "単店・多店舗",
-   "context": "予約・シフト・原価と、薄利の中で固定費が積み上がりやすい業種です。グルメサイトの送客は残しつつ、自店予約と勤怠を買い切りにする余地があります。",
-   "skip": [
-    "meishi",
-    "keiyaku"
-   ]
-  },
-  {
-   "slug": "shukuhaku",
-   "name": "宿泊・ホテル・旅館",
-   "kicker": "旅館・ホテル・民泊",
-   "context": "OTA・サイトコントローラーは外せない本体です。館内の勤怠・引き継ぎ・問い合わせといった裏方の事務が置き換え候補になります。",
-   "skip": [
-    "meishi"
-   ]
-  },
-  {
-   "slug": "kensetsu",
-   "name": "建設・工務店",
-   "kicker": "住宅・リフォーム・専門工事",
-   "context": "現場と事務所の距離が課題の業種です。工程写真・図面・日報の共有と、見積・請求の事務を安くする余地が大きい。",
-   "skip": []
-  },
-  {
-   "slug": "iryo",
-   "name": "クリニック・医療",
-   "kicker": "診療所・歯科以外",
-   "context": "電子カルテとレセコンは制度対応の本体で置き換え対象ではありません。予約・問い合わせ・院内の情報共有・勤怠が周辺の置き換え候補です。",
-   "skip": [
-    "meishi",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "fudosan",
-   "name": "不動産会社",
-   "kicker": "売買・賃貸・管理",
-   "context": "レインズ・ポータル掲載は本体として残し、追客・物件資料・契約書類の事務を自前に。エリアの人口データは提案資料の説得力に直結します。",
-   "skip": []
-  },
-  {
-   "slug": "juku",
-   "name": "塾・スクール",
-   "kicker": "学習塾・習い事",
-   "context": "生徒管理と保護者連絡が中心業務です。月謝の請求・出欠・教室ごとの商圏把握を安く整えられます。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "butsuryu",
-   "name": "物流・倉庫",
-   "kicker": "運送・3PL・倉庫",
-   "context": "在庫と入出庫の正確さが商売の芯です。WMSの本体は残しつつ、勤怠・引き継ぎ・請求の周辺事務が候補になります。",
-   "skip": [
-    "meishi"
-   ]
-  },
-  {
-   "slug": "koukoku",
-   "name": "広告代理店・マーケ会社",
-   "kicker": "広告・制作・PR",
-   "context": "案件と工数の管理が利益を左右します。クライアント提案に使う商圏・人口データを自前で出せると差別化になります。",
-   "skip": [
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "shigyo",
-   "name": "士業",
-   "kicker": "税理士・社労士・行政書士",
-   "context": "顧問先とのやり取りと書類の管理が業務の大半です。守秘性の高い書類を外部クラウドに置きたくない事務所ほど、自前サーバー構成が向きます。",
-   "skip": [
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "seizo",
-   "name": "製造業・町工場",
-   "kicker": "部品・加工・組立",
-   "context": "図面・工程・在庫の3点が芯です。生産管理の本体はそのままに、日報・引き継ぎ・勤怠のデジタル化から始めるのが現実的です。",
-   "skip": [
-    "shoken"
-   ]
-  },
-  {
-   "slug": "web-seisaku",
-   "name": "IT・Web制作会社",
-   "kicker": "受託制作・開発",
-   "context": "案件管理と顧客管理は自分たちで直せる道具が一番です。ソース付き買い切りなら、自社仕様への改造がそのまま資産になります。",
-   "skip": [
-    "shoken",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "oroshi",
-   "name": "卸売・商社",
-   "kicker": "食品・資材・雑貨",
-   "context": "得意先ごとの単価・与信・受発注の管理が複雑になりがちです。基幹は残し、見積・請求・名刺・引き継ぎを安く整えられます。",
-   "skip": []
-  },
-  {
-   "slug": "jinzai",
-   "name": "人材紹介・派遣",
-   "kicker": "紹介・派遣・請負",
-   "context": "求職者と求人企業の両面管理が特徴です。応募者対応のメール共有と面談記録の資産化が効きます。",
-   "skip": [
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "shika",
-   "name": "歯科医院",
-   "kicker": "一般・矯正・小児",
-   "context": "予約の埋まり方が経営を左右します。リコール(定期検診)の案内と予約・問い合わせの自動化が周辺の置き換え候補です。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "seikotsu",
-   "name": "整骨院・整体院",
-   "kicker": "接骨・鍼灸・整体",
-   "context": "回数券・予約・カルテの管理が中心です。ポータル依存を下げ、自院の顧客台帳を持つことが再来につながります。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "fitness",
-   "name": "フィットネス・ジム",
-   "kicker": "24hジム・パーソナル",
-   "context": "会員管理と予約が本体です。入会導線は残し、会員連絡・勤怠・エリア分析を自前に持てます。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "doubutsu",
-   "name": "動物病院",
-   "kicker": "犬猫・エキゾチック",
-   "context": "カルテと予約が中心で、飼い主への連絡・問い合わせ対応の負担が大きい業種です。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "sousai",
-   "name": "葬祭業",
-   "kicker": "葬儀社・霊園",
-   "context": "突発対応と施行管理が特徴です。名簿・請求・引き継ぎの正確さがそのまま信頼になります。",
-   "skip": [
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "jidosha-seibi",
-   "name": "自動車整備工場",
-   "kicker": "車検・整備・板金",
-   "context": "車検の入庫予約と顧客車両の履歴管理が芯です。次回車検の案内を仕組みにすると再来率が変わります。",
-   "skip": [
-    "meishi"
-   ]
-  },
-  {
-   "slug": "cleaning",
-   "name": "クリーニング店",
-   "kicker": "個人店・工場・集配",
-   "context": "預かり品の管理と集配ルートが業務の中心です。会員台帳と受付の仕組みを安く持てます。",
-   "skip": [
-    "meishi",
-    "gijiroku"
-   ]
-  },
-  {
-   "slug": "houkago",
-   "name": "放課後等デイ・学童",
-   "kicker": "児童発達支援含む",
-   "context": "支援記録と保護者連絡、送迎の管理が日々の中心です。制度請求の本体は残し、記録と連絡を整えます。",
-   "skip": [
-    "meishi",
-    "shoken",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "homon-kaigo",
-   "name": "訪問介護",
-   "kicker": "訪問介護・障害福祉",
-   "context": "直行直帰のヘルパーさんと事務所の情報共有が生命線です。記録・シフト・引き継ぎをスマホで完結させる構成が向きます。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "homon-kango",
-   "name": "訪問看護ステーション",
-   "kicker": "訪問看護・リハ",
-   "context": "医療情報を扱うため、データを自社管理下に置ける構成が好まれます。記録・情報共有・勤怠が候補です。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "ec-jigyo",
-   "name": "ECショップ運営",
-   "kicker": "自社EC・モール併売",
-   "context": "モールは販路として残し、在庫・受注・問い合わせの一元化と、顧客対応の質が利益率を決めます。",
-   "skip": [
-    "shoken",
-    "meishi"
-   ]
-  },
-  {
-   "slug": "kouri",
-   "name": "小売店・専門店",
-   "kicker": "食品・雑貨・アパレル",
-   "context": "POSと仕入の本体は残しつつ、会員台帳・シフト・出店計画の道具を安く持てます。",
-   "skip": [
-    "meishi"
-   ]
-  },
-  {
-   "slug": "nougyou",
-   "name": "農業法人",
-   "kicker": "生産・直販・六次化",
-   "context": "生産記録と販路管理が分断されがちです。直販の受注・請求と作業記録の電子化から始められます。",
-   "skip": [
-    "meishi",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "seisou",
-   "name": "清掃業",
-   "kicker": "ビルメン・ハウス",
-   "context": "現場ごとの仕様書・チェックリスト・シフトが業務の芯です。写真つき報告の仕組み化が信頼になります。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "keibi",
-   "name": "警備業",
-   "kicker": "施設・交通・イベント",
-   "context": "隊員のシフトと上番・下番の管理、報告書の作成が中心です。教育記録の資産化も効きます。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "insatsu",
-   "name": "印刷会社",
-   "kicker": "商業印刷・軽印刷",
-   "context": "見積・入稿・工程・納期の管理が複雑です。案件管理と請求の事務を安く整えられます。",
-   "skip": [
-    "shoken"
-   ]
-  },
-  {
-   "slug": "denki-koji",
-   "name": "電気工事店",
-   "kicker": "電気・空調・通信",
-   "context": "現場写真・図面・報告書の管理と、元請けとのやり取りが中心です。",
-   "skip": [
-    "meishi",
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "zouen",
-   "name": "造園業",
-   "kicker": "造園・外構・剪定",
-   "context": "季節で繁閑が大きく、顧客の庭の履歴が資産です。定期剪定の案内を仕組みにできます。",
-   "skip": [
-    "meishi",
-    "zaiko"
-   ]
-  },
-  {
-   "slug": "unsou",
-   "name": "運送会社",
-   "kicker": "チャーター・宅配・引越",
-   "context": "車両と乗務員の管理、日報・点呼記録が中心です。勤怠と引き継ぎの電子化から始められます。",
-   "skip": [
-    "meishi",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "npo",
-   "name": "NPO・一般社団法人",
-   "kicker": "非営利・協会",
-   "context": "会員・寄付者の名簿と会費の管理、総会の議事録が中心です。少ない予算で買い切りが向く典型です。",
-   "skip": [
-    "zaiko",
-    "shoken"
-   ]
-  },
-  {
-   "slug": "seiji-dantai",
-   "name": "政治団体・後援会",
-   "kicker": "後援会・政党支部・議員事務所",
-   "context": "支援者名簿・会費/寄付の記録・後援会報の発送・集会の案内と、事務は普通の団体運営と同じ構造です。一方で政治資金規正法の収支報告と公職選挙法の規制(選挙運動メールの制限等)はツールでは解決できないため、当社は『政治活動の事務を安くする』範囲に限って支援します。",
-   "skip": [
-    "zaiko"
-   ]
-  }
- ]
+  ],
+  "industries": [
+    {
+      "slug": "kaigo",
+      "name": "介護事業所",
+      "kicker": "訪問・通所・施設",
+      "context": "人手不足がもっとも深刻な業種のひとつで、記録・請求・シフトの事務が現場の時間を奪っています。介護報酬請求は制度対応が命なので専用ソフトを残し、そのまわりの事務を安くするのが現実的です。",
+      "skip": [
+        "meishi"
+      ]
+    },
+    {
+      "slug": "hoiku",
+      "name": "保育園・幼稚園",
+      "kicker": "認可・認可外・こども園",
+      "context": "連絡帳・お便り・シフト・写真販売と、先生の事務は年々増えています。保護者向けの本体アプリは残し、園内の事務だけを買い切りに移す形が向いています。",
+      "skip": [
+        "meishi",
+        "shoken",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "biyou",
+      "name": "美容室・サロン",
+      "kicker": "美容室・ネイル・エステ",
+      "context": "予約と顧客カルテが経営の中心で、ホットペッパー等の集客網は簡単には外せません。自店の顧客台帳と業務連絡を自前に持つと、掲載費への依存を下げられます。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "gijiroku"
+      ]
+    },
+    {
+      "slug": "inshoku",
+      "name": "飲食店",
+      "kicker": "単店・多店舗",
+      "context": "予約・シフト・原価と、薄利の中で固定費が積み上がりやすい業種です。グルメサイトの送客は残しつつ、自店予約と勤怠を買い切りにする余地があります。",
+      "skip": [
+        "meishi",
+        "keiyaku"
+      ]
+    },
+    {
+      "slug": "shukuhaku",
+      "name": "宿泊・ホテル・旅館",
+      "kicker": "旅館・ホテル・民泊",
+      "context": "OTA・サイトコントローラーは外せない本体です。館内の勤怠・引き継ぎ・問い合わせといった裏方の事務が置き換え候補になります。",
+      "skip": [
+        "meishi"
+      ]
+    },
+    {
+      "slug": "kensetsu",
+      "name": "建設・工務店",
+      "kicker": "住宅・リフォーム・専門工事",
+      "context": "現場と事務所の距離が課題の業種です。工程写真・図面・日報の共有と、見積・請求の事務を安くする余地が大きい。",
+      "skip": []
+    },
+    {
+      "slug": "iryo",
+      "name": "クリニック・医療",
+      "kicker": "診療所・歯科以外",
+      "context": "電子カルテとレセコンは制度対応の本体で置き換え対象ではありません。予約・問い合わせ・院内の情報共有・勤怠が周辺の置き換え候補です。",
+      "skip": [
+        "meishi",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "fudosan",
+      "name": "不動産会社",
+      "kicker": "売買・賃貸・管理",
+      "context": "レインズ・ポータル掲載は本体として残し、追客・物件資料・契約書類の事務を自前に。エリアの人口データは提案資料の説得力に直結します。",
+      "skip": []
+    },
+    {
+      "slug": "juku",
+      "name": "塾・スクール",
+      "kicker": "学習塾・習い事",
+      "context": "生徒管理と保護者連絡が中心業務です。月謝の請求・出欠・教室ごとの商圏把握を安く整えられます。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "butsuryu",
+      "name": "物流・倉庫",
+      "kicker": "運送・3PL・倉庫",
+      "context": "在庫と入出庫の正確さが商売の芯です。WMSの本体は残しつつ、勤怠・引き継ぎ・請求の周辺事務が候補になります。",
+      "skip": [
+        "meishi"
+      ]
+    },
+    {
+      "slug": "koukoku",
+      "name": "広告代理店・マーケ会社",
+      "kicker": "広告・制作・PR",
+      "context": "案件と工数の管理が利益を左右します。クライアント提案に使う商圏・人口データを自前で出せると差別化になります。",
+      "skip": [
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "shigyo",
+      "name": "士業",
+      "kicker": "税理士・社労士・行政書士",
+      "context": "顧問先とのやり取りと書類の管理が業務の大半です。守秘性の高い書類を外部クラウドに置きたくない事務所ほど、自前サーバー構成が向きます。",
+      "skip": [
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "seizo",
+      "name": "製造業・町工場",
+      "kicker": "部品・加工・組立",
+      "context": "図面・工程・在庫の3点が芯です。生産管理の本体はそのままに、日報・引き継ぎ・勤怠のデジタル化から始めるのが現実的です。",
+      "skip": [
+        "shoken"
+      ]
+    },
+    {
+      "slug": "web-seisaku",
+      "name": "IT・Web制作会社",
+      "kicker": "受託制作・開発",
+      "context": "案件管理と顧客管理は自分たちで直せる道具が一番です。ソース付き買い切りなら、自社仕様への改造がそのまま資産になります。",
+      "skip": [
+        "shoken",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "oroshi",
+      "name": "卸売・商社",
+      "kicker": "食品・資材・雑貨",
+      "context": "得意先ごとの単価・与信・受発注の管理が複雑になりがちです。基幹は残し、見積・請求・名刺・引き継ぎを安く整えられます。",
+      "skip": []
+    },
+    {
+      "slug": "jinzai",
+      "name": "人材紹介・派遣",
+      "kicker": "紹介・派遣・請負",
+      "context": "求職者と求人企業の両面管理が特徴です。応募者対応のメール共有と面談記録の資産化が効きます。",
+      "skip": [
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "shika",
+      "name": "歯科医院",
+      "kicker": "一般・矯正・小児",
+      "context": "予約の埋まり方が経営を左右します。リコール(定期検診)の案内と予約・問い合わせの自動化が周辺の置き換え候補です。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "seikotsu",
+      "name": "整骨院・整体院",
+      "kicker": "接骨・鍼灸・整体",
+      "context": "回数券・予約・カルテの管理が中心です。ポータル依存を下げ、自院の顧客台帳を持つことが再来につながります。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "fitness",
+      "name": "フィットネス・ジム",
+      "kicker": "24hジム・パーソナル",
+      "context": "会員管理と予約が本体です。入会導線は残し、会員連絡・勤怠・エリア分析を自前に持てます。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "doubutsu",
+      "name": "動物病院",
+      "kicker": "犬猫・エキゾチック",
+      "context": "カルテと予約が中心で、飼い主への連絡・問い合わせ対応の負担が大きい業種です。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "sousai",
+      "name": "葬祭業",
+      "kicker": "葬儀社・霊園",
+      "context": "突発対応と施行管理が特徴です。名簿・請求・引き継ぎの正確さがそのまま信頼になります。",
+      "skip": [
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "jidosha-seibi",
+      "name": "自動車整備工場",
+      "kicker": "車検・整備・板金",
+      "context": "車検の入庫予約と顧客車両の履歴管理が芯です。次回車検の案内を仕組みにすると再来率が変わります。",
+      "skip": [
+        "meishi"
+      ]
+    },
+    {
+      "slug": "cleaning",
+      "name": "クリーニング店",
+      "kicker": "個人店・工場・集配",
+      "context": "預かり品の管理と集配ルートが業務の中心です。会員台帳と受付の仕組みを安く持てます。",
+      "skip": [
+        "meishi",
+        "gijiroku"
+      ]
+    },
+    {
+      "slug": "houkago",
+      "name": "放課後等デイ・学童",
+      "kicker": "児童発達支援含む",
+      "context": "支援記録と保護者連絡、送迎の管理が日々の中心です。制度請求の本体は残し、記録と連絡を整えます。",
+      "skip": [
+        "meishi",
+        "shoken",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "homon-kaigo",
+      "name": "訪問介護",
+      "kicker": "訪問介護・障害福祉",
+      "context": "直行直帰のヘルパーさんと事務所の情報共有が生命線です。記録・シフト・引き継ぎをスマホで完結させる構成が向きます。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "homon-kango",
+      "name": "訪問看護ステーション",
+      "kicker": "訪問看護・リハ",
+      "context": "医療情報を扱うため、データを自社管理下に置ける構成が好まれます。記録・情報共有・勤怠が候補です。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "ec-jigyo",
+      "name": "ECショップ運営",
+      "kicker": "自社EC・モール併売",
+      "context": "モールは販路として残し、在庫・受注・問い合わせの一元化と、顧客対応の質が利益率を決めます。",
+      "skip": [
+        "shoken",
+        "meishi"
+      ]
+    },
+    {
+      "slug": "kouri",
+      "name": "小売店・専門店",
+      "kicker": "食品・雑貨・アパレル",
+      "context": "POSと仕入の本体は残しつつ、会員台帳・シフト・出店計画の道具を安く持てます。",
+      "skip": [
+        "meishi"
+      ]
+    },
+    {
+      "slug": "nougyou",
+      "name": "農業法人",
+      "kicker": "生産・直販・六次化",
+      "context": "生産記録と販路管理が分断されがちです。直販の受注・請求と作業記録の電子化から始められます。",
+      "skip": [
+        "meishi",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "seisou",
+      "name": "清掃業",
+      "kicker": "ビルメン・ハウス",
+      "context": "現場ごとの仕様書・チェックリスト・シフトが業務の芯です。写真つき報告の仕組み化が信頼になります。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "keibi",
+      "name": "警備業",
+      "kicker": "施設・交通・イベント",
+      "context": "隊員のシフトと上番・下番の管理、報告書の作成が中心です。教育記録の資産化も効きます。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "insatsu",
+      "name": "印刷会社",
+      "kicker": "商業印刷・軽印刷",
+      "context": "見積・入稿・工程・納期の管理が複雑です。案件管理と請求の事務を安く整えられます。",
+      "skip": [
+        "shoken"
+      ]
+    },
+    {
+      "slug": "denki-koji",
+      "name": "電気工事店",
+      "kicker": "電気・空調・通信",
+      "context": "現場写真・図面・報告書の管理と、元請けとのやり取りが中心です。",
+      "skip": [
+        "meishi",
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "zouen",
+      "name": "造園業",
+      "kicker": "造園・外構・剪定",
+      "context": "季節で繁閑が大きく、顧客の庭の履歴が資産です。定期剪定の案内を仕組みにできます。",
+      "skip": [
+        "meishi",
+        "zaiko"
+      ]
+    },
+    {
+      "slug": "unsou",
+      "name": "運送会社",
+      "kicker": "チャーター・宅配・引越",
+      "context": "車両と乗務員の管理、日報・点呼記録が中心です。勤怠と引き継ぎの電子化から始められます。",
+      "skip": [
+        "meishi",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "npo",
+      "name": "NPO・一般社団法人",
+      "kicker": "非営利・協会",
+      "context": "会員・寄付者の名簿と会費の管理、総会の議事録が中心です。少ない予算で買い切りが向く典型です。",
+      "skip": [
+        "zaiko",
+        "shoken"
+      ]
+    },
+    {
+      "slug": "seiji-dantai",
+      "name": "政治団体・後援会",
+      "kicker": "後援会・政党支部・議員事務所",
+      "context": "支援者名簿・会費/寄付の記録・後援会報の発送・集会の案内と、事務は普通の団体運営と同じ構造です。一方で政治資金規正法の収支報告と公職選挙法の規制(選挙運動メールの制限等)はツールでは解決できないため、当社は『政治活動の事務を安くする』範囲に限って支援します。",
+      "skip": [
+        "zaiko"
+      ]
+    }
+  ]
 }

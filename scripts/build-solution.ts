@@ -40,6 +40,9 @@ type SolutionPage = {
   lps: Array<{ label: string; url: string }>
   facts: string
   lead?: string; verdict?: string; faqs?: Array<{ q: string; a: string }>
+  /** 「ITコストを下げる/SaaS代替」の型が合わないページ用の見出し上書き。
+   *  例: 既存システムの機能拡張は受託開発の相談であってSaaS代替ではない(2026-09-05)。 */
+  titleOverride?: string; h1Override?: string; descOverride?: string
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -84,13 +87,13 @@ function detailPage(p: SolutionPage): string {
   const url = `${BASE}/${p.slug}.html`
   const saas = p.saasSlugs.map((s) => saasBySlug.get(s)).filter(Boolean) as Saas[]
   const oss = p.ossPicks.map((s) => bySlug.get(s)).filter(Boolean) as Project[]
-  const title = `${p.name}のITコストを下げる｜有名SaaSとオープンソース代替・買い切りの選択肢 | 株式会社エクスブリッジ`
-  const desc = `${p.name}で使われる${[...saas.map((s) => s.name), ...p.extraSaas].slice(0, 4).join('、')}などのITサービスは、人数×月額の固定費が積み上がります。置き換えられる業務と置き換えられない業務を正直に仕分けし、オープンソース・買い切りで固定費を減らす道筋を、名古屋のシステム開発会社がまとめました。`
+  const title = p.titleOverride || `${p.name}のITコストを下げる｜有名SaaSとオープンソース代替・買い切りの選択肢 | 株式会社エクスブリッジ`
+  const desc = p.descOverride || `${p.name}で使われる${[...saas.map((s) => s.name), ...p.extraSaas].slice(0, 4).join('、')}などのITサービスは、人数×月額の固定費が積み上がります。置き換えられる業務と置き換えられない業務を正直に仕分けし、オープンソース・買い切りで固定費を減らす道筋を、名古屋のシステム開発会社がまとめました。`
   const faqs = p.faqs || []
 
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">${KIND_LABEL[p.kind]}別ソリューション｜${h(p.kicker)}</p>
-<h1>${h(p.name)}のITコストを、<br>オープンソースと買い切りで見直す。</h1>
+<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : `${h(p.name)}のITコストを、<br>オープンソースと買い切りで見直す。`}</h1>
 <p class="lead">${h(p.lead || p.facts)}</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(p.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=solution-${attr(p.slug)}">OSSカスタマイズ（110,000円〜）</a></p>
 </div></section>

@@ -5476,5 +5476,332 @@
         "answer": "一般的な文は読めますが、固有名詞や専門用語は崩れます。当社の実測では「Transformer」が「トランス」と訳されました。GPUがあるならローカルLLMのほうが品質は上です。"
       }
     ]
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "PaddleOCR",
+    "slug": "paddleocr",
+    "summary": "帳票や書類の画像・PDFから、文字と表を構造化データとして取り出すOCRの基盤。商用利用が自由なApache-2.0で、日本語を含む多言語に対応します。",
+    "description": "PaddleOCR（Apache-2.0・GitHubスター約88,900）は、文字検出・文字認識・レイアウト解析・表の構造認識を備えたOCRの基盤です。日本語を含む多言語に対応し、請求書・納品書・申込書のような定型帳票から項目を取り出す用途に使われます。商用利用・改変・再配布が自由なライセンスなので、自社の業務システムに組み込んで納品する形にできます。GPUがあれば高速に、CPUだけでも動きます。日本語の帳票に特化した精度が必要な場合はYomiTokuという選択肢もありますが、そちらは非商用ライセンスのため商用では別途の契約が必要です。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし（読み取り対象として日本語に対応）",
+    "officialUrl": "https://github.com/PaddlePaddle/PaddleOCR",
+    "githubUrl": "https://github.com/PaddlePaddle/PaddleOCR",
+    "stars": 88868,
+    "language": "Python",
+    "githubCreatedAt": "2020-05-08T00:00:00Z",
+    "githubPushedAt": "2026-07-22T00:00:00Z",
+    "useCases": [
+      {
+        "text": "請求書・納品書の読み取りと基幹システムへの取込"
+      },
+      {
+        "text": "申込書・申請書の入力代行の自動化"
+      },
+      {
+        "text": "紙で届く帳票のデータ化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai ocr"
+      },
+      {
+        "text": "帳票 ocr"
+      },
+      {
+        "text": "ocr オープンソース"
+      },
+      {
+        "text": "請求書 ocr"
+      },
+      {
+        "text": "ocr 商用利用"
+      },
+      {
+        "text": "帳票 自動入力"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "商用のシステムに組み込めますか？",
+        "answer": "できます。Apache-2.0なので、改変して自社の業務システムに組み込み、顧客に納品する形にも制約がありません。日本語帳票に強いYomiTokuは非商用ライセンスで商用には別途契約が要るため、受託開発で使うならPaddleOCRが現実的です。"
+      },
+      {
+        "question": "手書きの帳票も読めますか？",
+        "answer": "活字に比べて精度は落ちます。手書きが多い帳票では、読み取り結果をそのまま使わず、人が確認・補正する画面を必ず挟む設計にします。"
+      },
+      {
+        "question": "表の中の項目を取り出せますか？",
+        "answer": "表の構造を認識する機能があるため、罫線のある定型帳票なら行と列を保ったまま取り出せます。帳票ごとの項目対応づけは別途の作り込みになります。"
+      }
+    ],
+    "seoTitle": "AI-OCRをオープンソースで｜帳票の読み取りを商用可のPaddleOCRで",
+    "seoDescription": "請求書・帳票のAI-OCRをオープンソースで。PaddleOCRは商用利用が自由なApache-2.0で日本語対応。既存システムへの取込まで含めた開発は名古屋のエクスブリッジ。"
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "MinerU",
+    "slug": "mineru",
+    "summary": "PDFやOffice文書を、レイアウト・表・数式を保ったまま機械が読める形（Markdown・JSON）に変換します。AIに書類を読ませる前処理に使われます。",
+    "description": "MinerU（GitHubスター約79,200）は、複雑なレイアウトのPDFやOffice文書を、見出し・段落・表・数式の構造を保ったままMarkdownやJSONに変換する道具です。スキャンしたPDFにはOCRを掛けて文字化します。社内文書をAIに読ませる前処理、書類から項目を取り出す処理の土台に使われます。ライセンスはApache-2.0に追加条件が付く形なので、商用で使う前に条件の確認が必要です。",
+    "license": "Apache-2.0（追加条件あり）",
+    "licenseNote": "Apache-2.0に追加の条項が付いています。商用利用の前に本家のライセンス文書を確認してください。",
+    "japaneseStatus": "日本語ファイルなし（処理対象として日本語に対応）",
+    "officialUrl": "https://github.com/opendatalab/MinerU",
+    "githubUrl": "https://github.com/opendatalab/MinerU",
+    "stars": 79160,
+    "language": "Python",
+    "githubCreatedAt": "2024-02-29T00:00:00Z",
+    "githubPushedAt": "2026-09-04T00:00:00Z",
+    "useCases": [
+      {
+        "text": "PDFの書類をAIが読める形に変換する前処理"
+      },
+      {
+        "text": "表や数式を含む資料の構造化"
+      },
+      {
+        "text": "スキャンPDFの文字化と構造化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "pdf markdown 変換"
+      },
+      {
+        "text": "pdf 構造化"
+      },
+      {
+        "text": "書類 ai 読み込み"
+      },
+      {
+        "text": "pdf テキスト抽出"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "スキャンしたPDFも扱えますか？",
+        "answer": "扱えます。文字層の無いPDFにはOCRを掛けてから構造化します。"
+      },
+      {
+        "question": "商用利用できますか？",
+        "answer": "Apache-2.0に追加条件が付く形のライセンスです。当社は導入前に本家のライセンス文書を確認し、条件に触れる使い方になる場合は別の道具を提案します。"
+      }
+    ]
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "marker",
+    "slug": "marker",
+    "summary": "PDFを高い精度でMarkdownやJSONに変換します。表・数式・箇条書きの構造を保つので、書類をAIに読ませる前処理に向きます。商用可のApache-2.0です。",
+    "description": "marker（Apache-2.0・GitHubスター約39,500）は、PDFをMarkdownやJSONに変換する道具です。表・数式・見出し・箇条書きの構造を保ったまま出力し、必要に応じてOCRも掛けます。MinerUと同じ用途ですが、ライセンスがApache-2.0のみで追加条件が無いため、商用の受託開発で使いやすいのが利点です。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし（処理対象として日本語に対応）",
+    "officialUrl": "https://github.com/VikParuchuri/marker",
+    "githubUrl": "https://github.com/VikParuchuri/marker",
+    "stars": 39521,
+    "language": "Python",
+    "githubCreatedAt": "2023-10-30T00:00:00Z",
+    "githubPushedAt": "2026-08-31T00:00:00Z",
+    "useCases": [
+      {
+        "text": "PDF書類のMarkdown化（AIの前処理）"
+      },
+      {
+        "text": "報告書・仕様書の構造化"
+      },
+      {
+        "text": "社内文書の検索基盤への取込"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "pdf markdown 変換"
+      },
+      {
+        "text": "pdf 構造化 oss"
+      },
+      {
+        "text": "書類 テキスト化"
+      },
+      {
+        "text": "pdf json 変換"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "MinerUとどちらを選ぶべきですか？",
+        "answer": "用途は近いですが、markerはApache-2.0で追加条件が無いため、商用のシステムに組み込んで納品する場合はこちらが扱いやすいです。"
+      }
+    ]
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "OCRmyPDF",
+    "slug": "ocrmypdf",
+    "summary": "スキャンしたPDFに文字層を追加して、検索・コピーできるPDFに変換します。紙で溜まった書類を検索できる形にする定番の道具です。",
+    "description": "OCRmyPDF（MPL-2.0・GitHubスター約34,700）は、画像だけのスキャンPDFにOCRを掛けて、見た目はそのままに文字層だけを追加する道具です。元のページ画像は保持されるため、体裁を崩さずに検索・コピー・全文検索の対象にできます。全文検索や文書管理の前段として使われます。日本語にも対応します。",
+    "license": "MPL-2.0",
+    "japaneseStatus": "日本語ファイルなし（読み取り対象として日本語に対応）",
+    "officialUrl": "https://ocrmypdf.readthedocs.io/",
+    "githubUrl": "https://github.com/jbarlow83/OCRmyPDF",
+    "stars": 34668,
+    "language": "Python",
+    "githubCreatedAt": "2013-12-20T00:00:00Z",
+    "githubPushedAt": "2026-09-01T00:00:00Z",
+    "useCases": [
+      {
+        "text": "スキャンした書類を検索できるPDFにする"
+      },
+      {
+        "text": "紙の書類の全文検索への取込"
+      },
+      {
+        "text": "電子保存する書類の下処理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "スキャン pdf 検索"
+      },
+      {
+        "text": "pdf ocr 文字層"
+      },
+      {
+        "text": "pdf 検索できない"
+      },
+      {
+        "text": "書類 電子化 検索"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "見た目は変わりませんか？",
+        "answer": "変わりません。元のページ画像はそのまま残し、見えない文字層だけを追加します。"
+      },
+      {
+        "question": "全文検索やAIチャットの前段に使えますか？",
+        "answer": "向いています。画像だけのPDFは全文検索でも翻訳でもAIチャットでも扱えないため、先にこの処理を通します。"
+      }
+    ]
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "Tesseract",
+    "slug": "tesseract",
+    "summary": "長く使われているオープンソースのOCRエンジン。日本語を含む多言語に対応し、他の道具の内部でも広く使われています。商用可のApache-2.0です。",
+    "description": "Tesseract（Apache-2.0・GitHubスター約76,300）は、Googleが公開して以来、多くのソフトの内部で使われてきたOCRエンジンです。日本語を含む100以上の言語に対応します。単体では文字を読むだけで、帳票のレイアウト解析や項目の対応づけは別に作る必要があります。OCRmyPDFなど多くの道具がこれを内部で使っています。",
+    "license": "Apache-2.0",
+    "japaneseStatus": "日本語ファイルなし（読み取り対象として日本語に対応）",
+    "officialUrl": "https://github.com/tesseract-ocr/tesseract",
+    "githubUrl": "https://github.com/tesseract-ocr/tesseract",
+    "stars": 76338,
+    "language": "C++",
+    "githubCreatedAt": "2014-08-12T00:00:00Z",
+    "githubPushedAt": "2026-09-02T00:00:00Z",
+    "useCases": [
+      {
+        "text": "文字の読み取り（他の仕組みへの組み込み）"
+      },
+      {
+        "text": "スキャン書類の文字化"
+      },
+      {
+        "text": "枯れたOCRが必要な場面"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ocr オープンソース"
+      },
+      {
+        "text": "tesseract 日本語"
+      },
+      {
+        "text": "無料 ocr"
+      },
+      {
+        "text": "文字認識 エンジン"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PaddleOCRとどちらがよいですか？",
+        "answer": "帳票の項目を取り出す用途ではPaddleOCRのほうがレイアウト解析と表の認識を持つぶん有利です。Tesseractは枯れていて軽く、文字を読むだけで足りる場面に向きます。"
+      }
+    ]
+  },
+  {
+    "featured": false,
+    "funnel": "prototype",
+    "category": "dms",
+    "name": "YomiToku",
+    "slug": "yomitoku",
+    "summary": "日本語の文書画像に特化したAI解析エンジン。手書き・縦書き・表の構造まで読み取れますが、ライセンスは非商用で、商用利用には別途の契約が必要です。",
+    "description": "YomiToku（GitHubスター約1,600）は、日本語の文書画像に特化して学習された4種類のモデル（文字検出・文字認識・レイアウト解析・表構造認識）を持つ解析エンジンです。7,000字を超える日本語、手書き文字、縦書きに対応し、読み順の推定、HTML・Markdown・JSON・CSV・サーチャブルPDFへの出力、帳票からのKey-Value抽出（表の意味構造解析）まで備えます。日本語帳票の精度では有力な選択肢ですが、ライセンスが CC BY-NC-SA 4.0 で非商用利用に限られ、商用では開発元の製品版ライセンスかAWS Marketplace版が必要です。受託開発で組み込む場合はこの点の確認が先になります。",
+    "license": "CC BY-NC-SA 4.0（非商用）",
+    "licenseNote": "非商用の個人利用・研究目的のみ無償。商用利用は開発元の製品版ライセンス、またはAWS Marketplace版の契約が必要です。",
+    "japaneseStatus": "日本語で開発・提供（日本語文書に特化）",
+    "officialUrl": "https://github.com/kotaro-kinoshita/yomitoku",
+    "githubUrl": "https://github.com/kotaro-kinoshita/yomitoku",
+    "stars": 1586,
+    "language": "Python",
+    "githubCreatedAt": "2024-10-30T00:00:00Z",
+    "githubPushedAt": "2026-08-18T00:00:00Z",
+    "useCases": [
+      {
+        "text": "日本語帳票の高精度な読み取り（要ライセンス確認）"
+      },
+      {
+        "text": "手書き・縦書きを含む書類の解析"
+      },
+      {
+        "text": "帳票からのKey-Value抽出"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "yomitoku"
+      },
+      {
+        "text": "日本語 ocr"
+      },
+      {
+        "text": "手書き ocr"
+      },
+      {
+        "text": "帳票 ocr 日本語"
+      },
+      {
+        "text": "ai ocr 日本語"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "業務システムに組み込んで使えますか？",
+        "answer": "無償版のライセンスは非商用に限られます。商用で使う場合は開発元の製品版ライセンス、またはAWS Marketplace版の契約が必要です。当社が受託で組み込む場合は、この契約の要否を先に整理します。"
+      },
+      {
+        "question": "手書きも読めますか？",
+        "answer": "手書き文字の認識に対応しています。ただし精度は書き方に左右されるため、人が確認する工程を前提に設計します。"
+      },
+      {
+        "question": "商用でも無償で使えるOCRはありますか？",
+        "answer": "PaddleOCR（Apache-2.0）やTesseract（Apache-2.0）は商用利用が自由です。日本語帳票の精度と、ライセンスの自由度の兼ね合いで選びます。"
+      }
+    ],
+    "seoTitle": "YomiTokuとは｜日本語特化のAI-OCR・商用利用の条件",
+    "seoDescription": "日本語の帳票・手書き・縦書きに強いAI-OCR「YomiToku」。無償版は非商用ライセンスで、商用には別途契約が必要です。商用可のOCRとの比較と、業務システムへの組み込みは名古屋のエクスブリッジ。"
   }
 ]

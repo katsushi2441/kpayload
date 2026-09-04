@@ -167,7 +167,8 @@ export const CAPABILITIES: Capability[] = [
     rx: /(チーム(内)?(の)?(情報共有|連絡|作業)|コラボレーション|共同(編集|作業)|社内連絡)/i },
 
   // 請求・見積・会計
-  { group: 'accounting', key: 'invoice', label: '請求書の発行と管理', question: '請求書を手作業で作っている',
+  // 2026-09-05 実測: 請求書 発行 システム 590(高・CPC780〜23,025円=買い手の価値が最も高い語)／同 無料 110／電子請求書発行システム 90
+  { group: 'accounting', key: 'invoice', label: '請求書の発行と管理', noun: '請求書発行システム', terms: ['請求書 発行 システム', '請求書 発行 システム 無料', '電子請求書 発行 システム'], question: '請求書を手作業で作っている',
     rx: /(請求(書|management|管理|処理)|invoice|インボイス)/i },
   { group: 'accounting', key: 'quote', label: '見積書の作成', question: '見積作成に時間がかかる',
     rx: /(見積)/i },
@@ -233,7 +234,8 @@ export const CAPABILITIES: Capability[] = [
   // 文書・書類の電子化
   { group: 'document', key: 'dms', label: '文書管理・ファイル共有', question: 'ファイルの置き場がばらばら',
     rx: /(文書管理|ファイル(共有|管理|保管)|書類管理|ドキュメント管理)/i },
-  { group: 'document', key: 'ocr', label: 'OCR・書類の読み取り', question: '紙やPDFの入力を手でやっている',
+  // 2026-09-05 キーワードプランナー実測: ai ocr 8,100(中)／ai ocr 無料 590／手書き ocr 480／帳票 ocr 210(CPC346〜1,069円)
+  { group: 'document', key: 'ocr', label: 'OCR・書類の読み取り', noun: 'AI-OCR・帳票の読み取り', terms: ['ai ocr', '帳票 ocr', '手書き ocr', 'ai ocr 無料'], question: '紙やPDFの入力を手でやっている',
     rx: /(\bocr\b|読み取り|文字認識|スキャン|データ入力|転記)/i },
   { group: 'document', key: 'paperless', label: 'ペーパーレス・書類の電子化', question: '書類が紙で溜まり続けている',
     rx: /(ペーパーレス|電子化|紙(の)?(書類|業務|文書)|保存義務)/i },
