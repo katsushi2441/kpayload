@@ -48,6 +48,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   postgis: { id: 'a5ac4b9f1fdb6d19', label: 'PostGISで作った商圏分析システム(買い切り)を見る', product: true },
   kshoken: { id: 'a5ac4b9f1fdb6d19', label: '設置手順つきの買い切り版を見る', product: true },
   khazard: { id: '02b945f9c87c9d86', label: 'Kurage 土砂災害ハザードマップ（買い切り）を見る', price: '税込55,000円（買い切り）', product: true },
+  krefuge: { id: '162f155897390072', label: 'Kurage 避難所マップ（買い切り）を見る', price: '税込55,000円（買い切り）', product: true },
 }
 
 /** 商品ページへのリンク1本。該当が無ければ空文字。 */
