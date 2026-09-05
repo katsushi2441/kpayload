@@ -49,18 +49,25 @@ const EXTRA_CSS = `<style>
 .tw table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14.5px}
 .tw th,.tw td{border:1px solid #dfe7ee;padding:9px 12px;text-align:left;vertical-align:top}
 .tw th{background:#f2f7f7;white-space:nowrap}
-.proof{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.proof::-webkit-scrollbar{height:8px}
-.proof::-webkit-scrollbar-thumb{background:#c8ded9;border-radius:99px}
-.pcard{position:relative;flex:0 0 340px;scroll-snap-align:start;background:#fff;border:1px solid #dfe7ee;border-radius:13px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.15s}
-.pcard:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(10,114,107,.13)}
-.pn{position:absolute;margin:10px;width:30px;height:30px;border-radius:50%;background:#0a726b;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px}
-.pt{display:block;font-weight:900;font-size:14px;padding:11px 12px 6px 50px}
-.pm{display:block;aspect-ratio:3/2;background:#eef4f4;overflow:hidden}
+.proofwrap{background:linear-gradient(165deg,#ffffff 0%,#f2fbfa 100%);border-color:#cde5e2}
+.proofhead{position:relative;padding-right:150px;min-height:120px}
+.proofchar{position:absolute;right:6px;top:-4px;filter:drop-shadow(0 6px 14px rgba(10,114,107,.18))}
+.proofbubble{position:absolute;right:132px;top:-2px;background:#fff;border:2px solid #0a9a8f;color:#12202f;border-radius:14px;padding:7px 13px;font-size:13px;font-weight:700;box-shadow:0 4px 10px rgba(10,114,107,.10)}
+.proofbubble::after{content:"";position:absolute;right:-9px;top:16px;border-left:9px solid #0a9a8f;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.proofhead h2{border:0;padding:0;margin:6px 0 8px;font-size:23px;color:#12202f}
+.prooflead{font-size:14.5px;color:#37485a;margin:0}
+.proofgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.pcard{position:relative;background:#fff;border:1.5px solid #dfe9e8;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.15s;min-width:0}
+.pcard:hover{transform:translateY(-3px);border-color:#0a9a8f;box-shadow:0 12px 26px rgba(10,114,107,.16)}
+.phead{display:flex;align-items:center;gap:9px;padding:11px 12px 8px}
+.pn{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#12a99f,#0a726b);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+.pt{font-weight:900;font-size:14.5px;color:#12202f}
+.pm{display:block;aspect-ratio:16/10;background:#eef6f5;overflow:hidden}
 .pm img,.pm video{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .pc{display:block;font-size:12.5px;color:#55697a;padding:9px 12px 12px;line-height:1.6}
-.pnote{font-size:13.5px;color:#42556a;margin-top:6px}
-@media(max-width:560px){.pcard{flex-basis:280px}}
+.pnote{font-size:13.5px;font-weight:700;color:#0a726b;margin-top:14px}
+@media(max-width:860px){.proofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.proofgrid{grid-template-columns:1fr}.proofhead{padding-right:0;min-height:0}.proofchar{position:static;display:block;margin:0 auto 6px;width:90px;height:90px}.proofbubble{position:static;display:table;margin:0 auto 10px}.proofbubble::after{display:none}}
 @media(max-width:560px){.cols{columns:1}}
 </style>`
 
@@ -79,41 +86,43 @@ const PROOF_SLUGS = new Set(['data-entry'])
 
 function proofSection(slug: string): string {
   const P = `${SITE}/images/proof`
+  const r = `ref=outsourcing-${h(slug)}`
   const cards: Array<{ n: string; t: string; media: string; cap: string; href: string }> = [
-    { n: '1', t: '設計', href: 'https://kurage.exbridge.jp/karchitect.php',
+    { n: '1', t: '設計', href: `https://kurage.exbridge.jp/karchitect.php?${r}`,
       media: `<img src="${P}/karchitect.jpg" alt="Kurage Architect — AIと対話して作るシステム設計書" loading="lazy">`,
-      cap: 'AIと対話して要件・構成図つきの設計書を作る（Kurage Architect）' },
-    { n: '2', t: 'デザイン', href: 'https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575',
+      cap: 'AIと対話して、要件・構成図つきの設計書を作る' },
+    { n: '2', t: 'デザイン', href: `https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575&${r}`,
       media: `<img src="https://kappstore.exbridge.jp/kapp_media/d3edd5356ef038c69b5ad124.png" alt="自動生成した商品バナー" loading="lazy">`,
-      cap: 'バナー・OGP・商品画像をテンプレート×データで自動生成（204枚を一括生成した実績）' },
-    { n: '3', t: '開発', href: 'https://kurage.exbridge.jp/ktsunami.php/',
+      cap: 'バナー・OGP・商品画像を自動生成（204枚一括の実績）' },
+    { n: '3', t: '開発', href: `https://kurage.exbridge.jp/ktsunami.php/?${r}`,
       media: `<img src="${P}/ktsunami-judge.jpg" alt="津波浸水想定マップの実際の判定画面" loading="lazy">`,
-      cap: '動くプロダクト。住所から浸水深を判定する実画面（作り話ではなく本番）' },
-    { n: '4', t: 'ストアへ出品', href: 'https://kappstore.exbridge.jp/',
+      cap: '動くプロダクト。住所から浸水深を判定する本番画面' },
+    { n: '4', t: 'ストアに出品', href: `https://kappstore.exbridge.jp/?${r}`,
       media: `<img src="${P}/kappstore-top.jpg" alt="Kurage App Store" loading="lazy">`,
-      cap: '自社アプリストアに38本を出品・販売中（Kurage App Store）' },
-    { n: '5', t: 'PV動画も自動生成', href: 'https://kurage.exbridge.jp/ktsunami.php/',
+      cap: '自社アプリストアで38本を販売中' },
+    { n: '5', t: 'PV動画も自動生成', href: `https://kurage.exbridge.jp/ktsunami.php/?${r}`,
       media: `<video src="https://kurage.exbridge.jp/pv/ktsunami-pv-30s.mp4" poster="https://kurage.exbridge.jp/pv/ktsunami-pv-poster.jpg" controls playsinline preload="none"></video>`,
-      cap: '台本→ナレーション→実写(生成)→検証まで自動。この動画自体が自動生成物' },
-    { n: '6', t: 'SEO診断も自動', href: 'https://kurage.exbridge.jp/kseo.php/',
-      media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果画面" loading="lazy">`,
-      cap: '公開後はAIでSEO監査（決定論チェック・96点の実画面）' },
-    { n: '7', t: 'マーケも数値で運用', href: 'https://kurage.exbridge.jp/media-mesh.php',
-      media: `<img src="${P}/media-mesh.jpg" alt="マーケティング実証実験ダッシュボード" loading="lazy">`,
-      cap: '媒体→LP→ゴールの導線を数値ごと公開して運用（マーケティング実証実験）' },
+      cap: '台本→ナレーション→検証まで自動。この動画も自動生成物' },
+    { n: '6', t: '公開後のSEO・マーケ', href: `https://kurage.exbridge.jp/media-mesh.php?${r}`,
+      media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果 96点の実画面" loading="lazy">`,
+      cap: 'AIでSEO監査（96点の実画面）。導線は数値ごと公開して運用' },
   ]
-  return `<section><div class="panel">
-<h2>なぜ「作れます」と言えるのか — 全部、実物です</h2>
-<p>当社自身の業務が、この型で毎日動いています。設計からデザイン、開発、出品、
-PV動画、公開後のマーケティングまで——下の画像・動画は<strong>すべて実際の画面と成果物</strong>です
-（デモ用に作ったものはありません。ref=outsourcing-${h(slug)} 付きで実物に飛べます）。</p>
-<div class="proof">
-${cards.map((c) => `<a class="pcard" href="${c.href}${c.href.includes('?') ? '&' : '?'}ref=outsourcing-${h(slug)}"${c.media.startsWith('<video') ? '' : ' target="_blank" rel="noopener"'}>
-<span class="pn">${c.n}</span><span class="pt">${h(c.t)}</span>
+  return `<section><div class="panel proofwrap">
+<div class="proofhead">
+  <img class="proofchar" src="https://kurage.exbridge.jp/images/kurage-mascot-cutout.png" alt="Kurageさん" width="120" height="120" loading="lazy">
+  <div class="proofbubble">ぜんぶ、うちで毎日動いてる<strong>実物</strong>だよ</div>
+  <h2>なぜ「作れます」と言えるのか</h2>
+  <p class="prooflead">設計 → デザイン → 開発 → 出品 → PV動画 → マーケまで、
+  当社自身の業務がこの型で毎日動いています。下の6枚は<strong>すべて実際の画面と成果物</strong>。
+  押せば実物に飛べます。</p>
+</div>
+<div class="proofgrid">
+${cards.map((c) => `<a class="pcard" href="${c.href}"${c.media.startsWith('<video') ? '' : ' target="_blank" rel="noopener"'}>
+<span class="phead"><span class="pn">${c.n}</span><span class="pt">${h(c.t)}</span></span>
 <span class="pm">${c.media}</span>
 <span class="pc">${h(c.cap)}</span></a>`).join('\n')}
 </div>
-<p class="pnote">この一連の流れ（設計→開発→出品→PV→マーケ）を、御社の業務に対して同じように作るのが本サービスです。</p>
+<p class="pnote">この一連の流れを、御社の業務に対して同じように作るのが本サービスです。</p>
 </div></section>`
 }
 
