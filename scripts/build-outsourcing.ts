@@ -154,9 +154,9 @@ function proofSection(slug: string): string {
   const P = `${SITE}/images/proof`
   const r = `ref=outsourcing-${h(slug)}`
   const cards: Array<{ n: string; t: string; media: string; cap: string; href: string }> = [
-    { n: '1', t: '設計', href: `https://kurage.exbridge.jp/karchitect.php?${r}`,
-      media: `<img src="${P}/karchitect.jpg" alt="Kurage Architect — AIと対話して作るシステム設計書" loading="lazy">`,
-      cap: 'AIと対話して、要件・構成図つきの設計書を作る' },
+    { n: '1', t: 'マーケティング・企画・設計', href: `https://kurage.exbridge.jp/media-mesh.php?${r}`,
+      media: `<img src="${P}/planning.jpg" alt="アクセス実測と導線カバレッジの分析画面（media-mesh）" loading="lazy">`,
+      cap: '毎日アクセスを実測し、導線の空白（赤の「未」）を見つけて企画。設計書はAIと対話して作る' },
     { n: '2', t: 'デザイン', href: `https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575&${r}`,
       media: `<img src="https://kappstore.exbridge.jp/kapp_media/d3edd5356ef038c69b5ad124.png" alt="自動生成した商品バナー" loading="lazy">`,
       cap: 'バナー・OGP・商品画像をテンプレート×データで一括自動生成' },
@@ -169,9 +169,9 @@ function proofSection(slug: string): string {
     { n: '5', t: 'PV動画も自動生成', href: `https://kurage.exbridge.jp/ktsunami.php/?${r}`,
       media: `<video src="https://kurage.exbridge.jp/pv/ktsunami-pv-30s.mp4" poster="https://kurage.exbridge.jp/pv/ktsunami-pv-poster.jpg" controls playsinline preload="none"></video>`,
       cap: '台本→ナレーション→検証まで自動。この動画も自動生成物' },
-    { n: '6', t: '公開後のSEO・マーケ', href: `https://kurage.exbridge.jp/media-mesh.php?${r}`,
+    { n: '6', t: '公開後のSEO監査', href: `https://kurage.exbridge.jp/kseo.php/?${r}`,
       media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果の実画面" loading="lazy">`,
-      cap: 'AIでSEO監査（決定論チェックの実画面）。導線は数値ごと公開して運用' },
+      cap: 'AIでSEO監査（決定論チェックの実画面）。直すところまで内製' },
   ]
   return `<section><div class="panel proofwrap">
 <div class="proofhead">
