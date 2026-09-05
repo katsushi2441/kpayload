@@ -275,6 +275,11 @@
         "name": "Kurage 商圏分析",
         "url": "https://kappstore.exbridge.jp/app.php?id=a5ac4b9f1fdb6d19",
         "price": "55,000円"
+      },
+      {
+        "name": "Kurage 土砂災害ハザードマップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=02b945f9c87c9d86",
+        "price": "55,000円"
       }
     ],
     "brain": [
@@ -404,6 +409,11 @@
       {
         "name": "Kurage 商圏分析",
         "url": "https://kappstore.exbridge.jp/app.php?id=a5ac4b9f1fdb6d19",
+        "price": "55,000円"
+      },
+      {
+        "name": "Kurage 土砂災害ハザードマップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=02b945f9c87c9d86",
         "price": "55,000円"
       }
     ],
