@@ -178,7 +178,7 @@ function proofSection(slug: string): string {
   <img class="proofchar" src="https://kurage.exbridge.jp/images/kurage-mascot-cutout.png" alt="Kurageさん" width="120" height="120" loading="lazy">
   <div class="proofbubble">ぜんぶ、うちで毎日動いてる<strong>実物</strong>だよ</div>
   <h2>なぜ「作れます」と言えるのか</h2>
-  <p class="prooflead">設計 → デザイン → 開発 → 出品 → PV動画 → マーケまで、
+  <p class="prooflead">企画 → 設計 → デザイン → 開発 → 出品 → PV動画 → SEO・マーケまで、
   当社自身の業務がこの型で毎日動いています。下の6枚は<strong>すべて実際の画面と成果物</strong>。
   押せば実物に飛べます。</p>
 </div>
