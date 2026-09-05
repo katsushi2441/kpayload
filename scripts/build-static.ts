@@ -307,6 +307,36 @@ function filterScript(): string {
   return `<script>(()=>{const q=document.getElementById('search'),cards=[...document.querySelectorAll('.card')],kindButtons=[...document.querySelectorAll('.filter[data-kind]')],empty=document.getElementById('empty');if(!q)return;let kind='all';function apply(){const term=q.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const ok=(kind==='all'||card.dataset.funnel===kind)&&(!term||card.dataset.search.includes(term));card.hidden=!ok;if(ok)shown++});empty.style.display=shown?'none':'block'}q.addEventListener('input',apply);kindButtons.forEach(button=>button.addEventListener('click',()=>{kind=button.dataset.kind;kindButtons.forEach(item=>item.classList.toggle('active',item===button));apply()}))})();</script>`
 }
 
+
+/**
+ * カテゴリ別のSEO上乗せ。実測した検索語をタイトル・説明・導入文に入れる。
+ *
+ * 既定は「<ラベル>のOSS一覧」で統一しているが、それだと人が実際に打つ語と
+ * ずれるカテゴリがある。キーワードプランナーで実測した語だけをここに置く
+ * （勘で足さない。数字は scripts/capability.ts のコメントと同じ出典）。
+ */
+const categorySeo: Record<string, { title: string; desc: string; lead: string }> = {
+  // 2026-09-06 実測: 避難所 22,200/指数0・液状化 9,900/指数0・防災マップ 6,600/指数1・
+  //   津波ハザードマップ 2,900/指数0・土砂災害警戒区域 9,900/指数0
+  hazard: {
+    title: 'ハザードマップ・避難所・防災のOSSと自社導入 | Kurage',
+    desc: 'ハザードマップ、土砂災害警戒区域、避難所、液状化、津波、防災マップを住所から調べる仕組みを、オープンソースと買い切りで自社サーバーに持つための一覧です。データの出典と時点、商用利用の可否まで明記しています。',
+    lead: 'ハザードマップ・土砂災害警戒区域・避難所・液状化・津波といった防災情報を、住所から調べられるようにするためのオープンソースと買い切り製品をまとめています。',
+  },
+  // 2026-09-05/06 実測: ハザードマップ 110,000・用途地域 14,800/指数1・道路台帳 3,600・都市計画図 3,600
+  gis: {
+    title: '地図・位置情報（GIS）のOSS一覧｜住所から調べる仕組みを自社に | Kurage',
+    desc: '住所を地図に落として調べる（ジオコーディング・到達圏・空間集計）ための、地図・位置情報（GIS）のオープンソース一覧です。ライセンスと日本語対応を実測して掲載しています。',
+    lead: '住所を座標に変換し、徒歩や車での到達圏を出し、面と重ねて中身を答える——そうした地図・位置情報（GIS）の処理に使えるオープンソースをまとめています。',
+  },
+  // 2026-09-04/06 実測: 商圏分析 480/指数54・人流データ 1,300/指数54・エリアマーケティング 390/指数22
+  shoken: {
+    title: '商圏分析・エリアマーケティングのOSS一覧｜買い切りで自社に | Kurage',
+    desc: '商圏分析、エリアマーケティング、人流・到達圏の分析に使えるオープンソースの一覧です。月額のツールを買わずに、自社サーバーで動かす選択肢をまとめています。',
+    lead: '商圏分析・エリアマーケティング・到達圏の集計に使えるオープンソースをまとめています。月額のSaaSを契約せずに、自社で持つ選択肢です。',
+  },
+}
+
 function categoryPage(category: string, projects: Project[], all: Project[]): string {
   const label = categoryLabel(category)
   const pageUrl = `${catalogBase}/c/${category}/`
@@ -319,7 +349,7 @@ function categoryPage(category: string, projects: Project[], all: Project[]): st
     { question: `${label}のOSSを自社向けに変更できますか？`, answer: `${ossCount}件は完成品を土台に改造して納品できます。残りは道具にあたるため、それを組み込んだ仕組みを作る形になります。カード上の「カスタマイズ可」「開発に使う」で見分けられます。` },
   ]
   const body = `<main class="wrap"><nav class="crumb" aria-label="パンくず"><a href="${catalogBase}/">OSS一覧</a> / ${h(label)}</nav>
-<section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p><div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
+<section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${categorySeo[category] ? h(categorySeo[category].lead) + '\n' : ''}${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p><div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
 <section class="section"><div class="tools"><input class="search" id="search" type="search" placeholder="${attr(label)}のOSSを検索" aria-label="${attr(label)}のOSSを検索"><div class="filters" role="group" aria-label="種別"><button class="filter active" type="button" data-kind="all">種別すべて</button><button class="filter" type="button" data-kind="oss">カスタマイズ可</button><button class="filter" type="button" data-kind="prototype">開発に使う</button></div></div><div class="grid" id="oss-grid">${list.map(card).join('')}</div><p class="empty" id="empty">条件に一致するOSSはありません。</p></section>
 <section class="section faq"><div class="panel"><h2>${h(label)}のOSSについてよくある質問</h2>${faqItems.map((item) => `<details><summary>${h(item.question)}</summary><p>${h(item.answer)}</p></details>`).join('')}</div></section>
 <section class="section"><div class="section-title"><h2>ほかのカテゴリ</h2></div>${categoryHub(all.filter((item) => item.category !== category))}</section></main>
@@ -328,7 +358,7 @@ ${filterScript()}`
   const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'OSS一覧', item: `${catalogBase}/` }, { '@type': 'ListItem', position: 2, name: label, item: pageUrl }] }
   const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }
   const service = { '@context': 'https://schema.org', '@type': 'Service', name: `${label}のOSS導入・バイブコーディングカスタマイズ`, serviceType: 'OSS導入・日本語化・バイブコーディングによるカスタマイズ', url: `${publicBase}/vibe-oss.html`, provider: { '@type': 'Organization', name: '株式会社エクスブリッジ', url: 'https://exbridge.jp/' }, areaServed: 'JP' }
-  return shell(`${label}のOSS一覧 | Kurage`, `${label}に使えるオープンソースを${list.length}件掲載。ライセンス、日本語対応の実測、スター数で比較し、バイブコーディングによるカスタマイズと導入まで案内します。（全${all.length}件のカタログ）`, pageUrl, body, [ld, service, breadcrumb, faqLd], [category], `${publicBase}/images/ogp/oss-${category}.png`)
+  return shell(categorySeo[category]?.title ?? `${label}のOSS一覧 | Kurage`, categorySeo[category]?.desc ?? `${label}に使えるオープンソースを${list.length}件掲載。ライセンス、日本語対応の実測、スター数で比較し、バイブコーディングによるカスタマイズと導入まで案内します。（全${all.length}件のカタログ）`, pageUrl, body, [ld, service, breadcrumb, faqLd], [category], `${publicBase}/images/ogp/oss-${category}.png`)
 }
 
 function detailPage(project: Project, projects: Project[]): string {
