@@ -49,10 +49,73 @@ const EXTRA_CSS = `<style>
 .tw table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14.5px}
 .tw th,.tw td{border:1px solid #dfe7ee;padding:9px 12px;text-align:left;vertical-align:top}
 .tw th{background:#f2f7f7;white-space:nowrap}
+.proof{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.proof::-webkit-scrollbar{height:8px}
+.proof::-webkit-scrollbar-thumb{background:#c8ded9;border-radius:99px}
+.pcard{position:relative;flex:0 0 340px;scroll-snap-align:start;background:#fff;border:1px solid #dfe7ee;border-radius:13px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.15s}
+.pcard:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(10,114,107,.13)}
+.pn{position:absolute;margin:10px;width:30px;height:30px;border-radius:50%;background:#0a726b;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px}
+.pt{display:block;font-weight:900;font-size:14px;padding:11px 12px 6px 50px}
+.pm{display:block;aspect-ratio:3/2;background:#eef4f4;overflow:hidden}
+.pm img,.pm video{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.pc{display:block;font-size:12.5px;color:#55697a;padding:9px 12px 12px;line-height:1.6}
+.pnote{font-size:13.5px;color:#42556a;margin-top:6px}
+@media(max-width:560px){.pcard{flex-basis:280px}}
 @media(max-width:560px){.cols{columns:1}}
 </style>`
 
 const h = (s: string) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+
+/**
+ * 「なぜ作れますと言えるのか」を実物で見せる帯。
+ * 画像はすべて実物のスクリーンショット（2026-09-06 撮影）:
+ *   karchitect=公開LP / ktsunami=石巻市の実判定 / kappstore=公開ストア /
+ *   kseo=ログイン内側の監査結果(ヘッダ認証で撮影) / media-mesh=公開ダッシュボード。
+ * 動画は実際に自動生成・公開済みのPV。デモ用に作った偽物は1枚も無い。
+ * まず PROOF_SLUGS のページだけに出し、確認後に全ページへ広げる。
+ */
+const PROOF_SLUGS = new Set(['data-entry'])
+
+function proofSection(slug: string): string {
+  const P = `${SITE}/images/proof`
+  const cards: Array<{ n: string; t: string; media: string; cap: string; href: string }> = [
+    { n: '1', t: '設計', href: 'https://kurage.exbridge.jp/karchitect.php',
+      media: `<img src="${P}/karchitect.jpg" alt="Kurage Architect — AIと対話して作るシステム設計書" loading="lazy">`,
+      cap: 'AIと対話して要件・構成図つきの設計書を作る（Kurage Architect）' },
+    { n: '2', t: 'デザイン', href: 'https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575',
+      media: `<img src="https://kappstore.exbridge.jp/kapp_media/d3edd5356ef038c69b5ad124.png" alt="自動生成した商品バナー" loading="lazy">`,
+      cap: 'バナー・OGP・商品画像をテンプレート×データで自動生成（204枚を一括生成した実績）' },
+    { n: '3', t: '開発', href: 'https://kurage.exbridge.jp/ktsunami.php/',
+      media: `<img src="${P}/ktsunami-judge.jpg" alt="津波浸水想定マップの実際の判定画面" loading="lazy">`,
+      cap: '動くプロダクト。住所から浸水深を判定する実画面（作り話ではなく本番）' },
+    { n: '4', t: 'ストアへ出品', href: 'https://kappstore.exbridge.jp/',
+      media: `<img src="${P}/kappstore-top.jpg" alt="Kurage App Store" loading="lazy">`,
+      cap: '自社アプリストアに38本を出品・販売中（Kurage App Store）' },
+    { n: '5', t: 'PV動画も自動生成', href: 'https://kurage.exbridge.jp/ktsunami.php/',
+      media: `<video src="https://kurage.exbridge.jp/pv/ktsunami-pv-30s.mp4" poster="https://kurage.exbridge.jp/pv/ktsunami-pv-poster.jpg" controls playsinline preload="none"></video>`,
+      cap: '台本→ナレーション→実写(生成)→検証まで自動。この動画自体が自動生成物' },
+    { n: '6', t: 'SEO診断も自動', href: 'https://kurage.exbridge.jp/kseo.php/',
+      media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果画面" loading="lazy">`,
+      cap: '公開後はAIでSEO監査（決定論チェック・96点の実画面）' },
+    { n: '7', t: 'マーケも数値で運用', href: 'https://kurage.exbridge.jp/media-mesh.php',
+      media: `<img src="${P}/media-mesh.jpg" alt="マーケティング実証実験ダッシュボード" loading="lazy">`,
+      cap: '媒体→LP→ゴールの導線を数値ごと公開して運用（マーケティング実証実験）' },
+  ]
+  return `<section><div class="panel">
+<h2>なぜ「作れます」と言えるのか — 全部、実物です</h2>
+<p>当社自身の業務が、この型で毎日動いています。設計からデザイン、開発、出品、
+PV動画、公開後のマーケティングまで——下の画像・動画は<strong>すべて実際の画面と成果物</strong>です
+（デモ用に作ったものはありません。ref=outsourcing-${h(slug)} 付きで実物に飛べます）。</p>
+<div class="proof">
+${cards.map((c) => `<a class="pcard" href="${c.href}${c.href.includes('?') ? '&' : '?'}ref=outsourcing-${h(slug)}"${c.media.startsWith('<video') ? '' : ' target="_blank" rel="noopener"'}>
+<span class="pn">${c.n}</span><span class="pt">${h(c.t)}</span>
+<span class="pm">${c.media}</span>
+<span class="pc">${h(c.cap)}</span></a>`).join('\n')}
+</div>
+<p class="pnote">この一連の流れ（設計→開発→出品→PV→マーケ）を、御社の業務に対して同じように作るのが本サービスです。</p>
+</div></section>`
+}
 
 function faqs(g: Gyomu) {
   return [
@@ -103,14 +166,14 @@ ${h(g.name)}の自動化の構築も、動かし始めてからの改善も、�
 提供内容はこのページの業務に限らず、ITでできることをひととおり引き受けます。</p>
 </div></section>
 
-<section><div class="panel">
+${PROOF_SLUGS.has(g.slug) ? proofSection(g.slug) : `<section><div class="panel">
 <h2>なぜ「作れます」と言えるのか</h2>
 <p>当社自身が、自社の業務を同じ型で自動化して毎日運用しているからです。
 記事の作成と公開、製品PV動画の生成、バナー204枚の一括生成、
 住所から災害リスクを判定するシステム群——これらは全て当社内のAI自動化の仕組みで動いています。
 実物は<a href="https://kurage.exbridge.jp/kpv.php?ref=outsourcing-${h(g.slug)}">動画一覧</a>や
 <a href="https://kappstore.exbridge.jp/?ref=outsourcing-${h(g.slug)}">Kurage App Store</a>で確認できます。</p>
-</div></section>
+</div></section>`}
 
 <section><div class="panel"><h2>よくあるご質問</h2>
 ${fq.map((x) => `<details><summary>${h(x.q)}</summary><p>${h(x.a)}</p></details>`).join('\n')}
