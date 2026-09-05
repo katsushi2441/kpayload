@@ -41,6 +41,71 @@ const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage
 /** shell(styles())に無いクラスはここで補う。.cols/.sub/.tw/.eyebrow を発明したまま
  *  出すと素のリスト表示になる（vibe-customize と同じ轍を踏まない）。 */
 const EXTRA_CSS = `<style>
+/* ============ /outsourcing/ LPデザインシステム（ライト固定・kgeo水準） ============ */
+.lp{--tl:#0a9a8f;--tld:#0a726b;--ink:#12202f;--mut:#55697a;--line:#cde5e2;--foam:#f2fbfa;--bad:#b3261e}
+.lp .sec{padding:34px 0}
+.lp .sec-tint{background:var(--foam)}
+.lp h2{font-size:clamp(19px,2.6vw,24px);font-weight:900;color:var(--ink);margin:0 0 18px;border:0;padding:0}
+.lp .ac{color:var(--tld)}
+/* ヒーロー */
+.hero{background:linear-gradient(165deg,#fff 0%,#f2fbfa 70%,#e8f6f4 100%);border-bottom:1px solid var(--line);padding:38px 0 34px}
+.hero-in{display:flex;gap:28px;align-items:center}
+.hero-txt{flex:1 1 auto;min-width:0}
+.badge{display:inline-block;background:#e2f4f2;color:var(--tld);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:800;letter-spacing:.04em}
+.hero h1{font-size:clamp(24px,3.6vw,36px);font-weight:900;line-height:1.35;margin:12px 0 10px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--tld)}
+.hero .lead{font-size:15px;color:#37485a;margin:0 0 14px;max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:700;color:var(--tld)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn-fill{display:inline-block;background:linear-gradient(135deg,var(--tl),var(--tld));color:#fff;font-weight:900;font-size:15px;border-radius:999px;padding:13px 26px;text-decoration:none;box-shadow:0 8px 20px rgba(10,154,143,.28)}
+.btn-fill:hover{color:#fff;transform:translateY(-1px)}
+.btn-ghost{display:inline-block;background:#fff;color:var(--tld);font-weight:800;font-size:14.5px;border:1.5px solid var(--line);border-radius:999px;padding:13px 22px;text-decoration:none}
+.hero-chr{flex:0 0 200px;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px;text-align:center;box-shadow:0 10px 24px rgba(10,114,107,.10)}
+.hero-chr img{filter:drop-shadow(0 6px 14px rgba(10,114,107,.18))}
+.hero-chr p{font-size:11.5px;color:var(--mut);margin:8px 0 0;line-height:1.6;text-align:left}
+/* 比較（外注 vs AI） */
+.vs{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:10px;align-items:stretch}
+.vs-card{border-radius:16px;overflow:hidden;border:1.5px solid #e3e9ee;background:#fff;min-width:0}
+.vs-out .vs-head{background:#5b6b7a}
+.vs-ai{border-color:var(--tl);box-shadow:0 12px 26px rgba(10,154,143,.14)}
+.vs-ai .vs-head{background:linear-gradient(135deg,var(--tl),var(--tld))}
+.vs-head{color:#fff;font-weight:900;font-size:14.5px;padding:11px 16px}
+.vs-row{display:flex;gap:10px;padding:11px 16px;font-size:13.5px;line-height:1.65;border-top:1px solid #eef2f5;color:#37485a}
+.vs-row.x::before{content:"✗";color:var(--bad);font-weight:900;flex:none}
+.vs-row.o::before{content:"✓";color:var(--tld);font-weight:900;flex:none}
+.vs-arrow{display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--tl);font-weight:900}
+/* ステップ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.step{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:44px 16px 14px;min-width:0}
+.sn{position:absolute;top:12px;left:14px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--tl),var(--tld));color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step p{margin:0;font-size:13.5px;color:#37485a;line-height:1.7}
+/* 価格 */
+.price{display:flex;background:#fbf2db;border:1.5px solid #ecd9a8;border-radius:18px;overflow:hidden}
+.price-main{flex:0 0 220px;background:linear-gradient(165deg,#f6e7bf,#f2dfae);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 14px;text-align:center}
+.p-num{font-size:56px;font-weight:900;color:#8a6414;line-height:1}
+.p-num small{font-size:20px;font-weight:900}
+.p-sub{font-size:12.5px;color:#8a6414;font-weight:700;margin-top:8px;line-height:1.6}
+.price-body{flex:1 1 auto;padding:18px 22px;min-width:0}
+.ck{position:relative;padding:7px 0 7px 28px;font-size:14px;color:#42320a;font-weight:600}
+.ck::before{content:"✓";position:absolute;left:2px;color:#b8860b;font-weight:900}
+.p-note{font-size:12.5px;color:#7a6420;margin:10px 0 0}
+.p-note a{color:var(--tld);font-weight:700}
+/* FAQ */
+.faqs details{background:#fff;border:1.5px solid var(--line);border-radius:12px;margin:0 0 10px;overflow:hidden}
+.faqs summary{cursor:pointer;font-weight:800;font-size:14.5px;padding:13px 16px;color:var(--ink);list-style:none}
+.faqs summary::before{content:"Q ";color:var(--tld);font-weight:900}
+.faqs details[open] summary{border-bottom:1px solid var(--foam);background:var(--foam)}
+.faqs details p{margin:0;padding:12px 16px 14px;font-size:13.5px;color:#37485a;line-height:1.75}
+/* 最終CTA */
+.final{display:flex;gap:18px;align-items:center;background:linear-gradient(135deg,#0a9a8f,#0a726b);border-radius:18px;padding:22px 26px;color:#fff;box-shadow:0 14px 30px rgba(10,114,107,.25)}
+.final h2{color:#fff;margin:0 0 4px;font-size:19px}
+.final p{margin:0;font-size:13.5px;opacity:.92}
+.final .btn-fill{background:#fff;color:var(--tld);box-shadow:none;flex:none}
+.final img{flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.2))}
+.rel{font-size:13px;color:var(--mut);margin:18px 0 0}
+.rel a{color:var(--tld)}
+/* 汎用（index/rpa用） */
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:#0a726b;margin:0 0 8px}
 .cols{columns:2;column-gap:34px;padding-left:20px;margin:8px 0}
 .cols li{margin:5px 0;break-inside:avoid}
@@ -49,12 +114,14 @@ const EXTRA_CSS = `<style>
 .tw table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14.5px}
 .tw th,.tw td{border:1px solid #dfe7ee;padding:9px 12px;text-align:left;vertical-align:top}
 .tw th{background:#f2f7f7;white-space:nowrap}
-.proofwrap{background:linear-gradient(165deg,#ffffff 0%,#f2fbfa 100%);border-color:#cde5e2}
-.proofhead{position:relative;padding-right:150px;min-height:120px}
+/* 実物グリッド */
+.proofwrap{background:linear-gradient(165deg,#ffffff 0%,#f2fbfa 100%)}
+.lp .proofwrap{border:1.5px solid var(--line);border-radius:18px;padding:22px}
+.proofhead{position:relative;padding-right:150px;min-height:110px}
 .proofchar{position:absolute;right:6px;top:-4px;filter:drop-shadow(0 6px 14px rgba(10,114,107,.18))}
 .proofbubble{position:absolute;right:132px;top:-2px;background:#fff;border:2px solid #0a9a8f;color:#12202f;border-radius:14px;padding:7px 13px;font-size:13px;font-weight:700;box-shadow:0 4px 10px rgba(10,114,107,.10)}
 .proofbubble::after{content:"";position:absolute;right:-9px;top:16px;border-left:9px solid #0a9a8f;border-top:7px solid transparent;border-bottom:7px solid transparent}
-.proofhead h2{border:0;padding:0;margin:6px 0 8px;font-size:23px;color:#12202f}
+.proofhead h2{border:0;padding:0;margin:6px 0 8px;font-size:22px;color:#12202f}
 .prooflead{font-size:14.5px;color:#37485a;margin:0}
 .proofgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
 .pcard{position:relative;background:#fff;border:1.5px solid #dfe9e8;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:.15s;min-width:0}
@@ -66,9 +133,9 @@ const EXTRA_CSS = `<style>
 .pm img,.pm video{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .pc{display:block;font-size:12.5px;color:#55697a;padding:9px 12px 12px;line-height:1.6}
 .pnote{font-size:13.5px;font-weight:700;color:#0a726b;margin-top:14px}
-@media(max-width:860px){.proofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.proofgrid{grid-template-columns:1fr}.proofhead{padding-right:0;min-height:0}.proofchar{position:static;display:block;margin:0 auto 6px;width:90px;height:90px}.proofbubble{position:static;display:table;margin:0 auto 10px}.proofbubble::after{display:none}}
-@media(max-width:560px){.cols{columns:1}}
+/* レスポンシブ */
+@media(max-width:860px){.proofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-in{flex-direction:column}.hero-chr{flex-basis:auto;width:100%;display:flex;gap:14px;align-items:center;text-align:left}.vs{grid-template-columns:1fr}.vs-arrow{transform:rotate(90deg);padding:2px 0}.price{flex-direction:column}.price-main{flex-basis:auto}}
+@media(max-width:560px){.proofgrid{grid-template-columns:1fr}.proofhead{padding-right:0;min-height:0}.proofchar{position:static;display:block;margin:0 auto 6px;width:90px;height:90px}.proofbubble{position:static;display:table;margin:0 auto 10px}.proofbubble::after{display:none}.final{flex-direction:column;text-align:center}.final p{margin-bottom:6px}.cols{columns:1}}
 </style>`
 
 const h = (s: string) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -143,55 +210,84 @@ function page(g: Gyomu, all: Gyomu[]): string {
   const url = `${BASE}/${g.slug}.html`
   const rel = all.filter((x) => x.slug !== g.slug).slice(0, 6)
   const fq = faqs(g)
+  const contact = `${SITE}/contact.php?subject=${encodeURIComponent(g.name + 'のAI自動化の相談')}`
 
-  const body = EXTRA_CSS + `<main class="wrap">
-<nav class="crumb" aria-label="パンくず"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業務のAI自動化</a> / ${h(g.name)}</nav>
-<section><div class="panel">
-<p class="eyebrow">OUTSOURCING × AI — ${h(g.slug.toUpperCase())}</p>
-<h1>${h(g.name)}の外注・代行をやめて、<br>AIで自動化する。</h1>
-<p class="lead">「${h(g.kw)}」を探しているなら、その前に一度だけ比べてください。
-外注は<strong>毎月・毎件の費用が続き、社内に何も残りません</strong>。
-同じ業務を、AIの仕組みとして社内に作る選択肢があります。</p>
+  const body = EXTRA_CSS + `<main class="lp">
+<nav class="crumb wrap" aria-label="パンくず"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業務のAI自動化</a> / ${h(g.name)}</nav>
+
+<section class="hero"><div class="wrap hero-in">
+  <div class="hero-txt">
+    <span class="badge">● ${h(g.kw)}をお探しの方へ</span>
+    <h1>${h(g.name)}の外注・代行をやめて、<br><em>AIで自動化</em>する。</h1>
+    <p class="lead">外注は毎月・毎件の費用が続き、社内に何も残りません。
+    同じ業務を、<strong>AIの仕組みとして御社の中に作る</strong>選択肢があります。</p>
+    <div class="chips"><span class="chip">構築費は月額に込み</span><span class="chip">成果物は御社の資産</span><span class="chip">件数が増えても費用ほぼ一定</span></div>
+    <div class="cta-row"><a class="btn-fill" href="${contact}">いまの回し方を聞かせてください</a>
+    <a class="btn-ghost" href="${KOMON}?ref=outsourcing-${h(g.slug)}">AI-IT顧問契約とは</a></div>
+  </div>
+  <div class="hero-chr">
+    <img src="https://kurage.exbridge.jp/images/kurage-mascot-cutout.png" alt="Kurageさん" width="150" height="150" loading="eager">
+    <p><strong>Kurage</strong><br>エクスブリッジのAI。この下の実物は、ぜんぶ私たちが毎日動かしています。</p>
+  </div>
 </div></section>
 
-<section><div class="panel">
-<h2>外注すると、こうなります</h2>
-<p>${h(g.outsourced)}。件数が増えるほど費用も増え、
-品質は外注先のスタッフ次第。契約をやめれば、翌月から何も残りません。</p>
-<h2>AIで自動化すると、こうなります</h2>
-<p>${h(g.auto)}。</p>
-<ul>${g.steps.map((s) => `<li>${h(s)}</li>`).join('')}</ul>
-<p>仕組みは御社のサーバー・アカウントの中に作るので、<strong>御社の資産</strong>です。
-件数が10倍になっても、追加費用はほぼ増えません。</p>
+<section class="sec"><div class="wrap">
+  <h2>外注と、AI自動化。<span class="ac">同じ業務</span>でこれだけ違う</h2>
+  <div class="vs">
+    <div class="vs-card vs-out">
+      <div class="vs-head">いままで — ${h(g.name)}を外注する</div>
+      <div class="vs-row x">${h(g.outsourced)}</div>
+      <div class="vs-row x">件数が増えるほど、費用も増える</div>
+      <div class="vs-row x">品質は外注先のスタッフ次第</div>
+      <div class="vs-row x">契約をやめれば、翌月から何も残らない</div>
+    </div>
+    <div class="vs-arrow" aria-hidden="true">➜</div>
+    <div class="vs-card vs-ai">
+      <div class="vs-head">これから — AIの仕組みを社内に作る</div>
+      <div class="vs-row o">${h(g.auto)}</div>
+      <div class="vs-row o">件数が10倍でも、追加費用はほぼ増えない</div>
+      <div class="vs-row o">判断・承認は人に残す。事故なく続く形</div>
+      <div class="vs-row o">仕組み・コード・手順が御社の資産に残る</div>
+    </div>
+  </div>
 </div></section>
 
-<section><div class="panel">
-<h2>費用 — AI-IT顧問契約と同一です</h2>
-<p><strong>月15時間・税別150,000円</strong>（1時間あたり10,000円）。
-月30時間・1年契約なら時間単価は最大40%下がります。
-${h(g.name)}の自動化の構築も、動かし始めてからの改善も、この時間の中で行います。
-成果物（仕組み・コード・手順）はすべて御社に残します。</p>
-<p>詳しい条件は<a href="${KOMON}?ref=outsourcing-${h(g.slug)}">AI-IT顧問契約のページ</a>をご覧ください。
-提供内容はこのページの業務に限らず、ITでできることをひととおり引き受けます。</p>
+<section class="sec sec-tint"><div class="wrap">
+  <h2>作る仕組み — <span class="ac">${h(g.name)}</span>の場合</h2>
+  <div class="steps">
+    ${g.steps.map((st, k) => `<div class="step"><span class="sn">${k + 1}</span><p>${h(st)}</p></div>`).join('')}
+  </div>
 </div></section>
 
-${PROOF_SLUGS.has(g.slug) ? proofSection(g.slug) : `<section><div class="panel">
-<h2>なぜ「作れます」と言えるのか</h2>
-<p>当社自身が、自社の業務を同じ型で自動化して毎日運用しているからです。
-記事の作成と公開、製品PV動画の生成、バナー204枚の一括生成、
-住所から災害リスクを判定するシステム群——これらは全て当社内のAI自動化の仕組みで動いています。
-実物は<a href="https://kurage.exbridge.jp/kpv.php?ref=outsourcing-${h(g.slug)}">動画一覧</a>や
-<a href="https://kappstore.exbridge.jp/?ref=outsourcing-${h(g.slug)}">Kurage App Store</a>で確認できます。</p>
-</div></section>`}
-
-<section><div class="panel"><h2>よくあるご質問</h2>
-${fq.map((x) => `<details><summary>${h(x.q)}</summary><p>${h(x.a)}</p></details>`).join('\n')}
+<section class="sec"><div class="wrap">
+  <h2>費用 — <span class="ac">AI-IT顧問契約</span>と同一です</h2>
+  <div class="price">
+    <div class="price-main"><span class="p-num">15<small>万円</small></span><span class="p-sub">月15時間・税別<br>（1時間あたり10,000円）</span></div>
+    <div class="price-body">
+      <div class="ck">${h(g.name)}の自動化の構築も、その後の改善も、この時間の中で行います</div>
+      <div class="ck">月30時間・1年契約なら時間単価は最大40%下がり6,000円に</div>
+      <div class="ck">成果物（仕組み・コード・手順）はすべて御社に帰属</div>
+      <div class="ck">提供はこの業務に限らず、ITでできることをひととおり</div>
+      <p class="p-note">詳しい条件は<a href="${KOMON}?ref=outsourcing-${h(g.slug)}">AI-IT顧問契約のページ</a>へ。オンサイトは名古屋市内、Zoom・リモートの組み合わせで進めます。</p>
+    </div>
+  </div>
 </div></section>
 
-<section><div class="panel">
-<h2>ほかの業務のAI自動化</h2>
-<p>${rel.map((x) => `<a href="${BASE}/${x.slug}.html">${h(x.name)}</a>`).join('／')}　<a href="${BASE}/">…すべて見る</a></p>
-<p style="margin-top:14px"><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(g.name + 'のAI自動化の相談')}">まず、いまの${h(g.name)}の回し方を聞かせてください</a></p>
+${PROOF_SLUGS.has(g.slug) ? proofSection(g.slug) : proofSectionLite(g.slug)}
+
+<section class="sec"><div class="wrap">
+  <h2>よくあるご質問</h2>
+  <div class="faqs">${fq.map((x) => `<details><summary>${h(x.q)}</summary><p>${h(x.a)}</p></details>`).join('\n')}</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="final">
+    <img src="https://kurage.exbridge.jp/images/kurage-mascot-cutout.png" alt="" width="88" height="88" loading="lazy">
+    <div><h2>まず、いまの${h(g.name)}の回し方を聞かせてください</h2>
+    <p>外注のままが合理的な場合は、そう言います。比べるところからで構いません。</p></div>
+    <a class="btn-fill" href="${contact}">相談する（無料）</a>
+  </div>
+  <p class="rel">ほかの業務: ${rel.map((x) => `<a href="${BASE}/${x.slug}.html">${h(x.name)}</a>`).join('／')}　<a href="${BASE}/">…全${all.length}業務</a></p>
 </div></section>
 </main>`
 
@@ -213,6 +309,11 @@ ${fq.map((x) => `<details><summary>${h(x.q)}</summary><p>${h(x.a)}</p></details>
       { '@type': 'ListItem', position: 3, name: g.name, item: url }] },
   ]
   return shell(title, desc, url, body, ld, `${SITE}/images/ogp/outsourcing-${g.slug}.png`)
+}
+
+/** 実物セクションの簡易版（全ページ展開前の暫定。proofと同じ見た目の3枚だけ） */
+function proofSectionLite(slug: string): string {
+  return proofSection(slug)
 }
 
 function indexPage(all: Gyomu[]): string {
