@@ -322,7 +322,7 @@ export const CAPABILITIES: Capability[] = [
   { group: 'industry', key: 'construction', label: '建設・工事の管理', question: '現場の状況が事務所に届かない',
     rx: /(建設|工事|現場(管理|作業)|施工|建築)/i },
   // 地図・位置情報 (2026-09-01 追加。カタログにGIS系がほぼ無い空白をkshoken構築と同時に埋める)
-  { group: 'data', key: 'gis', label: '地図・位置情報の活用（GIS）', question: '住所や位置のデータを地図で見られていない',
+  { group: 'data', key: 'gis', label: '地図・位置情報の活用（GIS）', noun: 'GIS（地理情報システム）', terms: ['GIS', 'QGIS', '地理情報システム', 'WebGIS', '地図情報システム'], question: '住所や位置のデータを地図で見られていない',  // 2026-09-05 キーワードプランナー実測: gis 18,100/指数4・qgis 14,800/指数0・gis とは 6,600/指数0・地理情報システム 1,900/指数3・webgis 1,300/指数12。商圏分析(480/指数54)より桁違いに空いている
     rx: /(\bgis\b|地図|位置情報|ジオコーディング|geospatial|geocod|maplibre|leaflet|openstreetmap|地理空間|空間データ|routing engine|経路探索|isochrone|測位|ジオフェンス)/i },  // 「マップ」はロードマップ/サイトマップ/マインドマップを誤爆するので入れない(2026-09-01実測)
   { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', noun: '商圏分析ツール', terms: ['商圏分析 ツール', '商圏分析 無料', '商圏 分析 gis'], question: '出店や営業エリアを勘で決めている',  // 2026-09-04 キーワードプランナー実測: 商圏1,600/商圏 分析480/商圏 分析 ツール210/商圏 分析 無料70
     rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店(判断|計画|候補|戦略)|立地分析|demographics? analysis)/i },  // 「出店」単独はECテンプレ(ネットショップ出店)を誤爆したので複合語に限定(2026-09-04)
