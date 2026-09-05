@@ -147,10 +147,9 @@ const h = (s: string) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').
  *   karchitect=公開LP / ktsunami=石巻市の実判定 / kappstore=公開ストア /
  *   kseo=ログイン内側の監査結果(ヘッダ認証で撮影) / media-mesh=公開ダッシュボード。
  * 動画は実際に自動生成・公開済みのPV。デモ用に作った偽物は1枚も無い。
- * まず PROOF_SLUGS のページだけに出し、確認後に全ページへ広げる。
+ * 全48業務ページと index/rpa に出す。キャプションに増減する数字を入れない
+ * （「38本」等を書くと商品が増えるたびに全ページ再生成になる。2026-09-06叱責）。
  */
-const PROOF_SLUGS = new Set(['data-entry'])
-
 function proofSection(slug: string): string {
   const P = `${SITE}/images/proof`
   const r = `ref=outsourcing-${h(slug)}`
@@ -160,19 +159,19 @@ function proofSection(slug: string): string {
       cap: 'AIと対話して、要件・構成図つきの設計書を作る' },
     { n: '2', t: 'デザイン', href: `https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575&${r}`,
       media: `<img src="https://kappstore.exbridge.jp/kapp_media/d3edd5356ef038c69b5ad124.png" alt="自動生成した商品バナー" loading="lazy">`,
-      cap: 'バナー・OGP・商品画像を自動生成（204枚一括の実績）' },
+      cap: 'バナー・OGP・商品画像をテンプレート×データで一括自動生成' },
     { n: '3', t: '開発', href: `https://kurage.exbridge.jp/ktsunami.php/?${r}`,
       media: `<img src="${P}/ktsunami-judge.jpg" alt="津波浸水想定マップの実際の判定画面" loading="lazy">`,
       cap: '動くプロダクト。住所から浸水深を判定する本番画面' },
     { n: '4', t: 'ストアに出品', href: `https://kappstore.exbridge.jp/?${r}`,
       media: `<img src="${P}/kappstore-top.jpg" alt="Kurage App Store" loading="lazy">`,
-      cap: '自社アプリストアで38本を販売中' },
+      cap: '自社アプリストア Kurage App Store で販売中' },
     { n: '5', t: 'PV動画も自動生成', href: `https://kurage.exbridge.jp/ktsunami.php/?${r}`,
       media: `<video src="https://kurage.exbridge.jp/pv/ktsunami-pv-30s.mp4" poster="https://kurage.exbridge.jp/pv/ktsunami-pv-poster.jpg" controls playsinline preload="none"></video>`,
       cap: '台本→ナレーション→検証まで自動。この動画も自動生成物' },
     { n: '6', t: '公開後のSEO・マーケ', href: `https://kurage.exbridge.jp/media-mesh.php?${r}`,
-      media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果 96点の実画面" loading="lazy">`,
-      cap: 'AIでSEO監査（96点の実画面）。導線は数値ごと公開して運用' },
+      media: `<img src="${P}/kseo-audit.jpg" alt="Kurage SEOの監査結果の実画面" loading="lazy">`,
+      cap: 'AIでSEO監査（決定論チェックの実画面）。導線は数値ごと公開して運用' },
   ]
   return `<section><div class="panel proofwrap">
 <div class="proofhead">
@@ -273,7 +272,7 @@ function page(g: Gyomu, all: Gyomu[]): string {
   </div>
 </div></section>
 
-${PROOF_SLUGS.has(g.slug) ? proofSection(g.slug) : proofSectionLite(g.slug)}
+${proofSection(g.slug)}
 
 <section class="sec"><div class="wrap">
   <h2>よくあるご質問</h2>
@@ -309,11 +308,6 @@ ${PROOF_SLUGS.has(g.slug) ? proofSection(g.slug) : proofSectionLite(g.slug)}
       { '@type': 'ListItem', position: 3, name: g.name, item: url }] },
   ]
   return shell(title, desc, url, body, ld, `${SITE}/images/ogp/outsourcing-${g.slug}.png`)
-}
-
-/** 実物セクションの簡易版（全ページ展開前の暫定。proofと同じ見た目の3枚だけ） */
-function proofSectionLite(slug: string): string {
-  return proofSection(slug)
 }
 
 function indexPage(all: Gyomu[]): string {
