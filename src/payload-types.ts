@@ -186,6 +186,8 @@ export interface OssProject {
   brainUrl?: string | null;
   brainLabel?: string | null;
   demoUrl?: string | null;
+  videoUrl?: string | null;
+  videoPoster?: string | null;
   buyUrl?: string | null;
   featured?: boolean | null;
   useCases: {
@@ -339,6 +341,8 @@ export interface OssProjectsSelect<T extends boolean = true> {
   brainUrl?: T;
   brainLabel?: T;
   demoUrl?: T;
+  videoUrl?: T;
+  videoPoster?: T;
   buyUrl?: T;
   featured?: T;
   useCases?:

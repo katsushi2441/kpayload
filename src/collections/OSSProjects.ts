@@ -85,6 +85,9 @@ export const OSSProjects: CollectionConfig = {
     { name: 'brainUrl', label: 'Brain記事URL', type: 'text' },
     { name: 'brainLabel', label: 'Brainリンク名', type: 'text', defaultValue: '構築手順書をBrainで読む' },
     { name: 'demoUrl', label: 'デモURL', type: 'text' },
+    // 製品PV(kpvgen生成)。絶対URLを入れると詳細ページに動画パネルを出す。
+    { name: 'videoUrl', label: '製品PVのURL', type: 'text' },
+    { name: 'videoPoster', label: '製品PVのポスター画像URL', type: 'text' },
     // 買い切りで買える場所（kappstoreの商品ページ）。紹介LPとは別に持つ。
     // 自社製品は専用LPを持っていることがあり、lpUrl だけだと購入先が辿れない。
     { name: 'buyUrl', label: '買い切り購入URL', type: 'text' },

@@ -1300,7 +1300,8 @@
         "answer": "設計対象、利用者、既存業務、制約、最終承認者を明確にします。"
       }
     ],
-    "funnel": "oss"
+    "funnel": "oss",
+    "videoUrl": "https://kurage.exbridge.jp/pv/karchitect-pv-30s.mp4"
   },
   {
     "name": "Kurage Crypto Brain (kcbrain)",
@@ -2648,7 +2649,8 @@
     "lpUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
     "sourceLpName": "データベース管理ツール（kdbagent）",
     "demoUrl": "https://proto.exbridge.jp/kdbagent/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793"
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=719429354f079793",
+    "videoUrl": "https://kurage.exbridge.jp/pv/kdbagent-pv-30s.mp4"
   },
   {
     "name": "Kurage Light ChatBot",
@@ -3013,7 +3015,9 @@
     "lpUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc",
     "sourceLpName": "AIアクセス解析（ktrackgeo）＋ VWork教材",
     "demoUrl": "https://proto.exbridge.jp/ktrackgeo/",
-    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc"
+    "buyUrl": "https://kappstore.exbridge.jp/app.php?id=48ca584977698dcc",
+    "videoUrl": "https://kurage.exbridge.jp/pv/ktrackgeo-pv-30s.mp4",
+    "videoPoster": "https://kurage.exbridge.jp/pv/ktrackgeo-pv-poster.jpg"
   },
   {
     "name": "Kurage Check It",
@@ -4166,7 +4170,9 @@
     "lpUrl": "",
     "sourceLpName": "",
     "brainUrl": "",
-    "brainLabel": ""
+    "brainLabel": "",
+    "videoUrl": "https://kurage.exbridge.jp/pv/kshoken-pv-30s.mp4",
+    "videoPoster": "https://kurage.exbridge.jp/pv/kshoken-pv-poster.jpg"
   },
   {
     "name": "CodeAlmanac",
@@ -5885,6 +5891,8 @@
     "lpUrl": "",
     "sourceLpName": "",
     "brainUrl": "",
-    "brainLabel": ""
+    "brainLabel": "",
+    "videoUrl": "https://kurage.exbridge.jp/pv/khazard-pv-30s.mp4",
+    "videoPoster": "https://kurage.exbridge.jp/pv/khazard-pv-poster.jpg"
   }
 ]
