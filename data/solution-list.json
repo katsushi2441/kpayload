@@ -36,6 +36,11 @@
         "name": "Kurage 避難所マップ",
         "url": "https://kappstore.exbridge.jp/app.php?id=162f155897390072",
         "price": "55,000円"
+      },
+      {
+        "name": "Kurage 津波浸水想定マップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575",
+        "price": "55,000円"
       }
     ],
     "brain": [],
@@ -100,6 +105,11 @@
       {
         "name": "Kurage 避難所マップ",
         "url": "https://kappstore.exbridge.jp/app.php?id=162f155897390072",
+        "price": "55,000円"
+      },
+      {
+        "name": "Kurage 津波浸水想定マップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575",
         "price": "55,000円"
       }
     ],
@@ -295,6 +305,11 @@
         "name": "Kurage 避難所マップ",
         "url": "https://kappstore.exbridge.jp/app.php?id=162f155897390072",
         "price": "55,000円"
+      },
+      {
+        "name": "Kurage 津波浸水想定マップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575",
+        "price": "55,000円"
       }
     ],
     "brain": [
@@ -434,6 +449,11 @@
       {
         "name": "Kurage 避難所マップ",
         "url": "https://kappstore.exbridge.jp/app.php?id=162f155897390072",
+        "price": "55,000円"
+      },
+      {
+        "name": "Kurage 津波浸水想定マップ",
+        "url": "https://kappstore.exbridge.jp/app.php?id=86b85a63bc426575",
         "price": "55,000円"
       }
     ],

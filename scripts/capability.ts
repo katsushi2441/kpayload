@@ -255,8 +255,17 @@ export const CAPABILITIES: Capability[] = [
     rx: /(メール(サーバー|クライアント|システム|管理)|グループウェア|webメール|共有メール)/i },
   { group: 'comm', key: 'meeting', label: 'オンライン会議・ビデオ通話', question: '会議のたびに外部サービスに頼っている',
     rx: /(オンライン会議|ビデオ(通話|会議)|web会議|画面共有|ウェビナー)/i },
-  { group: 'comm', key: 'notify', label: '通知・アラートの配信', question: '大事な連絡が伝わっていない',
-    rx: /(通知|アラート|プッシュ通知|\bsms\b|リマインド)/i },
+  // 2026-09-06 実測（名古屋の業務システム会社が押さえている情報系の語を調査）:
+  //   安否確認 18,100/指数10・安否確認システム 12,100/指数17・BCP対策 8,100/指数14。
+  //   グループウェア 8,100/指数43、ワークフロー 9,900/指数34 は正面が重いのに対し、
+  //   安否確認は需要が大きく競合が軽い。情報系(一斉連絡)と防災の交点で、
+  //   khazard/krefuge で積んだ防災の実績がそのまま効く。
+  //   一方 議事録AI 8,100 は指数100（最大）なので狙わない。
+  { group: 'comm', key: 'notify', label: '一斉連絡・安否確認・通知の配信',
+    noun: '安否確認システム・一斉通知の仕組み',
+    terms: ['安否確認システム', '安否確認', 'BCP対策', '一斉通知', 'プッシュ通知 自社サーバー'],
+    question: '災害時や緊急時に、全員へ連絡して返信を集める手段がない',
+    rx: /(通知|アラート|プッシュ通知|\bsms\b|リマインド|安否確認|一斉(連絡|送信|通知)|bcp|緊急連絡|notification|alerting|push notification|on-?call)/i },
 
   // 生成AI・AIエージェントの活用
   { group: 'ai', key: 'aiagent', label: 'AIエージェントの構築', noun: 'AIエージェント', terms: ['AIエージェント オープンソース', 'AIエージェント OSS'], question: 'AIに作業そのものを任せたい',
@@ -335,7 +344,7 @@ export const CAPABILITIES: Capability[] = [
   // 浸水想定区域 880/指数0・避難所マップ 720/指数0。検索しているのは自宅を調べる個人が中心で、
   // 事業側の語は小さい（重要事項説明 ハザードマップ 50/月）。集客の入口として使う。
   { group: 'data', key: 'hazard', label: '防災・ハザード情報の活用', noun: 'ハザードマップ・土砂災害警戒区域', terms: ['ハザードマップ', '土砂災害警戒区域', '避難所', '液状化マップ', '津波ハザードマップ', '防災マップ'], question: '物件や拠点の災害リスクを住所から確認できていない',
-    rx: /(ハザードマップ|土砂災害(警戒区域)?|浸水想定|洪水浸水|レッドゾーン|イエローゾーン|急傾斜地|土石流|地すべり|避難(所|場所)|防災マップ|液状化|津波|海抜|標高|hazard ?map|flood (hazard|risk)|tsunami|elevation)/i },
+    rx: /(ハザードマップ|土砂災害(警戒区域)?|浸水想定|洪水浸水|レッドゾーン|イエローゾーン|急傾斜地|土石流|地すべり|避難(所|場所)|防災|災害|安否|罹災|被災|液状化|津波|海抜|標高|hazard ?map|flood (hazard|risk)|tsunami|elevation|disaster|emergency (response|management|alert)|crisis (map|response)|humanitarian|early warning|off-grid|search and rescue)/i },
   { group: 'data', key: 'shoken', label: '商圏分析・エリアマーケティング', noun: '商圏分析ツール', terms: ['商圏分析 ツール', '商圏分析 無料', '商圏 分析 gis'], question: '出店や営業エリアを勘で決めている',  // 2026-09-04 キーワードプランナー実測: 商圏1,600/商圏 分析480/商圏 分析 ツール210/商圏 分析 無料70
     rx: /(商圏|到達圏|trade area|catchment|エリアマーケ|人口メッシュ|メッシュ統計|出店(判断|計画|候補|戦略)|立地分析|demographics? analysis)/i },  // 「出店」単独はECテンプレ(ネットショップ出店)を誤爆したので複合語に限定(2026-09-04)
   { group: 'industry', key: 'civic', label: '政治・市民参加・合意形成', question: '支援者や住民の声を集めて活かす仕組みがない',
