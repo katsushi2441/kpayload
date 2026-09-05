@@ -240,7 +240,7 @@ ${styles()}${analytics()}</head><body>
 ${body}
 ${pvRailHtml(pvTags)}
 <img src="${publicBase}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
-<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
+<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="https://exbridge.jp/outsourcing/">業務のAI自動化</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
 </body></html>`
 }
 

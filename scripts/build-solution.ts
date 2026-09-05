@@ -28,7 +28,7 @@ const BASE = `${SITE}/solution`
 const SHELL = {
   refPrefix: 'exbridge-solution',
   base: BASE,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
