@@ -8,6 +8,7 @@ import { getPayload } from 'payload'
 
 import config from '../src/payload.config'
 import { DEMOS, PROTO, demoPanel, demoUrl, DEMO_CSS } from './demos'
+import { categoryLabels } from './site'
 
 type TextItem = { text?: string | null }
 type FAQ = { question?: string | null; answer?: string | null }
@@ -70,20 +71,6 @@ const catalogBase = `${publicBase}/oss`
 const mascot = `${publicBase}/images/kurage-mascot-simple-v2.png`
 const gaId = 'G-BP0650KDFR'
 
-const categoryLabels: Record<string, string> = {
-  gis: '地図・位置情報（GIS）',
-  shoken: '商圏分析',
-  civic: '政治・市民参加',
-  crm: '顧客・営業管理', support: 'サポート', project: 'プロジェクト管理', inventory: '在庫管理',
-  esign: '電子契約', cms: 'CMS・情報発信', monitoring: '監視・運用', groupware: 'グループウェア',
-  media: '動画・音声・配信', finance: '投資・市場分析', marketing: 'マーケティング',
-  mobile: 'モバイルアプリ', commerce: 'EC・販売', knowledge: 'ナレッジ・AI',
-  office: 'オフィス', database: 'データベース', notes: 'メモ',
-  lms: '学習管理・LMS', hr: '人事・勤怠', accounting: '会計・経理', forum: 'コミュニティ・掲示板',
-  booking: '予約・受付', survey: 'アンケート・フォーム', pos: 'POS・店舗', dms: '文書管理',
-  lowcode: 'ローコード開発', analytics: '分析・BI', aidev: 'AI開発基盤', devtools: '開発者ツール',
-  sitegen: 'サイト構築・静的生成', automation: '自動化・連携', devsupport: '開発支援ツール',
-}
 
 const h = (value: unknown) => String(value ?? '')
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
@@ -228,16 +215,30 @@ ${DEMO_CSS}
 </style>`
 }
 
-function shell(title: string, description: string, canonical: string, body: string, structuredData: unknown[]): string {
+
+/**
+ * Kurage の解説動画レール。中身は kurage.exbridge.jp/kpv_rail.js が
+ * kpv.php?manifest=1 を読んで描画する。タグ一致0本ならJS側が枠ごと消す。
+ * HTMLに焼き込まない理由は page-shell.ts の pvRail と同じ（2,854ページの再生成を避ける）。
+ */
+function pvRailHtml(tags?: string[]): string {
+  const t = (tags || []).map((x) => x.trim().toLowerCase()).filter(Boolean)
+  if (!t.length) return ''
+  return `<div class="wrap"><div class="kpv-rail" data-pv-tags="${t.join(',')}"></div></div>
+<script src="${publicBase}/kpv_rail.js" defer></script>`
+}
+
+function shell(title: string, description: string, canonical: string, body: string, structuredData: unknown[], pvTags?: string[], ogImage?: string): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${h(title)}</title><meta name="description" content="${attr(description)}"><link rel="canonical" href="${attr(canonical)}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
-<meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="website"><meta property="og:site_name" content="Kurage Payload CMS"><meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(description)}"><meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${mascot}"><meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="website"><meta property="og:site_name" content="Kurage Payload CMS"><meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(description)}"><meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${ogImage || mascot}"><meta name="twitter:card" content="summary_large_image">
 ${structuredData.map((item) => `<script type="application/ld+json">${json(item)}</script>`).join('\n')}
 ${styles()}${analytics()}</head><body>
 <header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a class="btn optional" href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a class="btn optional" href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム</a><a class="btn optional" href="https://exbridge.jp/contact.php?ref=kurage-oss">相談する</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
 ${body}
+${pvRailHtml(pvTags)}
 <img src="${publicBase}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
 <footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
 </body></html>`
@@ -327,7 +328,7 @@ ${filterScript()}`
   const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'OSS一覧', item: `${catalogBase}/` }, { '@type': 'ListItem', position: 2, name: label, item: pageUrl }] }
   const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }
   const service = { '@context': 'https://schema.org', '@type': 'Service', name: `${label}のOSS導入・バイブコーディングカスタマイズ`, serviceType: 'OSS導入・日本語化・バイブコーディングによるカスタマイズ', url: `${publicBase}/vibe-oss.html`, provider: { '@type': 'Organization', name: '株式会社エクスブリッジ', url: 'https://exbridge.jp/' }, areaServed: 'JP' }
-  return shell(`${label}のOSS一覧 | Kurage`, `${label}に使えるオープンソースを${list.length}件掲載。ライセンス、日本語対応の実測、スター数で比較し、バイブコーディングによるカスタマイズと導入まで案内します。（全${all.length}件のカタログ）`, pageUrl, body, [ld, service, breadcrumb, faqLd])
+  return shell(`${label}のOSS一覧 | Kurage`, `${label}に使えるオープンソースを${list.length}件掲載。ライセンス、日本語対応の実測、スター数で比較し、バイブコーディングによるカスタマイズと導入まで案内します。（全${all.length}件のカタログ）`, pageUrl, body, [ld, service, breadcrumb, faqLd], [category], `${publicBase}/images/ogp/oss-${category}.png`)
 }
 
 function detailPage(project: Project, projects: Project[]): string {
@@ -358,7 +359,7 @@ function detailPage(project: Project, projects: Project[]): string {
   const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'OSS一覧', item: `${catalogBase}/` }, { '@type': 'ListItem', position: 2, name: categoryLabel(project.category), item: `${catalogBase}/c/${project.category}/` }, { '@type': 'ListItem', position: 3, name: project.name, item: pageUrl }] }
   const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: allFaqItems.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }
   const service = { '@context': 'https://schema.org', '@type': 'Service', name: copy.serviceName, serviceType: copy.serviceType, url: copy.ctaUrl, provider: { '@type': 'Organization', name: '株式会社エクスブリッジ', url: 'https://exbridge.jp/' }, areaServed: 'JP', isRelatedTo: { '@type': 'SoftwareApplication', name: project.name, url: pageUrl } }
-  return shell(copy.pageTitle, copy.metaDescription, pageUrl, body, [software, service, breadcrumb, faqLd])
+  return shell(copy.pageTitle, copy.metaDescription, pageUrl, body, [software, service, breadcrumb, faqLd], [project.slug, project.category], `${publicBase}/images/ogp/oss-${project.category}.png`)
 }
 
 function vibeSnippet(projects: Project[]): string {

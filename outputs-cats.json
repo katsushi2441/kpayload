@@ -1,0 +1,731 @@
+{
+ "oss": [
+  {
+   "key": "gis",
+   "label": "地図・位置情報（GIS）"
+  },
+  {
+   "key": "shoken",
+   "label": "商圏分析"
+  },
+  {
+   "key": "civic",
+   "label": "政治・市民参加"
+  },
+  {
+   "key": "crm",
+   "label": "顧客・営業管理"
+  },
+  {
+   "key": "support",
+   "label": "サポート"
+  },
+  {
+   "key": "project",
+   "label": "プロジェクト管理"
+  },
+  {
+   "key": "inventory",
+   "label": "在庫管理"
+  },
+  {
+   "key": "esign",
+   "label": "電子契約"
+  },
+  {
+   "key": "cms",
+   "label": "CMS・情報発信"
+  },
+  {
+   "key": "monitoring",
+   "label": "監視・運用"
+  },
+  {
+   "key": "groupware",
+   "label": "グループウェア"
+  },
+  {
+   "key": "media",
+   "label": "動画・音声・配信"
+  },
+  {
+   "key": "finance",
+   "label": "投資・市場分析"
+  },
+  {
+   "key": "marketing",
+   "label": "マーケティング"
+  },
+  {
+   "key": "mobile",
+   "label": "モバイルアプリ"
+  },
+  {
+   "key": "commerce",
+   "label": "EC・販売"
+  },
+  {
+   "key": "knowledge",
+   "label": "ナレッジ・AI"
+  },
+  {
+   "key": "office",
+   "label": "オフィス"
+  },
+  {
+   "key": "database",
+   "label": "データベース"
+  },
+  {
+   "key": "notes",
+   "label": "メモ"
+  },
+  {
+   "key": "lms",
+   "label": "学習管理・LMS"
+  },
+  {
+   "key": "hr",
+   "label": "人事・勤怠"
+  },
+  {
+   "key": "accounting",
+   "label": "会計・経理"
+  },
+  {
+   "key": "forum",
+   "label": "コミュニティ・掲示板"
+  },
+  {
+   "key": "booking",
+   "label": "予約・受付"
+  },
+  {
+   "key": "survey",
+   "label": "アンケート・フォーム"
+  },
+  {
+   "key": "pos",
+   "label": "POS・店舗"
+  },
+  {
+   "key": "dms",
+   "label": "文書管理"
+  },
+  {
+   "key": "lowcode",
+   "label": "ローコード開発"
+  },
+  {
+   "key": "analytics",
+   "label": "分析・BI"
+  },
+  {
+   "key": "aidev",
+   "label": "AI開発基盤"
+  },
+  {
+   "key": "devtools",
+   "label": "開発者ツール"
+  },
+  {
+   "key": "sitegen",
+   "label": "サイト構築・静的生成"
+  },
+  {
+   "key": "automation",
+   "label": "自動化・連携"
+  },
+  {
+   "key": "devsupport",
+   "label": "開発支援ツール"
+  }
+ ],
+ "cap": [
+  {
+   "key": "wiki",
+   "label": "社内Wiki",
+   "noun": null
+  },
+  {
+   "key": "manual",
+   "label": "業務マニュアル・手順書の整備",
+   "noun": null
+  },
+  {
+   "key": "techdocs",
+   "label": "技術ドキュメントの公開",
+   "noun": null
+  },
+  {
+   "key": "knowledge",
+   "label": "社内ナレッジ検索",
+   "noun": null
+  },
+  {
+   "key": "note",
+   "label": "メモ・議事録の管理",
+   "noun": null
+  },
+  {
+   "key": "bookmark",
+   "label": "情報収集・記事のクリップ",
+   "noun": null
+  },
+  {
+   "key": "helpdesk",
+   "label": "ヘルプデスク・問い合わせ管理",
+   "noun": null
+  },
+  {
+   "key": "chatbot",
+   "label": "チャットボットによる自動応答",
+   "noun": null
+  },
+  {
+   "key": "faq",
+   "label": "FAQ・よくある質問の整備",
+   "noun": null
+  },
+  {
+   "key": "livechat",
+   "label": "Web接客・有人チャット",
+   "noun": null
+  },
+  {
+   "key": "crm",
+   "label": "顧客管理（CRM）",
+   "noun": "顧客管理システム（CRM）"
+  },
+  {
+   "key": "sfa",
+   "label": "営業支援・商談管理",
+   "noun": null
+  },
+  {
+   "key": "mailmarketing",
+   "label": "メール配信・メルマガ",
+   "noun": "メール配信システム"
+  },
+  {
+   "key": "marketing",
+   "label": "マーケティング施策の管理",
+   "noun": null
+  },
+  {
+   "key": "contact",
+   "label": "問い合わせフォーム・資料請求",
+   "noun": null
+  },
+  {
+   "key": "blog",
+   "label": "ブログ運営",
+   "noun": null
+  },
+  {
+   "key": "corporate",
+   "label": "企業サイトの運営",
+   "noun": null
+  },
+  {
+   "key": "staticsite",
+   "label": "静的サイトの構築",
+   "noun": null
+  },
+  {
+   "key": "headless",
+   "label": "ヘッドレスCMS・API配信",
+   "noun": null
+  },
+  {
+   "key": "portal",
+   "label": "会員サイト・ポータルの運営",
+   "noun": null
+  },
+  {
+   "key": "mediasite",
+   "label": "メディア・記事サイトの運営",
+   "noun": null
+  },
+  {
+   "key": "sitebuilder",
+   "label": "ページ制作・サイトビルダー",
+   "noun": null
+  },
+  {
+   "key": "cms",
+   "label": "コンテンツ管理（CMS）",
+   "noun": "CMS"
+  },
+  {
+   "key": "ec",
+   "label": "ECサイトの構築",
+   "noun": "ECサイト"
+  },
+  {
+   "key": "pos",
+   "label": "POS・店舗レジ",
+   "noun": null
+  },
+  {
+   "key": "subscription",
+   "label": "サブスク・継続課金",
+   "noun": null
+  },
+  {
+   "key": "payment",
+   "label": "オンライン決済",
+   "noun": null
+  },
+  {
+   "key": "marketplace",
+   "label": "マーケットプレイスの運営",
+   "noun": null
+  },
+  {
+   "key": "ticket",
+   "label": "イベント運営・チケット販売",
+   "noun": null
+  },
+  {
+   "key": "booking",
+   "label": "予約受付システム",
+   "noun": null
+  },
+  {
+   "key": "calendar",
+   "label": "カレンダー・日程調整",
+   "noun": null
+  },
+  {
+   "key": "shift",
+   "label": "シフト管理",
+   "noun": null
+  },
+  {
+   "key": "facility",
+   "label": "会議室・設備の予約",
+   "noun": null
+  },
+  {
+   "key": "workflow",
+   "label": "申請・承認の電子化",
+   "noun": null
+  },
+  {
+   "key": "automation",
+   "label": "定型業務の自動化",
+   "noun": null
+  },
+  {
+   "key": "integration",
+   "label": "システム間の連携・つなぎ込み",
+   "noun": null
+  },
+  {
+   "key": "bpm",
+   "label": "業務プロセスの整理と管理",
+   "noun": null
+  },
+  {
+   "key": "esign",
+   "label": "電子契約・電子署名",
+   "noun": null
+  },
+  {
+   "key": "checklist",
+   "label": "点検・チェックリストの記録",
+   "noun": null
+  },
+  {
+   "key": "project",
+   "label": "プロジェクト管理",
+   "noun": "プロジェクト管理ツール"
+  },
+  {
+   "key": "task",
+   "label": "タスク・ToDo管理",
+   "noun": "タスク管理ツール"
+  },
+  {
+   "key": "issue",
+   "label": "課題・不具合の管理",
+   "noun": null
+  },
+  {
+   "key": "kanban",
+   "label": "カンバンで進捗を見える化",
+   "noun": null
+  },
+  {
+   "key": "gantt",
+   "label": "工程表・スケジュール管理",
+   "noun": null
+  },
+  {
+   "key": "timetrack",
+   "label": "工数・作業時間の記録",
+   "noun": null
+  },
+  {
+   "key": "team",
+   "label": "チームの情報共有・共同作業",
+   "noun": null
+  },
+  {
+   "key": "invoice",
+   "label": "請求書の発行と管理",
+   "noun": "請求書発行システム"
+  },
+  {
+   "key": "quote",
+   "label": "見積書の作成",
+   "noun": null
+  },
+  {
+   "key": "expense",
+   "label": "経費精算",
+   "noun": null
+  },
+  {
+   "key": "accounting",
+   "label": "会計・記帳",
+   "noun": null
+  },
+  {
+   "key": "erp",
+   "label": "ERP・基幹業務の統合",
+   "noun": null
+  },
+  {
+   "key": "budget",
+   "label": "予算・原価・収支の管理",
+   "noun": null
+  },
+  {
+   "key": "asset",
+   "label": "資産・備品の管理",
+   "noun": null
+  },
+  {
+   "key": "inventory",
+   "label": "在庫管理",
+   "noun": null
+  },
+  {
+   "key": "order",
+   "label": "受発注の管理",
+   "noun": null
+  },
+  {
+   "key": "purchase",
+   "label": "購買・仕入の管理",
+   "noun": null
+  },
+  {
+   "key": "warehouse",
+   "label": "倉庫・出荷の管理",
+   "noun": null
+  },
+  {
+   "key": "delivery",
+   "label": "配送・物流の管理",
+   "noun": null
+  },
+  {
+   "key": "production",
+   "label": "生産・製造工程の管理",
+   "noun": null
+  },
+  {
+   "key": "maintenance",
+   "label": "設備の保守・メンテナンス管理",
+   "noun": null
+  },
+  {
+   "key": "attendance",
+   "label": "勤怠管理",
+   "noun": "勤怠管理システム"
+  },
+  {
+   "key": "hr",
+   "label": "人事・従業員情報の管理",
+   "noun": null
+  },
+  {
+   "key": "payroll",
+   "label": "給与計算",
+   "noun": null
+  },
+  {
+   "key": "recruit",
+   "label": "採用・応募者管理",
+   "noun": null
+  },
+  {
+   "key": "lms",
+   "label": "研修・eラーニング",
+   "noun": null
+  },
+  {
+   "key": "evaluation",
+   "label": "目標管理・人事評価",
+   "noun": null
+  },
+  {
+   "key": "bi",
+   "label": "BI・ダッシュボード",
+   "noun": "BIツール・ダッシュボード"
+  },
+  {
+   "key": "visualize",
+   "label": "データの可視化",
+   "noun": null
+  },
+  {
+   "key": "report",
+   "label": "レポート・帳票の自動作成",
+   "noun": null
+  },
+  {
+   "key": "dwh",
+   "label": "データ基盤・データウェアハウス",
+   "noun": null
+  },
+  {
+   "key": "etl",
+   "label": "データ連携・移行",
+   "noun": null
+  },
+  {
+   "key": "analytics",
+   "label": "アクセス解析・行動分析",
+   "noun": null
+  },
+  {
+   "key": "database",
+   "label": "データベースの管理",
+   "noun": null
+  },
+  {
+   "key": "spreadsheet",
+   "label": "Excel業務の置き換え",
+   "noun": null
+  },
+  {
+   "key": "dms",
+   "label": "文書管理・ファイル共有",
+   "noun": null
+  },
+  {
+   "key": "ocr",
+   "label": "OCR・書類の読み取り",
+   "noun": "AI-OCR・帳票の読み取り"
+  },
+  {
+   "key": "paperless",
+   "label": "ペーパーレス・書類の電子化",
+   "noun": null
+  },
+  {
+   "key": "storage",
+   "label": "オンラインストレージ・ファイルサーバー",
+   "noun": null
+  },
+  {
+   "key": "pdf",
+   "label": "PDFの生成・編集",
+   "noun": null
+  },
+  {
+   "key": "form",
+   "label": "フォーム作成・アンケート集計",
+   "noun": null
+  },
+  {
+   "key": "chat",
+   "label": "社内チャット",
+   "noun": null
+  },
+  {
+   "key": "forum",
+   "label": "掲示板・コミュニティ運営",
+   "noun": null
+  },
+  {
+   "key": "mail",
+   "label": "メール・グループウェア",
+   "noun": null
+  },
+  {
+   "key": "meeting",
+   "label": "オンライン会議・ビデオ通話",
+   "noun": null
+  },
+  {
+   "key": "notify",
+   "label": "通知・アラートの配信",
+   "noun": null
+  },
+  {
+   "key": "aiagent",
+   "label": "AIエージェントの構築",
+   "noun": "AIエージェント"
+  },
+  {
+   "key": "rag",
+   "label": "社内文書のAI検索（RAG）",
+   "noun": null
+  },
+  {
+   "key": "llmops",
+   "label": "LLMの運用・切り替え",
+   "noun": null
+  },
+  {
+   "key": "chatui",
+   "label": "生成AIのチャット画面",
+   "noun": null
+  },
+  {
+   "key": "prompt",
+   "label": "プロンプトの管理と評価",
+   "noun": null
+  },
+  {
+   "key": "translate",
+   "label": "文書の翻訳",
+   "noun": "PDF翻訳・文書翻訳"
+  },
+  {
+   "key": "aiwrite",
+   "label": "文章の生成・要約・校閲",
+   "noun": null
+  },
+  {
+   "key": "aiimage",
+   "label": "画像の生成・編集",
+   "noun": null
+  },
+  {
+   "key": "aivoice",
+   "label": "音声合成・文字起こし",
+   "noun": "文字起こしAI"
+  },
+  {
+   "key": "shortdrama",
+   "label": "ショートドラマ・短尺動画の制作",
+   "noun": "ショートドラマ制作"
+  },
+  {
+   "key": "aivideo",
+   "label": "動画の生成・編集",
+   "noun": null
+  },
+  {
+   "key": "vectordb",
+   "label": "ベクトル検索・類似検索",
+   "noun": null
+  },
+  {
+   "key": "search",
+   "label": "全文検索の仕組み",
+   "noun": "全文検索システム"
+  },
+  {
+   "key": "lowcode",
+   "label": "社内ツールの内製化（ローコード）",
+   "noun": null
+  },
+  {
+   "key": "monitoring",
+   "label": "システムの監視・障害検知",
+   "noun": null
+  },
+  {
+   "key": "log",
+   "label": "ログの収集と分析",
+   "noun": null
+  },
+  {
+   "key": "backup",
+   "label": "バックアップ・データ保全",
+   "noun": null
+  },
+  {
+   "key": "auth",
+   "label": "認証・アクセス権の管理",
+   "noun": null
+  },
+  {
+   "key": "security",
+   "label": "セキュリティ・脆弱性対応",
+   "noun": null
+  },
+  {
+   "key": "deploy",
+   "label": "デプロイ・環境構築の自動化",
+   "noun": null
+  },
+  {
+   "key": "devtool",
+   "label": "開発作業の効率化",
+   "noun": null
+  },
+  {
+   "key": "api",
+   "label": "API開発・API連携",
+   "noun": null
+  },
+  {
+   "key": "medical",
+   "label": "医療・介護の記録管理",
+   "noun": null
+  },
+  {
+   "key": "education",
+   "label": "学校・教育機関の業務",
+   "noun": null
+  },
+  {
+   "key": "realestate",
+   "label": "不動産・物件の管理",
+   "noun": null
+  },
+  {
+   "key": "restaurant",
+   "label": "飲食店の運営",
+   "noun": null
+  },
+  {
+   "key": "membership",
+   "label": "会員組織・団体の運営",
+   "noun": null
+  },
+  {
+   "key": "construction",
+   "label": "建設・工事の管理",
+   "noun": null
+  },
+  {
+   "key": "gis",
+   "label": "地図・位置情報の活用（GIS）",
+   "noun": "GIS（地理情報システム）"
+  },
+  {
+   "key": "hazard",
+   "label": "防災・ハザード情報の活用",
+   "noun": "ハザードマップ・土砂災害警戒区域"
+  },
+  {
+   "key": "shoken",
+   "label": "商圏分析・エリアマーケティング",
+   "noun": "商圏分析ツール"
+  },
+  {
+   "key": "civic",
+   "label": "政治・市民参加・合意形成",
+   "noun": null
+  }
+ ]
+}

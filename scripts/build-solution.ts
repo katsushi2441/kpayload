@@ -30,7 +30,8 @@ const SHELL = {
   base: BASE,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>`,
 }
-const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
+  baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 type SolutionPage = {
   slug: string; kind: 'industry' | 'gyomu'; name: string; kicker: string
@@ -170,7 +171,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: p.name, item: url }] },
   ]
-  return shell(title, desc, url, body, ld)
+  return shell(title, desc, url, body, ld, [p.slug], `${SITE}/images/ogp/sol-${p.slug}.png`)
 }
 
 function indexPage(): string {
@@ -318,7 +319,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       { '@type': 'ListItem', position: 3, name: ind.name, item: `${BASE}/${ind.slug}/` },
       { '@type': 'ListItem', position: 4, name: g.name, item: url }] },
   ]
-  return shell(title, desc, url, body, ld)
+  return shell(title, desc, url, body, ld, [ind.slug, g.slug], `${SITE}/images/ogp/sol-${ind.slug}.png`)
 }
 
 function industryHub(ind: MI): string {
@@ -350,7 +351,7 @@ ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.sl
       { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: ind.name, item: url }] },
   ]
-  return shell(title, desc, url, body, ld)
+  return shell(title, desc, url, body, ld, [ind.slug], `${SITE}/images/ogp/sol-${ind.slug}.png`)
 }
 
 await fs.rm(distRoot, { recursive: true, force: true })

@@ -66,7 +66,8 @@ const SHELL = {
   base: BASE,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${BASE}/">SaaSとOSSの対応表</a>　<a href="${SITE}/solution/">業種・業務別ソリューション</a>　<a href="${SITE}/ai-system/?ref=exbridge-saas">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-saas">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-saas">触れるデモ一覧</a>`,
 }
-const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[]) =>
+  baseShell(t, d, u, b, l, { ...SHELL, pvTags })
 
 type Saas = {
   slug: string; name: string; kana: string; vendor: string; category: string
@@ -315,7 +316,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       { '@type': 'ListItem', position: 2, name: 'SaaSとOSSの対応表', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: s.name, item: url }] },
   ]
-  return shell(title, desc, url, body, ld)
+  return shell(title, desc, url, body, ld, [s.slug])
 }
 
 function indexPage(list: Array<{ s: Saas; oss: Project[] }>): string {

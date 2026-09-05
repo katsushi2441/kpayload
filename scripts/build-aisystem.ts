@@ -58,7 +58,8 @@ const SHELL = {
   base: `${SITE}/ai-system`,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>　<a href="https://kappstore.exbridge.jp/?ref=exbridge-ai-system">買い切りの業務システム（Kurage App Store）</a>`,
 }
-const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
+  baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 function ctaBlock(cap: Capability, name: string, subject?: string): string {
   const s = subject || cap.label
@@ -206,7 +207,7 @@ ${siblings.map((s) => `<tr><th><a href="${BASE}/${attr(s.slug)}/">${h(s.name)}</
   const faqHtml = `<main class="wrap"><section><div class="panel"><h2>よくあるご質問</h2>
 ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
 </div></section></main>`
-  return shell(title, desc, url, body + faqHtml, ld)
+  return shell(title, desc, url, body + faqHtml, ld, [p.slug, p.category, cap.key], `${SITE}/images/ogp/cap-${cap.key}.png`)
 }
 
 /**
@@ -489,7 +490,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       { '@type': 'ListItem', position: 2, name: 'AIでできること', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: cap.label, item: url }] },
   ]
-  return shell(title, desc, url, body, ld)
+  return shell(title, desc, url, body, ld, [cap.key], `${SITE}/images/ogp/cap-${cap.key}.png`)
 }
 
 function indexPage(caps: Capability[], counts: Map<string, number>, total: number): string {
