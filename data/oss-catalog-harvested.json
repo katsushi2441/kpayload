@@ -666,7 +666,7 @@
     "category": "project",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "AIを活用したオープンソースのコラボレーションワークスペースです。",
+    "summary": "AppFlowyを日本語で使うための案内。Notion代替のオープンソース・ワークスペースの日本語対応状況、セルフホストの導入手順、ライセンス、AI機能、カスタマイズ相談まで。",
     "description": "AppFlowyは、プロジェクト管理、Wiki、チームの連携をAIで統合するツールです。データのコントロールを維持しながら、より多くの成果を達成できる環境を提供します。Notionに代わる主要なオープンソースの選択肢として位置づけられています。ドキュメント作成やノート作成など、多様なコンテンツ管理に対応しています。",
     "license": "AGPL-3.0",
     "japaneseStatus": "日本語ファイルが一部のみ",
@@ -737,7 +737,8 @@
       {
         "text": "frontend/resources/translations/ja-JP.json"
       }
-    ]
+    ],
+    "seoTitle": "AppFlowyを日本語で使う｜日本語化の状況と導入手順（Notion代替・セルフホスト）| Kurage"
   },
   {
     "name": "Apache Superset",
@@ -7124,7 +7125,7 @@
     "category": "hr",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "プライバシーを重視した自動時間追跡ツールです。",
+    "summary": "ActivityWatchを日本語で使うための案内。PC作業を自動で記録し、データを外に出さないプライバシー重視の時間追跡ツールの日本語対応状況、導入手順、ライセンス、カスタマイズ相談まで。",
     "description": "activitywatchは、無料で利用できるオープンソースの自動時間追跡ソフトウェアです。クロスプラットフォームに対応しており、さまざまなOS環境で動作します。拡張性が高く、ユーザーのプライバシーに配慮した設計が特徴です。ダッシュボードを通じて、アプリケーションの使用状況や生産性を分析することが可能です。",
     "license": "MPL-2.0",
     "japaneseStatus": "日本語ファイルなし",
@@ -7188,7 +7189,8 @@
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": []
+    "jaSamplePaths": [],
+    "seoTitle": "ActivityWatchを日本語で使う｜日本語化と導入手順（自動の時間記録・ローカル保存）| Kurage"
   },
   {
     "name": "etherpad",
@@ -17828,7 +17830,7 @@
     "category": "lowcode",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "ノーコードでデータベースや業務アプリを構築できるプラットフォームです。",
+    "summary": "Baserowを日本語で使うための案内。Airtable代替のノーコードデータベースの日本語対応状況、セルフホストの導入手順、ライセンス、業務アプリ化のカスタマイズ相談まで。",
     "description": "Baserowは、プログラミングの知識がなくてもデータベースの構築、自動化、アプリケーション、AIエージェントの作成を可能にするノーコードプラットフォームです。クラウドサービスとして利用できるほか、セルフホストでの運用も選択可能です。GDPR、HIPAA、SOC 2への準拠を確認しており、セキュリティ要件の高い環境にも対応しています。Airtableに代わるオープンソースの代替ツールとして提供されています。",
     "license": "MIT",
     "licenseTier": "osi",
@@ -17910,7 +17912,8 @@
       {
         "text": "backend/src/baserow/core/locale/ja"
       }
-    ]
+    ],
+    "seoTitle": "Baserowを日本語で使う｜日本語化と導入手順（Airtable代替・ノーコードDB）| Kurage"
   },
   {
     "name": "astron-rpa",
@@ -40223,7 +40226,7 @@
     "category": "groupware",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "ユーザーが独自のストーリーを作成できるLLM向けのロールプレイング用ソフトウェアです。",
+    "summary": "RisuAIを日本語で使うための案内。ユーザーが独自のストーリーを作れるLLM向けロールプレイ用ソフトの日本語対応状況、セルフホストの導入手順、ライセンス、カスタマイズ相談まで。",
     "description": "Risuaiは、ユーザーが自分自身の物語を構築できるように設計された、親しみやすいインターフェースを持つソフトウェアです。大規模言語モデル（LLM）を用いたロールプレイング体験に特化しており、直感的な操作で利用できます。ClaudeやGemini、GPT、Llamaなどの主要なAIモデルに対応しています。TypeScriptで開発されており、柔軟なキャラクター設定やチャット機能を提供します。",
     "license": "GPL-3.0",
     "licenseTier": "osi",
@@ -40298,7 +40301,8 @@
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": []
+    "jaSamplePaths": [],
+    "seoTitle": "RisuAIを日本語で使う｜日本語化・セルフホスト導入手順（LLMロールプレイ）| Kurage"
   },
   {
     "name": "gocommerce",
