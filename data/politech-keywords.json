@@ -121,17 +121,6 @@
   "intent": "topic"
  },
  {
-  "slug": "nippon-gakusei-shougaku-kin-shien-kikou",
-  "keyword": "日本学生奨学金支援機構",
-  "query": "日本 学生 奨学 金 支援 機構",
-  "volume": 33100,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
   "slug": "shuurou-shien-ikou",
   "keyword": "就労支援移行",
   "query": "就労 支援 移行",
@@ -254,7 +243,7 @@
  },
  {
   "slug": "shougaku-kin-daigaku",
-  "keyword": "奨学金大学",
+  "keyword": "大学の奨学金",
   "query": "奨学 金 大学",
   "volume": 14800,
   "competition": "低",
@@ -309,7 +298,7 @@
  },
  {
   "slug": "shinguru-mazaa-teate",
-  "keyword": "シングルマザー手当",
+  "keyword": "シングルマザーの手当",
   "query": "シングル マザー の 手当",
   "volume": 12100,
   "competition": "低",
@@ -353,7 +342,7 @@
  },
  {
   "slug": "boshi-katei-teate",
-  "keyword": "母子家庭手当て",
+  "keyword": "母子家庭の手当",
   "query": "母子 家庭 の 手当て",
   "volume": 9900,
   "competition": "低",
@@ -407,28 +396,6 @@
   "intent": "benefit"
  },
  {
-  "slug": "fukushi-yougu-soudan-senmon-in",
-  "keyword": "福祉用具相談専門員",
-  "query": "福祉 用具 相談 専門 員",
-  "volume": 8100,
-  "competition": "低",
-  "index": 12,
-  "theme": "fukushi",
-  "theme_name": "福祉・高齢・障害・ひとり親",
-  "intent": "topic"
- },
- {
-  "slug": "funbetsu-gomi-hako",
-  "keyword": "分別ごみ箱",
-  "query": "分別 ごみ箱",
-  "volume": 8100,
-  "competition": "高",
-  "index": 100,
-  "theme": "seikatsu",
-  "theme_name": "給付金・生活・住まい",
-  "intent": "topic"
- },
- {
   "slug": "gomi-funbetsu",
   "keyword": "ごみ分別",
   "query": "ごみ 分別",
@@ -474,7 +441,7 @@
  },
  {
   "slug": "shinsei-seikatsu-hogo",
-  "keyword": "申請生活保護",
+  "keyword": "生活保護の申請",
   "query": "申請 生活 保護",
   "volume": 6600,
   "competition": "低",
@@ -507,7 +474,7 @@
  },
  {
   "slug": "juumin-zei-hikazei-setai-10-man-en-kyuufu-kettei",
-  "keyword": "住民税非課税世帯10万円給付決定",
+  "keyword": "住民税非課税世帯の10万円給付",
   "query": "住民 税 非課税 世帯 10 万 円 給付 決定",
   "volume": 6600,
   "competition": "低",
@@ -573,7 +540,7 @@
  },
  {
   "slug": "koukou-shougaku-kin",
-  "keyword": "高校奨学金",
+  "keyword": "高校の奨学金",
   "query": "高校 奨学 金",
   "volume": 5400,
   "competition": "低",
@@ -584,7 +551,7 @@
  },
  {
   "slug": "shougaku-kin-koukousei",
-  "keyword": "奨学金高校生",
+  "keyword": "高校生の奨学金",
   "query": "奨学 金 高校生",
   "volume": 5400,
   "competition": "低",
@@ -595,7 +562,7 @@
  },
  {
   "slug": "shougaku-kin-daigakuin",
-  "keyword": "奨学金大学院",
+  "keyword": "大学院の奨学金",
   "query": "奨学 金 大学院",
   "volume": 5400,
   "competition": "低",
@@ -628,7 +595,7 @@
  },
  {
   "slug": "senkyo-touhyou-youshi-kakikata",
-  "keyword": "選挙投票用紙書き方",
+  "keyword": "選挙の投票用紙の書き方",
   "query": "選挙 投票 用紙 書き方",
   "volume": 5400,
   "competition": "低",
@@ -639,7 +606,7 @@
  },
  {
   "slug": "fuzai-mono-touhyou-yari-hou",
-  "keyword": "不在者投票やり方",
+  "keyword": "不在者投票のやり方",
   "query": "不在 者 投票 やり方",
   "volume": 5400,
   "competition": "低",
@@ -672,7 +639,7 @@
  },
  {
   "slug": "senmon-gakkou-shougaku-kin",
-  "keyword": "専門学校奨学金",
+  "keyword": "専門学校の奨学金",
   "query": "専門 学校 奨学 金",
   "volume": 4400,
   "competition": "低",
@@ -738,19 +705,8 @@
  },
  {
   "slug": "ki-nichimae-touhyou-hitsuyou-mono",
-  "keyword": "期日前投票必要もの",
+  "keyword": "期日前投票に必要なもの",
   "query": "期 日前 投票 必要 な もの",
-  "volume": 4400,
-  "competition": "低",
-  "index": 0,
-  "theme": "senkyo",
-  "theme_name": "選挙・政治参加",
-  "intent": "topic"
- },
- {
-  "slug": "ki-nichimae-touhyou-yari-hou",
-  "keyword": "期日前投票やり方",
-  "query": "期 日前 投票 やり方",
   "volume": 4400,
   "competition": "低",
   "index": 0,
@@ -759,15 +715,15 @@
   "intent": "howto"
  },
  {
-  "slug": "ki-nichimae",
-  "keyword": "期日前",
-  "query": "期 日前",
+  "slug": "ki-nichimae-touhyou-yari-hou",
+  "keyword": "期日前投票のやり方",
+  "query": "期 日前 投票 やり方",
   "volume": 4400,
   "competition": "低",
   "index": 0,
   "theme": "senkyo",
   "theme_name": "選挙・政治参加",
-  "intent": "topic"
+  "intent": "howto"
  },
  {
   "slug": "ijuu-shien-kin",
@@ -849,7 +805,7 @@
  {
   "slug": "senkyo-ki-nichimae-touhyou",
   "keyword": "選挙期日前投票",
-  "query": "選挙 期 日前 投票",
+  "query": "選挙 の 期 日前 投票",
   "volume": 3600,
   "competition": "低",
   "index": 0,
@@ -911,28 +867,6 @@
   "theme": "kyoiku",
   "theme_name": "教育・奨学金",
   "intent": "topic"
- },
- {
-  "slug": "tsuugaku-ro",
-  "keyword": "通学ろ",
-  "query": "通学 ろ",
-  "volume": 2900,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
-  "slug": "shougaku-kin-ryuugaku",
-  "keyword": "奨学金留学",
-  "query": "奨学 金 留学",
-  "volume": 2900,
-  "competition": "中",
-  "index": 38,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
  },
  {
   "slug": "shougai-mono-shien",
@@ -1001,39 +935,6 @@
   "intent": "topic"
  },
  {
-  "slug": "nitadori-kokusai-shougaku-zaidan",
-  "keyword": "似鳥国際奨学財団",
-  "query": "似鳥 国際 奨学 財団",
-  "volume": 2400,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
-  "slug": "daisoo-shougaku-kin",
-  "keyword": "ダイソー奨学金",
-  "query": "ダイソー 奨学 金",
-  "volume": 2400,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
-  "slug": "shuurou-a-kata",
-  "keyword": "就労a型",
-  "query": "就労 a 型",
-  "volume": 2400,
-  "competition": "低",
-  "index": 17,
-  "theme": "fukushi",
-  "theme_name": "福祉・高齢・障害・ひとり親",
-  "intent": "topic"
- },
- {
   "slug": "chiiki-houkatsu",
   "keyword": "地域包括",
   "query": "地域 包括",
@@ -1046,7 +947,7 @@
  },
  {
   "slug": "hikazei-setai-kyuufu-kin-30-man",
-  "keyword": "非課税世帯給付金30万",
+  "keyword": "非課税世帯給付金 30万円",
   "query": "非課税 世帯 給付 金 30 万",
   "volume": 2400,
   "competition": "低",
@@ -1057,7 +958,7 @@
  },
  {
   "slug": "senkyo-touhyou-shikata",
-  "keyword": "選挙投票仕方",
+  "keyword": "選挙の投票の仕方",
   "query": "選挙 投票 仕方",
   "volume": 2400,
   "competition": "低",
@@ -1111,31 +1012,9 @@
   "intent": "place"
  },
  {
-  "slug": "shingaku-shikin-shimyureetaa",
-  "keyword": "進学資金シミュレーター",
-  "query": "進学 資金 シミュレーター",
-  "volume": 1900,
-  "competition": "低",
-  "index": 2,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
   "slug": "taiyo-kata-shougaku-kin",
   "keyword": "貸与型奨学金",
   "query": "貸与 型 奨学 金",
-  "volume": 1900,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
-  "slug": "nippon-shien-kikou-shougaku-kin",
-  "keyword": "日本支援機構奨学金",
-  "query": "日本 支援 機構 奨学 金",
   "volume": 1900,
   "competition": "低",
   "index": 1,
@@ -1156,7 +1035,7 @@
  },
  {
   "slug": "mimamori-kourei-mono",
-  "keyword": "見守り高齢者",
+  "keyword": "高齢者の見守り",
   "query": "見守り 高齢 者",
   "volume": 1900,
   "competition": "高",
@@ -1167,7 +1046,7 @@
  },
  {
   "slug": "soudan-kaigo",
-  "keyword": "相談介護",
+  "keyword": "介護相談",
   "query": "相談 介護",
   "volume": 1900,
   "competition": "低",
@@ -1178,7 +1057,7 @@
  },
  {
   "slug": "seikatsu-hogo-shinsei-hitsuyou-mono",
-  "keyword": "生活保護申請必要もの",
+  "keyword": "生活保護の申請に必要なもの",
   "query": "生活 保護 申請 必要 な もの",
   "volume": 1900,
   "competition": "低",
@@ -1200,7 +1079,7 @@
  },
  {
   "slug": "senkyo-yari-hou",
-  "keyword": "選挙やり方",
+  "keyword": "選挙のやり方",
   "query": "選挙 やり方",
   "volume": 1900,
   "competition": "低",
@@ -1208,17 +1087,6 @@
   "theme": "senkyo",
   "theme_name": "選挙・政治参加",
   "intent": "howto"
- },
- {
-  "slug": "ki-nichimae-touhyou-touhyou-ritsu",
-  "keyword": "期日前投票投票率",
-  "query": "期 日前 投票 投票 率",
-  "volume": 1900,
-  "competition": "低",
-  "index": 0,
-  "theme": "senkyo",
-  "theme_name": "選挙・政治参加",
-  "intent": "topic"
  },
  {
   "slug": "nagoya-shi-hoikuen-aki-joukyou",
@@ -1263,28 +1131,6 @@
   "theme": "kosodate",
   "theme_name": "子育て・少子化",
   "intent": "topic"
- },
- {
-  "slug": "gyoumu-suupaa-shougaku-kin",
-  "keyword": "業務スーパー奨学金",
-  "query": "業務 スーパー 奨学 金",
-  "volume": 1600,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
-  "slug": "nippon-gakusei-kikou-shougaku-kin",
-  "keyword": "日本学生機構奨学金",
-  "query": "日本 学生 機構 奨学 金",
-  "volume": 1600,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
  },
  {
   "slug": "ryuu-nen-shougaku-kin",
@@ -1343,7 +1189,7 @@
  },
  {
   "slug": "senkyo-ike-nai-baai-touhyou-houhou",
-  "keyword": "選挙行けない場合投票方法",
+  "keyword": "選挙に行けない場合の投票方法",
   "query": "選挙 に 行け ない 場合 の 投票 方法",
   "volume": 1600,
   "competition": "低",
@@ -1354,7 +1200,7 @@
  },
  {
   "slug": "touhyou-youshi-kakikata",
-  "keyword": "投票用紙書き方",
+  "keyword": "投票用紙の書き方",
   "query": "投票 用紙 書き方",
   "volume": 1600,
   "competition": "低",
@@ -1419,17 +1265,6 @@
   "intent": "place"
  },
  {
-  "slug": "furu-buraito-shougaku-kin",
-  "keyword": "フルブライト奨学金",
-  "query": "フル ブライト 奨学 金",
-  "volume": 1300,
-  "competition": "低",
-  "index": 4,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
   "slug": "ninka-soto-hoiku-ryoukin",
   "keyword": "認可外保育料金",
   "query": "認可 外 保育 料金",
@@ -1439,39 +1274,6 @@
   "theme": "kyoiku",
   "theme_name": "教育・奨学金",
   "intent": "topic"
- },
- {
-  "slug": "shougaku",
-  "keyword": "しょうがく",
-  "query": "しょうがく",
-  "volume": 1300,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
-  "slug": "dai-1-tane-shougaku-kin",
-  "keyword": "第1種奨学金",
-  "query": "第 1 種 奨学 金",
-  "volume": 1300,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
-  "slug": "mushou-ka",
-  "keyword": "無償化",
-  "query": "無償 化",
-  "volume": 1300,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
  },
  {
   "slug": "shougakusei",
@@ -1486,7 +1288,7 @@
  },
  {
   "slug": "hoiku-ryou-mushou-ka-0-toshi-2-toshi",
-  "keyword": "保育料無償化0歳2歳",
+  "keyword": "保育料無償化（0〜2歳）",
   "query": "保育 料 無償 化 0 歳 から 2 歳",
   "volume": 1300,
   "competition": "低",
@@ -1496,19 +1298,8 @@
   "intent": "benefit"
  },
  {
-  "slug": "kaigai-ryuugaku-shougaku-kin",
-  "keyword": "海外留学奨学金",
-  "query": "海外 留学 奨学 金",
-  "volume": 1300,
-  "competition": "中",
-  "index": 38,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "benefit"
- },
- {
   "slug": "kourei-mono-mimamori-saabisu-jichitai",
-  "keyword": "高齢者見守りサービス自治体",
+  "keyword": "自治体の高齢者見守りサービス",
   "query": "高齢 者 見守り サービス 自治体",
   "volume": 1300,
   "competition": "低",
@@ -1530,7 +1321,7 @@
  },
  {
   "slug": "touhyou-shikata",
-  "keyword": "投票仕方",
+  "keyword": "投票の仕方",
   "query": "投票 仕方",
   "volume": 1300,
   "competition": "低",
@@ -1541,7 +1332,7 @@
  },
  {
   "slug": "touhyou-yari-hou",
-  "keyword": "投票やり方",
+  "keyword": "投票のやり方",
   "query": "投票 やり方",
   "volume": 1300,
   "competition": "低",
@@ -1618,7 +1409,7 @@
  },
  {
   "slug": "natsuyasumi-ake-fu-toukou",
-  "keyword": "夏休み明け不登校",
+  "keyword": "夏休み明けの不登校",
   "query": "夏休み 明け 不 登校",
   "volume": 1000,
   "competition": "低",
@@ -1639,31 +1430,9 @@
   "intent": "topic"
  },
  {
-  "slug": "3-toshi-hoiku",
-  "keyword": "3歳保育",
-  "query": "3 歳 保育",
-  "volume": 1000,
-  "competition": "低",
-  "index": 1,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
-  "slug": "nippon-gakusei-kikou",
-  "keyword": "日本学生機構",
-  "query": "日本 学生 機構",
-  "volume": 1000,
-  "competition": "低",
-  "index": 0,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
-  "slug": "shougaku-kin-shikyuu-nichi",
-  "keyword": "奨学金支給日",
-  "query": "奨学 金 支給 日",
+  "slug": "mushou-ka",
+  "keyword": "無償化",
+  "query": "無償 化 と は",
   "volume": 1000,
   "competition": "低",
   "index": 0,
@@ -1694,17 +1463,6 @@
   "intent": "benefit"
  },
  {
-  "slug": "sudachi-fu-toukou",
-  "keyword": "スダチ不登校",
-  "query": "スダチ 不 登校",
-  "volume": 1000,
-  "competition": "中",
-  "index": 37,
-  "theme": "kyoiku",
-  "theme_name": "教育・奨学金",
-  "intent": "topic"
- },
- {
   "slug": "chuugaku-fu-toukou",
   "keyword": "中学不登校",
   "query": "中学 不 登校",
@@ -1728,7 +1486,7 @@
  },
  {
   "slug": "boshi-katei-yachin-hojo",
-  "keyword": "母子家庭家賃補助",
+  "keyword": "母子家庭の家賃補助",
   "query": "母子 家庭 家賃 補助",
   "volume": 1000,
   "competition": "低",
@@ -1736,17 +1494,6 @@
   "theme": "fukushi",
   "theme_name": "福祉・高齢・障害・ひとり親",
   "intent": "benefit"
- },
- {
-  "slug": "ippan-shuurou",
-  "keyword": "一般就労",
-  "query": "一般 就労 と は",
-  "volume": 1000,
-  "competition": "低",
-  "index": 4,
-  "theme": "fukushi",
-  "theme_name": "福祉・高齢・障害・ひとり親",
-  "intent": "topic"
  },
  {
   "slug": "bukka-koutou-shien-kyuufu-kin",
@@ -1761,7 +1508,7 @@
  },
  {
   "slug": "senkyo-touhyou-yari-hou",
-  "keyword": "選挙投票やり方",
+  "keyword": "選挙の投票のやり方",
   "query": "選挙 投票 やり方",
   "volume": 1000,
   "competition": "低",
@@ -1772,19 +1519,8 @@
  },
  {
   "slug": "senkyo-dairi-touhyou-yari-hou",
-  "keyword": "選挙代理投票やり方",
+  "keyword": "代理投票のやり方",
   "query": "選挙 代理 投票 やり方",
-  "volume": 1000,
-  "competition": "低",
-  "index": 0,
-  "theme": "senkyo",
-  "theme_name": "選挙・政治参加",
-  "intent": "howto"
- },
- {
-  "slug": "senkyo-netto-touhyou-yari-hou",
-  "keyword": "選挙ネット投票やり方",
-  "query": "選挙 ネット 投票 やり方",
   "volume": 1000,
   "competition": "低",
   "index": 0,
