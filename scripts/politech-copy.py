@@ -70,6 +70,35 @@ def ollama(prompt: str, retries: int = 3) -> str:
     return ""
 
 
+def _balance(s: str) -> str:
+    """モデルが閉じ忘れた } ] を補う（文字列の中は無視。閉じ括弧の種類違いは期待側を先に補う）"""
+    out, stack, in_str, esc = [], [], False, False
+    pairs = {"{": "}", "[": "]"}
+    for ch in s:
+        if in_str:
+            out.append(ch)
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch in pairs:
+            stack.append(pairs[ch])
+        elif ch in "}]":
+            if not stack:
+                continue
+            while stack and stack[-1] != ch:
+                out.append(stack.pop())
+            stack.pop()
+        out.append(ch)
+    out.extend(reversed(stack))
+    return "".join(out)
+
+
 def parse(txt: str) -> dict | None:
     m = re.search(r"\{.*\}", txt, re.S)
     if not m:
@@ -78,14 +107,38 @@ def parse(txt: str) -> dict | None:
     try:
         d = json.loads(s)
     except json.JSONDecodeError:
-        s2 = re.sub(r",\s*([}\]])", r"\1", s)
-        try:
-            d = json.loads(s2)
-        except json.JSONDecodeError:
+        d = None
+        for s2 in (re.sub(r",\s*([}\]])", r"\1", s), re.sub(r",\s*([}\]])", r"\1", _balance(s))):
+            try:
+                d = json.loads(s2)
+                break
+            except json.JSONDecodeError:
+                continue
+        if d is None:
             return None
     need = ["title", "h1", "lead", "points", "answer", "steps", "faq"]
     if not all(k in d for k in need):
         return None
+    # 形の揺れを吸収: 文字列→段落分割、dict→list、steps/faq のキー名違い
+    if isinstance(d["answer"], str):
+        d["answer"] = [x.strip() for x in re.split(r"\n+", d["answer"]) if x.strip()]
+    if isinstance(d["points"], str):
+        d["points"] = [x.strip("・- ") for x in re.split(r"[\n、]", d["points"]) if x.strip()]
+    for key, a, b in (("steps", "t", "b"), ("faq", "q", "a")):
+        v = d[key]
+        if isinstance(v, dict):
+            v = [{"t" if key == "steps" else "q": kk, "b" if key == "steps" else "a": vv} for kk, vv in v.items()]
+        out = []
+        for it in v:
+            if isinstance(it, dict):
+                ks = list(it.keys())
+                if a not in it and len(ks) >= 2:
+                    it = {a: it[ks[0]], b: it[ks[1]]}
+                out.append(it)
+        d[key] = out
+    if len(d["answer"]) == 1 and len(d["answer"][0]) > 200:
+        t = d["answer"][0]; cut = t.rfind("。", 0, len(t) // 2 + 60) + 1
+        d["answer"] = [t[:cut].strip(), t[cut:].strip()] if 0 < cut < len(t) - 40 else [t, t]
     if len(d["points"]) < 3 or len(d["answer"]) < 2 or len(d["steps"]) < 3 or len(d["faq"]) < 3:
         return None
     return d
@@ -111,10 +164,15 @@ def main():
     for i, k in enumerate(todo, 1):
         p = PROMPT.format(kw=k["keyword"], vol=f"{k['volume']:,}", theme_name=k["theme_name"], intent=k["intent"], facts=FACTS[k["theme"]], common=COMMON)
         d = None
-        for attempt in range(3):
-            d = parse(ollama(p))
+        raw = ""
+        for attempt in range(4):
+            raw = ollama(p)
+            d = parse(raw)
             if d:
                 break
+        if not d:
+            os.makedirs(os.path.join(ROOT, "logs"), exist_ok=True)
+            open(os.path.join(ROOT, "logs", f"politech-fail-{k['slug']}.txt"), "w", encoding="utf-8").write(raw)
         if not d:
             print(f"  [{i}] {k['slug']} 失敗", file=sys.stderr)
             continue
