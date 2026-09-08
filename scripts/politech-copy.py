@@ -59,7 +59,7 @@ PROMPT = """あなたは日本の地方政治と行政制度に詳しい編集�
 
 
 def ollama(prompt: str, retries: int = 3) -> str:
-    body = json.dumps({"model": MODEL, "prompt": prompt, "stream": False, "think": False, "options": {"num_predict": 1400, "temperature": 0.5}}).encode()
+    body = json.dumps({"model": MODEL, "prompt": prompt, "stream": False, "think": False, "options": {"num_predict": 2200, "temperature": 0.5}}).encode()
     for i in range(retries):
         try:
             r = urllib.request.urlopen(urllib.request.Request(OLLAMA, data=body, headers={"Content-Type": "application/json"}), timeout=300)
