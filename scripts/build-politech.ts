@@ -32,6 +32,7 @@ const copy = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-copy
 type Tool = { name: string; what: string; demo?: string; buy?: string }
 const T = {
   khazard: { name: 'Kurage 土砂災害ハザードマップ', what: '住所を入れると警戒区域か特別警戒区域かを判定', demo: `${KURAGE}/khazard.php/?ref=${REF}`, buy: `${KAPP}02b945f9c87c9d86&ref=${REF}` },
+  kflood: { name: 'Kurage 洪水・内水ハザードマップ', what: '住所を入れると洪水で何メートル・何日浸かる想定かと内水の浸水深が出る。マイ・タイムライン生成つき', demo: `${KURAGE}/kflood.php/?ref=${REF}`, buy: `${KAPP}41a09acc163dcb7d&ref=${REF}` },
   ktsunami: { name: 'Kurage 津波浸水想定マップ', what: '住所を入れると津波の浸水深と海抜が出る', demo: `${KURAGE}/ktsunami.php/?ref=${REF}`, buy: `${KAPP}86b85a63bc426575&ref=${REF}` },
   krefuge: { name: 'Kurage 避難所マップ', what: '災害種別で使える避難所まで徒歩何分か', demo: `${KURAGE}/krefuge.php/?ref=${REF}`, buy: `${KAPP}162f155897390072&ref=${REF}` },
   kecnavi: { name: 'Kurage 通報先ナビ', what: '道路の穴・不法投棄・街路灯。住所で通報先の電話が出る', demo: `${KURAGE}/kecnavi.php/?ref=${REF}`, buy: `${KAPP}32502ed71cea6bcf&ref=${REF}` },
@@ -45,7 +46,7 @@ const T = {
 } satisfies Record<string, Tool>
 
 const THEME_TOOLS: Record<string, (keyof typeof T)[]> = {
-  bousai: ['khazard', 'ktsunami', 'krefuge', 'kseido'],
+  bousai: ['kflood', 'khazard', 'ktsunami', 'krefuge', 'kseido'],
   kosodate: ['kseido', 'kfacilities', 'kouchou'],
   shussan: ['kseido', 'kouchou'],
   kyoiku: ['kseido', 'kouchou'],
@@ -54,7 +55,7 @@ const THEME_TOOLS: Record<string, (keyof typeof T)[]> = {
   seikatsu: ['kseido', 'kecnavi', 'fixmystreet'],
   senkyo: ['alaveteli', 'kbilling', 'kouchou'],
   chiiki: ['kseido', 'kshoken', 'kecnavi'],
-  nagoya: ['kecnavi', 'kseido', 'kfacilities', 'khazard'],
+  nagoya: ['kecnavi', 'kseido', 'kfacilities', 'kflood', 'khazard'],
 }
 const THEME_PV: Record<string, string[]> = {
   bousai: ['bousai', 'hazard', 'giin'], kosodate: ['kecnavi', 'giin', 'kfacilities'], shussan: ['kecnavi', 'giin'], kyoiku: ['kecnavi', 'giin'],
