@@ -11,6 +11,7 @@
 #   bash scripts/deploy.sh oss         # kurage: oss/ + vibe-oss.html
 #   bash scripts/deploy.sh ai-system   # exbridge: ai-system/
 #   bash scripts/deploy.sh zenn       # exbridge: zenn/
+#   bash scripts/deploy.sh politech   # exbridge: politech/（政治・政策キーワード）
 #   bash scripts/deploy.sh all
 set -uo pipefail
 
@@ -63,6 +64,10 @@ if [ "$what" = "helpdesk" ] || [ "$what" = "all" ]; then
   put_tree /home/kojima/work/exbridge_jp exbridge_jp helpdesk || rc=1
 fi
 
+if [ "$what" = "politech" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: politech/ =="
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp politech || rc=1
+fi
 if [ "$what" = "zenn" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: zenn/ =="
   put_tree /home/kojima/work/exbridge_jp exbridge_jp zenn || rc=1
