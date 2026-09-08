@@ -12,7 +12,13 @@
 #   bash scripts/deploy.sh ai-system   # exbridge: ai-system/
 #   bash scripts/deploy.sh zenn       # exbridge: zenn/
 #   bash scripts/deploy.sh politech   # exbridge: politech/（政治・政策キーワード）
+#   bash scripts/deploy.sh outsourcing # exbridge: outsourcing/
 #   bash scripts/deploy.sh all
+#
+# なぜ dist/ を先に同期するか（2026-09-09）:
+#   build-*.ts は kpayload/dist/<set>/ に書く。exbridge_jp/<set>/ は配置用のコピーで、
+#   同期を忘れると古いページを本番へ送り直す（footer のリンク追加が反映されなかった前例）。
+#   politech と oss は直接書くので同期対象外。--delete は付けない（手置きファイルを守る）。
 set -uo pipefail
 
 : "${FTP_HOST:?FTP_HOST が未設定です。aixec/.env を読み込んでください}"
@@ -35,6 +41,15 @@ put_tree() {   # $1=ローカルの起点ディレクトリ $2=リモートのwe
   return $(( ng > 0 ))
 }
 
+sync_dist() {   # $1=セット名。kpayload/dist/<set>/ → exbridge_jp/<set>/（build の出力を配置用コピーへ）
+  local set="$1" src="/home/kojima/work/kpayload/dist/$1/" dst="/home/kojima/work/exbridge_jp/$1/"
+  if [ -d "$src" ]; then
+    rsync -a "$src" "$dst" && echo "  dist/$set → exbridge_jp/$set 同期"
+  else
+    echo "  dist/$set が無いので同期しません（build 未実行なら exbridge_jp の現状を送ります）"
+  fi
+}
+
 what="${1:-all}"
 rc=0
 
@@ -46,21 +61,25 @@ fi
 
 if [ "$what" = "ai-system" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: ai-system/ =="
+  sync_dist ai-system
   put_tree /home/kojima/work/exbridge_jp exbridge_jp ai-system || rc=1
 fi
 
 if [ "$what" = "solution" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: solution/ =="
+  sync_dist solution
   put_tree /home/kojima/work/exbridge_jp exbridge_jp solution || rc=1
 fi
 
 if [ "$what" = "saas" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: saas/ =="
+  sync_dist saas
   put_tree /home/kojima/work/exbridge_jp exbridge_jp saas || rc=1
 fi
 
 if [ "$what" = "helpdesk" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: helpdesk/ =="
+  sync_dist helpdesk
   put_tree /home/kojima/work/exbridge_jp exbridge_jp helpdesk || rc=1
 fi
 
@@ -70,7 +89,14 @@ if [ "$what" = "politech" ] || [ "$what" = "all" ]; then
 fi
 if [ "$what" = "zenn" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: zenn/ =="
+  sync_dist zenn
   put_tree /home/kojima/work/exbridge_jp exbridge_jp zenn || rc=1
+fi
+
+if [ "$what" = "outsourcing" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: outsourcing/ =="
+  sync_dist outsourcing
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp outsourcing || rc=1
 fi
 
 exit $rc
