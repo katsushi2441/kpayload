@@ -134,7 +134,14 @@ ${c.answer.slice(0, 2).map((p) => `<p>${h(p)}</p>`).join('')}
 <div class="pt-tools">${tools.map((t) => `<div class="pt-tool"><b>${h(t.name)}</b><p>${h(t.what)}</p>${t.demo ? `<a class="btn btn-main" href="${attr(t.demo)}" target="_blank" rel="noopener">触れる</a>` : ''}${t.buy ? `<a class="btn" href="${attr(t.buy)}" target="_blank" rel="noopener">買い切り版（Kurage App Store）</a>` : ''}</div>`).join('')}</div>
 <p class="note">${kappNote} <a href="https://kappstore.exbridge.jp/?ref=${REF}" target="_blank" rel="noopener">Kurage App Store</a></p>
 </div></section>
-
+${(k.theme === 'bousai' || k.theme === 'nagoya') ? `
+<section><div class="panel">
+<h2>名古屋市を区・河川から見る（いまの避難情報つき）</h2>
+<p>市の災害情報配信に出ている警戒レベルを河川別・区別に並べ、氾濫時の対象学区、区ごとの浸水のおそれ、避難先の探し方までつなげたページです。${k.slug === 'hazaado-mappu-nagoya' ? '「ハザードマップ 名古屋」で探している方は、まず区のページから自宅の学区と浸水のおそれを確かめ、住所を入れて何メートル・何日浸かる想定かを見てください。' : '住所を入れれば何メートル・何日浸かる想定かも分かります。'}</p>
+<div class="pt-rel">${[['名古屋市の一覧（区・河川・いまの発令）', 'nagoya/'], ['天白川の氾濫・避難情報', 'river/tempaku/'], ['矢田川の氾濫・避難情報', 'river/yada/'], ['新川の氾濫・避難情報', 'river/shinkawa/'], ['堀川・新堀川', 'river/horikawa/'], ['中川区', 'nagoya/nakagawa/'], ['港区', 'nagoya/minato/'], ['西区', 'nagoya/nishi/'], ['天白区', 'nagoya/tempaku/'], ['北区', 'nagoya/kita/']].map(([n, u]) => `<a href="${KURAGE}/kflood.php/${u}?ref=${REF}-${attr(k.slug)}" target="_blank" rel="noopener">${h(n)}</a>`).join('')}</div>
+<p class="note">出典: 名古屋市 災害情報配信（警戒レベル・対象学区の事実のみ）、国土数値情報 洪水浸水想定区域 第4.0版、名古屋市 内水氾濫ハザードマップ（CC BY 4.0）。</p>
+</div></section>
+` : ''}
 <section><div class="panel">
 <h2>Kurage党で、先に動かしています</h2>
 <div class="pt-kp">
