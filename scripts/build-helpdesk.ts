@@ -36,7 +36,7 @@ const KOMON = `${SITE}/ai-it-komon.html`
 const SHELL = {
   refPrefix: 'exbridge-helpdesk',
   base: BASE,
-  footerLinks: `<a href="${SITE}/profile.html">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-helpdesk">お問い合わせ</a>　<a href="${BASE}/">IT担当を外に持つ方法</a>　<a href="${KOMON}">AI-IT顧問契約</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${KURAGE}/oss/?ref=exbridge-helpdesk">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-helpdesk">触れるデモ一覧</a>`,
+  footerLinks: `<a href="${SITE}/profile.html">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-helpdesk">お問い合わせ</a>　<a href="${BASE}/">IT担当を外に持つ方法</a>　<a href="${KOMON}">AI-IT顧問契約</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${KURAGE}/oss/?ref=exbridge-helpdesk">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-helpdesk">触れるデモ一覧</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-helpdesk-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 

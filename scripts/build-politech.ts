@@ -70,7 +70,7 @@ for (const k of kws) byTheme.set(k.theme, [...(byTheme.get(k.theme) || []), k])
 
 const shellFor = (theme: string) => (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, {
   refPrefix: 'exbridge-politech', base: BASE, ogImage: `${SITE}/images/ogp/politech-${theme}.png`, pvTags: THEME_PV[theme] || ['giin'],
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">政治・政策キーワードから探す</a>　<a href="${SITE}/solution/seito.html">政党・政治団体のAI活用</a>　<a href="${SITE}/ai-it-komon.html">AI-IT顧問契約</a>　<a href="${KURAGE}/vibe-political-party.php">Kurage党</a>　<a href="https://kappstore.exbridge.jp/">Kurage App Store</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">政治・政策キーワードから探す</a>　<a href="${SITE}/solution/seito.html">政党・政治団体のAI活用</a>　<a href="${SITE}/ai-it-komon.html">AI-IT顧問契約</a>　<a href="${KURAGE}/vibe-political-party.php">Kurage党</a>　<a href="https://kappstore.exbridge.jp/">Kurage App Store</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-politech-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 })
 
 const styles = `<style>
