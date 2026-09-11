@@ -32,7 +32,7 @@ type Gyomu = { slug: string; name: string; kw: string; outsourced: string; auto:
 const SHELL = {
   refPrefix: 'outsourcing',
   base: BASE,
-  footerLinks: `<a href="${BASE}/">業務のAI自動化一覧</a>／<a href="${KOMON}">AI-IT顧問契約</a>／<a href="${SITE}/ai-development.html">AI開発・活用支援</a>／<a href="${SITE}/contact.php">相談する</a>／<a href="${SITE}/system-development-cost.html?ref=exbridge-outsourcing-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/leaflet.html?ref=exbridge-outsourcing-leaflet">会社案内リーフレット（PDF・印刷可）</a>／<a href="${BASE}/">業務のAI自動化一覧</a>／<a href="${KOMON}">AI-IT顧問契約</a>／<a href="${SITE}/ai-development.html">AI開発・活用支援</a>／<a href="${SITE}/contact.php">相談する</a>／<a href="${SITE}/system-development-cost.html?ref=exbridge-outsourcing-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, ogImage })

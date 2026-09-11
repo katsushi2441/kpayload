@@ -1,0 +1,36 @@
+== build-saas
+[05:05:47] [33mWARN[39m: [36m推薦できるOSSが2件未満: notta, miitel, smart-shoki, tripla[39m
+== build-aisystem
+[05:05:52] [32mINFO[39m: [36mai-system: 2855ページ + できること116枚 + index/sitemap[39m
+== build-solution
+[05:05:56] [32mINFO[39m: [36msolution: 既存29 + 業種ハブ37 + ペア527 + index/sitemap = 594URL[39m
+== build-politech
+politech: 181ページ + index/sitemap（本文未生成 0: ）
+== build-outsourcing
+outsourcing: 48業務 + index + sitemap
+== build-zenn
+zenn: 133ページ + index/sitemap
+== build-helpdesk
+helpdesk: 20ページ + index/sitemap → /home/kojima/work/kpayload/dist/helpdesk
+== oss export/check/sync
+[05:06:09] [32mINFO[39m: [36mExported 2855 OSS pages and 39 category pages to /home/kojima/work/kpayload/dist/oss[39m
+Validated 2855 OSS pages, conditional Brain links, SEO/AEO/GEO, analytics and CTA links.
+配置は scripts/deploy.sh を使うこと（oss/ と vibe-oss.html の両方を送る）
+== deploy all
+== kurage.exbridge.jp: oss/ と vibe-oss.html ==
+  /home/kojima/work/kurage_web: 成功2900 失敗0
+== exbridge.jp: ai-system/ ==
+  /home/kojima/work/exbridge_jp: 成功2973 失敗0
+== exbridge.jp: solution/ ==
+  /home/kojima/work/exbridge_jp: 成功596 失敗0
+== exbridge.jp: saas/ ==
+  /home/kojima/work/exbridge_jp: 成功111 失敗0
+== exbridge.jp: helpdesk/ ==
+  /home/kojima/work/exbridge_jp: 成功22 失敗0
+== exbridge.jp: politech/ ==
+  /home/kojima/work/exbridge_jp: 成功183 失敗0
+== exbridge.jp: zenn/ ==
+  /home/kojima/work/exbridge_jp: 成功133 失敗0
+== outsourcing (deploy.shに無ければ直接)
+outsourcing put 51
+REBUILD_DONE 05:46

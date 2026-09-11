@@ -38,7 +38,7 @@ const SHELL = {
   refPrefix: 'exbridge-zenn',
   base: BASE,
   ogImage: `${SITE}/images/zenn-ogp.png`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">OSSの実践記事から探す</a>　<a href="${KURAGE}/oss/?ref=exbridge-zenn">業務OSSカタログ</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/solution/">業種・業務別ソリューション</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-zenn-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-zenn-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">OSSの実践記事から探す</a>　<a href="${KURAGE}/oss/?ref=exbridge-zenn">業務OSSカタログ</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/solution/">業種・業務別ソリューション</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-zenn-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, SHELL)
 
