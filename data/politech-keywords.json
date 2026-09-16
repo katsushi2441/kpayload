@@ -1989,5 +1989,170 @@
   "theme": "nagoya",
   "theme_name": "名古屋市のくらし",
   "intent": "place"
+ },
+ {
+  "slug": "tsunami",
+  "keyword": "津波",
+  "query": "津波",
+  "volume": 301000,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "dosha-saigai",
+  "keyword": "土砂災害",
+  "query": "土砂災害",
+  "volume": 18100,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "dosha-saigai-keikai-kuiki",
+  "keyword": "土砂災害警戒区域",
+  "query": "土砂災害警戒区域",
+  "volume": 9900,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "doseki-ryuu",
+  "keyword": "土石流",
+  "query": "土石流",
+  "volume": 8100,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "kaibatsu",
+  "keyword": "海抜",
+  "query": "海抜",
+  "volume": 6600,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "naisui-hanran",
+  "keyword": "内水氾濫",
+  "query": "内水氾濫",
+  "volume": 6600,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "jisuberi",
+  "keyword": "地すべり",
+  "query": "地すべり",
+  "volume": 3600,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "kouzui-hazard-map",
+  "keyword": "洪水ハザードマップ",
+  "query": "洪水ハザードマップ",
+  "volume": 2900,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "tsunami-hazard-map",
+  "keyword": "津波ハザードマップ",
+  "query": "津波ハザードマップ",
+  "volume": 2900,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "kyuu-keishachi",
+  "keyword": "急傾斜地崩壊危険区域",
+  "query": "急傾斜地崩壊危険区域",
+  "volume": 1900,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "gake-kuzure",
+  "keyword": "崖崩れ",
+  "query": "崖崩れ",
+  "volume": 1600,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
+ },
+ {
+  "slug": "saigai-kiken-kuiki",
+  "keyword": "災害危険区域",
+  "query": "災害危険区域",
+  "volume": 1300,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "dosha-saigai-hazard-map",
+  "keyword": "土砂災害ハザードマップ",
+  "query": "土砂災害ハザードマップ",
+  "volume": 1000,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "shinsui-soutei-kuiki",
+  "keyword": "浸水想定区域",
+  "query": "浸水想定区域",
+  "volume": 1000,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "place"
+ },
+ {
+  "slug": "shinsui-fukasa",
+  "keyword": "浸水深",
+  "query": "浸水深",
+  "volume": 480,
+  "competition": "低",
+  "index": 0,
+  "theme": "bousai",
+  "theme_name": "防災・災害",
+  "intent": "define"
  }
 ]
