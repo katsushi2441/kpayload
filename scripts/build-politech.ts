@@ -28,6 +28,12 @@ type Copy = { title: string; h1: string; lead: string; points: string[]; answer:
 
 const kws = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-keywords.json'), 'utf8')) as Kw[]
 const copy = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-copy.json'), 'utf8')) as Record<string, Copy>
+// テーマごとの「他所に無い数字」。scripts/build_politech_facts.py が各プロダクトの
+// 実データ（krefuge/ktsunami/kriskarea/kjishin/khazard/khojokin/kseido/kecnavi）から
+// 数えて書き出す。**ここに手で数字を足さない。**
+type Fact = { label: string; value: string; scope: string; note: string; url: string; name: string }
+const FACTS = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-facts.json'), 'utf8')) as
+  { updated: string; themes: Record<string, { rows: Fact[] }> }
 
 type Tool = { name: string; what: string; demo?: string; buy?: string }
 const T = {
@@ -74,6 +80,13 @@ const shellFor = (theme: string) => (t: string, d: string, u: string, b: string,
 })
 
 const styles = `<style>
+.pt-facts{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+.pt-facts th,.pt-facts td{border:1px solid #d9e2e6;padding:9px 11px;text-align:left;vertical-align:top}
+.pt-facts thead th{background:#f2f7f8;white-space:nowrap}
+.pt-facts tbody th{white-space:nowrap;background:#fbfdfd}
+.pt-facts b{color:#0a726b;font-size:16px}
+.pt-facts small{color:#5b6b70}
+@media(max-width:640px){.pt-facts,.pt-facts tbody,.pt-facts tr,.pt-facts td,.pt-facts th{display:block;width:auto}.pt-facts thead{display:none}.pt-facts tr{margin-bottom:10px;border:1px solid #d9e2e6}.pt-facts th,.pt-facts td{border:0;border-bottom:1px solid #eef3f4}}
 .pt-hero{background:linear-gradient(120deg,#10242b,#14343d);color:#fff;padding:48px 0 36px}.pt-hero .kicker{color:#7fe3d6;font-size:13px;font-weight:800;letter-spacing:.06em;margin:0 0 10px}
 .pt-hero h1{font-size:clamp(24px,4.2vw,40px);line-height:1.4;margin:0 0 12px}.pt-hero .lead{font-size:16px;color:#cfe2e4;max-width:820px;margin:0 0 6px}
 .pt-hero .vol{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;color:#e6f4f2;margin:6px 0 10px}
@@ -91,7 +104,20 @@ const styles = `<style>
 </style>`
 
 const vol = (n: number) => n.toLocaleString('ja-JP')
-const kappNote = '住民サービスの買い切り版は各55,000円（税込）、導入キットは各5,500円（税込）。月額なし・ソースコード同梱。'
+const kappNote = '住民サービスはオンプレミスで各55,000円（税込）、導入キットは各5,500円（税込）。ソースコード同梱で、事務所のサーバーに置いて内製化できます。'
+
+function factsHtml(theme: string, slug: string): string {
+  const f = FACTS.themes[theme]
+  if (!f || !f.rows.length) return ''
+  return `
+<section><div class="panel">
+<h2>この分野で当社が実際に数えたもの</h2>
+<p>公開データを取り込んで件数を数え、住所から引けるようにしたものです。数字は${h(FACTS.updated)}時点の収録件数で、出典はそれぞれの公開データです。</p>
+<table class="pt-facts"><thead><tr><th>対象</th><th>収録件数</th><th>範囲</th><th>使える道具</th></tr></thead><tbody>
+${f.rows.map((r) => `<tr><th>${h(r.label)}</th><td><b>${h(r.value)}</b></td><td>${h(r.scope)}<br><small>${h(r.note)}</small></td><td><a href="${attr(r.url)}?ref=${attr(REF)}-${attr(slug)}" target="_blank" rel="noopener">${h(r.name)}</a></td></tr>`).join('')}
+</tbody></table>
+</div></section>`
+}
 
 function pageHtml(k: Kw): string {
   const c = copy[k.slug]
@@ -123,15 +149,17 @@ ${c.answer.slice(0, 2).map((p) => `<p>${h(p)}</p>`).join('')}
 <p class="note">制度の金額・期限・要件は自治体や国の公式ページで確認してください。このページは政党・議員事務所が住民の問いにどう応えるかを整理したもので、特定の政党・候補者を支持・批判するものではありません。</p>
 </div></section>
 
+${factsHtml(k.theme, k.slug)}
+
 <section><div class="panel">
 <h2>政党・議員事務所ができること（3ステップ）</h2>
 <div class="pt-steps">${c.steps.slice(0, 3).map((s, i) => `<div class="pt-step"><span class="num">${i + 1}</span><h3>${h(s.t)}</h3><p>${h(s.b)}</p></div>`).join('')}</div>
 </div></section>
 
 <section><div class="panel">
-<h2>この課題で使える、買い切りの道具</h2>
+<h2>この課題で使える、事務所に置ける道具</h2>
 <p>名古屋市版のデモに無料で触れられます。実在の政党・議員事務所は「事務所の名前」でそのまま公開できます。当社は全政党・全会派・無所属に同じ条件で提供します。</p>
-<div class="pt-tools">${tools.map((t) => `<div class="pt-tool"><b>${h(t.name)}</b><p>${h(t.what)}</p>${t.demo ? `<a class="btn btn-main" href="${attr(t.demo)}" target="_blank" rel="noopener">触れる</a>` : ''}${t.buy ? `<a class="btn" href="${attr(t.buy)}" target="_blank" rel="noopener">買い切り版（Kurage App Store）</a>` : ''}</div>`).join('')}</div>
+<div class="pt-tools">${tools.map((t) => `<div class="pt-tool"><b>${h(t.name)}</b><p>${h(t.what)}</p>${t.demo ? `<a class="btn btn-main" href="${attr(t.demo)}" target="_blank" rel="noopener">触れる</a>` : ''}${t.buy ? `<a class="btn" href="${attr(t.buy)}" target="_blank" rel="noopener">オンプレミス版（Kurage App Store）</a>` : ''}</div>`).join('')}</div>
 <p class="note">${kappNote} <a href="https://kappstore.exbridge.jp/?ref=${REF}" target="_blank" rel="noopener">Kurage App Store</a></p>
 </div></section>
 ${(k.theme === 'bousai' || k.theme === 'nagoya') ? `
@@ -155,7 +183,7 @@ ${(k.theme === 'bousai' || k.theme === 'nagoya') ? `
 
 <div class="pt-cta">
 <h2>AI-IT顧問契約は、政党・政治団体にも提供します</h2>
-<p><strong>月15時間・税別150,000円（名古屋市内限定・月次契約）。</strong>相談の入口づくり、住民サービスの公開、意見集約、会計や領収書の自動化を、時間の中で一つずつ動かします。キャンペーン期間中は Kurage App Store の商品代金が無料です。名古屋市外の団体は買い切り商品と導入キットを全国でお使いいただけます。</p>
+<p><strong>月15時間・税別150,000円（名古屋市内限定・月次契約）。</strong>相談の入口づくり、住民サービスの公開、意見集約、会計や領収書の自動化を、時間の中で一つずつ動かします。キャンペーン期間中は Kurage App Store の商品代金が無料です。名古屋市外の団体は、オンプレミスの商品と導入キットを全国でお使いいただけます。</p>
 <a class="btn btn-main" href="${SITE}/ai-it-komon.html?ref=${REF}-${attr(k.slug)}">AI-IT顧問契約の詳細 →</a>
 <a class="btn" href="${contact}">初回相談（無料）</a>
 </div>
@@ -179,12 +207,12 @@ ${related.length ? `<section><div class="panel"><h2>${h(k.theme_name)}の関連�
 function indexHtml(): string {
   const url = `${BASE}/`
   const title = '政治・政策キーワードから探す｜政党・議員事務所が「動くページ」で答える課題一覧 | 株式会社エクスブリッジ'
-  const desc = `防災・子育て・不登校・福祉・給付金・選挙・地域の${kws.length}の検索語ごとに、住民が知りたいことと、政党・議員事務所が動くページと買い切りの道具で応える方法をまとめました。`
+  const desc = `防災・子育て・不登校・福祉・給付金・選挙・地域の${kws.length}の検索語ごとに、住民が知りたいことと、政党・議員事務所が動くページと、事務所に置ける道具で応える方法をまとめました。`
   const body = `
 <section class="pt-hero"><div class="wrap">
 <p class="kicker">政治・政策キーワード｜${kws.length}語</p>
 <h1>住民が検索している言葉に、<br>政党・議員事務所が「動くページ」で答える。</h1>
-<p class="lead">防災・子育て・不登校・福祉・給付金・選挙・地域。Google 広告のキーワードプランナーで月間検索数を実測した${kws.length}の言葉ごとに、住民が知りたいことと、事務所ができること、使える買い切りの道具をまとめています。</p>
+<p class="lead">防災・子育て・不登校・福祉・給付金・選挙・地域。Google 広告のキーワードプランナーで月間検索数を実測した${kws.length}の言葉ごとに、住民が知りたいことと、事務所ができること、事務所のサーバーに置いて内製化できる道具をまとめています。</p>
 <p><a class="btn btn-main" href="${SITE}/solution/seito.html?ref=${REF}-index">政党・政治団体のAI活用 →</a> <a class="btn" href="${SITE}/ai-it-komon.html?ref=${REF}-index">AI-IT顧問契約</a> <a class="btn" href="${KURAGE}/vibe-political-party.php?ref=${REF}-index">Kurage党</a></p>
 </div></section>
 <main class="wrap pt-index">

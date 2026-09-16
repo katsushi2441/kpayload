@@ -1,0 +1,137 @@
+{
+ "updated": "2026-09-16",
+ "themes": {
+  "bousai": {
+   "rows": [
+    {
+     "label": "土砂災害警戒区域",
+     "value": "1,787,253区域",
+     "scope": "1,603市区町村ぶんを収録",
+     "note": "イエロー・レッド・指定予定を分けて、住所が区域の内か外かを判定する",
+     "url": "https://kurage.exbridge.jp/khazard.php/",
+     "name": "Kurage 土砂災害ハザードマップ"
+    },
+    {
+     "label": "指定緊急避難場所",
+     "value": "115,447件",
+     "scope": "1,699市区町村ぶんを収録",
+     "note": "災害種別8種（洪水・崖崩れ・高潮・地震・津波・大規模火事・内水氾濫・火山)で絞り込める",
+     "url": "https://kurage.exbridge.jp/krefuge.php/",
+     "name": "Kurage 避難所マップ"
+    },
+    {
+     "label": "津波浸水想定メッシュ",
+     "value": "3,795,197区画",
+     "scope": "1,279市区町村ぶんを収録",
+     "note": "住所の代表点ではなくクリックした座標で直接判定する",
+     "url": "https://kurage.exbridge.jp/ktsunami.php/",
+     "name": "Kurage 津波浸水想定マップ"
+    },
+    {
+     "label": "災害危険区域（建築基準法39条）",
+     "value": "21,067区域",
+     "scope": "588市区町村ぶんを収録",
+     "note": "条例で建築が制限される区域。根拠条例と基準の高さまで引ける",
+     "url": "https://kurage.exbridge.jp/kriskarea.php/",
+     "name": "Kurage 災害危険区域マップ"
+    },
+    {
+     "label": "地震ハザードを引ける筆",
+     "value": "982,180筆",
+     "scope": "名古屋市（250mメッシュ 126,385件と突き合わせ）",
+     "note": "揺れやすさと液状化を、町名ではなく地番で判定する",
+     "url": "https://kurage.exbridge.jp/kjishin.php/",
+     "name": "Kurage 地震ハザードマップ"
+    }
+   ]
+  },
+  "seikatsu": {
+   "rows": [
+    {
+     "label": "公募中の補助金・助成金",
+     "value": "362件",
+     "scope": "うち全国対象 129件",
+     "note": "補助率・上限額・締切で絞り込める。出典：Jグランツ",
+     "url": "https://kurage.exbridge.jp/khojokin.php/",
+     "name": "Kurage 補助金ナビ"
+    },
+    {
+     "label": "暮らしの制度",
+     "value": "45制度",
+     "scope": "名古屋市ぶんを収録",
+     "note": "困りごとから、申請先・期限・必要書類まで辿れる",
+     "url": "https://kurage.exbridge.jp/kseido.php/",
+     "name": "Kurage 制度ナビ"
+    }
+   ]
+  },
+  "kosodate": {
+   "rows": [
+    {
+     "label": "暮らしの制度",
+     "value": "45制度",
+     "scope": "名古屋市ぶんを収録",
+     "note": "困りごとから、申請先・期限・必要書類まで辿れる",
+     "url": "https://kurage.exbridge.jp/kseido.php/",
+     "name": "Kurage 制度ナビ"
+    }
+   ]
+  },
+  "fukushi": {
+   "rows": [
+    {
+     "label": "暮らしの制度",
+     "value": "45制度",
+     "scope": "名古屋市ぶんを収録",
+     "note": "困りごとから、申請先・期限・必要書類まで辿れる",
+     "url": "https://kurage.exbridge.jp/kseido.php/",
+     "name": "Kurage 制度ナビ"
+    }
+   ]
+  },
+  "shussan": {
+   "rows": [
+    {
+     "label": "暮らしの制度",
+     "value": "45制度",
+     "scope": "名古屋市ぶんを収録",
+     "note": "困りごとから、申請先・期限・必要書類まで辿れる",
+     "url": "https://kurage.exbridge.jp/kseido.php/",
+     "name": "Kurage 制度ナビ"
+    }
+   ]
+  },
+  "nagoya": {
+   "rows": [
+    {
+     "label": "暮らしの制度",
+     "value": "45制度",
+     "scope": "名古屋市ぶんを収録",
+     "note": "困りごとから、申請先・期限・必要書類まで辿れる",
+     "url": "https://kurage.exbridge.jp/kseido.php/",
+     "name": "Kurage 制度ナビ"
+    },
+    {
+     "label": "困りごとの通報先",
+     "value": "11分類",
+     "scope": "名古屋市16区ぶんを収録",
+     "note": "道路の穴・不法投棄・街灯など、どこへ連絡すればよいかを住所から出す",
+     "url": "https://kurage.exbridge.jp/kecnavi.php/",
+     "name": "Kurage 通報先ナビ"
+    }
+   ]
+  },
+  "chiiki": {
+   "rows": [
+    {
+     "label": "困りごとの通報先",
+     "value": "11分類",
+     "scope": "名古屋市16区ぶんを収録",
+     "note": "道路の穴・不法投棄・街灯など、どこへ連絡すればよいかを住所から出す",
+     "url": "https://kurage.exbridge.jp/kecnavi.php/",
+     "name": "Kurage 通報先ナビ"
+    }
+   ]
+  }
+ }
+}
