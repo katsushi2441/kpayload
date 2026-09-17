@@ -49,6 +49,7 @@ const BASE = `${SITE}/ai-system`
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
 import { kappKitPanel, kappKitCards, kappKitNames } from './kapp-kits'
+import { compareTable } from './compare-table'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
 
@@ -56,7 +57,7 @@ import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
 const SHELL = {
   refPrefix: 'exbridge-ai-system',
   base: `${SITE}/ai-system`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-aisystem-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>　<a href="https://kappstore.exbridge.jp/?ref=exbridge-ai-system">買い切りの業務システム（Kurage App Store）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-ai-system-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-aisystem-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">お問い合わせ</a>　<a href="${SITE}/ai-development.html">AI開発・活用支援</a>　<a href="${SITE}/ai-system/">AIでできること一覧</a>　<a href="${SITE}/solution/">業種別ソリューション</a>　<a href="${KURAGE}/oss/?ref=exbridge-ai-system">業務OSSカタログ</a>　<a href="${PROTO}/?ref=exbridge-ai-system">触れるデモ一覧</a>　<a href="https://kappstore.exbridge.jp/?ref=exbridge-ai-system">オンプレミスの業務システム（Kurage App Store）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-ai-system-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
@@ -339,6 +340,13 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
     // 同じ表示名が2行並ぶと表の信用が落ちる（勤怠で Frappe HR が2回出ていた）
     .filter((p) => !seenName.has(p.name) && seenName.add(p.name))
     .slice(0, 6)
+  const cmpSeen = new Set<string>()
+  const cmpRows = pool
+    .filter((p) => { const m = monthsSincePush(p); return !genericName(p) && !(m !== null && m > 24) })
+    .sort((a, b) => pickScore(b) - pickScore(a))
+    .filter((p) => !cmpSeen.has(p.name) && cmpSeen.add(p.name))
+    .slice(0, 12)
+  const cmpHtml = compareTable(cmpRows, { base: BASE, ref: `ai-system-c-${cap.key}`, noun, h, attr, today: TODAY_JA, all })
   const reasonOf = (p: Project) => {
     const r: string[] = []
     if (Number(p.stars || 0) > 0) r.push(`GitHubスター${Number(p.stars).toLocaleString('en-US')}`)
@@ -405,9 +413,10 @@ ${picks.map((p) => `<tr><th><a href="${BASE}/${attr(p.slug)}/">${h(p.name)}</a>$
 </tbody></table></div>
 <p class="note">この並びは実測値による機械的な順位で、広告や紹介料による順位付けはしていません（${TODAY_JA}時点）。${total}件すべての一覧は<a href="#list">このページの下</a>にあります。</p>
 </div></section>
+${cmpHtml}
 ${kitCards ? `<section><div class="panel">
-<h2>${h(noun)}を自分で入れるなら（導入キット・買い切り製品）</h2>
-<p>この分類のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきの買い切り製品です。開発を依頼せず自社で立てたい場合の早道です。</p>
+<h2>${h(noun)}を自分で入れるなら（導入キット・オンプレミスの製品）</h2>
+<p>この分類のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきのオンプレミスの製品です。開発を依頼せず自社で立てたい場合の早道です。</p>
 ${kitCards}
 </div></section>` : ''}
 ${saasHits.length ? `<section><div class="panel">

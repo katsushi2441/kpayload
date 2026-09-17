@@ -9,6 +9,7 @@ import { getPayload } from 'payload'
 import config from '../src/payload.config'
 import { DEMOS, PROTO, demoPanel, demoUrl, DEMO_CSS } from './demos'
 import { categoryLabels } from './site'
+import { compareTable } from './compare-table'
 
 type TextItem = { text?: string | null }
 type FAQ = { question?: string | null; answer?: string | null }
@@ -236,11 +237,11 @@ function shell(title: string, description: string, canonical: string, body: stri
 <meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="website"><meta property="og:site_name" content="Kurage Payload CMS"><meta property="og:title" content="${attr(title)}"><meta property="og:description" content="${attr(description)}"><meta property="og:url" content="${attr(canonical)}"><meta property="og:image" content="${ogImage || mascot}"><meta name="twitter:card" content="summary_large_image">
 ${structuredData.map((item) => `<script type="application/ld+json">${json(item)}</script>`).join('\n')}
 ${styles()}${analytics()}</head><body>
-<header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a class="btn optional" href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a class="btn optional" href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム</a><a class="btn optional" href="https://exbridge.jp/contact.php?ref=kurage-oss">相談する</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
+<header class="site-head"><div class="wrap head-inner"><a class="brand" href="${catalogBase}/"><img src="${mascot}" alt="Kurageさん"><span>Kurage Payload CMS</span></a><nav class="head-links"><a class="btn optional" href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a class="btn optional" href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a class="btn optional" href="https://kappstore.exbridge.jp/?ref=kurage-oss">オンプレミスの業務システム</a><a class="btn optional" href="https://exbridge.jp/contact.php?ref=kurage-oss">相談する</a><a class="btn btn-main" href="${publicBase}/vibe-oss.html">OSSをバイブコーディングでカスタマイズ</a></nav></div></header>
 ${body}
 ${pvRailHtml(pvTags)}
 <img src="${publicBase}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
-<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="https://exbridge.jp/outsourcing/">業務のAI自動化</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">買い切りの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/system-development-cost.html?ref=kurage-oss-cost">業務システムの受託開発（名古屋・概算見積無料）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a><a href="https://exbridge.jp/leaflet.html?ref=kurage-oss-leaflet">会社案内リーフレット（PDF・印刷可）</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
+<footer><div class="wrap"><div class="footer-links"><a href="${catalogBase}/">OSS一覧</a><a href="https://exbridge.jp/outsourcing/">業務のAI自動化</a><a href="${publicBase}/vibe-oss.html">OSSのバイブコーディング・カスタマイズ</a><a href="https://exbridge.jp/ai-development.html?ref=kurage-oss">AI開発・活用支援</a><a href="https://exbridge.jp/nagoya-system-development.html?ref=kurage-oss">AI導入お試し</a><a href="https://exbridge.jp/ai-system/?ref=kurage-oss">AIでできること</a><a href="${PROTO}/?ref=kurage-oss">触れるデモ一覧</a><a href="https://kappstore.exbridge.jp/?ref=kurage-oss">オンプレミスの業務システム（Kurage App Store）</a><a href="https://exbridge.jp/system-development-cost.html?ref=kurage-oss-cost">業務システムの受託開発（名古屋・概算見積無料）</a><a href="https://exbridge.jp/">株式会社エクスブリッジ</a><a href="https://exbridge.jp/leaflet.html?ref=kurage-oss-leaflet">会社案内リーフレット（PDF・印刷可）</a></div><p>Kurage Payload CMSは、業務OSSの選定、日本語導入、バイブコーディングによる自社向けカスタマイズを案内するカタログです。</p></div></footer>
 </body></html>`
 }
 
@@ -269,7 +270,7 @@ function ownProductsStrip(): string {
 <div class="own-grid">
 ${P.map(([n, d, u]) => `<a class="own-card" href="${u}"><b>${h(n)}</b><span>${h(d)}</span></a>`).join('')}
 </div>
-<p class="sub">業務システムの買い切り版は <a href="https://kappstore.exbridge.jp/?ref=oss-strip">Kurage App Store</a>、
+<p class="sub">業務システムのオンプレミス版は <a href="https://kappstore.exbridge.jp/?ref=oss-strip">Kurage App Store</a>、
 外注をAI自動化に置き換える相談は <a href="https://exbridge.jp/outsourcing/?ref=oss-strip">業務のAI自動化</a> へ。</p>
 </section>`
 }
@@ -342,7 +343,7 @@ const categorySeo: Record<string, { title: string; desc: string; lead: string }>
   //   名古屋の業務システム会社が押さえる情報系の語のうち、需要が大きく競合が最も軽い。
   notify: {
     title: '安否確認システム・一斉連絡のOSS｜自社サーバーで持つ | Kurage',
-    desc: '安否確認システム、災害時の一斉連絡、BCP対策のための通知基盤を、オープンソースと買い切りで自社サーバーに持つための一覧です。外部サービスに社員の連絡先を預けずに運用できます。',
+    desc: '安否確認システム、災害時の一斉連絡、BCP対策のための通知基盤を、オープンソースと内製化で自社サーバーに持つための一覧です。外部サービスに社員の連絡先を預けずに運用できます。',
     lead: '災害時の安否確認や緊急の一斉連絡を、外部サービスに社員の連絡先を預けずに自社で回すためのオープンソースをまとめています。',
   },
   // 2026-09-06 実測: グループウェア 8,100/指数43・ワークフロー 9,900/指数34・社内ポータル 1,300/指数49。
@@ -356,8 +357,8 @@ const categorySeo: Record<string, { title: string; desc: string; lead: string }>
   //   津波ハザードマップ 2,900/指数0・土砂災害警戒区域 9,900/指数0
   hazard: {
     title: 'ハザードマップ・避難所・防災のOSSと自社導入 | Kurage',
-    desc: 'ハザードマップ、土砂災害警戒区域、避難所、液状化、津波、防災マップを住所から調べる仕組みを、オープンソースと買い切りで自社サーバーに持つための一覧です。データの出典と時点、商用利用の可否まで明記しています。',
-    lead: 'ハザードマップ・土砂災害警戒区域・避難所・液状化・津波といった防災情報を、住所から調べられるようにするためのオープンソースと買い切り製品をまとめています。',
+    desc: 'ハザードマップ、土砂災害警戒区域、避難所、液状化、津波、防災マップを住所から調べる仕組みを、オープンソースと内製化で自社サーバーに持つための一覧です。データの出典と時点、商用利用の可否まで明記しています。',
+    lead: 'ハザードマップ・土砂災害警戒区域・避難所・液状化・津波といった防災情報を、住所から調べられるようにするためのオープンソースとオンプレミスの製品をまとめています。',
   },
   // 2026-09-05/06 実測: ハザードマップ 110,000・用途地域 14,800/指数1・道路台帳 3,600・都市計画図 3,600
   gis: {
@@ -367,7 +368,7 @@ const categorySeo: Record<string, { title: string; desc: string; lead: string }>
   },
   // 2026-09-04/06 実測: 商圏分析 480/指数54・人流データ 1,300/指数54・エリアマーケティング 390/指数22
   shoken: {
-    title: '商圏分析・エリアマーケティングのOSS一覧｜買い切りで自社に | Kurage',
+    title: '商圏分析・エリアマーケティングのOSS一覧｜自社サーバーに置いて | Kurage',
     desc: '商圏分析、エリアマーケティング、人流・到達圏の分析に使えるオープンソースの一覧です。月額のツールを買わずに、自社サーバーで動かす選択肢をまとめています。',
     lead: '商圏分析・エリアマーケティング・到達圏の集計に使えるオープンソースをまとめています。月額のSaaSを契約せずに、自社で持つ選択肢です。',
   },
@@ -384,9 +385,12 @@ function categoryPage(category: string, projects: Project[], all: Project[]): st
     { question: `${label}のOSSは日本語で使えますか？`, answer: '製品によって異なります。各OSSのページに、GitHub上に日本語ロケールのファイルが実在するかを実測した結果を掲載しています。日本語ファイルが無いものは、日本語化から対応できます。' },
     { question: `${label}のOSSを自社向けに変更できますか？`, answer: `${ossCount}件は完成品を土台に改造して納品できます。残りは道具にあたるため、それを組み込んだ仕組みを作る形になります。カード上の「カスタマイズ可」「開発に使う」で見分けられます。` },
   ]
+  const cmpToday = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo' })
+  const cmpHtml = compareTable(list.filter((p) => funnelOf(p) === 'oss'), { base: catalogBase, ref: `oss-c-${category}`, noun: label, h, attr, today: cmpToday, all: list })
   const body = `<main class="wrap"><nav class="crumb" aria-label="パンくず"><a href="${catalogBase}/">OSS一覧</a> / ${h(label)}</nav>
 <section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${categorySeo[category] ? h(categorySeo[category].lead) + '\n' : ''}${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p><div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
 <section class="section"><div class="tools"><input class="search" id="search" type="search" placeholder="${attr(label)}のOSSを検索" aria-label="${attr(label)}のOSSを検索"><div class="filters" role="group" aria-label="種別"><button class="filter active" type="button" data-kind="all">種別すべて</button><button class="filter" type="button" data-kind="oss">カスタマイズ可</button><button class="filter" type="button" data-kind="prototype">開発に使う</button></div></div><div class="grid" id="oss-grid">${list.map(card).join('')}</div><p class="empty" id="empty">条件に一致するOSSはありません。</p></section>
+${cmpHtml}
 <section class="section faq"><div class="panel"><h2>${h(label)}のOSSについてよくある質問</h2>${faqItems.map((item) => `<details><summary>${h(item.question)}</summary><p>${h(item.answer)}</p></details>`).join('')}</div></section>
 <section class="section"><div class="section-title"><h2>ほかのカテゴリ</h2></div>${categoryHub(all.filter((item) => item.category !== category))}</section></main>
 ${filterScript()}`
@@ -406,7 +410,7 @@ function detailPage(project: Project, projects: Project[]): string {
   const copy = funnelCopy(project)
   // 導入キット枠。Google流入のあるOSS名ページから商品ページへ直接つなぐ（主用途の直下＝上部）。
   const kitPanel = kappKitPanel(project.slug, `oss-${attr(project.slug)}`, h(project.name))
-  // 個別キットが無いページは、用途が近い買い切りアプリを1本だけ出す（店への出口が無いページが8割あったため）
+  // 個別キットが無いページは、用途が近いオンプレミスのアプリを1本だけ出す（店への出口が無いページが8割あったため）
   const categoryPanel = kitPanel ? '' : kappCategoryPanel(project.slug, project.category, `oss-c-${attr(project.category)}`, h(project.name))
   const customizationFaqs = copy.extraFaqs
   const allFaqItems = [...faqItems, ...customizationFaqs]
