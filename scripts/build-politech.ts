@@ -48,20 +48,23 @@ const T = {
   fixmystreet: { name: 'FixMyStreet 日本語導入キット', what: '困りごとの通報を受け、対応の進捗を公開する', demo: `${KURAGE}/chibarepo-daitai.php?ref=${REF}`, buy: `${KAPP}b34e36cfaad27a14&ref=${REF}` },
   alaveteli: { name: 'Alaveteli 日本語導入キット', what: '情報公開請求の請求文と回答を公開する', demo: `${KURAGE}/johokokai-seikyu.php?ref=${REF}`, buy: `${KAPP}025aa9bee5dd411e&ref=${REF}` },
   kshoken: { name: 'Kurage 商圏分析（選挙区分析）', what: '住所→徒歩・車N分圏の人口・年齢構成', demo: `${KURAGE}/kshoken.php/?ref=${REF}`, buy: `${KAPP}a5ac4b9f1fdb6d19&ref=${REF}` },
+  khojokin: { name: 'Kurage 補助金ナビ', what: '会社の条件を入れると、いま出せる補助金・助成金と補助率・上限・締切が出る（出典：Jグランツ）', demo: `${KURAGE}/khojokin.php/?ref=${REF}`, buy: `${KAPP}0ad3f1528024edcd&ref=${REF}` },
+  kriskarea: { name: 'Kurage 災害危険区域マップ', what: '住所を入れると建築基準法39条の災害危険区域か、根拠条例と基準の高さまで出る', demo: `${KURAGE}/kriskarea.php/?ref=${REF}`, buy: `${KAPP}23c57241bd8df841&ref=${REF}` },
+  kjishin: { name: 'Kurage 地震ハザードマップ', what: '地番で揺れやすさと液状化を判定（名古屋版）', demo: `${KURAGE}/kjishin.php/?ref=${REF}`, buy: `${KAPP}51649180bea0fd57&ref=${REF}` },
   kbilling: { name: '請求書発行 kbilling／領収書 kinvoice', what: '会費の請求と消し込み、寄附やパーティー券の領収書', buy: `${KAPP}15abb025dc2ee4f6&ref=${REF}` },
 } satisfies Record<string, Tool>
 
 const THEME_TOOLS: Record<string, (keyof typeof T)[]> = {
-  bousai: ['kflood', 'khazard', 'ktsunami', 'krefuge', 'kseido'],
+  bousai: ['kflood', 'khazard', 'ktsunami', 'krefuge', 'kriskarea', 'kjishin', 'kseido'],
   kosodate: ['kseido', 'kfacilities', 'kouchou'],
   shussan: ['kseido', 'kouchou'],
   kyoiku: ['kseido', 'kouchou'],
   futoko: ['kseido', 'kouchou'],
   fukushi: ['kseido', 'kecnavi'],
-  seikatsu: ['kseido', 'kecnavi', 'fixmystreet'],
+  seikatsu: ['kseido', 'khojokin', 'kecnavi', 'fixmystreet'],
   senkyo: ['alaveteli', 'kbilling', 'kouchou'],
-  chiiki: ['kseido', 'kshoken', 'kecnavi'],
-  nagoya: ['kecnavi', 'kseido', 'kfacilities', 'kflood', 'khazard'],
+  chiiki: ['kseido', 'khojokin', 'kshoken', 'kecnavi'],
+  nagoya: ['kecnavi', 'kseido', 'khojokin', 'kfacilities', 'kflood', 'khazard'],
 }
 const THEME_PV: Record<string, string[]> = {
   bousai: ['bousai', 'hazard', 'giin'], kosodate: ['kecnavi', 'giin', 'kfacilities'], shussan: ['kecnavi', 'giin'], kyoiku: ['kecnavi', 'giin'],

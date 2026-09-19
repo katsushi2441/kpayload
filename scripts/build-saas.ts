@@ -154,7 +154,7 @@ function licenseVerdict(p: Project): string {
 }
 
 /**
- * 比較表のいちばん右。触れるデモと、買い切りで買える先を出す。
+ * 比較表のいちばん右。触れるデモと、オンプレミスで買える先を出す。
  * 自社製品(kappstore掲載)は lpUrl に商品ページが入っている。
  */
 function cell(p: Project, saasSlug: string): string {
@@ -166,7 +166,7 @@ function cell(p: Project, saasSlug: string): string {
   }
   const buy = p.buyUrl || (p.lpUrl && p.lpUrl.includes('kappstore') ? p.lpUrl : '')
   if (buy) {
-    links.push(`<a href="${attr(buy)}${buy.includes('?') ? '&' : '?'}ref=saas-${attr(saasSlug)}" target="_blank" rel="noopener">買い切り</a>`)
+    links.push(`<a href="${attr(buy)}${buy.includes('?') ? '&' : '?'}ref=saas-${attr(saasSlug)}" target="_blank" rel="noopener">オンプレミス版</a>`)
   }
   return links.join(' / ') || '—'
 }
@@ -261,8 +261,8 @@ ${oss.map((p) => `<tr><th><a href="${SITE}/ai-system/${attr(p.slug)}/?ref=saas-$
 ${s.note ? `<div class="card" style="margin-top:14px"><h3>${h(s.name)}を置き換えるときの注意</h3><p>${h(s.note)}</p></div>` : ''}
 </div></section>
 ${kitCards ? `<section><div class="panel">
-<h2>自分で入れるなら（導入キット・買い切り製品）</h2>
-<p>上の候補のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきの買い切り製品です。開発を依頼せず自社で${h(s.name)}から移りたい場合の早道です。</p>
+<h2>自分で入れるなら（導入キット・オンプレミスの製品）</h2>
+<p>上の候補のうち、当社が実際に立てて手順書・設計テンプレート・docker構成・バックアップまでまとめた導入キットと、同じ用途で当社が作った設置手順つきのオンプレミスの製品です。開発を依頼せず自社で${h(s.name)}から移りたい場合の早道です。</p>
 ${kitCards}
 </div></section>` : ''}
 ${capLinks(s)}

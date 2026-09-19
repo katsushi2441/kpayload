@@ -8,7 +8,7 @@
  *   OSS名だけの検索は競合が多いが、「OSS名 + やりたいこと」の複合語は当社が取れる。
  *   その検索で来た人が最初に読みたいのはZennの実践記事なので、それを紹介した上で、
  *   当社の /oss/（カタログ）・/ai-system/（できること）・/saas/（置き換え表）・
- *   /solution/（業種別）・Kurageの解説動画・受託と買い切りへ橋を架ける。
+ *   /solution/（業種別）・Kurageの解説動画・受託と内製化へ橋を架ける。
  *
  * データ: data/zenn-list.json（zenn-collect.py が集め、zenn-enrich.py が codex で言葉を付ける）
  * 出力:   dist/zenn/<slug>.html + index.html + sitemap.xml
@@ -121,7 +121,7 @@ function pageHtml(p: ZennPage): string {
   }
   if (p.githubUrl) ours.push(card(p.githubUrl, 'GitHub', `${p.ossName} のソースコード`, 'ライセンスと更新状況は元リポジトリで確認できます。'))
   if (p.lpUrl) ours.push(card(`${p.lpUrl}${p.lpUrl.includes('?') ? '&' : '?'}ref=exbridge-zenn`, '解説ページ', `${p.ossName} の導入解説`, '選択肢と費用の考え方をまとめています。'))
-  if (p.buyUrl) ours.push(card(p.buyUrl, 'Kurage App Store', `${p.ossName} 日本語導入キット`, '実測手順書とAI用の構築指示書つき。買い切りです。'))
+  if (p.buyUrl) ours.push(card(p.buyUrl, 'Kurage App Store', `${p.ossName} 日本語導入キット`, '実測手順書とAI用の構築指示書つき。オンプレミスで、月額はかかりません。'))
   if (p.brainUrl) ours.push(card(p.brainUrl, 'Brain', p.brainLabel || `${p.ossName} 導入手順書`, '同じ手順書をBrainの記事としても読めます。'))
 
   const rel = (p.related || []).map((s) => pages.find((x) => x.slug === s)).filter(Boolean) as ZennPage[]
@@ -219,7 +219,7 @@ ${rel.length ? `<section>
   <div class="ctarow">
     <a class="btn" href="${KURAGE}/vibe-oss.html?ref=exbridge-zenn">OSS導入・カスタマイズを頼む（税込110,000円〜）</a>
     <a class="btn" href="${KURAGE}/vibe-prototype.html?ref=exbridge-zenn">動くプロトタイプを1営業日で（税込110,000円〜）</a>
-    <a class="btn sub" href="https://kappstore.exbridge.jp/?ref=exbridge-zenn">買い切りの業務システムを見る</a>
+    <a class="btn sub" href="https://kappstore.exbridge.jp/?ref=exbridge-zenn">オンプレミスの業務システムを見る</a>
     <a class="btn sub" href="${KURAGE}/chat.php?ref=exbridge-zenn">AIに相談する（無料）</a>
     <a class="btn sub" href="${SITE}/contact.php?ref=exbridge-zenn">人に相談する（無料・Zoom可）</a>
   </div>

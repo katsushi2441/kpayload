@@ -242,6 +242,81 @@
     ]
   },
   {
+    "name": "uptime-kuma",
+    "slug": "uptime-kuma",
+    "category": "monitoring",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "セルフホスト可能な高度な監視ツールです。",
+    "description": "uptime-kumaは、自前で運用（セルフホスト）できる洗練された監視ツールです。Dockerなどの環境を利用して構築することができ、システムの稼働状況をモニタリングするのに適しています。Socket.ioやシングルページアプリケーションの技術を採用しており、レスポンシブな操作性を備えています。JavaScriptで開発されており、MITライセンスの下で公開されています。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://uptime.kuma.pet",
+    "githubUrl": "https://github.com/louislam/uptime-kuma",
+    "featured": false,
+    "stars": 91016,
+    "language": "JavaScript",
+    "githubCreatedAt": "2021-07-03T01:02:42Z",
+    "githubPushedAt": "2026-09-05T04:02:55Z",
+    "useCases": [
+      {
+        "text": "サーバーの稼働監視"
+      },
+      {
+        "text": "Webサービスの応答確認"
+      },
+      {
+        "text": "システムのダウンタイム検知"
+      },
+      {
+        "text": "ネットワーク接続の監視"
+      },
+      {
+        "text": "インフラの状態監視"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "docker"
+      },
+      {
+        "text": "監視"
+      },
+      {
+        "text": "モニタリング"
+      },
+      {
+        "text": "レスポンシブ"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "JavaScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何を監視するためのものですか？",
+        "answer": "uptime-kumaは、サーバーやWebサービスなどの稼働状況（アップタイム）を監視するためのツールです。システムが正常に動作しているか、応答があるかを確認するために使用されます。"
+      },
+      {
+        "question": "セルフホストとはどのような形態のことですか？",
+        "answer": "クラウドサービスを利用するのではなく、自社で用意したサーバーや特定のインフラ環境上にソフトウェアを構築して運用することを指します。これにより、データの管理場所をコントロールできる利点があります。"
+      },
+      {
+        "question": "Dockerなどの技術は利用できますか？",
+        "answer": "はい、主なトピックとしてDockerが含まれており、コンテナ環境を利用した展開が想定されています。また、Socket.ioやシングルページアプリケーションの技術も活用されています。"
+      },
+      {
+        "question": "どのようなライセンスで提供されていますか？",
+        "answer": "このソフトウェアはMITライセンスの下で公開されています。オープンソースソフトウェアとして提供されており、利用条件については公式のライセンス条項をご確認ください。Goals"
+      }
+    ]
+  },
+  {
     "name": "hugo",
     "slug": "hugo",
     "category": "sitegen",
@@ -666,7 +741,7 @@
     "category": "project",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "AppFlowyを日本語で使うための案内。Notion代替のオープンソース・ワークスペースの日本語対応状況、セルフホストの導入手順、ライセンス、AI機能、カスタマイズ相談まで。",
+    "summary": "AIを活用したオープンソースのコラボレーションワークスペースです。",
     "description": "AppFlowyは、プロジェクト管理、Wiki、チームの連携をAIで統合するツールです。データのコントロールを維持しながら、より多くの成果を達成できる環境を提供します。Notionに代わる主要なオープンソースの選択肢として位置づけられています。ドキュメント作成やノート作成など、多様なコンテンツ管理に対応しています。",
     "license": "AGPL-3.0",
     "japaneseStatus": "日本語ファイルが一部のみ",
@@ -737,8 +812,7 @@
       {
         "text": "frontend/resources/translations/ja-JP.json"
       }
-    ],
-    "seoTitle": "AppFlowyを日本語で使う｜日本語化の状況と導入手順（Notion代替・セルフホスト）| Kurage"
+    ]
   },
   {
     "name": "Apache Superset",
@@ -3825,6 +3899,84 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "ntfy",
+    "slug": "ntfy",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "HTTPリクエストを用いてスマートフォンやPCにプッシュ通知を送信するツールです。",
+    "description": "ntfyは、PUTまたはPOSTメソッドによる簡単なHTTPリクエストを通じて、デバイスへ即座に通知を届けることができるソフトウェアです。Go言語で記述されており、curlなどの標準的なコマンドから操作可能です。pubsubモデルを採用しているため、特定のトピックに対してメッセージを送信し、それを購読する仕組みを備えています。REST APIを通じて動作するため、既存のシステムやスクリプトと連携させて高度な通知基盤を構築できます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://ntfy.sh",
+    "githubUrl": "https://github.com/binwiederhier/ntfy",
+    "featured": false,
+    "stars": 34040,
+    "language": "Go",
+    "githubCreatedAt": "2021-10-23T19:25:32Z",
+    "githubPushedAt": "2026-09-02T23:26:39Z",
+    "useCases": [
+      {
+        "text": "サーバー監視における異常検知通知"
+      },
+      {
+        "text": "自社システムからのアラート送信"
+      },
+      {
+        "text": "特定のイベント発生時のプッシュ通知"
+      },
+      {
+        "text": "コマンドラインツールとの連携"
+      },
+      {
+        "text": "カスタムスクリプトによる自動通知"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "curl"
+      },
+      {
+        "text": "notifications"
+      },
+      {
+        "text": "ntfy"
+      },
+      {
+        "text": "ntfysh"
+      },
+      {
+        "text": "pubsub"
+      },
+      {
+        "text": "push-notifications"
+      },
+      {
+        "text": "rest-api"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような仕組みで通知を送りますか？",
+        "answer": "HTTPのPUTまたはPOSTリクエストを送信することで動作します。特定のトピックに対してメッセージを公開し、それを購読しているクライアント（スマートフォンやデスクトップアプリ）にプッシュ通知として届ける仕組みです。"
+      },
+      {
+        "question": "プログラミング言語は必要ですか？",
+        "answer": "プログラムを書かなくてもcurlなどのコマンドラインツールから操作可能です。一方で、Go言語で書かれているため、独自のシステムに組み込んでAPI経由で制御することも可能です。"
+      },
+      {
+        "question": "どのようなデバイスに通知を送れますか？",
+        "answer": "スマートフォンおよびデスクトップの両方にプッシュ通知を送信することが可能です。公式のクライアントアプリや、HTTPリクエストを受け取る仕組みを利用することで実現します。"
+      },
+      {
+        "question": "REST APIとして利用できますか？",
+        "answer": "はい、REST APIを備えているため、他のソフトウェアや自社で開発したシステムから簡単に呼び出すことができます。これにより、既存のワークフローに通知機能を組み込むことが容易になります。"
+      }
+    ]
   },
   {
     "name": "SillyTavern",
@@ -7125,7 +7277,7 @@
     "category": "hr",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "ActivityWatchを日本語で使うための案内。PC作業を自動で記録し、データを外に出さないプライバシー重視の時間追跡ツールの日本語対応状況、導入手順、ライセンス、カスタマイズ相談まで。",
+    "summary": "プライバシーを重視した自動時間追跡ツールです。",
     "description": "activitywatchは、無料で利用できるオープンソースの自動時間追跡ソフトウェアです。クロスプラットフォームに対応しており、さまざまなOS環境で動作します。拡張性が高く、ユーザーのプライバシーに配慮した設計が特徴です。ダッシュボードを通じて、アプリケーションの使用状況や生産性を分析することが可能です。",
     "license": "MPL-2.0",
     "japaneseStatus": "日本語ファイルなし",
@@ -7189,8 +7341,7 @@
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": [],
-    "seoTitle": "ActivityWatchを日本語で使う｜日本語化と導入手順（自動の時間記録・ローカル保存）| Kurage"
+    "jaSamplePaths": []
   },
   {
     "name": "etherpad",
@@ -7645,6 +7796,87 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "apprise",
+    "slug": "apprise",
+    "category": "monitoring",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ほぼすべてのプラットフォームに対応したプッシュ通知を送信できるツールです。",
+    "description": "Appriseは、多種多様なプラットフォームへプッシュ通知を送るためのフレームワークです。Pythonで構築されており、通知サービスや通知ハブとしての役割を果たします。一つのインターフェースを通じて、様々な通知手段を一元的に管理することが可能です。開発者はこの仕組みを利用して、システムからのアラートを最適な経路で配信できます。",
+    "license": "BSD-2-Clause",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://hub.docker.com/r/caronc/apprise",
+    "githubUrl": "https://github.com/caronc/apprise",
+    "featured": false,
+    "stars": 17260,
+    "language": "Python",
+    "githubCreatedAt": "2017-11-25T18:06:38Z",
+    "githubPushedAt": "2026-09-04T15:57:33Z",
+    "useCases": [
+      {
+        "text": "システムの異常検知アラートの送信"
+      },
+      {
+        "text": "マルチプラットフォームへの一括通知"
+      },
+      {
+        "text": "独自の通知サービスの構築"
+      },
+      {
+        "text": "監視基盤との連携"
+      },
+      {
+        "text": "自動化スクリプトからのメッセージ送信"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "alerts"
+      },
+      {
+        "text": "apprise"
+      },
+      {
+        "text": "framework"
+      },
+      {
+        "text": "notification-api"
+      },
+      {
+        "text": "notification-hub"
+      },
+      {
+        "text": "notification-service"
+      },
+      {
+        "text": "notifications"
+      },
+      {
+        "text": "notifier"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなプラットフォームに通知を送れますか？",
+        "answer": "Appriseは、ほぼすべての主要なプラットフォームに対応したプッシュ通知を送信できることを目的としています。具体的な対応先については、公式のドキュメントやサポートされているプロバイダーの一覧を確認してください。"
+      },
+      {
+        "question": "開発者はどのようにこのツールを利用しますか？",
+        "answer": "Pythonで記述されたフレームワークとして提供されています。通知ハブやサービスとして組み込むことで、システムから発生する様々なアラートを、一貫したインターフェースを通じて各プラットフォームへ配信できるようになります。"
+      },
+      {
+        "question": "ビジネスの現場でそのまま画面操作をして使うアプリですか？",
+        "answer": "いいえ、これは業務担当者が直接操作するUIを備えた完成したアプリケーションではありません。開発者がシステム構築や監視基盤の一部として組み込んで利用するためのツールです。"
+      },
+      {
+        "question": "このツールの主な技術スタックは何ですか？",
+        "answer": "主なプログラミング言語はPythonです。また、ライセンスはBSD-2-Clauseとなっており、オープンソースソフトウェアとして提供されています。通知APIやフレームワークとしての機能を備えています。Goals"
+      }
+    ]
   },
   {
     "name": "maxun",
@@ -14288,6 +14520,84 @@
     "jaSamplePaths": []
   },
   {
+    "name": "firmware",
+    "slug": "firmware",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "オフグリッドなメッシュ通信システム「Meshtastic」用の公式ファームウェアです。",
+    "description": "このソフトウェアは、オープンソースのメッシュ通信システムであるMeshtasticのための公式ファームウェアです。ESP32やLoRaなどの技術を活用し、インターネットや携帯電話網に依存しない独自のメッシュネットワークを構築します。GPS機能やHeltecデバイスとの互換性を備えており、ハイキングなどの屋外活動での利用も想定されています。C++で記述されており、GPL-3.0ライセンスの下で公開されています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://meshtastic.org",
+    "githubUrl": "https://github.com/meshtastic/firmware",
+    "featured": false,
+    "stars": 8260,
+    "language": "C++",
+    "githubCreatedAt": "2020-02-01T17:00:35Z",
+    "githubPushedAt": "2026-09-05T13:17:59Z",
+    "useCases": [
+      {
+        "text": "オフグリッド環境での通信手段の確保"
+      },
+      {
+        "text": "LoRaを用いたメッシュネットワークの構築"
+      },
+      {
+        "text": "GPS情報を活用した位置情報の共有"
+      },
+      {
+        "text": "ハイキングや野外活動における通信インフラ"
+      },
+      {
+        "text": "ESP32等のハードウェアを活用した独自通信システムの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "esp32"
+      },
+      {
+        "text": "gps"
+      },
+      {
+        "text": "heltec"
+      },
+      {
+        "text": "hiking"
+      },
+      {
+        "text": "lora"
+      },
+      {
+        "text": "mesh"
+      },
+      {
+        "text": "mesh-networks"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアは何を目的としたものですか？",
+        "answer": "インターネットや携帯電話網などの既存の通信インフラに依存しない、独自のメッシュ通信システム「Meshtastic」を動作させるための公式ファームウェアです。"
+      },
+      {
+        "question": "どのような技術が使用されていますか？",
+        "answer": "ESP32マイクロコントローラやLoRa無線技術を利用しています。また、GPS機能との連携もサポートされており、位置情報の送信なども可能です。"
+      },
+      {
+        "question": "どのような環境での利用に適していますか？",
+        "answer": "オフグリッドな環境（通信網がない場所）での利用に適しており、特にハイキングなどの野外活動におけるメッシュネットワークの構築に活用されます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはGPL-3.0ライセンスの下で提供されています。オープンソースとして公開されており、開発者が自由に利用や改変を行うことができます。"
+      }
+    ]
+  },
+  {
     "name": "CopilotForXcode",
     "slug": "copilotforxcode",
     "category": "aidev",
@@ -17830,7 +18140,7 @@
     "category": "lowcode",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "Baserowを日本語で使うための案内。Airtable代替のノーコードデータベースの日本語対応状況、セルフホストの導入手順、ライセンス、業務アプリ化のカスタマイズ相談まで。",
+    "summary": "ノーコードでデータベースや業務アプリを構築できるプラットフォームです。",
     "description": "Baserowは、プログラミングの知識がなくてもデータベースの構築、自動化、アプリケーション、AIエージェントの作成を可能にするノーコードプラットフォームです。クラウドサービスとして利用できるほか、セルフホストでの運用も選択可能です。GDPR、HIPAA、SOC 2への準拠を確認しており、セキュリティ要件の高い環境にも対応しています。Airtableに代わるオープンソースの代替ツールとして提供されています。",
     "license": "MIT",
     "licenseTier": "osi",
@@ -17912,8 +18222,7 @@
       {
         "text": "backend/src/baserow/core/locale/ja"
       }
-    ],
-    "seoTitle": "Baserowを日本語で使う｜日本語化と導入手順（Airtable代替・ノーコードDB）| Kurage"
+    ]
   },
   {
     "name": "astron-rpa",
@@ -39768,6 +40077,90 @@
     "jaSamplePaths": []
   },
   {
+    "name": "zentaopms",
+    "slug": "zentaopms",
+    "category": "project",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "アジャイル開発やスクラム手法に対応したプロジェクト管理システムです。",
+    "description": "Zentaoは、アジャイル（Scrum）手法に基づいたプロジェクト管理を行うためのツールです。バグ追跡機能やプロジェクト管理機能を備えており、チームの進捗を円滑に進めることを目的としています。PHPで構築されており、セルフホストでの運用が可能です。継続的な無料アップグレードが提供されるソフトウェアです。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi-network-copyleft",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。改変したものを社外に公開して使わせる場合は、改変部分のソース公開義務が利用者側に発生します（社内利用のみなら不要）。",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "http://www.zentao.pm",
+    "githubUrl": "https://github.com/easysoft/zentaopms",
+    "featured": false,
+    "stars": 1671,
+    "language": "PHP",
+    "githubCreatedAt": "2011-01-30T11:33:01Z",
+    "githubPushedAt": "2026-08-21T00:54:47Z",
+    "useCases": [
+      {
+        "text": "アジャイル開発におけるプロジェクト管理"
+      },
+      {
+        "text": "スクラムフレームワークを用いたタスク管理"
+      },
+      {
+        "text": "バグトラッキングと進捗の可視化"
+      },
+      {
+        "text": "セルフホスト環境でのプロジェクト管理システムの構築"
+      },
+      {
+        "text": "チーム内での作業進捗の共有"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agile"
+      },
+      {
+        "text": "bug-tracker"
+      },
+      {
+        "text": "php"
+      },
+      {
+        "text": "project-management"
+      },
+      {
+        "text": "scrum"
+      },
+      {
+        "text": "self-hosted"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような開発手法に適していますか？",
+        "answer": "アジャイル開発やスクラムフレームワークを採用しているチームに最適化されたシステムです。プロジェクト全体の管理から、具体的なタスクの進捗までを効率的に追跡できます。"
+      },
+      {
+        "question": "サーバーへの設置は可能ですか？",
+        "answer": "はい、セルフホストに対応しているため、自社で用意したサーバー環境にインストールして運用することが可能です。これにより、データの所在をコントロールしながら利用できます。"
+      },
+      {
+        "question": "バグトラッキング機能は含まれていますか？",
+        "answer": "はい、主なトピックの一つとしてバグトラッカーの機能が含まれています。プロジェクトの進行に伴う不具合の管理や追跡を行うことができます。"
+      },
+      {
+        "question": "ソフトウェアの更新に関する費用はどうなっていますか？",
+        "answer": "説明文には「Free Upgrade Forever!」と記載されており、継続的な無料アップグレードが提供されることが示されています。"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "www/js/kindeditor/lang/ja.js"
+      },
+      {
+        "text": "www/js/moment/locale/ja.js"
+      }
+    ]
+  },
+  {
     "name": "open-mercato",
     "slug": "open-mercato",
     "category": "aidev",
@@ -40226,7 +40619,7 @@
     "category": "groupware",
     "funnel": "oss",
     "kind": "business-app",
-    "summary": "RisuAIを日本語で使うための案内。ユーザーが独自のストーリーを作れるLLM向けロールプレイ用ソフトの日本語対応状況、セルフホストの導入手順、ライセンス、カスタマイズ相談まで。",
+    "summary": "ユーザーが独自のストーリーを作成できるLLM向けのロールプレイング用ソフトウェアです。",
     "description": "Risuaiは、ユーザーが自分自身の物語を構築できるように設計された、親しみやすいインターフェースを持つソフトウェアです。大規模言語モデル（LLM）を用いたロールプレイング体験に特化しており、直感的な操作で利用できます。ClaudeやGemini、GPT、Llamaなどの主要なAIモデルに対応しています。TypeScriptで開発されており、柔軟なキャラクター設定やチャット機能を提供します。",
     "license": "GPL-3.0",
     "licenseTier": "osi",
@@ -40301,8 +40694,7 @@
       }
     ],
     "jaFileCount": 0,
-    "jaSamplePaths": [],
-    "seoTitle": "RisuAIを日本語で使う｜日本語化・セルフホスト導入手順（LLMロールプレイ）| Kurage"
+    "jaSamplePaths": []
   },
   {
     "name": "gocommerce",
@@ -71245,6 +71637,78 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "tasking-manager",
+    "slug": "tasking-manager",
+    "category": "hazard",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "OpenStreetMapの地図作成をチームで共同で行うためのツールです。",
+    "description": "Tasking Managerは、OpenStreetMapにおける地図作成作業をチームで協力して進めるためのアプリケーションです。FastAPIやReactJSなどの技術を用いて構築されており、共同でのタスク管理を実現します。PostgreSQLおよびPostGISを利用することで、地理空間データの効率的な管理が可能です。このツールを活用することで、複数のユーザーが連携しながら正確な地図情報のマッピングを進められます。",
+    "license": "BSD-2-Clause",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://tasks.hotosm.org",
+    "githubUrl": "https://github.com/hotosm/tasking-manager",
+    "featured": false,
+    "stars": 602,
+    "language": "Python",
+    "githubCreatedAt": "2017-02-02T14:31:35Z",
+    "githubPushedAt": "2026-09-04T11:41:45Z",
+    "useCases": [
+      {
+        "text": "OpenStreetMapの地図作成作業の共有"
+      },
+      {
+        "text": "チームによるマッピングタスクの管理"
+      },
+      {
+        "text": "地理空間データの共同編集"
+      },
+      {
+        "text": "プロジェクト単位での地図作成進捗管理"
+      },
+      {
+        "text": "オープンデータへの貢献に向けた協力体制構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "OpenStreetMap"
+      },
+      {
+        "text": "地図作成"
+      },
+      {
+        "text": "タスク管理"
+      },
+      {
+        "text": "PostGIS"
+      },
+      {
+        "text": "FastAPI"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような目的で提供されていますか？",
+        "answer": "このツールは、OpenStreetMapにおける地図作成作業をチームで効率的に協力して進めることを主な目的としています。共同でのマッピング作業の組織化に役立ちます。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "バックエンドにはPythonとFastAPIが使用され、フロントエンドにはReactJSとJavaScriptが採用されています。データベースにはPostgreSQLおよび空間データ処理のためのPostGISが含まれます。"
+      },
+      {
+        "question": "チームでの共同作業はどのように行われますか？",
+        "answer": "ツールを通じて地図作成のタスクを共有し、複数のユーザーが協力してマッピングを進めることができる仕組みを提供しています。具体的な共同編集フローについてはドキュメントを確認してください。"
+      },
+      {
+        "question": "地理空間データの扱いは可能ですか？",
+        "answer": "はい、PostgreSQLとPostGISを組み合わせているため、高度な地理空間データの管理やクエリの実行に対応した設計になっています。openstreetmapに関連するデータ操作に適しています。不如適切な環境構築が必要です。}]}}                {"
+      }
+    ]
   },
   {
     "name": "ChatPilot",
@@ -127156,6 +127620,81 @@
     "jaSamplePaths": []
   },
   {
+    "name": "kpi",
+    "slug": "kpi",
+    "category": "hazard",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "KoboToolboxのためのデータ管理およびフォーム作成用サーバーです。",
+    "description": "kpiはKoboToolboxのバックエンドサーバーとして機能します。ユーザーは提供されるAPIを通じて、データのアクセスやフォームの管理を行うことができます。また、質問ライブラリの管理、共有設定の変更、レポートの作成、データの書き出しといった操作も可能です。Pythonで構築されており、AGPL-3.0ライセンスの下で公開されています。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "未調査",
+    "officialUrl": "https://www.kobotoolbox.org",
+    "githubUrl": "https://github.com/kobotoolbox/kpi",
+    "featured": false,
+    "stars": 181,
+    "language": "Python",
+    "githubCreatedAt": "2015-02-25T21:45:33Z",
+    "githubPushedAt": "2026-09-05T16:42:21Z",
+    "useCases": [
+      {
+        "text": "調査用フォームの作成と管理"
+      },
+      {
+        "text": "収集したデータのAPI経由での取得"
+      },
+      {
+        "text": "質問項目のライブラリ化"
+      },
+      {
+        "text": "レポートの生成とデータエクスポート"
+      },
+      {
+        "text": "共有設定の管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "KoboToolbox"
+      },
+      {
+        "text": "フォーム管理"
+      },
+      {
+        "text": "データ収集"
+      },
+      {
+        "text": "API"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "レポート作成"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "kpiは何のためのソフトウェアですか？",
+        "answer": "kpiはKoboToolboxというプラットフォームのサーバーとして機能するソフトウェアです。データの管理、フォームの作成、質問ライブラリの運用など、データ収集に関連する基盤的な機能を備えています。"
+      },
+      {
+        "question": "このツールでどのような操作ができますか？",
+        "answer": "APIを通じてデータへのアクセスやフォームの管理を行うことができます。また、共有設定の変更、レポートの作成、データの書き出しといった機能も提供されています。"
+      },
+      {
+        "question": "開発言語やライセンスを教えてください。",
+        "answer": "このソフトウェアはPythonで記述されており、ライセンスはAGPL-3.0です。オープンソースとして公開されています。"
+      },
+      {
+        "question": "データの書き出しは可能ですか？",
+        "answer": "はい、kpiにはデータをエクスポートするための機能が含まれています。収集したデータを外部へ出力する際に利用することが可能です。"
+      }
+    ]
+  },
+  {
     "name": "framed",
     "slug": "framed",
     "category": "automation",
@@ -155140,6 +155679,83 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Uploady",
+    "slug": "uploady",
+    "category": "dms",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "シンプルなファイルアップロード機能を提供するソフトウェアです。",
+    "description": "Uploadyは、ファイルのアップロード操作を簡単に行うためのシンプルなソフトウェアです。PHPで動作し、MITライセンスで公開されています。主な機能としてファイルの共有やアップロードに加え、画像の処理およびアップロードにも対応しています。直感的なインターフェースを通じて、ユーザーが容易にファイルをサーバーへ送信できる仕組みを提供します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://github.com/farisc0de/Uploady",
+    "githubUrl": "https://github.com/farisc0de/Uploady",
+    "featured": false,
+    "stars": 110,
+    "language": "PHP",
+    "githubCreatedAt": "2020-12-20T18:00:41Z",
+    "githubPushedAt": "2026-03-23T23:23:50Z",
+    "useCases": [
+      {
+        "text": "社内でのファイル共有"
+      },
+      {
+        "text": "ユーザーからのファイルアップロード受付"
+      },
+      {
+        "text": "画像ファイルの収集と管理"
+      },
+      {
+        "text": "簡易的なファイル転送システム"
+      },
+      {
+        "text": "ウェブサイトへの画像投稿機能"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ファイルアップロード"
+      },
+      {
+        "text": "ファイル共有"
+      },
+      {
+        "text": "画像処理"
+      },
+      {
+        "text": "PHP"
+      },
+      {
+        "text": "MITライセンス"
+      },
+      {
+        "text": "画像アップローダー"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このソフトウェアでどのような種類のファイルをアップロードできますか？",
+        "answer": "提供されている説明に基づくと、一般的なファイル共有や画像処理への対応が含まれています。具体的なファイル形式の制限については、実装内容を直接確認する必要があります。"
+      },
+      {
+        "question": "画像の処理機能には具体的に何が含まれますか？",
+        "answer": "「image-processing」というトピックが含まれていますが、具体的な加工内容（リサイズやフィルター等）の詳細は提供されている説明からは特定できません。"
+      },
+      {
+        "question": "このソフトウェアを導入するための技術的な要件はありますか？",
+        "answer": "主な言語としてPHPが記載されています。そのため、PHPを実行可能なサーバー環境を構築する必要があります。"
+      },
+      {
+        "question": "ライセンスに関する制限はありますか？",
+        "answer": "このソフトウェアはMITライセンスで提供されています。MITライセンスの規定に従って利用することが可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "github-issue-blog",
     "slug": "github-issue-blog",
     "category": "devsupport",
@@ -158611,7 +159227,7 @@
   {
     "name": "ConsiderIt",
     "slug": "considerit",
-    "category": "forum",
+    "category": "civic",
     "funnel": "oss",
     "kind": "business-app",
     "summary": "合意形成や意見の可視化を支援する議論用ツールです。",
@@ -213072,6 +213688,80 @@
       {
         "question": "開発環境としてどのような技術スタックに対応していますか？",
         "answer": "TypeScriptをメイン言語とし、Drizzle ORMやモノレポ構成といったモダンな開発手法にも対応しています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "uxnote",
+    "slug": "uxnote",
+    "category": "devtools",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ブラウザ上でモックアップやWebサイトに直接注釈を付与できる軽量なツールです。",
+    "description": "UxNoteは、スクリプトを一つ導入するだけで、ブラウザ上のモックアップやウェブサイトに対してハイライト、ピン留め、フィードバックの書き込みができるアノテーションバーです。ユーザーはブラウザ上で直接操作を行い、フィードバックをエクスポートすることが可能です。JavaScriptで動作し、軽量な設計となっています。デザインレビューやUI/UXの改善プロセスにおいて、視覚的なコミュニケーションを円滑にするためのツールです。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://uxnote.ninefortyone.studio/",
+    "githubUrl": "https://github.com/ninefortyonestudio/uxnote",
+    "featured": false,
+    "stars": 50,
+    "language": "JavaScript",
+    "githubCreatedAt": "2025-12-04T16:19:55Z",
+    "githubPushedAt": "2026-07-03T07:26:39Z",
+    "useCases": [
+      {
+        "text": "Webサイトのデザインレビュー"
+      },
+      {
+        "text": "モックアップへのフィードバック収集"
+      },
+      {
+        "text": "UI/UXの改善提案"
+      },
+      {
+        "text": "ブラウザ上での共同作業"
+      },
+      {
+        "text": "デザイン制作の進捗確認"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "アノテーション"
+      },
+      {
+        "text": "コラボレーション"
+      },
+      {
+        "text": "デザインレビュー"
+      },
+      {
+        "text": "フィードバック"
+      },
+      {
+        "text": "JavaScript"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような仕組みで動作しますか？",
+        "answer": "スクリプトを一つ導入するだけで、ブラウザ上で直接注釈やハイライトを追加できる機能が提供されます。特別なソフトウェアをインストールすることなく、Webページ上での操作が可能になります。"
+      },
+      {
+        "question": "フィードバックの書き出しは可能ですか？",
+        "answer": "はい、ブラウザ上で付与したフィードバックをエクスポートする機能が含まれています。これにより、収集した意見を他のツールやドキュメントに反映させることが容易になります。"
+      },
+      {
+        "question": "どのような場面で活用できますか？",
+        "answer": "主にWebサイトの制作過程におけるデザインレビューや、UI/UXの改善に向けたフィードバックのやり取りに使用されます。視覚的な指示を正確に伝える必要がある場面に適しています。"
+      },
+      {
+        "question": "軽量なツールという点はどのような意味ですか？",
+        "answer": "ブラウザへの負荷を最小限に抑えつつ、必要なアノテーション機能を提供することを目指した設計になっています。スムーズな操作性を維持しながら、迅速にフィードバックを行いたい場合に適しています。Goals"
       }
     ],
     "jaFileCount": 0,

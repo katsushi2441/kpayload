@@ -128,4 +128,7 @@ export const CATEGORY_FIX: Record<string, string> = {
   medusa: 'commerce',
   // 広聴AIは意見集約の完成システムだが、gemma4がdev-toolと誤分類した(2026-09-01)
   'kouchou-ai': 'civic',
+  // ConsiderIt は Pol.is と同系統の合意形成ツールなのに forum に入っていて、
+  // civic の一覧から辿れなかった(2026-09-19)
+  considerit: 'civic',
 }

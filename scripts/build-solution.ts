@@ -1,7 +1,7 @@
 /**
  * /solution/ — 業種・業務別ITソリューションの静的ページを生成する。
  * /saas/(サービス名から引く)・/oss/(OSSから引く)・/ai-system/(やりたいことから引く)に次ぐ
- * 4つ目の入り口。「その業種の有名SaaS」→「OSS・買い切りでの固定費削減」→
+ * 4つ目の入り口。「その業種の有名SaaS」→「OSS・内製化での固定費削減」→
  * kappstore商品・Brain手順書・vibe-oss/vibe-prototype への導線を張る。
  *
  * データ: data/solution-list.json（saasSlugs は saas-list.json、ossPicks は payload DB を参照）
@@ -28,7 +28,7 @@ const BASE = `${SITE}/solution`
 const SHELL = {
   refPrefix: 'exbridge-solution',
   base: BASE,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-solution-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-solution-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-solution-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${KURAGE}/khojokin.php/?ref=exbridge-solution">補助金ナビ（いま出せる補助金を条件で探す）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-solution-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
@@ -78,7 +78,7 @@ function ossCell(p: Project, slug: string): string {
   if (DEMOS[p.slug]) links.push(`<a href="${demoUrl(p.slug, `solution-${slug}`)}" target="_blank" rel="noopener">触れる</a>`)
   else if (p.demoUrl) links.push(`<a href="${attr(p.demoUrl)}?ref=solution-${attr(slug)}" target="_blank" rel="noopener">触れる</a>`)
   const buy = p.buyUrl || (p.lpUrl && p.lpUrl.includes('kappstore') ? p.lpUrl : '')
-  if (buy) links.push(`<a href="${attr(buy)}${buy.includes('?') ? '&' : '?'}ref=solution-${attr(slug)}" target="_blank" rel="noopener">買い切り</a>`)
+  if (buy) links.push(`<a href="${attr(buy)}${buy.includes('?') ? '&' : '?'}ref=solution-${attr(slug)}" target="_blank" rel="noopener">オンプレミス版</a>`)
   return links.join(' / ') || '—'
 }
 
@@ -88,13 +88,13 @@ function detailPage(p: SolutionPage): string {
   const url = `${BASE}/${p.slug}.html`
   const saas = p.saasSlugs.map((s) => saasBySlug.get(s)).filter(Boolean) as Saas[]
   const oss = p.ossPicks.map((s) => bySlug.get(s)).filter(Boolean) as Project[]
-  const title = p.titleOverride || `${p.name}のITコストを下げる｜有名SaaSとオープンソース代替・買い切りの選択肢 | 株式会社エクスブリッジ`
-  const desc = p.descOverride || `${p.name}で使われる${[...saas.map((s) => s.name), ...p.extraSaas].slice(0, 4).join('、')}などのITサービスは、人数×月額の固定費が積み上がります。置き換えられる業務と置き換えられない業務を正直に仕分けし、オープンソース・買い切りで固定費を減らす道筋を、名古屋のシステム開発会社がまとめました。`
+  const title = p.titleOverride || `${p.name}のITコストを下げる｜有名SaaSとオープンソース代替・内製化の選択肢 | 株式会社エクスブリッジ`
+  const desc = p.descOverride || `${p.name}で使われる${[...saas.map((s) => s.name), ...p.extraSaas].slice(0, 4).join('、')}などのITサービスは、人数×月額の固定費が積み上がります。置き換えられる業務と置き換えられない業務を正直に仕分けし、オープンソースと内製化で固定費を減らす道筋を、名古屋のシステム開発会社がまとめました。`
   const faqs = p.faqs || []
 
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">${KIND_LABEL[p.kind]}別ソリューション｜${h(p.kicker)}</p>
-<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : `${h(p.name)}のITコストを、<br>オープンソースと買い切りで見直す。`}</h1>
+<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : `${h(p.name)}のITコストを、<br>オープンソースと内製化で見直す。`}</h1>
 <p class="lead">${h(p.lead || p.facts)}</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(p.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=solution-${attr(p.slug)}">OSSカスタマイズ（110,000円〜）</a></p>
 </div></section>
@@ -117,7 +117,7 @@ ${p.extraSaas.map((n) => `<tr><th>${h(n)}</th><td>—</td><td>（対応表ペー
 </div></section>
 
 ${oss.length ? `<section><div class="panel">
-<h2>${h(p.name)}で使えるオープンソース・買い切り</h2>
+<h2>${h(p.name)}で使えるオープンソースと内製化の選択肢</h2>
 <p>以下は、上の「分離できる業務」に充てられるオープンソースです。ライセンスと日本語対応は当社がGitHubの公開情報から実測しています。</p>
 <div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>受託での構築・納品</th><th>日本語</th><th>デモ・購入</th></tr></thead><tbody>
 ${oss.map((o) => `<tr><th><a href="${SITE}/ai-system/${attr(o.slug)}/?ref=solution-${attr(p.slug)}">${h(o.name)}</a></th><td>${h(o.summary)}</td><td>${h(o.license)}</td><td>${h(licenseVerdict(o))}</td><td>${h(o.japaneseStatus)}</td><td>${ossCell(o, p.slug)}</td></tr>`).join('')}
@@ -125,10 +125,10 @@ ${oss.map((o) => `<tr><th><a href="${SITE}/ai-system/${attr(o.slug)}/?ref=soluti
 </div></section>` : ''}
 
 ${p.products.length ? `<section><div class="panel">
-<h2>すぐ導入できる買い切り商品（Kurage App Store）</h2>
-<p>当社が販売している買い切り商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。</p>
+<h2>すぐ導入できるオンプレミスの商品（Kurage App Store）</h2>
+<p>当社が販売しているオンプレミスの商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。</p>
 <div class="cat-grid">
-${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>買い切り ${h(pr.price)}（税込）・Kurage App Store</span></a>`).join('')}
+${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）・Kurage App Store</span></a>`).join('')}
 </div>
 ${p.brain.length ? `<p style="margin-top:12px">構築手順を自分で読みたい方へ: ${p.brain.map((b) => `<a href="${attr(b.url)}?ref=solution-${attr(p.slug)}" target="_blank" rel="noopener">${h(b.label)}</a>`).join('　')}</p>` : ''}
 ${p.lps.length ? `<p class="note">${p.lps.map((l) => `<a href="${attr(l.url)}?ref=solution-${attr(p.slug)}">${h(l.label)}</a>`).join('　')}</p>` : ''}
@@ -155,7 +155,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
   const ld = [
     ...(faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     { '@context': 'https://schema.org', '@type': 'Service', name: `${p.name}向けIT費用削減・OSS導入支援`,
-      description: desc, url, serviceType: 'OSS導入・日本語化・カスタマイズ・買い切り業務システム',
+      description: desc, url, serviceType: 'OSS導入・日本語化・カスタマイズ・オンプレミスの業務システム',
       areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'Country', name: '日本' }],
       provider: { '@id': `${SITE}/#organization` },
       offers: { '@type': 'Offer', priceCurrency: 'JPY', price: '110000', url: `${KURAGE}/vibe-oss.html`,
@@ -175,15 +175,15 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
 }
 
 function indexPage(): string {
-  const title = '業種・業務別ITソリューション｜SaaSの固定費をOSSと買い切りで減らす | 株式会社エクスブリッジ'
+  const title = '業種・業務別ITソリューション｜SaaSの固定費をOSSと内製化で減らす | 株式会社エクスブリッジ'
   const desc = `介護・保育・美容・飲食・宿泊・建設・医療・不動産などの業種別と、問い合わせ管理・議事録・CRM・人事・経理・予約などの業務別に、有名SaaSとオープンソース代替をまとめました。置き換えられない業務は「できない」と明記。名古屋のシステム開発会社が導入まで行います。`
   const ind = pages.filter((p) => p.kind === 'industry')
   const gyo = pages.filter((p) => p.kind === 'gyomu')
   const card = (p: SolutionPage) => `<a class="cat-card" href="${BASE}/${attr(p.slug)}.html"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種・業務別ソリューション</p>
-<h1>あなたの業種のIT費用、<br>「本体は残して、まわりを買い切りに」。</h1>
-<p class="lead">業種特化SaaSの本体（制度対応・集客網・取引網）は簡単には置き換えられません。当社は無理に「全部やめましょう」とは言いません。<strong>分離できる業務だけをオープンソースと買い切りに移して、人数×月額の固定費を減らす</strong>——その仕分けを業種別・業務別にまとめました。</p>
+<h1>あなたの業種のIT費用、<br>「本体は残して、まわりを内製化に」。</h1>
+<p class="lead">業種特化SaaSの本体（制度対応・集客網・取引網）は簡単には置き換えられません。当社は無理に「全部やめましょう」とは言いません。<strong>分離できる業務だけをオープンソースと内製化に移して、人数×月額の固定費を減らす</strong>——その仕分けを業種別・業務別にまとめました。</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent('IT費用の見直し相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${SITE}/saas/">サービス名から探す</a></p>
 </div></section>
 <main class="wrap">
@@ -255,33 +255,33 @@ function pairPage(ind: MI, g: MG): string {
   const url = `${BASE}/${ind.slug}/${g.slug}.html`
   const oss = ossByGyomu.get(g.slug) || []
   const title = fitLength(32,
-    `${ind.name}の${g.name}を安くする｜OSSと買い切り`,
-    `${ind.name}の${g.name}｜OSSと買い切り`,
+    `${ind.name}の${g.name}を安くする｜OSSと内製化`,
+    `${ind.name}の${g.name}｜OSSと内製化`,
     `${ind.name}の${g.name}を安くする`)
-  const desc = `${ind.name}の${g.name}——${g.pain}。有名サービスの月額を払い続けなくても、オープンソースと買い切りで持てる範囲を、実測（ライセンス・日本語対応）つきでまとめました。名古屋のシステム開発会社が導入まで行います。初日の相談は無料です。`
+  const desc = `${ind.name}の${g.name}——${g.pain}。有名サービスの月額を払い続けなくても、オープンソースと内製化で持てる範囲を、実測（ライセンス・日本語対応）つきでまとめました。名古屋のシステム開発会社が導入まで行います。初日の相談は無料です。`
   const faqs = [
     { q: `${ind.name}でも${g.name}のシステムを自前で持てますか？`,
-      a: `持てます。${ind.context}${g.name}はその中でも分離しやすい業務で、下に挙げたオープンソースや当社の買い切り商品を土台にすれば、月額課金なしで運用できます。` },
+      a: `持てます。${ind.context}${g.name}はその中でも分離しやすい業務で、下に挙げたオープンソースや当社のオンプレミスの商品を土台にすれば、月額課金なしで運用できます。` },
     { q: `いま使っているサービスからの乗り換えは大変ではないですか？`,
       a: `既存データの持ち出しと移行が主な作業です。当社は初日のヒアリング（無料）で、いまのやり方を見せていただいてから、移行の範囲と費用をお出しします。無理に全部を置き換える提案はしません。` },
     { q: `費用はどのくらいかかりますか？`,
-      a: `買い切り商品はソースコード込みで表示価格のみ、月額はありません。オープンソースを御社仕様に直す場合は税込110,000円からのカスタマイズ、名古屋市内なら計15時間・税別15万円のお試し導入もあります。` },
+      a: `オンプレミスの商品はソースコード込みで表示価格のみ、月額はありません。オープンソースを御社仕様に直す場合は税込110,000円からのカスタマイズ、名古屋市内なら計15時間・税別15万円のお試し導入もあります。` },
   ]
   const others = matrix.gyomu.filter((x) => x.slug !== g.slug && !ind.skip.includes(x.slug)).slice(0, 6)
   const otherInds = matrix.industries.filter((x) => x.slug !== ind.slug && !x.skip.includes(g.slug)).slice(0, 8)
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">${h(ind.name)}｜${h(ind.kicker)}</p>
-<h1>${h(ind.name)}の${h(g.name)}を、<br>買い切りとオープンソースで。</h1>
+<h1>${h(ind.name)}の${h(g.name)}を、<br>内製化とオープンソースで。</h1>
 <p class="lead">${h(g.pain)}——${h(ind.name)}の現場からよく伺う悩みです。${h(ind.context)}</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(`${ind.name}の${g.name}の相談`)}">無料で相談する（Zoom可）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / <a href="${BASE}/${attr(ind.slug)}/">${h(ind.name)}</a> / ${h(g.name)}</nav>
 ${g.products.length ? `<section><div class="panel">
-<h2>すぐ導入できる買い切り（Kurage App Store）</h2>
-<p>当社が販売している${h(g.name)}向けの買い切り商品です。月額はかかりません。デモを触ってから判断できます。</p>
+<h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
+<p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
 <div class="cat-grid">
-${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>買い切り ${h(pr.price)}（税込）</span></a>`).join('')}
+${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）</span></a>`).join('')}
 </div></div></section>` : ''}
 ${oss.length ? `<section><div class="panel">
 <h2>${h(g.name)}に使えるオープンソース</h2>
@@ -327,7 +327,7 @@ function industryHub(ind: MI): string {
   const gy = matrix.gyomu.filter((g) => !ind.skip.includes(g.slug))
   const flat = pages.find((p) => p.slug === ind.slug)
   const title = fitLength(32, `${ind.name}のIT費用を安くする｜業務別の道具箱`, `${ind.name}のITを安くする｜業務別`)
-  const desc = `${ind.context} ${ind.name}の${gy.slice(0, 5).map((g) => g.name).join('・')}などを、オープンソースと買い切りで安く持つ方法を業務別にまとめました。`
+  const desc = `${ind.context} ${ind.name}の${gy.slice(0, 5).map((g) => g.name).join('・')}などを、オープンソースと内製化で安く持つ方法を業務別にまとめました。`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種別ソリューション｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}のITを、<br>業務ごとに安くする。</h1>
