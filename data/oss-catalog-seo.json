@@ -1,0 +1,95 @@
+{
+  "_comment": "検索結果に並んだときの題名と説明文の上書き。slug → {seoTitle, summary}。seed.ts がカタログの後に重ねる。自動収集(harvest/enrich)が oss-catalog-harvested.json を作り直しても、ここに書いた分は消えない（2026-09-09 に5件を直接書き換えたが、9/18の再生成で4件が消えていた）。狙いはCTR: GSCで表示はあるのにクリックが0のページの題名を、用途の言葉に変える。",
+  "zammad": {
+    "seoTitle": "Zammadを日本語で使う｜日本語化100%の手順・導入・Zendesk代替",
+    "summary": "Zammadを日本語で使うための案内。本家同梱の日本語は実測23%どまりですが、当社が全訳したzammad-jpで100%日本語化できます。導入手順、ライセンス、Zendesk代替としての使いどころ、カスタマイズ相談まで。"
+  },
+  "appflowy": {
+    "seoTitle": "AppFlowyを日本語で使う｜日本語化の状況と導入手順（Notion代替）",
+    "summary": "AppFlowyを日本語で使うための案内。Notion代替のオープンソース・ワークスペースの日本語対応状況、セルフホストの導入手順、ライセンス、AI機能、カスタマイズ相談まで。"
+  },
+  "activitywatch": {
+    "seoTitle": "ActivityWatchを日本語で使う｜PC作業の自動記録をローカル保存",
+    "summary": "ActivityWatchを日本語で使うための案内。PC作業を自動で記録し、データを外に出さないプライバシー重視の時間追跡ツールの日本語対応状況、導入手順、ライセンス、カスタマイズ相談まで。"
+  },
+  "baserow": {
+    "seoTitle": "Baserowを日本語で使う｜Airtable代替のノーコードDBを自社で",
+    "summary": "Baserowを日本語で使うための案内。Airtable代替のノーコードデータベースの日本語対応状況、セルフホストの導入手順、ライセンス、業務アプリ化のカスタマイズ相談まで。"
+  },
+  "risuai": {
+    "seoTitle": "RisuAIを日本語で使う｜導入手順とセルフホスト（LLM）",
+    "summary": "RisuAIを日本語で使うための案内。ユーザーが独自のストーリーを作れるLLM向けロールプレイ用ソフトの日本語対応状況、セルフホストの導入手順、ライセンス、カスタマイズ相談まで。"
+  },
+  "billionmail": {
+    "seoTitle": "BillionMailを日本語で使う｜配信数で課金されない自社メール配信",
+    "summary": "BillionMailを日本語で使うための案内。メールサーバー・メルマガ配信・配信解析が1つになっていて、配信数もアドレス数もユーザー数も課金されません。日本語UIは公式同梱。導入手順、ライセンス、移行の相談まで。"
+  },
+  "decap-cms": {
+    "seoTitle": "Decap CMSを日本語で使う｜静的サイトに管理画面（Git保存）",
+    "summary": "Decap CMSを日本語で使うための案内。記事はリポジトリのMarkdownとして保存され、サーバーもデータベースも要りません。日本語UIは設定だけで出ます。導入手順、ライセンス、既存サイトへの組み込み相談まで。"
+  },
+  "espocrm": {
+    "seoTitle": "EspoCRMを日本語で使う｜顧客・商談管理を自社サーバーで動かす",
+    "summary": "EspoCRMを日本語で使うための案内。顧客、商談、活動、メール、ワークフローを自社サーバーで管理できます。日本語UIは公式配布に収録。導入手順、ライセンス、項目追加のカスタマイズ相談まで。"
+  },
+  "freescout": {
+    "seoTitle": "FreeScoutを日本語で使う｜共有メールをそのまま問い合わせ管理に",
+    "summary": "FreeScoutを日本語で使うための案内。info@などの共有メールボックスを、担当・状態・履歴が残る問い合わせ管理に変えられます。日本語の翻訳範囲、導入手順、ライセンス、カスタマイズ相談まで。"
+  },
+  "krayin-crm": {
+    "seoTitle": "Krayin CRMを日本語で使う｜2,066キーを全訳して本家へ提出",
+    "summary": "Krayin CRMを日本語で使うための案内。当社が2,066キーを日本語化して本家へ提出しました。Laravel製で顧客・リード・商談・活動を管理できます。導入手順、ライセンス、カスタマイズ相談まで。"
+  },
+  "fess": {
+    "seoTitle": "Fessで社内を全文検索｜日本発・日本語UI公式（Namazuの後継）",
+    "summary": "Fessを使って社内を全文検索するための案内。Webサイト・ファイルサーバー・PDFをクロールして横断検索できます。日本発で日本語UIと日本語ドキュメントが公式にあり、Namazuの置き換え先になります。導入手順とライセンスまで。"
+  },
+  "plane": {
+    "seoTitle": "Planeを日本語で使う｜課題・サイクル管理を自社サーバーで",
+    "summary": "Planeを日本語で使うための案内。課題・サイクル・モジュール・文書をまとめて管理できます。公式の日本語UIがあり、当社はPlane JP Deployment Kitを公開しています。導入手順、ライセンス、カスタマイズ相談まで。"
+  },
+  "bookstack": {
+    "seoTitle": "BookStackを日本語で使う｜社内マニュアルを置くWiki（MIT）",
+    "summary": "BookStackを日本語で使うための案内。本・章・ページの階層で社内マニュアルや手順書を整理できます。日本語ファイルあり、ライセンスはMIT。導入手順と、既存の文書からの移行相談まで。"
+  },
+  "nocodb": {
+    "seoTitle": "NocoDBを日本語で使う｜Airtable代替とライセンスの注意",
+    "summary": "NocoDBを日本語で使うための案内。既存のデータベースに表計算のような画面を付けられます。日本語は一部のみ、ライセンスはSustainable Use Licenseで商用利用に条件があります。導入手順と注意点まで。"
+  },
+  "ocrmypdf": {
+    "seoTitle": "OCRmyPDFで日本語をOCR｜紙のPDFを検索できる形にする",
+    "summary": "OCRmyPDFの使いどころの案内。スキャンしたPDFに文字層を足して、検索・コピーできるPDFに変えます。日本語は言語データを足せば読めます。導入手順、ライセンス、大量の書類をまとめて処理する相談まで。"
+  },
+  "wrenai": {
+    "seoTitle": "WrenAIとは｜自然文の質問をSQLに変える自社サーバー型BI",
+    "summary": "WrenAIの使いどころの案内。自然文の質問をSQLとダッシュボードに変えるGenBI基盤で、BigQuery・PostgreSQLなどに接続できます。日本語UIはありません。ライセンス（AGPL-3.0ほか）と導入の相談まで。"
+  },
+  "redash": {
+    "seoTitle": "redashとは｜SQLの結果を共有するダッシュボード（BSD）",
+    "summary": "redashの使いどころの案内。いろいろなデータソースにSQLで問い合わせ、結果をグラフとダッシュボードで共有できます。日本語UIはありません。ライセンスはBSD-2-Clause。導入手順と社内展開の相談まで。"
+  },
+  "kepler-gl": {
+    "seoTitle": "kepler.glで位置データを地図に｜商圏・エリア分析（MIT）",
+    "summary": "kepler.glの使いどころの案内。大量の緯度経度をブラウザ上の地図に重ねて、商圏やエリアの分布を見られます。日本語は一部のみ、ライセンスはMIT。導入手順と、自社データを載せる相談まで。"
+  },
+  "nominatim": {
+    "seoTitle": "Nominatimで住所を緯度経度に｜OpenStreetMapのジオコーダー",
+    "summary": "Nominatimの使いどころの案内。OpenStreetMapのデータで住所を緯度経度に変換します。顧客リストや候補地を地図に載せる前処理に使えます。日本語UIはありません。ライセンス（GPL-3.0）と自社サーバーでの立て方まで。"
+  },
+  "openrouteservice": {
+    "seoTitle": "openrouteserviceで徒歩10分圏｜道路網で描く到達圏（OSM）",
+    "summary": "openrouteserviceの使いどころの案内。OpenStreetMapの道路網で経路と到達圏（isochrones）を計算できるので、商圏の「徒歩10分」を円ではなく実際の道で描けます。ライセンス（GPL-3.0）と自社サーバーでの立て方まで。"
+  },
+  "allura": {
+    "seoTitle": "Alluraとは｜コード・バグ・Wikiを自前で持つフォージ",
+    "summary": "Alluraの使いどころの案内。ソースコード管理、バグ報告、Wikiを1つにまとめたソフトウェア・フォージです。日本語UIはありません。ライセンスはApache-2.0。導入手順と社内運用の相談まで。"
+  },
+  "gfile": {
+    "seoTitle": "gfileとは｜サーバーを介さずファイルを直接送るOSS（Go・MIT）",
+    "summary": "gfileの使いどころの案内。WebRTCのP2P通信で、サーバーに置かずに相手へ直接ファイルを送ります。Go製でWebAssemblyにも対応。日本語UIはありません。ライセンスはMIT。仕組みと使いどころまで。"
+  },
+  "inventory-sorter": {
+    "seoTitle": "Inventory Sorterとは｜Minecraftの持ち物を整理するMOD（MIT）",
+    "summary": "Inventory Sorterの案内。Minecraftのインベントリやチェストの中身を並べ替えるMODです。Java製、ライセンスはMIT、日本語は一部のみ。何ができるかと、使うときの前提まで。"
+  }
+}

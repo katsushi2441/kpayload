@@ -23,6 +23,26 @@ try {
   harvested = []
 }
 catalog.push(...harvested)
+
+// 検索結果での題名・説明文の上書き（slug → {seoTitle, summary}）。
+// harvest/enrich が harvested を作り直すと手で直した題名が消えるので、別ファイルに分けて最後に重ねる。
+// 2026-09-09 に5件を直接書き換えたが、9/18 の再生成で4件が消えていた（GSCでクリック0のまま）。
+const seoPath = path.join(root, 'data', 'oss-catalog-seo.json')
+try {
+  const seo = JSON.parse(await fs.readFile(seoPath, 'utf8')) as Record<string, { seoTitle?: string; summary?: string }>
+  let applied = 0
+  for (const item of catalog) {
+    const o = seo[String(item.slug)]
+    if (!o) continue
+    if (o.seoTitle) (item as Record<string, unknown>).seoTitle = o.seoTitle
+    if (o.summary) (item as Record<string, unknown>).summary = o.summary
+    applied++
+  }
+  console.log(`SEO overrides applied to ${applied} records`)
+} catch {
+  console.log('SEO overrides file not found; skipped')
+}
+
 const payload = await getPayload({ config })
 
 for (const item of catalog) {
