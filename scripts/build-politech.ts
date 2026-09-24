@@ -52,20 +52,55 @@ const T = {
   kriskarea: { name: 'Kurage 災害危険区域マップ', what: '住所を入れると建築基準法39条の災害危険区域か、根拠条例と基準の高さまで出る', demo: `${KURAGE}/kriskarea.php/?ref=${REF}`, buy: `${KAPP}23c57241bd8df841&ref=${REF}` },
   kjishin: { name: 'Kurage 地震ハザードマップ', what: '地番で揺れやすさと液状化を判定（名古屋版）', demo: `${KURAGE}/kjishin.php/?ref=${REF}`, buy: `${KAPP}51649180bea0fd57&ref=${REF}` },
   kbilling: { name: '請求書発行 kbilling／領収書 kinvoice', what: '会費の請求と消し込み、寄附やパーティー券の領収書', buy: `${KAPP}15abb025dc2ee4f6&ref=${REF}` },
+  // 2026-09-25 追加。/politech/ の流入が伸び（9月上旬2件/日→9/23に136件）、GSCでも
+  // 保育園の空き状況・敬老パスが4〜8位で表示されているのに、載せている製品が
+  // kseido/kfacilities/kouchou の3本しか無かった。住民の困りごとに直接当たるものを足す。
+  kgakudo: { name: 'Kurage 学童保育ナビ', what: '住所→その自治体の学童の待機児童数（こども家庭庁の全国調査）', demo: `${KURAGE}/kgakudo.php/?ref=${REF}`, buy: `${KAPP}f2853d368ddf8e57&ref=${REF}` },
+  khoudei: { name: 'Kurage 放課後等デイサービスナビ', what: '住所→近くの放課後等デイ・児童発達支援を定員つきで', demo: `${KURAGE}/khoudei.php/?ref=${REF}`, buy: `${KAPP}38ed38e789c77ec2&ref=${REF}` },
+  kkaigo: { name: 'Kurage 訪問介護・ケアマネナビ', what: '住所→近くの訪問介護・ケアマネ事業所。公表データから消えた事業所も追える', demo: `${KURAGE}/kkaigo.php/?ref=${REF}`, buy: `${KAPP}57aebd041b7bab37&ref=${REF}` },
+  khokan: { name: 'Kurage 訪問看護ナビ', what: '訪問看護ステーションを名前・住所から。24時間対応・精神科の届出の有無つき', demo: `${KURAGE}/khokan.php/?ref=${REF}`, buy: `${KAPP}2bdf59a8795a50e8&ref=${REF}` },
+  kghome: { name: 'Kurage 障害者グループホームナビ', what: '住所→近くのグループホームを運営法人つきで', demo: `${KURAGE}/kghome.php/?ref=${REF}`, buy: `${KAPP}bf709cfc7b0bf51a&ref=${REF}` },
+  kshuro: { name: 'Kurage 就労継続支援ナビ', what: '住所→近くの就労継続支援A型・B型事業所を定員つきで', demo: `${KURAGE}/kshuro.php/?ref=${REF}`, buy: `${KAPP}790cee5b922df2e4&ref=${REF}` },
+  kacnavi: { name: 'Kurage AfterCare Navi', what: '身内が亡くなったあとの手続き48件を故人の状況で絞る。期限は法令の条文で裏取り', demo: `${KURAGE}/kacnavi.php/?ref=${REF}`, buy: `${KAPP}60a6c07508d735ac&ref=${REF}` },
+  kminpaku: { name: 'Kurage 民泊できる場所チェック', what: '住所→用途地域と、その自治体の民泊の上乗せ条例の区域・期間を原文のまま', demo: `${KURAGE}/kminpaku.php/?ref=${REF}`, buy: `${KAPP}c36227d2b62b8517&ref=${REF}` },
+  kmorido: { name: 'Kurage 盛土規制区域マップ', what: '住所→宅地造成等工事規制区域・特定盛土等規制区域かを判定', demo: `${KURAGE}/kmorido.php/?ref=${REF}`, buy: `${KAPP}40efd031ba24c9d8&ref=${REF}` },
+  kshuisho: { name: 'Kurage 質問主意書アシスト', what: '衆参の質問主意書と政府答弁書を本文までことばで引く。「お答えすることは困難」を数える', demo: `${KURAGE}/kshuisho.php/?ref=${REF}`, buy: `${KAPP}9701841975d2ed6a&ref=${REF}` },
+  kchinjo: { name: 'Kurage 陳情ナビ', what: '陳情の出し方と、出した先・結果の記録（名古屋市版・制度ナビ同梱）', demo: `${KURAGE}/kchinjo.php/?ref=${REF}`, buy: `${KAPP}f09c91eaf0a60a2b&ref=${REF}` },
 } satisfies Record<string, Tool>
 
+// テーマごとに出す製品。**関連の薄いものを並べない。** 全部載せると、どれも読まれなくなる。
+// 上から順に出るので、そのテーマで検索している人がいちばん使うものを先に置く。
 const THEME_TOOLS: Record<string, (keyof typeof T)[]> = {
-  bousai: ['kflood', 'khazard', 'ktsunami', 'krefuge', 'kriskarea', 'kjishin', 'kseido'],
-  kosodate: ['kseido', 'kfacilities', 'kouchou'],
-  shussan: ['kseido', 'kouchou'],
-  kyoiku: ['kseido', 'kouchou'],
-  futoko: ['kseido', 'kouchou'],
-  fukushi: ['kseido', 'kecnavi'],
-  seikatsu: ['kseido', 'khojokin', 'kecnavi', 'fixmystreet'],
-  senkyo: ['alaveteli', 'kbilling', 'kouchou'],
-  chiiki: ['kseido', 'khojokin', 'kshoken', 'kecnavi'],
+  bousai: ['kflood', 'khazard', 'ktsunami', 'krefuge', 'kriskarea', 'kjishin', 'kmorido', 'kseido'],
+  kosodate: ['kgakudo', 'kseido', 'khoudei', 'kfacilities', 'kouchou'],
+  shussan: ['kseido', 'kgakudo', 'kouchou'],
+  kyoiku: ['kgakudo', 'khoudei', 'kseido', 'kouchou'],
+  futoko: ['khoudei', 'kseido', 'kouchou'],
+  fukushi: ['kseido', 'kkaigo', 'khokan', 'kghome', 'kshuro', 'kacnavi', 'kecnavi'],
+  seikatsu: ['kseido', 'kacnavi', 'khojokin', 'kecnavi', 'fixmystreet'],
+  senkyo: ['kshuisho', 'kchinjo', 'alaveteli', 'kbilling', 'kouchou'],
+  chiiki: ['kseido', 'khojokin', 'kshoken', 'kminpaku', 'kecnavi'],
+  // nagoya は「敬老パス」と「保育園空き状況」が同居する寄せ集めなので、
+  // 対象の分かれる製品（kgakudo・kkaigo）はここに置かず KW_TOOLS で当てる。
   nagoya: ['kecnavi', 'kseido', 'khojokin', 'kfacilities', 'kflood', 'khazard'],
 }
+// **テーマだけでは当たらない語がある。** nagoya（名古屋市のくらし・34語）には
+// 「敬老パス」と「保育園空き状況」が同居しているので、テーマ単位の並びだと
+// 敬老パスのページに学童保育ナビが出る（2026-09-25 に本番で出てしまった）。
+// slug で見て、その語を調べている人が実際に使うものを前に出す。
+// ここに当たったものが先、残りをテーマの並びから埋める。
+const KW_TOOLS: [RegExp, (keyof typeof T)[]][] = [
+  [/hoikuen|gakudou|gakudo|kodomo-iryou|gakudou-hoiku/, ['kgakudo', 'khoudei', 'kseido']],
+  [/keirou|kourei|kaigo|mimamori|chiiki-houkatsu/, ['kkaigo', 'khokan', 'kseido']],
+  [/kodoku-shi|souzoku|sougi|ihin|shibou/, ['kacnavi', 'kseido', 'kkaigo']],
+  [/shuurou|shougai|hattatsu/, ['kshuro', 'kghome', 'khoudei', 'kseido']],
+  [/boshi-katei|hitori-oya|shinguru-mazaa/, ['kseido', 'kgakudo', 'khoudei']],
+  [/kyuujitsu|shinryou/, ['kseido', 'kecnavi']],
+  [/minpaku|akiya|ijuu|iju-/, ['kminpaku', 'kseido']],
+  [/chinjou|seigan|shitsumon|kokkai|giin/, ['kshuisho', 'kchinjo']],
+  [/morido|zousei|gakechi/, ['kmorido', 'kriskarea', 'khazard']],
+]
+
 const THEME_PV: Record<string, string[]> = {
   bousai: ['bousai', 'hazard', 'giin'], kosodate: ['kecnavi', 'giin', 'kfacilities'], shussan: ['kecnavi', 'giin'], kyoiku: ['kecnavi', 'giin'],
   futoko: ['kecnavi', 'giin'], fukushi: ['kecnavi', 'giin'], seikatsu: ['kecnavi', 'giin'], senkyo: ['giin', 'kecnavi'], chiiki: ['kecnavi', 'giin'], nagoya: ['kecnavi', 'kfacilities', 'bousai'],
@@ -127,7 +162,10 @@ function pageHtml(k: Kw): string {
   const url = `${BASE}/${k.slug}.html`
   const title = `${c.title}｜政党・議員事務所が動くページで答える | 株式会社エクスブリッジ`
   const desc = c.lead.slice(0, 118)
-  const tools = (THEME_TOOLS[k.theme] || ['kseido']).map((id) => T[id])
+  // slug に当たった製品を先に、残りをテーマの並びから。**6本まで**（全部載せると読まれない）
+  const hit = KW_TOOLS.find(([re]) => re.test(k.slug))?.[1] || []
+  const ids = [...new Set([...hit, ...(THEME_TOOLS[k.theme] || ['kseido'])])].slice(0, 6)
+  const tools = ids.map((id) => T[id])
   const related = (byTheme.get(k.theme) || []).filter((x) => x.slug !== k.slug).slice(0, 12)
   const contact = `${SITE}/contact.php?subject=${encodeURIComponent(`${k.keyword}（政党・政治団体のAI活用の相談）`)}`
   const body = `
