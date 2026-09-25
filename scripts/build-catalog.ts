@@ -52,6 +52,8 @@ const RULES: Array<[string, RegExp]> = [
   ['lowcode', /(ローコード|ノーコード|low.?code|no.?code|管理画面|社内ツール|内部ツール|admin\s*panel|フォームビルダー|ドラッグ)/i],
   ['sitegen', /(静的サイト|サイトジェネレータ|static\s*site|ウェブサイト(を|の)?(構築|生成)|ブログエンジン|ヘッドレスcms|headless)/i],
   ['automation', /(ワークフロー|自動化|オートメーション|ジョブ|スケジュ|パイプライン|連携基盤|iPaaS|webhook)/i],
+  // 先に映像監視を判定する。『監視』だけだと monitoring に吸われる
+  ['surveillance', /(nvr|cctv|防犯カメラ|映像監視|surveillance|ip ?camera|動体検知|rtsp)/i],
   ['monitoring', /(監視|アラート|ログ(収集|管理|基盤)|障害|稼働状況|ヘルスチェック|apm)/i],
   ['media', /(音声|画像(生成|編集)|動画|映像|tts|音楽|字幕|読み上げ)/i],
   ['database', /(データベース|db\b|sql|nosql|データストア|キャッシュ|検索エンジン(を|の)?(構築|提供))/i],

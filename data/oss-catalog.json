@@ -6197,5 +6197,207 @@
     "answer": "日本語ファイルがあります。訳の網羅度は確認が要ります。"
    }
   ]
+ },
+ {
+  "name": "Frigate",
+  "slug": "frigate",
+  "category": "surveillance",
+  "featured": true,
+  "summary": "IPカメラの映像を、その場のAIで物体検出しながら録画するNVR（ネットワークビデオレコーダー）です。",
+  "description": "人・車・動物などを検出したときだけを記録し、通知します。判定はサーバーの中で完結するため、映像を外部のクラウドへ送りません。検出にはGoogle Coralなどのアクセラレータを使えますが、CPUだけでも動きます。Home Assistantとの連携が広く使われています。",
+  "license": "MIT",
+  "japaneseStatus": "公式の日本語UI翻訳あり（web/public/locales/ja 配下に32ファイル・2026-09-25実測）。設定ファイルとドキュメントは英語です。",
+  "officialUrl": "https://frigate.video/",
+  "githubUrl": "https://github.com/blakeblackshear/frigate",
+  "useCases": [
+   {
+    "text": "映像を社外に出せない拠点の録画"
+   },
+   {
+    "text": "人が映ったときだけ記録・通知"
+   },
+   {
+    "text": "既設IPカメラの活用"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Frigate 構築"
+   },
+   {
+    "text": "防犯カメラ オンプレミス"
+   },
+   {
+    "text": "NVR オープンソース"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "映像はクラウドに送られますか？",
+    "answer": "送られません。検出も録画もサーバーの中で完結します。外部に出すかどうかは、通知の宛先を含めて設定で決めます。"
+   },
+   {
+    "question": "カメラは新しく買う必要がありますか？",
+    "answer": "RTSPで映像を出せるIPカメラであれば、既設のものを使えます。対応の可否は機種ごとに確認が必要です。"
+   }
+  ],
+  "funnel": "oss",
+  "jaFileCount": 32,
+  "jaSamplePaths": [
+   {
+    "text": "web/public/locales/ja/common.json"
+   },
+   {
+    "text": "web/public/locales/ja/components/camera.json"
+   },
+   {
+    "text": "web/public/locales/ja/audio.json"
+   }
+  ]
+ },
+ {
+  "name": "ZoneMinder",
+  "slug": "zoneminder",
+  "category": "surveillance",
+  "featured": false,
+  "summary": "2000年代から続く、監視カメラ（CCTV）の録画・再生ソフトです。",
+  "description": "複数のカメラを登録し、動体検知で録画してWebブラウザから見返せます。AIの物体検出は標準では持たず、動きの量で判定します。長く使われてきたぶん資料が多い一方、ライセンスがGPL-2.0なので、組み込んで配布する場合は条件を確認する必要があります。",
+  "license": "GPL-2.0",
+  "japaneseStatus": "日本語UIファイルあり（web/lang/ja_jp.php・2026-09-25実測）。翻訳の網羅度は画面により差があります。",
+  "officialUrl": "https://zoneminder.com/",
+  "githubUrl": "https://github.com/ZoneMinder/zoneminder",
+  "useCases": [
+   {
+    "text": "複数カメラの常時録画"
+   },
+   {
+    "text": "動体検知での記録"
+   },
+   {
+    "text": "過去映像の検索・再生"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "ZoneMinder 構築"
+   },
+   {
+    "text": "監視カメラ OSS"
+   },
+   {
+    "text": "CCTV オープンソース"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "FrigateとZoneMinderはどう違いますか？",
+    "answer": "Frigateは物体をAIで見分けて「人が映ったときだけ」記録できます。ZoneMinderは動きの量で判定するため、木の揺れや光の変化でも記録されることがあります。"
+   },
+   {
+    "question": "GPL-2.0だと何に気をつけますか？",
+    "answer": "改変して顧客に納品する場合、ソースコードの提供義務が生じ得ます。自社利用か納品かで扱いが変わるため、事前に確認します。"
+   }
+  ],
+  "funnel": "oss",
+  "jaFileCount": 1,
+  "jaSamplePaths": [
+   {
+    "text": "web/lang/ja_jp.php"
+   }
+  ]
+ },
+ {
+  "name": "Viseron",
+  "slug": "viseron",
+  "category": "surveillance",
+  "featured": false,
+  "summary": "ローカル完結のNVRとAI画像認識を1つにまとめた、セルフホスト型の映像監視ソフトです。",
+  "description": "物体検出・顔認識・ナンバープレート読み取りを、用途に応じて組み合わせて使えます。Frigateより構成の自由度が高い一方、設定はYAMLで書く前提です。ライセンスがMITなので、改変して納品する場合の条件がゆるいのが利点です。",
+  "license": "MIT",
+  "japaneseStatus": "日本語の翻訳ファイルはありません（2026-09-25実測）。UI・ドキュメントとも英語です。",
+  "officialUrl": "https://viseron.netlify.app/",
+  "githubUrl": "https://github.com/roflcoopter/viseron",
+  "useCases": [
+   {
+    "text": "物体検出と顔認識の組み合わせ"
+   },
+   {
+    "text": "ナンバープレートの読み取り"
+   },
+   {
+    "text": "軽量な構成での常時録画"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "Viseron 構築"
+   },
+   {
+    "text": "NVR セルフホスト"
+   },
+   {
+    "text": "顔認識 オープンソース"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "顔認識を使うときに注意することはありますか？",
+    "answer": "顔の特徴量は個人情報にあたります。取得の目的、保存期間、開示請求への対応をあらかじめ決めておく必要があります。"
+   },
+   {
+    "question": "日本語化はできますか？",
+    "answer": "翻訳ファイルが用意されていないため、日本語化するには画面の文言を自分で差し替える作業が必要です。"
+   }
+  ],
+  "funnel": "oss",
+  "jaFileCount": 0,
+  "jaSamplePaths": []
+ },
+ {
+  "name": "MediaMTX",
+  "slug": "mediamtx",
+  "category": "surveillance",
+  "featured": false,
+  "summary": "カメラの映像を受けて、RTSP・WebRTC・HLSなど複数の方式で配り直すメディアサーバーです。",
+  "description": "録画や検知そのものは行いません。カメラとNVR、あるいはカメラとブラウザの間に置いて、方式の変換と中継をします。「社内のカメラ映像をブラウザで見たい」「1台のカメラを複数の用途で使いたい」ときに、この層が必要になります。設定ファイル1つとバイナリ1つで動きます。",
+  "license": "MIT",
+  "japaneseStatus": "日本語の翻訳ファイルはありません（2026-09-25実測）。画面を持たないサーバーで、設定は英語のYAMLです。",
+  "officialUrl": "https://github.com/bluenviron/mediamtx",
+  "githubUrl": "https://github.com/bluenviron/mediamtx",
+  "useCases": [
+   {
+    "text": "RTSPをブラウザで見られる形に変換"
+   },
+   {
+    "text": "1台のカメラを複数の用途へ分配"
+   },
+   {
+    "text": "遅延の小さい映像の社内配信"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "MediaMTX 構築"
+   },
+   {
+    "text": "RTSP WebRTC 変換"
+   },
+   {
+    "text": "カメラ映像 社内配信"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "これだけで防犯カメラになりますか？",
+    "answer": "なりません。録画と検知はFrigateなどが担当します。MediaMTXは映像を受け渡す配管にあたる部分です。"
+   },
+   {
+    "question": "なぜ必要になりますか？",
+    "answer": "カメラが出す方式（多くはRTSP）は、ブラウザでそのまま再生できません。見る側の方式に変換する層が要ります。"
+   }
+  ],
+  "funnel": "prototype",
+  "jaFileCount": 0,
+  "jaSamplePaths": []
  }
 ]

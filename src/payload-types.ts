@@ -144,6 +144,7 @@ export interface OssProject {
     | 'mobile'
     | 'commerce'
     | 'monitoring'
+    | 'surveillance'
     | 'groupware'
     | 'knowledge'
     | 'office'

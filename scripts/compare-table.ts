@@ -67,9 +67,18 @@ export function compareTable(rows: CmpRow[], o: CmpOpts): string {
   const all = o.all ?? rows
   const shown = rows.slice(0, max)
   if (!shown.length) return ''
-  const hasJa = (r: CmpRow) => r.japaneseStatus === '日本語ファイルあり' || r.japaneseStatus === '日本語ファイルが一部のみ'
+  // 収集した掲載は japaneseStatus が定型文（日本語ファイルあり／一部のみ／なし）。
+  // 手書きの掲載は実測を自由文で書くので、そちらは jaFileCount で数える。
+  // 数えないと「4件のうち実在するのは0件、無いのは0件」と件数が合わない表示になる
+  // （2026-09-25 時点で hazard・surveillance などで出ていた）。
+  const jaCountOf = (r: CmpRow) => (typeof r.jaFileCount === 'number' ? r.jaFileCount : null)
+  const hasJa = (r: CmpRow) =>
+    r.japaneseStatus === '日本語ファイルあり' || r.japaneseStatus === '日本語ファイルが一部のみ' ||
+    ((jaCountOf(r) ?? 0) > 0)
+  const noJa = (r: CmpRow) =>
+    r.japaneseStatus === '日本語ファイルなし' || (jaCountOf(r) === 0 && !hasJa(r))
   const jaCount = all.filter(hasJa).length
-  const noJaCount = all.filter((r) => r.japaneseStatus === '日本語ファイルなし').length
+  const noJaCount = all.filter(noJa).length
   const demoRows = all.filter((r) => DEMOS[r.slug])
   const kitRows = all.filter((r) => KAPP_KITS[r.slug] && !KAPP_KITS[r.slug].product)
   const uniq = (xs: string[]) => [...new Set(xs)]

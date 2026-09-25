@@ -32,6 +32,8 @@ export const OSSProjects: CollectionConfig = {
         { label: 'モバイルアプリ', value: 'mobile' },
         { label: 'EC・販売', value: 'commerce' },
         { label: '監視・運用', value: 'monitoring' },
+        // カメラ映像の録画・検知。システム監視(monitoring)とは別物なので分ける
+        { label: '映像監視・防犯', value: 'surveillance' },
         { label: 'グループウェア', value: 'groupware' },
         { label: 'ナレッジ・AI', value: 'knowledge' },
         { label: 'オフィス', value: 'office' },

@@ -22,4 +22,9 @@ export const categoryLabels: Record<string, string> = {
   booking: '予約・受付', survey: 'アンケート・フォーム', pos: 'POS・店舗', dms: '文書管理',
   lowcode: 'ローコード開発', analytics: '分析・BI', aidev: 'AI開発基盤', devtools: '開発者ツール',
   sitegen: 'サイト構築・静的生成', automation: '自動化・連携', devsupport: '開発支援ツール',
+  // ここに無いカテゴリは、公開ページに英語のスラッグがそのまま出る
+  // （2026-09-25 時点で surveillance/hazard/medical/meeting/security が出ていた）。
+  // src/collections/OSSProjects.ts に選択肢を足したら、必ずここにも足す。
+  surveillance: '映像監視・防犯', hazard: '防災・ハザード', medical: '医療・クリニック',
+  meeting: '議事録・文字起こし', security: 'セキュリティ・認証',
 }
