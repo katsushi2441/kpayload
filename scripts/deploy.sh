@@ -13,6 +13,7 @@
 #   bash scripts/deploy.sh zenn       # exbridge: zenn/
 #   bash scripts/deploy.sh politech   # exbridge: politech/（政治・政策キーワード）
 #   bash scripts/deploy.sh outsourcing # exbridge: outsourcing/
+#   bash scripts/deploy.sh vibeblog   # exbridge: vibeblog/（VWorkブログの移設先）
 #   bash scripts/deploy.sh all
 #
 # なぜ dist/ を先に同期するか（2026-09-09）:
@@ -97,6 +98,16 @@ if [ "$what" = "outsourcing" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: outsourcing/ =="
   sync_dist outsourcing
   put_tree /home/kojima/work/exbridge_jp exbridge_jp outsourcing || rc=1
+fi
+
+if [ "$what" = "vibeblog" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: vibeblog/ =="
+  # canonical-map.json は GitHub Pages 側の向け替えに使う作業用ファイル。公開しない。
+  sync_dist vibeblog
+  # 記事ごとのトップ画像（= og:image）。サーバーに無いものだけ1接続で送る
+  /usr/bin/python3 "$(dirname "$0")/make_vibeblog_eyecatch.py" --sync || rc=1
+  rm -f /home/kojima/work/exbridge_jp/vibeblog/canonical-map.json
+  put_tree /home/kojima/work/exbridge_jp exbridge_jp vibeblog || rc=1
 fi
 
 exit $rc
