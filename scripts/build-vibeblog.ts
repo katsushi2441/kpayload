@@ -437,6 +437,20 @@ await fs.mkdir(distRoot, { recursive: true })
 for (let i = 0; i < posts.length; i++) {
   await fs.writeFile(path.join(distRoot, `${posts[i].slug}.html`), postHtml(posts[i], i), 'utf8')
 }
+// 本文の画像（vwork/blog/assets/）を /vibeblog/assets/ に写す。
+// これが無くて、画像入りの記事は /vibeblog/ で画像が全部404だった（2026-09-28 に発見。9/09・7/31 の記事も）。
+{
+  const want = new Set<string>()
+  for (const p of posts) for (const m of p.html.matchAll(/\/vibeblog\/assets\/([^"'?#\s)]+)/g)) want.add(decodeURIComponent(m[1]))
+  if (want.size) await fs.mkdir(path.join(distRoot, 'assets'), { recursive: true })
+  for (const f of want) {
+    const src = path.join(VWORK, 'blog', 'assets', f)
+    if (!existsSync(src)) { console.warn(`画像が見つかりません: blog/assets/${f}`); continue }
+    await fs.mkdir(path.dirname(path.join(distRoot, 'assets', f)), { recursive: true })
+    await fs.copyFile(src, path.join(distRoot, 'assets', f))
+  }
+  console.log(`本文の画像: ${want.size}枚を assets/ へ`)
+}
 await fs.writeFile(path.join(distRoot, 'index.html'), indexHtml(), 'utf8')
 
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
