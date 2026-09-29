@@ -44,6 +44,8 @@ type SolutionPage = {
   /** 「ITコストを下げる/SaaS代替」の型が合わないページ用の見出し上書き。
    *  例: 既存システムの機能拡張は受託開発の相談であってSaaS代替ではない(2026-09-05)。 */
   titleOverride?: string; h1Override?: string; descOverride?: string
+  /** 商品の枠の説明文の上書き（導入キットが共有レンタルサーバー向けでない場合など）。 */
+  productsNote?: string
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -126,7 +128,7 @@ ${oss.map((o) => `<tr><th><a href="${SITE}/ai-system/${attr(o.slug)}/?ref=soluti
 
 ${p.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミスの商品（Kurage App Store）</h2>
-<p>当社が販売しているオンプレミスの商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。</p>
+<p>${p.productsNote ? h(p.productsNote) : '当社が販売しているオンプレミスの商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。'}</p>
 <div class="cat-grid">
 ${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）・Kurage App Store</span></a>`).join('')}
 </div>

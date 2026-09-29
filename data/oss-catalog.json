@@ -6399,5 +6399,63 @@
   "funnel": "prototype",
   "jaFileCount": 0,
   "jaSamplePaths": []
+ },
+ {
+  "name": "OpenVPM",
+  "slug": "openvpm",
+  "category": "medical",
+  "featured": false,
+  "summary": "動物病院のための電子カルテ・予約・会計・在庫の管理システムです。オープンソース（AGPLv3）で、自院のサーバーで動かせます。",
+  "description": "SOAP形式のカルテ、ワクチン接種、処方、検査結果、獣医師ごとの予約表、請求書と会計、薬と予防薬の在庫、飼い主ポータルまでを1つにまとめています。本家は英語のみですが、当社が日本語化したフォーク（OpenVPM 日本語版）があり、円・消費税10%・姓名の順・和暦の日付に対応しています。紙カルテは表計算ソフトのCSVで取り込めます。",
+  "license": "AGPL-3.0",
+  "japaneseStatus": "本家は英語のみ。当社の日本語版（非公式フォーク katsushi2441/openvpm-jp）で画面約3,800語を日本語化済み。",
+  "officialUrl": "https://openvpm.com",
+  "githubUrl": "https://github.com/evangauer/openvpm",
+  "lpUrl": "https://exbridge.jp/solution/doubutsu.html",
+  "useCases": [
+   {
+    "text": "動物病院の電子カルテ（SOAP記録・ワクチン・処方・検査）"
+   },
+   {
+    "text": "獣医師ごとの予約表と受付・会計"
+   },
+   {
+    "text": "紙カルテからの移行（表計算のCSVで取り込み）"
+   },
+   {
+    "text": "薬・予防薬・消耗品の在庫管理"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "動物病院 電子カルテ"
+   },
+   {
+    "text": "動物病院 カルテ"
+   },
+   {
+    "text": "紙カルテ 電子化"
+   },
+   {
+    "text": "OpenVPM 日本語"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "OpenVPMは日本語で使えますか？",
+    "answer": "本家は英語のみです。当社が日本語化したフォーク（OpenVPM 日本語版・GitHubで公開）を使うと、メニューや表示が日本語になり、円・消費税10%・姓名の順・和暦の日付にも対応します。本家とは提携していない非公式版です。"
+   },
+   {
+    "question": "紙カルテから移行できますか？",
+    "answer": "紙カルテを表計算ソフトに打ち込み、飼い主・患者・ワクチン歴・診療記録の4つのCSVで取り込めます。日本語の列名や、犬・猫・去勢オス・避妊メスといった書き方、ExcelのShift_JISのCSVのままでも読めます。取り込みは試し実行で確かめてから確定します。"
+   },
+   {
+    "question": "月額の費用はかかりますか？",
+    "answer": "ソフト自体に利用料はかかりません。自院のサーバー（院内のPCやVPS）の費用と、運用の手間は必要です。"
+   }
+  ],
+  "sourceLpName": "動物病院の電子カルテ OpenVPM 日本語版 導入キット",
+  "funnel": "oss",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=302ada8100bb954f"
  }
 ]

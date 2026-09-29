@@ -91,5 +91,9 @@
   "inventory-sorter": {
     "seoTitle": "Inventory Sorterとは｜Minecraftの持ち物を整理するMOD（MIT）",
     "summary": "Inventory Sorterの案内。Minecraftのインベントリやチェストの中身を並べ替えるMODです。Java製、ライセンスはMIT、日本語は一部のみ。何ができるかと、使うときの前提まで。"
+  },
+  "openvpm": {
+    "seoTitle": "OpenVPMを日本語で使う｜動物病院の電子カルテ（オープンソース）",
+    "summary": "動物病院の電子カルテ・予約・会計・在庫をまとめたオープンソース（AGPLv3）。日本語版で円・消費税10%・和暦に対応し、紙カルテは表計算のCSVで移行できます。"
   }
 }

@@ -37,6 +37,8 @@ export const KAPP_KITS: Record<string, KappKit> = {
   paperless: { id: '2c8193abe130c90c', label: 'paperless-ngx 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-05-paperless-ngx-japanese-ocr.html' },
   // Appsmith は翻訳キットではなく「初回起動の破損からの復旧」＋英語画面の読み替えが売り。
   appsmith: { id: 'a5109169d3b23989', label: 'Appsmith 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-05-appsmith-first-boot-brick.html' },
+  // 2026-09-29 動物病院の電子カルテ（本家に翻訳の仕組みが無く、当社の日本語版フォーク＋紙カルテ移行が売り）
+  openvpm: { id: '302ada8100bb954f', label: '動物病院の電子カルテ OpenVPM 日本語版 導入キットを見る', price: '税込5,500円（オンプレミス）' },
   // 導入キットではなく「そのOSSを使って当社が作ったオンプレミスの製品」。
   // kkintai は勤怠分類(/ai-system/c/attendance/・GSC 11.8位)の出口。分類ページのカード列にも出す。
   kkintai: { id: 'f0f56c6e4da881be', label: '顔打刻つき勤怠管理 Kurage Kintai（オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true },
