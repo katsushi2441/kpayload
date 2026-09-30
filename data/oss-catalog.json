@@ -6457,5 +6457,61 @@
   "sourceLpName": "動物病院の電子カルテ OpenVPM 日本語版 導入キット",
   "funnel": "oss",
   "buyUrl": "https://kappstore.exbridge.jp/app.php?id=302ada8100bb954f"
+ },
+ {
+  "name": "OpenDolphin",
+  "slug": "opendolphin",
+  "category": "medical",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "日本の診療所向けに作られたオープンソースの電子カルテです（GPL-3.0）。カルテの記載・処方・病名・検査結果を扱い、日医のORCA（日レセ）とつないで保険請求を行う構成が前提です。",
+  "description": "OpenDolphinは、国内の診療所で使われてきた日本製のオープンソース電子カルテです。医師が使うクライアント（Java）と、院内に置くサーバー（Java EE）でできていて、保険請求のレセプトは日本医師会のORCA（日医標準レセプトソフト）と接続して行います。本家（dolphin-dev/OpenDolphin）の最終版は2018年の2.7.1で、リポジトリの更新は2023年4月が最後です。いま手が入っているのは個人が保守しているフォーク（OpenDolphin-2.7m など）です。厚生労働省が進める電子カルテの標準仕様と認証制度（2027年4月から認証製品の提供を目指す）の対象はクラウド型の製品で、自院のサーバーに置くOpenDolphinは想定されていません。安全管理ガイドラインへの対応や停止時の備えも、導入する医療機関側で用意する必要があります。",
+  "license": "GPL-3.0",
+  "licenseTier": "osi-copyleft",
+  "japaneseStatus": "日本製で、画面も用語も日本語です。",
+  "officialUrl": "https://github.com/dolphin-dev/OpenDolphin",
+  "githubUrl": "https://github.com/dolphin-dev/OpenDolphin",
+  "stars": 61,
+  "language": "Java",
+  "lpUrl": "https://exbridge.jp/solution/denshi-karte.html",
+  "useCases": [
+   {
+    "text": "診療所の電子カルテ（記載・処方・病名・検査結果）"
+   },
+   {
+    "text": "ORCA（日レセ）と接続して保険請求まで行う"
+   },
+   {
+    "text": "カルテのデータを自院のサーバーで持つ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "電子カルテ オープンソース"
+   },
+   {
+    "text": "電子カルテ 無料"
+   },
+   {
+    "text": "OpenDolphin"
+   },
+   {
+    "text": "紙カルテ 電子化"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "OpenDolphinは今も使えますか？",
+    "answer": "動かすことはできますが、本家の最終版は2018年の2.7.1で、リポジトリの更新は2023年4月が最後です。いま手が入っているのは個人が保守しているフォークなので、長く使う前提なら、保守を誰が担うかを先に決める必要があります。"
+   },
+   {
+    "question": "保険請求（レセプト）までできますか？",
+    "answer": "OpenDolphin単体ではできません。日本医師会のORCA（日医標準レセプトソフト）と接続して行う構成が前提です。ORCAの本体は無償公開されていますが、プログラムとマスタの更新には日本医師会ORCA管理機構との契約が必要です。"
+   },
+   {
+    "question": "国の標準型電子カルテや認証制度の対象になりますか？",
+    "answer": "なりません。厚生労働省の標準仕様と認証制度が対象にしているのはクラウド型の製品で、2027年4月から認証を受けた製品の提供を目指しています。国の補助や電子カルテ情報共有サービスへの対応を重視するなら、認証製品か標準型電子カルテを待つほうが確実です。"
+   }
+  ]
  }
 ]
