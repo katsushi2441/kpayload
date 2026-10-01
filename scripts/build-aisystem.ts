@@ -48,7 +48,7 @@ const BASE = `${SITE}/ai-system`
 const SOLUTIONS = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-list.json'), 'utf8')) as Array<{ slug: string; kind: string; name: string; kicker: string; capLinks?: string[] }>
 const AICHAT = SOLUTIONS.filter((p) => p.kind === 'aichat')
 // /solution/ の構成例（kind=combo）のうち、この「できること」を capLinks に挙げたもの（2026-10-02: 全文検索×AIチャットボット）
-const combosFor = (key: string) => SOLUTIONS.filter((p) => p.kind === 'combo' && (p.capLinks || []).includes(key))
+const combosFor = (key: string) => SOLUTIONS.filter((p) => (p.kind === 'combo' || p.kind === 'chatbot') && (p.capLinks || []).includes(key))
 
 
 import { SITE, KURAGE, TRIAL, GA } from './site'

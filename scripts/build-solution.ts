@@ -34,7 +34,7 @@ const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 type SolutionPage = {
-  slug: string; kind: 'industry' | 'gyomu' | 'aichat' | 'combo'; name: string; kicker: string
+  slug: string; kind: 'industry' | 'gyomu' | 'aichat' | 'combo' | 'chatbot'; name: string; kicker: string
   saasSlugs: string[]; extraSaas: string[]; ossPicks: string[]
   products: Array<{ name: string; url: string; price: string }>
   brain: Array<{ label: string; url: string }>
@@ -66,6 +66,9 @@ type SolutionPage = {
   costs?: Array<{ name: string; what: string }>
   /** /ai-system/c/<key>/ に「構成例」として導線を出す（build-aisystem.ts が読む） */
   capLinks?: string[]
+  /** combo/chatbot の締めの見出し・比較表の見出し（無ければ既定の文） */
+  ctaTitle?: string
+  compareTitle?: string
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -104,7 +107,7 @@ function ossCell(p: Project, slug: string): string {
   return links.join(' / ') || '—'
 }
 
-const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談', combo: '構成例' } as const
+const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談', combo: '構成例', chatbot: '業務別AIチャットボット' } as const
 
 /** 開発中のAI相談システムの着地ページ。SaaS代替の型（固定費・OSS表）は当てはまらないので別に組む。
  *  システムはまだ無い。できることは「こう答える予定」と書き、作り物の回答画面は載せない。 */
@@ -118,7 +121,7 @@ function comboPage(p: SolutionPage): string {
   const contact = `${SITE}/contact.php?ref=solution-${encodeURIComponent(p.slug)}&subject=${encodeURIComponent('「' + p.name + '」の構築について相談したい')}#form`
   const ul = (xs?: string[]) => `<ul>${(xs || []).map((x) => `<li>${h(x)}</li>`).join('')}</ul>`
   const body = `<section class="hero"><div class="wrap">
-<p class="kicker">構成例｜${h(p.kicker)}</p>
+<p class="kicker">${KIND_LABEL[p.kind]}｜${h(p.kicker)}</p>
 <h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : h(p.name)}</h1>
 <p class="lead">${h(p.lead || '')}</p>
 <p><a class="btn btn-main" href="${attr(contact)}">構築について相談する（Zoom可）</a>${p.kapp ? ` <a class="btn" href="${attr(p.kapp.url)}${p.kapp.url.includes('?') ? '&' : '?'}ref=solution-${attr(p.slug)}">${h(p.kapp.name)}を見る</a>` : ''}</p>
@@ -130,6 +133,11 @@ function comboPage(p: SolutionPage): string {
 <h2>${h(p.name)}とは</h2>
 <p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
 </div></section>
+
+${(p.asks || []).length ? `<section><div class="panel">
+<h2>こんな質問に答えます</h2>
+${(p.asks || []).map((a) => `<div class="card" style="margin:0 0 10px"><h3>${h(a.q)}</h3><p>${h(a.a)}</p></div>`).join('')}
+</div></section>` : ''}
 
 ${(p.steps || []).length ? `<section><div class="panel">
 <h2>質問してから答えが出るまで</h2>
@@ -144,7 +152,7 @@ ${(p.parts || []).map((x) => `<tr><th>${h(x.name)}</th><td>${h(x.role)}</td></tr
 </div></section>` : ''}
 
 ${p.compare ? `<section><div class="panel">
-<h2>全文検索エンジンの比べ方</h2>
+<h2>${h(p.compareTitle || '全文検索エンジンの比べ方')}</h2>
 <div class="table-wrap"><table><thead><tr>${p.compare.head.map((x) => `<th>${h(x)}</th>`).join('')}</tr></thead><tbody>
 ${p.compare.rows.map((r) => `<tr><th>${h(r[0])}</th>${r.slice(1).map((c) => `<td>${h(c)}</td>`).join('')}</tr>`).join('')}
 </tbody></table></div>
@@ -178,7 +186,7 @@ ${(p.related || []).map((r) => `<a class="cat-card" href="${attr(r.url)}${r.url.
 </div></section>` : ''}
 
 <div class="cta">
-<h2>社内の文書から答えるAIチャットボットを、自社に置きたい方へ</h2>
+<h2>${h(p.ctaTitle || '社内の文書から答えるAIチャットボットを、自社に置きたい方へ')}</h2>
 <p>文書の置き場所（ファイルサーバー・共有フォルダ・社内サイト）と量を伺い、全文検索エンジンとAIの組み合わせを決めます。<strong>初回のご相談は無料</strong>です。Zoomでも対面（名古屋近郊）でも。</p>
 <a class="btn btn-main" href="${attr(contact)}">構築について相談する</a>
 <a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
@@ -386,6 +394,7 @@ function indexPage(): string {
   const gyo = pages.filter((p) => p.kind === 'gyomu')
   const ai = pages.filter((p) => p.kind === 'aichat')
   const combo = pages.filter((p) => p.kind === 'combo')
+  const bots = pages.filter((p) => p.kind === 'chatbot')
   const card = (p: SolutionPage) => `<a class="cat-card" href="${BASE}/${attr(p.slug)}.html"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種・業務別ソリューション</p>
@@ -403,6 +412,11 @@ function indexPage(): string {
 <h2>業務から探す</h2>
 <div class="cat-grid">${gyo.map(card).join('')}</div>
 </div></section>
+${bots.length ? `<section><div class="panel">
+<h2>業務別AIチャットボット</h2>
+<p>防災・自治体・社内・ヘルプデスク・FAQ・LINEなど、業務ごとのAIチャットボットの作り方です。答えの根拠（公開データ・社内の文書）を決め、AIは言い換えるだけにします。</p>
+<div class="cat-grid">${bots.map(card).join('')}</div>
+</div></section>` : ''}
 ${combo.length ? `<section><div class="panel">
 <h2>構成例（オープンソース×AI）</h2>
 <p>オープンソースと当社の製品を組み合わせて、自社に置く構成の例です。</p>
@@ -574,7 +588,7 @@ ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.sl
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 for (const p of pages) {
-  let html = p.kind === 'aichat' ? aichatPage(p) : p.kind === 'combo' ? comboPage(p) : detailPage(p)
+  let html = p.kind === 'aichat' ? aichatPage(p) : (p.kind === 'combo' || p.kind === 'chatbot') ? comboPage(p) : detailPage(p)
   // 既存の業種ページに、マトリクス(業務別ページ)への導線を差し込む
   const ind = matrix.industries.find((i) => i.slug === p.slug)
   if (ind) {
@@ -586,9 +600,9 @@ for (const p of pages) {
   }
   // 開発中のAI相談システム（kind=aichat）のうち、このページを linkFrom に挙げたものへの導線
   const ais = pages.filter((a) => a.kind === 'aichat' && (a.linkFrom || []).includes(p.slug))
-  const combos = pages.filter((a) => a.kind === 'combo' && (a.linkFrom || []).includes(p.slug))
+  const combos = pages.filter((a) => (a.kind === 'combo' || a.kind === 'chatbot') && (a.linkFrom || []).includes(p.slug))
   if (combos.length) {
-    html = html.replace('</main>', `<section><div class="panel"><h2>構成例（オープンソース×AI）</h2>
+    html = html.replace('</main>', `<section><div class="panel"><h2>関連するAIチャットボットの構成</h2>
 <div class="cat-grid">${combos.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
 </div></section>\n</main>`)
   }
