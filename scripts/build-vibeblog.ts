@@ -344,6 +344,24 @@ function postHtml(p: Post, idx: number): string {
       { '@type': 'ListItem', position: 3, name: p.title, item: url },
     ],
   }]
+  // 「## よくある質問」の下に「### 質問」と答えの段落が並ぶ記事は FAQPage も出す（AEO。2026-10-02）。
+  // 見えている本文から組むので、構造化データと本文がずれない
+  {
+    const sec = p.html.split(/<h2[^>]*>\s*よくある質問\s*<\/h2>/)[1]
+    if (sec) {
+      const part = sec.split(/<h2[^>]*>/)[0]
+      const strip = (x: string) => x.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim()
+      const qa: Array<{ q: string; a: string }> = []
+      for (const m of part.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h3|$)/g)) {
+        const q = strip(m[1]); const a = strip(m[2])
+        if (q && a) qa.push({ q, a })
+      }
+      if (qa.length >= 2) {
+        (ld as unknown[]).push({ '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: qa.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) })
+      }
+    }
+  }
 
   const body = `
 <main class="wrap">
