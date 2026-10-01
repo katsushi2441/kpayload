@@ -109,6 +109,12 @@ def targets(which):
     if which in ("solution", "all"):
         p = os.path.join(ROOT, "data", "solution-list.json")
         for it in json.load(open(p, encoding="utf-8")):
+            if it.get("kind") == "aichat":   # 開発中のAI相談システム（2026-10-01）
+                out.append((os.path.join(EXBRIDGE, "images", "ogp", "sol-{}.png".format(it["slug"])),
+                            "AI相談システム・開発中", it["name"].replace("Kurage ", ""),
+                            str(it.get("kicker") or "")[:34],
+                            "Kurage — 株式会社エクスブリッジ（名古屋）", "#0a9a8f"))
+                continue
             out.append((os.path.join(EXBRIDGE, "images", "ogp", "sol-{}.png".format(it["slug"])),
                         "業種・業務別", it["name"],
                         str(it.get("kicker") or "使えるSaaS・OSSと導入の進め方")[:34],
@@ -120,9 +126,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--which", default="all", choices=["oss", "cap", "solution", "all"])
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--only", default="", help="カンマ区切り。出力ファイル名にこの語を含むものだけ作る（例: sol-ktochi）")
     args = ap.parse_args()
 
     jobs = targets(args.which)
+    if args.only:
+        keys = [k for k in args.only.split(",") if k]
+        jobs = [j for j in jobs if any(os.path.basename(j[0]) == k + ".png" for k in keys)]
     if args.limit:
         jobs = jobs[:args.limit]
     for path, _, _, _, _, _ in jobs:

@@ -34,7 +34,7 @@ const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 type SolutionPage = {
-  slug: string; kind: 'industry' | 'gyomu'; name: string; kicker: string
+  slug: string; kind: 'industry' | 'gyomu' | 'aichat'; name: string; kicker: string
   saasSlugs: string[]; extraSaas: string[]; ossPicks: string[]
   products: Array<{ name: string; url: string; price: string }>
   brain: Array<{ label: string; url: string }>
@@ -46,6 +46,16 @@ type SolutionPage = {
   titleOverride?: string; h1Override?: string; descOverride?: string
   /** 商品の枠の説明文の上書き（導入キットが共有レンタルサーバー向けでない場合など）。 */
   productsNote?: string
+  /** kind='aichat'（開発中のAI相談システム）だけが使う欄。2026-10-01 ユーザー決定:
+   *  入口・着地ページだけ先に作り「開発中・要お問い合わせ」にして、アクセスと問い合わせを見てから開発する。 */
+  asks?: Array<{ q: string; a: string }>
+  sources?: Array<{ name: string; what: string }>
+  how?: string
+  users?: string[]
+  related?: Array<{ label: string; url: string; what: string }>
+  kapp?: { name: string; url: string }
+  /** この業種・業務ページの下に「開発中のAI相談」として導線を出す（slug の配列） */
+  linkFrom?: string[]
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -84,7 +94,89 @@ function ossCell(p: Project, slug: string): string {
   return links.join(' / ') || '—'
 }
 
-const KIND_LABEL = { industry: '業種', gyomu: '業務' } as const
+const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談' } as const
+
+/** 開発中のAI相談システムの着地ページ。SaaS代替の型（固定費・OSS表）は当てはまらないので別に組む。
+ *  システムはまだ無い。できることは「こう答える予定」と書き、作り物の回答画面は載せない。 */
+function aichatPage(p: SolutionPage): string {
+  const url = `${BASE}/${p.slug}.html`
+  const title = p.titleOverride || `${p.name}（開発中） | 株式会社エクスブリッジ`
+  const desc = p.descOverride || p.lead || p.facts
+  const faqs = p.faqs || []
+  const contact = `${SITE}/contact.php?ref=solution-${encodeURIComponent(p.slug)}&subject=${encodeURIComponent('「' + p.name + '」の導入について相談したい')}#form`
+  const body = `<section class="hero"><div class="wrap">
+<p class="kicker">開発中のAI相談システム｜${h(p.kicker)}</p>
+<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : h(p.name)}</h1>
+<p class="lead">${h(p.lead || '')}</p>
+<p><a class="btn btn-main" href="${attr(contact)}">導入について問い合わせる</a>${p.kapp ? ` <a class="btn" href="${attr(p.kapp.url)}&ref=solution-${attr(p.slug)}">Kurage App Store の掲載を見る</a>` : ''}</p>
+<p class="note" style="margin-top:10px">このシステムは<b>開発中</b>です。使いたい自治体・会社・事務所のご要望を伺って、開発の順番と仕様を決めます。</p>
+</div></section>
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別ソリューション</a> / ${h(p.name)}</nav>
+
+<section><div class="panel">
+<h2>${h(p.name)}とは</h2>
+<p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+</div></section>
+
+${(p.asks || []).length ? `<section><div class="panel">
+<h2>こんな質問に、こう答える予定です</h2>
+${(p.asks || []).map((a) => `<div class="card" style="margin:0 0 10px"><h3>${h(a.q)}</h3><p>${h(a.a)}</p></div>`).join('')}
+</div></section>` : ''}
+
+${p.how ? `<section><div class="panel">
+<h2>答えの決め方（AIに結論を作らせない）</h2>
+<p>${h(p.how)}</p>
+</div></section>` : ''}
+
+${(p.sources || []).length ? `<section><div class="panel">
+<h2>使う公開データ</h2>
+<div class="table-wrap"><table><thead><tr><th>データ</th><th>答えに使うこと</th></tr></thead><tbody>
+${(p.sources || []).map((s) => `<tr><th>${h(s.name)}</th><td>${h(s.what)}</td></tr>`).join('')}
+</tbody></table></div>
+<p class="note">データの利用条件（出典の表示・商用利用の可否）は、取り込む前にデータごとに確認します。</p>
+</div></section>` : ''}
+
+${(p.users || []).length ? `<section><div class="panel">
+<h2>使う人・置く場所</h2>
+<ul>${(p.users || []).map((u) => `<li>${h(u)}</li>`).join('')}</ul>
+</div></section>` : ''}
+
+${(p.related || []).length ? `<section><div class="panel">
+<h2>いま使える当社のシステム（このAI相談の土台）</h2>
+<p>開発中のAI相談は、すでに公開している次のシステムを組み合わせて作ります。それぞれは単体でいま使えます。</p>
+<div class="cat-grid">
+${(p.related || []).map((r) => `<a class="cat-card" href="${attr(r.url)}${r.url.includes('?') ? '&' : '?'}ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(r.label)}</b><span>${h(r.what)}</span></a>`).join('')}
+</div>
+</div></section>` : ''}
+
+<div class="cta">
+<h2>${h(p.name)}を使いたい方へ</h2>
+<p>開発中のため、<strong>対象の地域・必要な項目・置き方（自社サイトに埋め込む／自社サーバーに置く／AIエージェントから呼ぶ）</strong>を伺って仕様を決めます。お問い合わせは無料です。Zoomでも対面（名古屋近郊）でも。</p>
+<a class="btn btn-main" href="${attr(contact)}">導入について問い合わせる</a>
+<a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+</div>
+
+${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>` : ''}
+</main>`
+  const ld = [
+    ...(faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+    { '@context': 'https://schema.org', '@type': 'Service', name: p.name, description: desc, url,
+      serviceType: 'AI相談システムの開発・導入（開発中）',
+      areaServed: { '@type': 'Country', name: '日本' },
+      provider: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: p.name, item: url }] },
+  ]
+  return shell(title, desc, url, body, ld, [p.slug], `${SITE}/images/ogp/sol-${p.slug}.png`)
+}
 
 function detailPage(p: SolutionPage): string {
   const url = `${BASE}/${p.slug}.html`
@@ -181,6 +273,7 @@ function indexPage(): string {
   const desc = `介護・保育・美容・飲食・宿泊・建設・医療・不動産などの業種別と、問い合わせ管理・議事録・CRM・人事・経理・予約などの業務別に、有名SaaSとオープンソース代替をまとめました。置き換えられない業務は「できない」と明記。名古屋のシステム開発会社が導入まで行います。`
   const ind = pages.filter((p) => p.kind === 'industry')
   const gyo = pages.filter((p) => p.kind === 'gyomu')
+  const ai = pages.filter((p) => p.kind === 'aichat')
   const card = (p: SolutionPage) => `<a class="cat-card" href="${BASE}/${attr(p.slug)}.html"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種・業務別ソリューション</p>
@@ -198,6 +291,11 @@ function indexPage(): string {
 <h2>業務から探す</h2>
 <div class="cat-grid">${gyo.map(card).join('')}</div>
 </div></section>
+${ai.length ? `<section><div class="panel">
+<h2>開発中のAI相談システム</h2>
+<p>国や自治体の公開データを使い、結論は規則で決めてAIは言い換えるだけ、という作りのAI相談です。導入のご相談を受け付けています。</p>
+<div class="cat-grid">${ai.map(card).join('')}</div>
+</div></section>` : ''}
 <section><div class="panel">
 <h2>4つの入り口</h2>
 <p>目的に合わせてどうぞ。<a href="${SITE}/saas/">サービス名から探す（SaaSとOSSの対応表）</a>／<a href="${SITE}/ai-system/?ref=solution-index">やりたいことから探す（AIでできること）</a>／<a href="${KURAGE}/oss/?ref=solution-index">OSSカタログから探す</a>／このページ（業種・業務から探す）。</p>
@@ -359,7 +457,7 @@ ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.sl
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 for (const p of pages) {
-  let html = detailPage(p)
+  let html = p.kind === 'aichat' ? aichatPage(p) : detailPage(p)
   // 既存の業種ページに、マトリクス(業務別ページ)への導線を差し込む
   const ind = matrix.industries.find((i) => i.slug === p.slug)
   if (ind) {
@@ -368,6 +466,14 @@ for (const p of pages) {
 <div class="cat-grid">${gy.map((g) => `<a class="cat-card" href="${BASE}/${attr(ind.slug)}/${attr(g.slug)}.html"><b>${h(g.name)}</b><span>${h(g.pain)}</span></a>`).join('')}</div>
 </div></section>\n</main>`
     html = html.replace('</main>', block)
+  }
+  // 開発中のAI相談システム（kind=aichat）のうち、このページを linkFrom に挙げたものへの導線
+  const ais = pages.filter((a) => a.kind === 'aichat' && (a.linkFrom || []).includes(p.slug))
+  if (ais.length) {
+    html = html.replace('</main>', `<section><div class="panel"><h2>開発中のAI相談システム</h2>
+<p>公開データを使い、結論は規則で決めてAIは言い換えるだけ、という作りのAI相談です。導入のご相談を受け付けています。</p>
+<div class="cat-grid">${ais.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}（開発中）</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
+</div></section>\n</main>`)
   }
   await fs.writeFile(path.join(distRoot, `${p.slug}.html`), html)
 }

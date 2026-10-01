@@ -44,6 +44,9 @@ function saasFor(cap: Capability): SaasRow[] {
     .sort((a, b) => b.volume - a.volume).slice(0, 6)
 }
 const BASE = `${SITE}/ai-system`
+// /solution/ の「開発中のAI相談システム」（kind=aichat）。トップから入口を張る（2026-10-01）
+const AICHAT = (JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-list.json'), 'utf8')) as Array<{ slug: string; kind: string; name: string; kicker: string }>)
+  .filter((p) => p.kind === 'aichat')
 
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
@@ -561,6 +564,12 @@ function indexPage(caps: Capability[], counts: Map<string, number>, total: numbe
 </ul>
 <p>この4つはどれも、同じ用途で世界中に使われているオープンソースが既にあります。ゼロから作る必要はありません。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
 </div></section>
+
+${AICHAT.length ? `<section><div class="panel">
+<h2>公開データにAIで答えさせる相談システム（開発中）</h2>
+<p>国や自治体が公開しているデータを使い、結論は規則で決めて、AIはその結果を言い換えるだけ——という作りのAI相談システムを開発しています。AIが根拠の無い答えを作らないので、窓口の一次対応に置けます。導入のご相談を受け付けています。</p>
+<div class="cat-grid">${AICHAT.map((p) => `<a class="cat-card" href="${SITE}/solution/${attr(p.slug)}.html?ref=ai-system-index"><b>${h(p.name)}（開発中）</b><span>${h(p.kicker)}</span></a>`).join('')}</div>
+</div></section>` : ''}
 
 <section><div class="panel">
 <h2>AI導入で解決できる経営課題は？</h2>
