@@ -45,8 +45,10 @@ function saasFor(cap: Capability): SaasRow[] {
 }
 const BASE = `${SITE}/ai-system`
 // /solution/ の「開発中のAI相談システム」（kind=aichat）。トップから入口を張る（2026-10-01）
-const AICHAT = (JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-list.json'), 'utf8')) as Array<{ slug: string; kind: string; name: string; kicker: string }>)
-  .filter((p) => p.kind === 'aichat')
+const SOLUTIONS = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-list.json'), 'utf8')) as Array<{ slug: string; kind: string; name: string; kicker: string; capLinks?: string[] }>
+const AICHAT = SOLUTIONS.filter((p) => p.kind === 'aichat')
+// /solution/ の構成例（kind=combo）のうち、この「できること」を capLinks に挙げたもの（2026-10-02: 全文検索×AIチャットボット）
+const combosFor = (key: string) => SOLUTIONS.filter((p) => p.kind === 'combo' && (p.capLinks || []).includes(key))
 
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
@@ -408,6 +410,11 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 <h2>${h(cap.label)}とは？</h2>
 <p>${h(cap.label)}とは、${h(cap.question)}という状態を仕組みで解消することです。ゼロから作らなくても、同じ用途で世界中に使われているオープンソースがあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
 </div></section>
+${combosFor(cap.key).length ? `<section><div class="panel">
+<h2>${h(cap.label)}の構成例（オープンソース×AI）</h2>
+<div class="cat-grid">${combosFor(cap.key).map((p) => `<a class="cat-card" href="${SITE}/solution/${attr(p.slug)}.html?ref=ai-system-c-${attr(cap.key)}"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`).join('')}</div>
+</div></section>` : ''}
+
 <section><div class="panel">
 <h2>${h(cap.label)}のオープンソース、まずどれを見ればよいですか？</h2>
 <p>${total}件すべてを比べる必要はありません。当社が実測した<strong>規模（GitHubスター）・日本語ロケールの有無・そのまま触れるデモがあるか</strong>の3点で、当てはまりの強い上位から${picks.length}件を挙げます。名前がその分類の一般名詞のままのものと、1年以上更新が止まっているものは外しています。どれもソフト自体は無料なので、気になったものは自社サーバーに置いて試せます。</p>

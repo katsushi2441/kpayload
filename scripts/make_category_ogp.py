@@ -109,6 +109,8 @@ def targets(which):
     if which in ("solution", "all"):
         p = os.path.join(ROOT, "data", "solution-list.json")
         for it in json.load(open(p, encoding="utf-8")):
+            if it.get("kind") == "combo":    # 構成例（2026-10-02）は klchatbot-sales/make_solution_banners.py など製品側で作る
+                continue
             if it.get("kind") == "aichat":   # 開発中のAI相談システム（2026-10-01）
                 # 商品画像（<slug>-sales/make_banner.py・ほかのシステムと同じ型）があればそれを OGP に使う
                 if os.path.exists("/home/kojima/work/{}-sales/banner.png".format(it["slug"])):

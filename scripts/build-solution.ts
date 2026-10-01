@@ -34,7 +34,7 @@ const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 type SolutionPage = {
-  slug: string; kind: 'industry' | 'gyomu' | 'aichat'; name: string; kicker: string
+  slug: string; kind: 'industry' | 'gyomu' | 'aichat' | 'combo'; name: string; kicker: string
   saasSlugs: string[]; extraSaas: string[]; ossPicks: string[]
   products: Array<{ name: string; url: string; price: string }>
   brain: Array<{ label: string; url: string }>
@@ -56,6 +56,16 @@ type SolutionPage = {
   kapp?: { name: string; url: string }
   /** この業種・業務ページの下に「開発中のAI相談」として導線を出す（slug の配列） */
   linkFrom?: string[]
+  /** kind='combo'（OSSと当社製品を組み合わせる構成例・2026-10-02）だけが使う欄 */
+  steps?: string[]
+  parts?: Array<{ name: string; role: string }>
+  compare?: { head: string[]; rows: string[][]; note?: string }
+  fit?: string[]
+  notfit?: string[]
+  flow?: string[]
+  costs?: Array<{ name: string; what: string }>
+  /** /ai-system/c/<key>/ に「構成例」として導線を出す（build-aisystem.ts が読む） */
+  capLinks?: string[]
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -94,10 +104,111 @@ function ossCell(p: Project, slug: string): string {
   return links.join(' / ') || '—'
 }
 
-const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談' } as const
+const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談', combo: '構成例' } as const
 
 /** 開発中のAI相談システムの着地ページ。SaaS代替の型（固定費・OSS表）は当てはまらないので別に組む。
  *  システムはまだ無い。できることは「こう答える予定」と書き、作り物の回答画面は載せない。 */
+/** OSSと当社の製品を組み合わせる構成例の着地ページ（例: 全文検索×AIチャットボット）。
+ *  組み合わせは構築して納めるもの。完成品のように書かない（「構築します」「この形で組みます」）。 */
+function comboPage(p: SolutionPage): string {
+  const url = `${BASE}/${p.slug}.html`
+  const title = p.titleOverride || `${p.name} | 株式会社エクスブリッジ`
+  const desc = p.descOverride || p.lead || p.facts
+  const faqs = p.faqs || []
+  const contact = `${SITE}/contact.php?ref=solution-${encodeURIComponent(p.slug)}&subject=${encodeURIComponent('「' + p.name + '」の構築について相談したい')}#form`
+  const ul = (xs?: string[]) => `<ul>${(xs || []).map((x) => `<li>${h(x)}</li>`).join('')}</ul>`
+  const body = `<section class="hero"><div class="wrap">
+<p class="kicker">構成例｜${h(p.kicker)}</p>
+<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : h(p.name)}</h1>
+<p class="lead">${h(p.lead || '')}</p>
+<p><a class="btn btn-main" href="${attr(contact)}">構築について相談する（Zoom可）</a>${p.kapp ? ` <a class="btn" href="${attr(p.kapp.url)}${p.kapp.url.includes('?') ? '&' : '?'}ref=solution-${attr(p.slug)}">${h(p.kapp.name)}を見る</a>` : ''}</p>
+</div></section>
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別ソリューション</a> / ${h(p.name)}</nav>
+
+<section><div class="panel">
+<h2>${h(p.name)}とは</h2>
+<p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+</div></section>
+
+${(p.steps || []).length ? `<section><div class="panel">
+<h2>質問してから答えが出るまで</h2>
+<ol>${(p.steps || []).map((x) => `<li>${h(x)}</li>`).join('')}</ol>
+</div></section>` : ''}
+
+${(p.parts || []).length ? `<section><div class="panel">
+<h2>構成（使う部品と役割）</h2>
+<div class="table-wrap"><table><thead><tr><th>部品</th><th>役割</th></tr></thead><tbody>
+${(p.parts || []).map((x) => `<tr><th>${h(x.name)}</th><td>${h(x.role)}</td></tr>`).join('')}
+</tbody></table></div>
+</div></section>` : ''}
+
+${p.compare ? `<section><div class="panel">
+<h2>全文検索エンジンの比べ方</h2>
+<div class="table-wrap"><table><thead><tr>${p.compare.head.map((x) => `<th>${h(x)}</th>`).join('')}</tr></thead><tbody>
+${p.compare.rows.map((r) => `<tr><th>${h(r[0])}</th>${r.slice(1).map((c) => `<td>${h(c)}</td>`).join('')}</tr>`).join('')}
+</tbody></table></div>
+${p.compare.note ? `<p class="note">${h(p.compare.note)}</p>` : ''}
+</div></section>` : ''}
+
+${(p.fit || []).length || (p.notfit || []).length ? `<section><div class="panel">
+<h2>向いている会社・向かない会社</h2>
+${(p.fit || []).length ? `<h3>向いている</h3>${ul(p.fit)}` : ''}
+${(p.notfit || []).length ? `<h3>向かない（別の方法をおすすめします）</h3>${ul(p.notfit)}` : ''}
+</div></section>` : ''}
+
+${(p.flow || []).length ? `<section><div class="panel">
+<h2>導入の流れ</h2>
+<ol>${(p.flow || []).map((x) => `<li>${h(x)}</li>`).join('')}</ol>
+</div></section>` : ''}
+
+${(p.costs || []).length ? `<section><div class="panel">
+<h2>費用の目安</h2>
+<div class="table-wrap"><table><tbody>
+${(p.costs || []).map((x) => `<tr><th>${h(x.name)}</th><td>${h(x.what)}</td></tr>`).join('')}
+</tbody></table></div>
+<p class="note">文書の量・置き場所・権限の分け方で構築の手間が変わるため、最初に文書の一覧を見せていただいてから見積もります。</p>
+</div></section>` : ''}
+
+${(p.related || []).length ? `<section><div class="panel">
+<h2>関連するページ</h2>
+<div class="cat-grid">
+${(p.related || []).map((r) => `<a class="cat-card" href="${attr(r.url)}${r.url.includes('?') ? '&' : '?'}ref=solution-${attr(p.slug)}"><b>${h(r.label)}</b><span>${h(r.what)}</span></a>`).join('')}
+</div>
+</div></section>` : ''}
+
+<div class="cta">
+<h2>社内の文書から答えるAIチャットボットを、自社に置きたい方へ</h2>
+<p>文書の置き場所（ファイルサーバー・共有フォルダ・社内サイト）と量を伺い、全文検索エンジンとAIの組み合わせを決めます。<strong>初回のご相談は無料</strong>です。Zoomでも対面（名古屋近郊）でも。</p>
+<a class="btn btn-main" href="${attr(contact)}">構築について相談する</a>
+<a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+</div>
+
+${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>` : ''}
+
+<section><div class="panel">
+<p class="note">記載の製品名・サービス名は各社・各プロジェクトの商標または登録商標です。オープンソースのライセンスと最新版は、各プロジェクトの公式情報をご確認ください。</p>
+</div></section>
+</main>`
+  const ld = [
+    ...(faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+    { '@context': 'https://schema.org', '@type': 'Service', name: p.name, description: desc, url,
+      serviceType: 'AIチャットボットと全文検索の構築・導入',
+      areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'Country', name: '日本' }],
+      provider: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: p.name, item: url }] },
+  ]
+  return shell(title, desc, url, body, ld, [p.slug], `${SITE}/images/ogp/sol-${p.slug}.png`)
+}
+
 function aichatPage(p: SolutionPage): string {
   const url = `${BASE}/${p.slug}.html`
   const title = p.titleOverride || `${p.name}（開発中） | 株式会社エクスブリッジ`
@@ -274,6 +385,7 @@ function indexPage(): string {
   const ind = pages.filter((p) => p.kind === 'industry')
   const gyo = pages.filter((p) => p.kind === 'gyomu')
   const ai = pages.filter((p) => p.kind === 'aichat')
+  const combo = pages.filter((p) => p.kind === 'combo')
   const card = (p: SolutionPage) => `<a class="cat-card" href="${BASE}/${attr(p.slug)}.html"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種・業務別ソリューション</p>
@@ -291,6 +403,11 @@ function indexPage(): string {
 <h2>業務から探す</h2>
 <div class="cat-grid">${gyo.map(card).join('')}</div>
 </div></section>
+${combo.length ? `<section><div class="panel">
+<h2>構成例（オープンソース×AI）</h2>
+<p>オープンソースと当社の製品を組み合わせて、自社に置く構成の例です。</p>
+<div class="cat-grid">${combo.map(card).join('')}</div>
+</div></section>` : ''}
 ${ai.length ? `<section><div class="panel">
 <h2>開発中のAI相談システム</h2>
 <p>国や自治体の公開データを使い、結論は規則で決めてAIは言い換えるだけ、という作りのAI相談です。導入のご相談を受け付けています。</p>
@@ -457,7 +574,7 @@ ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.sl
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 for (const p of pages) {
-  let html = p.kind === 'aichat' ? aichatPage(p) : detailPage(p)
+  let html = p.kind === 'aichat' ? aichatPage(p) : p.kind === 'combo' ? comboPage(p) : detailPage(p)
   // 既存の業種ページに、マトリクス(業務別ページ)への導線を差し込む
   const ind = matrix.industries.find((i) => i.slug === p.slug)
   if (ind) {
@@ -469,6 +586,12 @@ for (const p of pages) {
   }
   // 開発中のAI相談システム（kind=aichat）のうち、このページを linkFrom に挙げたものへの導線
   const ais = pages.filter((a) => a.kind === 'aichat' && (a.linkFrom || []).includes(p.slug))
+  const combos = pages.filter((a) => a.kind === 'combo' && (a.linkFrom || []).includes(p.slug))
+  if (combos.length) {
+    html = html.replace('</main>', `<section><div class="panel"><h2>構成例（オープンソース×AI）</h2>
+<div class="cat-grid">${combos.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
+</div></section>\n</main>`)
+  }
   if (ais.length) {
     html = html.replace('</main>', `<section><div class="panel"><h2>開発中のAI相談システム</h2>
 <p>公開データを使い、結論は規則で決めてAIは言い換えるだけ、という作りのAI相談です。導入のご相談を受け付けています。</p>
