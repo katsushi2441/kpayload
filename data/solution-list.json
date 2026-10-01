@@ -2794,6 +2794,11 @@
     ],
     "related": [
       {
+        "label": "Fessで全文検索とAIチャットを組んだ記録（AI OSS技術解説）",
+        "url": "https://exbridge.jp/vibeblog/2026-09-04-fess-fulltext-search-ai-chat.html",
+        "what": "実際に Fess を動かした手順とつまずき"
+      },
+      {
         "label": "Namazu＋AIチャットボット",
         "url": "https://exbridge.jp/solution/namazu-ai-chatbot.html",
         "what": "軽く小さく始める構成"
@@ -3062,6 +3067,11 @@
       }
     ],
     "related": [
+      {
+        "label": "Fessで全文検索とAIチャットを組んだ記録（AI OSS技術解説）",
+        "url": "https://exbridge.jp/vibeblog/2026-09-04-fess-fulltext-search-ai-chat.html",
+        "what": "実際に Fess を動かした手順とつまずき"
+      },
       {
         "label": "全文検索AIチャットボットの全体像",
         "url": "https://exbridge.jp/solution/zenbun-kensaku-ai-chatbot.html",

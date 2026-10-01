@@ -93,12 +93,19 @@ LAYOUTS = {
 
 
 def load_posts():
+    # VWork Blog（blog/）と、AI OSS技術解説（articles/）のうち人が書いた解説記事（2026-10-02 から /vibeblog/ に載せる）。
+    # Horizon の自動ニュースまとめは /vibeblog/ に入れていないので画像も作らない（build-vibeblog.ts と同じ線）
     posts = []
-    for f in sorted(glob.glob(os.path.join(VWORK_BLOG, "*.md"))):
+    files = sorted(glob.glob(os.path.join(VWORK_BLOG, "*.md"))) + sorted(glob.glob(os.path.join(os.path.dirname(VWORK_BLOG), "articles", "*.md")))
+    seen = set()
+    for f in files:
         name = os.path.basename(f)
-        if name in ("README.md", "index.md"):
+        if name in ("README.md", "index.md") or name in seen:
             continue
+        seen.add(name)
         s = open(f, encoding="utf-8").read()
+        if "/articles/" in f and "Horizonを使い" in s and os.environ.get("VIBEBLOG_INCLUDE_HORIZON") != "1":
+            continue
         m = re.match(r"^---\n(.*?)\n---", s, re.S)
         fm = m.group(1) if m else ""
         def g(k):
@@ -109,7 +116,7 @@ def load_posts():
             continue
         slug = name[:-3]
         posts.append(dict(slug=slug, title=title, kw=g("head_keyword"),
-                          tags=g("tags"), date=(re.match(r"(\d{4})-(\d{2})-(\d{2})", slug) or [None]*4)))
+                          tags=g("tags") or g("topics"), date=(re.match(r"(\d{4})-(\d{2})-(\d{2})", slug) or [None]*4)))
     return posts
 
 

@@ -2,11 +2,16 @@
  * /vibeblog/ — VWorkブログ（GitHub Pages の /vwork/blog/）を exbridge.jp 配下に、
  * /ai-system/ や /oss/ と同じページ枠で出し直す。
  *
- * **対象は vwork/blog/ だけ。vwork/articles/ は入れない。**
+ * **対象は vwork/blog/ と、vwork/articles/ のうち人が書いた解説記事。**
  *   vwork には別物のブログが2つある（CLAUDE.md「vwork ブログ2種の違い（混同厳禁）」）。
- *     vwork/blog/     = VWorkブログ（これ）
- *     vwork/articles/ = AI OSS技術解説ブログ（別の媒体。ここには混ぜない）
+ *     vwork/blog/     = VWorkブログ
+ *     vwork/articles/ = AI OSS技術解説ブログ
  *   2026-09-26 に一度 articles/ の487本まで取り込んで公開してしまい、取り下げた。
+ *   2026-10-02 ユーザー指示「/vibeblog/ の方が検索に強いので、AI OSS技術解説ブログも /vibeblog/ に」で再び入れた。
+ *   混同しないよう、記事に「AI OSS技術解説」の区分を付け、一覧は /vibeblog/oss.html に分け、RSS には入れない。
+ *   **Horizon が自動で集めて要約したAIニュースのまとめ（本文に「Horizonを使い」。514本中421本）は入れない。**
+ *   大量の自動生成ページを exbridge.jp に載せると、ドメイン全体の評価を下げるおそれがあるため（入れるなら
+ *   環境変数 VIBEBLOG_INCLUDE_HORIZON=1。ユーザー判断待ち）。
  *
  * なぜ移すか（2026-09-26 実測）:
  *   90日のGSCで、同じ会社なのにドメインで3倍以上の差が出ていた。
@@ -153,6 +158,8 @@ async function load(dir: 'articles' | 'blog'): Promise<Post[]> {
     if (!title) continue
     // blog/ は published を持たないものがあるので、false のときだけ落とす
     if (/^published:\s*false\s*$/m.test(fm)) continue
+    // Horizon の自動ニュースまとめは入れない（冒頭の説明）
+    if (dir === 'articles' && /Horizonを使い/.test(bodyMd) && process.env.VIBEBLOG_INCLUDE_HORIZON !== '1') continue
     const slug = n.replace(/\.md$/, '')
     const date = (slug.match(/^(\d{4}-\d{2}-\d{2})/) || [, ''])[1]
     // 本文の先頭 h1 は frontmatter の title と重複するので落とす
@@ -180,7 +187,7 @@ async function load(dir: 'articles' | 'blog'): Promise<Post[]> {
 }
 
 // 同じスラッグが二度出てきたら先に読んだほうを残す（保険）。
-const loaded = [...(await load('blog'))]
+const loaded = [...(await load('blog')), ...(await load('articles'))]
 const seen = new Map<string, Post>()
 const merged: string[] = []
 for (const p of loaded) {
@@ -188,6 +195,22 @@ for (const p of loaded) {
   seen.set(p.slug, p)
 }
 const posts = [...seen.values()].sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+const blogPosts = posts.filter((p) => p.src === 'blog')
+const ossPosts = posts.filter((p) => p.src === 'articles')
+const SECTION = { blog: 'VWork Blog', articles: 'AI OSS技術解説' } as const
+// AI OSS技術解説の記事どうしのリンク（GitHub Pages の /articles/ や相対パス）を、移した記事はこちらへ向ける。
+// 移していない記事（Horizon のまとめ等）へのリンクは GitHub Pages のまま残す
+{
+  const here = new Set(posts.map((p) => p.slug))
+  for (const p of posts) {
+    p.html = p.html
+      .replace(new RegExp(`${GHP}/articles/([A-Za-z0-9._-]+)\\.html`, 'g'), (m, sl) => (here.has(sl) ? `${BASE}/${sl}.html` : m))
+    if (p.src === 'articles') {
+      p.html = p.html.replace(/(<a[^>]+href=")(?!https?:|\/|#)([A-Za-z0-9._-]+)\.html"/g,
+        (m, pre, sl) => `${pre}${here.has(sl) ? `${BASE}/${sl}` : `${GHP}/articles/${sl}`}.html"`)
+    }
+  }
+}
 
 // 関連記事の突き合わせにだけ使う。
 // テーマ別の入口ページは作らない: 159本に対してキーワードが147語あり、
@@ -322,8 +345,10 @@ function postHtml(p: Post, idx: number): string {
   const url = `${BASE}/${p.slug}.html`
   const sib = byKw.get(p.headKeyword) || []
   const rel = sib.filter((x) => x.slug !== p.slug).slice(0, 6)
-  const prev = posts[idx + 1]
-  const next = posts[idx - 1]
+  const same = p.src === 'articles' ? ossPosts : blogPosts
+  const si = same.indexOf(p)
+  const prev = same[si + 1]
+  const next = same[si - 1]
   const img = eyecatch(p.slug)
 
   const ld = [{
@@ -331,6 +356,7 @@ function postHtml(p: Post, idx: number): string {
     headline: p.title, description: desc, url, inLanguage: 'ja',
     datePublished: p.date || undefined, dateModified: p.date || undefined,
     keywords: [p.headKeyword, ...p.topics].filter(Boolean).join(', '),
+    articleSection: SECTION[p.src],
     wordCount: p.chars,
     image: img ? { '@type': 'ImageObject', url: img, width: 1200, height: 630 } : undefined,
     author: { '@type': 'Organization', '@id': `${SITE}/#organization` },
@@ -341,7 +367,8 @@ function postHtml(p: Post, idx: number): string {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'ホーム', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'バイブコーディング的仕事ブログ', item: `${BASE}/` },
-      { '@type': 'ListItem', position: 3, name: p.title, item: url },
+      ...(p.src === 'articles' ? [{ '@type': 'ListItem', position: 3, name: 'AI OSS技術解説', item: `${BASE}/oss.html` }] : []),
+      { '@type': 'ListItem', position: p.src === 'articles' ? 4 : 3, name: p.title, item: url },
     ],
   }]
   // 「## よくある質問」の下に「### 質問」と答えの段落が並ぶ記事は FAQPage も出す（AEO。2026-10-02）。
@@ -365,10 +392,10 @@ function postHtml(p: Post, idx: number): string {
 
   const body = `
 <main class="wrap">
-<nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">バイブコーディング的仕事ブログ</a></nav>
+<nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">バイブコーディング的仕事ブログ</a>${p.src === 'articles' ? ` ／ <a href="${BASE}/oss.html">AI OSS技術解説</a>` : ''}</nav>
 ${img ? `<figure class="vb-eyecatch"><img src="${attr(img)}" width="1200" height="630" alt="${attr(p.title)}" loading="eager" decoding="async"></figure>` : ''}
 <h1>${h(p.title)}</h1>
-<p class="meta">${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
+<p class="meta">${p.src === 'articles' ? '<span>AI OSS技術解説</span>' : ''}${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
     p.headKeyword ? `<span>${h(p.headKeyword)}</span>` : ''}</p>
 ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 <div class="vb-share">
@@ -400,7 +427,7 @@ function indexHtml(): string {
   // VWork には「バイブコーディングのフレームワーク VWork」と
   // 「バイブコーディングで仕事をすること（VWork）」の2つの意味がある。
   // どちらか片方に寄せた言い方をしない。
-  const desc = `バイブコーディングのフレームワーク VWork と、バイブコーディングでやった仕事の解説・考察を${posts.length}本公開しています。株式会社エクスブリッジ（名古屋）。`
+  const desc = `バイブコーディングのフレームワーク VWork と、バイブコーディングでやった仕事の解説・考察（${blogPosts.length}本）と、オープンソースのAIを動かして解説したAI OSS技術解説（${ossPosts.length}本）を公開しています。株式会社エクスブリッジ（名古屋）。`
   const ld = [{
     '@context': 'https://schema.org', '@type': 'Blog', '@id': `${url}#blog`,
     url, name: 'バイブコーディング的仕事ブログ', alternateName: 'VWork Blog',
@@ -410,8 +437,8 @@ function indexHtml(): string {
       '@type': 'BlogPosting', headline: p.title, url: `${BASE}/${p.slug}.html`, datePublished: p.date || undefined,
     })),
   }]
-  const lead = posts.slice(0, 6)
-  const rest = posts.slice(6)
+  const lead = blogPosts.slice(0, 6)
+  const rest = blogPosts.slice(6)
   const body = `
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ バイブコーディング的仕事ブログ</nav>
@@ -419,7 +446,7 @@ function indexHtml(): string {
 <header class="vb-head">
   <p class="vb-eyebrow">VWork Blog ・ 株式会社エクスブリッジ（名古屋）</p>
   <h1>バイブコーディング的仕事ブログ</h1>
-  <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${posts.length}本</strong>。</p>
+  <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${blogPosts.length}本</strong>（ほかに AI OSS技術解説 ${ossPosts.length}本）。</p>
   <div class="vb-two">
     <div class="vb-def">
       <div class="vb-dn">VWork（フレームワーク）</div>
@@ -437,6 +464,13 @@ function indexHtml(): string {
   <div class="idx">${lead.map((p) =>
     card(`${BASE}/${p.slug}.html`, dateJa(p.date), p.title, p.description.slice(0, 82))).join('')}</div>
 </section>
+
+${ossPosts.length ? `<section class="vb-latest">
+  <h2>AI OSS技術解説（新しい順）</h2>
+  <p style="font-size:13.5px;color:#5f7078;margin:0 0 10px">オープンソースのAI・業務ソフトを、実際に動かして日本語で解説した記事です。<a href="${BASE}/oss.html">${ossPosts.length}本すべてを見る</a></p>
+  <div class="idx">${ossPosts.slice(0, 6).map((p) =>
+    card(`${BASE}/${p.slug}.html`, dateJa(p.date), p.title, p.description.slice(0, 82))).join('')}</div>
+</section>` : ''}
 
 <section class="vb-archive">
   <h2>これまでの記事<span class="vb-cnt">${rest.length}本</span></h2>
@@ -471,9 +505,50 @@ for (let i = 0; i < posts.length; i++) {
 }
 await fs.writeFile(path.join(distRoot, 'index.html'), indexHtml(), 'utf8')
 
+/** AI OSS技術解説の一覧（/vibeblog/oss.html）。VWork Blog の一覧と混ぜない */
+function ossIndexHtml(): string {
+  const url = `${BASE}/oss.html`
+  const title = 'AI OSS技術解説｜オープンソースのAIを動かして日本語で解説'
+  const desc = `オープンソースのAI・業務ソフトを実際に動かし、日本語で導入の手順とつまずく所を解説した記事を${ossPosts.length}本まとめています。株式会社エクスブリッジ（名古屋）。`
+  const ld = [{
+    '@context': 'https://schema.org', '@type': 'CollectionPage', url, name: title, description: desc, inLanguage: 'ja',
+    isPartOf: { '@type': 'Blog', '@id': `${BASE}/#blog` }, publisher: { '@id': `${SITE}/#organization` },
+  }, {
+    '@context': 'https://schema.org', '@type': 'ItemList', name: 'AI OSS技術解説', numberOfItems: ossPosts.length,
+    itemListElement: ossPosts.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/${p.slug}.html`, name: p.title })),
+  }, {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'バイブコーディング的仕事ブログ', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: 'AI OSS技術解説', item: url }] }]
+  const body = `
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">バイブコーディング的仕事ブログ</a> ／ AI OSS技術解説</nav>
+<header class="vb-head">
+  <p class="vb-eyebrow">AI OSS技術解説 ・ 株式会社エクスブリッジ（名古屋）</p>
+  <h1>AI OSS技術解説</h1>
+  <p class="vb-tag"><strong>AI OSS技術解説とは、</strong>オープンソースのAI・業務ソフトを当社が実際に動かし、日本語で導入の手順とつまずく所を解説した記事です。現在 <strong>${ossPosts.length}本</strong>。</p>
+</header>
+<section class="vb-latest">
+  <h2>新しい記事</h2>
+  <div class="idx">${ossPosts.slice(0, 6).map((p) => card(`${BASE}/${p.slug}.html`, dateJa(p.date), p.title, p.description.slice(0, 82))).join('')}</div>
+</section>
+<section class="vb-archive">
+  <h2>すべての記事<span class="vb-cnt">${ossPosts.length}本</span></h2>
+  <ol class="vb-rows">${ossPosts.map((p) => `<li><a href="${BASE}/${attr(p.slug)}.html">` +
+    `<time datetime="${attr(p.date)}">${h(dateDot(p.date))}</time>` +
+    `<span class="vb-rt">${h(p.title)}</span></a></li>`).join('')}</ol>
+</section>
+${ctaBlock}
+</main>`
+  return shell(fitLength(32, title, 'AI OSS技術解説'), desc, url, body + styles(), ld)
+}
+if (ossPosts.length) await fs.writeFile(path.join(distRoot, 'oss.html'), ossIndexHtml(), 'utf8')
+
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+${ossPosts.length ? `<url><loc>${BASE}/oss.html</loc><lastmod>${ossPosts[0].date || TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>` : ''}
 ${posts.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${p.date || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
 </urlset>`
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sm, 'utf8')
@@ -483,6 +558,16 @@ await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sm, 'utf8')
 const canonMap: Record<string, string> = {}
 for (const p of loaded) canonMap[`${GHP}/${p.src}/${p.slug}.html`] = `${BASE}/${p.slug}.html`
 await fs.writeFile(path.join(distRoot, 'canonical-map.json'), JSON.stringify(canonMap, null, 1), 'utf8')
+// GitHub Pages 側（vwork/_layouts/default.html）が canonical を向け替える記事の一覧。
+// AI OSS技術解説のうち移した記事だけ。新しい解説記事を足したら、vwork を commit/push すると向け替わる（2026-10-02）
+{
+  const moved = loaded.filter((p) => p.src === 'articles').map((p) => p.slug).sort()
+  await fs.mkdir(path.join(VWORK, '_data'), { recursive: true })
+  await fs.writeFile(path.join(VWORK, '_data', 'vibeblog_moved_articles.yml'),
+    '# /vibeblog/ に移した AI OSS技術解説の記事（2026-10-02〜）。canonical をあちらへ向ける。\n' +
+    '# kpayload/scripts/build-vibeblog.ts が書き出す（Horizon の自動ニュースまとめは含まない）\n' +
+    moved.map((x) => `- ${x}\n`).join(''), 'utf8')
+}
 
 // RSS。xb4g.com は VWork Blog の新着をRSSで拾う作りなので、移設先でも同じ口を用意する
 // （無いと xb4g のブログ欄が GitHub Pages の古いURLを指したままになる）。
@@ -495,8 +580,8 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml"/>
 <description>${h(`バイブコーディングのフレームワーク VWork と、バイブコーディングでやった仕事の解説・考察。株式会社エクスブリッジ（名古屋）。`)}</description>
 <language>ja</language>
-<lastBuildDate>${rfc822(posts[0]?.date || TODAY)}</lastBuildDate>
-${posts.slice(0, 50).map((p) => `<item>
+<lastBuildDate>${rfc822(blogPosts[0]?.date || TODAY)}</lastBuildDate>
+${blogPosts.slice(0, 50).map((p) => `<item>
 <title><![CDATA[${p.title}]]></title>
 <link>${BASE}/${p.slug}.html</link>
 <guid isPermaLink="true">${BASE}/${p.slug}.html</guid>
