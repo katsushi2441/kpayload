@@ -27,7 +27,18 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const BASE = `${SITE}/outsourcing`
 const KOMON = `${SITE}/ai-it-komon.html`
 
-type Gyomu = { slug: string; name: string; kw: string; outsourced: string; auto: string; steps: string[] }
+type Gyomu = { slug: string; name: string; kw: string; outsourced: string; auto: string; steps: string[]
+  /* 以下は data/outsourcing-extra.json から重ねる（2026-10-02 追加）。
+   * 48ページが同じ雛形で類似度0.9・GSCで90日75表示/0クリックだったため、
+   * 題名の先頭を実測の検索語(q)にし、業務ごとの固有文(keep)・関連商品(own)・同じ束(cat)の内部リンクを足す。 */
+  q?: string; vol?: number; cat?: string; own?: string[]; keep?: string }
+type Extra = { cats: Record<string, string>; products: Record<string, string>; items: Record<string, Partial<Gyomu>> }
+let EXTRA: Extra = { cats: {}, products: {}, items: {} }
+const STORE = 'https://kappstore.exbridge.jp/app.php?id='
+/** 題名・h1の先頭に置く語。実測の検索語が無い業務は「〇〇の外注・代行」 */
+const lead = (g: Gyomu) => g.q ?? `${g.name}の外注・代行`
+/** 「〇〇代行」系は外注先を探す人。「アンケート集計」「LP制作」など作業名そのものは自分でやる方法を探す人 */
+const isOut = (g: Gyomu) => /代行|外注|アウトソーシング|データ化$/.test(lead(g))
 
 const SHELL = {
   refPrefix: 'outsourcing',
@@ -91,6 +102,10 @@ const EXTRA_CSS = `<style>
 .ck::before{content:"✓";position:absolute;left:2px;color:#b8860b;font-weight:900}
 .p-note{font-size:12.5px;color:#7a6420;margin:10px 0 0}
 .p-note a{color:var(--tld);font-weight:700}
+/* 外注のままがいい場合・土台の製品 */
+.keep{max-width:760px;font-size:15px;line-height:1.85;color:#37485a;margin:0 0 12px}
+.own{margin:8px 0 0;padding-left:1.2em;font-size:14.5px;line-height:1.9}
+.own a{color:var(--tld);font-weight:700}
 /* FAQ */
 .faqs details{background:#fff;border:1.5px solid var(--line);border-radius:12px;margin:0 0 10px;overflow:hidden}
 .faqs summary{cursor:pointer;font-weight:800;font-size:14.5px;padding:13px 16px;color:var(--ink);list-style:none}
@@ -199,15 +214,20 @@ function faqs(g: Gyomu) {
     { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月15時間・税別150,000円（1時間あたり10,000円）。月30時間・1年契約なら時間単価は最大20%下がり8,000円になります。仕組みの構築も、その後の改善も、この時間の中で行います。' },
     { q: 'どのくらいで動きますか？', a: 'まず1か月目に最小構成を動かし、実データで検証しながら広げます。当社自身が同じ型の自動化（記事作成・動画生成・バナー量産・データ判定）を社内で毎日運用しており、ゼロからの研究開発ではありません。' },
     { q: `${g.name}を完全に無人化できますか？`, a: 'しません。判断や承認は人に残す設計にします。AIが下書き・分類・転記を行い、人は確認と例外対応に集中する形が、事故なく続く形だと考えています。' },
+    ...(g.keep ? [{ q: `${g.name}は、外注のままのほうがいい場合もありますか？`, a: `あります。${g.keep}` }] : []),
     { q: '対応地域は？', a: 'オンサイトは名古屋市内、Zoom・リモート作業の組み合わせで進めます。仕組みの構築自体はリモートで完結することがほとんどです。' },
   ]
 }
 
 function page(g: Gyomu, all: Gyomu[]): string {
-  const title = `${g.name}の外注・代行をやめて、AIで自動化する｜構築費は月15万円のAI-IT顧問に込み`
-  const desc = `「${g.kw}」をお探しの方へ。外注は毎月費用が続き、ノウハウが残りません。${g.auto}。構築はAI-IT顧問契約（月15時間・税別15万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
+  const title = isOut(g) ? `${lead(g)}を探す前に｜AIで社内に自動化する方法と費用`
+    : `${lead(g)}をAIで自動化する方法と費用｜外注する前に`
+  const desc = `${isOut(g) ? `${lead(g)}を探している方へ。` : `${lead(g)}を外注するか迷っている方へ。`}${g.auto}。外注のままのほうがいい場合も正直に書きます。構築はAI-IT顧問契約（月15時間・税別15万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
   const url = `${BASE}/${g.slug}.html`
-  const rel = all.filter((x) => x.slug !== g.slug).slice(0, 6)
+  const same = all.filter((x) => x.slug !== g.slug && g.cat && x.cat === g.cat)
+  const rel = (same.length ? same : all.filter((x) => x.slug !== g.slug)).slice(0, 12)
+  const catName = (g.cat && EXTRA.cats[g.cat]) || ''
+  const own = (g.own ?? []).filter((id) => EXTRA.products[id])
   const fq = faqs(g)
   const contact = `${SITE}/contact.php?subject=${encodeURIComponent(g.name + 'のAI自動化の相談')}`
 
@@ -216,8 +236,9 @@ function page(g: Gyomu, all: Gyomu[]): string {
 
 <section class="hero"><div class="wrap hero-in">
   <div class="hero-txt">
-    <span class="badge">● ${h(g.kw)}をお探しの方へ</span>
-    <h1>${h(g.name)}の外注・代行をやめて、<br><em>AIで自動化</em>する。</h1>
+    <span class="badge">● ${h(lead(g))}${isOut(g) ? 'をお探しの方へ' : 'を外注する前に'}</span>
+    <h1>${isOut(g) ? `${h(lead(g))}を探す前に。<br>${h(g.name)}は<em>AIで自動化</em>して社内に残せます。`
+      : `${h(lead(g))}を、<br><em>AIで自動化</em>して社内に残す。`}</h1>
     <p class="lead">外注は毎月・毎件の費用が続き、社内に何も残りません。
     同じ業務を、<strong>AIの仕組みとして御社の中に作る</strong>選択肢があります。</p>
     <div class="chips"><span class="chip">構築費は月額に込み</span><span class="chip">成果物は御社の資産</span><span class="chip">件数が増えても費用ほぼ一定</span></div>
@@ -258,6 +279,15 @@ function page(g: Gyomu, all: Gyomu[]): string {
   </div>
 </div></section>
 
+${g.keep || own.length ? `<section class="sec"><div class="wrap">
+  ${g.keep ? `<h2>外注のままがいい場合も、あります</h2>
+  <p class="keep">${h(g.keep)}</p>
+  <p class="keep">どちらが合うかは、いまの件数・費用・社内の人手で決まります。相談の段階で、外注のままが合理的ならそう言います。</p>` : ''}
+  ${own.length ? `<h2>土台にする当社の製品</h2>
+  <p class="keep">ゼロから作らず、当社が作って販売している次のシステムを土台にします。</p>
+  <ul class="own">${own.map((id) => `<li><a href="${STORE}${id}&amp;ref=outsourcing-${h(g.slug)}">${h(EXTRA.products[id])}</a></li>`).join('')}</ul>` : ''}
+</div></section>` : ''}
+
 <section class="sec"><div class="wrap">
   <h2>費用 — <span class="ac">AI-IT顧問契約</span>と同一です</h2>
   <div class="price">
@@ -286,7 +316,7 @@ ${proofSection(g.slug)}
     <p>外注のままが合理的な場合は、そう言います。比べるところからで構いません。</p></div>
     <a class="btn-fill" href="${contact}">相談する（無料）</a>
   </div>
-  <p class="rel">ほかの業務: ${rel.map((x) => `<a href="${BASE}/${x.slug}.html">${h(x.name)}</a>`).join('／')}　<a href="${BASE}/">…全${all.length}業務</a></p>
+  <p class="rel">${catName ? `${h(catName)}のほかの業務` : 'ほかの業務'}: ${rel.map((x) => `<a href="${BASE}/${x.slug}.html">${h(x.name)}</a>`).join('／')}　<a href="${BASE}/">…全${all.length}業務</a></p>
 </div></section>
 </main>`
 
@@ -339,7 +369,8 @@ function indexPage(all: Gyomu[]): string {
 仕組み・コード・手順はすべて御社の資産になります。</p>
 </div></section>
 <section><div class="panel"><h2>業務から探す（全${all.length}業務）</h2>
-<ul class="cols">${all.map((g) => `<li><a href="${BASE}/${g.slug}.html">${h(g.name)}</a><span class="sub">（${h(g.kw)}）</span></li>`).join('')}</ul>
+${Object.entries(EXTRA.cats).map(([k, v]) => `<h3>${h(v)}</h3>
+<ul class="cols">${all.filter((g) => g.cat === k).map((g) => `<li><a href="${BASE}/${g.slug}.html">${h(g.name)}</a><span class="sub">（${h(lead(g))}）</span></li>`).join('')}</ul>`).join('\n')}
 <p style="margin-top:10px"><a href="${BASE}/rpa.html">RPAとの違いはこちら（RPAツールを買う前に）</a></p>
 </div></section>
 </main>`
@@ -419,7 +450,9 @@ RPAツールの年間ライセンスを買う前に、一度ご相談くださ�
 }
 
 async function run() {
-  const all: Gyomu[] = JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-list.json'), 'utf8'))
+  EXTRA = JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-extra.json'), 'utf8'))
+  const all: Gyomu[] = (JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-list.json'), 'utf8')) as Gyomu[])
+    .map((g) => ({ ...g, ...(EXTRA.items[g.slug] ?? {}) }))
   const out = path.join(root, 'dist', 'outsourcing')
   await fs.mkdir(out, { recursive: true })
   for (const g of all) {

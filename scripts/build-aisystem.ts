@@ -48,6 +48,11 @@ const BASE = `${SITE}/ai-system`
 const SOLUTIONS = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-list.json'), 'utf8')) as Array<{ slug: string; kind: string; name: string; kicker: string; capLinks?: string[] }>
 const AICHAT = SOLUTIONS.filter((p) => p.kind === 'aichat')
 // /solution/ の構成例（kind=combo）のうち、この「できること」を capLinks に挙げたもの（2026-10-02: 全文検索×AIチャットボット）
+/** /outsourcing/ の業務ページへの文脈リンク（2026-10-02）。外注を探す語の受け皿を、表示の多い /ai-system/c/ から引く */
+const OUT_LIST = JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-list.json'), 'utf8')) as Array<{ slug: string; name: string }>
+const OUT_EXTRA = JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-extra.json'), 'utf8')) as { items: Record<string, { q?: string; caps?: string[] }> }
+const outsFor = (key: string) => OUT_LIST.filter((g) => (OUT_EXTRA.items[g.slug]?.caps || []).includes(key))
+  .map((g) => ({ ...g, q: OUT_EXTRA.items[g.slug]?.q }))
 const combosFor = (key: string) => SOLUTIONS.filter((p) => (p.kind === 'combo' || p.kind === 'chatbot') && (p.capLinks || []).includes(key))
 
 
@@ -415,6 +420,11 @@ ${combosFor(cap.key).length ? `<section><div class="panel">
 <div class="cat-grid">${combosFor(cap.key).map((p) => `<a class="cat-card" href="${SITE}/solution/${attr(p.slug)}.html?ref=ai-system-c-${attr(cap.key)}"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`).join('')}</div>
 </div></section>` : ''}
 
+${outsFor(cap.key).length ? `<section><div class="panel">
+<h2>${h(cap.label)}まわりの業務を外注している方へ</h2>
+<p>代行や外注に出している業務を、AIの仕組みとして社内に作る場合の比較です。外注のままがいい場合も書いています。</p>
+<div class="cat-grid">${outsFor(cap.key).map((g) => `<a class="cat-card" href="${SITE}/outsourcing/${attr(g.slug)}.html?ref=ai-system-c-${attr(cap.key)}"><b>${h(g.name)}</b><span>${h(g.q ? g.q + 'を探す前に' : '外注する前に')}</span></a>`).join('')}</div>
+</div></section>` : ''}
 <section><div class="panel">
 <h2>${h(cap.label)}のオープンソース、まずどれを見ればよいですか？</h2>
 <p>${total}件すべてを比べる必要はありません。当社が実測した<strong>規模（GitHubスター）・日本語ロケールの有無・そのまま触れるデモがあるか</strong>の3点で、当てはまりの強い上位から${picks.length}件を挙げます。名前がその分類の一般名詞のままのものと、1年以上更新が止まっているものは外しています。どれもソフト自体は無料なので、気になったものは自社サーバーに置いて試せます。</p>

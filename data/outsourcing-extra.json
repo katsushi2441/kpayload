@@ -1,0 +1,606 @@
+{
+ "_note": "build-outsourcing.ts が outsourcing-list.json に重ねる業務ごとの固有情報。q=題名の先頭に置く検索語（vol=Google広告キーワードプランナー月間検索数・2026-10-02実測。kecnavi-sales/research/kw/22-outsourcing-20261002.tsv）。q が無い業務は「〇〇代行」の需要がほぼ0だったもの。cat=関連業務の束。own=Kurage App Store の実在商品id。keep=外注のままが合う場合（正直に書く）。",
+ "cats": {
+  "keiri": "経理・事務",
+  "kokyaku": "顧客対応・営業",
+  "shanai": "人事・総務・社内",
+  "marketing": "マーケティング・制作",
+  "ec": "EC・不動産"
+ },
+ "items": {
+  "data-entry": {
+   "q": "データ入力代行",
+   "vol": 260,
+   "cat": "keiri",
+   "keep": "年に数回しか発生しない大量入力や、手書きの癖が強く読み取りに向かない帳票は、そのつど代行に出すほうが安く済みます。",
+   "caps": [
+    "ocr",
+    "etl"
+   ]
+  },
+  "kityou": {
+   "q": "記帳代行",
+   "vol": 1900,
+   "cat": "keiri",
+   "keep": "決算・申告まで税理士に任せている場合、記帳だけを内製しても手間が移るだけのことがあります。税理士とのデータの受け渡しを自動化するほうが効きます。",
+   "caps": [
+    "accounting"
+   ]
+  },
+  "keihi-seisan": {
+   "q": "経理代行",
+   "vol": 1300,
+   "cat": "keiri",
+   "keep": "経理担当者がいない会社で、承認する人もいない場合は、まず経理代行に出すほうが現実的です。自動化は、確認する人がいて初めて回ります。",
+   "caps": [
+    "expense",
+    "accounting"
+   ]
+  },
+  "kyuyo-keisan": {
+   "q": "給与計算アウトソーシング",
+   "vol": 1600,
+   "cat": "keiri",
+   "keep": "社会保険・年末調整の法改正への対応まで任せたい場合は、社労士や給与計算の専門会社に出すほうが安全です。当社が自動化するのは、その手前の勤怠の集計とチェックです。",
+   "caps": [
+    "payroll",
+    "attendance"
+   ]
+  },
+  "seikyusho": {
+   "q": "請求書発行代行",
+   "cat": "keiri",
+   "own": [
+    "15abb025dc2ee4f6",
+    "61febea74f9c74b0"
+   ],
+   "keep": "月に数件しか請求書を出さない場合は、会計ソフトの請求書機能で足ります。",
+   "caps": [
+    "invoice",
+    "payment"
+   ]
+  },
+  "saiken-kanri": {
+   "q": "督促代行",
+   "cat": "keiri",
+   "own": [
+    "15abb025dc2ee4f6"
+   ],
+   "keep": "法的な手続きが必要な回収は、弁護士に任せてください。当社が自動化するのは、入金の照合と、法的手続きに入る前の督促状の下書きと送信管理です。",
+   "caps": [
+    "invoice",
+    "payment"
+   ]
+  },
+  "mitsumori": {
+   "cat": "keiri",
+   "keep": "品目と単価が案件ごとにまったく違い、毎回ゼロから積算する見積は、自動化より積算の専門家に向いています。",
+   "caps": [
+    "quote"
+   ]
+  },
+  "juchuu-shori": {
+   "q": "受注代行",
+   "vol": 260,
+   "cat": "keiri",
+   "own": [
+    "5b55bb2c808eead4"
+   ],
+   "keep": "注文書の形式が毎回ばらばらで件数も少ない場合は、自動化の効果が出にくいです。",
+   "caps": [
+    "order",
+    "ocr"
+   ]
+  },
+  "juchu-csv": {
+   "cat": "keiri",
+   "keep": "一度きりのデータ移行なら、変換の仕組みを作るより、その一回を代行に出すほうが安く済みます。",
+   "caps": [
+    "etl",
+    "spreadsheet",
+    "integration"
+   ]
+  },
+  "shorui-kanri": {
+   "q": "書類電子化代行",
+   "cat": "keiri",
+   "own": [
+    "2c8193abe130c90c"
+   ],
+   "keep": "倉庫に眠る過去の書類を一度に大量に電子化するなら、スキャンの専門業者が速いです。当社が作るのは、その後に増える書類を毎日取り込んで探せる仕組みです。",
+   "caps": [
+    "paperless",
+    "dms",
+    "ocr"
+   ]
+  },
+  "meishi-input": {
+   "q": "名刺入力代行",
+   "cat": "keiri",
+   "own": [
+    "4679d4cf90699580"
+   ],
+   "keep": "名刺が月に数十枚以下なら、スマホの名刺アプリで足ります。",
+   "caps": [
+    "crm",
+    "ocr"
+   ]
+  },
+  "zaiko-kanri": {
+   "q": "在庫管理代行",
+   "cat": "keiri",
+   "keep": "保管・出荷そのものを倉庫会社に任せている場合は、倉庫側のシステムを使うほうが早いです。",
+   "caps": [
+    "inventory",
+    "warehouse"
+   ]
+  },
+  "denwa-taiou": {
+   "q": "電話代行",
+   "vol": 2400,
+   "cat": "kokyaku",
+   "own": [
+    "224e141f77bd07a8",
+    "362c94ab4e1384f2"
+   ],
+   "keep": "電話そのものに人が出る必要がある業種（緊急の受付、高齢のお客様が多い窓口など）は、電話代行サービスが合っています。当社がやるのは、電話をかける理由を減らすことです。",
+   "caps": [
+    "chatbot",
+    "booking"
+   ]
+  },
+  "mail-taiou": {
+   "q": "メール対応代行",
+   "cat": "kokyaku",
+   "own": [
+    "6d0e2c491e4170da"
+   ],
+   "keep": "クレーム対応など、一通ごとに判断が要るメールが大半なら、経験のある人に任せるほうが合っています。",
+   "caps": [
+    "mail",
+    "ticket",
+    "helpdesk"
+   ]
+  },
+  "chat-support": {
+   "q": "チャットサポート代行",
+   "cat": "kokyaku",
+   "own": [
+    "224e141f77bd07a8",
+    "6d0e2c491e4170da"
+   ],
+   "keep": "24時間すべての問い合わせに人が答える必要があるなら、有人のチャット代行が合っています。",
+   "caps": [
+    "chatbot",
+    "livechat",
+    "faq"
+   ]
+  },
+  "uketsuke-yoyaku": {
+   "q": "予約代行",
+   "vol": 210,
+   "cat": "kokyaku",
+   "own": [
+    "362c94ab4e1384f2",
+    "43950141618ddb02"
+   ],
+   "keep": "予約の多くが電話で、Web予約に移せないお客様層なら、受付の代行が合っています。",
+   "caps": [
+    "booking",
+    "calendar"
+   ]
+  },
+  "tele-apo": {
+   "q": "テレアポ代行",
+   "vol": 880,
+   "cat": "kokyaku",
+   "own": [
+    "cd1eda3248c87920",
+    "f6fab083d826739f"
+   ],
+   "keep": "架電そのものを社内でやる人手がないなら、テレアポ代行が合っています。当社が自動化するのは、通話の後の記録と共有です。",
+   "caps": [
+    "sfa",
+    "crm",
+    "meeting"
+   ]
+  },
+  "form-eigyo": {
+   "q": "フォーム営業代行",
+   "vol": 140,
+   "cat": "kokyaku",
+   "own": [
+    "f6fab083d826739f"
+   ],
+   "keep": "送信件数だけを大量に増やしたい場合は当社向きではありません。相手ごとに文面を変えて、返信を拾う運用を作ります。",
+   "caps": [
+    "sfa",
+    "crm"
+   ]
+  },
+  "eigyo-list": {
+   "q": "営業リスト作成",
+   "cat": "kokyaku",
+   "own": [
+    "a5ac4b9f1fdb6d19"
+   ],
+   "keep": "有料の企業データベースにしか無い項目（売上高・決裁者名など）が必要な場合は、リスト販売会社が合っています。",
+   "caps": [
+    "sfa",
+    "shoken"
+   ]
+  },
+  "schedule-chousei": {
+   "q": "日程調整代行",
+   "cat": "kokyaku",
+   "own": [
+    "43950141618ddb02",
+    "362c94ab4e1384f2"
+   ],
+   "keep": "役員秘書のように、調整の中で相手との関係づくりや交渉が要る場合は、人の秘書が合っています。",
+   "caps": [
+    "calendar",
+    "booking"
+   ]
+  },
+  "review-kanshi": {
+   "q": "口コミ返信代行",
+   "cat": "kokyaku",
+   "keep": "炎上や悪質な投稿への対応は、専門の会社や弁護士に任せてください。当社が作るのは、新着に気づいて返信の下書きが出る仕組みです。",
+   "caps": [
+    "monitoring",
+    "notify"
+   ]
+  },
+  "kintai-shukei": {
+   "q": "勤怠管理代行",
+   "cat": "shanai",
+   "own": [
+    "f0f56c6e4da881be"
+   ],
+   "keep": "給与計算まで丸ごと社労士に任せている場合は、社労士が指定する勤怠システムに合わせるほうが早いです。",
+   "caps": [
+    "attendance",
+    "timetrack"
+   ]
+  },
+  "saiyo-screening": {
+   "q": "採用代行",
+   "vol": 2400,
+   "cat": "shanai",
+   "keep": "母集団づくり（求人媒体の運用・スカウト送信）まで任せたいなら、採用代行（RPO）が合っています。当社が自動化するのは、集まった応募書類の一次確認です。",
+   "caps": [
+    "recruit",
+    "hr"
+   ]
+  },
+  "kyujin-hyo": {
+   "q": "求人原稿作成代行",
+   "cat": "shanai",
+   "keep": "求人媒体の営業担当が原稿作成まで無料で引き受けてくれるなら、それを使うほうが安く済みます。",
+   "caps": [
+    "recruit",
+    "aiwrite"
+   ]
+  },
+  "shain-kenshu": {
+   "q": "研修動画制作",
+   "cat": "shanai",
+   "keep": "ブランドを見せる採用動画や、撮影と演出が要る映像は、映像制作会社が合っています。当社が自動化するのは、手順書から作る解説動画です。",
+   "caps": [
+    "lms",
+    "education",
+    "aivideo"
+   ]
+  },
+  "kensaku-shanai": {
+   "q": "ヘルプデスクアウトソーシング",
+   "vol": 210,
+   "cat": "shanai",
+   "own": [
+    "224e141f77bd07a8",
+    "104c05db7779a709"
+   ],
+   "keep": "パソコンの故障の切り分けや現地での作業が多いなら、人のヘルプデスクが合っています。当社が作るのは、規程や手順書で答えられる質問を減らす窓口です。",
+   "caps": [
+    "helpdesk",
+    "rag",
+    "knowledge"
+   ]
+  },
+  "faq-sakusei": {
+   "q": "マニュアル作成代行",
+   "vol": 140,
+   "cat": "shanai",
+   "own": [
+    "224e141f77bd07a8",
+    "7495b31ca104b483"
+   ],
+   "keep": "社外に配る製品マニュアルで、図版や組版の品質が問われる場合は、テクニカルライターが合っています。",
+   "caps": [
+    "faq",
+    "manual",
+    "wiki"
+   ]
+  },
+  "nippo-shukei": {
+   "cat": "shanai",
+   "own": [
+    "f6fab083d826739f"
+   ],
+   "keep": "日報の目的が「書くことで振り返る」ことなら、集計の自動化より書きやすさを先に整えます。",
+   "caps": [
+    "report",
+    "bi"
+   ]
+  },
+  "giji-roku": {
+   "q": "議事録作成代行",
+   "cat": "shanai",
+   "own": [
+    "cd1eda3248c87920"
+   ],
+   "keep": "議会や株主総会のように、一言一句の正確さと体裁が求められる記録は、専門の速記・反訳会社が合っています。",
+   "caps": [
+    "meeting",
+    "aivoice"
+   ]
+  },
+  "moji-okoshi": {
+   "q": "文字起こし代行",
+   "cat": "shanai",
+   "own": [
+    "cd1eda3248c87920"
+   ],
+   "keep": "方言が強い、雑音が多い、専門用語が多い音声は、AIの精度が落ちます。そうした音声は、人の文字起こしが合っています。",
+   "caps": [
+    "aivoice",
+    "meeting"
+   ]
+  },
+  "keiyakusho-check": {
+   "q": "リーガルチェック",
+   "vol": 6600,
+   "cat": "shanai",
+   "keep": "契約の有効性や交渉の判断は弁護士の仕事です。当社が作るのは、自社の雛形と違う箇所を並べて、弁護士に聞くべき点を絞る仕組みです。",
+   "caps": [
+    "esign",
+    "pdf"
+   ]
+  },
+  "honyaku": {
+   "q": "翻訳外注",
+   "vol": 40,
+   "cat": "shanai",
+   "own": [
+    "8adb859f30cb8cc5"
+   ],
+   "keep": "契約書・広告文・出版物のように、訳文がそのまま外に出るものは、プロの翻訳者が合っています。当社が作るのは、社内で読むための翻訳です。",
+   "caps": [
+    "translate",
+    "pdf"
+   ]
+  },
+  "anke-shukei": {
+   "q": "アンケート集計",
+   "vol": 1300,
+   "cat": "shanai",
+   "own": [
+    "53493d74a09cfd8c"
+   ],
+   "keep": "選択式だけのアンケートなら、表計算ソフトの集計で足ります。自由記述が多いときに効きます。",
+   "caps": [
+    "form",
+    "analytics"
+   ]
+  },
+  "sns-unyo": {
+   "q": "SNS運用代行",
+   "vol": 14800,
+   "cat": "marketing",
+   "keep": "撮影・企画・インフルエンサーとのやりとりまで任せたい場合は、SNS運用代行が合っています。当社が自動化するのは、自社の実績から投稿を下書きし、予約し、数字を集める部分です。",
+   "caps": [
+    "marketing",
+    "aiwrite"
+   ]
+  },
+  "blog-kiji": {
+   "q": "記事作成代行",
+   "vol": 480,
+   "cat": "marketing",
+   "keep": "取材記事や、書き手の体験が価値になる記事は、ライターが合っています。当社が自動化するのは、自社の実データから書ける記事です。",
+   "caps": [
+    "blog",
+    "aiwrite",
+    "cms"
+   ]
+  },
+  "douga-hensyu": {
+   "q": "動画編集外注",
+   "vol": 320,
+   "cat": "marketing",
+   "keep": "撮影素材を演出して仕上げる動画（CM・ブランド動画）は、映像クリエイターが合っています。",
+   "caps": [
+    "aivideo",
+    "shortdrama"
+   ]
+  },
+  "banner-design": {
+   "q": "バナー作成",
+   "vol": 1300,
+   "cat": "marketing",
+   "keep": "キャンペーンの顔になる一枚もののデザインは、デザイナーが合っています。当社が自動化するのは、商品や記事の数だけ必要になる量産のバナーです。",
+   "caps": [
+    "aiimage"
+   ]
+  },
+  "lp-seisaku": {
+   "q": "LP制作",
+   "vol": 2900,
+   "cat": "marketing",
+   "own": [
+    "c8ffa66502f7d905"
+   ],
+   "keep": "広告で勝負する1枚のLPで、コピーとデザインを作り込むなら、LP制作会社が合っています。当社が作るのは、商品や地域の数だけLPを並べる仕組みです。",
+   "caps": [
+    "sitebuilder",
+    "cms",
+    "staticsite"
+   ]
+  },
+  "web-koushin": {
+   "q": "ホームページ更新代行",
+   "vol": 110,
+   "cat": "marketing",
+   "own": [
+    "a3b60acb11b65f47"
+   ],
+   "keep": "更新が年に数回しかないなら、そのつど制作会社に頼むほうが安く済みます。",
+   "caps": [
+    "cms",
+    "headless",
+    "staticsite"
+   ]
+  },
+  "web-promotion": {
+   "cat": "marketing",
+   "own": [
+    "c8ffa66502f7d905",
+    "48ca584977698dcc"
+   ],
+   "keep": "テレビ・雑誌・大型の広告出稿を組み合わせる場合は、広告代理店が合っています。",
+   "caps": [
+    "marketing",
+    "analytics"
+   ]
+  },
+  "seo-taisaku": {
+   "q": "SEO外注",
+   "vol": 260,
+   "cat": "marketing",
+   "own": [
+    "c8ffa66502f7d905",
+    "48ca584977698dcc"
+   ],
+   "keep": "社内にサイトを直せる人がまったくいない場合は、修正まで請け負うSEO会社が合っています。",
+   "caps": [
+    "analytics",
+    "marketing"
+   ]
+  },
+  "kokoku-report": {
+   "q": "広告運用代行",
+   "vol": 390,
+   "cat": "marketing",
+   "keep": "入札や配信の調整そのものを任せたい場合は、広告運用代行が合っています。当社が自動化するのは、レポートの集計です。",
+   "caps": [
+    "report",
+    "analytics",
+    "bi"
+   ]
+  },
+  "shijou-chousa": {
+   "q": "市場調査代行",
+   "cat": "marketing",
+   "own": [
+    "a5ac4b9f1fdb6d19",
+    "232b3c1d11b6a730"
+   ],
+   "keep": "消費者アンケートやインタビューで一次情報を集める調査は、調査会社が合っています。当社が作るのは、公開情報の変化を見張る仕組みです。",
+   "caps": [
+    "monitoring",
+    "shoken"
+   ]
+  },
+  "mail-magazine": {
+   "q": "メルマガ代行",
+   "cat": "marketing",
+   "own": [
+    "495b5aca4ee119db"
+   ],
+   "keep": "読み物として毎号の文章に価値があるメルマガは、書き手が合っています。",
+   "caps": [
+    "mailmarketing",
+    "mail"
+   ]
+  },
+  "shashin-kakou": {
+   "q": "写真切り抜き",
+   "vol": 6600,
+   "cat": "marketing",
+   "keep": "髪の毛やガラスなど輪郭が難しい写真を高い品質で仕上げるなら、レタッチの専門家が合っています。",
+   "caps": [
+    "aiimage"
+   ]
+  },
+  "ec-touroku": {
+   "q": "商品登録代行",
+   "vol": 140,
+   "cat": "ec",
+   "own": [
+    "754c7ddb5f1c8f26"
+   ],
+   "keep": "商品数が少なく、入れ替えもほとんど無いなら、最初の一回だけ代行に出すほうが安く済みます。",
+   "caps": [
+    "ec",
+    "marketplace"
+   ]
+  },
+  "ec-unyo": {
+   "q": "ECサイト運営代行",
+   "vol": 390,
+   "cat": "ec",
+   "own": [
+    "754c7ddb5f1c8f26"
+   ],
+   "keep": "販促の企画やモールの担当者との交渉まで任せたい場合は、EC運営代行が合っています。",
+   "caps": [
+    "ec",
+    "order"
+   ]
+  },
+  "kanri-buttai": {
+   "q": "物件入力代行",
+   "cat": "ec",
+   "own": [
+    "01d71e3bd7f717a8",
+    "4bb2a5775eaad593",
+    "00f96a025e51574d"
+   ],
+   "keep": "物件の現地調査（写真撮影・境界の確認）は人の仕事です。当社が自動化するのは、住所から引ける公開データの調査です。",
+   "caps": [
+    "realestate",
+    "hazard",
+    "gis"
+   ]
+  }
+ },
+ "products": {
+  "00f96a025e51574d": "Kurage 防災判定セット（洪水・土砂・津波・避難所）",
+  "01d71e3bd7f717a8": "Kurage 重説 災害項目チェック（宅建業者向け・名古屋対応）",
+  "104c05db7779a709": "ヘルプデスクを自社サーバーで持つ（LibreDesk 日本語導入キット・VPS編）",
+  "15abb025dc2ee4f6": "請求書ソフトをオンプレミスで・発行から集金まで（kbilling ＋ VWork教材）",
+  "224e141f77bd07a8": "AIチャットボットをオンプレミスで（Kurage Light ChatBot）",
+  "232b3c1d11b6a730": "サイト更新・補助金情報の監視を安く（kcheckit ＋ VWork教材）",
+  "2c8193abe130c90c": "日本語の書類をpaperless-ngxで貯める（日本語導入・運用キット）",
+  "362c94ab4e1384f2": "予約管理システムをオンプレミスで（Kurage 予約・受付 kreserve）",
+  "43950141618ddb02": "予定表をスマホ・PCで同期する自前CalDAVサーバー（kcaldav）",
+  "4679d4cf90699580": "名刺管理を安く・AI名刺解析（Sansanの代わりに kaima）",
+  "48ca584977698dcc": "AIクローラー計測・自社サイトはAIに読まれているか（ktrackgeo）",
+  "495b5aca4ee119db": "BillionMail 日本語導入キット（VPS編）",
+  "4bb2a5775eaad593": "Kurage 都市計画ナビ（住所から用途地域・建ぺい率・容積率・市街化調整区域を引く・全国1,377市区町村・AIチャットとMCP対応・PHP1ファイル＋SQLite）",
+  "53493d74a09cfd8c": "広聴AIをAPIキーなしで動かす——意見データを外に出さない完全ローカル導入キット",
+  "5b55bb2c808eead4": "注文フォームから請求書・決済まで（kpaylink ＋ VWork教材）",
+  "61febea74f9c74b0": "領収書をPDFで発行してメール送信（kinvoice ＋ VWork教材）",
+  "6d0e2c491e4170da": "FreeScout 日本語導入キット（共有レンタルサーバー編）",
+  "7495b31ca104b483": "Docmost日本語導入・運用キット",
+  "754c7ddb5f1c8f26": "Kurage Vibe-Cart（PHPだけで動くEC・商品ページのURLを変えずに乗り換え・MCP同梱）",
+  "8adb859f30cb8cc5": "英語PDFを社外に出さず日本語で読む（PDFMathTranslate 日本語導入・運用キット）",
+  "a3b60acb11b65f47": "Decap CMS 日本語導入キット（GitHub Pages＋PHP中継編）",
+  "a5ac4b9f1fdb6d19": "商圏分析を自社サーバーで——住所ひとつで徒歩圏の人口・世帯・事業所（Kurage 商圏分析）",
+  "c8ffa66502f7d905": "SEO診断をオンプレミスで・日本語サイト向け（Kurage SEO kseo）",
+  "cd1eda3248c87920": "Whisperで文字起こし・AI議事録を自社サーバーで（Kurage AI MOM）",
+  "f0f56c6e4da881be": "勤怠管理システムを安く導入する（顔打刻つき Kurage Kintai）",
+  "f6fab083d826739f": "エクセル日報を自動化する入力ゼロCRM（Kurage CRM Agent）"
+ }
+}
