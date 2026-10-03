@@ -58,7 +58,8 @@ const combosFor = (key: string) => SOLUTIONS.filter((p) => (p.kind === 'combo' |
 
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
-import { kappKitPanel, kappKitCards, kappKitNames } from './kapp-kits'
+import { kappKitPanel, kappKitCards, kappKitNames, KAPP_KITS } from './kapp-kits'
+import { relatedProducts, relatedPanel } from './kapp-related'
 import { compareTable } from './compare-table'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
@@ -125,6 +126,7 @@ ${DEMOS[p.slug] ? `<p><a class="btn btn-main" href="${demoUrl(p.slug, `ai-system
 ${relatedNews('oss', p.slug)}
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / <a href="${BASE}/c/${attr(cap.key)}/">${h(cap.label)}</a> / ${h(p.name)}</nav>
+${relatedPanel(relatedProducts({ slug: p.slug, name: p.name, cap: cap.key, keywords: (p as { keywords?: string[] }).keywords }, KAPP_KITS[p.slug] ? [KAPP_KITS[p.slug].id] : []), `ai-system-rel-${attr(p.slug)}`, h(p.name))}
 
 <section><div class="panel">
 <h2>${h(p.name)}とは？</h2>
@@ -411,6 +413,7 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / ${h(cap.label)}</nav>
+${relatedPanel(relatedProducts({ slug: cap.key, name: cap.label, cap: cap.key }), `ai-system-c-rel-${attr(cap.key)}`, h(cap.label), `${h(cap.label)}に使える、当社の製品（オンプレミス）`)}
 <section><div class="panel">
 <h2>${h(cap.label)}とは？</h2>
 <p>${h(cap.label)}とは、${h(cap.question)}という状態を仕組みで解消することです。ゼロから作らなくても、同じ用途で世界中に使われているオープンソースがあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
