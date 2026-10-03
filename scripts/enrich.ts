@@ -42,7 +42,13 @@ type Selected = { repo: Repo; category: string; funnel: 'oss' | 'prototype'; top
 const selected = JSON.parse(await fs.readFile(path.join(harvestDir, 'selected.json'), 'utf8')) as Selected[]
 const existing = JSON.parse(await fs.readFile(path.join(root, 'data', 'oss-catalog.json'), 'utf8')) as Array<{ slug: string; githubUrl?: string | null }>
 
+// 生成済み(enriched/*.json)のslugも塞ぐ。手作り分だけ見ていたので、別バッチで生成した
+// frappe/crm と oroinc/crm が同じ「crm」になり、片方のページが出ていなかった（2026-10-04・23組）。
 const takenSlugs = new Set(existing.map((item) => item.slug))
+for (const name of await fs.readdir(enrichedDir).catch(() => [] as string[])) {
+  if (!name.endsWith('.json')) continue
+  try { takenSlugs.add((JSON.parse(await fs.readFile(path.join(enrichedDir, name), 'utf8')) as { slug: string }).slug) } catch { /* 壊れたファイルは無視 */ }
+}
 const existingRepos = new Set(existing.map((item) => (item.githubUrl || '').toLowerCase().replace(/\/+$/, '')).filter(Boolean))
 
 function makeSlug(repo: Repo): string {

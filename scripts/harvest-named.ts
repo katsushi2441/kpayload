@@ -137,6 +137,8 @@ const WANTED: Array<{ repo: string; category: string }> = [
   { repo: 'chatboxai/chatbox', category: 'aidev' },
   { repo: 'CherryHQ/cherry-studio', category: 'aidev' },
   { repo: 'Cinnamon/kotaemon', category: 'aidev' },
+  // 2026-10-04 AIが調べて書き足すCRM。Kurage CRM Agent の元にしたもの。商談管理OSSの指名検索の受け皿にする。
+  { repo: 'trycompai/crm', category: 'crm' },
 ]
 
 async function getRepo(full: string) {

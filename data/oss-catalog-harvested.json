@@ -13044,6 +13044,80 @@
     ]
   },
   {
+    "name": "CRM by Comp AI",
+    "slug": "trycompai-crm",
+    "category": "crm",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "AIエージェント向けに設計されたオープンソースのCRMです。",
+    "description": "Comp AI CRMは、特にAIエージェントを第一に考慮して設計されたオープンソースの顧客関係管理（CRM）システムです。Agentic-firstというコンセプトに基づき、AIとの連携を重視した構造を持っています。TypeScriptで構築されており、開発者にとっても親しみやすい技術スタックを採用しています。MITライセンスで提供されているため、柔軟な活用が可能です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://trycrm.ai",
+    "githubUrl": "https://github.com/trycompai/crm",
+    "featured": false,
+    "stars": 11034,
+    "language": "TypeScript",
+    "githubCreatedAt": "2026-07-31T21:38:51Z",
+    "githubPushedAt": "2026-09-11T07:06:17Z",
+    "useCases": [
+      {
+        "text": "AIエージェントによる顧客管理"
+      },
+      {
+        "text": "自動化された営業活動の基盤"
+      },
+      {
+        "text": "データ駆動型のAI連携"
+      },
+      {
+        "text": "カスタマイズ可能なCRM構築"
+      },
+      {
+        "text": "AIを活用した顧客対応支援"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "CRM"
+      },
+      {
+        "text": "AI Agent"
+      },
+      {
+        "text": "Open Source"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "Agentic-first"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはどのような企業に向いていますか？",
+        "answer": "AIエージェントを活用して業務の自動化や効率化を目指している企業に適しています。特に、単なるデータの入力だけでなく、AIとの連携を前提とした顧客管理基盤を構築したい場合に有効です。"
+      },
+      {
+        "question": "MITライセンスとはどのような意味ですか？",
+        "answer": "MITライセンスは非常に寛容なオープンソースライセンスの一つです。商用利用や改変、再配布が比較的自由に認められており、企業の独自のニーズに合わせてシステムをカスタマイズすることが可能です。"
+      },
+      {
+        "question": "TypeScriptで開発されていることのメリットは何ですか？",
+        "answer": "TypeScriptはJavaScriptに型定義を追加した言語であり、大規模な開発においてバグを減らし、保守性を高める効果があります。これにより、安定した動作と効率的な機能拡張が期待できます。"
+      },
+      {
+        "question": "既存のCRMとの違いは何ですか？",
+        "answer": "一般的なCRMが人間による入力を主目的としているのに対し、このツールはAIエージェント（Agentic-first）を優先して考慮しています。AIがよりスムーズに顧客データにアクセスし、アクションを実行するための設計になっています。Goals: 1. CRM for AI agents, 2. Agentic-first approach, 3. Open source flexibility. These are the core facts provided in the description."
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "django-cms",
     "slug": "django-cms",
     "category": "cms",
@@ -27337,8 +27411,8 @@
     ]
   },
   {
-    "name": "crm",
-    "slug": "crm",
+    "name": "Frappe CRM",
+    "slug": "frappe-crm",
     "category": "crm",
     "funnel": "oss",
     "kind": "business-app",
@@ -68092,7 +68166,7 @@
     "jaSamplePaths": []
   },
   {
-    "name": "crm",
+    "name": "OroCRM",
     "slug": "crm",
     "category": "crm",
     "funnel": "oss",
