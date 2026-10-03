@@ -4485,9 +4485,9 @@
     "jaSamplePaths": []
   },
   {
-    "name": "server",
-    "slug": "server",
-    "category": "devtools",
+    "name": "Nextcloud",
+    "slug": "nextcloud",
+    "category": "groupware",
     "funnel": "oss",
     "kind": "business-app",
     "summary": "データの安全な保管と共有を実現するセルフホスト型のクラウドストレージです。",
@@ -5557,7 +5557,7 @@
   },
   {
     "name": "Wiki.js",
-    "slug": "wiki",
+    "slug": "wikijs",
     "category": "knowledge",
     "funnel": "oss",
     "kind": "business-app",
@@ -6117,8 +6117,8 @@
     ]
   },
   {
-    "name": "platform",
-    "slug": "platform",
+    "name": "Huly",
+    "slug": "huly",
     "category": "crm",
     "funnel": "oss",
     "kind": "business-app",
@@ -8956,8 +8956,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "zola",
-    "slug": "zola",
+    "name": "Zola",
+    "slug": "getzola",
     "category": "sitegen",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -9582,8 +9582,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "server",
-    "slug": "server",
+    "name": "Gotify",
+    "slug": "gotify",
     "category": "devtools",
     "funnel": "oss",
     "kind": "business-app",
@@ -15060,8 +15060,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "core",
-    "slug": "core",
+    "name": "ownCloud",
+    "slug": "owncloud",
     "category": "dms",
     "funnel": "oss",
     "kind": "business-app",
@@ -16005,7 +16005,7 @@
   },
   {
     "name": "claude-ads",
-    "slug": "claude-ads",
+    "slug": "agricidaniel-claude-ads",
     "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -18028,8 +18028,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "framework",
-    "slug": "framework",
+    "name": "Flarum（本体）",
+    "slug": "flarum-framework",
     "category": "forum",
     "funnel": "oss",
     "kind": "business-app",
@@ -19057,8 +19057,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "ledger",
-    "slug": "ledger",
+    "name": "Ledger",
+    "slug": "ledger-cli",
     "category": "accounting",
     "funnel": "oss",
     "kind": "business-app",
@@ -20319,7 +20319,7 @@
   },
   {
     "name": "skills",
-    "slug": "skills",
+    "slug": "browser-act-skills",
     "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -21432,7 +21432,7 @@
   },
   {
     "name": "magic",
-    "slug": "magic",
+    "slug": "dtyq-magic",
     "category": "lowcode",
     "funnel": "oss",
     "kind": "business-app",
@@ -24566,8 +24566,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "cms",
-    "slug": "cms",
+    "name": "SiteServer CMS",
+    "slug": "siteserver-cms",
     "category": "cms",
     "funnel": "oss",
     "kind": "business-app",
@@ -26939,8 +26939,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "shopware",
-    "slug": "shopware",
+    "name": "Shopware 6",
+    "slug": "shopware6",
     "category": "commerce",
     "funnel": "oss",
     "kind": "business-app",
@@ -37247,7 +37247,7 @@
   },
   {
     "name": "conduit",
-    "slug": "conduit",
+    "slug": "cogwheel0-conduit",
     "category": "groupware",
     "funnel": "oss",
     "kind": "business-app",
@@ -42937,8 +42937,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "storefront",
-    "slug": "storefront",
+    "name": "Saleor Storefront",
+    "slug": "saleor-storefront",
     "category": "commerce",
     "funnel": "oss",
     "kind": "business-app",
@@ -52512,7 +52512,7 @@
   },
   {
     "name": "insights",
-    "slug": "insights",
+    "slug": "mariusandra-insights",
     "category": "analytics",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -53082,8 +53082,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "project-management",
-    "slug": "project-management",
+    "name": "Helper（devaslanphp/project-management）",
+    "slug": "devaslanphp-project-management",
     "category": "support",
     "funnel": "oss",
     "kind": "business-app",
@@ -84916,7 +84916,7 @@
   },
   {
     "name": "Foundry",
-    "slug": "foundry",
+    "slug": "axislab-top-foundry",
     "category": "aidev",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -86041,8 +86041,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "Wiki.js",
-    "slug": "wiki",
+    "name": "OpenIPC Wiki",
+    "slug": "openipc-wiki",
     "category": "knowledge",
     "funnel": "oss",
     "kind": "business-app",
@@ -87243,7 +87243,7 @@
     ]
   },
   {
-    "name": "Wiki.js",
+    "name": "Frappe Wiki",
     "slug": "wiki",
     "category": "knowledge",
     "funnel": "oss",
@@ -94505,8 +94505,8 @@
     ]
   },
   {
-    "name": "webapp",
-    "slug": "webapp",
+    "name": "Tinode",
+    "slug": "tinode-webapp",
     "category": "groupware",
     "funnel": "oss",
     "kind": "business-app",
@@ -123539,8 +123539,8 @@
     "jaSamplePaths": []
   },
   {
-    "name": "e-commerce",
-    "slug": "e-commerce",
+    "name": "OCA e-commerce（Odoo）",
+    "slug": "oca-e-commerce",
     "category": "commerce",
     "funnel": "oss",
     "kind": "business-app",
@@ -132602,7 +132602,7 @@
   },
   {
     "name": "flow",
-    "slug": "flow",
+    "slug": "jsubroto-flow",
     "category": "automation",
     "funnel": "prototype",
     "kind": "dev-tool",
@@ -141436,7 +141436,7 @@
   },
   {
     "name": "Invoice",
-    "slug": "invoice",
+    "slug": "go2ismail-invoice",
     "category": "accounting",
     "funnel": "oss",
     "kind": "business-app",
@@ -173483,7 +173483,7 @@
   },
   {
     "name": "til",
-    "slug": "til",
+    "slug": "bhupesh-v-til",
     "category": "knowledge",
     "funnel": "oss",
     "kind": "business-app",

@@ -113,7 +113,23 @@ export const DISPLAY_NAMES: Record<string, string> = {
   twenty: 'Twenty',
   vendure: 'Vendure',
   wekan: 'Wekan',
-  wiki: 'Wiki.js',
+  // /oss/wiki/ は frappe/wiki。Wiki.js(requarks/wiki) は slug 重複で隠れていたので wikijs に（2026-10-04）
+  wiki: 'Frappe Wiki',
+  wikijs: 'Wiki.js',
+  nextcloud: 'Nextcloud',
+  owncloud: 'ownCloud',
+  huly: 'Huly',
+  gotify: 'Gotify',
+  shopware6: 'Shopware 6',
+  getzola: 'Zola',
+  'ledger-cli': 'Ledger',
+  'flarum-framework': 'Flarum（本体）',
+  'saleor-storefront': 'Saleor Storefront',
+  'siteserver-cms': 'SiteServer CMS',
+  'oca-e-commerce': 'OCA e-commerce（Odoo）',
+  'tinode-webapp': 'Tinode',
+  'openipc-wiki': 'OpenIPC Wiki',
+  'devaslanphp-project-management': 'Helper（devaslanphp/project-management）',
   zammad: 'Zammad',
   zulip: 'Zulip',
   affine: 'AFFiNE',
@@ -148,7 +164,10 @@ export const displayName = (slug: string, current: string): string =>
  */
 export const CATEGORY_FIX: Record<string, string> = {
   // nextcloud/server は再生成で notify（コレクションに無い分類）になり seed が止まった（2026-10-04）。従来の分類に固定
+  // slug の重複を直して nextcloud/gotify は別の slug になった。server は bangumi/server
   server: 'devtools',
+  nextcloud: 'groupware',
+  gotify: 'devtools',
   // 2026-10-04 AIチャットボット・RAGは devtools ではなく AI の分類に
   'maxkb': 'aidev',
   'quivr': 'aidev',
