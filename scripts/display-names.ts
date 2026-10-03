@@ -10,6 +10,25 @@
  * （nocodb→NocoDB のように直すべきもの以外）は足さないこと。
  */
 export const DISPLAY_NAMES: Record<string, string> = {
+  // 2026-10-04 AIチャットボット・RAGの主要OSS
+  'open-webui': 'Open WebUI',
+  'librechat': 'LibreChat',
+  'langflow': 'Langflow',
+  'ragflow': 'RAGFlow',
+  'fastgpt': 'FastGPT',
+  'maxkb': 'MaxKB',
+  'botpress': 'Botpress',
+  'rasa': 'Rasa',
+  'typebot-io': 'Typebot',
+  'onyx': 'Onyx',
+  'quivr': 'Quivr',
+  'private-gpt': 'PrivateGPT',
+  'jan': 'Jan',
+  'nextchat': 'NextChat',
+  'chatbox': 'Chatbox',
+  'cherry-studio': 'Cherry Studio',
+  'kotaemon': 'kotaemon',
+
   akaunting: 'Akaunting',
   apitable: 'APITable',
   appsmith: 'Appsmith',
@@ -125,6 +144,18 @@ export const displayName = (slug: string, current: string): string =>
  * 出しているのに、AI開発ツールのカテゴリに入っていた。2026-08-25）。
  */
 export const CATEGORY_FIX: Record<string, string> = {
+  // nextcloud/server は再生成で notify（コレクションに無い分類）になり seed が止まった（2026-10-04）。従来の分類に固定
+  server: 'devtools',
+  // 2026-10-04 AIチャットボット・RAGは devtools ではなく AI の分類に
+  'maxkb': 'aidev',
+  'quivr': 'aidev',
+  'botpress': 'aidev',
+  'private-gpt': 'aidev',
+  'ragflow': 'aidev',
+  'jan': 'aidev',
+  'langflow': 'aidev',
+  'rasa': 'aidev',
+
   medusa: 'commerce',
   // 広聴AIは意見集約の完成システムだが、gemma4がdev-toolと誤分類した(2026-09-01)
   'kouchou-ai': 'civic',

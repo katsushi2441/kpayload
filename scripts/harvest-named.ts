@@ -117,6 +117,26 @@ const WANTED: Array<{ repo: string; category: string }> = [
   { repo: 'actualbudget/actual', category: 'accounting' },
   { repo: 'Automattic/harper', category: 'knowledge' },
   { repo: 'textlint/textlint', category: 'knowledge' },
+  // 2026-10-04 主要なAIチャットボット・RAGのOSSが入っていなかった（Dify・AnythingLLM・LobeHub・Khoj だけ）。
+  // 「open webui 日本語」のような指名検索の受け皿にし、Kurage Light ChatBot へ送る（kapp-related.ts）。
+  // Flowise はアーカイブ済み、chatbot-ui は2024年で更新停止なので入れない。
+  { repo: 'open-webui/open-webui', category: 'aidev' },
+  { repo: 'LibreChat-AI/LibreChat', category: 'aidev' },
+  { repo: 'langflow-ai/langflow', category: 'aidev' },
+  { repo: 'infiniflow/ragflow', category: 'aidev' },
+  { repo: 'labring/FastGPT', category: 'aidev' },
+  { repo: '1Panel-dev/MaxKB', category: 'aidev' },
+  { repo: 'botpress/botpress', category: 'aidev' },
+  { repo: 'RasaHQ/rasa', category: 'aidev' },
+  { repo: 'baptisteArno/typebot.io', category: 'aidev' },
+  { repo: 'onyx-dot-app/onyx', category: 'aidev' },
+  { repo: 'The-Vibe-Company/quivr', category: 'aidev' },
+  { repo: 'zylon-ai/private-gpt', category: 'aidev' },
+  { repo: 'janhq/jan', category: 'aidev' },
+  { repo: 'ChatGPTNextWeb/NextChat', category: 'aidev' },
+  { repo: 'chatboxai/chatbox', category: 'aidev' },
+  { repo: 'CherryHQ/cherry-studio', category: 'aidev' },
+  { repo: 'Cinnamon/kotaemon', category: 'aidev' },
 ]
 
 async function getRepo(full: string) {

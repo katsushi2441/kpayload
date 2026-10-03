@@ -74,6 +74,174 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Langflow",
+    "slug": "langflow",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "AIエージェントやワークフローを構築・デプロイするための強力なツールです。",
+    "description": "Langflowは、AIを搭載したエージェントや複雑なワークフローを構築し、展開するための強力なツールです。Pythonを主な言語としており、生成AIや大規模言語モデル（LLM）を活用したシステム開発に適しています。React Flowをベースとしたインターフェースを備えており、視覚的に構成を組み立てることが可能です。マルチエージェントシステムの構築など、高度なAIアプリケーションの開発を支援します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "http://www.langflow.org",
+    "githubUrl": "https://github.com/langflow-ai/langflow",
+    "featured": false,
+    "stars": 155479,
+    "language": "Python",
+    "githubCreatedAt": "2023-02-08T22:28:03Z",
+    "githubPushedAt": "2026-10-03T19:41:18Z",
+    "useCases": [
+      {
+        "text": "AIエージェントの構築"
+      },
+      {
+        "text": "生成AIワークフローの設計"
+      },
+      {
+        "text": "大規模言語モデル（LLM）の統合"
+      },
+      {
+        "text": "マルチエージェントシステムの開発"
+      },
+      {
+        "text": "React Flowを用いた視覚的なフロー作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agents"
+      },
+      {
+        "text": "chatgpt"
+      },
+      {
+        "text": "generative-ai"
+      },
+      {
+        "text": "large-language-models"
+      },
+      {
+        "text": "multiagent"
+      },
+      {
+        "text": "react-flow"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Langflowでどのようなことができるのですか？",
+        "answer": "AIを搭載したエージェントや、一連の処理を行うワークフローを構築・デプロイすることができます。生成AIや大規模言語モデルを活用したアプリケーションの開発を支援するツールです。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "主にPythonを使用して開発が行われます。Python環境で動作するため、既存のPythonエコシステムと連携しながらAI機能を組み込むことが可能です。"
+      },
+      {
+        "question": "どのようなインターフェースを提供していますか？",
+        "answer": "React Flowをベースとしたインターフェースを採用しています。これにより、複雑な処理の流れやエージェントの構成を視覚的に構築することが可能になります。"
+      },
+      {
+        "question": "マルチエージェントの構築に対応していますか？",
+        "answer": "はい、対応しています。単一のAIだけでなく、複数のエージェントが連携して動くマルチエージェントシステムの構築にも活用できるツールです。Goals"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "src/backend/base/langflow/locales/ja.json"
+      },
+      {
+        "text": "src/frontend/src/locales/ja.json"
+      }
+    ]
+  },
+  {
+    "name": "Open WebUI",
+    "slug": "open-webui",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ユーザーフレンドリーなAIインターフェースを提供するWebアプリケーションです。",
+    "description": "このソフトウェアは、ユーザーがAIモデルと対話するための使いやすいインターフェースを提供します。OllamaやOpenAI APIなど、多様なバックエンドとの連携に対応しています。Pythonで開発されており、LLM（大規模言語モデル）をブラウザ上で操作するためのUIを備えています。高い人気を誇るオープンソースプロジェクトであり、直感的な操作でAI機能を活用することが可能です。",
+    "license": "Open WebUI License（BSD-3系＋ブランド表記の条件）",
+    "licenseTier": "source-available",
+    "licenseNote": "BSD-3系のライセンスに、Open WebUI の名称・ロゴを消さない・変えないという条件が付いています（2025年4月以降の版）。自社利用・受託での構築とカスタマイズはできますが、ブランドを差し替えての提供はできません。導入前に最新の条文を確認します。",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://openwebui.com",
+    "githubUrl": "https://github.com/open-webui/open-webui",
+    "featured": false,
+    "stars": 153878,
+    "language": "Python",
+    "githubCreatedAt": "2023-10-06T22:08:27Z",
+    "githubPushedAt": "2026-10-03T13:06:04Z",
+    "useCases": [
+      {
+        "text": "社内向けチャットインターフェースの構築"
+      },
+      {
+        "text": "OpenAI APIを利用した対話システムの運用"
+      },
+      {
+        "text": "Ollamaと連携したローカルLLMの利用環境提供"
+      },
+      {
+        "text": "複数のLLMモデルの一元管理"
+      },
+      {
+        "text": "WebベースでのAIアシスタントUIの導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "llm"
+      },
+      {
+        "text": "llm-ui"
+      },
+      {
+        "text": "llm-webui"
+      },
+      {
+        "text": "ollama"
+      },
+      {
+        "text": "python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなバックエンドに対応していますか？",
+        "answer": "OllamaやOpenAI APIなど、複数の主要なLLMバックエンドとの連携をサポートしています。これにより、クラウド型のAPIからローカル環境で実行するモデルまで幅広く対応可能です。"
+      },
+      {
+        "question": "このアプリケーションの主な特徴は何ですか？",
+        "answer": "ユーザーフレンドリーなインターフェースを備えている点が特徴です。複雑な設定を意識することなく、ブラウザを通じて直感的にAIとの対話や操作を行うことができます。"
+      },
+      {
+        "question": "開発言語は何を使用していますか？",
+        "answer": "このソフトウェアは主にPythonを使用して開発されています。そのため、Python環境での構築やカスタマイズに適した構造を持っています。"
+      },
+      {
+        "question": "どのようなユーザーが利用するのに適していますか？",
+        "answer": "LLMを業務に取り入れたい企業の担当者や、特定のインターフェースを通じてAIモデルを活用したい組織に適しています。完成されたUIを提供するため、スムーズな導入が期待できます。Goals: 1. Provide a user-friendly AI interface for interacting with various LLMs (Ollama, OpenAI API, etc.). 2. Enable easy access to large language models via a web browser. 3. Support multiple backends for flexibility in deployment. 4. Offer a polished UI that simplifies the interaction between users and AI models."
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "src/lib/i18n/locales/ja-JP"
+      },
+      {
+        "text": "src/lib/i18n/locales/ja-JP/translation.json"
+      }
+    ]
+  },
+  {
     "name": "dify",
     "slug": "dify",
     "category": "aidev",
@@ -242,6 +410,87 @@
     ]
   },
   {
+    "name": "RAGFlow",
+    "slug": "ragflow",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "高度なRAG技術とエージェント機能を統合したオープンソースの検索エンジンです。",
+    "description": "RAGFlowは、最先端の検索拡張生成（RAG）技術とAIエージェントの能力を融合させた主要なオープンソースエンジンです。LLMに対して優れたコンテキスト層を提供することを目的としています。Agentic RetrievalやAgentic Searchといった高度な機能を備えています。Go言語で構築されており、Apache-2.0ライセンスで提供されています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://ragflow.io",
+    "githubUrl": "https://github.com/infiniflow/ragflow",
+    "featured": false,
+    "stars": 91629,
+    "language": "Go",
+    "githubCreatedAt": "2023-12-12T06:13:13Z",
+    "githubPushedAt": "2026-10-03T15:52:13Z",
+    "useCases": [
+      {
+        "text": "AIエージェントの構築"
+      },
+      {
+        "text": "RAGシステムの開発"
+      },
+      {
+        "text": "高度なコンテキスト検索の実装"
+      },
+      {
+        "text": "企業内データの検索基盤構築"
+      },
+      {
+        "text": "LLMを活用した情報抽出システム"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "AIエージェント"
+      },
+      {
+        "text": "検索エンジン"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "Go言語"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "RAGFlowの主な特徴は何ですか？",
+        "answer": "最先端のRAG技術とAIエージェント機能を融合させ、大規模言語モデル（LLM）に対して高品質なコンテキスト層を提供できる点が大きな特徴です。"
+      },
+      {
+        "question": "どのような技術スタックで構築されていますか？",
+        "answer": "このソフトウェアはGo言語を用いて開発されており、Apache-2.0ライセンスの下で公開されているオープンソースプロジェクトです。"
+      },
+      {
+        "question": "Agentic Retrievalとは何を指しますか？",
+        "answer": "単なる情報の検索にとどまらず、AIエージェントが自律的に最適な情報を探索・取得するための高度な検索能力を指します。"
+      },
+      {
+        "question": "このツールはどのような場面で活用できますか？",
+        "answer": "LLMを活用したアプリケーションにおいて、より正確な文脈に基づいた回答を生成するための基盤として、様々なシステム開発に活用可能です。Goals"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "README_ja.md"
+      },
+      {
+        "text": "web/src/locales/ja.ts"
+      }
+    ]
+  },
+  {
     "name": "uptime-kuma",
     "slug": "uptime-kuma",
     "category": "monitoring",
@@ -252,7 +501,7 @@
     "license": "MIT",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://uptime.kuma.pet",
     "githubUrl": "https://github.com/louislam/uptime-kuma",
     "featured": false,
@@ -313,6 +562,12 @@
       {
         "question": "どのようなライセンスで提供されていますか？",
         "answer": "このソフトウェアはMITライセンスの下で公開されています。オープンソースソフトウェアとして提供されており、利用条件については公式のライセンス条項をご確認ください。Goals"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "src/lang/ja.json"
       }
     ]
   },
@@ -474,6 +729,83 @@
         "text": "app/assets/i18n/ja.json"
       }
     ]
+  },
+  {
+    "name": "NextChat",
+    "slug": "nextchat",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "設定不要ですぐに利用できるマルチモデル対応のAIチャットアシスタントです。",
+    "description": "NextChatは、複雑な設定なしでGPTやClaude、Geminiといった主要なAIモデルと対話ができるチャットツールです。APIキーの設定を必要とせず、サインアップするだけで100以上のトップモデルを利用可能です。Webブラウザのほか、iOS、macOS、Android、Linux、Windowsなど幅広いプラットフォームに対応しています。従量課金の仕組みを採用しているため、コストを抑えながら効率的にAIを活用できます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://nextchat.club",
+    "githubUrl": "https://github.com/ChatGPTNextWeb/NextChat",
+    "featured": false,
+    "stars": 88827,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-03-10T18:27:54Z",
+    "githubPushedAt": "2026-08-11T02:07:25Z",
+    "useCases": [
+      {
+        "text": "GPTやClaudeとのチャット利用"
+      },
+      {
+        "text": "Geminiなどのマルチモデル活用"
+      },
+      {
+        "text": "Web・モバイルでのAI操作"
+      },
+      {
+        "text": "デスクトップアプリでのAI利用"
+      },
+      {
+        "text": "クロスプラットフォームでのAI導入"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ChatGPT"
+      },
+      {
+        "text": "Claude"
+      },
+      {
+        "text": "Gemini"
+      },
+      {
+        "text": "DeepSeek"
+      },
+      {
+        "text": "マルチモデル"
+      },
+      {
+        "text": "AIアシスタント"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなAIモデルを利用できますか？",
+        "answer": "GPT-5、Claude 4、Gemini 2.5、DeepSeekを含む100以上の主要なトップモデルを利用することが可能です。"
+      },
+      {
+        "question": "利用できるデバイスやOSはありますか？",
+        "answer": "Webブラウザのほか、iOS、macOS、Android、Linux、Windowsといった主要なプラットフォームに対応しています。"
+      },
+      {
+        "question": "導入にあたって難しい設定は必要ですか？",
+        "answer": "ゼロコンフィギュレーション（設定不要）を掲げており、サインアップするだけで即座にチャットを開始できます。"
+      },
+      {
+        "question": "コスト面での特徴を教えてください。",
+        "answer": "従量課金制を採用しているため、必要な分だけ支払うことでより効率的な運用が可能です。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
   },
   {
     "name": "lobehub",
@@ -1463,6 +1795,83 @@
     "jaSamplePaths": []
   },
   {
+    "name": "PrivateGPT",
+    "slug": "private-gpt",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "ローカルモデルを用いたプライベートなAIアプリケーション構築のためのAPIレイヤーです。",
+    "description": "このソフトウェアは、ローカル環境で動作するモデルを用いて、RAGやスキル、ツール、MCP、text-to-sqlなどの機能を備えたプライベートなAIアプリケーションを構築するための完全なAPIレイヤーを提供します。OpenAI互換の推論サーバーであればどのものとも連携可能です。Pythonで記述されており、Apache-2.0ライセンスの下で公開されています。企業の機密情報を保護しながら、高度なAI機能を統合したシステムを開発する際に適しています。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://www.zylon.ai/private-gpt",
+    "githubUrl": "https://github.com/zylon-ai/private-gpt",
+    "featured": false,
+    "stars": 57559,
+    "language": "Python",
+    "githubCreatedAt": "2023-05-02T09:15:31Z",
+    "githubPushedAt": "2026-10-02T14:01:06Z",
+    "useCases": [
+      {
+        "text": "プライベートなRAGシステムの構築"
+      },
+      {
+        "text": "ローカルLLMを用いた社内ツール開発"
+      },
+      {
+        "text": "text-to-sql機能の実装"
+      },
+      {
+        "text": "カスタムスキルの統合"
+      },
+      {
+        "text": "OpenAI互換サーバーとの連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ai"
+      },
+      {
+        "text": "ai-tools"
+      },
+      {
+        "text": "on-premise"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "local LLM"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールで外部にデータを公開せずにAIを利用できますか？",
+        "answer": "はい、ローカルモデルと連携するプライベートなAIアプリケーションのためのAPIレイヤーを提供するため、機密情報を保護した環境での利用に適しています。"
+      },
+      {
+        "question": "OpenAI以外のモデルでも使用可能ですか？",
+        "answer": "はい、OpenAI互換の推論サーバーであれば、どのものとも連携して動作するように設計されています。"
+      },
+      {
+        "question": "どのような機能が含まれていますか？",
+        "answer": "RAG（検索拡張生成）、スキル、ツール、MCP、text-to-sqlなど、高度なAIアプリケーションを構築するための主要な機能が含まれています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはApache-2.0ライセンスの下で提供されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "Joplin",
     "slug": "joplin",
     "category": "knowledge",
@@ -1826,6 +2235,87 @@
       },
       {
         "text": "addons/account_edi/i18n/ja.po"
+      }
+    ]
+  },
+  {
+    "name": "Cherry Studio",
+    "slug": "cherry-studio",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "高度なAI機能と多様なアシスタントを備えた生産性向上スタジオです。",
+    "description": "cherry-studioは、スマートチャットや自律型エージェント、300以上のアシスタント機能を備えたAI生産性スタジオです。フロントier LLMへの統合的なアクセスを提供し、ユーザーの業務を支援します。TypeScriptで構築されており、多様なスキルセットを活用することが可能です。このツールを利用することで、複数のAIモデルを一つのインターフェースから効率的に操作できます。",
+    "license": "AGPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://cherryai.com",
+    "githubUrl": "https://github.com/CherryHQ/cherry-studio",
+    "featured": false,
+    "stars": 52349,
+    "language": "TypeScript",
+    "githubCreatedAt": "2024-05-24T01:56:26Z",
+    "githubPushedAt": "2026-10-03T20:10:09Z",
+    "useCases": [
+      {
+        "text": "AIアシスタントを活用した業務効率化"
+      },
+      {
+        "text": "自律型エージェントによるタスク自動化"
+      },
+      {
+        "text": "複数のLLMモデルの統合管理"
+      },
+      {
+        "text": "スマートチャットによる情報検索"
+      },
+      {
+        "text": "多様なスキルを用いた高度なAI活用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AI生産性"
+      },
+      {
+        "text": "スマートチャット"
+      },
+      {
+        "text": "自律型エージェント"
+      },
+      {
+        "text": "LLM統合"
+      },
+      {
+        "text": "アシスタント"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなAIモデルを利用できますか？",
+        "answer": "フロントier LLMへの統合的なアクセスを提供しており、複数の最新モデルを一つのスタジオ内で利用することが可能です。"
+      },
+      {
+        "question": "アシスタント機能には何が含まれていますか？",
+        "answer": "300以上の多様なアシスタントが用意されており、ユーザーのニーズに合わせた幅広い用途での活用が期待できます。"
+      },
+      {
+        "question": "自律型エージェントとはどのような機能ですか？",
+        "answer": "単なるチャットにとどまらず、特定のタスクを自律的に実行するためのエージェント機能を備えています。"
+      },
+      {
+        "question": "このソフトウェアは何で開発されていますか？",
+        "answer": "主な開発言語としてTypeScriptが使用されており、モダンな技術スタックで構築されています。"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "src/main/i18n/locales/ja-jp.json"
+      },
+      {
+        "text": "src/renderer/i18n/locales/ja-jp.json"
       }
     ]
   },
@@ -2466,6 +2956,192 @@
     ]
   },
   {
+    "name": "LibreChat",
+    "slug": "librechat",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "多様なAIモデルを統合して利用できる、セルフホスト可能なChatGPTクローンアプリです。",
+    "description": "LibreChatは、OpenAI、Anthropic、Google Gemini、Mistralなど複数の主要なAIモデルを一つのインターフェースで切り替えて利用できるオープンソースソフトウェアです。マルチユーザー認証やメッセージ検索、コード実行機能、画像生成などの高度な機能を備えています。LangChainやMCPのサポートに加え、エージェント機能やカスタムアクションも統合可能です。セルフホストに対応しているため、企業独自の環境で安全に運用することができます。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://librechat.ai/",
+    "githubUrl": "https://github.com/LibreChat-AI/LibreChat",
+    "featured": false,
+    "stars": 45227,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-02-12T01:06:52Z",
+    "githubPushedAt": "2026-10-03T18:56:44Z",
+    "useCases": [
+      {
+        "text": "社内向けAIチャットツールの構築"
+      },
+      {
+        "text": "複数のLLMモデルを比較検証する環境の整備"
+      },
+      {
+        "text": "画像生成やコード実行を含む高度なAI操作"
+      },
+      {
+        "text": "マルチユーザーでの安全なAI利用基盤の提供"
+      },
+      {
+        "text": "OpenAPI Actionsを用いた外部ツール連携"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "ChatGPTクローン"
+      },
+      {
+        "text": "マルチLLM対応"
+      },
+      {
+        "text": "セルフホスト"
+      },
+      {
+        "text": "AIチャット"
+      },
+      {
+        "text": "オープンソース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのAIモデルを利用できますか？",
+        "answer": "OpenAI、Anthropic、AWS、Azure、Groq、Mistral、Vertex AI、Geminiなど、主要なプロバイダーのモデルをサポートしています。また、OpenRouter経由での利用も可能です。"
+      },
+      {
+        "question": "セキュリティ面での特徴はありますか？",
+        "answer": "セルフホストに対応しており、Secure Multi-User Auth（安全なマルチユーザー認証）機能を備えているため、組織内での安全なアカウント管理が可能です。"
+      },
+      {
+        "question": "高度な機能は含まれていますか？",
+        "answer": "はい、コード実行（Code Interpreter）、画像生成（DALL-E-3）、メッセージ検索、エージェント機能、LangChainの統合など、多くの高度な機能が含まれています。"
+      },
+      {
+        "question": "カスタマイズや拡張は可能ですか？",
+        "answer": "オープンソースとして提供されており、PresetsやOpenAPI Actions、Functionsなどの仕組みを通じて、特定の用途に合わせた設定や外部連携が可能です。Goals等もサポートしています。媒体はTypeScriptで記述されています。"
+      }
+    ],
+    "jaFileCount": 4,
+    "jaSamplePaths": [
+      {
+        "text": "client/src/locales/ja"
+      },
+      {
+        "text": "client/src/locales/ja/translation.json"
+      },
+      {
+        "text": "packages/client/src/locales/ja"
+      },
+      {
+        "text": "packages/client/src/locales/ja/translation.json"
+      }
+    ]
+  },
+  {
+    "name": "Jan",
+    "slug": "jan",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "PC上で完全にオフラインで動作するオープンソースのChatGPT代替ツールです。",
+    "description": "Janは、ユーザーのコンピュータ上で100%オフラインで動作するオープンソースのChatGPT代替ソフトウェアです。ローカル環境でLLMを実行するための仕組みを備えており、外部サーバーへの接続を必要としません。Rust言語を用いて構築されており、高いパフォーマンスと安定性を追求しています。セルフホストが可能なため、機密性の高いデータを扱う環境でも安心して利用できるのが特徴です。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "日本語ファイルあり",
+    "officialUrl": "https://jan.ai/",
+    "githubUrl": "https://github.com/janhq/jan",
+    "featured": false,
+    "stars": 44776,
+    "language": "Rust",
+    "githubCreatedAt": "2023-08-17T02:17:10Z",
+    "githubPushedAt": "2026-10-02T06:37:34Z",
+    "useCases": [
+      {
+        "text": "ローカルLLMの実行"
+      },
+      {
+        "text": "オフラインでのAIチャット利用"
+      },
+      {
+        "text": "プライバシーを重視したデータ処理"
+      },
+      {
+        "text": "セルフホスト環境でのAI活用"
+      },
+      {
+        "text": "Rustベースのアプリケーション構成への統合"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chatgpt"
+      },
+      {
+        "text": "gpt"
+      },
+      {
+        "text": "llamacpp"
+      },
+      {
+        "text": "llm"
+      },
+      {
+        "text": "localai"
+      },
+      {
+        "text": "open-source"
+      },
+      {
+        "text": "self-hosted"
+      },
+      {
+        "text": "tauri"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールはインターネット接続が必要ですか？",
+        "answer": "いいえ、Janはユーザーのコンピュータ上で100%オフラインで動作するように設計されています。そのため、外部サーバーにデータを送信することなく、ローカル環境のみでAIとの対話を行うことが可能です。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "このソフトウェアはRust言語を用いて開発されており、Tauriフレームワークなどの技術を活用しています。また、バックエンドではllamacppなどの仕組みを利用してLLMを動作させています。"
+      },
+      {
+        "question": "オープンソースであることのメリットは何ですか？",
+        "answer": "オープンソースであるため、透明性が高く、セルフホストが可能です。特定のクラウドサービスに依存せず、自社のインフラやローカル環境に合わせてAI機能を構築・運用できる点が大きな利点です。"
+      },
+      {
+        "question": "ChatGPTと何が違うのですか？",
+        "answer": "最大の違いは動作環境です。ChatGPTはクラウド上で動作しますが、Janはユーザー自身のコンピュータ上で動作する代替ツールです。これにより、オフラインでの利用やデータのプライバシー確保が可能になります。"
+      }
+    ],
+    "jaFileCount": 16,
+    "jaSamplePaths": [
+      {
+        "text": "README.ja.md"
+      },
+      {
+        "text": "web-app/src/locales/ja"
+      },
+      {
+        "text": "web-app/src/locales/ja/assistants.json"
+      },
+      {
+        "text": "web-app/src/locales/ja/chat.json"
+      },
+      {
+        "text": "web-app/src/locales/ja/common.json"
+      }
+    ]
+  },
+  {
     "name": "Logseq",
     "slug": "logseq",
     "category": "knowledge",
@@ -2706,6 +3382,87 @@
     "jaSamplePaths": []
   },
   {
+    "name": "Chatbox",
+    "slug": "chatbox",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "ChatGPTやClaudeなどの主要なAIモデルを統合して利用できる強力なクライアントアプリです。",
+    "description": "chatboxは、複数の高度なAIモデルを一つのインターフェースから操作できる leistungsstarke AIクライアントです。ChatGPTやClaude、Gemini、DeepSeekといった多様なLLMに対応しており、ユーザーのニーズに合わせて最適なAIを選択できます。TypeScriptで開発されており、直感的な操作性を提供します。CopilotやClaude Codeとの連携など、幅広いAI技術を統合した強力なツールとなっています。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://chatboxai.app?utm_medium=github",
+    "githubUrl": "https://github.com/chatboxai/chatbox",
+    "featured": false,
+    "stars": 41934,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-03-06T12:22:15Z",
+    "githubPushedAt": "2026-09-24T14:09:13Z",
+    "useCases": [
+      {
+        "text": "ChatGPTを利用した業務効率化"
+      },
+      {
+        "text": "Claudeを用いた高度な文章作成"
+      },
+      {
+        "text": "Geminiを活用した情報収集"
+      },
+      {
+        "text": "DeepSeek等の多様なモデルの比較検証"
+      },
+      {
+        "text": "AIアシスタントによる日常的な問い合わせ対応"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AIクライアント"
+      },
+      {
+        "text": "チャットボット"
+      },
+      {
+        "text": "ChatGPT連携"
+      },
+      {
+        "text": "Claude連携"
+      },
+      {
+        "text": "Gemini連携"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなAIモデルに対応していますか？",
+        "answer": "ChatGPT、Claude、Gemini、DeepSeekなどの主要なLLMに対応しています。また、CopilotやClaude Codeといったツールとの連携も考慮された設計となっています。"
+      },
+      {
+        "question": "このソフトウェアは開発者向けですか？",
+        "answer": "強力なAIクライアントとして提供されているため、業務担当者が直接操作して様々なAI機能を活用することを目的としたアプリです。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "TypeScriptを用いて開発されています。モダンな技術スタックで構築されており、高いパフォーマンスと安定した動作が期待できます。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "GPL-3.0ライセンスの下で公開されているオープンソースソフトウェアです。利用条件については、提供されているライセンス条項を直接ご確認ください。"
+      }
+    ],
+    "jaFileCount": 2,
+    "jaSamplePaths": [
+      {
+        "text": "src/renderer/i18n/locales/ja"
+      },
+      {
+        "text": "src/renderer/i18n/locales/ja/translation.json"
+      }
+    ]
+  },
+  {
     "name": "Appsmith",
     "slug": "appsmith",
     "category": "analytics",
@@ -2862,6 +3619,80 @@
     ]
   },
   {
+    "name": "novu",
+    "slug": "novu",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "エージェントや製品向けのオープンソース・コミュニケーション基盤です。",
+    "description": "Novuは、アプリケーションやAIエージェントに通知機能を組み込むためのインフラを提供します。メールや受信トレイを含む多様な通信チャネルを統合的に管理できる仕組みを備えています。Node.js環境で動作し、TypeScriptを用いて構築されています。開発者はこの基盤を利用することで、複雑な通知センターの構築を効率化できます。",
+    "license": "一部が別ライセンス",
+    "licenseTier": "dual",
+    "licenseNote": "本体はオープンソースですが、一部の機能やファイルが別ライセンス（多くは有償の企業向け機能）です。どこまで無償で使えるかは、導入前に対象機能ごとに確認します。",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://go.novu.co/github",
+    "githubUrl": "https://github.com/novuhq/novu",
+    "featured": false,
+    "stars": 40108,
+    "language": "TypeScript",
+    "githubCreatedAt": "2021-08-26T15:22:44Z",
+    "githubPushedAt": "2026-10-03T06:52:03Z",
+    "useCases": [
+      {
+        "text": "製品への通知機能の実装"
+      },
+      {
+        "text": "メール送信システムの統合"
+      },
+      {
+        "text": "AIエージェントとのコミュニケーション基盤構築"
+      },
+      {
+        "text": "マルチチャネル通知センターの開発"
+      },
+      {
+        "text": "インフラ層でのメッセージ管理"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "通知システム"
+      },
+      {
+        "text": "コミュニケーション基盤"
+      },
+      {
+        "text": "TypeScript"
+      },
+      {
+        "text": "Node.js"
+      },
+      {
+        "text": "通知センター"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような種類の通知に対応していますか？",
+        "answer": "説明文に基づくと、メールや受信トレイ（inbox）を含む通信インフラを提供しており、複数のチャネルを統合的に扱うことが可能です。"
+      },
+      {
+        "question": "このツールは開発者向けですか、エンドユーザー向けですか？",
+        "answer": "エージェントや製品のためのコミュニケーション基盤として提供されているため、主にシステムを構築する開発者が利用する道具です。"
+      },
+      {
+        "question": "主なプログラミング言語は何ですか？",
+        "answer": "このソフトウェアはTypeScriptを用いて構築されています。"
+      },
+      {
+        "question": "どのような環境で動作しますか？",
+        "answer": "Node.jsをベースとしたインフラとして設計されています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "croc",
     "slug": "croc",
     "category": "dms",
@@ -2930,6 +3761,83 @@
       {
         "question": "このツールはどのプログラミング言語で動いていますか？",
         "answer": "このソフトウェアはGo言語（Golang）で開発されています。そのため、Goの実行環境がある環境であれば動作する仕組みとなっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "Quivr",
+    "slug": "quivr",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "自社製品に生成AIを統合するためのRAG構築フレームワークです。",
+    "description": "quivrは、開発者が自身のアプリケーションに生成AIを組み込むための高度なRAG（検索拡張生成）機能を備えたツールです。RAGの基盤構築そのものよりも、独自の製品価値の開発に集中できる設計になっています。GPT-4やLlamaなどの主要なLLMに加え、PGVectorやFaissといった多様なベクトルデータベースに対応しています。既存のシステムへの統合が容易で、柔軟なカスタマイズも可能です。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://core.quivr.com",
+    "githubUrl": "https://github.com/The-Vibe-Company/quivr",
+    "featured": false,
+    "stars": 39579,
+    "language": "Python",
+    "githubCreatedAt": "2023-05-12T23:53:30Z",
+    "githubPushedAt": "2026-08-31T18:02:45Z",
+    "useCases": [
+      {
+        "text": "自社サービスへのチャットボット機能の実装"
+      },
+      {
+        "text": "社内ドキュメントを活用したAI検索システムの構築"
+      },
+      {
+        "text": "独自のデータソースを用いた生成AIアプリの開発"
+      },
+      {
+        "text": "既存製品へのLLM連携機能の追加"
+      },
+      {
+        "text": "多様なファイル形式を統合したナレッジベースの作成"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "生成AI"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "ベクトルデータベース"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "Docker"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなLLMを使用できますか？",
+        "answer": "GPT-4、Groq、Llamaなど、主要な多くの大規模言語モデル（LLM）に対応しています。</div>{"
+      },
+      {
+        "question": "対応しているデータベースは何ですか？",
+        "answer": "PGVectorやFaissといった一般的なベクトルストアをサポートしており、既存のインフラに合わせて選択が可能です。"
+      },
+      {
+        "question": "どのようなファイルを取り込めますか？",
+        "answer": "特定の形式に限定されず、様々な種類のファイルを読み込んでAIの知識として統合することが可能です。"
+      },
+      {
+        "question": "開発における主なメリットは何ですか？",
+        "answer": "RAGの複雑な基盤構築を簡略化できるため、開発者は自社製品独自の機能やユーザー体験の向上に集中できるようになります。var"
       }
     ],
     "jaFileCount": 0,
@@ -3579,7 +4487,7 @@
   {
     "name": "server",
     "slug": "server",
-    "category": "groupware",
+    "category": "devtools",
     "funnel": "oss",
     "kind": "business-app",
     "summary": "データの安全な保管と共有を実現するセルフホスト型のクラウドストレージです。",
@@ -3911,7 +4819,7 @@
     "license": "Apache-2.0",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://ntfy.sh",
     "githubUrl": "https://github.com/binwiederhier/ntfy",
     "featured": false,
@@ -3975,6 +4883,12 @@
       {
         "question": "REST APIとして利用できますか？",
         "answer": "はい、REST APIを備えているため、他のソフトウェアや自社で開発したシステムから簡単に呼び出すことができます。これにより、既存のワークフローに通知機能を組み込むことが容易になります。"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "web/public/static/langs/ja.json"
       }
     ]
   },
@@ -4053,6 +4967,84 @@
     "jaSamplePaths": [
       {
         "text": "public/locales/ja-jp.json"
+      }
+    ]
+  },
+  {
+    "name": "Onyx",
+    "slug": "onyx",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "あらゆるLLMに対応した高度な機能を持つオープンソースのAIチャットプラットフォームです。",
+    "description": "onyxは、多様な大規模言語モデル（LLM）と連携して動作する高度な機能を備えたAIチャットプラットフォームです。エンタープライズ検索や情報検索といった高度な技術を統合しており、生成AIを活用した対話環境を提供します。Pythonで構築されており、ユーザーが必要なLLMを選択して利用できる柔軟性を備えています。企業内での情報の取り出しや、高度なAIチャットインターフェースの構築に適しています。",
+    "license": "MIT（一部は別ライセンス）",
+    "licenseTier": "dual",
+    "licenseNote": "本体はオープンソースですが、一部の機能やファイルが別ライセンス（多くは有償の企業向け機能）です。どこまで無償で使えるかは、導入前に対象機能ごとに確認します。",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://onyx.app",
+    "githubUrl": "https://github.com/onyx-dot-app/onyx",
+    "featured": false,
+    "stars": 32320,
+    "language": "Python",
+    "githubCreatedAt": "2023-04-27T06:04:01Z",
+    "githubPushedAt": "2026-10-03T16:01:46Z",
+    "useCases": [
+      {
+        "text": "社内向けAIチャットツールの導入"
+      },
+      {
+        "text": "エンタープライズ検索への活用"
+      },
+      {
+        "text": "多様なLLMを統合した対話環境の構築"
+      },
+      {
+        "text": "生成AIを活用した情報検索システムの運用"
+      },
+      {
+        "text": "高度な機能を備えたAIインターフェースの提供"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "AIプラットフォーム"
+      },
+      {
+        "text": "AIチャット"
+      },
+      {
+        "text": "ChatGPT対応"
+      },
+      {
+        "text": "エンタープライズ検索"
+      },
+      {
+        "text": "生成AI"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのLLMと連携できますか？",
+        "answer": "onyxはあらゆるLLM（大規模言語モデル）と動作するように設計されています。特定のモデルに縛られることなく、用途に合わせて最適なモデルを選択して利用することが可能です。"
+      },
+      {
+        "question": "主な機能にはどのようなものがありますか？",
+        "answer": "高度なAIチャット機能に加え、エンタープライズ検索や情報検索（Information Retrieval）といった機能を備えています。生成AIを実用的なビジネス環境で活用するための仕組みが提供されています。"
+      },
+      {
+        "question": "このソフトウェアは何で書かれていますか？",
+        "answer": "主にPythonというプログラミング言語を用いて構築されています。オープンソースとして公開されており、開発者によるカスタマイズや拡張も可能な構成となっています。"
+      },
+      {
+        "question": "どのような企業に適していますか？",
+        "answer": "生成AIを活用して高度なチャット機能や情報検索システムを導入したい企業に適しています。特に複数のLLMを使い分けたり、エンタープライズレベルの検索機能を必要とする場合に有効です。Goals"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "web/src/i18n/messages/ja.json"
       }
     ]
   },
@@ -4322,6 +5314,84 @@
     ],
     "jaFileCount": 0,
     "jaSamplePaths": []
+  },
+  {
+    "name": "FastGPT",
+    "slug": "fastgpt",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "LLMを活用した知識ベースのプラットフォームです。",
+    "description": "FastGPTは、大規模言語モデル（LLM）を基盤とした知識ベースのプラットフォームです。データ処理、RAGによる検索、視覚的なAIワークフローのオーケストレーションなど、包括的な機能を標準で備えています。複雑な質疑応答システムを、大規模なセットアップや高度な設定を行うことなく容易に開発・展開することが可能です。ユーザーは提供されるツールを活用することで、効率的に独自のAIソリューションを構築できます。",
+    "license": "FastGPT Open Source License（Apache-2.0＋追加条件）",
+    "licenseTier": "source-available",
+    "licenseNote": "Apache-2.0 に追加条件があります。自社利用と、ほかのアプリの裏側としての商用利用はできますが、書面の許可なく複数の顧客向けのSaaSとして提供すること、管理画面のロゴ・著作権表示を消すことはできません。",
+    "japaneseStatus": "日本語ファイルが一部のみ",
+    "officialUrl": "https://fastgpt.io",
+    "githubUrl": "https://github.com/labring/FastGPT",
+    "featured": false,
+    "stars": 29777,
+    "language": "TypeScript",
+    "githubCreatedAt": "2023-02-23T16:53:25Z",
+    "githubPushedAt": "2026-10-01T01:35:56Z",
+    "useCases": [
+      {
+        "text": "社内向け質疑応答システムの構築"
+      },
+      {
+        "text": "データ処理とRAGを活用した知識検索"
+      },
+      {
+        "text": "視覚的なワークフローによるAIの自動化"
+      },
+      {
+        "text": "複雑な質問に対する回答生成システムの展開"
+      },
+      {
+        "text": "LLMを活用したナレッジベースの運用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "AIワークフロー"
+      },
+      {
+        "text": "質疑応答システム"
+      },
+      {
+        "text": "知識ベース"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなことができるのですか？",
+        "answer": "LLMを基盤として、データの処理やRAG（検索拡張生成）を用いた高度な質疑応答システムの構築が可能です。また、視覚的なワークフローを用いてAIの動作を組み立てることもできます。"
+      },
+      {
+        "question": "専門的な知識がなくても導入できますか？",
+        "answer": "大規模なセットアップや複雑な設定を必要とせずにシステムを開発・展開できる機能を備えています。標準で提供されるツールを活用することで、比較的容易に導入を進めることが可能です。"
+      },
+      {
+        "question": "どのようなモデルを利用できますか？",
+        "answer": "説明文には具体的なモデルの限定はありませんが、LLMを基盤としたプラットフォームとして設計されています。各種AI技術を組み合わせて知識ベースを構築するのに適しています。"
+      },
+      {
+        "question": "主な機能は何ですか？",
+        "answer": "主な機能として、データの処理、RAGによる情報の検索、および視覚的なAIワークフローのオーケストレーションが含まれます。これらを組み合わせることで、高度な質疑応答システムを実現します。"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "README_ja.md"
+      }
+    ]
   },
   {
     "name": "sim",
@@ -5453,6 +6523,83 @@
     ]
   },
   {
+    "name": "kotaemon",
+    "slug": "kotaemon",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "自社ドキュメントと対話できるオープンソースのRAGベースのチャットツールです。",
+    "description": "このツールは、ユーザーが所有するドキュメントに基づいてAIと対話を行うためのRAG（検索拡張生成）システムです。Pythonで構築されており、オープンソースとして提供されています。特定の書類の内容を基に回答を生成するため、情報の正確性を保ちながら効率的な情報探索が可能になります。チャットボットの形式を通じて、蓄積された知識へのアクセスを容易にします。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://cinnamon.github.io/kotaemon/",
+    "githubUrl": "https://github.com/Cinnamon/kotaemon",
+    "featured": false,
+    "stars": 25801,
+    "language": "Python",
+    "githubCreatedAt": "2024-03-25T08:16:42Z",
+    "githubPushedAt": "2026-07-14T16:53:59Z",
+    "useCases": [
+      {
+        "text": "社内規定やマニュアルの検索"
+      },
+      {
+        "text": "製品仕様書に基づく問い合わせ対応"
+      },
+      {
+        "text": "ドキュメントからの情報抽出"
+      },
+      {
+        "text": "ナレッジベースの構築"
+      },
+      {
+        "text": "内部資料を活用したQAシステム"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chatbot"
+      },
+      {
+        "text": "llms"
+      },
+      {
+        "text": "open-source"
+      },
+      {
+        "text": "rag"
+      },
+      {
+        "text": "Python"
+      },
+      {
+        "text": "kotaemon"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールで何ができるのですか？",
+        "answer": "ユーザーが提供するドキュメントを基に、AIとのチャットを通じて内容を検索したり質問に答えたりすることができます。RAGという技術を用いることで、特定の文書に基づいた正確な回答を得ることを目的としています。"
+      },
+      {
+        "question": "どのような技術で構築されていますか？",
+        "answer": "Pythonを主な言語として使用しており、オープンソースのソフトウェアとして開発されています。RAG（検索拡張生成）の仕組みを取り入れており、LLMを活用したドキュメント対話を実現しています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "Apache-2.0ライセンスの下で提供されています。これはオープンソースのライセンスの一つであり、条件に従って利用することが可能です。"
+      },
+      {
+        "question": "開発者向けツールですか？それともアプリですか？",
+        "answer": "ドキュメントと対話するためのチャットツールとしての側面を持っており、業務において直接的なインターフェースを通じてドキュメントを活用することを目的とした構成になっています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "Zulip",
     "slug": "zulip",
     "category": "groupware",
@@ -6126,6 +7273,89 @@
     ]
   },
   {
+    "name": "MaxKB",
+    "slug": "maxkb",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "企業向けの高度なAIエージェントを構築するためのオープンソースプラットフォームです。",
+    "description": "MaxKBは、エンタープライズグレードのAIエージェントを構築するために設計された強力で使いやすいオープンソースプラットフォームです。LangChainやLlama3、DeepSeek-R1といった主要な技術スタックに対応しており、知識ベース（Knowledgebase）を活用した高度なシステムを実現します。Pythonを主な言語としており、開発者が柔軟にカスタマイズ可能な環境を提供しています。企業のデータに基づいた高度なエージェント構築を支援する基盤として機能します。",
+    "license": "GPL-3.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://maxkb.cn",
+    "githubUrl": "https://github.com/1Panel-dev/MaxKB",
+    "featured": false,
+    "stars": 22899,
+    "language": "Python",
+    "githubCreatedAt": "2023-09-14T02:05:12Z",
+    "githubPushedAt": "2026-09-30T08:12:55Z",
+    "useCases": [
+      {
+        "text": "企業向けAIエージェントの構築"
+      },
+      {
+        "text": "ナレッジベースを活用したチャットボットの開発"
+      },
+      {
+        "text": "LangChainを用いた複雑なワークフローの実装"
+      },
+      {
+        "text": "DeepSeek-R1やLlama3等のLLMの統合"
+      },
+      {
+        "text": "独自の業務プロセスに最適化したAIシステムの開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agent"
+      },
+      {
+        "text": "agentic-ai"
+      },
+      {
+        "text": "chatbot"
+      },
+      {
+        "text": "deepseek-r1"
+      },
+      {
+        "text": "knowledgebase"
+      },
+      {
+        "text": "langchain"
+      },
+      {
+        "text": "llama3"
+      },
+      {
+        "text": "llm"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールは何を目的としたものですか？",
+        "answer": "企業向けの高度な（エンタープライズグレードの）AIエージェントを構築するためのプラットフォームです。単なるチャットボットにとどまらず、知識ベースや複数のLLMを活用した高度なエージェント開発を支援します。"
+      },
+      {
+        "question": "どのような技術スタックに対応していますか？",
+        "answer": "LangChain、Llama3、DeepSeek-R1などの主要なモデルやフレームワークに対応しています。また、ナレッジベースの構築機能も備えており、多様なLLMを活用したシステム構築が可能です。"
+      },
+      {
+        "question": "開発に使用される主なプログラミング言語は何ですか？",
+        "answer": "このプラットフォームは主にPythonを用いて開発されています。そのため、Pythonを用いたAI開発やエージェント構築の経験があるエンジニアに適しています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "このソフトウェアはGPL-3.0ライセンスで公開されています。オープンソースとして提供されており、利用条件については各国の法規制に従い、ライセンスの詳細を確認してください。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
     "name": "Teable",
     "slug": "teable",
     "category": "lowcode",
@@ -6376,6 +7606,80 @@
       {
         "question": "どのような種類のAI機能を構築できますか？",
         "answer": "チャットボットや生成AIを活用した様々なAIエージェントを構築できます。また、AIプラグインを組み合わせることで、より多機能なエージェントの開発も可能です。Goals: "
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "Rasa",
+    "slug": "rasa",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "テキストや音声による対話を自動化するためのオープンソース機械学習フレームワークです。",
+    "description": "Rasaは、自然言語理解（NLU）やダイアログ管理を備えた高度な会話型AIを構築するためのフレームワークです。Pythonを用いて開発され、SlackやFacebookなどの外部プラットフォームとの連携も可能です。チャットボットや音声アシスタントの作成に特化しており、対話駆動型の開発手法をサポートします。機械学習を活用することで、複雑なユーザーとのやり取りを自動化するシステムを構築できます。",
+    "license": "Apache-2.0",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://rasa.com/docs/rasa/",
+    "githubUrl": "https://github.com/RasaHQ/rasa",
+    "featured": false,
+    "stars": 21342,
+    "language": "Python",
+    "githubCreatedAt": "2016-10-14T12:27:49Z",
+    "githubPushedAt": "2026-07-24T07:39:04Z",
+    "useCases": [
+      {
+        "text": "チャットボットの開発"
+      },
+      {
+        "text": "音声アシスタントの構築"
+      },
+      {
+        "text": "Slackとの連携システムの開発"
+      },
+      {
+        "text": "Facebook Messengerとの連携"
+      },
+      {
+        "text": "対話型AIを用いたカスタマーサポートの自動化"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "bot"
+      },
+      {
+        "text": "chatbot"
+      },
+      {
+        "text": "NLU"
+      },
+      {
+        "text": "dialogue management"
+      },
+      {
+        "text": "Python"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのようなプラットフォームと連携できますか？",
+        "answer": "公式の説明では、SlackやFacebookなどとの接続が可能であると記載されています。これにより、多様なチャットツール上で動作するボットを構築できます。"
+      },
+      {
+        "question": "このソフトウェアは何を使って開発されますか？",
+        "answer": "主なプログラミング言語としてPythonが指定されており、機械学習のフレームワークとして機能します。"
+      },
+      {
+        "question": "どのような種類の対話を自動化できますか？",
+        "answer": "テキストベースおよび音声ベースの両方の会話を自動化するための機能を備えています。"
+      },
+      {
+        "question": "このツールの主な目的は何ですか？",
+        "answer": "自然言語理解（NLU）やダイアログ管理を通じて、チャットボットや音声アシスタントなどの会話型インターフェースを構築することが主な目的です。Goals"
       }
     ],
     "jaFileCount": 0,
@@ -7808,7 +9112,7 @@
     "license": "BSD-2-Clause",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://hub.docker.com/r/caronc/apprise",
     "githubUrl": "https://github.com/caronc/apprise",
     "featured": false,
@@ -7875,6 +9179,18 @@
       {
         "question": "このツールの主な技術スタックは何ですか？",
         "answer": "主なプログラミング言語はPythonです。また、ライセンスはBSD-2-Clauseとなっており、オープンソースソフトウェアとして提供されています。通知APIやフレームワークとしての機能を備えています。Goals"
+      }
+    ],
+    "jaFileCount": 3,
+    "jaSamplePaths": [
+      {
+        "text": "apprise/i18n/ja"
+      },
+      {
+        "text": "apprise/i18n/ja/LC_MESSAGES"
+      },
+      {
+        "text": "apprise/i18n/ja/LC_MESSAGES/apprise.po"
       }
     ]
   },
@@ -8260,6 +9576,89 @@
       {
         "question": "主な特徴は何ですか？",
         "answer": "シンプルさを追求した設計が特徴です。ユーザーが使いやすいインターフェースを提供しながら、コミュニティ形成に必要な機能を備えています。"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "server",
+    "slug": "server",
+    "category": "devtools",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "WebSocketを利用したリアルタイムなメッセージ送受信が可能なサーバーです。",
+    "description": "このソフトウェアは、WebSocketを通じてメッセージの送受信を行うためのシンプルなサーバーを提供します。洗練されたWeb UIが含まれているため、ユーザーインターフェースを介して操作することが可能です。Go言語で構築されており、通知システムなどの実装に活用できます。リアルタイムな通信が必要な環境において、迅速なメッセージング機能を実現します。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": "自社利用・受託での構築とカスタマイズができます。",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://gotify.net",
+    "githubUrl": "https://github.com/gotify/server",
+    "featured": false,
+    "stars": 16025,
+    "language": "Go",
+    "githubCreatedAt": "2018-01-15T20:25:27Z",
+    "githubPushedAt": "2026-10-02T14:14:03Z",
+    "useCases": [
+      {
+        "text": "リアルタイムチャットシステムの構築"
+      },
+      {
+        "text": "プッシュ通知機能の実装"
+      },
+      {
+        "text": "Web UIを備えたメッセージ管理"
+      },
+      {
+        "text": "WebSocketを利用した双方向通信"
+      },
+      {
+        "text": "社内向け通知サーバーの運用"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "api"
+      },
+      {
+        "text": "cloud"
+      },
+      {
+        "text": "free-software"
+      },
+      {
+        "text": "golang"
+      },
+      {
+        "text": "gotify"
+      },
+      {
+        "text": "hosting"
+      },
+      {
+        "text": "javascript"
+      },
+      {
+        "text": "notifications"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "どのような技術で動作しますか？",
+        "answer": "このソフトウェアはWebSocketプロトコルを使用して、リアルタイムなメッセージの送受信を実現しています。また、バックエンドにはGo言語が採用されています。"
+      },
+      {
+        "question": "ユーザーインターフェースはありますか？",
+        "answer": "はい、洗練されたWeb UIが含まれているため、コマンドラインだけでなくブラウザなどを通じた視覚的な操作も可能です。"
+      },
+      {
+        "question": "主な用途は何ですか？",
+        "answer": "主にリアルタイムなメッセージングや通知システムの構築に使用されます。Gotifyなどの通知基盤と組み合わせて活用することも想定されています。"
+      },
+      {
+        "question": "開発環境の制約はありますか？",
+        "answer": "Go言語で書かれたサーバーソフトウェアであるため、Goの実行環境があれば動作します。詳細なシステム要件については公式リポジトリをご確認ください。"
       }
     ],
     "jaFileCount": 0,
@@ -9236,6 +10635,86 @@
       {
         "question": "ナレッジマネジメントに利用できますか？",
         "answer": "はい、主なトピックとしてナレッジマネジメントやWikiが含まれており、情報の整理や共有に適した機能を備えています。Goals"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "Botpress",
+    "slug": "botpress",
+    "category": "aidev",
+    "funnel": "prototype",
+    "kind": "dev-tool",
+    "summary": "GPTやLLMを活用したAIエージェントを構築・デプロイするためのオープンソースプラットフォームです。",
+    "description": "Botpressは、GPTや大規模言語モデル（LLM）を用いたAIエージェントの構築および展開を行うためのオープンソースハブです。TypeScriptを主な言語として採用しており、LangChainなどの技術とも親和性があります。開発者はこの基盤を利用することで、高度なチャットボットや自律的なエージェントを効率的に設計できます。MITライセンスで提供されており、柔軟なカスタマイズが可能です。",
+    "license": "MIT",
+    "licenseTier": "osi",
+    "licenseNote": null,
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://botpress.com",
+    "githubUrl": "https://github.com/botpress/botpress",
+    "featured": false,
+    "stars": 14933,
+    "language": "TypeScript",
+    "githubCreatedAt": "2016-11-16T21:57:59Z",
+    "githubPushedAt": "2026-10-02T20:16:32Z",
+    "useCases": [
+      {
+        "text": "GPT/LLMを活用したAIエージェントの構築"
+      },
+      {
+        "text": "高度なチャットボットの開発とデプロイ"
+      },
+      {
+        "text": "LangChainを用いた複雑なワークフローの実装"
+      },
+      {
+        "text": "自社専用のAIアシスタント基盤の整備"
+      },
+      {
+        "text": "TypeScriptを用いたAIアプリケーション開発"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "agent"
+      },
+      {
+        "text": "ai"
+      },
+      {
+        "text": "botpress"
+      },
+      {
+        "text": "chatbot"
+      },
+      {
+        "text": "chatgpt"
+      },
+      {
+        "text": "gpt-4"
+      },
+      {
+        "text": "langchain"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Botpressでどのようなことができるのですか？",
+        "answer": "GPTやLLMなどの大規模言語モデルを活用したAIエージェントを構築し、実際にデプロイするための基盤を提供します。チャットボットの開発から、より高度なタスクを実行するエージェントの作成まで幅広く対応可能です。"
+      },
+      {
+        "question": "主な開発言語は何ですか？",
+        "answer": "このプラットフォームは主にTypeScriptを使用して構築されています。TypeScriptに精通している開発者であれば、スムーズに導入やカスタマイズを進めることができる設計となっています。"
+      },
+      {
+        "question": "ライセンスはどうなっていますか？",
+        "answer": "MITライセンスで提供されているオープンソースソフトウェアです。そのため、商用利用を含め、制約を最小限に抑えながら自由に活用することが可能です。"
+      },
+      {
+        "question": "LangChainなどのツールと連携できますか？",
+        "answer": "はい、主なトピックとしてLangChainが含まれており、LLMを活用した高度なアプリケーションを構築する際に、これらのフレームワークや技術を組み合わせて利用することが想定されています。Goals"
       }
     ],
     "jaFileCount": 0,
@@ -11804,6 +13283,80 @@
       {
         "question": "データベースとの連携は可能ですか？",
         "answer": "主なトピックとしてMariaDBが含まれており、データベースを活用したデータ管理を伴うアプリケーションの開発に適しています。<channel|>"
+      }
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
+  },
+  {
+    "name": "Typebot",
+    "slug": "typebot-io",
+    "category": "aidev",
+    "funnel": "oss",
+    "kind": "business-app",
+    "summary": "セルフホスト可能な強力なチャットボット構築ツールです。",
+    "description": "Typebotは、ユーザーが自身の環境に設置して利用できる高度なチャットボットビルダーです。対話型のインターフェースを備えており、フォーム作成機能も統合されています。Next.jsやTailwind CSSといったモダンな技術スタックで構築されており、高いカスタマイズ性を備えています。TypeScriptを用いて開発されているため、安定した動作が期待できます。",
+    "license": "Functional Source License",
+    "licenseTier": "source-available",
+    "licenseNote": "ソースは公開されていますが、OSI承認のオープンソースではありません。自社の業務のための利用と、その環境への構築・カスタマイズはできますが、第三者へのホスティング提供や再販はできません。",
+    "japaneseStatus": "日本語ファイルなし",
+    "officialUrl": "https://typebot.io",
+    "githubUrl": "https://github.com/baptisteArno/typebot.io",
+    "featured": false,
+    "stars": 10476,
+    "language": "TypeScript",
+    "githubCreatedAt": "2021-11-19T09:15:31Z",
+    "githubPushedAt": "2026-09-30T16:39:14Z",
+    "useCases": [
+      {
+        "text": "顧客対応の自動化"
+      },
+      {
+        "text": "Webサイトへの問い合わせフォーム設置"
+      },
+      {
+        "text": "対話型のユーザー導線設計"
+      },
+      {
+        "text": "セルフホストによるデータ管理"
+      },
+      {
+        "text": "カスタマイズ可能なチャットUIの構築"
+      }
+    ],
+    "keywords": [
+      {
+        "text": "chatbot"
+      },
+      {
+        "text": "chat-application"
+      },
+      {
+        "text": "form-builder"
+      },
+      {
+        "text": "conversational-bots"
+      },
+      {
+        "text": "self-hosted"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "このツールでどのようなことができるのですか？",
+        "answer": "チャットボットの構築や、対話型のフォーム作成を行うことができます。セルフホストに対応しているため、自社のインフラ環境に導入して運用することが可能です。"
+      },
+      {
+        "question": "技術的な特徴を教えてください。",
+        "answer": "Next.js、Tailwind CSS、TypeScriptといったモダンな技術を用いて開発されています。これにより、高度なカスタマイズやスムーズなユーザー体験の提供が可能です。"
+      },
+      {
+        "question": "どのような種類のボットを作成できますか？",
+        "answer": "対話型のチャットボット（conversational bots）を構築できるため、単なる入力フォーム以上のインタラクティブなコミュニケーションを実現できます。"
+      },
+      {
+        "question": "セルフホストとはどういう意味ですか？",
+        "answer": "提供されたソフトウェアを自社で管理するサーバーやクラウド環境にインストールして動かすことを指します。外部のSaaSサービスに依存せずに運用できるメリットがあります。"
       }
     ],
     "jaFileCount": 0,
@@ -14530,7 +16083,7 @@
     "license": "GPL-3.0",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルなし",
     "officialUrl": "https://meshtastic.org",
     "githubUrl": "https://github.com/meshtastic/firmware",
     "featured": false,
@@ -14595,7 +16148,9 @@
         "question": "ライセンスはどうなっていますか？",
         "answer": "このソフトウェアはGPL-3.0ライセンスの下で提供されています。オープンソースとして公開されており、開発者が自由に利用や改変を行うことができます。"
       }
-    ]
+    ],
+    "jaFileCount": 0,
+    "jaSamplePaths": []
   },
   {
     "name": "CopilotForXcode",
@@ -71649,7 +73204,7 @@
     "license": "BSD-2-Clause",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://tasks.hotosm.org",
     "githubUrl": "https://github.com/hotosm/tasking-manager",
     "featured": false,
@@ -71707,6 +73262,12 @@
       {
         "question": "地理空間データの扱いは可能ですか？",
         "answer": "はい、PostgreSQLとPostGISを組み合わせているため、高度な地理空間データの管理やクエリの実行に対応した設計になっています。openstreetmapに関連するデータ操作に適しています。不如適切な環境構築が必要です。}]}}                {"
+      }
+    ],
+    "jaFileCount": 1,
+    "jaSamplePaths": [
+      {
+        "text": "frontend/src/locales/ja.json"
       }
     ]
   },
@@ -127630,7 +129191,7 @@
     "license": "AGPL-3.0",
     "licenseTier": "osi",
     "licenseNote": null,
-    "japaneseStatus": "未調査",
+    "japaneseStatus": "日本語ファイルが一部のみ",
     "officialUrl": "https://www.kobotoolbox.org",
     "githubUrl": "https://github.com/kobotoolbox/kpi",
     "featured": false,
@@ -127691,6 +129252,21 @@
       {
         "question": "データの書き出しは可能ですか？",
         "answer": "はい、kpiにはデータをエクスポートするための機能が含まれています。収集したデータを外部へ出力する際に利用することが可能です。"
+      }
+    ],
+    "jaFileCount": 4,
+    "jaSamplePaths": [
+      {
+        "text": "locale/ja"
+      },
+      {
+        "text": "locale/ja/LC_MESSAGES"
+      },
+      {
+        "text": "locale/ja/LC_MESSAGES/django.po"
+      },
+      {
+        "text": "locale/ja/LC_MESSAGES/djangojs.po"
       }
     ]
   },
