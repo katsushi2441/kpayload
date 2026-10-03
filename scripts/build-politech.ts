@@ -28,6 +28,36 @@ type Copy = { title: string; h1: string; lead: string; points: string[]; answer:
 
 const kws = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-keywords.json'), 'utf8')) as Kw[]
 const copy = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-copy.json'), 'utf8')) as Record<string, Copy>
+
+/* 国会トラッカー（xb4g.com/giin/tracker/*）への文脈リンク（2026-10-03）。
+ * トラッカーは Google にほとんどクロールされていない（新しいドメイン）。exbridge.jp の politech から
+ * 語が重なるトラッカーへ、無ければテーマごとの代表トラッカーへリンクして、見つけてもらう経路を作る。 */
+type Trk = { key: string; name: string; short?: string; seo_word?: string; words: string[]; lead: string }
+const _trk = JSON.parse(await fs.readFile('/home/kojima/work/xb4g/giin/data/trackers.json', 'utf8'))
+const TRK: Trk[] = Array.isArray(_trk) ? _trk : _trk.trackers
+const TRK_THEME: Record<string, string[]> = {
+  bousai: ['naisui-hanran', 'rissai-shomei', 'kyodo-bokin'], kosodate: ['kodomo-shienkin', 'gakucho-senko', 'kodomo-daredemo-tsuen'],
+  shussan: ['naimitsu-shussan', 'tokubetsu-yoshi-engumi', 'ikukyu-gyomu-daitai'], kyoiku: ['futoko', 'kinyu-kyoiku', 'gakucho-senko'],
+  futoko: ['futoko'], fukushi: ['koki-koreisha-futan', 'otc-ruiji-yaku', 'kokuho-nogare'],
+  seikatsu: ['kyufu-tsuki-zeigaku-kojo', 'shohizei-genzei', 'juminzei-genzei'], senkyo: ['seito-kofukin', 'shushi-hokokusho-db', 'digital-minshu'],
+  chiiki: ['tokubetsu-shi', 'koritsu-byoin-keiei', 'daiko-yuso'], nagoya: ['tokubetsu-shi', 'naisui-hanran'],
+}
+const nz = (x: string) => x.normalize('NFKC').replace(/\s/g, '')
+function trackersFor(k: { keyword: string; theme: string }): Trk[] {
+  const kw = nz(k.keyword)
+  const hit = TRK.filter((t) => [...t.words, t.short || '', t.seo_word || ''].some((w) => w && (kw.includes(nz(w)) || (kw.length >= 2 && nz(w).includes(kw)))))
+  const theme = (TRK_THEME[k.theme] || []).map((key) => TRK.find((t) => t.key === key)).filter(Boolean) as Trk[]
+  return [...new Map([...hit, ...theme].map((t) => [t.key, t])).values()].slice(0, 3)
+}
+function trackersHtml(k: { keyword: string; theme: string; slug: string }): string {
+  const ts = trackersFor(k)
+  if (!ts.length) return ''
+  return `<section><div class="panel">
+<h2>この課題は国会でどう議論されたか（国会トラッカー）</h2>
+<p>国会会議録から、だれが質問し、政府が何と答えたかを日付つきで並べています。</p>
+<div class="cat-grid">${ts.map((t) => `<a class="cat-card" href="https://xb4g.com/giin/tracker/${attr(t.key)}?ref=politech-${attr(k.slug)}"><b>${h(t.name)}</b><span>${h(t.lead.slice(0, 60))}…</span></a>`).join('')}</div>
+</div></section>`
+}
 // テーマごとの「他所に無い数字」。scripts/build_politech_facts.py が各プロダクトの
 // 実データ（krefuge/ktsunami/kriskarea/kjishin/khazard/khojokin/kseido/kecnavi）から
 // 数えて書き出す。**ここに手で数字を足さない。**
@@ -191,6 +221,8 @@ ${c.answer.slice(0, 2).map((p) => `<p>${h(p)}</p>`).join('')}
 </div></section>
 
 ${factsHtml(k.theme, k.slug)}
+
+${trackersHtml(k)}
 
 <section><div class="panel">
 <h2>政党・議員事務所ができること（3ステップ）</h2>
