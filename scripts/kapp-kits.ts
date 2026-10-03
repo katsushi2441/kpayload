@@ -42,6 +42,11 @@ export const KAPP_KITS: Record<string, KappKit> = {
   // 導入キットではなく「そのOSSを使って当社が作ったオンプレミスの製品」。
   // kkintai は勤怠分類(/ai-system/c/attendance/・GSC 11.8位)の出口。分類ページのカード列にも出す。
   kkintai: { id: 'f0f56c6e4da881be', label: '顔打刻つき勤怠管理 Kurage Kintai（オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true },
+  // 2026-10-03 Kurage OCR Work が組み込んでいるOCRエンジン（MinerU は同梱しないので入れない）。
+  // 「ocrmypdf 日本語」で /oss/ocrmypdf/ に検索流入があるのに、店への出口が無かった
+  ocrmypdf: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
+  tesseract: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
+  paddleocr: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
   whisper: { id: 'cd1eda3248c87920', label: 'Whisperで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
   'whisper-cpp': { id: 'cd1eda3248c87920', label: 'whisper.cppで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
   // 全文検索×AIチャット（Namazu実績→Fessでも同構成）。出口はオンプレミスのチャットボット
@@ -104,13 +109,16 @@ export function kappKitPanel(slug: string, ref: string, name: string): string {
   if (!kit) return ''
   const price = kit.price ? `<strong>${kit.price}</strong>。` : ''
   const article = kit.article
-    ? `<a class="btn" href="${kit.article}?ref=${ref}" target="_blank" rel="noopener">導入の実録記事を読む</a>`
+    ? `<a class="btn" href="${kit.article}?ref=${ref}" target="_blank" rel="noopener">${kit.article.includes('note.com') ? '読み比べの記事を読む' : '導入の実録記事を読む'}</a>`
     : ''
   const heading = kit.product ? `${name}で作ったオンプレミスの製品` : `${name}を自分で入れるなら（導入キット）`
   const lead = kit.product
-    ? `${name}を組み込んで当社が作った、設置手順つきのオンプレミスの製品です。開発を依頼せず自社で動かしたい場合の早道です。`
+    ? `${name}を組み込んで当社が作った、設置手順つきのオンプレミスの製品です。開発を依頼せず自社で動かしたい場合の早道です。${price}`
     : `当社が実際に立てて詰まった箇所まで含めた手順書・設計テンプレート・docker構成・バックアップスクリプトの一式です。開発を依頼せず自社で立てたい場合の早道です。${price}`
-  return `<h2>${heading}</h2><p>${lead}</p><div class="kit-actions">${kappKitLink(slug, ref, 'btn btn-main')}${article}</div>`
+  const demo = kit.id === 'ef52a62e1c6bbe7a'
+    ? `<a class="btn" href="https://proto.exbridge.jp/kocrwork.php/?ref=${ref}" target="_blank" rel="noopener">デモで読み比べる（PaddleOCR・Tesseract・Docling・生成AI）</a>`
+    : ''
+  return `<h2>${heading}</h2><p>${lead}</p><div class="kit-actions">${kappKitLink(slug, ref, 'btn btn-main')}${demo}${article}</div>`
 }
 
 /**
