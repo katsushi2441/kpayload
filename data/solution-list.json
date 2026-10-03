@@ -1185,6 +1185,11 @@
   ],
   "products": [
    {
+    "name": "WEB受発注 Kurage Web Order",
+    "url": "https://kappstore.exbridge.jp/app.php?id=88acc4be142bd444",
+    "price": "55,000円"
+   },
+   {
     "name": "請求書発行 kbilling",
     "url": "https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6",
     "price": "55,000円"
@@ -1206,7 +1211,16 @@
    }
   ],
   "brain": [],
-  "lps": [],
+  "lps": [
+   {
+    "label": "WEB受発注システムの導入（FAX・電話の注文を取引先のWEB注文に）",
+    "url": "https://exbridge.jp/web-order.html"
+   },
+   {
+    "label": "FAX発注書 AI-OCR導入サービス",
+    "url": "https://exbridge.jp/fax-ai-ocr.html"
+   }
+  ],
   "facts": "BtoBプラットフォーム(インフォマート)のような取引網は、取引先が使っている限り抜けられない。自社側で完結する業務——得意先台帳(EspoCRM)、見積〜受注〜請求の流れ(Dolibarr/ERPNext)、定型商品の注文受付と請求(kpaylink/kbilling)、展示会名刺の台帳化(kaima)——は内製化・OSSに移せる。Sansanの人数課金はAI名刺解析で代替できるケースが多い。",
   "lead": "卸売・商社では、取引先との接点や営業、請求、名刺管理ごとにSaaSを導入し、便利になる一方で月額料金が積み上がりがちです。複数部門で利用者が増えるほど負担も見えにくくなります。取引網を担う本体は残し、自社だけで完結して分離できる業務をOSSやオンプレミスの製品へ移すことで、業務を止めずに毎月の固定費を減らせます。",
   "verdict": "BtoBプラットフォーム（インフォマート）のような取引網は、取引先が利用している限り置き換えできません。ここは無理に外さない判断が必要です。一方、得意先台帳はEspoCRM、見積から受注、請求までの流れはDolibarrやERPNextへ分離できます。定型商品の注文受付と請求はkpaylinkやkbilling、展示会名刺の台帳化はkaimaが候補です。Sansanの人数課金も、運用次第ではAI名刺解析で代替できるケースが多いです。取引先指定の仕組みがある場合、取引網への参加自体に価値がある場合、社内にOSSの保守担当を置けない場合は、該当SaaSを継続するのが正解です。まず自社側で完結する業務だけを切り出すのが現実的です。",
@@ -4996,6 +5010,11 @@
     "label": "FAX発注書 AI-OCR導入サービス",
     "url": "https://exbridge.jp/fax-ai-ocr.html",
     "what": "商品マスタとの照合・基幹への登録まで含めて、御社の帳票に合わせて作る"
+   },
+   {
+    "label": "WEB受発注システムの導入",
+    "url": "https://exbridge.jp/web-order.html",
+    "what": "WEBに移れる取引先は自分で注文、FAXの分は読み取って同じ受注一覧に"
    },
    {
     "label": "データ入力の外注・代行を探す前に",
