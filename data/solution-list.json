@@ -945,6 +945,11 @@
   ],
   "products": [
    {
+    "name": "案件管理・商談管理 Kurage Deal Desk",
+    "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+    "price": "55,000円"
+   },
+   {
     "name": "入力ゼロCRM kcrmagent",
     "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
     "price": "55,000円"
@@ -1190,6 +1195,11 @@
   ],
   "products": [
    {
+    "name": "案件管理・商談管理 Kurage Deal Desk",
+    "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+    "price": "55,000円"
+   },
+   {
     "name": "WEB受発注 Kurage Web Order",
     "url": "https://kappstore.exbridge.jp/app.php?id=88acc4be142bd444",
     "price": "55,000円"
@@ -1262,6 +1272,11 @@
    "frappe-hr"
   ],
   "products": [
+   {
+    "name": "案件管理・商談管理 Kurage Deal Desk",
+    "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+    "price": "55,000円"
+   },
    {
     "name": "入力ゼロCRM kcrmagent",
     "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",

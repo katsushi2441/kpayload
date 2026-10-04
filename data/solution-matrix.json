@@ -89,6 +89,11 @@
       "pain": "顧客情報がExcelと個人の記憶に散らばっていて、担当が休むと止まる",
       "products": [
         {
+          "name": "案件管理・商談管理 (Kurage Deal Desk)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+          "price": "55,000円"
+        },
+        {
           "name": "入力ゼロCRM (Kurage CRM Agent)",
           "url": "https://kappstore.exbridge.jp/app.php?id=f6fab083d826739f",
           "price": "55,000円"
@@ -211,7 +216,13 @@
       ],
       "rx": "",
       "pain": "どの案件がどこまで進んでいるか、担当者に聞かないと分からない",
-      "products": []
+      "products": [
+        {
+          "name": "案件管理・商談管理 (Kurage Deal Desk)",
+          "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+          "price": "55,000円"
+        }
+      ]
     },
     {
       "slug": "zaiko",

@@ -2506,6 +2506,79 @@
   "buyUrl": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457"
  },
  {
+  "name": "Kurage Deal Desk",
+  "slug": "kdealdesk",
+  "category": "crm",
+  "featured": false,
+  "summary": "顧客のメールアドレスごとに、商談をAIに相談し、記録を残し、かんばんで状況を管理する案件管理・商談管理システムです。",
+  "description": "商談の記録と自社の製品・価格の資料（ナレッジ）を根拠に、AIに次の提案を相談できます。打ち合わせのメモからAIが記録の下書きを作り、担当者が承認したときだけ記録・ステージ・次にやることが変わります。かんばんでは期日切れと止まっている商談に色が付きます。顧客台帳は持たず、CSV・API・Webhookで既存のCRMにメールアドレスでつなぎます。PHP 8とSQLiteだけで動きます。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "日本語で開発・提供。",
+  "officialUrl": "https://proto.exbridge.jp/kdealdesk/",
+  "githubUrl": null,
+  "stars": 0,
+  "language": null,
+  "githubCreatedAt": "2026-10-04T00:00:00Z",
+  "githubPushedAt": "2026-10-04T00:00:00Z",
+  "useCases": [
+   {
+    "text": "商談の次の提案をAIに相談する"
+   },
+   {
+    "text": "打ち合わせのメモから商談の記録を残す"
+   },
+   {
+    "text": "案件の状況をかんばんで見る"
+   },
+   {
+    "text": "止まっている商談・期日切れを見つける"
+   },
+   {
+    "text": "既存のCRMにメールアドレスでつなぐ"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "案件管理"
+   },
+   {
+    "text": "商談管理"
+   },
+   {
+    "text": "SFA オンプレミス"
+   },
+   {
+    "text": "商談 AI"
+   },
+   {
+    "text": "営業管理"
+   },
+   {
+    "text": "案件管理 システム"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "CRMと何が違いますか？",
+    "answer": "顧客台帳は持たず、いま進んでいる商談の相談・記録・状況だけを管理します。既存のCRMとは顧客のメールアドレスでつなぎます。"
+   },
+   {
+    "question": "AIが勝手に記録や金額を変えませんか？",
+    "answer": "変えません。AIが作るのは下書きだけで、担当者が承認したときに初めて記録に入ります。金額は記録や相談に出てくる数字だけを通します。"
+   },
+   {
+    "question": "AIは何を根拠に答えますか？",
+    "answer": "商談の記録と、自社の製品・価格の資料です。資料はMarkdownで取り込めるほか、Fess・Namazu・OpenKBなどの検索につなげられます。"
+   }
+  ],
+  "funnel": "oss",
+  "lpUrl": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
+  "sourceLpName": "案件管理・商談管理をオンプレミスで（Kurage Deal Desk）",
+  "demoUrl": "https://proto.exbridge.jp/kdealdesk/",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26"
+ },
+ {
   "name": "Kurage CRM Agent",
   "slug": "kcrmagent",
   "category": "crm",
