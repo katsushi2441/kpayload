@@ -116,7 +116,7 @@ export function kappKitPanel(slug: string, ref: string, name: string): string {
     ? `${name}を組み込んで当社が作った、設置手順つきのオンプレミスの製品です。開発を依頼せず自社で動かしたい場合の早道です。${price}`
     : `当社が実際に立てて詰まった箇所まで含めた手順書・設計テンプレート・docker構成・バックアップスクリプトの一式です。開発を依頼せず自社で立てたい場合の早道です。${price}`
   const demo = kit.id === 'ef52a62e1c6bbe7a'
-    ? `<a class="btn" href="https://proto.exbridge.jp/kocrwork.php/?ref=${ref}" target="_blank" rel="noopener">デモで読み比べる（PaddleOCR・Tesseract・Docling・生成AI）</a>`
+    ? `<a class="btn" href="https://proto.exbridge.jp/kocrwork.php/?ref=${ref}" target="_blank" rel="noopener">デモで読み比べる（PaddleOCR・Tesseract・Docling・生成AI）</a><a class="btn" href="https://exbridge.jp/fax-ai-ocr.html?ref=${ref}">FAX OCRの導入・料金</a>`
     : ''
   return `<h2>${heading}</h2><p>${lead}</p><div class="kit-actions">${kappKitLink(slug, ref, 'btn btn-main')}${demo}${article}</div>`
 }

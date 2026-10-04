@@ -8,12 +8,12 @@
  *
  * 置き場所は1か所（ここ）。/oss/（build-static.ts）と /ai-system/（build-aisystem.ts）の両方から使う。
  */
-export type Prod = { id: string; name: string; lead: string; price: string; demo?: string }
+export type Prod = { id: string; name: string; lead: string; price: string; demo?: string; lp?: string }
 
 const P: Record<string, Prod> = {
-  kweborder: { id: '88acc4be142bd444', name: 'Kurage Web Order（受発注システム）', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kweborder/',
+  kweborder: { id: '88acc4be142bd444', name: 'Kurage Web Order（受発注システム）', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kweborder/', lp: 'https://exbridge.jp/web-order.html',
     lead: 'FAX・電話の注文を、取引先が自分で入れるBtoBのWEB受注に。品番で注文・出荷先・受注済で成立・出荷済まで・CSVで基幹へ。' },
-  kocrwork: { id: 'ef52a62e1c6bbe7a', name: 'Kurage OCR Work（AI-OCR）', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kocrwork.php/',
+  kocrwork: { id: 'ef52a62e1c6bbe7a', name: 'Kurage OCR Work（AI-OCR）', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kocrwork.php/', lp: 'https://exbridge.jp/fax-ai-ocr.html',
     lead: '注文書・手書きFAXを読み取り、項目に分けて受注登録まで。PaddleOCR・Tesseract・Docling・生成AIを切り替えて読み比べられる。' },
   kshoken: { id: 'a5ac4b9f1fdb6d19', name: 'Kurage 商圏分析', price: '税込55,000円', demo: 'https://kurage.exbridge.jp/kshoken.php/',
     lead: '住所ひとつで、徒歩圏・車圏の人口・世帯・事業所を地図で出す。GISを組まずに商圏を測れる。' },
@@ -155,5 +155,5 @@ export function relatedPanel(list: Prod[], ref: string, name: string, heading?: 
   return `<style>.krel{border:2px solid #0a8f85;border-radius:14px;background:#f3fbfa;padding:16px;margin:0 0 18px}.krel h2{margin:0 0 6px;font-size:19px}.krel>p{margin:0 0 10px;color:#37485a;font-size:14px;line-height:1.75}.krel-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.krel-c{background:#fff;border:1px solid #cfe5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}.krel-c b{font-size:15px;color:#10242b}.krel-c span{font-size:13px;color:#37485a;line-height:1.65}.krel-c em{font-style:normal;font-weight:800;font-size:13px;color:#0a5f58}.krel-a{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}.krel-a a{display:inline-block;text-decoration:none;font-weight:800;font-size:13px;border-radius:8px;padding:7px 12px}.krel-a a.m{background:#0a8f85;color:#fff}.krel-a a.s{background:#fff;color:#07756d;border:1px solid #cfe5e2}</style>`
     + `<section class="krel" aria-label="同じ用途の当社製品"><h2>${heading || `${name}と同じ用途で使える、当社の製品`}</h2>`
     + `<p>OSSを自分で立てて日本語化する代わりに、日本語で作った当社の製品を自社のサーバーに置く方法もあります。ソースコード付きで、月額はかかりません。</p>`
-    + `<div class="krel-g">${list.map((p) => `<div class="krel-c"><b>${esc(p.name)}</b><span>${esc(p.lead)}</span><em>${esc(p.price)}（オンプレミス・買い切り）</em><div class="krel-a"><a class="m" href="https://kappstore.exbridge.jp/app.php?id=${p.id}&amp;ref=${ref}">商品ページを見る</a>${p.demo ? `<a class="s" href="${esc(p.demo)}${p.demo.includes('?') ? '&amp;' : '?'}ref=${ref}" target="_blank" rel="noopener">デモ</a>` : ''}</div></div>`).join('')}</div></section>`
+    + `<div class="krel-g">${list.map((p) => `<div class="krel-c"><b>${esc(p.name)}</b><span>${esc(p.lead)}</span><em>${esc(p.price)}（オンプレミス・買い切り）</em><div class="krel-a"><a class="m" href="https://kappstore.exbridge.jp/app.php?id=${p.id}&amp;ref=${ref}">商品ページを見る</a>${p.demo ? `<a class="s" href="${esc(p.demo)}${p.demo.includes('?') ? '&amp;' : '?'}ref=${ref}" target="_blank" rel="noopener">デモ</a>` : ''}${p.lp ? `<a class="s" href="${esc(p.lp)}?ref=${ref}">導入の相談・料金</a>` : ''}</div></div>`).join('')}</div></section>`
 }
