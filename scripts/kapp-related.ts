@@ -84,7 +84,7 @@ const RULES: Array<[RegExp, string]> = [
   [/\b(zoning|cadastr\w*|land ?use|urban ?planning)\b|都市計画|用途地域/i, 'ktoshikeikaku'],
   [/\b(disaster|hazard|flood\w*|earthquake|tsunami|evacuat\w*|emergency)\b|防災|災害|避難|浸水/i, 'bousai'],
   [/\b(chatbot|chat ?bot|rag|faq|helpdesk|help ?desk|knowledge ?base|livechat|live ?chat|dify|anything ?llm|lobe ?(chat|hub)|lobehub|khoj|open ?webui|librechat|langflow|flowise|ragflow|fastgpt|maxkb|botpress|rasa|typebot\w*|onyx|danswer|quivr|private ?gpt|jan|nextchat|chatbox|cherry ?studio|kotaemon|ai ?assistant|llm ?chat)\b|チャットボット/i, 'klchatbot'],
-  [/\b(sfa|deals?|pipeline|opportunit(y|ies))\b|商談|案件管理|営業管理/i, 'kdealdesk'],
+  [/\b(sfa|deals?|pipeline|opportunit(y|ies)|odoo|erpnext|dolibarr|idurar|flectra|vtiger|yetiforce)\b|商談|案件管理|営業管理/i, 'kdealdesk'],
   [/\b(crm|sales ?(crm|force|management)|leads? ?management)\b|顧客管理|営業/i, 'kcrmagent'],
   [/\b(business ?cards?|vcard)\b|名刺/i, 'kaima'],
   [/\b(booking|reservation\w*|appointment\w*|calendly|cal\.com|easyappointments)\b|予約/i, 'kreserve'],

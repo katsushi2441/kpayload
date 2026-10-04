@@ -388,9 +388,12 @@ function categoryPage(category: string, projects: Project[], all: Project[]): st
   ]
   const cmpToday = new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo' })
   // 完成品(oss)だけだと devsupport/devtools/sitegen のように空になる分類があるので、掲載全件から出す
+  // 分類のページにも当社製品の枠を出す（2026-10-04。CRM の分類ページから商談管理へ誘導が無かった）
+  const catRel = relatedPanel(relatedProducts({ slug: '', name: label, category }), `oss-c-rel-${category}`, h(label), `${h(label)}を、当社の製品で`)
   const cmpHtml = compareTable(list, { base: catalogBase, ref: `oss-c-${category}`, noun: label, h, attr, today: cmpToday, all: list })
   const body = `<main class="wrap"><nav class="crumb" aria-label="パンくず"><a href="${catalogBase}/">OSS一覧</a> / ${h(label)}</nav>
 <section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${categorySeo[category] ? h(categorySeo[category].lead) + '\n' : ''}${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p><div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
+${catRel ? `<section class="section">${catRel}</section>` : ''}
 <section class="section"><div class="tools"><input class="search" id="search" type="search" placeholder="${attr(label)}のOSSを検索" aria-label="${attr(label)}のOSSを検索"><div class="filters" role="group" aria-label="種別"><button class="filter active" type="button" data-kind="all">種別すべて</button><button class="filter" type="button" data-kind="oss">カスタマイズ可</button><button class="filter" type="button" data-kind="prototype">開発に使う</button></div></div><div class="grid" id="oss-grid">${list.map(card).join('')}</div><p class="empty" id="empty">条件に一致するOSSはありません。</p></section>
 ${cmpHtml}
 <section class="section faq"><div class="panel"><h2>${h(label)}のOSSについてよくある質問</h2>${faqItems.map((item) => `<details><summary>${h(item.question)}</summary><p>${h(item.answer)}</p></details>`).join('')}</div></section>
