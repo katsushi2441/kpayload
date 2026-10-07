@@ -107,7 +107,9 @@ if [ "$what" = "vibeblog" ] || [ "$what" = "all" ]; then
   # 記事ごとのトップ画像（= og:image）。サーバーに無いものだけ1接続で送る
   /usr/bin/python3 "$(dirname "$0")/make_vibeblog_eyecatch.py" --sync || rc=1
   rm -f /home/kojima/work/exbridge_jp/vibeblog/canonical-map.json
-  put_tree /home/kojima/work/exbridge_jp exbridge_jp vibeblog || rc=1
+  # 中身が変わったファイルだけを1接続で送る（2026-10-07。以前は約285ファイルを1つずつ別接続で送っていた。
+  # 日付だけ違うページは送らない。記録は kpayload/outputs/put_changed_vibeblog.json）
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp vibeblog || rc=1
 fi
 
 exit $rc
