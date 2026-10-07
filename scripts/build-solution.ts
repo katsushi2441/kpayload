@@ -34,7 +34,7 @@ const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
 
 type SolutionPage = {
-  slug: string; kind: 'industry' | 'gyomu' | 'aichat' | 'combo' | 'chatbot'; name: string; kicker: string
+  slug: string; kind: 'industry' | 'gyomu' | 'aichat' | 'combo' | 'chatbot' | 'product'; name: string; kicker: string
   saasSlugs: string[]; extraSaas: string[]; ossPicks: string[]
   products: Array<{ name: string; url: string; price: string }>
   brain: Array<{ label: string; url: string }>
@@ -69,6 +69,11 @@ type SolutionPage = {
   /** combo/chatbot の締めの見出し・比較表の見出し（無ければ既定の文） */
   ctaTitle?: string
   compareTitle?: string
+  /** kind='product'（公開中の業務システム・2026-10-07）だけが使う欄。無料で触れる画面と、載っていないもの */
+  demo?: { name: string; url: string }
+  price?: string
+  notCovered?: string[]
+  custom?: string
 }
 type Saas = { slug: string; name: string; vendor: string; what: string }
 
@@ -107,7 +112,7 @@ function ossCell(p: Project, slug: string): string {
   return links.join(' / ') || '—'
 }
 
-const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談', combo: '構成例', chatbot: '業務別AIチャットボット' } as const
+const KIND_LABEL = { industry: '業種', gyomu: '業務', aichat: 'AI相談', combo: '構成例', chatbot: '業務別AIチャットボット', product: '公開中の業務システム' } as const
 
 /** 開発中のAI相談システムの着地ページ。SaaS代替の型（固定費・OSS表）は当てはまらないので別に組む。
  *  システムはまだ無い。できることは「こう答える予定」と書き、作り物の回答画面は載せない。 */
@@ -297,6 +302,88 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
   return shell(title, desc, url, body, ld, [p.slug], `${SITE}/images/ogp/sol-${p.slug}.png`)
 }
 
+/** 公開中の業務システムの着地ページ（2026-10-07）。aichat から本番に切り替えた製品用。
+ *  無料で触れる画面と導入版（kappstore）を並べ、「開発中」とは書かない。載っていないものは明記する。 */
+function productPage(p: SolutionPage): string {
+  const url = `${BASE}/${p.slug}.html`
+  const title = p.titleOverride || `${p.name} | 株式会社エクスブリッジ`
+  const desc = p.descOverride || p.lead || p.facts
+  const faqs = p.faqs || []
+  const contact = `${SITE}/contact.php?ref=solution-${encodeURIComponent(p.slug)}&subject=${encodeURIComponent('「' + p.name + '」の導入について相談したい')}#form`
+  const q = (u: string) => `${attr(u)}${u.includes('?') ? '&' : '?'}ref=solution-${attr(p.slug)}`
+  const body = `<section class="hero"><div class="wrap">
+<p class="kicker">${KIND_LABEL[p.kind]}｜${h(p.kicker)}</p>
+<h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : h(p.name)}</h1>
+<p class="lead">${h(p.lead || '')}</p>
+<p>${p.demo ? `<a class="btn btn-main" href="${q(p.demo.url)}" target="_blank" rel="noopener">${h(p.demo.name)}を無料で使う</a> ` : ''}${p.kapp ? `<a class="btn" href="${q(p.kapp.url)}">導入版（${h(p.price || '')}）を見る</a>` : ''}</p>
+</div></section>
+<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別ソリューション</a> / ${h(p.name)}</nav>
+
+<section><div class="panel">
+<h2>${h(p.name)}とは</h2>
+<p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+</div></section>
+
+${(p.asks || []).length ? `<section><div class="panel">
+<h2>できること</h2>
+${(p.asks || []).map((a) => `<div class="card" style="margin:0 0 10px"><h3>${h(a.q)}</h3><p>${h(a.a)}</p></div>`).join('')}
+</div></section>` : ''}
+
+${(p.notCovered || []).length ? `<section><div class="panel">
+<h2>載っていないもの</h2>
+<ul>${(p.notCovered || []).map((x) => `<li>${h(x)}</li>`).join('')}</ul>
+</div></section>` : ''}
+
+${(p.sources || []).length ? `<section><div class="panel">
+<h2>使っている公開データ</h2>
+<div class="table-wrap"><table><thead><tr><th>データ</th><th>使っているところ</th></tr></thead><tbody>
+${(p.sources || []).map((s) => `<tr><th>${h(s.name)}</th><td>${h(s.what)}</td></tr>`).join('')}
+</tbody></table></div>
+${p.how ? `<p class="note">${h(p.how)}</p>` : ''}
+</div></section>` : ''}
+
+${(p.users || []).length ? `<section><div class="panel">
+<h2>使う人</h2>
+<ul>${(p.users || []).map((u) => `<li>${h(u)}</li>`).join('')}</ul>
+</div></section>` : ''}
+
+${(p.related || []).length ? `<section><div class="panel">
+<h2>関連する当社のシステム</h2>
+<div class="cat-grid">
+${(p.related || []).map((r) => `<a class="cat-card" href="${q(r.url)}" target="_blank" rel="noopener"><b>${h(r.label)}</b><span>${h(r.what)}</span></a>`).join('')}
+</div>
+</div></section>` : ''}
+
+<div class="cta">
+<h2>${h(p.name)}を自社に置きたい方へ</h2>
+<p>${h(p.custom || '')}<strong>導入版は${h(p.price || '')}</strong>（Kurage App Store）。Zoomでも対面（名古屋近郊）でもご相談ください。</p>
+${p.kapp ? `<a class="btn btn-main" href="${q(p.kapp.url)}">導入版の商品ページ</a>` : ''}
+<a class="btn" href="${attr(contact)}">導入について問い合わせる</a>
+<a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+</div>
+
+${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>
+${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>` : ''}
+</main>`
+  const ld = [
+    ...(faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+    { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: p.name, description: desc, url: p.demo?.url || url,
+      applicationCategory: 'BusinessApplication', operatingSystem: 'Web',
+      ...(p.price ? { offers: { '@type': 'Offer', price: p.price.replace(/[^0-9]/g, ''), priceCurrency: 'JPY', url: p.kapp?.url } } : {}),
+      provider: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
+      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      publisher: { '@id': `${SITE}/#organization` } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: p.name, item: url }] },
+  ]
+  return shell(title, desc, url, body, ld, [p.slug], `${SITE}/images/ogp/sol-${p.slug}.png`)
+}
+
 function detailPage(p: SolutionPage): string {
   const url = `${BASE}/${p.slug}.html`
   const saas = p.saasSlugs.map((s) => saasBySlug.get(s)).filter(Boolean) as Saas[]
@@ -395,6 +482,7 @@ function indexPage(): string {
   const ai = pages.filter((p) => p.kind === 'aichat')
   const combo = pages.filter((p) => p.kind === 'combo')
   const bots = pages.filter((p) => p.kind === 'chatbot')
+  const prods = pages.filter((p) => p.kind === 'product')
   const card = (p: SolutionPage) => `<a class="cat-card" href="${BASE}/${attr(p.slug)}.html"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種・業務別ソリューション</p>
@@ -421,6 +509,11 @@ ${combo.length ? `<section><div class="panel">
 <h2>構成例（オープンソース×AI）</h2>
 <p>オープンソースと当社の製品を組み合わせて、自社に置く構成の例です。</p>
 <div class="cat-grid">${combo.map(card).join('')}</div>
+</div></section>` : ''}
+${prods.length ? `<section><div class="panel">
+<h2>公開中の業務システム</h2>
+<p>国の公開データを毎日取り込んで、無料で使える画面として公開しているシステムです。自社に置く導入版もあります。</p>
+<div class="cat-grid">${prods.map(card).join('')}</div>
 </div></section>` : ''}
 ${ai.length ? `<section><div class="panel">
 <h2>開発中のAI相談システム</h2>
@@ -588,7 +681,7 @@ ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.sl
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 for (const p of pages) {
-  let html = p.kind === 'aichat' ? aichatPage(p) : (p.kind === 'combo' || p.kind === 'chatbot') ? comboPage(p) : detailPage(p)
+  let html = p.kind === 'product' ? productPage(p) : p.kind === 'aichat' ? aichatPage(p) : (p.kind === 'combo' || p.kind === 'chatbot') ? comboPage(p) : detailPage(p)
   // 既存の業種ページに、マトリクス(業務別ページ)への導線を差し込む
   const ind = matrix.industries.find((i) => i.slug === p.slug)
   if (ind) {
@@ -601,6 +694,12 @@ for (const p of pages) {
   // 開発中のAI相談システム（kind=aichat）のうち、このページを linkFrom に挙げたものへの導線
   const ais = pages.filter((a) => a.kind === 'aichat' && (a.linkFrom || []).includes(p.slug))
   const combos = pages.filter((a) => (a.kind === 'combo' || a.kind === 'chatbot') && (a.linkFrom || []).includes(p.slug))
+  const prods = pages.filter((a) => a.kind === 'product' && (a.linkFrom || []).includes(p.slug))
+  if (prods.length) {
+    html = html.replace('</main>', `<section><div class="panel"><h2>公開中の業務システム</h2>
+<div class="cat-grid">${prods.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
+</div></section>\n</main>`)
+  }
   if (combos.length) {
     html = html.replace('</main>', `<section><div class="panel"><h2>関連するAIチャットボットの構成</h2>
 <div class="cat-grid">${combos.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
