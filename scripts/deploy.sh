@@ -103,6 +103,8 @@ fi
 if [ "$what" = "vibeblog" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: vibeblog/ =="
   # canonical-map.json は GitHub Pages 側の向け替えに使う作業用ファイル。公開しない。
+  # AI検索向けの記事一覧（/vibeblog/llms.txt）を dist から作り直す（2026-10-08）
+  /usr/bin/python3 "$(dirname "$0")/build_vibeblog_llms.py" || rc=1
   sync_dist vibeblog
   # 記事ごとのトップ画像（= og:image）。サーバーに無いものだけ1接続で送る
   /usr/bin/python3 "$(dirname "$0")/make_vibeblog_eyecatch.py" --sync || rc=1
