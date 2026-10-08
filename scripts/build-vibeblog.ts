@@ -161,7 +161,9 @@ async function load(dir: 'articles' | 'blog'): Promise<Post[]> {
     // Horizon の自動ニュースまとめは入れない（冒頭の説明）
     if (dir === 'articles' && /Horizonを使い/.test(bodyMd) && process.env.VIBEBLOG_INCLUDE_HORIZON !== '1') continue
     const slug = n.replace(/\.md$/, '')
-    const date = (slug.match(/^(\d{4}-\d{2}-\d{2})/) || [, ''])[1]
+    // 日付はファイル名の先頭から。日付の無いスラッグ（決まった URL を毎日書き換えるページ。例: nagoya-gakkyu-heisa）は
+    // frontmatter の date（最終更新日）を使う（2026-10-09）
+    const date = (slug.match(/^(\d{4}-\d{2}-\d{2})/) || [, ''])[1] || fmGet(fm, 'date').slice(0, 10)
     // 本文の先頭 h1 は frontmatter の title と重複するので落とす
     const md = jaBold(bodyMd.replace(/^#\s+.+\n+/, ''))
     let html = await marked.parse(md, { async: true, gfm: true, breaks: false })
@@ -552,19 +554,11 @@ ${ctaBlock}
 }
 if (ossPosts.length) await fs.writeFile(path.join(distRoot, 'oss.html'), ossIndexHtml(), 'utf8')
 
-// 記事ではない、決まった URL を毎日書き換えるページ（例: 名古屋市の学級閉鎖 最新。kkansen-sales/ops/exbridge_latest.py が
-// 本体を置き、lastmod をこのファイルに書く）。ビルドしてもサイトマップから消えないようにここで足す（2026-10-09）
-type Pinned = { loc: string; lastmod: string; changefreq?: string; priority?: string }
-const pinnedPages: Pinned[] = await fs
-  .readFile(path.join(process.cwd(), 'data', 'vibeblog-pinned.json'), 'utf8')
-  .then((s) => JSON.parse(s) as Pinned[])
-  .catch(() => [])
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
 ${ossPosts.length ? `<url><loc>${BASE}/oss.html</loc><lastmod>${ossPosts[0].date || TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>` : ''}
 ${posts.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${p.date || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
-${pinnedPages.map((p) => `<url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod><changefreq>${p.changefreq || 'daily'}</changefreq><priority>${p.priority || '0.8'}</priority></url>`).join('\n')}
 </urlset>`
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sm, 'utf8')
 
