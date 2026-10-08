@@ -46,6 +46,15 @@ type Page = {
 }
 
 const list = JSON.parse(await fs.readFile(path.join(root, 'data', 'helpdesk-list.json'), 'utf8')) as Page[]
+// ページごとの本文（2026-10-09）。3〜4文しかなく一致率0.85だったので、
+// scripts/gen_helpdesk_content.py が data/helpdesk-content/<slug>.json に作る。
+type Content = { title: string; description: string; lead: string; sections: Array<{ h: string; p: string }>
+  checklist: string[]; faqs: Array<{ q: string; a: string }>; _generated: string }
+const content = new Map<string, Content>()
+for (const p of list) {
+  try { content.set(p.slug, JSON.parse(await fs.readFile(path.join(root, 'data', 'helpdesk-content', `${p.slug}.json`), 'utf8'))) } catch { /* 未作成 */ }
+}
+const paras = (t: string) => t.split(/\n\n+/).map((x) => `<p>${h(x)}</p>`).join('')
 const types = list.filter((p) => p.kind === 'type')
 const worries = list.filter((p) => p.kind === 'worry')
 
@@ -80,6 +89,8 @@ const relatedBlock = (self: Page) => {
 
 function detailPage(p: Page): string {
   const isType = p.kind === 'type'
+  const c = content.get(p.slug)
+  if (c) return contentPage(p, c)
   const title = isType
     ? `${p.name}とは｜任せられること・向き不向き・費用の考え方`
     : `${p.name}｜どう解決するか（IT担当がいない中小企業向け）`
@@ -129,6 +140,44 @@ ${relatedBlock(p)}
   return shell(title, desc, `${BASE}/${p.slug}.html`, body, ld)
 }
 
+function contentPage(p: Page, c: Content): string {
+  const isType = p.kind === 'type'
+  const url = `${BASE}/${p.slug}.html`
+  const ld = [
+    orgLd(),
+    { '@context': 'https://schema.org', '@type': 'Article', headline: c.title,
+      description: c.description, datePublished: c._generated, dateModified: c._generated,
+      mainEntityOfPage: url, author: { '@type': 'Organization', name: ORG.name },
+      publisher: { '@type': 'Organization', name: ORG.name } },
+    { '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'IT担当を外に持つ', item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: p.name, item: url }] },
+  ]
+  const body = `<main class="wrap">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">IT担当を外に持つ</a> / ${h(p.name)}</nav>
+<section class="detail-hero">
+  <span class="eyebrow">${isType ? '任せ方の種類' : 'よくある状況'}</span>
+  <h1>${h(c.title)}</h1>
+  <p class="lead">${h(c.lead)}</p>
+</section>
+${c.sections.map((x) => `<section class="panel"><h2>${h(x.h)}</h2>${paras(x.p)}</section>`).join('\n')}
+${isType && p.souba ? `<section class="panel"><h2>費用の幅</h2><p>${h(p.souba)}</p>
+  <p class="small">金額は各社・各プランで大きく異なります。ここに書いているのは公開情報から見た一般的な幅で、特定の会社の価格ではありません。実際の金額は各社へご確認ください。</p></section>` : ''}
+<section class="panel"><h2>確かめること</h2>
+  <ul class="chk">${c.checklist.map((x) => `<li>${h(x)}</li>`).join('')}</ul></section>
+<section class="panel"><h2>よくあるご質問</h2>
+${c.faqs.map((f) => `<h3>${h(f.q)}</h3><p>${h(f.a)}</p>`).join('\n')}
+</section>
+${komonBlock(p.slug)}
+${relatedBlock(p)}
+</main>`
+  return shell(c.title, c.description, url, body, ld)
+}
+
 function indexPage(): string {
   const title = 'IT担当を外に持つ方法｜情シス代行・IT顧問・開発外注の違いと選び方'
   const desc = '社内にIT担当がいない中小企業向けに、外部へ任せる形（情シス代行、IT顧問、ヘルプデスク代行、常駐、開発外注など）の違いと、よくある状況ごとの考え方をまとめました。費用は一般的な幅で示しています。'
@@ -169,7 +218,7 @@ for (const p of list) {
 const urls = [`${BASE}/`, ...list.map((p) => `${BASE}/${p.slug}.html`)]
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/helpdesk/') ? '0.9' : '0.8'}</priority></url>`).join('\n') +
+  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${content.get(u.replace(`${BASE}/`, '').replace('.html', ''))?._generated || TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/helpdesk/') ? '0.9' : '0.8'}</priority></url>`).join('\n') +
   `\n</urlset>\n`)
 
 console.log(`helpdesk: ${list.length}ページ + index/sitemap → ${distRoot}`)
