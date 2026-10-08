@@ -552,11 +552,19 @@ ${ctaBlock}
 }
 if (ossPosts.length) await fs.writeFile(path.join(distRoot, 'oss.html'), ossIndexHtml(), 'utf8')
 
+// 記事ではない、決まった URL を毎日書き換えるページ（例: 名古屋市の学級閉鎖 最新。kkansen-sales/ops/exbridge_latest.py が
+// 本体を置き、lastmod をこのファイルに書く）。ビルドしてもサイトマップから消えないようにここで足す（2026-10-09）
+type Pinned = { loc: string; lastmod: string; changefreq?: string; priority?: string }
+const pinnedPages: Pinned[] = await fs
+  .readFile(path.join(process.cwd(), 'data', 'vibeblog-pinned.json'), 'utf8')
+  .then((s) => JSON.parse(s) as Pinned[])
+  .catch(() => [])
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
 ${ossPosts.length ? `<url><loc>${BASE}/oss.html</loc><lastmod>${ossPosts[0].date || TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>` : ''}
 ${posts.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${p.date || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
+${pinnedPages.map((p) => `<url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod><changefreq>${p.changefreq || 'daily'}</changefreq><priority>${p.priority || '0.8'}</priority></url>`).join('\n')}
 </urlset>`
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sm, 'utf8')
 
