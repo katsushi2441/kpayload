@@ -317,6 +317,13 @@ const ctaBlock = `
     <a class="btn sub" href="https://kappstore.exbridge.jp/?ref=exbridge-vibeblog">オンプレミスの業務システムを見る</a>
     <a class="btn sub" href="${SITE}/contact.php?ref=exbridge-vibeblog">人に相談する（無料・Zoom可）</a>
   </div>
+</section>
+<section class="cta" style="margin-top:12px;background:#fff">
+  <h2>開発会社・IT販売の方へ</h2>
+  <p>この記事に出てくるシステムは、御社の案件で売ったり、御社の製品に組み込んだりできます。ソースコードは MIT ライセンスで、御社のブランドでの販売もできます。販売手数料は、バイブプロトタイプ制作・バイブOSSで1件9万円（税別）、App Store の製品は本体価格の10%です。登録無料・ノルマなし。</p>
+  <div class="ctarow">
+    <a class="btn sub" href="${KURAGE}/reseller.html?ref=vibeblog-reseller">販売代理店の条件を見る</a>
+  </div>
 </section>`
 
 const card = (href: string, meta: string, title: string, desc: string) =>
