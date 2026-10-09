@@ -77,6 +77,14 @@ type Saas = {
 }
 
 const saasList = JSON.parse(await fs.readFile(path.join(root, 'data', 'saas-list.json'), 'utf8')) as Saas[]
+// サービスごとの本文（2026-10-09）。違うのが what/note だけで一致率0.67・90日クリック10だったので、
+// scripts/gen_saas_content.py が data/saas-content/<slug>.json に作る。金額は書かせない。
+type SaasC = { title: string; description: string; lead: string; about: string; pricing: string; musthave: string[]
+  migration: string; keep: string; faqs: Array<{ q: string; a: string }>; _generated: string }
+const saasContent = new Map<string, SaasC>()
+for (const s of saasList) {
+  try { saasContent.set(s.slug, JSON.parse(await fs.readFile(path.join(root, 'data', 'saas-content', `${s.slug}.json`), 'utf8'))) } catch { /* 未作成 */ }
+}
 
 const payload = await getPayload({ config })
 const result = await payload.find({ collection: 'oss-projects', limit: 0, pagination: false, sort: 'name', depth: 0 })
@@ -190,11 +198,16 @@ function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): str
   const url = `${BASE}/${s.slug}.html`
   // 検索語は「notion オープンソース」「backlog oss」「trello 料金」の形（GSC実測 2026-09-04）。
   // 「代わりになるオープンソース（OSS）」を先頭に置き、費用の話は後ろに回す。
-  const title = `${s.name}の代わりになるオープンソース（OSS）${oss.length}件｜費用の見直し | 株式会社エクスブリッジ`
-  const desc = `${s.name}のオープンソース版・OSSの代替を探している方へ。${s.name}（${s.vendor}）の料金は利用人数×月額で毎年かかり続けます。同じ業務をオープンソースで行えばライセンス費はかからず、ソースコードは自社に残ります。${oss.length}件の候補を、ライセンスと日本語対応の実測つきで掲載。`
+  const c = saasContent.get(s.slug)
+  const title = c ? `${c.title} | 株式会社エクスブリッジ` : `${s.name}の代わりになるオープンソース（OSS）${oss.length}件｜費用の見直し | 株式会社エクスブリッジ`
+  const desc = c ? c.description : `${s.name}のオープンソース版・OSSの代替を探している方へ。${s.name}（${s.vendor}）の料金は利用人数×月額で毎年かかり続けます。同じ業務をオープンソースで行えばライセンス費はかからず、ソースコードは自社に残ります。${oss.length}件の候補を、ライセンスと日本語対応の実測つきで掲載。`
   const kitCards = kappKitCards(oss.map((p) => ({ slug: p.slug, name: h(p.name) })), `saas-${s.slug}`)
 
-  const faqs = [
+  const commonFaqs = [
+    { q: '費用はどのくらいかかりますか？',
+      a: '土台にするオープンソースが決まっている場合は、合計10時間以内・税込110,000円からのカスタマイズと導入があります。何を使うか決まっていない場合は、名古屋市内なら1日3時間×5日間の計15時間・税別15万円のお試し導入で、実際に動くものを1つ以上作ります。初日3時間のヒアリングと提案は無料です。' },
+  ]
+  const faqs = c ? [...c.faqs, ...commonFaqs] : [
     { q: `${s.name}のオープンソース版（OSS）はありますか？`,
       a: `${s.name}そのもののソースコードは公開されていませんが、同じ用途で使えるオープンソースはあります。当社が挙げているのは${oss.slice(0, 3).map((p) => p.name).join('・')}${oss.length > 3 ? `ほか${oss.length - 3}件` : ''}で、いずれもソースコードが公開されていて自社サーバーに置いて使えます。ライセンスと日本語対応は本文の表に実測を載せています。` },
     { q: `${s.name}の代わりにオープンソースを使うと、何が変わりますか？`,
@@ -212,14 +225,35 @@ function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): str
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">SaaSとオープンソース</p>
 <h1>${h(s.name)}の代わりになる<br>オープンソース（OSS）${oss.length}件</h1>
-<p class="lead">${h(s.name)}は${h(s.what)}便利なサービスですが、料金は<strong>利用する人数×月額</strong>で、使い続ける限りかかり続けます。同じ業務をオープンソースで行えば、ライセンス費はかからず、ソースコードは自社に残ります。ここでは${h(s.name)}の代わりになるオープンソース（OSS）${oss.length}件を、ライセンスと日本語対応の実測つきで並べました。</p>
+<p class="lead">${c ? h(c.lead) : `${h(s.name)}は${h(s.what)}便利なサービスですが、料金は<strong>利用する人数×月額</strong>で、使い続ける限りかかり続けます。同じ業務をオープンソースで行えば、ライセンス費はかからず、ソースコードは自社に残ります。ここでは${h(s.name)}の代わりになるオープンソース（OSS）${oss.length}件を、ライセンスと日本語対応の実測つきで並べました。`}</p>
 <p><a class="btn btn-main" href="${TRIAL}?ref=saas-${attr(s.slug)}">AI導入お試し実験を見る</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=saas-${attr(s.slug)}">OSSのカスタマイズ（110,000円〜）</a></p>
 </div></section>
 ${relatedNews('saas', s.slug)}
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">SaaSとOSSの対応表</a> / ${h(s.name)}</nav>
 
+${c ? `<section><div class="panel">
+<h2>${h(s.name)}とは？</h2>
+<p>${h(c.about)}</p>
+<p class="note">提供元は${h(s.vendor)}です。読み方は「${h(s.kana)}」。</p>
+</div></section>
+
 <section><div class="panel">
+<h2>${h(s.name)}の料金の仕組み</h2>
+<p>${h(c.pricing)}</p>
+<p class="note">金額は改定されるため、本ページには載せていません。最新の料金は提供元の公式サイトでご確認ください。</p>
+</div></section>
+
+<section><div class="panel">
+<h2>${h(s.name)}から乗り換えるときに、代わりに必ず要る機能</h2>
+<ul class="checks">${c.musthave.map((x) => `<li>${h(x)}</li>`).join('')}</ul>
+</div></section>
+
+<section><div class="panel">
+<h2>データの持ち出しと移行で気をつけること</h2>
+<p>${h(c.migration)}</p>
+</div></section>
+` : `<section><div class="panel">
 <h2>${h(s.name)}とは？</h2>
 <p>${h(s.name)}とは、${h(s.what)}提供元は${h(s.vendor)}です。読み方は「${h(s.kana)}」。導入している企業は多く、標準機能だけで業務が回るのであれば、そのまま使い続けるのが最も手間がかかりません。</p>
 <p class="note">料金の詳細は提供元の公式サイトをご確認ください。本ページでは金額を掲載していません（改定があるため、当社が転載すると古い情報が残ります）。</p>
@@ -248,6 +282,7 @@ ${relatedNews('saas', s.slug)}
 <li><strong>資産とノウハウが残る</strong>——ソースコードと、AIを使った直し方が社内に残ります</li>
 </ul>
 </div></section>
+`}
 
 <section><div class="panel">
 <h2>${named >= 2 ? `${h(s.name)}と同じことができるオープンソース${oss.length}件` : `${h(s.name)}と近い分野で使われているオープンソース`}</h2>
@@ -270,8 +305,8 @@ ${demoBlock(s, oss)}
 
 <section><div class="panel">
 <h2>${h(s.name)}を使い続けたほうがよいのは、どんな場合ですか？</h2>
-<p>使い続けたほうがよい場合とは、<strong>標準機能で業務が回っていて、人数が少なく、社内に運用を見る人がいない場合</strong>です。人数が数名なら月額の総額は小さく、構築費用のほうが高くつきます。また障害対応や更新を自社で持てないなら、提供元に任せられる価値は大きいです。</p>
-<p>当社は、見込みが立たない場合に「作らないほうがよい」と申し上げます。無理に置き換えることが目的ではありません。判断材料として、いまの利用人数と月額、そして不便に感じている点を教えていただければ、比較してお伝えします。</p>
+${c ? `<p>${h(c.keep)}</p>` : `<p>使い続けたほうがよい場合とは、<strong>標準機能で業務が回っていて、人数が少なく、社内に運用を見る人がいない場合</strong>です。人数が数名なら月額の総額は小さく、構築費用のほうが高くつきます。また障害対応や更新を自社で持てないなら、提供元に任せられる価値は大きいです。</p>
+<p>当社は、見込みが立たない場合に「作らないほうがよい」と申し上げます。無理に置き換えることが目的ではありません。判断材料として、いまの利用人数と月額、そして不便に感じている点を教えていただければ、比較してお伝えします。</p>`}
 </div></section>
 
 <div class="cta">
@@ -309,7 +344,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       numberOfItems: oss.length,
       itemListElement: oss.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/ai-system/${p.slug}/`, name: p.name })) },
     { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja',
-      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      dateModified: c ? c._generated : TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
       publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
@@ -381,7 +416,7 @@ for (const { s, oss, named } of withOss) {
 const urls = [`${BASE}/`, ...saasList.map((s) => `${BASE}/${s.slug}.html`)]
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/saas/') ? '0.9' : '0.8'}</priority></url>`).join('\n') +
+  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${saasContent.get(u.replace(`${BASE}/`, '').replace('.html', ''))?._generated || TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/saas/') ? '0.9' : '0.8'}</priority></url>`).join('\n') +
   `\n</urlset>\n`)
 
 payload.logger.info(`saas: ${saasList.length}ページ + index/sitemap`)
