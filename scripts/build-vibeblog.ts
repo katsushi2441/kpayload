@@ -223,6 +223,32 @@ for (const p of posts) {
   byKw.set(p.headKeyword, [...(byKw.get(p.headKeyword) || []), p])
 }
 
+// 本文に出てくる言葉から、関係する国会トラッカー（xb4g.com/giin/tracker/）へつなぐ（2026-10-09）。
+// トラッカーは検索で弱い（90日 クリック9）ので、評価のある exbridge.jp の記事からリンクを送る。
+type Trk = { key: string; name: string; short?: string; words: string[]; seo_word?: string }
+const TRACKERS: Trk[] = await fs.readFile('/home/kojima/work/xb4g/giin/data/trackers.json', 'utf8').then((s) => JSON.parse(s)).catch(() => [])
+const nfk = (x: string) => x.normalize('NFKC')
+function trackersForPost(p: Post): Trk[] {
+  const text = nfk(p.title + ' ' + p.html.replace(/<[^>]+>/g, ' '))
+  // 政治・行政の文脈がある記事だけ。「AIエージェント」は開発の記事に多く出るので、語だけで当てると
+  // 103本の開発記事に「AIエージェントの安全と行政での利用」が付いた（2026-10-09）
+  const civic = (text.match(/国会|政府|議員|法案|答弁|国の制度|自治体|行政|政策|省庁|条例|議会/g) || []).length
+  if (civic < 3) return []
+  const scored: Array<[Trk, number]> = []
+  for (const t of TRACKERS) {
+    if (p.html.includes(`/giin/tracker/${t.key}`)) continue   // 本文ですでにリンクしている
+    let n = 0
+    // 「レベル4」（自動運転）は「警戒レベル4」（避難情報）にも当たるので、ほかの意味でも使う語は当てない
+    for (const w of [...t.words, t.seo_word || ''].filter((x) => x && !/^レベル\d$/.test(nfk(x)))) {
+      const parts = nfk(w).split(/\s+/).filter(Boolean)
+      if (!parts.every((x) => text.includes(x))) continue
+      n += parts.length === 1 ? text.split(parts[0]).length - 1 : 1
+    }
+    if (n >= 3 || (n >= 1 && t.words.some((w) => nfk(p.title).includes(nfk(w).split(/\s+/)[0])))) scored.push([t, n])
+  }
+  return scored.sort((a, b) => b[1] - a[1]).slice(0, 3).map(([t]) => t)
+}
+
 const dateJa = (d: string) => d.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1年$2月$3日')
 /** 一覧の行に使う短い日付。「2026年09月21日」は幅を食って2行に折れる。 */
 const dateDot = (d: string) => d.replace(/-/g, '.')
@@ -412,6 +438,14 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
     <span class="vb-copy-label">タイトルとURLをコピー</span></button>
 </div>
 <article class="post">${p.html}</article>
+${(() => {
+  const ts = trackersForPost(p)
+  return ts.length ? `<section>
+  <h2>この話題を国会で追う（国会トラッカー）</h2>
+  <p class="note">国会会議録から、だれが質問し、政府が何と答えたかを日付つきで並べています。</p>
+  <div class="idx">${ts.map((t) => card(`https://xb4g.com/giin/tracker/${t.key}?ref=vibeblog-tracker-${p.slug}`, '国会トラッカー', t.name, `「${t.short || t.name}」の国会の質疑と政府の答弁`)).join('')}</div>
+</section>` : ''
+})()}
 
 ${rel.length ? `<section>
   <h2>「${h(p.headKeyword)}」の他の記事</h2>
