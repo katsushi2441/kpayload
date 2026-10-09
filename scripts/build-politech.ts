@@ -315,11 +315,11 @@ await fs.mkdir(outDir, { recursive: true })
 let n = 0
 const missing: string[] = []
 for (const k of kws) {
-  if (!copy[k.slug]) { missing.push(k.slug); continue }
+  if (!copy[k.slug] && !content[k.slug]) { missing.push(k.slug); continue }
   await fs.writeFile(path.join(outDir, `${k.slug}.html`), pageHtml(k), 'utf8')
   n++
 }
-const built = kws.filter((k) => copy[k.slug])
+const built = kws.filter((k) => copy[k.slug] || content[k.slug])   // 2026-10-09 から本文（content）だけのキーワードもある
 await fs.writeFile(path.join(outDir, 'index.html'), indexHtml(), 'utf8')
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod></url>\n${built.map((k) => `<url><loc>${BASE}/${k.slug}.html</loc><lastmod>${content[k.slug]?._generated || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
 await fs.writeFile(path.join(outDir, 'sitemap.xml'), sitemap, 'utf8')

@@ -2154,5 +2154,71 @@
   "theme": "bousai",
   "theme_name": "防災・災害",
   "intent": "define"
+ },
+ {
+  "slug": "digital-kyokasho",
+  "keyword": "デジタル教科書",
+  "query": "デジタル 教科書",
+  "volume": 22200,
+  "competition": "低",
+  "index": 0,
+  "theme": "kyoiku",
+  "theme_name": "教育・奨学金",
+  "intent": "define"
+ },
+ {
+  "slug": "shiritsu-koukou-mushou-ka",
+  "keyword": "私立高校無償化",
+  "query": "私立 高校 無償 化",
+  "volume": 90500,
+  "competition": "低",
+  "index": 0,
+  "theme": "kyoiku",
+  "theme_name": "教育・奨学金",
+  "intent": "benefit"
+ },
+ {
+  "slug": "giin-teisu-sakugen",
+  "keyword": "議員定数削減",
+  "query": "議員 定数 削減",
+  "volume": 27100,
+  "competition": "低",
+  "index": 0,
+  "theme": "senkyo",
+  "theme_name": "選挙・政治参加",
+  "intent": "topic"
+ },
+ {
+  "slug": "kigyou-dantai-kenkin",
+  "keyword": "企業団体献金",
+  "query": "企業 団体 献金",
+  "volume": 1900,
+  "competition": "低",
+  "index": 0,
+  "theme": "senkyo",
+  "theme_name": "選挙・政治参加",
+  "intent": "define"
+ },
+ {
+  "slug": "kaigo-hoken-hou-kaisei",
+  "keyword": "介護保険法改正",
+  "query": "介護 保険 法 改正",
+  "volume": 1000,
+  "competition": "低",
+  "index": 0,
+  "theme": "fukushi",
+  "theme_name": "福祉・高齢・障害・ひとり親",
+  "intent": "topic"
+ },
+ {
+  "slug": "bukkadaka-taisaku",
+  "keyword": "物価高対策",
+  "query": "物価高 対策",
+  "volume": 18100,
+  "competition": "低",
+  "index": 0,
+  "theme": "seikatsu",
+  "theme_name": "給付金・生活・住まい",
+  "intent": "topic"
  }
 ]
