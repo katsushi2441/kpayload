@@ -28,6 +28,13 @@ type Copy = { title: string; h1: string; lead: string; points: string[]; answer:
 
 const kws = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-keywords.json'), 'utf8')) as Kw[]
 const copy = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-copy.json'), 'utf8')) as Record<string, Copy>
+// 作り直した本文（2026-10-09）。旧 copy は「答え」に宣伝が混ざり、題名も検索した人向けでなかった
+// （「守山区 保育園 空き状況」5〜9位でクリック0）。scripts/gen_politech_content.py が作る。あれば優先する。
+type Sec = { h: string; p: string }
+const content: Record<string, Copy & { sections?: Sec[]; _generated?: string }> = {}
+for (const f of await fs.readdir(path.join(root, 'data', 'politech-content')).catch(() => [] as string[])) {
+  if (f.endsWith('.json')) content[f.slice(0, -5)] = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-content', f), 'utf8'))
+}
 
 /* 国会トラッカー（xb4g.com/giin/tracker/*）への文脈リンク（2026-10-03）。
  * トラッカーは Google にほとんどクロールされていない（新しいドメイン）。exbridge.jp の politech から
@@ -188,9 +195,10 @@ ${f.rows.map((r) => `<tr><th>${h(r.label)}</th><td><b>${h(r.value)}</b></td><td>
 }
 
 function pageHtml(k: Kw): string {
-  const c = copy[k.slug]
+  const nc = content[k.slug]
+  const c = nc || copy[k.slug]
   const url = `${BASE}/${k.slug}.html`
-  const title = `${c.title}｜政党・議員事務所が動くページで答える | 株式会社エクスブリッジ`
+  const title = nc ? `${nc.title} | 株式会社エクスブリッジ` : `${c.title}｜政党・議員事務所が動くページで答える | 株式会社エクスブリッジ`
   const desc = c.lead.slice(0, 118)
   // slug に当たった製品を先に、残りをテーマの並びから。**6本まで**（全部載せると読まれない）
   const hit = KW_TOOLS.find(([re]) => re.test(k.slug))?.[1] || []
@@ -216,9 +224,11 @@ function pageHtml(k: Kw): string {
 
 <section><div class="panel pt-answer">
 <h2>答え</h2>
-${c.answer.slice(0, 2).map((p) => `<p>${h(p)}</p>`).join('')}
+${(nc ? c.answer : c.answer.slice(0, 2)).map((p) => `<p>${h(p)}</p>`).join('')}
 <p class="note">制度の金額・期限・要件は自治体や国の公式ページで確認してください。このページは政党・議員事務所が住民の問いにどう応えるかを整理したもので、特定の政党・候補者を支持・批判するものではありません。</p>
 </div></section>
+
+${nc?.sections?.length ? nc.sections.map((x) => `<section><div class="panel"><h2>${h(x.h)}</h2><p>${h(x.p)}</p></div></section>`).join('\n') : ''}
 
 ${factsHtml(k.theme, k.slug)}
 
@@ -311,7 +321,7 @@ for (const k of kws) {
 }
 const built = kws.filter((k) => copy[k.slug])
 await fs.writeFile(path.join(outDir, 'index.html'), indexHtml(), 'utf8')
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod></url>\n${built.map((k) => `<url><loc>${BASE}/${k.slug}.html</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod></url>\n${built.map((k) => `<url><loc>${BASE}/${k.slug}.html</loc><lastmod>${content[k.slug]?._generated || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
 await fs.writeFile(path.join(outDir, 'sitemap.xml'), sitemap, 'utf8')
 await fs.writeFile(path.join(root, 'outputs', 'indexnow_exbridge_politech.txt'), [`${BASE}/`, ...built.map((k) => `${BASE}/${k.slug}.html`)].join('\n') + '\n', 'utf8')
 console.log(`politech: ${n}ページ + index/sitemap（本文未生成 ${missing.length}: ${missing.slice(0, 5).join(', ')}）`)
