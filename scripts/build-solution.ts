@@ -553,6 +553,28 @@ type MI = { slug: string; name: string; kicker: string; context: string; skip: s
 const matrix = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-matrix.json'), 'utf8')) as { gyomu: MG[]; industries: MI[] }
 const allProjects = result.docs as unknown as Project[]
 
+// ページごとの本文（2026-10-09）。テンプレートの差し替えだけでは2枚の89%が同じ行で、
+// 量産ページ扱いされて90日10クリックだった。scripts/gen_solution_content.py が
+// data/solution-content/<業種>/<業務>.json（業種トップは _hub.json）に作る。
+type Sec = { h: string; p: string }
+type PairC = { title: string; description: string; lead: string; points: Sec[]; features: string[]
+  split: Sec[]; steps: string[]; faqs: Array<{ q: string; a: string }>; _generated: string }
+type HubC = { title: string; description: string; lead: string; sections: Sec[]; faqs: Array<{ q: string; a: string }>; _generated: string }
+async function readContent<T>(ind: string, key: string): Promise<T | null> {
+  try { return JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-content', ind, `${key}.json`), 'utf8')) as T } catch { return null }
+}
+const pairContent = new Map<string, PairC>()
+const hubContent = new Map<string, HubC>()
+for (const ind of matrix.industries) {
+  const hc = await readContent<HubC>(ind.slug, '_hub')
+  if (hc) hubContent.set(ind.slug, hc)
+  for (const g of matrix.gyomu) {
+    const c = await readContent<PairC>(ind.slug, g.slug)
+    if (c) pairContent.set(`${ind.slug}/${g.slug}`, c)
+  }
+}
+const lastmodOf = new Map<string, string>()
+
 function pickOss(g: MG): Project[] {
   const rx = g.rx ? new RegExp(g.rx, 'i') : null
   // rx一致は開発者向けカテゴリを除外する。「transcri」等が学習用リポジトリに
@@ -578,12 +600,14 @@ const ossByGyomu = new Map(matrix.gyomu.map((g) => [g.slug, pickOss(g)]))
 function pairPage(ind: MI, g: MG): string {
   const url = `${BASE}/${ind.slug}/${g.slug}.html`
   const oss = ossByGyomu.get(g.slug) || []
-  const title = fitLength(32,
+  const c = pairContent.get(`${ind.slug}/${g.slug}`)
+  if (c) lastmodOf.set(url, c._generated)
+  const title = c ? c.title : fitLength(32,
     `${ind.name}の${g.name}を安くする｜OSSと内製化`,
     `${ind.name}の${g.name}｜OSSと内製化`,
     `${ind.name}の${g.name}を安くする`)
-  const desc = `${ind.name}の${g.name}——${g.pain}。有名サービスの月額を払い続けなくても、オープンソースと内製化で持てる範囲を、実測（ライセンス・日本語対応）つきでまとめました。名古屋のシステム開発会社が導入まで行います。初日の相談は無料です。`
-  const faqs = [
+  const desc = c ? c.description : `${ind.name}の${g.name}——${g.pain}。有名サービスの月額を払い続けなくても、オープンソースと内製化で持てる範囲を、実測（ライセンス・日本語対応）つきでまとめました。名古屋のシステム開発会社が導入まで行います。初日の相談は無料です。`
+  const faqs = c ? c.faqs : [
     { q: `${ind.name}でも${g.name}のシステムを自前で持てますか？`,
       a: `持てます。${ind.context}${g.name}はその中でも分離しやすい業務で、下に挙げたオープンソースや当社のオンプレミスの商品を土台にすれば、月額課金なしで運用できます。` },
     { q: `いま使っているサービスからの乗り換えは大変ではないですか？`,
@@ -596,11 +620,20 @@ function pairPage(ind: MI, g: MG): string {
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">${h(ind.name)}｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}の${h(g.name)}を、<br>内製化とオープンソースで。</h1>
-<p class="lead">${h(g.pain)}——${h(ind.name)}の現場からよく伺う悩みです。${h(ind.context)}</p>
+<p class="lead">${c ? h(c.lead) : `${h(g.pain)}——${h(ind.name)}の現場からよく伺う悩みです。${h(ind.context)}`}</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(`${ind.name}の${g.name}の相談`)}">無料で相談する（Zoom可）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / <a href="${BASE}/${attr(ind.slug)}/">${h(ind.name)}</a> / ${h(g.name)}</nav>
+${c ? `<section><div class="panel"><h2>${h(ind.name)}の${h(g.name)}で押さえること</h2>
+<div class="grid">${c.points.map((x) => `<div class="card"><h3>${h(x.h)}</h3><p>${h(x.p)}</p></div>`).join('')}</div>
+</div></section>
+<section><div class="panel"><h2>${h(g.name)}のシステムに要る機能</h2>
+<ul class="checks">${c.features.map((x) => `<li>${h(x)}</li>`).join('')}</ul>
+</div></section>
+<section><div class="panel"><h2>どこを何で持つか</h2>
+${c.split.map((x) => `<div class="card" style="margin:0 0 10px"><h3>${h(x.h)}</h3><p>${h(x.p)}</p></div>`).join('')}
+</div></section>` : ''}
 ${g.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
 <p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
@@ -613,6 +646,9 @@ ${oss.length ? `<section><div class="panel">
 <div class="table-wrap"><table><thead><tr><th>名前</th><th>できること</th><th>ライセンス</th><th>日本語</th><th>デモ・購入</th></tr></thead><tbody>
 ${oss.map((o) => `<tr><th><a href="${SITE}/ai-system/${attr(o.slug)}/?ref=solution-${attr(ind.slug)}-${attr(g.slug)}">${h(o.name)}</a></th><td>${h(o.summary)}</td><td>${h(o.license)}</td><td>${h(o.japaneseStatus)}</td><td>${ossCell(o, `${ind.slug}-${g.slug}`)}</td></tr>`).join('')}
 </tbody></table></div></div></section>` : ''}
+${c ? `<section><div class="panel"><h2>導入の進め方</h2>
+<ol>${c.steps.map((x) => `<li>${h(x)}</li>`).join('')}</ol>
+</div></section>` : ''}
 <div class="cta">
 <h2>${h(ind.name)}の${h(g.name)}、何から手を付けるか一緒に決めます</h2>
 <p><strong>初日のヒアリングと提案は無料</strong>です。いまのやり方（紙・Excel・使用中のサービス）を見せていただければ、残すもの・置き換えるものを仕分けしてお返しします。</p>
@@ -635,7 +671,7 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       serviceType: `${g.name}システム導入・OSSカスタマイズ`, areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'Country', name: '日本' }],
       provider: { '@id': `${SITE}/#organization` },
       offers: { '@type': 'Offer', priceCurrency: 'JPY', price: '110000', url: `${KURAGE}/vibe-oss.html` } },
-    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja', dateModified: TODAY,
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, inLanguage: 'ja', dateModified: c ? c._generated : TODAY,
       isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` }, publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
@@ -650,31 +686,38 @@ function industryHub(ind: MI): string {
   const url = `${BASE}/${ind.slug}/`
   const gy = matrix.gyomu.filter((g) => !ind.skip.includes(g.slug))
   const flat = pages.find((p) => p.slug === ind.slug)
-  const title = fitLength(32, `${ind.name}のIT費用を安くする｜業務別の道具箱`, `${ind.name}のITを安くする｜業務別`)
-  const desc = `${ind.context} ${ind.name}の${gy.slice(0, 5).map((g) => g.name).join('・')}などを、オープンソースと内製化で安く持つ方法を業務別にまとめました。`
+  const c = hubContent.get(ind.slug)
+  if (c) lastmodOf.set(url, c._generated)
+  const title = c ? c.title : fitLength(32, `${ind.name}のIT費用を安くする｜業務別の道具箱`, `${ind.name}のITを安くする｜業務別`)
+  const desc = c ? c.description : `${ind.context} ${ind.name}の${gy.slice(0, 5).map((g) => g.name).join('・')}などを、オープンソースと内製化で安く持つ方法を業務別にまとめました。`
   const body = `<section class="hero"><div class="wrap">
 <p class="kicker">業種別ソリューション｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}のITを、<br>業務ごとに安くする。</h1>
-<p class="lead">${h(ind.context)}</p>
+<p class="lead">${h(c ? c.lead : ind.context)}</p>
 <p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(ind.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / ${h(ind.name)}</nav>
+${c ? c.sections.map((x) => `<section><div class="panel"><h2>${h(x.h)}</h2><p>${h(x.p)}</p></div></section>`).join('\n') : ''}
 <section><div class="panel"><h2>${h(ind.name)}の業務から選ぶ</h2>
 <div class="cat-grid">${gy.map((g) => `<a class="cat-card" href="${BASE}/${attr(ind.slug)}/${attr(g.slug)}.html"><b>${h(g.name)}</b><span>${h(g.pain)}</span></a>`).join('')}</div>
 ${flat ? `<p class="note" style="margin-top:10px"><a href="${BASE}/${attr(ind.slug)}.html">${h(ind.name)}の全体像（有名SaaSとの仕分け）はこちら</a></p>` : ''}
 </div></section>
+${c ? `<section><div class="panel"><h2>よくあるご質問</h2>
+${c.faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><p>${h(f.a)}</p></div>`).join('')}
+</div></section>` : ''}
 <section><div class="panel"><p class="note">記載のサービス名・製品名は各社の商標または登録商標です。</p></div></section>
 </main>`
-  const ld = [
+  const ld: object[] = [
     { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url, description: desc, inLanguage: 'ja',
-      dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
+      dateModified: c ? c._generated : TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
       publisher: { '@id': `${SITE}/#organization` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: '業種・業務別ソリューション', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: ind.name, item: url }] },
   ]
+  if (c) ld.unshift({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
   return shell(title, desc, url, body, ld, [ind.slug], `${SITE}/images/ogp/sol-${ind.slug}.png`)
 }
 
@@ -731,7 +774,7 @@ const urls = [`${BASE}/`,
   ...matrix.industries.flatMap((i) => matrix.gyomu.filter((g) => !i.skip.includes(g.slug)).map((g) => `${BASE}/${i.slug}/${g.slug}.html`))]
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/solution/') ? '0.9' : u.endsWith('/') ? '0.8' : '0.7'}</priority></url>`).join('\n') +
+  urls.map((u) => `  <url><loc>${h(u)}</loc><lastmod>${lastmodOf.get(u) || TODAY}</lastmod><changefreq>weekly</changefreq><priority>${u.endsWith('/solution/') ? '0.9' : u.endsWith('/') ? '0.8' : '0.7'}</priority></url>`).join('\n') +
   `\n</urlset>\n`)
 payload.logger.info(`solution: 既存${pages.length} + 業種ハブ${matrix.industries.length} + ペア${pairCount} + index/sitemap = ${urls.length}URL`)
 
