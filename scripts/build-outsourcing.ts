@@ -34,6 +34,12 @@ type Gyomu = { slug: string; name: string; kw: string; outsourced: string; auto:
   q?: string; vol?: number; cat?: string; own?: string[]; keep?: string }
 type Extra = { cats: Record<string, string>; products: Record<string, string>; items: Record<string, Partial<Gyomu>> }
 let EXTRA: Extra = { cats: {}, products: {}, items: {} }
+// ページごとの本文（2026-10-09）。業務ごとに違うのが数行だけで一致率0.78・90日クリック0だったので、
+// scripts/gen_outsourcing_content.py が data/outsourcing-content/<slug>.json に作る。
+type Content = { title: string; description: string; lead: string; sections: Array<{ h: string; p: string }>
+  checklist: string[]; faqs: Array<{ q: string; a: string }>; _generated: string }
+const CONTENT = new Map<string, Content>()
+const paras = (t: string) => t.split(/\n\n+/).map((x) => `<p class="keep">${h(x)}</p>`).join('')
 const STORE = 'https://kappstore.exbridge.jp/app.php?id='
 /** 題名・h1の先頭に置く語。実測の検索語が無い業務は「〇〇の外注・代行」 */
 const lead = (g: Gyomu) => g.q ?? `${g.name}の外注・代行`
@@ -208,6 +214,12 @@ ${cards.map((c) => `<a class="pcard" href="${c.href}"${c.media.startsWith('<vide
 }
 
 function faqs(g: Gyomu) {
+  const c = CONTENT.get(g.slug)
+  if (c) {
+    return [...c.faqs,
+      { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月15時間・税別150,000円（1時間あたり10,000円）。月30時間・1年契約なら時間単価は最大20%下がり8,000円になります。仕組みの構築も、その後の改善も、この時間の中で行います。' },
+      { q: '対応地域は？', a: 'オンサイトは名古屋市内、Zoom・リモート作業の組み合わせで進めます。仕組みの構築自体はリモートで完結することがほとんどです。' }]
+  }
   return [
     { q: `${g.name}の外注・代行と、AI自動化は何が違いますか？`,
       a: `外注は毎月・毎件の費用が続き、社内にノウハウが残りません。AI自動化は、${g.auto}。作った仕組みは御社の資産になり、件数が増えても費用はほぼ増えません。` },
@@ -220,9 +232,10 @@ function faqs(g: Gyomu) {
 }
 
 function page(g: Gyomu, all: Gyomu[]): string {
-  const title = isOut(g) ? `${lead(g)}を探す前に｜AIで社内に自動化する方法と費用`
+  const c = CONTENT.get(g.slug)
+  const title = c ? c.title : isOut(g) ? `${lead(g)}を探す前に｜AIで社内に自動化する方法と費用`
     : `${lead(g)}をAIで自動化する方法と費用｜外注する前に`
-  const desc = `${isOut(g) ? `${lead(g)}を探している方へ。` : `${lead(g)}を外注するか迷っている方へ。`}${g.auto}。外注のままのほうがいい場合も正直に書きます。構築はAI-IT顧問契約（月15時間・税別15万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
+  const desc = c ? c.description : `${isOut(g) ? `${lead(g)}を探している方へ。` : `${lead(g)}を外注するか迷っている方へ。`}${g.auto}。外注のままのほうがいい場合も正直に書きます。構築はAI-IT顧問契約（月15時間・税別15万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
   const url = `${BASE}/${g.slug}.html`
   const same = all.filter((x) => x.slug !== g.slug && g.cat && x.cat === g.cat)
   const rel = (same.length ? same : all.filter((x) => x.slug !== g.slug)).slice(0, 12)
@@ -239,8 +252,8 @@ function page(g: Gyomu, all: Gyomu[]): string {
     <span class="badge">● ${h(lead(g))}${isOut(g) ? 'をお探しの方へ' : 'を外注する前に'}</span>
     <h1>${isOut(g) ? `${h(lead(g))}を探す前に。<br>${h(g.name)}は<em>AIで自動化</em>して社内に残せます。`
       : `${h(lead(g))}を、<br><em>AIで自動化</em>して社内に残す。`}</h1>
-    <p class="lead">外注は毎月・毎件の費用が続き、社内に何も残りません。
-    同じ業務を、<strong>AIの仕組みとして御社の中に作る</strong>選択肢があります。</p>
+    <p class="lead">${c ? h(c.lead) : `外注は毎月・毎件の費用が続き、社内に何も残りません。
+    同じ業務を、<strong>AIの仕組みとして御社の中に作る</strong>選択肢があります。`}</p>
     <div class="chips"><span class="chip">構築費は月額に込み</span><span class="chip">成果物は御社の資産</span><span class="chip">件数が増えても費用ほぼ一定</span></div>
     <div class="cta-row"><a class="btn-fill" href="${contact}">いまの回し方を聞かせてください</a>
     <a class="btn-ghost" href="${KOMON}?ref=outsourcing-${h(g.slug)}">AI-IT顧問契約とは</a></div>
@@ -250,6 +263,15 @@ function page(g: Gyomu, all: Gyomu[]): string {
     <p><strong>Kurage</strong><br>エクスブリッジのAI。この下の実物は、ぜんぶ私たちが毎日動かしています。</p>
   </div>
 </div></section>
+
+${c ? c.sections.map((x, k) => `<section class="sec${k % 2 ? ' sec-tint' : ''}"><div class="wrap">
+  <h2>${h(x.h)}</h2>
+  ${paras(x.p)}
+</div></section>`).join('\n') + `
+<section class="sec"><div class="wrap">
+  <h2>決める前に、自社で確かめること</h2>
+  <div class="price-body">${c.checklist.map((x) => `<div class="ck">${h(x)}</div>`).join('')}</div>
+</div></section>` : ''}
 
 <section class="sec"><div class="wrap">
   <h2>外注と、AI自動化。<span class="ac">同じ業務</span>でこれだけ違う</h2>
@@ -451,6 +473,9 @@ RPAツールの年間ライセンスを買う前に、一度ご相談くださ�
 
 async function run() {
   EXTRA = JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-extra.json'), 'utf8'))
+  for (const f of await fs.readdir(path.join(root, 'data', 'outsourcing-content')).catch(() => [] as string[])) {
+    if (f.endsWith('.json')) CONTENT.set(f.slice(0, -5), JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-content', f), 'utf8')))
+  }
   const all: Gyomu[] = (JSON.parse(await fs.readFile(path.join(root, 'data', 'outsourcing-list.json'), 'utf8')) as Gyomu[])
     .map((g) => ({ ...g, ...(EXTRA.items[g.slug] ?? {}) }))
   const out = path.join(root, 'dist', 'outsourcing')
@@ -461,7 +486,7 @@ async function run() {
   await fs.writeFile(path.join(out, 'index.html'), indexPage(all))
   await fs.writeFile(path.join(out, 'rpa.html'), rpaPage(all))
   const urls = [`${BASE}/`, `${BASE}/rpa.html`, ...all.map((g) => `${BASE}/${g.slug}.html`)]
-  const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
+  const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc><lastmod>${CONTENT.get(u.replace(`${BASE}/`, '').replace('.html', ''))?._generated || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
   await fs.writeFile(path.join(out, 'sitemap.xml'), sm)
   console.log(`outsourcing: ${all.length}業務 + index + sitemap`)
 }
