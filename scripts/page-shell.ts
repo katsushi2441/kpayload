@@ -89,7 +89,7 @@ a{color:var(--blue)}.wrap{width:min(1080px,calc(100% - 34px));margin:auto}.relne
 .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 26px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;text-decoration:none;font-size:16px}
 .brand-logo{width:32px;height:32px;display:block;border-radius:7px}
-.toplinks{display:flex;gap:13px;flex-wrap:wrap;font-size:13px;font-weight:700}
+.toplinks{display:flex;gap:13px;flex-wrap:wrap;font-size:13px;font-weight:700}.toplinks.all a{text-decoration:none}
 .hero{background:linear-gradient(120deg,var(--dark),#14343d);color:#fff;padding:52px 0 40px}
 .hero .kicker{color:#7fe3d6;font-size:13px;font-weight:800;letter-spacing:.06em;margin:0 0 10px}
 .hero h1{font-size:clamp(25px,4.4vw,42px);line-height:1.4;margin:0 0 14px}
@@ -123,7 +123,7 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding:26px 0 44px;colo
 .stack-table td{font-size:14px}
 .stack-table td::before{content:attr(data-label);display:block;margin-top:6px;font-size:11px;font-weight:800;color:var(--muted)}
 }
-@media(max-width:680px){.topbar{padding:10px 14px;gap:10px}.brand{font-size:14.5px;gap:8px}.brand-logo{width:28px;height:28px}.toplinks{gap:10px;font-size:12.5px}.toplinks a:not(:last-child){display:none}.toplinks a:last-child{background:var(--blue);color:#fff;border-radius:999px;padding:7px 14px;text-decoration:none}}
+@media(max-width:680px){.topbar{padding:10px 14px;gap:10px}.brand{font-size:14.5px;gap:8px}.brand-logo{width:28px;height:28px}.toplinks{gap:10px;font-size:12.5px}.toplinks a:not(:last-child){display:none}.toplinks a:last-child{background:var(--blue);color:#fff;border-radius:999px;padding:7px 14px;text-decoration:none}.topbar:has(.toplinks.all){flex-wrap:wrap;row-gap:8px}.toplinks.all{width:100%;gap:14px}.toplinks.all a:not(:last-child){display:inline}.toplinks.all a:last-child{background:none;color:var(--blue);border-radius:0;padding:0}}
 </style>`
 }
 
@@ -140,7 +140,7 @@ export function kurageAiFab(canonical: string, refPrefix: string, base: string):
 <style>#kai-fab{position:fixed;right:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#12a99f,#0a726b);color:#fff;text-decoration:none;border-radius:999px;padding:8px 18px 8px 8px;box-shadow:0 12px 30px rgba(10,80,75,.35);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;animation:kaiPulse 2.6s ease-in-out infinite}#kai-fab img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:2px solid rgba(255,255,255,.85);background:#fff;flex:none}#kai-fab .kai-txt{display:flex;flex-direction:column;line-height:1.2}#kai-fab .kai-txt b{font-size:14px;font-weight:900}#kai-fab .kai-txt i{font-size:10.5px;font-style:normal;opacity:.92}#kai-fab:hover{transform:translateY(-2px)}@keyframes kaiPulse{0%,100%{box-shadow:0 12px 30px rgba(10,80,75,.35)}50%{box-shadow:0 14px 44px rgba(18,169,159,.6)}}@media(max-width:520px){#kai-fab .kai-txt i{display:none}#kai-fab{padding:7px 15px 7px 7px}#kai-fab img{width:40px;height:40px}}</style>`
 }
 
-export type ShellOpts = { refPrefix: string; base: string; footerLinks: string; ogImage?: string; pvTags?: string[] }
+export type ShellOpts = { refPrefix: string; base: string; footerLinks: string; ogImage?: string; pvTags?: string[]; topLinks?: string }
 
 /**
  * Kurage の解説動画レールの差し込み口。中身は kurage.exbridge.jp/kpv_rail.js が
@@ -187,7 +187,7 @@ ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</sc
 ${NEWS_SCRIPT}
 ${styles()}</head><body>
 <header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo-mark-64.png" alt="" width="32" height="32" loading="eager"><span>株式会社エクスブリッジ</span></a>
-<nav class="toplinks"><a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a></nav></header>
+<nav class="toplinks${opts.topLinks ? ' all' : ''}">${opts.topLinks ?? `<a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a>`}</nav></header>
 ${body}
 ${pvRail(opts.pvTags)}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">

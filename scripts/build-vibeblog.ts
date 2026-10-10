@@ -55,6 +55,8 @@ const SHELL = {
   // AI OSS技術解説ブログの画像を使い回さない。VWork Blog 用に作ったもの
   // （exbridge_jp/scripts/make_vwork_blog_ogp.py）。
   ogImage: `${SITE}/images/vibeblog-ogp.png`,
+  // 右上は ai-agent-automation.html と同じ3つ（2026-10-10 ユーザー指示）
+  topLinks: `<a href="${SITE}/ai-it-komon.html?ref=vibeblog-nav">AI-IT顧問</a><a href="${SITE}/sales-partner.html?ref=vibeblog-nav">代理店募集</a><a href="${KURAGE}/vibe-prototype.html?ref=vibeblog-nav">バイブプロトタイプ</a>`,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-vibeblog">無料相談</a>　<a href="${BASE}/">記事一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-vibeblog">業務OSSカタログ</a>　<a href="${SITE}/ai-system/?ref=exbridge-vibeblog">AIでできること</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-vibeblog">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], og?: string) =>
