@@ -21,6 +21,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outDir = '/home/kojima/work/exbridge_jp/politech'
 const BASE = `${SITE}/politech`
 const KAPP = 'https://kappstore.exbridge.jp/app.php?id='
+// 計測の ref は #ref=… に置く（?ref= だと Google が ref ごとに別URLとして拾い、評価が割れた。2026-10-10）
 const REF = 'politech'
 
 type Kw = { slug: string; keyword: string; query: string; volume: number; competition: string; index: number | null; theme: string; theme_name: string; intent: string }
@@ -62,7 +63,7 @@ function trackersHtml(k: { keyword: string; theme: string; slug: string }): stri
   return `<section><div class="panel">
 <h2>この課題は国会でどう議論されたか（国会トラッカー）</h2>
 <p>国会会議録から、だれが質問し、政府が何と答えたかを日付つきで並べています。</p>
-<div class="cat-grid">${ts.map((t) => `<a class="cat-card" href="https://xb4g.com/giin/tracker/${attr(t.key)}?ref=politech-${attr(k.slug)}"><b>${h(t.name)}</b><span>${h(t.lead.slice(0, 60))}…</span></a>`).join('')}</div>
+<div class="cat-grid">${ts.map((t) => `<a class="cat-card" href="https://xb4g.com/giin/tracker/${attr(t.key)}#ref=politech-${attr(k.slug)}"><b>${h(t.name)}</b><span>${h(t.lead.slice(0, 60))}…</span></a>`).join('')}</div>
 </div></section>`
 }
 // テーマごとの「他所に無い数字」。scripts/build_politech_facts.py が各プロダクトの
@@ -74,35 +75,35 @@ const FACTS = JSON.parse(await fs.readFile(path.join(root, 'data', 'politech-fac
 
 type Tool = { name: string; what: string; demo?: string; buy?: string }
 const T = {
-  khazard: { name: 'Kurage 土砂災害ハザードマップ', what: '住所を入れると警戒区域か特別警戒区域かを判定', demo: `${KURAGE}/khazard.php/?ref=${REF}`, buy: `${KAPP}02b945f9c87c9d86&ref=${REF}` },
-  kflood: { name: 'Kurage 洪水・内水ハザードマップ', what: '住所を入れると洪水で何メートル・何日浸かる想定かと内水の浸水深が出る。マイ・タイムライン生成つき', demo: `${KURAGE}/kflood.php/?ref=${REF}`, buy: `${KAPP}41a09acc163dcb7d&ref=${REF}` },
-  ktsunami: { name: 'Kurage 津波浸水想定マップ', what: '住所を入れると津波の浸水深と海抜が出る', demo: `${KURAGE}/ktsunami.php/?ref=${REF}`, buy: `${KAPP}86b85a63bc426575&ref=${REF}` },
-  krefuge: { name: 'Kurage 避難所マップ', what: '災害種別で使える避難所まで徒歩何分か', demo: `${KURAGE}/krefuge.php/?ref=${REF}`, buy: `${KAPP}162f155897390072&ref=${REF}` },
-  kecnavi: { name: 'Kurage 通報先ナビ', what: '道路の穴・不法投棄・街路灯。住所で通報先の電話が出る', demo: `${KURAGE}/kecnavi.php/?ref=${REF}`, buy: `${KAPP}32502ed71cea6bcf&ref=${REF}` },
-  kfacilities: { name: 'Kurage 施設検索', what: '今日使える体育館を日付・時間帯・種目・区で横断検索', demo: `${KURAGE}/kfacilities.php/?ref=${REF}`, buy: `${KAPP}8e76e53cf264cc1c&ref=${REF}` },
-  kseido: { name: 'Kurage 制度ナビ', what: '困りごと→使える制度と区役所の課・電話・期限・必要書類・出典。相談記録つき', demo: `${KURAGE}/kseido.php/?ref=${REF}`, buy: `${KAPP}237974724fb41216&ref=${REF}` },
-  kouchou: { name: '広聴AI 完全ローカル導入キット', what: '住民・支援者の声をAIで「何が何件」の1枚に。意見が外に出ない', demo: `${KURAGE}/kouchou-demo/nagoya-machizukuri-sample/`, buy: `${KAPP}53493d74a09cfd8c&ref=${REF}` },
-  fixmystreet: { name: 'FixMyStreet 日本語導入キット', what: '困りごとの通報を受け、対応の進捗を公開する', demo: `${KURAGE}/chibarepo-daitai.php?ref=${REF}`, buy: `${KAPP}b34e36cfaad27a14&ref=${REF}` },
-  alaveteli: { name: 'Alaveteli 日本語導入キット', what: '情報公開請求の請求文と回答を公開する', demo: `${KURAGE}/johokokai-seikyu.php?ref=${REF}`, buy: `${KAPP}025aa9bee5dd411e&ref=${REF}` },
-  kshoken: { name: 'Kurage 商圏分析（選挙区分析）', what: '住所→徒歩・車N分圏の人口・年齢構成', demo: `${KURAGE}/kshoken.php/?ref=${REF}`, buy: `${KAPP}a5ac4b9f1fdb6d19&ref=${REF}` },
-  khojokin: { name: 'Kurage 補助金ナビ', what: '会社の条件を入れると、いま出せる補助金・助成金と補助率・上限・締切が出る（出典：Jグランツ）', demo: `${KURAGE}/khojokin.php/?ref=${REF}`, buy: `${KAPP}0ad3f1528024edcd&ref=${REF}` },
-  kriskarea: { name: 'Kurage 災害危険区域マップ', what: '住所を入れると建築基準法39条の災害危険区域か、根拠条例と基準の高さまで出る', demo: `${KURAGE}/kriskarea.php/?ref=${REF}`, buy: `${KAPP}23c57241bd8df841&ref=${REF}` },
-  kjishin: { name: 'Kurage 地震ハザードマップ', what: '地番で揺れやすさと液状化を判定（名古屋版）', demo: `${KURAGE}/kjishin.php/?ref=${REF}`, buy: `${KAPP}51649180bea0fd57&ref=${REF}` },
-  kbilling: { name: '請求書発行 kbilling／領収書 kinvoice', what: '会費の請求と消し込み、寄附やパーティー券の領収書', buy: `${KAPP}15abb025dc2ee4f6&ref=${REF}` },
+  khazard: { name: 'Kurage 土砂災害ハザードマップ', what: '住所を入れると警戒区域か特別警戒区域かを判定', demo: `${KURAGE}/khazard.php/#ref=${REF}`, buy: `${KAPP}02b945f9c87c9d86#ref=${REF}` },
+  kflood: { name: 'Kurage 洪水・内水ハザードマップ', what: '住所を入れると洪水で何メートル・何日浸かる想定かと内水の浸水深が出る。マイ・タイムライン生成つき', demo: `${KURAGE}/kflood.php/#ref=${REF}`, buy: `${KAPP}41a09acc163dcb7d#ref=${REF}` },
+  ktsunami: { name: 'Kurage 津波浸水想定マップ', what: '住所を入れると津波の浸水深と海抜が出る', demo: `${KURAGE}/ktsunami.php/#ref=${REF}`, buy: `${KAPP}86b85a63bc426575#ref=${REF}` },
+  krefuge: { name: 'Kurage 避難所マップ', what: '災害種別で使える避難所まで徒歩何分か', demo: `${KURAGE}/krefuge.php/#ref=${REF}`, buy: `${KAPP}162f155897390072#ref=${REF}` },
+  kecnavi: { name: 'Kurage 通報先ナビ', what: '道路の穴・不法投棄・街路灯。住所で通報先の電話が出る', demo: `${KURAGE}/kecnavi.php/#ref=${REF}`, buy: `${KAPP}32502ed71cea6bcf#ref=${REF}` },
+  kfacilities: { name: 'Kurage 施設検索', what: '今日使える体育館を日付・時間帯・種目・区で横断検索', demo: `${KURAGE}/kfacilities.php/#ref=${REF}`, buy: `${KAPP}8e76e53cf264cc1c#ref=${REF}` },
+  kseido: { name: 'Kurage 制度ナビ', what: '困りごと→使える制度と区役所の課・電話・期限・必要書類・出典。相談記録つき', demo: `${KURAGE}/kseido.php/#ref=${REF}`, buy: `${KAPP}237974724fb41216#ref=${REF}` },
+  kouchou: { name: '広聴AI 完全ローカル導入キット', what: '住民・支援者の声をAIで「何が何件」の1枚に。意見が外に出ない', demo: `${KURAGE}/kouchou-demo/nagoya-machizukuri-sample/`, buy: `${KAPP}53493d74a09cfd8c#ref=${REF}` },
+  fixmystreet: { name: 'FixMyStreet 日本語導入キット', what: '困りごとの通報を受け、対応の進捗を公開する', demo: `${KURAGE}/chibarepo-daitai.php#ref=${REF}`, buy: `${KAPP}b34e36cfaad27a14#ref=${REF}` },
+  alaveteli: { name: 'Alaveteli 日本語導入キット', what: '情報公開請求の請求文と回答を公開する', demo: `${KURAGE}/johokokai-seikyu.php#ref=${REF}`, buy: `${KAPP}025aa9bee5dd411e#ref=${REF}` },
+  kshoken: { name: 'Kurage 商圏分析（選挙区分析）', what: '住所→徒歩・車N分圏の人口・年齢構成', demo: `${KURAGE}/kshoken.php/#ref=${REF}`, buy: `${KAPP}a5ac4b9f1fdb6d19#ref=${REF}` },
+  khojokin: { name: 'Kurage 補助金ナビ', what: '会社の条件を入れると、いま出せる補助金・助成金と補助率・上限・締切が出る（出典：Jグランツ）', demo: `${KURAGE}/khojokin.php/#ref=${REF}`, buy: `${KAPP}0ad3f1528024edcd#ref=${REF}` },
+  kriskarea: { name: 'Kurage 災害危険区域マップ', what: '住所を入れると建築基準法39条の災害危険区域か、根拠条例と基準の高さまで出る', demo: `${KURAGE}/kriskarea.php/#ref=${REF}`, buy: `${KAPP}23c57241bd8df841#ref=${REF}` },
+  kjishin: { name: 'Kurage 地震ハザードマップ', what: '地番で揺れやすさと液状化を判定（名古屋版）', demo: `${KURAGE}/kjishin.php/#ref=${REF}`, buy: `${KAPP}51649180bea0fd57#ref=${REF}` },
+  kbilling: { name: '請求書発行 kbilling／領収書 kinvoice', what: '会費の請求と消し込み、寄附やパーティー券の領収書', buy: `${KAPP}15abb025dc2ee4f6#ref=${REF}` },
   // 2026-09-25 追加。/politech/ の流入が伸び（9月上旬2件/日→9/23に136件）、GSCでも
   // 保育園の空き状況・敬老パスが4〜8位で表示されているのに、載せている製品が
   // kseido/kfacilities/kouchou の3本しか無かった。住民の困りごとに直接当たるものを足す。
-  kgakudo: { name: 'Kurage 学童保育ナビ', what: '住所→その自治体の学童の待機児童数（こども家庭庁の全国調査）', demo: `${KURAGE}/kgakudo.php/?ref=${REF}`, buy: `${KAPP}f2853d368ddf8e57&ref=${REF}` },
-  khoudei: { name: 'Kurage 放課後等デイサービスナビ', what: '住所→近くの放課後等デイ・児童発達支援を定員つきで', demo: `${KURAGE}/khoudei.php/?ref=${REF}`, buy: `${KAPP}38ed38e789c77ec2&ref=${REF}` },
-  kkaigo: { name: 'Kurage 訪問介護・ケアマネナビ', what: '住所→近くの訪問介護・ケアマネ事業所。公表データから消えた事業所も追える', demo: `${KURAGE}/kkaigo.php/?ref=${REF}`, buy: `${KAPP}57aebd041b7bab37&ref=${REF}` },
-  khokan: { name: 'Kurage 訪問看護ナビ', what: '訪問看護ステーションを名前・住所から。24時間対応・精神科の届出の有無つき', demo: `${KURAGE}/khokan.php/?ref=${REF}`, buy: `${KAPP}2bdf59a8795a50e8&ref=${REF}` },
-  kghome: { name: 'Kurage 障害者グループホームナビ', what: '住所→近くのグループホームを運営法人つきで', demo: `${KURAGE}/kghome.php/?ref=${REF}`, buy: `${KAPP}bf709cfc7b0bf51a&ref=${REF}` },
-  kshuro: { name: 'Kurage 就労継続支援ナビ', what: '住所→近くの就労継続支援A型・B型事業所を定員つきで', demo: `${KURAGE}/kshuro.php/?ref=${REF}`, buy: `${KAPP}790cee5b922df2e4&ref=${REF}` },
-  kacnavi: { name: 'Kurage AfterCare Navi', what: '身内が亡くなったあとの手続き48件を故人の状況で絞る。期限は法令の条文で裏取り', demo: `${KURAGE}/kacnavi.php/?ref=${REF}`, buy: `${KAPP}60a6c07508d735ac&ref=${REF}` },
-  kminpaku: { name: 'Kurage 民泊できる場所チェック', what: '住所→用途地域と、その自治体の民泊の上乗せ条例の区域・期間を原文のまま', demo: `${KURAGE}/kminpaku.php/?ref=${REF}`, buy: `${KAPP}c36227d2b62b8517&ref=${REF}` },
-  kmorido: { name: 'Kurage 盛土規制区域マップ', what: '住所→宅地造成等工事規制区域・特定盛土等規制区域かを判定', demo: `${KURAGE}/kmorido.php/?ref=${REF}`, buy: `${KAPP}40efd031ba24c9d8&ref=${REF}` },
-  kshuisho: { name: 'Kurage 質問主意書アシスト', what: '衆参の質問主意書と政府答弁書を本文までことばで引く。「お答えすることは困難」を数える', demo: `${KURAGE}/kshuisho.php/?ref=${REF}`, buy: `${KAPP}9701841975d2ed6a&ref=${REF}` },
-  kchinjo: { name: 'Kurage 陳情ナビ', what: '陳情の出し方と、出した先・結果の記録（名古屋市版・制度ナビ同梱）', demo: `${KURAGE}/kchinjo.php/?ref=${REF}`, buy: `${KAPP}f09c91eaf0a60a2b&ref=${REF}` },
+  kgakudo: { name: 'Kurage 学童保育ナビ', what: '住所→その自治体の学童の待機児童数（こども家庭庁の全国調査）', demo: `${KURAGE}/kgakudo.php/#ref=${REF}`, buy: `${KAPP}f2853d368ddf8e57#ref=${REF}` },
+  khoudei: { name: 'Kurage 放課後等デイサービスナビ', what: '住所→近くの放課後等デイ・児童発達支援を定員つきで', demo: `${KURAGE}/khoudei.php/#ref=${REF}`, buy: `${KAPP}38ed38e789c77ec2#ref=${REF}` },
+  kkaigo: { name: 'Kurage 訪問介護・ケアマネナビ', what: '住所→近くの訪問介護・ケアマネ事業所。公表データから消えた事業所も追える', demo: `${KURAGE}/kkaigo.php/#ref=${REF}`, buy: `${KAPP}57aebd041b7bab37#ref=${REF}` },
+  khokan: { name: 'Kurage 訪問看護ナビ', what: '訪問看護ステーションを名前・住所から。24時間対応・精神科の届出の有無つき', demo: `${KURAGE}/khokan.php/#ref=${REF}`, buy: `${KAPP}2bdf59a8795a50e8#ref=${REF}` },
+  kghome: { name: 'Kurage 障害者グループホームナビ', what: '住所→近くのグループホームを運営法人つきで', demo: `${KURAGE}/kghome.php/#ref=${REF}`, buy: `${KAPP}bf709cfc7b0bf51a#ref=${REF}` },
+  kshuro: { name: 'Kurage 就労継続支援ナビ', what: '住所→近くの就労継続支援A型・B型事業所を定員つきで', demo: `${KURAGE}/kshuro.php/#ref=${REF}`, buy: `${KAPP}790cee5b922df2e4#ref=${REF}` },
+  kacnavi: { name: 'Kurage AfterCare Navi', what: '身内が亡くなったあとの手続き48件を故人の状況で絞る。期限は法令の条文で裏取り', demo: `${KURAGE}/kacnavi.php/#ref=${REF}`, buy: `${KAPP}60a6c07508d735ac#ref=${REF}` },
+  kminpaku: { name: 'Kurage 民泊できる場所チェック', what: '住所→用途地域と、その自治体の民泊の上乗せ条例の区域・期間を原文のまま', demo: `${KURAGE}/kminpaku.php/#ref=${REF}`, buy: `${KAPP}c36227d2b62b8517#ref=${REF}` },
+  kmorido: { name: 'Kurage 盛土規制区域マップ', what: '住所→宅地造成等工事規制区域・特定盛土等規制区域かを判定', demo: `${KURAGE}/kmorido.php/#ref=${REF}`, buy: `${KAPP}40efd031ba24c9d8#ref=${REF}` },
+  kshuisho: { name: 'Kurage 質問主意書アシスト', what: '衆参の質問主意書と政府答弁書を本文までことばで引く。「お答えすることは困難」を数える', demo: `${KURAGE}/kshuisho.php/#ref=${REF}`, buy: `${KAPP}9701841975d2ed6a#ref=${REF}` },
+  kchinjo: { name: 'Kurage 陳情ナビ', what: '陳情の出し方と、出した先・結果の記録（名古屋市版・制度ナビ同梱）', demo: `${KURAGE}/kchinjo.php/#ref=${REF}`, buy: `${KAPP}f09c91eaf0a60a2b#ref=${REF}` },
 } satisfies Record<string, Tool>
 
 // テーマごとに出す製品。**関連の薄いものを並べない。** 全部載せると、どれも読まれなくなる。
@@ -151,7 +152,7 @@ for (const k of kws) byTheme.set(k.theme, [...(byTheme.get(k.theme) || []), k])
 
 const shellFor = (theme: string) => (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, {
   refPrefix: 'exbridge-politech', base: BASE, ogImage: `${SITE}/images/ogp/politech-${theme}.png`, pvTags: THEME_PV[theme] || ['giin'],
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-politech-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">政治・政策キーワードから探す</a>　<a href="${SITE}/solution/seito.html">政党・政治団体のAI活用</a>　<a href="${SITE}/ai-it-komon.html">AI-IT顧問契約</a>　<a href="${KURAGE}/vibe-political-party.php">Kurage党</a>　<a href="https://kappstore.exbridge.jp/">Kurage App Store</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-politech-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html#ref=exbridge-politech-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">政治・政策キーワードから探す</a>　<a href="${SITE}/solution/seito.html">政党・政治団体のAI活用</a>　<a href="${SITE}/ai-it-komon.html">AI-IT顧問契約</a>　<a href="${KURAGE}/vibe-political-party.php">Kurage党</a>　<a href="https://kappstore.exbridge.jp/">Kurage App Store</a>　<a href="${SITE}/system-development-cost.html#ref=exbridge-politech-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 })
 
 const styles = `<style>
@@ -189,7 +190,7 @@ function factsHtml(theme: string, slug: string): string {
 <h2>この分野で当社が実際に数えたもの</h2>
 <p>公開データを取り込んで件数を数え、住所から引けるようにしたものです。数字は${h(FACTS.updated)}時点の収録件数で、出典はそれぞれの公開データです。</p>
 <table class="pt-facts"><thead><tr><th>対象</th><th>収録件数</th><th>範囲</th><th>使える道具</th></tr></thead><tbody>
-${f.rows.map((r) => `<tr><th>${h(r.label)}</th><td><b>${h(r.value)}</b></td><td>${h(r.scope)}<br><small>${h(r.note)}</small></td><td><a href="${attr(r.url)}?ref=${attr(REF)}-${attr(slug)}" target="_blank" rel="noopener">${h(r.name)}</a></td></tr>`).join('')}
+${f.rows.map((r) => `<tr><th>${h(r.label)}</th><td><b>${h(r.value)}</b></td><td>${h(r.scope)}<br><small>${h(r.note)}</small></td><td><a href="${attr(r.url)}#ref=${attr(REF)}-${attr(slug)}" target="_blank" rel="noopener">${h(r.name)}</a></td></tr>`).join('')}
 </tbody></table>
 </div></section>`
 }
@@ -212,7 +213,7 @@ function pageHtml(k: Kw): string {
 <h1>${h(c.h1)}</h1>
 <p class="lead">${h(c.lead)}</p>
 <span class="vol">「${h(k.keyword)}」の検索: 月におよそ${vol(k.volume)}回（Keyword Planner・2026年9月実測）</span>
-<p><a class="btn btn-main" href="${contact}">無料で相談する（Zoom可）</a> <a class="btn" href="${SITE}/solution/seito.html?ref=${REF}-${attr(k.slug)}">政党・政治団体のAI活用 →</a> <a class="btn" href="${KURAGE}/vibe-political-party.php?ref=${REF}-${attr(k.slug)}">Kurage党で実物を見る</a></p>
+<p><a class="btn btn-main" href="${contact}">無料で相談する（Zoom可）</a> <a class="btn" href="${SITE}/solution/seito.html#ref=${REF}-${attr(k.slug)}">政党・政治団体のAI活用 →</a> <a class="btn" href="${KURAGE}/vibe-political-party.php#ref=${REF}-${attr(k.slug)}">Kurage党で実物を見る</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">政治・政策キーワード</a> / <a href="${BASE}/#${attr(k.theme)}">${h(k.theme_name)}</a> / ${h(k.keyword)}</nav>
@@ -243,13 +244,13 @@ ${trackersHtml(k)}
 <h2>この課題で使える、事務所に置ける道具</h2>
 <p>名古屋市版のデモに無料で触れられます。実在の政党・議員事務所は「事務所の名前」でそのまま公開できます。当社は全政党・全会派・無所属に同じ条件で提供します。</p>
 <div class="pt-tools">${tools.map((t) => `<div class="pt-tool"><b>${h(t.name)}</b><p>${h(t.what)}</p>${t.demo ? `<a class="btn btn-main" href="${attr(t.demo)}" target="_blank" rel="noopener">触れる</a>` : ''}${t.buy ? `<a class="btn" href="${attr(t.buy)}" target="_blank" rel="noopener">オンプレミス版（Kurage App Store）</a>` : ''}</div>`).join('')}</div>
-<p class="note">${kappNote} <a href="https://kappstore.exbridge.jp/?ref=${REF}" target="_blank" rel="noopener">Kurage App Store</a></p>
+<p class="note">${kappNote} <a href="https://kappstore.exbridge.jp/#ref=${REF}" target="_blank" rel="noopener">Kurage App Store</a></p>
 </div></section>
 ${(k.theme === 'bousai' || k.theme === 'nagoya') ? `
 <section><div class="panel">
 <h2>名古屋市を区・河川から見る（いまの避難情報つき）</h2>
 <p>市の災害情報配信に出ている警戒レベルを河川別・区別に並べ、氾濫時の対象学区、区ごとの浸水のおそれ、避難先の探し方までつなげたページです。${k.slug === 'hazaado-mappu-nagoya' ? '「ハザードマップ 名古屋」で探している方は、まず区のページから自宅の学区と浸水のおそれを確かめ、住所を入れて何メートル・何日浸かる想定かを見てください。' : '住所を入れれば何メートル・何日浸かる想定かも分かります。'}</p>
-<div class="pt-rel">${[['名古屋市の一覧（区・河川・いまの発令）', 'nagoya/'], ['天白川の氾濫・避難情報', 'river/tempaku/'], ['矢田川の氾濫・避難情報', 'river/yada/'], ['新川の氾濫・避難情報', 'river/shinkawa/'], ['堀川・新堀川', 'river/horikawa/'], ['中川区', 'nagoya/nakagawa/'], ['港区', 'nagoya/minato/'], ['西区', 'nagoya/nishi/'], ['天白区', 'nagoya/tempaku/'], ['北区', 'nagoya/kita/']].map(([n, u]) => `<a href="${KURAGE}/kflood.php/${u}?ref=${REF}-${attr(k.slug)}" target="_blank" rel="noopener">${h(n)}</a>`).join('')}</div>
+<div class="pt-rel">${[['名古屋市の一覧（区・河川・いまの発令）', 'nagoya/'], ['天白川の氾濫・避難情報', 'river/tempaku/'], ['矢田川の氾濫・避難情報', 'river/yada/'], ['新川の氾濫・避難情報', 'river/shinkawa/'], ['堀川・新堀川', 'river/horikawa/'], ['中川区', 'nagoya/nakagawa/'], ['港区', 'nagoya/minato/'], ['西区', 'nagoya/nishi/'], ['天白区', 'nagoya/tempaku/'], ['北区', 'nagoya/kita/']].map(([n, u]) => `<a href="${KURAGE}/kflood.php/${u}#ref=${REF}-${attr(k.slug)}" target="_blank" rel="noopener">${h(n)}</a>`).join('')}</div>
 <p class="note">出典: 名古屋市 災害情報配信（警戒レベル・対象学区の事実のみ）、国土数値情報 洪水浸水想定区域 第4.0版、名古屋市 内水氾濫ハザードマップ（CC BY 4.0）。</p>
 </div></section>
 ` : ''}
@@ -258,16 +259,16 @@ ${(k.theme === 'bousai' || k.theme === 'nagoya') ? `
 <div class="pt-kp">
 <div>
 <p>当社は架空政党「Kurage党」を実験場として、住民サービスを「公約ではなく動くページ」で先に公開しています。上の道具はその住民サービス部で稼働中のものです。党員（技術担当）の BittensorMan（当社代表・小嶋篤）が開発しています。Kurage党は実在のいかなる政党・団体とも関係ありません。</p>
-<p><a class="btn btn-main" href="${KURAGE}/vibe-political-party.php?ref=${REF}-${attr(k.slug)}">Kurage党 党本部サイト →</a> <a class="btn" href="${KURAGE}/?ref=${REF}-${attr(k.slug)}#party">党員 BittensorMan →</a> <a class="btn" href="${SITE}/solution/seito.html?ref=${REF}-${attr(k.slug)}">政党・政治団体のAI活用（一覧）→</a></p>
+<p><a class="btn btn-main" href="${KURAGE}/vibe-political-party.php#ref=${REF}-${attr(k.slug)}">Kurage党 党本部サイト →</a> <a class="btn" href="${KURAGE}/#party&ref=${REF}-${attr(k.slug)}">党員 BittensorMan →</a> <a class="btn" href="${SITE}/solution/seito.html#ref=${REF}-${attr(k.slug)}">政党・政治団体のAI活用（一覧）→</a></p>
 </div>
-<a href="${KURAGE}/vibe-political-party.php?ref=${REF}-${attr(k.slug)}"><img src="${KURAGE}/images/ogp-kurage-party-v2.png" alt="Kurage党（架空政党）の党本部サイト" width="1200" height="630" loading="lazy"></a>
+<a href="${KURAGE}/vibe-political-party.php#ref=${REF}-${attr(k.slug)}"><img src="${KURAGE}/images/ogp-kurage-party-v2.png" alt="Kurage党（架空政党）の党本部サイト" width="1200" height="630" loading="lazy"></a>
 </div>
 </div></section>
 
 <div class="pt-cta">
 <h2>AI-IT顧問契約は、政党・政治団体にも提供します</h2>
 <p><strong>月15時間・税別150,000円（名古屋市内限定・月次契約）。</strong>相談の入口づくり、住民サービスの公開、意見集約、会計や領収書の自動化を、時間の中で一つずつ動かします。キャンペーン期間中は Kurage App Store の商品代金が無料です。名古屋市外の団体は、オンプレミスの商品と導入キットを全国でお使いいただけます。</p>
-<a class="btn btn-main" href="${SITE}/ai-it-komon.html?ref=${REF}-${attr(k.slug)}">AI-IT顧問契約の詳細 →</a>
+<a class="btn btn-main" href="${SITE}/ai-it-komon.html#ref=${REF}-${attr(k.slug)}">AI-IT顧問契約の詳細 →</a>
 <a class="btn" href="${contact}">初回相談（無料）</a>
 </div>
 
@@ -296,7 +297,7 @@ function indexHtml(): string {
 <p class="kicker">政治・政策キーワード｜${kws.length}語</p>
 <h1>住民が検索している言葉に、<br>政党・議員事務所が「動くページ」で答える。</h1>
 <p class="lead">防災・子育て・不登校・福祉・給付金・選挙・地域。Google 広告のキーワードプランナーで月間検索数を実測した${kws.length}の言葉ごとに、住民が知りたいことと、事務所ができること、事務所のサーバーに置いて内製化できる道具をまとめています。</p>
-<p><a class="btn btn-main" href="${SITE}/solution/seito.html?ref=${REF}-index">政党・政治団体のAI活用 →</a> <a class="btn" href="${SITE}/ai-it-komon.html?ref=${REF}-index">AI-IT顧問契約</a> <a class="btn" href="${KURAGE}/vibe-political-party.php?ref=${REF}-index">Kurage党</a></p>
+<p><a class="btn btn-main" href="${SITE}/solution/seito.html#ref=${REF}-index">政党・政治団体のAI活用 →</a> <a class="btn" href="${SITE}/ai-it-komon.html#ref=${REF}-index">AI-IT顧問契約</a> <a class="btn" href="${KURAGE}/vibe-political-party.php#ref=${REF}-index">Kurage党</a></p>
 </div></section>
 <main class="wrap pt-index">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / 政治・政策キーワード</nav>

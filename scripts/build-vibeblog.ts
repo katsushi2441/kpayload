@@ -49,6 +49,29 @@ const BASE = `${SITE}/vibeblog`
 const VWORK = '/home/kojima/work/vwork'
 const GHP = 'https://katsushi2441.github.io/vwork'
 
+
+// 自社ページへのリンクの計測 ref を #ref=… に置き換える（2026-10-10）。?ref= だと Google が ref ごとに別のURLとして拾い、
+// canonical があっても ref 付きのURLが検索結果に出て、評価が割れた。simpletrack は location.href ごと記録するので数えられる。
+// chat.php だけはサーバー側で ?ref= を読むので替えない。
+const OWN = /^https:\/\/(exbridge\.jp|kurage\.exbridge\.jp|kappstore\.exbridge\.jp|xb4g\.com|proto\.exbridge\.jp)\//
+function hashRef(html: string): string {
+  return html.replace(/href="([^"]+)"/g, (m, u: string) => {
+    if (!OWN.test(u) || u.includes('/chat.php')) return m
+    const mm = u.match(/^([^#]*?)([?&])ref=([^&#]*)(.*)$/)
+    if (!mm) return m
+    let [, base, sep, ref, rest] = mm
+    // 残りのクエリ（&a=b）をつなぎ直す
+    let q = ''
+    let frag = ''
+    const hi = rest.indexOf('#')
+    // 目印（#form など）付きは、目印へ飛ぶ処理を入れてある xb4g だけ #目印&ref= にし、ほかは ?ref= のまま残す
+    if (hi >= 0) { if (!u.startsWith('https://xb4g.com/')) return m; frag = rest.slice(hi + 1); rest = rest.slice(0, hi) }
+    q = rest.startsWith('&') ? (sep === '?' ? '?' + rest.slice(1) : rest) : rest
+    const b = base + q
+    return `href="${b}#${frag ? frag + '&' : ''}ref=${ref}"`
+  })
+}
+
 const SHELL = {
   refPrefix: 'exbridge-vibeblog',
   base: BASE,
@@ -532,7 +555,7 @@ ${ctaBlock}
 await fs.rm(distRoot, { recursive: true, force: true })
 await fs.mkdir(distRoot, { recursive: true })
 for (let i = 0; i < posts.length; i++) {
-  await fs.writeFile(path.join(distRoot, `${posts[i].slug}.html`), postHtml(posts[i], i), 'utf8')
+  await fs.writeFile(path.join(distRoot, `${posts[i].slug}.html`), hashRef(postHtml(posts[i], i)), 'utf8')
 }
 // 本文の画像（vwork/blog/assets/）を /vibeblog/assets/ に写す。
 // これが無くて、画像入りの記事は /vibeblog/ で画像が全部404だった（2026-09-28 に発見。9/09・7/31 の記事も）。
@@ -548,7 +571,7 @@ for (let i = 0; i < posts.length; i++) {
   }
   console.log(`本文の画像: ${want.size}枚を assets/ へ`)
 }
-await fs.writeFile(path.join(distRoot, 'index.html'), indexHtml(), 'utf8')
+await fs.writeFile(path.join(distRoot, 'index.html'), hashRef(indexHtml()), 'utf8')
 
 /** AI OSS技術解説の一覧（/vibeblog/oss.html）。VWork Blog の一覧と混ぜない */
 function ossIndexHtml(): string {
@@ -588,7 +611,7 @@ ${ctaBlock}
 </main>`
   return shell(fitLength(32, title, 'AI OSS技術解説'), desc, url, body + styles(), ld)
 }
-if (ossPosts.length) await fs.writeFile(path.join(distRoot, 'oss.html'), ossIndexHtml(), 'utf8')
+if (ossPosts.length) await fs.writeFile(path.join(distRoot, 'oss.html'), hashRef(ossIndexHtml()), 'utf8')
 
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
