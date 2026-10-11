@@ -50,7 +50,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   whisper: { id: 'cd1eda3248c87920', label: 'Whisperで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
   'whisper-cpp': { id: 'cd1eda3248c87920', label: 'whisper.cppで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
   // 全文検索×AIチャット（Namazu実績→Fessでも同構成）。出口はオンプレミスのチャットボット
-  namazu: { id: '224e141f77bd07a8', label: 'Namazu検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/blog/2026-09-04-namazu-ai-chat-knowledge.html' },
+  namazu: { id: '224e141f77bd07a8', label: 'Namazu検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-namazu-ai-chat-knowledge.html' },
   fess: { id: '224e141f77bd07a8', label: 'Fess検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-fess-fulltext-search-ai-chat.html' },
   postgis: { id: 'a5ac4b9f1fdb6d19', label: 'PostGISで作った商圏分析システム(オンプレミス)を見る', product: true },
   kshoken: { id: 'a5ac4b9f1fdb6d19', label: '設置手順つきのオンプレミス版を見る', product: true },
