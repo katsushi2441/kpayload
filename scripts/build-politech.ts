@@ -301,6 +301,7 @@ function indexHtml(): string {
 </div></section>
 <main class="wrap pt-index">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / 政治・政策キーワード</nav>
+<section><div class="panel"><h2>国会トラッカー一覧</h2><p>テーマごとに、国会でだれが質問し、政府が何と答えてきたかを会議録から並べています（${TRK.length}テーマ）。</p><p><a class="btn btn-main" href="${BASE}/${TRK_PAGE}.html">国会トラッカー一覧を見る →</a></p></div></section>
 ${themeOrder.filter((t) => byTheme.has(t)).map((t) => `<section id="${attr(t)}"><div class="panel"><h2>${h(themeName[t])} <span class="note">${byTheme.get(t)!.length}語</span></h2><div class="cat-grid">${byTheme.get(t)!.map((k) => `<a class="cat-card" href="${BASE}/${attr(k.slug)}.html"><b>${h(k.keyword)}</b><span>月間およそ${vol(k.volume)}回・${h(INTENT_JA[k.intent] || '')}</span></a>`).join('')}</div></div></section>`).join('\n')}
 <section><div class="panel"><p class="note">検索数は Google 広告のキーワードプランナーによる当社の実測（2026年9月）。特定の政党・候補者を支持・批判するものではありません。Kurage党は架空の政治団体です。</p></div></section>
 </main>`
@@ -312,7 +313,40 @@ ${themeOrder.filter((t) => byTheme.has(t)).map((t) => `<section id="${attr(t)}">
   return shellFor('senkyo')(title, desc, url, body + styles, ld)
 }
 
+/* 国会トラッカー一覧（2026-10-16）。トラッカー114本のうち、vibeblog と /politech/ からリンクがあるのは半分以下で、
+ * 索引に入っていないトラッカーが多かった（Google が「見つけたが索引に入れていない」「知らない」）。
+ * 評価のある exbridge.jp から全トラッカーへ1本ずつリンクを張る受け皿。トラッカーを足せばビルドのたびに載る */
+const _th = JSON.parse(await fs.readFile('/home/kojima/work/xb4g/giin/data/themes.json', 'utf8'))
+const TH_NAME: Record<string, string> = Object.fromEntries((Array.isArray(_th) ? _th : _th.themes).map((t: { slug: string; name: string }) => [t.slug, t.name]))
+const TRK_PAGE = 'kokkai-tracker'
+function trackerIchiranHtml(): string {
+  const url = `${BASE}/${TRK_PAGE}.html`
+  const title = `国会トラッカー一覧｜${TRK.length}のテーマで国会の質疑と政府の答弁を追う | 株式会社エクスブリッジ`
+  const desc = `薬価・防災庁・灯油代・旧統一教会・給付付き税額控除など${TRK.length}のテーマごとに、国会でだれが質問し、政府が何と答えてきたかを、国会会議録から日付つきで並べた国会トラッカーの一覧です。`
+  const groups = new Map<string, Trk[]>()
+  for (const t of TRK) { const k = (t as unknown as { theme?: string }).theme || 'other'; if (!groups.has(k)) groups.set(k, []); groups.get(k)!.push(t) }
+  const order = [...groups.keys()].sort((a, b) => groups.get(b)!.length - groups.get(a)!.length)
+  const body = `
+<section class="pt-hero"><div class="wrap">
+<p class="kicker">国会トラッカー｜${TRK.length}のテーマ</p>
+<h1>そのテーマは、国会でどこまで来たか。</h1>
+<p class="lead">テーマごとに、国会でだれが質問し、政府が何と答えてきたかを、国会会議録から日付つきで並べています。要約や論評はせず、会議録の言葉をそのまま抜き出しています。</p>
+</div></section>
+<main class="wrap pt-index">
+<nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">政治・政策キーワード</a> / 国会トラッカー一覧</nav>
+${order.map((g) => `<section id="${attr(g)}"><div class="panel"><h2>${h(TH_NAME[g] || 'そのほか')} <span class="note">${groups.get(g)!.length}テーマ</span></h2><div class="cat-grid">${groups.get(g)!.map((t) => `<a class="cat-card" href="https://xb4g.com/giin/tracker/${attr(t.key)}#ref=${REF}-tracker-ichiran"><b>${h(t.name)}</b><span>${h((t.lead || '').slice(0, 70))}…</span></a>`).join('')}</div></div></section>`).join('\n')}
+<section><div class="panel"><p class="note">出典は国立国会図書館の国会会議録検索システム。特定の政党・候補者を支持・批判するものではありません。</p></div></section>
+</main>`
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url, description: desc, inLanguage: 'ja', dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` } },
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: '国会トラッカー', numberOfItems: TRK.length, itemListElement: TRK.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: `https://xb4g.com/giin/tracker/${t.key}`, name: t.name })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: '政治・政策キーワード', item: `${BASE}/` }, { '@type': 'ListItem', position: 3, name: '国会トラッカー一覧', item: url }] },
+  ]
+  return shellFor('senkyo')(title, desc, url, body + styles, ld)
+}
+
 await fs.mkdir(outDir, { recursive: true })
+await fs.writeFile(path.join(outDir, `${TRK_PAGE}.html`), trackerIchiranHtml(), 'utf8')
 let n = 0
 const missing: string[] = []
 for (const k of kws) {
@@ -322,7 +356,7 @@ for (const k of kws) {
 }
 const built = kws.filter((k) => copy[k.slug] || content[k.slug])   // 2026-10-09 から本文（content）だけのキーワードもある
 await fs.writeFile(path.join(outDir, 'index.html'), indexHtml(), 'utf8')
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod></url>\n${built.map((k) => `<url><loc>${BASE}/${k.slug}.html</loc><lastmod>${content[k.slug]?._generated || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod></url>\n<url><loc>${BASE}/${TRK_PAGE}.html</loc><lastmod>${TODAY}</lastmod></url>\n${built.map((k) => `<url><loc>${BASE}/${k.slug}.html</loc><lastmod>${content[k.slug]?._generated || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`
 await fs.writeFile(path.join(outDir, 'sitemap.xml'), sitemap, 'utf8')
-await fs.writeFile(path.join(root, 'outputs', 'indexnow_exbridge_politech.txt'), [`${BASE}/`, ...built.map((k) => `${BASE}/${k.slug}.html`)].join('\n') + '\n', 'utf8')
+await fs.writeFile(path.join(root, 'outputs', 'indexnow_exbridge_politech.txt'), [`${BASE}/`, `${BASE}/${TRK_PAGE}.html`, ...built.map((k) => `${BASE}/${k.slug}.html`)].join('\n') + '\n', 'utf8')
 console.log(`politech: ${n}ページ + index/sitemap（本文未生成 ${missing.length}: ${missing.slice(0, 5).join(', ')}）`)
