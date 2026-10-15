@@ -6586,5 +6586,215 @@
     "answer": "なりません。厚生労働省の標準仕様と認証制度が対象にしているのはクラウド型の製品で、2027年4月から認証を受けた製品の提供を目指しています。国の補助や電子カルテ情報共有サービスへの対応を重視するなら、認証製品か標準型電子カルテを待つほうが確実です。"
    }
   ]
+ },
+ {
+  "name": "VoiceStudio",
+  "slug": "voicestudio",
+  "category": "media",
+  "featured": false,
+  "funnel": "oss",
+  "kind": "business-app",
+  "summary": "パソコンの中だけで動く、ElevenLabs の代わりになる音声のオープンソース（AGPL-3.0）。声のクローン・声のデザイン・動画の吹き替え・文字起こし・オーディオブック作りを、外部に音声を送らずに行えます。",
+  "description": "VoiceStudio は、クラウドの音声サービス（ElevenLabs など）でやっていることを、手元のパソコンだけで行うためのオープンソースです。声のクローン、声のデザイン、動画の吹き替え、口述の文字起こし、オーディオブック作りまでを1つのアプリにまとめていて、README では646言語に対応するとしています。NVIDIA の GPU（Windows・Linux）や Apple Silicon で速く動き、専用の GPU が無いパソコンでも遅いながら動くとされています。2026年10月に GitHub のトレンドで急に伸びました（1日で約3,500スター）。ライセンスは AGPL-3.0 なので、組み込んで配る製品にするより、社内で使う・導入を手伝う形が向いています。当社はまだ日本語の読み上げの質を確かめていません。",
+  "license": "AGPL-3.0",
+  "licenseTier": "osi-network-copyleft",
+  "japaneseStatus": "README は英語。646言語に対応とあるが、日本語の読み上げの質は当社では未確認です。",
+  "officialUrl": "https://voicestudio.sh/",
+  "githubUrl": "https://github.com/debpalash/VoiceStudio",
+  "stars": 67556,
+  "language": "Python",
+  "githubCreatedAt": "2026-04-09T00:00:00Z",
+  "githubPushedAt": "2026-10-15T00:00:00Z",
+  "useCases": [
+   {
+    "text": "社内の動画のナレーション・吹き替えを外部に出さずに作る"
+   },
+   {
+    "text": "話し手の声のクローンとオーディオブック作り"
+   },
+   {
+    "text": "会議や口述の文字起こし"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "VoiceStudio"
+   },
+   {
+    "text": "ElevenLabs 代替 オープンソース"
+   },
+   {
+    "text": "音声クローン ローカル"
+   },
+   {
+    "text": "動画 吹き替え AI ローカル"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "VoiceStudio は何ができますか？",
+    "answer": "声のクローン、声のデザイン、動画の吹き替え、口述の文字起こし、オーディオブック作りを、外部のサービスに音声を送らずに手元のパソコンで行えます。"
+   },
+   {
+    "question": "会社の製品に組み込んで売れますか？",
+    "answer": "ライセンスが AGPL-3.0 なので、組み込んで配ったりネット越しに提供したりする場合は、ソースコードの公開などの条件がかかります。社内で使う形や、導入の手伝いとして使う形が向いています。"
+   }
+  ]
+ },
+ {
+  "name": "text-to-cad",
+  "slug": "text-to-cad",
+  "category": "aidev",
+  "featured": false,
+  "funnel": "oss",
+  "kind": "dev-tool",
+  "summary": "AIエージェントにCADの操作をさせるためのオープンソース（MIT）。言葉で書いた部品や形から、CADのデータを作る流れを試せます。",
+  "description": "text-to-cad は、Claude Code などのAIエージェントに「CADの力」を持たせるためのオープンソースです。言葉で書いた部品の形や寸法から、エージェントがCADのデータを組み立てる流れを試せます。2026年4月に公開され、10月に GitHub のトレンドに入りました。ライセンスは MIT です。当社は、愛知の製造業向けに「言葉で書いた部品をCADのデータにする」デモの題材として見ていますが、まだ実際の図面で試してはいません。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "README は英語。",
+  "officialUrl": "https://github.com/earthtojake/text-to-cad",
+  "githubUrl": "https://github.com/earthtojake/text-to-cad",
+  "stars": 20527,
+  "language": "Python",
+  "githubCreatedAt": "2026-04-22T00:00:00Z",
+  "githubPushedAt": "2026-10-15T00:00:00Z",
+  "useCases": [
+   {
+    "text": "言葉で書いた部品からCADのデータを作る試作"
+   },
+   {
+    "text": "AIエージェントに設計の下書きをさせる"
+   },
+   {
+    "text": "製造業の設計業務のAI化の検証"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "text-to-cad"
+   },
+   {
+    "text": "CAD AI 自動生成"
+   },
+   {
+    "text": "AIエージェント CAD"
+   },
+   {
+    "text": "製造業 AI 設計"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "text-to-cad は何をするものですか？",
+    "answer": "AIエージェントがCADを操作できるようにして、言葉で書いた部品の形や寸法からCADのデータを組み立てる流れを試すためのものです。"
+   },
+   {
+    "question": "商用で使えますか？",
+    "answer": "ライセンスは MIT なので、商用でも使えます。著作権表示とライセンス文を残す必要があります。"
+   }
+  ]
+ },
+ {
+  "name": "diagram-design",
+  "slug": "diagram-design",
+  "category": "aidev",
+  "featured": false,
+  "funnel": "oss",
+  "kind": "dev-tool",
+  "summary": "Claude Code などのAIエージェントに、説明用の図をきれいに描かせるスキル（MIT）。45種類の図を、1つのHTML（中にSVG）として描きます。当社でブロードリスニングの見取り図を描き直しました。",
+  "description": "diagram-design は、AIエージェントが説明用の図（構成図・工程図・データの流れ・時系列など45種類）を、外部に頼らず単体で開けるHTML（中にSVG）として描くためのスキルです。1つの図の要素は9個まで、強調色は2か所まで、線は直角に曲げる、影は付けない、といった細かな決まりと、図の決まりや線とラベルの重なりを確かめる検査スクリプトが付いています。初めて使うときは、配色とフォントを自社のものに合わせる手順があり、初期の配色のまま出さないようになっています。当社では2026年10月、ブロードリスニングから合意形成までの見取り図を描き直しました。日本語は、英字のフォントのあとに Noto Sans JP（見出しは Noto Serif JP）を続け、全角1文字を1文字分の幅として箱の大きさを計算すると、決まりどおりに描けました。隣り合う箱の間は狭いので、矢印のラベルは間が空いているところだけに置く必要がありました。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "japaneseStatus": "README とスキルの説明は英語。日本語の図は、フォントに Noto Sans JP を足せば描けます（当社で確認）。",
+  "officialUrl": "https://diagramdesign.dev/",
+  "githubUrl": "https://github.com/cathrynlavery/diagram-design",
+  "stars": 55587,
+  "language": "HTML",
+  "githubCreatedAt": "2026-04-16T00:00:00Z",
+  "githubPushedAt": "2026-10-14T00:00:00Z",
+  "useCases": [
+   {
+    "text": "ブログや提案資料の説明図を、決まった見た目でそろえる"
+   },
+   {
+    "text": "工程図・構成図・データの流れの図をAIエージェントに描かせる"
+   },
+   {
+    "text": "Mermaid や draw.io の図を描き直す"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "diagram-design"
+   },
+   {
+    "text": "Claude Code 図解"
+   },
+   {
+    "text": "AI 図 作成 SVG"
+   },
+   {
+    "text": "構成図 自動作成"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "日本語の図も描けますか？",
+    "answer": "描けます。フォントの指定で英字のフォントのあとに Noto Sans JP を続け、全角1文字を1文字分の幅として箱の大きさを計算すれば、決まりどおりに描けます。当社でブロードリスニングの見取り図を描き直して確かめました。"
+   },
+   {
+    "question": "どんな決まりがありますか？",
+    "answer": "1つの図の要素は9個まで、強調色は2か所まで、線は直角に曲げる、影は付けない、矢印のラベルは線から6〜10px離す、凡例は図の下に横一列、などです。検査スクリプトで確かめられます。"
+   }
+  ]
+ },
+ {
+  "name": "CLI-Anything",
+  "slug": "cli-anything",
+  "category": "aidev",
+  "featured": false,
+  "funnel": "oss",
+  "kind": "dev-tool",
+  "summary": "どんなソフトも、AIエージェントからコマンドで操作できる形にするための仕組み（Apache-2.0）。香港大学のHKUDSが公開しています。",
+  "description": "CLI-Anything は、既存のソフトウェアをAIエージェントが扱えるよう、コマンド（CLI）で操作できる形にするためのオープンソースです。香港大学のデータ知能研究室（HKUDS）が2026年3月に公開し、作ったコマンドを集める CLI-Hub も用意されています。ライセンスは Apache-2.0 です。当社が進めている、製品にAIエージェント向けの窓口（MCP）を付ける取り組みの参考として見ています。",
+  "license": "Apache-2.0",
+  "licenseTier": "osi",
+  "japaneseStatus": "README は英語。",
+  "officialUrl": "https://clianything.cc/",
+  "githubUrl": "https://github.com/HKUDS/CLI-Anything",
+  "stars": 52844,
+  "language": "Python",
+  "githubCreatedAt": "2026-03-08T00:00:00Z",
+  "githubPushedAt": "2026-09-22T00:00:00Z",
+  "useCases": [
+   {
+    "text": "既存の業務ソフトをAIエージェントから操作できるようにする"
+   },
+   {
+    "text": "社内ツールにエージェント向けのコマンドを用意する"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "CLI-Anything"
+   },
+   {
+    "text": "AIエージェント CLI"
+   },
+   {
+    "text": "エージェント 業務ソフト 連携"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "CLI-Anything は何をするものですか？",
+    "answer": "既存のソフトウェアを、AIエージェントがコマンドで操作できる形にするための仕組みです。作ったコマンドは CLI-Hub で共有されています。"
+   },
+   {
+    "question": "商用で使えますか？",
+    "answer": "ライセンスは Apache-2.0 なので、商用でも使えます。ライセンス文と著作権表示を残す必要があります。"
+   }
+  ]
  }
 ]
