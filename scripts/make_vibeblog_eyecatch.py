@@ -14,6 +14,8 @@
     任意で og_stat_note（出典など）を書くと、数字が主役の構図「stat」で作る。Xの返信1本あたりの人数が、
     題名だけの画像（vibeblog・中央値1人）より、数字や名前が大きく出るカード（議員カード・中央値6人）でずっと多かったため。
     数字は記事の本文にあるものだけを書く（画像のために作らない）。題名は下の段に省略せず入れる。
+  - **図の画像（2026-10-16〜）**：og_figure に記事の図（例 assets/ak-stages.png。vwork/blog からの相対）を書くと、
+    図を大きく入れた構図「fig」で作る（og_stat より優先）。図の縦横比は変えない（contain）。題名は下の段に省略せず入れる。
 
 使い方:
   python3 scripts/make_vibeblog_eyecatch.py            # 無いものだけ作る
@@ -67,6 +69,14 @@ body{background:%(bg)s;color:%(ink)s;font-family:"Noto Sans CJK JP","Noto Sans J
 .title{font-weight:900;line-height:1.32;letter-spacing:.01em;word-break:auto-phrase;line-break:strict}
 .mascot{position:absolute;object-fit:contain;height:auto}
 """
+
+# E: 図が主役。上に小さく媒体名、真ん中に図、下の段に題名（省略しない）
+FIG = """<div class="brand" style="left:40px;top:22px;font-size:18px"><img src="%(logo)s" style="width:26px;height:26px">バイブコーディング的仕事ブログ</div>
+<div style="position:absolute;right:40px;top:18px"><span class="label" style="font-size:17px;padding:4px 12px">%(label)s</span></div>
+<div style="position:absolute;left:24px;right:24px;top:62px;height:418px;background:#fff;border-radius:12px;border:2px solid %(soft)s;display:flex;align-items:center;justify-content:center;overflow:hidden">
+  <img src="%(fig)s" style="max-width:100%%;max-height:100%%;width:auto;height:auto;object-fit:contain"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:136px;background:%(soft)s"></div>
+<div id="box" style="position:absolute;left:40px;right:40px;bottom:16px;height:104px;display:flex;align-items:center"><div id="t" class="title" style="font-weight:800">%(title)s</div></div>"""
 
 # D: 数字が主役。数字を大きく、その意味を一言、題名は下の段に小さく（省略しない）
 STAT = """<div style="position:absolute;left:0;top:0;bottom:0;width:22px;background:%(accent)s"></div>
@@ -134,7 +144,7 @@ def load_posts():
             continue
         slug = name[:-3]
         posts.append(dict(slug=slug, title=title, kw=g("head_keyword"),
-                          stat=g("og_stat"), stat_label=g("og_stat_label"), stat_note=g("og_stat_note"),
+                          stat=g("og_stat"), stat_label=g("og_stat_label"), stat_note=g("og_stat_note"), fig=g("og_figure"),
                           tags=g("tags") or g("topics"), date=(re.match(r"(\d{4})-(\d{2})-(\d{2})", slug) or [None]*4)))
     return posts
 
@@ -180,8 +190,26 @@ def render_stat(page, p, path, pal, date):
     return f"{fs[0]}/{fl[0]}/{ft[0]}px"
 
 
+def render_fig(page, p, path, pal):
+    f = os.path.join(VWORK_BLOG, p["fig"])
+    if not os.path.isfile(f):
+        raise SystemExit(f"og_figure の図が無い: {p['slug']} {f}")
+    fig = "data:image/png;base64," + base64.b64encode(open(f, "rb").read()).decode()
+    vals = dict(pal, logo=LOGO, fig=fig, title=nobreak(p["title"]))
+    page.set_content(f"<html lang='ja'><head><meta charset='utf-8'><style>{CSS % pal}</style></head>"
+                     f"<body>{FIG % vals}</body></html>")
+    page.wait_for_timeout(200)
+    ft = fit_text(page, "t", "box", (40, 36, 33, 30, 28, 26, 24, 22))
+    if not ft:
+        raise SystemExit(f"図の画像に題名が入りきらない: {p['slug']}")
+    page.screenshot(path=path, clip=dict(x=0, y=0, width=1200, height=630))
+    return f"title {ft[0]}px"
+
+
 def render(page, p, path):
     key, pal = theme_of(p)
+    if p.get("fig"):
+        return key, "fig", render_fig(page, p, path, pal)
     if p.get("stat") and p.get("stat_label"):
         d = p["date"]
         date = f"{d[1]}.{d[2]}.{d[3]}" if d and d[0] else ""
