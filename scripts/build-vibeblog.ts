@@ -33,7 +33,8 @@
  *   - 画像は GitHub Pages に置いたままなので、相対パスを絶対URLに直す。
  */
 import fs from 'node:fs/promises'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { spawnSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -395,8 +396,14 @@ const EYECATCH_DIR = '/home/kojima/work/exbridge_jp/images/vibeblog'
   const last = (r.stdout || '').trim().split('\n').pop()
   console.log(r.status === 0 ? `  ${last}` : `  ！トップ画像の生成に失敗: ${(r.stderr || '').slice(-300)}`)
 }
-const eyecatch = (slug: string): string | null =>
-  existsSync(path.join(EYECATCH_DIR, `${slug}.png`)) ? `${SITE}/images/vibeblog/${slug}.png` : null
+// 画像の中身が変わったら URL も変わるよう、末尾に版（中身のハッシュ8桁）を付ける。
+// 同じ URL のままだと、X などは前に取った画像（題名だけの絵）を出し続ける（2026-10-16 数字の画像に替えたとき）
+const eyecatch = (slug: string): string | null => {
+  const f = path.join(EYECATCH_DIR, `${slug}.png`)
+  if (!existsSync(f)) return null
+  const v = createHash('md5').update(readFileSync(f)).digest('hex').slice(0, 8)
+  return `${SITE}/images/vibeblog/${slug}.png?v=${v}`
+}
 
 function postHtml(p: Post, idx: number): string {
   // <title> は全角32で切れる。seo_title がそれを超えていたら記事の題より短いほうを採る

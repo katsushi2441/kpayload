@@ -10,6 +10,10 @@
   - 構図と配色は記事の中身（題・タグ・head_keyword）で変える。同じテンプレを並べない
   - 新マスコット（kurage-mascot-cutout.png）を入れる。縦横比は変えない（contain）
   - ライトテーマ
+  - **数字の画像（2026-10-16〜）**：記事の冒頭に og_stat（大きく出す数字）と og_stat_label（その数字が何かの一言）、
+    任意で og_stat_note（出典など）を書くと、数字が主役の構図「stat」で作る。Xの返信1本あたりの人数が、
+    題名だけの画像（vibeblog・中央値1人）より、数字や名前が大きく出るカード（議員カード・中央値6人）でずっと多かったため。
+    数字は記事の本文にあるものだけを書く（画像のために作らない）。題名は下の段に省略せず入れる。
 
 使い方:
   python3 scripts/make_vibeblog_eyecatch.py            # 無いものだけ作る
@@ -64,6 +68,20 @@ body{background:%(bg)s;color:%(ink)s;font-family:"Noto Sans CJK JP","Noto Sans J
 .mascot{position:absolute;object-fit:contain;height:auto}
 """
 
+# D: 数字が主役。数字を大きく、その意味を一言、題名は下の段に小さく（省略しない）
+STAT = """<div style="position:absolute;left:0;top:0;bottom:0;width:22px;background:%(accent)s"></div>
+<div class="brand" style="left:64px;top:40px"><img src="%(logo)s">バイブコーディング的仕事ブログ</div>
+<div style="position:absolute;right:56px;top:36px"><span class="label">%(label)s</span></div>
+<div id="sbox" style="position:absolute;left:64px;right:250px;top:96px;height:190px;display:flex;align-items:center">
+  <div id="s" style="font-weight:900;color:%(accent)s;line-height:1;letter-spacing:-.01em;white-space:nowrap">%(stat)s</div></div>
+<div id="lbox" style="position:absolute;left:64px;right:250px;top:292px;height:132px;display:flex;align-items:flex-start">
+  <div id="l" class="title" style="font-weight:800">%(stat_label)s</div></div>
+<div style="position:absolute;left:64px;right:250px;top:428px;font-size:19px;color:%(ink)s;opacity:.7">%(stat_note)s</div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:%(soft)s"></div>
+<div id="box" style="position:absolute;left:64px;right:64px;bottom:22px;height:110px;display:flex;align-items:center"><div id="t" class="title" style="font-weight:700">%(title)s</div></div>
+<div class="date" style="position:absolute;right:64px;bottom:128px;font-size:18px">%(date)s</div>
+<img class="mascot" src="%(mascot)s" style="right:48px;top:110px;width:190px">"""
+
 LAYOUTS = {
 # A: 左に色帯、題は左寄せ大きく、右下にマスコット
 "band": """<div style="position:absolute;left:0;top:0;bottom:0;width:22px;background:%(accent)s"></div>
@@ -116,6 +134,7 @@ def load_posts():
             continue
         slug = name[:-3]
         posts.append(dict(slug=slug, title=title, kw=g("head_keyword"),
+                          stat=g("og_stat"), stat_label=g("og_stat_label"), stat_note=g("og_stat_note"),
                           tags=g("tags") or g("topics"), date=(re.match(r"(\d{4})-(\d{2})-(\d{2})", slug) or [None]*4)))
     return posts
 
@@ -135,8 +154,38 @@ def nobreak(title):
                   lambda m: f'<span style="white-space:nowrap">{m.group(0)}</span>', t)
 
 
+def fit_text(page, tid, bid, sizes, wbs=("auto-phrase", "normal")):
+    """id=tid の文字が id=bid の枠に収まる一番大きい字にする（省略しない）"""
+    for wb in wbs:
+        for size in sizes:
+            ok = page.evaluate("""([s, wb, tid, bid]) => {const t=document.getElementById(tid),b=document.getElementById(bid);
+                t.style.fontSize=s+'px'; t.style.wordBreak=wb;
+                return t.scrollHeight<=b.clientHeight && t.scrollWidth<=b.clientWidth}""", [size, wb, tid, bid])
+            if ok:
+                return size, wb
+    return None
+
+
+def render_stat(page, p, path, pal, date):
+    vals = dict(pal, logo=LOGO, mascot=MASCOT, title=nobreak(p["title"]), date=date,
+                stat=html.escape(p["stat"]), stat_label=nobreak(p["stat_label"]), stat_note=html.escape(p["stat_note"] or ""))
+    page.set_content(f"<html lang='ja'><head><meta charset='utf-8'><style>{CSS % pal}</style></head>"
+                     f"<body>{STAT % vals}</body></html>")
+    fs = fit_text(page, "s", "sbox", (190, 170, 150, 130, 112, 96, 84, 72), ("normal",))
+    fl = fit_text(page, "l", "lbox", (46, 42, 38, 35, 32, 29, 26))
+    ft = fit_text(page, "t", "box", (36, 33, 30, 28, 26, 24, 22, 20))
+    if not (fs and fl and ft):
+        raise SystemExit(f"数字の画像に入りきらない: {p['slug']} stat={fs} label={fl} title={ft}")
+    page.screenshot(path=path, clip=dict(x=0, y=0, width=1200, height=630))
+    return f"{fs[0]}/{fl[0]}/{ft[0]}px"
+
+
 def render(page, p, path):
     key, pal = theme_of(p)
+    if p.get("stat") and p.get("stat_label"):
+        d = p["date"]
+        date = f"{d[1]}.{d[2]}.{d[3]}" if d and d[0] else ""
+        return key, "stat", render_stat(page, p, path, pal, date)
     # 同じ題材が続いても同じ絵にならないよう、構図はスラッグから決める
     layout = list(LAYOUTS)[int(hashlib.md5(p["slug"].encode()).hexdigest(), 16) % len(LAYOUTS)]
     d = p["date"]
