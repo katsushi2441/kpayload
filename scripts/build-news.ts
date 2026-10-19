@@ -21,8 +21,8 @@ import path from 'node:path'
 import { SITE, KURAGE } from './site'
 import { h, attr, fitLength, shell as baseShell, json } from './page-shell'
 
-type Item = { day: string; time: string; source: string; post: string; headline: string; card: string; kind: string
-  cardTitle: string; cardImage: string; tracker: string; trackerName: string }
+type Item = { day: string; time: string; source: string; post: string; newsUrl?: string; headline: string; card: string; kind: string
+  cardTitle: string; cardImage: string; tracker: string; trackerName: string; lead?: string }
 
 const BASE = `${SITE}/news`
 const OUT = path.join(process.cwd(), 'dist', 'news')
@@ -72,7 +72,7 @@ const styles = `<style>
 .nc-item h3{font-size:15px;line-height:1.55;margin:0}.nc-item h3 a{color:#16232b;text-decoration:none}.nc-item h3 a:hover{text-decoration:underline}
 .nc-card{display:block;border:1px solid #e3eaec;border-radius:8px;overflow:hidden;color:#5f7078;text-decoration:none;font-size:12.5px}
 .nc-card img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:contain;background:#eef2f4}.nc-card span{display:block;padding:6px 8px}
-.nc-trk{font-size:13px;margin:0}.nc-trk a{color:#0a726b}
+.nc-trk{font-size:13px;margin:0}.nc-lead-line{font-size:13px;color:#425560;margin:0}.nc-trk a{color:#0a726b}
 .nc-btns{display:flex;gap:8px;margin-top:auto}.nc-btns>*{flex:1;text-align:center;border-radius:8px;padding:8px 6px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
 .nc-cp{border:1px solid #0a7a6e;background:#fff;color:#0a7a6e}.nc-x{background:#111;color:#fff;text-decoration:none;border:1px solid #111}
 .nc-box{background:#fff;border:1px solid #e3eaec;border-radius:12px;padding:14px 16px;margin:22px 0}
@@ -81,15 +81,39 @@ const styles = `<style>
 .nc-note{font-size:12.5px;color:#5f7078}
 </style>`
 
+/** Xの数え方（全角=2・半角=1・URLは1本23） */
+const xlen = (t: string) => {
+  let n = 0
+  const rest = t.replace(/https?:\/\/\S+/g, () => { n += 23; return '' })
+  for (const ch of rest) n += ch.codePointAt(0)! < 0x1100 ? 1 : 2
+  return n
+}
+/**
+ * 投稿の文：ニュースの見出し／ニュースのURL／カードへ誘う一文／カードのURL（2026-10-20 ユーザー指示
+ * 「ニュースのタイトル、ニュースのURL、考察誘導文章があって、誘導URL」）。カードのURLを最後に置くと、
+ * X はそのカードの画像を出す。280 を超えるときは見出しを詰め、それでも超えれば誘う一文を外す。
+ */
+function shareText(x: Item): string {
+  const card = `${x.card}#ref=${REF_SHARE}`
+  const news = x.newsUrl || x.post
+  const lead = x.lead || ''
+  let head = x.headline
+  const build = (hd: string, ld: string) => [hd, news, ld, card].filter(Boolean).join('\n')
+  while (xlen(build(head, lead)) > 280 && head.length > 12) head = head.slice(0, -2).replace(/…$/, '') + '…'
+  return xlen(build(head, lead)) <= 280 ? build(head, lead) : build(head, '')
+}
+
 function itemHtml(x: Item): string {
   const share = `${x.card}#ref=${REF_SHARE}`
-  const intent = 'https://x.com/intent/post?' + new URLSearchParams({ text: `${x.headline}\n${x.cardTitle || x.kind}`, url: share }).toString()
+  const post = shareText(x)
+  const intent = 'https://x.com/intent/post?' + new URLSearchParams({ text: post }).toString()
   return `<article class="nc-item" data-kind="${attr(x.kind)}">
 <div class="nc-meta"><span class="nc-tag">${h(x.kind)}</span><span>${h(x.time)}</span><span>${h(x.source)}</span></div>
 <h3><a href="${attr(x.post)}" target="_blank" rel="noopener nofollow">${h(x.headline)}</a></h3>
 <a class="nc-card" href="${attr(x.card)}#ref=exbridge-news">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁：<a href="${attr(x.tracker)}#ref=exbridge-news">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
-<div class="nc-btns"><button type="button" class="nc-cp" data-copy="${attr(`${x.headline}\n${share}`)}">見出しとURLをコピー</button><a class="nc-x" href="${attr(intent)}" target="_blank" rel="noopener">Xに投稿</a></div>
+${x.lead ? `<p class="nc-lead-line">${h(x.lead)}</p>` : ''}
+<div class="nc-btns"><button type="button" class="nc-cp" data-copy="${attr(post)}">投稿文をコピー</button><a class="nc-x" href="${attr(intent)}" target="_blank" rel="noopener">Xに投稿</a></div>
 </article>`
 }
 
@@ -114,7 +138,7 @@ function trackerBox(list: Item[]): string {
 <p class="nc-note"><a href="https://xb4g.com/giin/tracker/#ref=exbridge-news-list">国会トラッカーの一覧（すべてのテーマ）</a></p></section>` : ''
 }
 
-const lead = `報道各社のニュースに関係する、国会の質疑・政府の答弁、経済指標、質問主意書のカードです。カードは国会会議録・日本銀行の統計・衆参の質問主意書などの公開データから、株式会社エクスブリッジが作っています。「Xに投稿」でカードつきで共有できます。見出しは各社の投稿の1行目で、記事の中身は各社のページでご確認ください。`
+const lead = `報道各社のニュースに関係する、国会の質疑・政府の答弁、経済指標、質問主意書のカードです。カードは国会会議録・日本銀行の統計・衆参の質問主意書などの公開データから、株式会社エクスブリッジが作っています。「投稿文をコピー」「Xに投稿」で、ニュースとカードをまとめて共有できます。見出しは各社の投稿の1行目で、記事の中身は各社のページでご確認ください。`
 
 function ld(title: string, url: string, list: Item[]) {
   return [
@@ -133,7 +157,7 @@ const recent = days.slice(0, DAYS_ON_INDEX)
 const recentItems = items.filter((x) => recent.includes(x.day))
 {
   const title = fitLength(32, `${NAME}｜${SUB}`, NAME)
-  const desc = `報道各社のニュースに関係する国会の質疑・政府の答弁、経済指標、質問主意書のカードを毎時更新。直近${DAYS_ON_INDEX}日で${recentItems.length}件。見出しとカードのURLをコピーしたり、そのままXに投稿したりできます。`
+  const desc = `報道各社のニュースに関係する国会の質疑・政府の答弁、経済指標、質問主意書のカードを毎時更新。直近${DAYS_ON_INDEX}日で${recentItems.length}件。ニュースの見出しとURL、カードへの一言とカードのURLを、そのままコピーしたりXに投稿したりできます。`
   const body = `<main class="nc-wrap">
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ ${NAME}</nav>
 <h1>${NAME}</h1><p class="nc-sub">${SUB}｜毎時更新</p>
