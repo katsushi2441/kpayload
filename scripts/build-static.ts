@@ -130,7 +130,9 @@ function jaVerdict(project: Project): string {
     return `${project.name}のリポジトリには日本語ロケールのファイルが${count ?? 0}件あります。日本語で使える見込みがありますが、訳が全画面に行き渡っているか、用語が自社の言い回しに合うかは別途の確認が必要です。`
   }
   if (project.japaneseStatus === '日本語ファイルが一部のみ') {
-    return `${project.name}のリポジトリにある日本語ロケールのファイルは${count ?? 0}件だけです。一部だけ日本語になっている状態か、他言語の設定に付随して入っている可能性が高く、実務で使うには日本語化が必要になります。`
+    // 件数だけで「日本語化が必要」と書いていたが、Leantime は ja-JP.ini 1本に 3,623項目中3,521項目の訳があった
+    // （2026-10-20 実測）。ファイル数は網羅率を表さないので、足りないとは書かない
+    return `${project.name}のリポジトリにある日本語ロケールのファイルは${count ?? 0}件です。1つのファイルに画面全体の訳が入っている場合もあれば、一部だけの場合もあります。ファイルの数だけでは訳の網羅率は分からないので、実際の画面で日本語の範囲を確かめます。`
   }
   if (project.japaneseStatus === '日本語ファイルなし') {
     return `${project.name}のリポジトリに日本語ロケールのファイルは見つかりませんでした。日本語で運用するには日本語化から着手する必要があります。`
@@ -182,8 +184,12 @@ function funnelCopy(project: Project) {
     ctaUrl: `${publicBase}/vibe-oss.html?ref=oss-${project.slug}#flow`,
     hubUrl: `${publicBase}/vibe-oss.html`,
     eyebrow: `${categoryLabel(project.category)} × VIBE CODING`,
-    guideTitle: `${name}をバイブコーディングでカスタマイズ`,
-    guideBody: `<strong>完成済みの${name}を土台に、AIエージェントと対話しながら、自社業務に必要な部分を変更できます。</strong>ライセンスと技術構成を確認し、日本語表現、ブランド、画面、項目、権限、通知、外部連携などから優先度の高い範囲を実装します。カスタマイズ後は対象サーバーへ導入し、実際に使える状態まで確認します。`,
+    // このページは技術者向けの「OSS情報」。業務での使い方と導入の進め方は exbridge.jp/ai-system/<slug>/ に分けた
+    // （2026-10-20 ユーザー指示「/ai-system/ と /oss/ で重なっているのは、中身の違いをはっきりさせること」）。
+    guideTitle: capMap.primary[project.slug] ? `業務で${name}を導入するなら` : `${name}をバイブコーディングでカスタマイズ`,
+    guideBody: capMap.primary[project.slug]
+      ? `このページは${name}そのものの情報（機能、日本語ファイルの実測、ライセンス、同じ分類のOSSとの比較）です。<strong>業務でどう使うか、向いている会社、導入の進め方は、<a href="https://exbridge.jp/ai-system/${attr(project.slug)}/#ref=kurage-oss-${attr(project.slug)}">${name}の業務での使い方と導入（エクスブリッジ）</a>にまとめています。</strong>`
+      : `<strong>完成済みの${name}を土台に、AIエージェントと対話しながら、自社業務に必要な部分を変更できます。</strong>ライセンスと技術構成を確認し、日本語表現、ブランド、画面、項目、権限、通知、外部連携などから優先度の高い範囲を実装します。カスタマイズ後は対象サーバーへ導入し、実際に使える状態まで確認します。`,
     guideCtaLabel: `${name}のカスタマイズを相談`,
     asideText: '公式情報と日本向け解説を確認してから、バイブコーディングによる自社向けOSSカスタマイズとサーバー導入を相談できます。',
     asideCtaLabel: 'このOSSをバイブコーディングでカスタマイズ',
@@ -192,8 +198,8 @@ function funnelCopy(project: Project) {
       { question: `${name}をバイブコーディングでカスタマイズできますか？`, answer: `可能です。${name}のライセンスと技術構成を確認した上で、標準機能を活かしながら、日本語表現、画面、項目、権限、通知、外部連携などを業務に合わせて変更します。` },
       { question: `${name}の導入とカスタマイズをまとめて依頼できますか？`, answer: '可能です。要件と導入先を確認し、カスタマイズ、サーバー設置、稼働確認まで一つの流れで対応します。' },
     ],
-    pageTitle: project.seoTitle || `${name}の日本語導入・OSSカスタマイズ | Kurage`,
-    metaDescription: project.seoDescription || `${project.summary} 日本語対応・ライセンス・導入情報に加え、バイブコーディングによる自社向けOSSカスタマイズとサーバー導入を案内します。`,
+    pageTitle: project.seoTitle || `${name}とは｜機能・ライセンス・日本語対応（実測） | Kurage`,
+    metaDescription: project.seoDescription || `${project.summary} ${name}の機能、ライセンス、日本語ファイルの実測、同じ分類のOSSとの比較をまとめた技術情報です。`,
     serviceName: `${name}のOSS導入・バイブコーディングカスタマイズ`,
     serviceType: 'OSS導入・日本語化・バイブコーディングによるカスタマイズ',
     cardLinkLabel: 'OSS詳細',

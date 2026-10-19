@@ -1,0 +1,266 @@
+{
+  "codealmanac": {
+    "sources": [
+      "CodeAlmanac 公式README（AlmanacCode/codealmanac）: 対応環境、Sync/Garden/Updateの既定スケジュール、ingest/garden、テレメトリ、権限の注意",
+      "当社記事 vibeblog/2026-09-03-codealmanac-linux-guide（Linux対応の実装と本家PR #73、テスト568件）",
+      "kappstore CodeAlmanac日本語導入・運用キット（id=b81d730eb535b454）の商品説明",
+      "既存ページ exbridge.jp/ai-system/codealmanac/ と kurage.exbridge.jp/oss/codealmanac/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "社内システムの改修でCodeAlmanacを使うと、1日の仕事がどう変わるか",
+        "html": "<p>社内の販売管理や予約の仕組みを、社内の1〜2人か外注先がClaude CodeやCodexで直している会社を考えます。いまは「なぜこの画面はこうなっているのか」「前に何が壊れたのか」が担当者の頭の中やチャットの履歴に散らばっていて、AIに作業を頼むたびに同じ説明をし直しています。</p><ul><li>朝：担当者がAIに修正を頼むと、AIはリポジトリの中の <strong>almanac/</strong> フォルダにある記録（設計の理由、過去の障害、守るべき決まり）を検索してから作業に入ります。公式のREADMEでは、人もAIも同じ検索コマンドで記録を読む形になっています。</li><li>日中：AIとのやり取りは普段どおりです。会話の中で出た判断は、Syncという定期処理（既定は5時間ごと）が会話ログを読み、残す価値のあるものだけを記録に回します。</li><li>夜：Gardenという定期処理（既定は24時間ごと）が、古くなった記録や重複した記録を手入れします。</li><li>記録はただのMarkdownファイルなので、変更はGitの差分として見られ、コードと同じようにレビューできます。</li></ul><p>担当者が替わっても、引き継ぎ資料を別に作らずに、判断の理由がコードの隣に残っている状態に近づきます。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>Claude CodeかCodexを、すでに日常の開発で使っている会社（READMEが対象にしているのはこの2つです）</li><li>社内システムのソースコードを自社のGitリポジトリで持っていて、担当者や外注先が入れ替わる会社</li><li>「仕様書が古くて当てにならない」状態を、書類を増やさずに減らしたい会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>AIコーディングエージェントを使っていない会社。AIとの会話から記録を作るのが仕組みの前提なので、効き目がありません。</li><li>ソースコードを持たず、パッケージやクラウドサービスだけで業務を回している会社</li><li>開発機がWindowsだけの会社。公式の対応は現時点でmacOSで、Linuxは当社が作った対応を本家に提案している段階です。</li></ul><p>ライセンスはApache-2.0です。社内で使ったり手を加えたりしても、ソースコードを公開する義務はありません。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>どのリポジトリに入れるか</strong>：記録はリポジトリの中に置かれます。社外の人も見るリポジトリなら、記録に書いてよい内容の線を先に決めます。</li><li><strong>AIの実行役</strong>：CodexとClaudeのどちらに記録を書かせるかを、セットアップのときに選びます。選んだ側にログインしておく必要があります。</li><li><strong>自動処理をどこまで入れるか</strong>：会話の取り込み、記録の手入れ、本体の自動更新は、READMEの手順でそれぞれ止められます。</li><li><strong>誰が記録を確かめるか</strong>：READMEは、記録を書く処理は信頼したAIエージェントとして広いファイル権限で動く、と明記しています。自動で書かれた差分を見る担当を決めておきます。</li><li><strong>動かす環境</strong>：Python 3.12以上が要ります。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>当社の開発機はLinuxのため、そのままでは3つの定期処理が登録できませんでした。スケジューラの部分にsystemdのユーザータイマーで動く実装を足し、Linux上でテスト568件が通ることを確かめて、本家にプルリクエストを出しています。経緯と使い方は<a href=\"https://exbridge.jp/vibeblog/2026-09-03-codealmanac-linux-guide.html#ref=ai-system-deep-codealmanac\">CodeAlmanacの解説記事</a>にまとめました。</p><p>macOSとLinuxの導入手順に、当社が全プロジェクトで使っている日本語の判断記録の書式（判断・障害・不変条件・ワークフロー・用語集の雛形5点）とチームでの回し方を付けたものを、<a href=\"https://kappstore.exbridge.jp/app.php?id=b81d730eb535b454#ref=ai-system-deep-codealmanac\">CodeAlmanac日本語導入・運用キット</a>として出しています。</p>"
+      }
+    ]
+  },
+  "leantime": {
+    "sources": [
+      "Leantime 公式README（Leantime/leantime）: 機能一覧、システム要件、Docker導入、更新手順の注意",
+      "Leantime 本家の言語ファイル app/Language/en-US.ini と ja-JP.ini（2026-10-20に当社が項目数を数えた）",
+      "既存ページ exbridge.jp/ai-system/leantime/ と kurage.exbridge.jp/oss/leantime/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "案件管理でLeantimeを使うと、1日の仕事がどう変わるか",
+        "html": "<p>10〜30人ほどの会社で、案件の進み具合をExcelの工程表と朝礼の口頭報告で追っているとします。担当者は自分の行を書き、課長は表を集めて遅れを探し、経営者は月末になって遅れを知る、という流れになりがちです。</p><ul><li><strong>担当者</strong>：朝ログインすると、自分に割り当てられたタスクがまとまった画面が出ます。同じタスクをカンバン、ガント、表、リスト、カレンダーのどれでも見られるので、慣れた見方を選べます。かかった時間はタイムシートに記録できます。</li><li><strong>課長</strong>：プロジェクトごとのダッシュボードと状況報告で、マイルストーンの遅れを見ます。タスクには子タスクと依存関係を付けられるので、どこが詰まると後ろが止まるかが分かります。</li><li><strong>経営者</strong>：目標と指標の追跡で、案件が会社の目標のどれにつながっているかを見ます。リーンキャンバスやSWOT分析、リスク分析の画面もあります。</li><li><strong>チーム全体</strong>：打ち合わせのメモや手順はWiki・ドキュメントに置き、アイデアボードや振り返りの画面も使えます。どの項目にもコメントを付けて話を続けられます。</li></ul><p>公式のREADMEは、プロジェクトマネージャーではない人のための管理システムで、ADHD・読字障害・自閉症の人にも使いやすいように作っている、と説明しています。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>専任のプロジェクトマネージャーがおらず、現場の担当者が自分で進み具合を入れる会社</li><li>タスクだけでなく、目標や振り返りまで1か所で扱いたい会社</li><li>社内のLDAPやOIDCでログインをまとめたい会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>タスクの一覧とカンバンがあれば足りる会社。機能が多いぶん、画面も設定も増えます。その場合は機能を絞ったタスク管理のほうが定着しやすいです。</li><li>PHPとMySQLのサーバーを用意して保守する人がいない会社</li></ul><p>ライセンスはAGPL-3.0です。社内で使うだけなら公開の義務はありません。手を加えたLeantimeを社外の人にネット越しに使わせる場合は、その手を加えたソースコードを利用者が入手できるようにする必要があります。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>サーバー</strong>：公式の要件はPHP 8.2以上、MySQL 8.0以上かMariaDB 10.6以上、ApacheかNginxです。公式のDockerイメージもあります。</li><li><strong>見せる範囲</strong>：役割ごとの権限とプロジェクトごとの権限を分けられます。協力会社にどのプロジェクトまで見せるかを先に決めます。</li><li><strong>ログイン</strong>：二要素認証を使うか、LDAPやOIDCでまとめるかを決めます。</li><li><strong>通知の行き先</strong>：Slack、Mattermost、Discordと連携できるので、どこに知らせるかを決めます。</li><li><strong>ファイルの置き場所</strong>：サーバーの中に置くか、S3のストレージに置くかを選べます。</li><li><strong>バックアップと更新</strong>：公式の手順では、更新の前にデータベースとファイルのバックアップを取ります。Dockerで動かす場合、MySQLのデータをボリュームに置いていないと更新で中身が消える、とREADMEに注意書きがあります。</li><li><strong>日本語</strong>：2026年10月20日に当社が本家の言語ファイルを数えたところ、英語の3,623項目のうち3,521項目に日本語訳が入っていました。訳語が自社の言い方に合うかは、実際の画面で確かめます。</li></ul>"
+      }
+    ]
+  },
+  "timetree-exporter": {
+    "sources": [
+      "TimeTree Exporter 公式README（eoleedi/TimeTree-Exporter）: 使い方、オプション（ラベル別・コメント・画像・公開カレンダー）、非公式APIである旨の警告、制限事項",
+      "既存ページ exbridge.jp/ai-system/timetree-exporter/ と kurage.exbridge.jp/oss/timetree-exporter/（重複回避のため、ライセンスMITを確認）"
+    ],
+    "sections": [
+      {
+        "h2": "カレンダーの乗り換えでTimeTree Exporterを使うと、作業がどう変わるか",
+        "html": "<p>店舗のシフトや現場の予定をTimeTreeで共有してきた会社が、GoogleカレンダーやOutlookに切り替えるとします。手作業だと、TimeTreeの画面を見ながら1件ずつ新しいカレンダーに打ち直すことになり、繰り返しの予定やメモの写し漏れが起きます。</p><ol><li>担当者がPC（Python 3.10以上）にTimeTree Exporterを入れ、TimeTreeのメールアドレスとパスワードを入れて、書き出すカレンダーを選びます。</li><li>予定がiCalendar形式（.ics）のファイルにまとまって出てきます。TimeTreeのメモは、予定の説明欄に入ります。</li><li>そのファイルを、GoogleカレンダーやAppleのカレンダー、Outlookに取り込みます。</li></ol><p>「仕事」「個人」のようなラベルごとにファイルを分けて書き出すこともできます。オプションで、予定に付いたコメントや添付画像も取り出せます。公開カレンダーなら、ログインせずに書き出せます。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>TimeTreeからほかのカレンダーへ、一度で引っ越したい会社</li><li>引っ越しの前に、これまでの予定を手元のファイルとして残しておきたい会社</li><li>予定の件数が多く、手で打ち直すのが現実的でない会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>TimeTreeを使い続けながら、ほかのカレンダーと毎日自動で同期したい会社。公式のREADMEは、TimeTree社とは関係のない有志のプロジェクトで、公式ではないWebの仕組みを使っているため予告なく動かなくなることがある、と書いています。業務の同期として常に動かす前提には向きません。</li><li>ラベルの色分けで予定を見分けている会社。色の情報はファイルに残りますが、Googleカレンダーは取り込むときにその色を使わない、とREADMEにあります。</li></ul><p>ライセンスはMITです。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>誰のアカウントで書き出すか</strong>：TimeTreeのメールアドレスとパスワードを使います。作業するPCと担当者を決め、終わったあとにパスワードを変えるかも決めておきます。自動で動かすために環境変数で渡す方法もありますが、その場合はパスワードの保管場所の管理が要ります。</li><li><strong>取り込み先は新しいカレンダーにする</strong>：READMEは、うまくいかなかったときにカレンダーごと消してやり直せるよう、別のカレンダーに取り込むことを勧めています。</li><li><strong>コメントと画像まで取り出すか</strong>：どちらも予定ごとに追加の通信が起きます。予定が多いと時間がかかり、TimeTree側の制限にかかることがあります。</li><li><strong>通信を詰め込みすぎない</strong>：短い時間に要求を送りすぎると、一時的に止められることがあるとREADMEに注意書きがあります。何度も試すときは間を空けます。</li><li><strong>移行先での分類</strong>：色分けに頼っていた場合は、移行先のカレンダーをラベルごとに分けるなど、見分け方を先に決めておきます。</li></ul>"
+      }
+    ]
+  },
+  "inventree": {
+    "sources": [
+      "InvenTree 公式README（inventree/InvenTree）: 技術構成、導入方法、モバイルアプリ、MITライセンス",
+      "InvenTree 公式ドキュメント（リポジトリ docs/docs）: index（機能概要）、stock/index（保管場所・履歴・シリアル/ロット）、purchasing/index、barcodes/index、concepts/data_import、start/index、start/backup、part/stocktake、sales ディレクトリ",
+      "本家の画面翻訳ファイル src/frontend/src/locales/ja/messages.po（2026-10-20に当社が項目数を数えた）",
+      "既存ページ exbridge.jp/ai-system/inventree/ と kurage.exbridge.jp/oss/inventree/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "部品と在庫の管理でInvenTreeを使うと、1日の仕事がどう変わるか",
+        "html": "<p>部品を仕入れて組み立てる小さな工場や、修理用の部品を抱える会社で、在庫をExcelの台帳で管理しているとします。棚の数と台帳の数が合わない、誰がいつ持ち出したか分からない、どの製品にどのロットの部品を使ったか追えない、ということが起きやすい形です。</p><ul><li><strong>登録</strong>：部品を分類ごとに登録し、在庫は「倉庫・棚・引き出し」のように入れ子にした保管場所に置きます。部品を開けば、どこに何個あるかが分かります。</li><li><strong>入荷</strong>：部品に仕入先と仕入先の品番をひも付けておき、発注書から入荷を受けると在庫に入ります。</li><li><strong>組み立て</strong>：部品表（BOM）を持ち、製造の指示で在庫の部品を引き当てて製品を作ります。</li><li><strong>履歴</strong>：在庫を動かすたびに履歴が自動で残り、操作した人も記録されます。シリアル番号やロット番号を付ければ、個々の品物を後から追えます。</li><li><strong>バーコード</strong>：品物ごとにバーコードが自動で作られ、Web画面やスマートフォンのアプリで読み取れます。ラベルや帳票にも入れられます。</li><li><strong>出荷</strong>：受注や返品も同じ画面で扱えます。</li></ul><p>公式のドキュメントは、中小企業や個人の用途で軽く使えることを目指した設計だと説明しています。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>部品の種類が多く、保管場所が何か所もある製造業や修理業</li><li>ロットやシリアルで、どの品物がどこへ行ったかを追う必要がある会社</li><li>ほかのシステムとつなぐ予定がある会社。REST APIとPythonのライブラリ、プラグインの仕組みがあります。</li></ul><p><strong>向いていない会社</strong></p><ul><li>会計や給与まで1つで済ませたい会社。InvenTreeは部品と在庫の管理が中心です。</li><li>品目が数十件で、保管場所も1か所の会社。台帳を少し整えるほうが早いことが多いです。</li><li>Linuxのサーバーを用意できない会社。公式の手順はDebian系のLinuxを前提にしていて、WindowsではWSLの中で動かす形です。公式が勧めているのはDockerでの導入です。</li></ul><p>ライセンスはMITです。日本語は、2026年10月20日に当社が本家の画面の翻訳ファイルを数えたところ、2,496項目のうち2,441項目に日本語訳が入っていました。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>品目の体系</strong>：分類の切り方と、品番の付け方を決めます。</li><li><strong>保管場所の細かさ</strong>：倉庫・棚・箱のどこまでを登録するかを決めます。</li><li><strong>Excelからの移し方</strong>：管理画面からデータを取り込めますが、公式ドキュメントによると一度に1種類のデータしか入れられず、関係するデータ（たとえば部品の分類）を先に入れておく必要があります。取り込みは元に戻せないので、事前にバックアップを取るよう書かれています。分類、保管場所、部品、在庫のように入れる順番を決めておきます。</li><li><strong>権限</strong>：取り込みにはスタッフの権限と、そのデータを変える権限が要ります。現場の人にどこまで許すかを決めます。</li><li><strong>ログイン</strong>：シングルサインオンや二要素認証を使うかを決めます。</li><li><strong>バックアップ</strong>：標準のバックアップでデータベースと画像などのファイルを保存できます。復元は同じバージョン同士でないとできないので、更新の前に取ります。</li><li><strong>棚卸し</strong>：その時点の在庫数を記録として残す機能があります。月ごとか年ごとか、取る間隔を決めます。</li></ul>"
+      }
+    ]
+  },
+  "decap-cms": {
+    "sources": [
+      "Decap CMS 公式README（decaporg/decap-cms）: 仕組み（/adminに置く1ページのアプリ、Gitに保存、YAML設定）、導入方法、MITライセンス",
+      "Decap CMS 公式ドキュメント（decaporg/decap-website content/docs）: editorial-workflows、github-backend（全員にpush権限が必要）",
+      "当社記事 vibeblog/2026-08-27-decap-kit と vibeblog/2026-08-27-decap-xb4g-case（xb4g.comの構築、認証バグ2件）",
+      "kappstore Decap CMS 日本語導入キット（id=a3b60acb11b65f47）の商品説明",
+      "既存ページ exbridge.jp/ai-system/decap-cms/ と kurage.exbridge.jp/oss/decap-cms/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "ホームページの更新でDecap CMSを使うと、仕事がどう変わるか",
+        "html": "<p>会社のホームページの「お知らせ」や「施工実績」を変えるたびに、制作会社にメールで原稿を送って反映を待っている会社を考えます。</p><ol><li>担当者がサイトの /admin/ を開いてログインします。</li><li>「お知らせ」「実績」のように前もって決めた入力欄に、題名・日付・本文・画像を入れて保存します。</li><li>保存した内容はGitのリポジトリに記録され、サイトに反映されます。誰がいつ何を変えたかが全部残ります。</li></ol><p>公式ドキュメントには、下書き、確認待ち、公開OKという段階を挟む設定（編集ワークフロー）もあります。担当者が書き、上司が確かめてから公開する流れにもできます。制作会社に頼むのは、デザインを変えるときや入力欄を足すときだけになります。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>更新するのが、お知らせ・実績・ブログのように形の決まった記事が中心の会社</li><li>WordPressのプラグインやサーバーの更新作業から離れたい会社</li><li>更新の履歴をきちんと残したい会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>問い合わせフォーム、会員ページ、ネットショップのような動く仕組みがサイトの中心の会社。静的なサイトなので、そうした仕組みは別に用意する設計になります。</li><li>更新する人がGitHubのアカウントを持てない会社。GitHubでログインする方式では、更新する人全員がリポジトリに書き込める権限を持つ必要がある、と公式ドキュメントにあります。</li></ul><p>ライセンスはMITです。管理画面の日本語は公式に入っていて、設定で切り替えます。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>サイトの置き場所</strong>：GitHub Pagesにするか、手持ちのサーバーにするか。あわせて、静的サイトを何で作るか（JekyllやHugoなど）を決めます。</li><li><strong>ログインの方式</strong>：GitHubでログインするには、認証を中継する小さな仕組みが1つ要ります。どこで動かすかを決めます。</li><li><strong>アカウントと権限</strong>：更新する人ごとのGitHubアカウントと、リポジトリへの権限を用意します。</li><li><strong>入力欄の設計</strong>：お知らせなら題名・日付・本文・画像のように、入力欄を設定ファイルに書きます。後から足せますが、最初に決めておくと移行が楽です。</li><li><strong>公開の流れ</strong>：保存したらすぐ公開するか、下書きと確認を挟むかを決めます。</li><li><strong>移行</strong>：WordPressから移る場合、いまの記事をMarkdownのファイルに移す作業が要ります。</li><li><strong>バックアップ</strong>：中身はGitのリポジトリなので、リポジトリの複製を持っておくことがそのままバックアップになります。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>当社はDecap CMSを、自社の新しいサイト <a href=\"https://xb4g.com/#ref=ai-system-deep-decap-cms\">xb4g.com</a>（当社の全サイトとAIプロダクト41件のリンク集）で実際に使っています。構築から公開までは、AIエージェントとの共同作業で約1時間強でした。構築の途中で認証まわりの不具合を2つ踏みました。認証のURLに付け足される値に中継が対応していなかった件と、ログインが「認証処理中」のまま止まる件です。どちらも対策を手順に入れています。記録は<a href=\"https://exbridge.jp/vibeblog/2026-08-27-decap-xb4g-case.html#ref=ai-system-deep-decap-cms\">xb4g.comの構築の記事</a>にあります。</p><p>GitHubログインの中継をPHP1枚で共有レンタルサーバーに置く手順、サイトの雛形、AIエージェント用の構築指示書をまとめたものを、<a href=\"https://kappstore.exbridge.jp/app.php?id=a3b60acb11b65f47#ref=ai-system-deep-decap-cms\">Decap CMS 日本語導入キット（GitHub Pages＋PHP中継編）</a>として出しています。入手と導入の経路の違いは<a href=\"https://exbridge.jp/vibeblog/2026-08-27-decap-kit.html#ref=ai-system-deep-decap-cms\">導入キットを出したときの記事</a>に書きました。</p>"
+      }
+    ]
+  },
+  "frappe-hr": {
+    "sources": [
+      "Frappe HR 公式README（frappe/hrms）: 主な機能（社員のライフサイクル、休暇と勤怠、経費、評価、給与と税、モバイルアプリ）、Frappe Framework、導入方法",
+      "Frappe HR 本家リポジトリ: hrms/hooks.py の required_apps = [\"frappe/erpnext\"]、hrms/locale の言語一覧（ja なし）、hrms/regional（india, united_arab_emirates のみ）を2026-10-20に確認",
+      "当社記事 vibeblog/2026-08-21-khrpost-kezuru（Frappe HRを参考にした設計を削った記録）と vibeblog/2026-08-20-kkintai-kao-dakoku（勤怠OSSの比較）",
+      "既存ページ exbridge.jp/ai-system/frappe-hr/ と kurage.exbridge.jp/oss/frappe-hr/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "人事の事務でFrappe HRを使うと、1日の仕事がどう変わるか",
+        "html": "<p>社員名簿はExcel、休暇は紙の申請書、経費は領収書を貼った用紙で回している会社を考えます。</p><ul><li><strong>社員</strong>：スマートフォンのアプリから休暇を申請し、出勤と退勤を打刻します（位置情報を記録する設定もあります）。経費の精算や仮払いもシステムから申請します。</li><li><strong>上司</strong>：休暇の承認をアプリで行います。経費は何段階かの承認の流れを組めます。</li><li><strong>人事担当</strong>：入社の手続きから昇進・異動、退職時の面談の記録まで、社員ごとに1つの記録にまとまります。休暇の決まりや祝日を設定し、休暇の残りと勤怠をレポートで見ます。</li><li><strong>評価</strong>：目標を重点領域にひも付け、本人の自己評価を含めて評価の期間を回します。</li><li><strong>給与</strong>：給与体系と所得税の区分を設定して、給与計算を回す機能もあります。</li></ul><p>公式のREADMEは、13を超えるモジュールを持つ人事と給与の一式だと説明しています。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>すでにERPNextを使っているか、使う予定の会社。本家のアプリ定義でERPNextが必須になっていて、経費は会計とつながります。</li><li>休暇・経費・評価の申請と承認を、紙からなくしたい会社</li><li>社内か外部に、PythonのWebシステムを保守できる人がいる会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>日本の給与計算をそのまま任せたい会社。2026年10月20日に本家を確認したところ、国ごとの設定はインドとアラブ首長国連邦の2つだけで、翻訳ファイルの一覧にも日本語はありませんでした。給与はいまの給与ソフトに残し、休暇・経費・評価から使うのが現実的です。</li><li>打刻と休暇だけを手軽に管理したい小さな会社。ERPNextごと入れることになるので、仕組みが大きすぎます。</li></ul><p>ライセンスはGPL-3.0です。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>どこから使うか</strong>：社員名簿・休暇・経費・評価・給与のうち、最初に使うものを絞ります。</li><li><strong>承認の経路</strong>：休暇と経費を誰が承認するか、何段階にするかを決めます。</li><li><strong>休暇の決まり</strong>：有給休暇の付け方や会社の休日を、休暇の設定と休日の一覧にどう置くかを決めます。</li><li><strong>社員データの移し方</strong>：Excelの社員名簿から、どの項目を移すかを決めます。</li><li><strong>サーバー</strong>：Frappe Frameworkの上で動き、benchというコマンドで管理します。自社のサーバーで持つか、公式が案内している管理付きのホスティングを使うかを決めます。</li><li><strong>画面の言葉</strong>：本家に日本語の翻訳ファイルがないので、どの画面まで日本語にするかを決めます。</li><li><strong>人事データの守り方</strong>：バックアップを取る頻度と保管先、見られる人を決めます。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>当社は職務・目標・引き継ぎを管理するシステムを作るとき、Frappe HRのデータの持ち方を参考に設計を始めました。最初の設計は10テーブル・8画面になり、「入力が面倒だと誰も使わない」という理由で削り続けた結果、4テーブル・4画面になって、Frappe HRから来た構造は残りませんでした。それでも、大きなOSSは人事という業務に何があるかを知る教科書として役に立った、というのがそのときの結論です。経緯は<a href=\"https://exbridge.jp/vibeblog/2026-08-21-khrpost-kezuru.html#ref=ai-system-deep-frappe-hr\">Frappe HRを参考にした設計を削り続けた記録</a>にまとめています。</p><p>勤怠のシステムを作ったときにもFrappe HRを候補として見ましたが、海外の給与を前提にした人事の一式で、日本の勤怠の慣行に合わせる改造が本体より重いと判断しました（<a href=\"https://exbridge.jp/vibeblog/2026-08-20-kkintai-kao-dakoku.html#ref=ai-system-deep-frappe-hr\">顔で打刻する勤怠システムの記事</a>）。</p>"
+      }
+    ]
+  },
+  "zammad": {
+    "sources": [
+      "Zammad 公式README（zammad/zammad）: 対応チャネル、AGPLv3、Zammad Foundation",
+      "Zammad 公式ドキュメント（zammad-documentation prerequisites/hardware・software）: 最小構成 2コア・6GB（Elasticsearch同居は+4GB）",
+      "Zammad 管理者ドキュメント（zammad-admin-documentation）: channels一覧、manage（groups, overviews, trigger, macros, slas, calendars, text-modules, time-accounting, knowledge-base）、system/integrations/ldap",
+      "当社記事 vibeblog/2026-09-03-zammad-japanese-guide（日本語23%の実測、5,123エントリ全訳、Weblate投入）",
+      "既存ページ exbridge.jp/ai-system/zammad/ と kurage.exbridge.jp/oss/zammad/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "問い合わせ対応でZammadを使うと、1日の仕事がどう変わるか",
+        "html": "<p>問い合わせがsupport@のメール、Webのフォーム、電話でばらばらに届き、誰が返事をしたかを口頭やExcelで確かめている会社を考えます。</p><ul><li><strong>受付</strong>：届いたメールやフォームの内容はチケットとして登録され、部署ごとのグループに振り分けられます。チケットはどれか1つのグループに入り、担当者はグループごとの権限の範囲で見ます。</li><li><strong>朝の確認</strong>：担当者は自分の担当や未対応の一覧を開き、上から順に返事をします。</li><li><strong>返信</strong>：よく使う返答文はテキストモジュールとして登録しておき、キーワードで呼び出します。</li><li><strong>自動の振り分け</strong>：条件に合うチケットに自動で処理をかけるトリガーで、たとえば特定の取引先からのメールを決まったグループへ回します。</li><li><strong>期限</strong>：返答期限（SLA）と営業時間のカレンダーを設定すると、期限が近いチケットが分かります。</li><li><strong>記録</strong>：チケットごとに対応にかかった時間を残す機能があり、よくある質問はナレッジベースとして公開できます。</li></ul>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>メールのほか、Webフォーム、チャット、Microsoft 365やGoogleのメールボックス、WhatsAppやTelegramなど、いくつもの窓口をまとめたい会社</li><li>部署ごとに問い合わせを分け、見られる範囲も分けたい会社</li><li>社内のActive DirectoryやLDAPでアカウントを管理している会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>共有のレンタルサーバーしかない会社。公式の最小構成でもCPU 2コア・メモリ6GB（検索に使うElasticsearchを同じサーバーに置くならさらに4GB）が目安で、Linuxのサーバーが要ります。メールが中心で人数も少ないなら、共有レンタルサーバーで動く<a href=\"https://exbridge.jp/ai-system/freescout/#ref=ai-system-deep-zammad\">FreeScout</a>のほうが負担は小さいです。</li></ul><p>ライセンスはAGPL-3.0です。社内で使うだけなら公開の義務はありません。手を加えたZammadを社外の人にネット越しに使わせる場合は、手を加えた部分のソースコードを利用者が入手できるようにする必要があります。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>グループの切り方</strong>：営業、サポート、経理のように、問い合わせを分ける単位と、担当者ごとの権限を決めます。</li><li><strong>受け付けるアドレス</strong>：どのメールアドレスを取り込むか、メールボックスへのつなぎ方（IMAPやPOP3、Microsoft 365、Google）を決めます。</li><li><strong>返答期限</strong>：SLAの時間、営業時間、休日のカレンダーを決めます。</li><li><strong>ログイン</strong>：LDAPやActive Directoryとつなぐかを決めます。</li><li><strong>サーバー</strong>：データベースのPostgreSQLと検索用のElasticsearchを、同じサーバーに置くか分けるかを決めます。</li><li><strong>日本語の範囲</strong>：本家に入っている日本語は、当社が数えた時点で約23%でした。日本語の翻訳ファイルを差し替えるかを決めます。</li><li><strong>バックアップ</strong>：データベースと添付ファイルを、誰がいつ取るかを決めます。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>2026年9月3日に当社が数えた時点で、本家に入っていた日本語訳は約23%（翻訳サイトの表示で18.8%）で、管理画面、トリガーの設定、メール通知の文面などの多くが英語のままでした。当社は未訳の約4,100エントリをローカルのAIで訳し、変数やHTMLタグが原文と一致しない訳は機械的に外して、有効な5,123エントリをすべて訳しました。本家は翻訳ファイルを直接変えるプルリクエストを受け付けないため、翻訳サイト（Weblate）に投入し、開発版の日本語は100%になっています。</p><p>いま使っているZammadを日本語にする手順は、<a href=\"https://exbridge.jp/vibeblog/2026-09-03-zammad-japanese-guide.html#ref=ai-system-deep-zammad\">Zammadを日本語で使う方法の記事</a>に書いています。</p>"
+      }
+    ]
+  },
+  "freescout": {
+    "sources": [
+      "FreeScout 公式README（freescout-help-desk/freescout）: 機能一覧（担当無制限、衝突検知、社内メモ、転送・統合・移動、自動返信、電話の会話、PWA、OAuth）、要件（PHP 7.4〜8.x、MySQL/MariaDB/PostgreSQL、共有ホスティング可）、モジュール、移行",
+      "当社記事 vibeblog/2026-08-26-freescout-kit（共有レンタルサーバーでの構築、罠10個）",
+      "kappstore FreeScout 日本語導入キット（id=6d0e2c491e4170da）の商品説明",
+      "既存ページ exbridge.jp/ai-system/freescout/ と kurage.exbridge.jp/oss/freescout/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "メールの問い合わせ対応でFreeScoutを使うと、1日の仕事がどう変わるか",
+        "html": "<p>info@やsupport@に届くメールを、数人が同じメールソフトで開いて返事をしている会社を考えます。誰かが返したのか分からず二重に返事をしたり、逆に誰も返さなかったりします。</p><ul><li><strong>受付</strong>：届いたメールは共有の受信箱に会話として並び、担当者を割り当てます。</li><li><strong>二重対応の防止</strong>：2人が同じ会話を開くと、そのことが画面に出ます。</li><li><strong>相談</strong>：返事の前に、お客様には送られない社内メモを残して相談できます。</li><li><strong>整理</strong>：会話の転送、まとめ、別の受信箱への移動ができます。電話で受けた内容も会話として登録できます。</li><li><strong>外出先</strong>：スマートフォンではブラウザからアプリとして入れて使え、プッシュ通知も受けられます。</li></ul><p>担当者の人数、チケット数、受信箱の数に上限はない、と公式のREADMEにあります。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>メールが中心の問い合わせを、数人で分担している会社</li><li>専用のサーバーを持たず、PHPとMySQLが動くレンタルサーバーで済ませたい会社。公式のREADMEは、PHPとMySQLだけで動き、共有のホスティングにも置けると説明しています。</li><li>Microsoft 365やGoogle Workspaceのメールを使っている会社。OAuthでの接続に対応しています。</li></ul><p><strong>向いていない会社</strong></p><ul><li>電話・チャット・SNSを最初から本体だけでまとめたい会社。WhatsAppやチャットなどの窓口や追加の機能は、公式とコミュニティのモジュールで足す形なので、必要なものを先に確かめます。</li><li>部署ごとに細かい権限やSLAの仕組みが要る会社は、<a href=\"https://exbridge.jp/ai-system/zammad/#ref=ai-system-deep-freescout\">Zammad</a>と比べてから決めます。</li></ul><p>ライセンスはAGPL-3.0です。社内で使うだけなら公開の義務はありません。手を加えたFreeScoutを社外の人にネット越しに使わせる場合は、手を加えた部分のソースコードを利用者が入手できるようにする必要があります。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>受信箱にするアドレス</strong>：info@やsupport@など、どのアドレスを取り込むかを決めます。受信はIMAPやPOP3、送信はSMTPで設定します。</li><li><strong>担当者と見られる範囲</strong>：担当者のアカウントと、どの受信箱を誰が見られるかを決めます。</li><li><strong>文面</strong>：署名と自動返信の文面を用意します。</li><li><strong>過去のメール</strong>：ほかのヘルプデスクからの移行の案内が公式にあります。過去のやり取りをどこまで移すかを決めます。</li><li><strong>モジュール</strong>：使いたい追加機能を洗い出し、公式かコミュニティのどちらのモジュールかを確かめます。</li><li><strong>サーバー</strong>：PHP 7.4〜8.x、MySQLかMariaDBかPostgreSQL、NginxかApacheかIISが要件です。メールの取り込みなどを定期的に動かす設定も要ります。</li><li><strong>バックアップ</strong>：データベースと添付ファイルを、誰がいつ取るかを決めます。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>当社は月数百円クラスの共有レンタルサーバーにFreeScoutを立て、実在のメールボックスから受信したメールがチケットの画面に出るところまで確かめました。公式の手順はVPSが前提で、共有サーバーではWebのインストーラーが動かない、画面が真っ白のエラーになる、CSSだけが読めずデザインが崩れる、といった公式の文書にない罠を10個踏んでいます。</p><p>その罠を避ける順番で書いた手順書、サーバー要件のチェック、CSSが読めない問題を直すスクリプト、AIエージェントに設置を任せる指示書をまとめて、<a href=\"https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da#ref=ai-system-deep-freescout\">FreeScout 日本語導入キット（共有レンタルサーバー編）</a>にしました。入手と導入の経路の違いは<a href=\"https://exbridge.jp/vibeblog/2026-08-26-freescout-kit.html#ref=ai-system-deep-freescout\">導入キットを出したときの記事</a>にまとめています。</p>"
+      }
+    ]
+  },
+  "flarum": {
+    "sources": [
+      "Flarum 公式README（flarum/flarum, flarum/framework）: 概要、拡張機能API、MITライセンス",
+      "Flarum 本体同梱の拡張機能一覧（flarum/framework extensions: tags, mentions, likes, subscriptions, sticky, lock, flags, approval, suspend, statistics, akismet ほか）",
+      "Flarum 公式ドキュメント（flarum/docs）: install（サーバー要件）、languages（言語パック）、extensions（拡張マネージャーの注意）、mail、admin",
+      "既存ページ exbridge.jp/ai-system/flarum/ と kurage.exbridge.jp/oss/flarum/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "お客様や会員とのやり取りでFlarumを使うと、どう変わるか",
+        "html": "<p>製品を使うお客様からの質問がメールや電話で1件ずつ届き、同じ答えを何度も書いている会社や、会員同士が話せる場を持ちたい団体を考えます。</p><ul><li><strong>お客様</strong>：フォーラムに登録して、質問や話題を投稿します。話題はタグで分類され、関心のあるタグの話題を追えます。</li><li><strong>やり取り</strong>：ほかの人の投稿に@で言及したり、「いいね」を付けたりできます。購読した話題に新しい返信があると知らせが届きます。</li><li><strong>担当者</strong>：よくある質問の話題を上に固定し、片付いた話題はロックして書き込みを止めます。</li><li><strong>見張り</strong>：不適切な投稿は利用者が通報でき、担当者が確かめます。新しい投稿を承認してから出す設定や、ルールを守らない利用者を一時的に止める機能、スパム対策の連携もあります。</li><li><strong>管理者</strong>：管理画面のダッシュボードで、投稿の数などの統計を見ます。</li></ul><p>公式のドキュメントによると、Flarumに入っている機能の多くは拡張機能として作られていて、使わない機能は止められます。答えが掲示板にたまるので、同じ質問に同じ答えを書く回数を減らせます。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>製品のユーザー同士で質問と答えをためていきたい会社</li><li>会員や地域の人が話せる場を、自分のドメインで持ちたい団体</li><li>PHPが動くサーバーを用意できる会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>社内の業務連絡が目的の会社。チャットやグループウェアのほうが合います。</li><li>投稿を見張る人を置けない会社。公開の掲示板は、通報への対応やスパム対策をする担当がいないと荒れます。</li><li>日本語の画面をすぐに使いたい会社。本体に入っているのは英語だけで、日本語は言語パックを拡張機能として入れる方式です。公式ドキュメントによると、言語パックは本体同梱の拡張機能の訳は含むのが普通ですが、あとから入れたコミュニティ製の拡張機能の訳は含みません。</li></ul><p>ライセンスはMITです。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>サーバー</strong>：公式ドキュメントの要件は、Apache（mod_rewrite）かNginx、PHP 8.2以上と決まった拡張モジュール、MySQL・MariaDB・SQLite・PostgreSQLのどれかです。保守の作業ではSSHとComposerが要る場面があります。</li><li><strong>メールの送信</strong>：登録の確認、パスワードの再設定、通知にメールを使います。SMTPなどの送信設定を最初に行い、管理画面のテスト送信で届くことを確かめます。</li><li><strong>権限</strong>：利用者のグループごとに、読む・投稿する・返信するといった権限を決めます。</li><li><strong>タグの体系</strong>：話題をどう分類するかをタグで決めます。</li><li><strong>投稿のルールと見張り役</strong>：投稿を承認制にするか、通報を誰が見るかを決めます。</li><li><strong>管理者を誰にするか</strong>：管理画面から拡張機能を入れられる仕組みは、管理者にどんなパッケージでも入れられる力を与える、と公式が注意しています。信頼できる人だけを管理者にします。</li><li><strong>日本語</strong>：使う言語パックを決めて既定の言語にし、入れる拡張機能が日本語に対応しているかを確かめます。</li><li><strong>バックアップ</strong>：データベースと、アップロードされたファイルを取ります。</li></ul>"
+      }
+    ]
+  },
+  "keystatic": {
+    "sources": [
+      "Keystatic 公式README（Thinkmill/keystatic）: 概要（Markdown/YAML/JSON、DBなし、GitHub直結、Next.js/Remix/Astro）、開発中・実験的との記載、MITライセンス",
+      "Keystatic 公式ドキュメント（docs/src/content/pages）: introduction、local-mode、github-mode（書き込み権限が必要）、cloud（無料プランは1チーム3人まで）、collections、singletons、recipes（本番で管理画面を無効にする手順）",
+      "既存ページ exbridge.jp/ai-system/keystatic/ と kurage.exbridge.jp/oss/keystatic/（重複回避のため、日本語ファイル1件を確認）"
+    ],
+    "sections": [
+      {
+        "h2": "サイトの更新でKeystaticを使うと、仕事がどう変わるか",
+        "html": "<p>Next.js、Astro、Remixで作った会社のサイトや製品のサイトで、記事や「お客様の声」を変えるたびにエンジニアがファイルを書き換えている会社を考えます。</p><ul><li><strong>最初の準備（エンジニア）</strong>：編集できる項目を設定ファイルに書きます。ブログや事例のように何件も並ぶものは「コレクション」、トップページの文言や会社情報のように1つしかないものは「シングルトン」として決めます。</li><li><strong>日々の更新（担当者）</strong>：サイトの管理画面を開き、決まった入力欄（題名、日付、画像、本文など）に書いて保存します。</li><li><strong>保存のされ方</strong>：中身はデータベースではなく、MarkdownやYAML、JSONのファイルとして保存されます。</li><li><strong>履歴</strong>：GitHubモードにすると、保存した内容がGitHubのリポジトリに直接記録され、変更の履歴が残ります。</li></ul><p>公式のドキュメントは、新しくサイトを作るときにも、すでにあるサイトに後から編集の画面を足すときにも使えると説明しています。エンジニアに頼むのは、入力欄を増やすときや見た目を変えるときだけになります。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>Next.js、Astro、Remixでサイトを作っている、または作る予定の会社</li><li>社内か外部に、そのサイトを保守するエンジニアがいる会社</li><li>更新の中身をファイルとして持ち、Gitで履歴を残したい会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>WordPressのように、エンジニアなしで画面の構成まで変えたい会社。入力欄の定義はコードで行います。</li><li>長く安定していることを何より優先する会社。公式のREADMEは、いまも開発中で実験的な段階だと書いています。</li><li>編集する人にGitHubのアカウントを持たせにくい会社。GitHubモードでは、編集する人がリポジトリに書き込める権限を持つ必要があります。</li></ul><p>ライセンスはMITです。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>保存先</strong>：サーバーのファイルに保存するローカルモード、GitHubに保存するGitHubモード、ログインの部分を任せるKeystatic Cloudのどれにするかを決めます。</li><li><strong>編集する人のアカウント</strong>：各自にGitHubのアカウントを持たせるか、Keystatic Cloudでまとめるかを決めます。公式ドキュメントでは、Keystatic CloudならGitHubのアカウントがない人も編集でき、無料のプランは1チーム3人までで、それを超えると有料のプランになります。</li><li><strong>入力欄の設計</strong>：コレクションとシングルトンに何を置くか、入力欄の種類（文字、日付、画像、選択肢など）を決めます。</li><li><strong>画像の置き場所</strong>：画像をリポジトリに置くか、別の保存先にするかを決めます。</li><li><strong>どこで編集するか</strong>：公式には本番のサイトで管理画面を出さない手順もあるので、編集を手元で行うか本番で行うかを決めます。</li><li><strong>日本語</strong>：本家にある日本語のファイルは1件だけです。管理画面の言葉を日本語にするかを決めます。</li><li><strong>バックアップ</strong>：GitHubモードなら、リポジトリの複製を持っておくことがそのままバックアップになります。</li></ul>"
+      }
+    ]
+  },
+  "vikunja": {
+    "sources": [
+      "Vikunja 公式README（go-vikunja/vikunja）",
+      "当社記事 vibeblog/2026-09-03-vikunja-japanese-guide（v2.6.0実測、日本語91%・135キー全訳、CalDAV、バックアップ、プロジェクト2階層、登録閉鎖、root実行）",
+      "kappstore Vikunja日本語導入・運用キット（id=767ea5a2f7963f2a）の商品説明",
+      "既存ページ exbridge.jp/ai-system/vikunja/ と kurage.exbridge.jp/oss/vikunja/（重複回避のため）"
+    ],
+    "sections": [
+      {
+        "h2": "チームのタスク管理でVikunjaを使うと、1日の仕事がどう変わるか",
+        "html": "<p>営業チームの週ごとのタスクを、Excelの一覧や、人ごとにばらばらのTodoistやTrelloで管理している会社を考えます。</p><ul><li><strong>朝</strong>：各自が「自分が担当・今週が期限・まだ終わっていない」のような条件を保存したフィルタを開き、今日やることを確かめます。保存したフィルタは左のメニューに置けます。</li><li><strong>打ち合わせ</strong>：課長は同じプロジェクトをカンバンで開き、To-Do、Doing、Doneの列の間でカードを動かしながら進み具合を確かめます。期限と優先度はカードに出ます。</li><li><strong>計画</strong>：ガントで期間を横棒で見ます。締め切りしか入れていないタスクも、開始日を後から伸ばして計画に変えられます。</li><li><strong>外出先</strong>：CalDAVでiPhoneやThunderbirdのカレンダーとつなぎ、タスクを予定と並べて見ます。</li></ul><p>タスクには期限、優先度、ラベル、担当者、添付ファイル、繰り返し、タスク同士の関連付けを付けられます。</p>"
+      },
+      {
+        "h2": "向いている会社・向いていない会社",
+        "html": "<p><strong>向いている会社</strong></p><ul><li>TodoistやTrello、Microsoft To-Doのような使い勝手のまま、タスクを社外のサービスに置きたくない会社。この3つからの取り込みがあります。</li><li>人数が増えるたびに月額が増える形を避けたい会社</li><li>Dockerを動かせるサーバーが1台ある会社。最小の構成はSQLiteなので、データベースのサーバーは要りません。</li><li>社内のLDAPやOpenID Connectでログインをまとめたい会社</li></ul><p><strong>向いていない会社</strong></p><ul><li>サーバーの面倒を誰も見られない会社</li><li>目標の管理や振り返り、工数の記録まで1つで扱いたい会社。<a href=\"https://exbridge.jp/ai-system/leantime/#ref=ai-system-deep-vikunja\">Leantime</a>のように機能の多い仕組みと比べてから決めます。</li></ul><p>ライセンスはAGPL-3.0です。社内で使うだけなら公開の義務はありません。手を加えたVikunjaを社外の人にネット越しに使わせる場合は、手を加えた部分のソースコードを利用者が入手できるようにする必要があります。</p>"
+      },
+      {
+        "h2": "導入で決めておくこと",
+        "html": "<ul><li><strong>プロジェクトの切り方</strong>：プロジェクトは入れ子にできます。「部署、その下に案件」の2階層までにしておくと、保存したフィルタが全社をまたいで効きます。部署をチームに対応させるのが分かりやすいです。</li><li><strong>登録の閉じ方</strong>：誰でもアカウントを作れる設定のまま公開しないことです。管理者と最初のメンバーを作ったら登録を閉じ、その後は招待かOpenID、LDAPで入れます。</li><li><strong>データベース</strong>：少人数ならSQLiteで始め、人数が増えたらPostgreSQLかMySQLに切り替えます。</li><li><strong>バックアップ</strong>：SQLiteの構成なら、データベースのファイルと添付ファイルのフォルダの2つを毎日写せば戻せます。</li><li><strong>動かすユーザー</strong>：公式の例にある、コンテナを管理者権限で動かす指定は、本番では専用のユーザーに変えます。</li><li><strong>日本語</strong>：設定の「ローカライズ」で、言語を日本語、タイムゾーンをAsia/Tokyo、週の始まりを月曜日にします。</li></ul>"
+      },
+      {
+        "h2": "当社の記録",
+        "html": "<p>当社は2026年9月3日にv2.6.0を実際に立てて確かめました。日本語の画面は最初から入っていて、翻訳は1,364キーのうち1,246キー（91%）でした。残りは左メニューの「My Open Tasks」「Inbox」や、カンバンの「To-Do」「Doing」「Done」など、目立つ場所に英語で出ていました。</p><p>当社は残りの135キーをローカルのAIで訳し、変数の書き方が原文と1文字も違わないことをプログラムで確かめて、本家の翻訳サイト（Crowdin）への投入を進めています。手順は<a href=\"https://exbridge.jp/vibeblog/2026-09-03-vikunja-japanese-guide.html#ref=ai-system-deep-vikunja\">Vikunjaを立てて日本語で使うまでの記事</a>に、プロジェクトの設計表や移行の注意、CalDAVでの同期、バックアップのスクリプトは<a href=\"https://kappstore.exbridge.jp/app.php?id=767ea5a2f7963f2a#ref=ai-system-deep-vikunja\">Vikunja日本語導入・運用キット</a>にまとめています。</p>"
+      }
+    ]
+  }
+}

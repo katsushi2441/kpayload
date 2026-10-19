@@ -16,6 +16,7 @@
 import 'dotenv/config'
 
 import fs from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -92,6 +93,11 @@ function ymOf(s?: string | null): string | null {
   return `${d.getFullYear()}年${d.getMonth() + 1}月`
 }
 
+// 検索で実績のあった上位ページだけ、業務担当向けの節を足す（data/aisystem-deep.json。2026-10-20）。
+// 9月中旬から /ai-system/ の表示が半分になった（GSC 28日 9,221→4,051）。索引には残っているが順位が落ちた。
+type Deep = { sources?: string[]; sections: Array<{ h2: string; html: string }> }
+const DEEP: Record<string, Deep> = (() => { try { return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'aisystem-deep.json'), 'utf8')) } catch { return {} } })()
+
 function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
   const url = `${BASE}/${p.slug}/`
   const uses = items(p.useCases)
@@ -107,13 +113,17 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
   // 詳細ページに来る検索はほぼ指名検索（codealmanac / decap cms / vikunja タスク管理…）。
   // 製品名を先頭に出す。従来は「顧客管理（CRM）をTwentyで実現する」で製品名が中ほどにあり、
   // 「twenty crm」(月170・競合低)では90日間1回も表示されなかった。
+  // /oss/（kurage）は技術者向けのOSS情報、ここは業務担当・経営者向けの「業務での使い方と導入」。題名も役割で分ける
+  // （2026-10-20 ユーザー指示「重なっているのは、寄せるんじゃなくて、中身の違いをはっきりさせること」）。製品名は先頭のまま。
   const title = fitLength(32,
-    `${p.name}とは｜${cap.label}に使える無料のオープンソース`,
-    `${p.name}とは｜${cap.label}のオープンソース`,
-    `${p.name}｜${cap.label}のオープンソース`,
+    `${p.name}で${cap.label}｜業務での使い方と導入`,
+    `${p.name}で${cap.label}｜導入の進め方`,
+    `${p.name}｜${cap.label}の導入`,
     `${p.name}｜${cap.label}`)
   const desc = fitLength(120,
-    `${p.name}は、${cap.label}に使えるオープンソースです。${p.summary}ライセンスと日本語対応を実測して掲載。名古屋のシステム開発会社が日本語化から導入まで行います。初日の相談は無料です。`,
+    DEEP[p.slug]
+      ? `${p.name}を${cap.label}の業務にどう使うか、向いている会社、導入で決めておくことと進め方をまとめました。${p.summary}名古屋のシステム開発会社が日本語化から導入まで行います。`
+      : `${p.name}を${cap.label}の業務にどう使うかと、導入の進め方をまとめました。${p.summary}名古屋のシステム開発会社が日本語化から導入まで行います。`,
     `${p.name}は、${cap.label}に使えるオープンソースです。${p.summary}ライセンスと日本語対応の実測つき。日本語化から導入まで対応します。`,
     `${p.name}は、${cap.label}に使えるオープンソースです。ライセンスと日本語対応の実測つき。日本語化から導入まで対応します。`,
     `${p.name}は、${cap.label}に使えるオープンソースです。日本語対応を実測して掲載しています。`)
@@ -129,36 +139,21 @@ ${relatedNews('oss', p.slug)}
 ${relatedPanel(relatedProducts({ slug: p.slug, name: p.name, cap: cap.key, keywords: (p as { keywords?: string[] }).keywords }, KAPP_KITS[p.slug] ? [KAPP_KITS[p.slug].id] : []), `ai-system-rel-${attr(p.slug)}`, h(p.name))}
 
 <section><div class="panel">
-<h2>${h(p.name)}とは？</h2>
-<p>${h(p.name)}とは、${h(p.summary)}${h(cap.label)}の用途に使えるオープンソースで、ソースコードが公開されているため自社のサーバーに置いて動かせます。<strong>ソフト自体の費用はかかりません</strong>。</p>
-${facts.length ? `<p>${h(facts.join('、'))}です（当社がGitHubの公開情報から確認した値、${TODAY_JA}時点）。</p>` : ''}
-<p>${h(jaVerdict(p))}${DEMOS[p.slug] ? `当社が日本語化したものを、ログイン情報つきで公開しています。` : ''}</p>
-</div></section>
-
-<section><div class="panel">
-<h2>${h(cap.label)}とは？</h2>
-<p>${h(cap.label)}とは、${h(cap.question)}という状態を、仕組みで解消することです。${h(p.name)}は、この用途に使えるオープンソースのひとつです。</p>
+<h2>${h(cap.label)}の業務で、${h(p.name)}を使うと</h2>
+<p>${h(cap.label)}とは、${h(cap.question)}という状態を、仕組みで解消することです。${h(p.name)}を土台にすると、たとえば次のことを自社のサーバーで回せるようになります。</p>
 <ul class="checks">${uses.slice(0, 5).map((u) => `<li>${h(u)}</li>`).join('')}</ul>
-</div></section>
-
-<section><div class="panel">
-<h2>${h(p.name)}を使うと何が変わるのか</h2>
-<p>${h(p.description)}</p>
 <p>すでに世界で使われている完成品を土台にするので、同じものをゼロから作るより短い期間で済みます。当社は、この土台に対して日本語化、画面や項目の変更、権限、帳票、既存システムとの連携を加えて、御社の業務に合う状態にします。</p>
 </div></section>
 
+${(DEEP[p.slug]?.sections || []).map((x) => `<section><div class="panel">
+<h2>${h(x.h2)}</h2>
+${x.html}
+</div></section>`).join('\n')}
+
 <section><div class="panel">
-<h2>${h(p.name)}の日本語対応（実測）</h2>
-<p>${h(jaVerdict(p))}</p>
-<div class="table-wrap"><table><tbody>
-<tr><th>ライセンス</th><td>${h(p.license)}</td></tr>${p.licenseNote ? `<tr><th>利用条件</th><td>${h(p.licenseNote)}</td></tr>` : ''}
-${p.language ? `<tr><th>主な言語</th><td>${h(p.language)}</td></tr>` : ''}
-${typeof p.stars === 'number' ? `<tr><th>GitHubスター</th><td>${p.stars.toLocaleString('en-US')}</td></tr>` : ''}
-<tr><th>日本語ロケール</th><td>${h(p.japaneseStatus)}${typeof p.jaFileCount === 'number' ? `（${p.jaFileCount}ファイル）` : ''}</td></tr>
-${since ? `<tr><th>公開開始</th><td>${h(since)}</td></tr>` : ''}
-${lastPush ? `<tr><th>最終更新</th><td>${h(lastPush)}</td></tr>` : ''}
-</tbody></table></div>
-<p class="note">GitHubの公開ファイル一覧から日本語ロケールの実ファイルを数えた結果です。配布用のビルド成果物は除いています。技術的な詳細は<a href="${KURAGE}/oss/${attr(p.slug)}/?ref=exbridge-ai-system">${h(p.name)}のOSS情報</a>にまとめています。</p>
+<h2>${h(p.name)}の技術情報は</h2>
+<p>ライセンスは${h(p.license)}です。${h(jaVerdict(p))}${facts.length ? `${h(facts.join('、'))}です（${TODAY_JA}時点）。` : ''}</p>
+<p>機能の一覧、日本語ファイルの実測、同じ分類のOSSとの比べ方など、技術者向けの情報は<a href="${KURAGE}/oss/${attr(p.slug)}/#ref=exbridge-ai-system">${h(p.name)}のOSS情報（Kurage）</a>にまとめています。このページは、業務での使い方と導入の進め方を扱います。</p>
 </div></section>
 
 ${demoPanel(p.slug, p.name, `ai-system-${p.slug}`)}
@@ -182,6 +177,11 @@ ${((kit) => (kit ? `<section><div class="panel kit">${kit}</div></section>` : ''
 </div></section>
 
 ${ctaBlock(cap, p.name)}
+
+<section><div class="panel">
+<h2>開発会社・IT販売の方へ</h2>
+<p>${h(p.name)}の日本語化・改修・導入（バイブOSS）を、御社のお客様に販売できます。導入作業は当社が行い、販売手数料は1件9万円（税別）です。ソースコードは MIT ライセンスで、御社のブランドでの販売もできます。登録無料・ノルマなし。<a href="${KURAGE}/reseller.html?ref=ai-system-reseller">販売代理店の条件を見る</a></p>
+</div></section>
 
 ${siblings.length ? `<section><div class="panel">
 <h2>${h(cap.label)}に使える他のオープンソース</h2>
