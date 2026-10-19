@@ -275,6 +275,39 @@ function trackersForPost(p: Post): Trk[] {
   return scored.sort((a, b) => b[1] - a[1]).slice(0, 3).map(([t]) => t)
 }
 
+// 記事の本文に出てくる業種・業務の言葉から、/solution/（業種・業務別の導入）と /outsourcing/（外注されがちな業務の内製化）へ
+// つなぐ（2026-10-20 ユーザー指示「/solution/ と /outsourcing/ は検索からの入口としては期待せず、vibeblog の記事から案内する導線に回す」）。
+// 検索からは 28日で /solution/ 9クリック・/outsourcing/ 0クリック。vibeblog は 107クリックで2ページ目40%。
+type Lp = { url: string; label: string; name: string; note: string; words: string[]; strict?: boolean }
+const GENERIC = /^(費用|システム|自社|アプリ|AI|ICT|代行|導入|管理|予約システム|ソフト|クラウド|無料|SaaS|スクール|マーケティング|効率化|FAQ|市場|調査|連携|評価|案件|IT|入力)$/i
+// 語は業種・業務の名前そのもの（「・」で分けるだけ）。キーワードを空白で分けると「管理」「調査」のような
+// どこにでも出る語で当たり、販売代理店の記事に短編ドラマ制作、SEOの記事にプロジェクト管理が付いた（2026-10-20 試行）
+const lpWords = (...xs: string[]) => [...new Set(xs.flatMap((x) => nfk(x || '').replace(/[（(].*$/, '').split(/[・、／/]+/))
+  .map((w) => w.trim().replace(/(事業所|会社|業者|全般)$/, '')).filter((w) => w.length >= 2 && !/\s/.test(w) && !GENERIC.test(w)))]
+const LPS: Lp[] = [
+  ...(await fs.readFile(path.join(process.cwd(), 'data', 'solution-list.json'), 'utf8').then((s) => JSON.parse(s)).catch(() => []))
+    .filter((x: any) => x.kind === 'industry' || x.kind === 'gyomu')
+    .map((x: any) => ({ url: `${SITE}/solution/${x.slug}.html`, label: x.kind === 'industry' ? '業種別の導入' : '業務別の導入',
+      name: x.name, note: `${x.name}の業務を、オープンソースと自社サーバーで仕組みにする進め方と費用`, words: lpWords(x.name) })),
+  ...(await fs.readFile(path.join(process.cwd(), 'data', 'outsourcing-list.json'), 'utf8').then((s) => JSON.parse(s)).catch(() => []))
+    .map((x: any) => ({ url: `${SITE}/outsourcing/${x.slug}.html`, label: '外注している業務を社内で', name: x.name,
+      note: (x.auto || `${x.name}を外注せず、社内の仕組みで回す方法`).slice(0, 66), words: lpWords(x.name), strict: true })),
+]
+function lpsForPost(p: Post): Lp[] {
+  const text = nfk(p.title + ' ' + p.html.replace(/<[^>]+>/g, ' '))
+  const title = nfk(p.title + ' ' + (p.headKeyword || ''))
+  const scored: Array<[Lp, number]> = []
+  for (const l of LPS) {
+    if (p.html.includes(l.url.replace(SITE, ''))) continue   // 本文ですでにリンクしている
+    const n = l.words.reduce((s, w) => s + (text.split(w).length - 1), 0)
+    // 題名か記事のキーワードに出るか、本文に6回以上。4回だと OSS 日本語化の記事すべてに「翻訳」が、
+    // 取引ボットの記事に「市場調査」が付いた（2026-10-20 試行）
+    // 外注の内製化（/outsourcing/）は題名かキーワードに業務名が出る記事だけ（OSS日本語化の記事の「翻訳」で当たった）
+    if ((!l.strict && n >= 6) || l.words.some((w) => title.includes(w))) scored.push([l, n + (l.words.some((w) => title.includes(w)) ? 10 : 0)])
+  }
+  return scored.sort((a, b) => b[1] - a[1]).slice(0, 3).map(([l]) => l)
+}
+
 const dateJa = (d: string) => d.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1年$2月$3日')
 /** 一覧の行に使う短い日付。「2026年09月21日」は幅を食って2行に折れる。 */
 const dateDot = (d: string) => d.replace(/-/g, '.')
@@ -476,6 +509,15 @@ ${(() => {
   <h2>この話題を国会で追う（国会トラッカー）</h2>
   <p class="note">国会会議録から、だれが質問し、政府が何と答えたかを日付つきで並べています。</p>
   <div class="idx">${ts.map((t) => card(`https://xb4g.com/giin/tracker/${t.key}?ref=vibeblog-tracker-${p.slug}`, '国会トラッカー', t.name, `「${t.short || t.name}」の国会の質疑と政府の答弁`)).join('')}</div>
+</section>` : ''
+})()}
+
+${(() => {
+  const ls = lpsForPost(p)
+  return ls.length ? `<section>
+  <h2>この記事の業務を、自社の仕組みにするなら</h2>
+  <p class="note">業種・業務ごとに、オープンソースを土台に社内で回す進め方と費用をまとめています。</p>
+  <div class="idx">${ls.map((l) => card(`${l.url}#ref=vibeblog-lp-${p.slug}`, l.label, l.name, l.note)).join('')}</div>
 </section>` : ''
 })()}
 
