@@ -14,6 +14,7 @@
 #   bash scripts/deploy.sh politech   # exbridge: politech/（政治・政策キーワード）
 #   bash scripts/deploy.sh outsourcing # exbridge: outsourcing/
 #   bash scripts/deploy.sh vibeblog   # exbridge: vibeblog/（VWorkブログの移設先）
+#   bash scripts/deploy.sh news       # exbridge: news/（ニュースと国会の記録カード・毎時）
 #   bash scripts/deploy.sh all
 #
 # なぜ dist/ を先に同期するか（2026-09-09）:
@@ -63,7 +64,15 @@ fi
 if [ "$what" = "ai-system" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: ai-system/ =="
   sync_dist ai-system
-  put_tree /home/kojima/work/exbridge_jp exbridge_jp ai-system || rc=1
+  # 約2,900ページあるので、中身が変わったファイルだけを1接続で送る（2026-10-08。以前は1ファイル1接続）
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp ai-system || rc=1
+fi
+
+if [ "$what" = "news" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: news/（ニュースと国会の記録カード） =="
+  sync_dist news
+  # 毎時作り直すので、中身が変わったファイルだけを1接続で送る
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp news || rc=1
 fi
 
 if [ "$what" = "solution" ] || [ "$what" = "all" ]; then
