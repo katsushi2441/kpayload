@@ -22,7 +22,8 @@ import { SITE, KURAGE } from './site'
 import { h, attr, fitLength, shell as baseShell, json } from './page-shell'
 
 type Item = { day: string; time: string; source: string; post: string; newsUrl?: string; headline: string; card: string; kind: string
-  cardTitle: string; cardImage: string; tracker: string; trackerName: string; lead?: string }
+  cardTitle: string; cardImage: string; tracker: string; trackerName: string; lead?: string
+  id?: string; cardDesc?: string; qa?: { date: string; house: string; meeting: string; q?: { who: string; text: string }; a?: { who: string; text: string } } | null }
 
 const BASE = `${SITE}/news`
 const OUT = path.join(process.cwd(), 'dist', 'news')
@@ -79,6 +80,10 @@ const styles = `<style>
 .nc-box h2{font-size:17px;margin:0 0 8px}.nc-box ul{margin:0;padding-left:20px}.nc-box li{margin:3px 0}
 .nc-days{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px}
 .nc-note{font-size:12.5px;color:#5f7078}
+.nc-art{max-width:760px}.nc-art .nc-card{max-width:640px}
+.nc-qa{background:#fff;border:1px solid #e3eaec;border-radius:12px;padding:12px 16px;margin:12px 0}
+.nc-qa p{margin:6px 0;font-size:14.5px;line-height:1.85}.nc-qa .who{font-weight:700;color:#0a726b}
+.nc-src{font-size:13px;margin:4px 0 12px}
 </style>`
 
 /** Xの数え方（全角=2・半角=1・URLは1本23） */
@@ -103,13 +108,15 @@ function shareText(x: Item): string {
   return xlen(build(head, lead)) <= 280 ? build(head, lead) : build(head, '')
 }
 
+const itemUrl = (x: Item) => `${BASE}/${x.day}/${x.id}.html`
+
 function itemHtml(x: Item): string {
   const share = `${x.card}#ref=${REF_SHARE}`
   const post = shareText(x)
   const intent = 'https://x.com/intent/post?' + new URLSearchParams({ text: post }).toString()
   return `<article class="nc-item" data-kind="${attr(x.kind)}">
 <div class="nc-meta"><span class="nc-tag">${h(x.kind)}</span><span>${h(x.time)}</span><span>${h(x.source)}</span></div>
-<h3><a href="${attr(x.post)}" target="_blank" rel="noopener nofollow">${h(x.headline)}</a></h3>
+<h3>${x.id ? `<a href="${attr(itemUrl(x))}">${h(x.headline)}</a>` : `<a href="${attr(x.post)}" target="_blank" rel="noopener nofollow">${h(x.headline)}</a>`}</h3>
 <a class="nc-card" href="${attr(x.card)}#ref=exbridge-news">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁：<a href="${attr(x.tracker)}#ref=exbridge-news">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
 ${x.lead ? `<p class="nc-lead-line">${h(x.lead)}</p>` : ''}
@@ -187,8 +194,47 @@ ${nav}
 </main>${styles}`
   await fs.writeFile(path.join(OUT, `${d}.html`), shell(title, desc, `${BASE}/${d}.html`, body, ld(title, `${BASE}/${d}.html`, list)))
 }
+// ニュース1件ごとのページ（2026-10-20 ユーザー指摘「中にページないとSEO弱くない？」）。
+// 見出しとカードだけの薄いページにしないよう、カードの説明・会議録の質問と答弁の冒頭（原文のまま）・同じテーマのほかのニュースを載せる
+const withId = items.filter((x) => x.id)
+for (const x of withId) {
+  await fs.mkdir(path.join(OUT, x.day), { recursive: true })
+  const same = withId.filter((y) => y !== x && ((x.tracker && y.tracker === x.tracker) || y.card === x.card)).slice(0, 8)
+  const title = fitLength(32, `${x.headline}｜国会の記録カード`, `${x.headline}｜国会の記録`, x.headline)
+  const desc = fitLength(120, `${x.headline}。${x.lead || ''}${x.cardDesc ? ' ' + x.cardDesc : ''}`, `${x.headline}。${x.lead || ''}`)
+  const url = itemUrl(x)
+  const qa = x.qa
+  const body = `<main class="nc-wrap nc-art">
+<nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">${NAME}</a> ／ <a href="${BASE}/${x.day}.html">${h(dayJa(x.day))}</a></nav>
+<h1>${h(x.headline)}</h1>
+<p class="nc-src">${h(x.source)}・${h(dayJa(x.day))} ${h(x.time)}の投稿より　<a href="${attr(x.newsUrl || x.post)}" target="_blank" rel="noopener nofollow">元の記事を読む</a></p>
+<section class="nc-box"><h2>このニュースに関係する国会の記録</h2>
+${x.lead ? `<p>${h(x.lead)}</p>` : ''}
+<a class="nc-card" href="${attr(x.card)}#ref=exbridge-news-item">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
+${x.cardDesc ? `<p class="nc-note">${h(x.cardDesc)}</p>` : ''}
+${qa && (qa.q || qa.a) ? `<div class="nc-qa"><p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
+${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}…</p>` : ''}${qa.a ? `<p><span class="who">答弁　${h(qa.a.who)}</span><br>${h(qa.a.text)}…</p>` : ''}</div>` : ''}
+${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
+<div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>
+</section>
+${same.length ? `<section class="nc-box"><h2>同じテーマのほかのニュース</h2><ul>${same.map((y) => `<li><a href="${attr(itemUrl(y))}">${h(y.headline)}</a>（${h(y.source)}・${h(dayJa(y.day))}）</li>`).join('')}</ul></section>` : ''}
+<p class="nc-days"><a href="${BASE}/${x.day}.html">${h(dayJa(x.day))}のカード一覧</a><a href="${BASE}/">最新のカード</a></p>
+<p class="nc-note">見出しは${h(x.source)}の投稿の1行目です。記事の中身は元の記事でご確認ください。カードは国会会議録・質問主意書・日本銀行の統計などの公開データから、株式会社エクスブリッジが作っています。</p>
+</main>${styles}`
+  const ldItem = [
+    { '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, inLanguage: 'ja', description: desc, datePublished: x.day,
+      isPartOf: { '@type': 'CollectionPage', name: NAME, url: `${BASE}/` }, about: x.trackerName || x.kind, relatedLink: [x.card, x.newsUrl || x.post] },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: NAME, item: `${BASE}/` },
+      { '@type': 'ListItem', position: 3, name: dayJa(x.day), item: `${BASE}/${x.day}.html` },
+      { '@type': 'ListItem', position: 4, name: x.headline, item: url }] },
+  ]
+  await fs.writeFile(path.join(OUT, x.day, `${x.id}.html`), shell(title, desc, url, body, ldItem))
+}
+
 // サイトマップ（lastmod は本当の更新日。索引に毎回 now を打たない＝reference_sitemap_lastmod_and_gsc_traps）
-const urls = [{ loc: `${BASE}/`, last: days[0] }, ...days.map((d) => ({ loc: `${BASE}/${d}.html`, last: d }))]
+const urls = [{ loc: `${BASE}/`, last: days[0] }, ...days.map((d) => ({ loc: `${BASE}/${d}.html`, last: d })), ...withId.map((x) => ({ loc: itemUrl(x), last: x.day }))]
 await fs.writeFile(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u.loc}</loc><lastmod>${u.last}</lastmod></url>`).join('\n')}\n</urlset>\n`)
-console.log(`news: index（${recentItems.length}件）+ 日ごと${days.length}ページ + sitemap.xml（全${items.length}件・元データ ${data.generated}）`)
+console.log(`news: index（${recentItems.length}件）+ 日ごと${days.length}ページ + 1件ごと${withId.length}ページ + sitemap.xml（全${items.length}件・元データ ${data.generated}）`)
 void json
