@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "seisei-ai-gyosei-dx",
+    "name": "生成AIと行政DX",
+    "seo_title": "生成AIと行政DXの研究｜東海の大学の論文・科研費と国会の議論",
+    "lead": "生成AI（ChatGPTなどの大規模言語モデル）と、行政・自治体のデジタル化について、東海三県（愛知・岐阜・三重）の大学の研究者が何を研究しているかと、国会で何が議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "生成AI（社会・教育・経営・心理など）",
+        "search": "\"generative AI\"|\"large language model\"|\"large language models\"|ChatGPT",
+        "fields": [
+          33,
+          18,
+          14,
+          32,
+          12,
+          20
+        ],
+        "sort": "publication_date:desc",
+        "limit": 80
+      },
+      {
+        "label": "生成AI（情報）",
+        "search": "\"generative AI\"|\"large language model\"|\"large language models\"|ChatGPT",
+        "fields": [
+          17
+        ],
+        "sort": "cited_by_count:desc",
+        "limit": 40
+      },
+      {
+        "label": "行政のデジタル化",
+        "search": "\"e-government\"|\"digital government\"|\"public administration\"|\"local government\"|municipal|municipality",
+        "and": "digital|digitalization|\"digital transformation\"|AI|\"artificial intelligence\"",
+        "sort": "publication_date:desc",
+        "limit": 40
+      }
+    ],
+    "kaken": [
+      "生成AI",
+      "大規模言語モデル",
+      "ChatGPT",
+      "行政 デジタル",
+      "自治体 DX",
+      "行政 AI",
+      "自治体 AI"
+    ],
+    "trackers": [
+      "ai-agent",
+      "ai-hou",
+      "digital-minshu",
+      "ai-kodomo"
+    ],
+    "kaken_must": "生成AI|生成ＡＩ|生成系AI|生成的AI|大規模言語モデル|LLM|ＬＬＭ|ChatGPT|GPT|対話型AI|基盤モデル|行政|自治体|地方公共団体|政府|公共サービス|電子政府|ガバメント|公務"
+  }
+]

@@ -14,6 +14,7 @@
 #   bash scripts/deploy.sh politech   # exbridge: politech/（政治・政策キーワード）
 #   bash scripts/deploy.sh outsourcing # exbridge: outsourcing/
 #   bash scripts/deploy.sh vibeblog   # exbridge: vibeblog/（VWorkブログの移設先）
+#   bash scripts/deploy.sh academic   # exbridge: academic/（論文トラッカー・東海の大学の研究×国会）
 #   bash scripts/deploy.sh news       # exbridge: news/（ニュースと国会の記録カード・毎時）
 #   bash scripts/deploy.sh all
 #
@@ -121,6 +122,12 @@ if [ "$what" = "vibeblog" ] || [ "$what" = "all" ]; then
   # 中身が変わったファイルだけを1接続で送る（2026-10-07。以前は約285ファイルを1つずつ別接続で送っていた。
   # 日付だけ違うページは送らない。記録は kpayload/outputs/put_changed_vibeblog.json）
   /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp vibeblog || rc=1
+fi
+
+if [ "$what" = "academic" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: academic/ =="
+  # build-academic.ts は exbridge_jp/academic/ に直接書く。研究者ごとのページが多いので、中身が変わったものだけ1接続で送る
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp academic || rc=1
 fi
 
 exit $rc
