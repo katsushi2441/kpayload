@@ -35,6 +35,15 @@ TOKAI = {
     "I24286346": "岐阜聖徳学園大学", "I173865709": "岐阜薬科大学", "I153293158": "皇學館大学", "I171559596": "鈴鹿医療科学大学",
     "I13621637": "四日市大学", "I8717472": "名古屋外国語大学", "I100294933": "名古屋女子大学",
 }
+# 関東の主な10大学（2026-10-21 ユーザー指示「関東の大学・研究者も入れて」）。返信で当たる論文を増やすため。
+# 1テーマあたり関東の論文は KANTO_LIMIT 本まで（東海を軸にし、ページが増えすぎないように）
+KANTO = {
+    "I74801974": "東京大学", "I203951103": "慶應義塾大学", "I150744194": "早稲田大学", "I114531698": "東京科学大学",
+    "I111428342": "一橋大学", "I146399215": "筑波大学", "I161296585": "東京理科大学", "I159385669": "千葉大学",
+    "I180203408": "横浜国立大学", "I16656306": "明治大学",
+}
+KANTO_LIMIT = 100
+KANTO_JA = sorted(set(KANTO.values()) | {"東京工業大学", "東京医科歯科大学"})
 # KAKEN の所属名で東海の大学かを見る（OpenAlex に無い大学も含める）
 TOKAI_JA = sorted(set(TOKAI.values()) | {"愛知大学", "名古屋経済大学", "東海学園大学", "至学館大学", "名古屋学芸大学", "人間環境大学",
                                           "岐阜協立大学", "朝日大学", "岐阜女子大学", "中部学院大学", "三重県立看護大学", "名古屋芸術大学",
@@ -66,8 +75,9 @@ def and_ok(expr: str, text: str) -> bool:
     return any(re.search(r"\b" + re.escape(a.strip('"')) + r"\b", text, re.I) for a in expr.split("|"))
 
 
-def openalex(q: dict) -> list[dict]:
-    f = ["institutions.id:" + "|".join(TOKAI), "from_publication_date:" + SINCE, "title_and_abstract.search:" + q["search"]]
+def openalex(q: dict, region: str = "東海") -> list[dict]:
+    insts = TOKAI if region == "東海" else KANTO
+    f = ["institutions.id:" + "|".join(insts), "from_publication_date:" + SINCE, "title_and_abstract.search:" + q["search"]]
     if q.get("fields"):
         f.append("primary_topic.field.id:" + "|".join(str(x) for x in q["fields"]))
     url = ("https://api.openalex.org/works?" + urllib.parse.urlencode({
@@ -81,9 +91,10 @@ def openalex(q: dict) -> list[dict]:
         if q.get("and") and not and_ok(q["and"], text):
             continue
         authors = []
+        insts_map = TOKAI if region == "東海" else KANTO
         for a in w.get("authorships") or []:
-            insts = [i.get("id", "").split("/")[-1] for i in a.get("institutions") or []]
-            tok = [TOKAI[i] for i in insts if i in TOKAI]
+            ids = [i.get("id", "").split("/")[-1] for i in a.get("institutions") or []]
+            tok = [insts_map[i] for i in ids if i in insts_map]
             authors.append({"name": a["author"].get("display_name"), "openalex": (a["author"].get("id") or "").split("/")[-1],
                             "orcid": a["author"].get("orcid"), "tokai": tok})
         if not any(a["tokai"] for a in authors):
@@ -92,8 +103,8 @@ def openalex(q: dict) -> list[dict]:
         out.append({"id": w["id"].split("/")[-1], "doi": w.get("doi"), "title": w.get("title"), "date": w.get("publication_date"),
                     "type": w.get("type"), "venue": ((loc.get("source") or {}).get("display_name")), "url": w.get("doi") or loc.get("landing_page_url") or w["id"],
                     "cited": w.get("cited_by_count", 0), "abstract": abstract(w.get("abstract_inverted_index"))[:2500],
-                    "lang": w.get("language"), "topic": ((w.get("primary_topic") or {}).get("display_name")), "authors": authors, "group": q["label"]})
-        if len(out) >= q.get("limit", 50):
+                    "lang": w.get("language"), "topic": ((w.get("primary_topic") or {}).get("display_name")), "authors": authors, "group": q["label"], "region": region})
+        if len(out) >= (q.get("limit", 50) if region == "東海" else q.get("kanto_limit", 50)):
             break
     return out
 
@@ -127,7 +138,7 @@ def clean(works: list[dict]) -> list[dict]:
 def kaken(words: list[str]) -> list[dict]:
     seen, out = set(), []
     for w in words:
-        for univ in TOKAI_JA:
+        for univ in TOKAI_JA + KANTO_JA:
             url = "https://cir.nii.ac.jp/opensearch/projects?" + urllib.parse.urlencode({"q": f"{w} {univ}", "format": "json", "count": 50, "from": SINCE[:4]})
             for it in get(url).get("items", []) or []:
                 crid = it["link"]["@id"].rsplit("/", 1)[-1]
@@ -141,7 +152,8 @@ def kaken(words: list[str]) -> list[dict]:
                 for r in d.get("researcher") or []:
                     aff = val(r.get("jpcoar:affiliationName"), "ja") or ""
                     res.append({"name": val(r.get("foaf:name"), "ja"), "crid": (r.get("@id") or "").rsplit("/", 1)[-1],
-                                "affiliation": aff, "role": r.get("role"), "tokai": next((u for u in TOKAI_JA if u in aff), "")})
+                                "affiliation": aff, "role": r.get("role"), "tokai": next((u for u in TOKAI_JA + KANTO_JA if u in aff), ""),
+                                "region": "東海" if any(u in aff for u in TOKAI_JA) else ("関東" if any(u in aff for u in KANTO_JA) else "")})
                 if not any(r["tokai"] for r in res):
                     continue
                 desc = ""
@@ -217,12 +229,14 @@ def main() -> None:
             continue
         print("==", th["name"], flush=True)
         works, ids = [], set()
-        for q in th["openalex"]:
-            for w in openalex(q):
-                if w["id"] not in ids:
-                    ids.add(w["id"])
-                    works.append(w)
-            print(f"  OpenAlex「{q['label']}」まで {len(works)} 本", flush=True)
+        for region in ("東海", "関東"):
+            for q in th["openalex"]:
+                q = dict(q, kanto_limit=-(-KANTO_LIMIT // len(th["openalex"])))
+                for w in openalex(q, region):
+                    if w["id"] not in ids:
+                        ids.add(w["id"])
+                        works.append(w)
+                print(f"  OpenAlex {region}「{q['label']}」まで {len(works)} 本", flush=True)
         works = clean(works)
         projects = kaken(th["kaken"])
         data = {"theme": th, "fetched": time.strftime("%Y-%m-%d"), "works": works, "projects": projects, "kokkai": kokkai(th["trackers"])}

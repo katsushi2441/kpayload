@@ -2,8 +2,8 @@
  "theme": {
   "slug": "fintech-blockchain",
   "name": "ブロックチェーン・ステーブルコインとフィンテック",
-  "seo_title": "ブロックチェーン・フィンテックの研究｜東海の大学の論文・科研費と国会の議論",
-  "lead": "ブロックチェーン、暗号資産・ステーブルコイン、デジタル通貨、Web3とフィンテックについて、東海三県（愛知・岐阜・三重）の大学の研究者が何を研究しているかと、国会で何が議論されているかを、1ページで並べました。",
+  "seo_title": "ブロックチェーン・フィンテックの研究｜東海・関東の大学の論文・科研費と国会の議論",
+  "lead": "ブロックチェーン、暗号資産・ステーブルコイン、デジタル通貨、Web3とフィンテックについて、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、国会で何が議論されているかを、1ページで並べました。",
   "openalex": [
    {
     "label": "ブロックチェーン・暗号資産・フィンテック",
@@ -65,7 +65,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7167455040",
@@ -119,7 +120,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7163889303",
@@ -161,7 +163,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7155485944",
@@ -197,7 +200,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7127934633",
@@ -221,7 +225,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7118174368",
@@ -245,7 +250,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7168286107",
@@ -281,7 +287,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4417360269",
@@ -321,7 +328,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7116671566",
@@ -359,7 +367,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4416756118",
@@ -383,7 +392,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7140507880",
@@ -455,7 +465,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4416249651",
@@ -495,7 +506,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4416249973",
@@ -535,7 +547,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4413289715",
@@ -565,7 +578,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4412154124",
@@ -603,7 +617,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4411735343",
@@ -635,7 +650,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4408924948",
@@ -701,7 +717,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4411447210",
@@ -749,7 +766,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4407123366",
@@ -781,7 +799,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4405792460",
@@ -829,7 +848,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4405806613",
@@ -883,7 +903,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4405935017",
@@ -915,7 +936,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4403275976",
@@ -959,7 +981,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4403814708",
@@ -1013,7 +1036,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4401418504",
@@ -1067,7 +1091,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W7216277224",
@@ -1133,7 +1158,8 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4391871585",
@@ -1171,7 +1197,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4393951320",
@@ -1219,7 +1246,8 @@
      ]
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
   },
   {
    "id": "W4392567206",
@@ -1261,7 +1289,1145 @@
      "tokai": []
     }
    ],
-   "group": "ブロックチェーン・暗号資産・フィンテック"
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "東海"
+  },
+  {
+   "id": "W7221807675",
+   "doi": "https://doi.org/10.3390/s26206522",
+   "title": "Distributed Authorization in IoT and Edge Cybersecurity: A Standards-Informed Analytical Framework and Taxonomy",
+   "date": "2026-10-14",
+   "type": "article",
+   "venue": "Sensors",
+   "url": "https://doi.org/10.3390/s26206522",
+   "cited": 0,
+   "abstract": "Authorization is a core function of access control in distributed systems, where decisions and enforcement may span heterogeneous components and administrative domains. This paper presents a standards-informed taxonomy and applies it in a systematic mapping study of 90 studies on distributed authorization in IoT, edge/fog, sensor/WSN, and vehicular/V2X environments, available from 2020 through June 2026. The studies are classified according to six dimensions: policy governance, decision basis, identity and attribute management, PDP–PEP architecture, trust establishment, and operational assurance and auditability. We also examine their correspondence with authorization-relevant Zero Trust Architecture tenets and analyze the functional roles of distributed ledger technologies and smart contracts. The mapping shows that Distributed PDP/Local PEP is the dominant architectural pattern, while architectural distribution does not necessarily imply decentralized policy governance, identity and attribute management, or trust establishment. Within the mapped corpus, DLTs and/or smart contracts are widely used, but their use alone does not establish decentralization or complete authorization-lifecycle control. Overall, the results support treating distributed authorization as a combination of related but distinct design dimensions and highlight remaining challenges in lifecycle control, interoperability, delegation-oriented authorization, and operational evaluation.",
+   "lang": "en",
+   "topic": "Access Control and Trust",
+   "authors": [
+    {
+     "name": "Ryu Watanabe",
+     "openalex": "A5011997850",
+     "orcid": "https://orcid.org/0009-0000-0461-2053",
+     "tokai": []
+    },
+    {
+     "name": "Toshiaki Tanaka",
+     "openalex": "A5106407277",
+     "orcid": "https://orcid.org/0009-0006-1656-9500",
+     "tokai": []
+    },
+    {
+     "name": "Jun Kurihara",
+     "openalex": "A5026070976",
+     "orcid": "https://orcid.org/0000-0002-4923-8824",
+     "tokai": [
+      "東京科学大学"
+     ]
+    },
+    {
+     "name": "Toru Nakamura",
+     "openalex": "A5102027440",
+     "orcid": "https://orcid.org/0000-0003-2530-648X",
+     "tokai": []
+    },
+    {
+     "name": "Ayumu Kubota",
+     "openalex": "A5006183398",
+     "orcid": "https://orcid.org/0009-0008-1337-311X",
+     "tokai": []
+    },
+    {
+     "name": "Kouichi Sakurai",
+     "openalex": "A5001126368",
+     "orcid": "https://orcid.org/0000-0003-4621-1674",
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7222343002",
+   "doi": "https://doi.org/10.1049/pbpc086e_ch2",
+   "title": "The foundations of Web 3.0: decentralization, blockchain, and smart contracts",
+   "date": "2026-10-14",
+   "type": "book-chapter",
+   "venue": null,
+   "url": "https://doi.org/10.1049/pbpc086e_ch2",
+   "cited": 0,
+   "abstract": "In recent years, we have been observing a shift from the platform-based Web 2.0 to the decentralized Web3, marking a significant change in how digital trust is built on the Internet. Power is moved from centralized intermediaries to clear, mathematically proven protocols. This chapter, which lays out the technical basics of the Web 3.0 stack, looks at the combination of Distributed Ledger Technology, cryptographic consensus, and programmable logic. We examine the movement from closed to open, permissionless systems. We also dive into the technical aspects of various consensus models, like Proof of Work (PoW), Proof of Stake (PoS), Practical Byzantine Fault Tolerance (PBFT), and Directed Acyclic Graphs (DAGs). Additionally, the chapter discusses how smart contracts and programmable token standards create new socio-economic models, focusing on decentralized finance, the tokenized creator economy, and identity layers. To provide a thorough and fair analysis, we also look at the major technical and regulatory challenges the ecosystem currently faces. More specifically, we discuss the Scalability Trilemma and issues with international law. By combining up-to-date research with new trends in Zero-Knowledge Proofs and modular structures, this chapter outlines a clear path for understanding the future of the decentralized web.",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Kien Nguyen",
+     "openalex": "A5121754005",
+     "orcid": "https://orcid.org/0000-0003-0400-3084",
+     "tokai": [
+      "千葉大学"
+     ]
+    },
+    {
+     "name": "Minh Thuy Le",
+     "openalex": "A5158781977",
+     "orcid": null,
+     "tokai": [
+      "千葉大学"
+     ]
+    },
+    {
+     "name": "Phi Le Nguyen",
+     "openalex": "A5058485829",
+     "orcid": "https://orcid.org/0000-0001-6547-7641",
+     "tokai": [
+      "千葉大学"
+     ]
+    },
+    {
+     "name": "Hiroo Sekiya",
+     "openalex": "A5077031664",
+     "orcid": "https://orcid.org/0000-0003-3557-1463",
+     "tokai": [
+      "千葉大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7221669271",
+   "doi": "https://doi.org/10.1177/14759217261492299",
+   "title": "Non-contact acoustic-visual diagnosis of bridge expansion joint networks: Inspection and health monitoring",
+   "date": "2026-10-13",
+   "type": "article",
+   "venue": "Structural Health Monitoring",
+   "url": "https://doi.org/10.1177/14759217261492299",
+   "cited": 0,
+   "abstract": "Bridge expansion joints are critical yet failure-prone components whose malfunction can lead to traffic-safety risks. Conventional inspections rely heavily on lane closures and manual checks, which are inefficient for large-scale bridge networks and often fail to detect concealed defects. To address these limitations, this study develops a non-contact acoustic-visual diagnostic framework for bridge expansion joint networks, supporting automated, scalable, and traffic-interruption-free inspection and monitoring. The framework integrates vehicle-induced acoustic responses with image-based event information through a compact acoustic-camera sensing configuration and an edge-cloud collaborative architecture. Visual information is used for vehicle-event detection, acoustic-signal synchronization, and vehicle-type routing, while acoustic signatures serve as the primary condition-sensitive input for unsupervised anomaly detection. Within the investigated category of modular H-beam expansion joints with rubber bearings, the portable model reduces dependence on site-specific labeled defect data and bridge-specific retraining, whereas the fixed monitoring mode requires site-specific baseline calibration. Full-scale laboratory experiments established the relationship between representative high-risk defects and acoustic signatures, providing the basis for the diagnostic model design. A Hybrid-Autoencoder was then developed and evaluated, with ablation analysis confirming the contribution of crossed multi-head (CM)-Attention, tokenization/compression, and structured feature fusion. Field validation on 28 in-service bridges demonstrated the system’s ability to identify anomalous joints, including concealed internal defects missed by surface visual inspection. A subsequent 1-year deployment further verified system stability under realistic traffic and environmental conditions. The results demonstrate the practical potential of the proposed acoustic-visual diagnostic framework for preventive maintenance within the investigated expansion-joint category.",
+   "lang": "en",
+   "topic": "Structural Health Monitoring Techniques",
+   "authors": [
+    {
+     "name": "Jiancheng Gu",
+     "openalex": "A5061176123",
+     "orcid": "https://orcid.org/0000-0002-2666-6172",
+     "tokai": []
+    },
+    {
+     "name": "Yue Wang",
+     "openalex": "A5100372147",
+     "orcid": "https://orcid.org/0009-0009-8443-1652",
+     "tokai": []
+    },
+    {
+     "name": "Zifan Zhou",
+     "openalex": "A5158598936",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Zhengtao Xie",
+     "openalex": "A5101323477",
+     "orcid": "https://orcid.org/0009-0001-1446-2308",
+     "tokai": []
+    },
+    {
+     "name": "Jiandong Zhang",
+     "openalex": "A5158631849",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kai Xue",
+     "openalex": "A5080445426",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Xinhao He",
+     "openalex": "A5003979691",
+     "orcid": "https://orcid.org/0000-0002-7162-6719",
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7221032705",
+   "doi": "https://doi.org/10.61194/ijtc.v7i4.2173",
+   "title": "Blockchain for Environmental Accountability: An Experimental Approach to Sustainable Tourism Reporting",
+   "date": "2026-10-08",
+   "type": "article",
+   "venue": "Ilomata International Journal of Tax and Accounting",
+   "url": "https://doi.org/10.61194/ijtc.v7i4.2173",
+   "cited": 0,
+   "abstract": "This study evaluates the application of blockchain technology to enhance environmental accountability in sustainable tourism reporting in Bali, as a response to the risk of greenwashing practices. Given that traditional reporting systems often lack standardization and are vulnerable to manipulation, this study aims to empirically test the impact of blockchain integration on accuracy, efficiency, and stakeholder trust. Using a quasi-experimental method with a sample of 60 tourism businesses divided into treatment and control groups, data was analyzed through system metrics, surveys, and interviews. The results showed that blockchain significantly improved reporting accuracy by 18.6% and accelerated verification time by 67% (9.4 days faster). Furthermore, the use of smart contracts was shown to increase stakeholder trust and reduce audit costs with a return on investment ratio of 2.8:1. Theoretically, this study validates how automation and data immutability strengthen environmental accountability structures in complex tourism governance. In conclusion, blockchain technology is effective in increasing transparency and reporting efficiency, although its adoption by SMEs remains hampered by cost and technical barriers. The practical implications of this research emphasize the importance of developing user-friendly interfaces as well as financial support to ensure inclusive digital transformation for the sustainability of the tourism industry.",
+   "lang": null,
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Komang Adi Kurniawan Saputra",
+     "openalex": "A5045661600",
+     "orcid": "https://orcid.org/0000-0001-7550-4279",
+     "tokai": []
+    },
+    {
+     "name": "Putu Ayu Sita Laksmi",
+     "openalex": "A5085505913",
+     "orcid": "https://orcid.org/0000-0001-8947-5966",
+     "tokai": []
+    },
+    {
+     "name": "Naori Miyazawa",
+     "openalex": "A5047219200",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7214204415",
+   "doi": "https://doi.org/10.48550/arxiv.2609.28206",
+   "title": "UNITE-AUDIO: Joint Learning of Continuous Tokenization and Latent Flow Matching for Text-to-Audio Generation",
+   "date": "2026-09-23",
+   "type": "preprint",
+   "venue": "arXiv (Cornell University)",
+   "url": "https://doi.org/10.48550/arxiv.2609.28206",
+   "cited": 0,
+   "abstract": "Text-to-audio (TTA) generation aims to synthesize realistic audio that faithfully reflects natural-language descriptions. Most TTA systems adopt a two-stage latent paradigm: an audio tokenizer is optimized for reconstruction and then frozen, after which a generative model is trained in the resulting latent space. However, reconstruction-oriented representations may be suboptimal for generation, motivating joint representation and generative learning. To this end, we introduce Unite-Audio, to our knowledge, is the first to jointly learn continuous audio representations and latent flow matching for TTA. By coupling reconstruction with self-supervised generative prediction, Unite-Audio allows the generative objective to directly shape the latent space rather than treating it as a fixed intermediate representation. We further employ Flow-GRPO post-training to improve text-conditioned generation. Experiments show competitive TTA performance with a compact latent flow model, while ablation studies confirm the benefit of jointly learning the audio representation and generative model. Audio samples are available at https://runwushi.github.io/Unite-Audio.",
+   "lang": null,
+   "topic": "Speech Recognition and Synthesis",
+   "authors": [
+    {
+     "name": "Runwu Shi",
+     "openalex": "A5080269657",
+     "orcid": "https://orcid.org/0000-0001-9097-9619",
+     "tokai": []
+    },
+    {
+     "name": "Kai Li",
+     "openalex": "A5152762993",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yujin Wang",
+     "openalex": "A5152659580",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Dong Yang",
+     "openalex": "A5152703306",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Jiahui Li",
+     "openalex": "A5152766885",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Jiang Wang",
+     "openalex": "A5152613888",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Chang Zeng",
+     "openalex": "A5152842224",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Benjamin Yen",
+     "openalex": "A5152851531",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Ashizawa Takeshi",
+     "openalex": "A5152583779",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Chunxiang Jin",
+     "openalex": "A5152934459",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kazuhiro Nakadai",
+     "openalex": "A5152872594",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7213744084",
+   "doi": "https://doi.org/10.1007/978-3-032-38594-9_1",
+   "title": "Simulation of Circular Product Management Based on a Blockchain Platform",
+   "date": "2026-09-20",
+   "type": "conference-paper",
+   "venue": "IFIP advances in information and communication technology",
+   "url": "https://doi.org/10.1007/978-3-032-38594-9_1",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Sustainable Supply Chain Management",
+   "authors": [
+    {
+     "name": "Sogo Hirata",
+     "openalex": "A5152294822",
+     "orcid": "https://orcid.org/0009-0006-6213-5869",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yuto Izumida",
+     "openalex": "A5152261582",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Shinichi Fukushige",
+     "openalex": "A5069384475",
+     "orcid": "https://orcid.org/0009-0005-7097-8164",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7213306937",
+   "doi": "https://doi.org/10.48550/arxiv.2609.14195",
+   "title": "Transparent Identity Verification Approach Using MPC and Efficient Credential Status Handling",
+   "date": "2026-09-12",
+   "type": "preprint",
+   "venue": "arXiv (Cornell University)",
+   "url": "https://doi.org/10.48550/arxiv.2609.14195",
+   "cited": 0,
+   "abstract": "A secure and privacy-preserving identity verification process is essential for digital ecosys- tems. Current eKYC frameworks that rely on Zero-Knowledge Proofs (ZKPs) face high computational cost, rigid circuit design, complex integration, and expensive on-chain verification. The W3C 2021 BitString- based credential status mechanism also suffers from inefficient updates and poor scalability in large- scale deployments. We propose a transparent and cost-effective identity verification framework based on Multi-Party Computation (MPC). It enables private off-chain code execution and produces runtime proofs anchored to a blockchain. The framework introduces a multidimensional bit-matrix model with efficient compression. Using ZSTD, the credential data is reduced to 76 bytes compared to 140 bytes with GZIP, cutting storage and bandwidth costs. The system also supports fine-grained status updates and Layer-2 blockchain anchoring for tamper-evident, low-cost verification. The system employs reusable verifiable presentations (VPs) with unique access tokens, enabling cost-free verification and stronger access control. Selective disclosure preserves user control and strengthens privacy. Finally, the system integrates SHA3 hashing and Falcon post-quantum signatures. This guarantees robustness against quantum attacks, transparency, and scalability. It is a future-proof solution for national-scale identity verification, as demonstrated by experimental findings and security studies that validate its robustness and applicability.",
+   "lang": null,
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Istiaque Ahmed",
+     "openalex": "A5071751143",
+     "orcid": "https://orcid.org/0000-0002-3112-6568",
+     "tokai": []
+    },
+    {
+     "name": "Shoji Kasahara",
+     "openalex": "A5050684508",
+     "orcid": "https://orcid.org/0000-0001-9785-8350",
+     "tokai": []
+    },
+    {
+     "name": "Kentaroh Toyoda",
+     "openalex": "A5066312369",
+     "orcid": "https://orcid.org/0000-0002-6233-3121",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Tadashi Nakano",
+     "openalex": "A5122897323",
+     "orcid": "https://orcid.org/0000-0003-3354-8964",
+     "tokai": []
+    },
+    {
+     "name": "Tran, Thi Hong",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7213036107",
+   "doi": "https://doi.org/10.48550/arxiv.2609.12536",
+   "title": "When Is Inaction a Mistake? Continuation-Aware Auditing of PPO Trading Policies",
+   "date": "2026-09-11",
+   "type": "preprint",
+   "venue": "arXiv (Cornell University)",
+   "url": "https://doi.org/10.48550/arxiv.2609.12536",
+   "cited": 0,
+   "abstract": "An optimal reference may recommend trading when a learned policy chooses inaction, but the recommendation depends on information and future decisions. We introduce a four-stage audit for frozen proximal policy optimization policies without retraining. It examines deployment occupancy, matches current information, tests isolated deviations under incumbent continuation, and evaluates repeated deployment of observation-based alternatives. In controlled linear-Gaussian simulations, information matching explains part of the disagreement, while continuation changes its interpretation. At unit observation noise, incumbent continuation reverses 99.3% of projected-hard missed-advantage mass; repeated projected-rule deployment improves all 50 policies. These comparisons distinguish isolated action changes from policy replacement. Historical Bitcoin/Tether (BTCUSDT) replay applies this deployment perspective to a hand-specified intervention selected using 2024 data and frozen for 2025. Daily net reward improves by 135.03 basis points, with gains in 46 of 50 policies, primarily through lower turnover costs. The audit clarifies what oracle-flagged inaction implies for deployed decision making.",
+   "lang": null,
+   "topic": "Stock Market Forecasting Methods",
+   "authors": [
+    {
+     "name": "Xingfei Zeng",
+     "openalex": "A5151656710",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Xin Zhong",
+     "openalex": "A5151659114",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Nanting Li",
+     "openalex": "A5151672797",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Ziyang Zhong",
+     "openalex": "A5151689288",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Lei Xiao",
+     "openalex": "A5123111463",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Guanghui Lü",
+     "openalex": "A5101399795",
+     "orcid": "https://orcid.org/0009-0001-5810-9290",
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7211939797",
+   "doi": "https://doi.org/10.1016/j.comnet.2026.112740",
+   "title": "Beyond heuristics in blockchain: Toward a principled characterization of node availability via a data-driven approach",
+   "date": "2026-09-08",
+   "type": "article",
+   "venue": "Computer Networks",
+   "url": "https://doi.org/10.1016/j.comnet.2026.112740",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Mitsuyoshi Imamura",
+     "openalex": "A5049250867",
+     "orcid": "https://orcid.org/0000-0002-7833-775X",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7214019392",
+   "doi": "https://doi.org/10.1109/isncc70543.2026.11693880",
+   "title": "A Blockchain-Based Identity Management System Resistant to Ransomware",
+   "date": "2026-09-01",
+   "type": "conference-paper",
+   "venue": "International Symposium on Networks, Computers and Communications (ISNCC)",
+   "url": "https://doi.org/10.1109/isncc70543.2026.11693880",
+   "cited": 0,
+   "abstract": "",
+   "lang": null,
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7204580882",
+   "doi": "https://doi.org/10.1007/978-3-032-36766-2_1",
+   "title": "A Serverless Destination Verification System for Cold Wallets Using Smart Contracts",
+   "date": "2026-08-28",
+   "type": "conference-paper",
+   "venue": "Lecture notes in computer science",
+   "url": "https://doi.org/10.1007/978-3-032-36766-2_1",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Tomoki Orihara",
+     "openalex": "A5148563932",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7204583046",
+   "doi": "https://doi.org/10.1007/978-3-032-36766-2_3",
+   "title": "An AI Smart Contract System with Incentivized Off-Chain Training and On-Chain Model Evaluation",
+   "date": "2026-08-28",
+   "type": "conference-paper",
+   "venue": "Lecture notes in computer science",
+   "url": "https://doi.org/10.1007/978-3-032-36766-2_3",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Yuta Yoshida",
+     "openalex": "A5148544784",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7204593119",
+   "doi": "https://doi.org/10.1007/978-3-032-36766-2_2",
+   "title": "Public-Blockchain-Based Federated Learning with Fully On-Chain Aggregation",
+   "date": "2026-08-28",
+   "type": "conference-paper",
+   "venue": "Lecture notes in computer science",
+   "url": "https://doi.org/10.1007/978-3-032-36766-2_2",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Privacy-Preserving Technologies in Data",
+   "authors": [
+    {
+     "name": "Taichi Matsumoto",
+     "openalex": "A5140710862",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Taisei Takahashi",
+     "openalex": "A5045846721",
+     "orcid": "https://orcid.org/0000-0002-3831-7965",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7204170221",
+   "doi": "https://doi.org/10.1016/j.jisa.2026.104610",
+   "title": "Security analysis on blockchain-based public key encryption with keyword search for medical data sharing in cloud environment",
+   "date": "2026-08-25",
+   "type": "article",
+   "venue": "Journal of Information Security and Applications",
+   "url": "https://doi.org/10.1016/j.jisa.2026.104610",
+   "cited": 0,
+   "abstract": "Banik and Kumar (Journal of Information Security and Applications 2023) proposed a blockchain-based public key encryption with keyword search for medical data sharing in cloud environments. In this comment paper, we show that the Banik-Kumar scheme leaks keyword information from both ciphertexts and trapdoors.",
+   "lang": "en",
+   "topic": "Cryptography and Data Security",
+   "authors": [
+    {
+     "name": "Keita Emura",
+     "openalex": "A5038506185",
+     "orcid": "https://orcid.org/0000-0002-8969-3581",
+     "tokai": []
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7203967273",
+   "doi": "https://doi.org/10.1007/978-3-032-36773-0_1",
+   "title": "A Federated Learning Framework Using Partial Verification on Blockchain",
+   "date": "2026-08-22",
+   "type": "conference-paper",
+   "venue": "Lecture notes in computer science",
+   "url": "https://doi.org/10.1007/978-3-032-36773-0_1",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Kousei Okutsu",
+     "openalex": "A5147831820",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Taisei Takahashi",
+     "openalex": "A5045846721",
+     "orcid": "https://orcid.org/0000-0002-3831-7965",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7203994117",
+   "doi": "https://doi.org/10.1007/978-3-032-36773-0_6",
+   "title": "Trustless Supply Chain System Utilizing Multiple Blockchains",
+   "date": "2026-08-22",
+   "type": "conference-paper",
+   "venue": "Lecture notes in computer science",
+   "url": "https://doi.org/10.1007/978-3-032-36773-0_6",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Aoi Kadosugi",
+     "openalex": "A5140682591",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Kazumasa Omote",
+     "openalex": "A5038962833",
+     "orcid": "https://orcid.org/0000-0002-1371-4454",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7202382418",
+   "doi": "https://doi.org/10.48550/arxiv.2608.11785",
+   "title": "TradingMoE: Routing the Right Experts in Evolving Markets",
+   "date": "2026-08-12",
+   "type": "preprint",
+   "venue": "arXiv (Cornell University)",
+   "url": "https://doi.org/10.48550/arxiv.2608.11785",
+   "cited": 0,
+   "abstract": "Large language models (LLMs) have shown strong potential for financial analysis and trading, but direct trading remains challenging because the predictive capabilities required can vary across assets, decision fields, and market conditions. Existing LLM-based trading systems either coordinate human-defined external experts or adopt conventional internal Mixture-of-Experts (MoE) routers that do not directly evaluate how individual experts contribute to trading decisions. Moreover, these routers receive no direct signal indicating when an inactive expert has become more suitable as market conditions change. We find that native router scores poorly reflect how much individual experts improve trading decisions, frequently leaving better alternatives unselected. We further reveal that token-specific expert usefulness exhibits a compact low-dimensional structure. Based on these findings, we propose TradingMoE, a trading-oriented sparse MoE that augments a frozen dense LLM with lightweight residual experts. We introduce a Query-Key router that represents the expertise required by each token under the current market context as a low-dimensional query and matches it with learnable expert keys. We further propose a sparse expert selection update mechanism that samples a few inactive experts during training and estimates whether they should replace the weakest expert in the current Top-k route. This mechanism enables the router to update expert selection as market conditions change while preserving sparse computation. Experiments against 22 baselines on stock and cryptocurrency markets show that TradingMoE improves cumulative return over the best-performing baselines by 30.89% and 30.7%, respectively. Rolling paper-trading experiments further demonstrate that its advantage persists under forward-only deployment.",
+   "lang": null,
+   "topic": "Stock Market Forecasting Methods",
+   "authors": [
+    {
+     "name": "Chang Zhou",
+     "openalex": "A5101387101",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Xingtong Yu",
+     "openalex": "A5048717995",
+     "orcid": "https://orcid.org/0000-0002-2884-8578",
+     "tokai": []
+    },
+    {
+     "name": "Minbin Huang",
+     "openalex": "A5052117191",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Zhennan Wu",
+     "openalex": "A5153443487",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Yuan Fang",
+     "openalex": "A5125484904",
+     "orcid": "https://orcid.org/0000-0002-9472-2703",
+     "tokai": []
+    },
+    {
+     "name": "Hong Cheng",
+     "openalex": "A5101984697",
+     "orcid": "https://orcid.org/0000-0002-4673-2587",
+     "tokai": []
+    },
+    {
+     "name": "张鑫明",
+     "openalex": "A5012456968",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7202212363",
+   "doi": "https://doi.org/10.1016/j.ijinfomgt.2026.103114",
+   "title": "The service variety paradox in crypto-exchanges: A stimulus-organism-response (SOR) perspective",
+   "date": "2026-08-11",
+   "type": "article",
+   "venue": "International Journal of Information Management",
+   "url": "https://doi.org/10.1016/j.ijinfomgt.2026.103114",
+   "cited": 0,
+   "abstract": "Digital platforms face a fundamental paradox: while expanding service variety is a dominant competitive strategy, it risks inducing a “paradox of choice” that confuses and deters users. This tension manifests with extreme clarity in the nascent, high-complexity market of cryptocurrency exchanges, creating a pressing empirical puzzle. To resolve this, we adopt the Stimulus-Organism-Response (SOR) perspective in a three-stage mixed-method study to investigate how platforms can strategically manage this trade-off. Our qualitative exploration (Study 1) established a capital flow schema called “inflow, roll, and go” and identified key complexity-reduction mechanisms. A subsequent survey (n = 190, Study 2) validated that perceived innovativeness and scalability are critical stimuli for service variety, which in turn drives user continuance intention. A final survey (n = 140, Study 3) confirmed that users prioritise services that bridge to the traditional financial system, forming a minimal viable structure with a variety of functions. Our meta-inferences make several key contributions, including the resolution of the service variety paradox by introducing a theoretical distinction between value-adding “real-variety” and confusing “pseudo-variety” and the development of a strategic roadmap that guides exchanges in navigating the tension between service expansion and user confusion, offering actionable insights for platform strategy in any high-velocity digital market.",
+   "lang": "en",
+   "topic": "Digital Platforms and Economics",
+   "authors": [
+    {
+     "name": "Cheuk Hang Au",
+     "openalex": "A5083698633",
+     "orcid": "https://orcid.org/0000-0002-2121-8573",
+     "tokai": []
+    },
+    {
+     "name": "Po-Hsu Shieh",
+     "openalex": "A5098931009",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Vladimir Nurbaev",
+     "openalex": "A5146478637",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kris M. Y. Law",
+     "openalex": "A5028803159",
+     "orcid": "https://orcid.org/0000-0003-3659-0033",
+     "tokai": []
+    },
+    {
+     "name": "Kevin K.W. Ho",
+     "openalex": "A5003137655",
+     "orcid": "https://orcid.org/0000-0003-1304-0573",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7202069275",
+   "doi": "https://doi.org/10.3390/math14162886",
+   "title": "Modeling Investment Decisions in Renewable Energy and Cryptocurrency Mining Under Uncertainty",
+   "date": "2026-08-10",
+   "type": "article",
+   "venue": "Mathematics",
+   "url": "https://doi.org/10.3390/math14162886",
+   "cited": 0,
+   "abstract": "Operations research has long contributed to addressing energy and environmental challenges through mathematical modeling and decision-support methods. In particular, numerous studies have examined investment planning, capacity expansion, and policy design for renewable energy systems under uncertainty. As efforts to achieve carbon neutrality intensify worldwide, the expansion of renewable energy has become a critical policy and investment priority. However, the inherent variability of renewable power generation and the substantial upfront investment costs continue to hinder investment decisions and limit the adoption of renewable energy. To address the economic challenges associated with renewable energy penetration, recent studies have explored the use of cryptocurrency mining as a means of monetizing surplus renewable electricity. This study contributes to this emerging research stream by developing a real options model that captures the interaction between renewable energy investment and cryptocurrency mining under uncertainty. The numerical results show that cryptocurrency mining increases the value of renewable energy investment and accelerates investment by lowering the investment threshold. Moreover, the equilibrium determination of mining capacity reduces the renewable energy investment threshold by approximately 40.5% compared with the benchmark in which mining capacity is specified exogenously.",
+   "lang": "en",
+   "topic": "Capital Investment and Risk Analysis",
+   "authors": [
+    {
+     "name": "Kazuya Ito",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0003-3137-3857",
+     "tokai": [
+      "東京理科大学"
+     ]
+    },
+    {
+     "name": "Ryo Takahashi",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "東京理科大学"
+     ]
+    },
+    {
+     "name": "Ryuta Takashima",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0001-5590-5008",
+     "tokai": [
+      "東京理科大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W4404877583",
+   "doi": "https://doi.org/10.1515/snde-2025-0030",
+   "title": "Diversifying Meltdown Risk in Cryptocurrencies",
+   "date": "2026-07-22",
+   "type": "article",
+   "venue": "Studies in Nonlinear Dynamics and Econometrics",
+   "url": "https://doi.org/10.1515/snde-2025-0030",
+   "cited": 0,
+   "abstract": "Abstract We study comovement among major cryptocurrencies from a portfolio management perspective. To this end, we develop two new statistical tools. First, we propose a new measure called the portfolio-conditional correlation defined as the correlation conditional on the portfolio return being below or above a given threshold. Second, we develop a new multivariate model named the Common Autoregressive Jump Intensity Score-based (ComARJIS) model in which the time-varying intensity of a common jump in cryptocurrency returns is formulated under the Generalized Autoregressive Score (GAS) framework. Our main findings are as follows: First, we find an adverse downside correlation: the downside correlation is higher than the upside correlation. Second, the ComARJIS model successfully shows the correlation asymmetry of cryptocurrencies. Third, and most importantly, a market-timing strategy with the common jump intensity improves the Sharpe ratio. This result suggests that time diversification could be helpful for cryptocurrency investors even if asset diversification is impossible. Fourth, the meltdown risk represented by the common jump intensity is associated with the financial market stress in the U.S.",
+   "lang": "en",
+   "topic": "Financial Risk and Volatility Modeling",
+   "authors": [
+    {
+     "name": "Yuji Sakurai",
+     "openalex": "A5019409186",
+     "orcid": "https://orcid.org/0000-0003-2425-6492",
+     "tokai": []
+    },
+    {
+     "name": "Kanji Suzuki",
+     "openalex": "",
+     "orcid": "https://orcid.org/0009-0007-6256-1080",
+     "tokai": []
+    },
+    {
+     "name": "Keiichi Goshima",
+     "openalex": "A5014235510",
+     "orcid": "https://orcid.org/0000-0002-2553-3925",
+     "tokai": [
+      "横浜国立大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7170049919",
+   "doi": "https://doi.org/10.1109/jiot.2026.3715918",
+   "title": "A Survey on Blockchain Intelligence-Based Trust Management for Internet of Vehicles",
+   "date": "2026-07-22",
+   "type": "article",
+   "venue": "IEEE Internet of Things Journal",
+   "url": "https://doi.org/10.1109/jiot.2026.3715918",
+   "cited": 0,
+   "abstract": "",
+   "lang": null,
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Zhipeng Wang",
+     "openalex": "A5100424172",
+     "orcid": "https://orcid.org/0000-0003-1089-1583",
+     "tokai": []
+    },
+    {
+     "name": "Rafidah Md Noor",
+     "openalex": "A5017116281",
+     "orcid": "https://orcid.org/0000-0001-6266-2390",
+     "tokai": []
+    },
+    {
+     "name": "Miss Laiha Mat Kiah",
+     "openalex": "A5028305832",
+     "orcid": "https://orcid.org/0000-0002-1240-5406",
+     "tokai": []
+    },
+    {
+     "name": "Kunihiko Sadakane",
+     "openalex": "A5077610103",
+     "orcid": "https://orcid.org/0000-0002-8212-3682",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Mohammad Reza Jabbarpour",
+     "openalex": "A5057606466",
+     "orcid": "https://orcid.org/0000-0003-2631-1168",
+     "tokai": []
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7168422906",
+   "doi": "https://doi.org/10.1016/j.trc.2026.105862",
+   "title": "TrajGPT-R: Generating urban mobility trajectory with reinforcement Learning-Enhanced generative Pre-trained transformer",
+   "date": "2026-07-15",
+   "type": "article",
+   "venue": "Transportation Research Part C Emerging Technologies",
+   "url": "https://doi.org/10.1016/j.trc.2026.105862",
+   "cited": 1,
+   "abstract": "Mobility trajectories are essential for understanding urban dynamics and enhancing urban planning, yet access to such data is frequently hindered by privacy concerns. This research introduces a transformative framework for generating large-scale urban mobility trajectories, employing a novel application of a transformer-based model pre-trained and fine-tuned through a two-phase process. Initially, trajectory generation is conceptualized as an offline reinforcement learning (RL) problem, with a significant reduction in vocabulary space achieved during tokenization. The integration of Inverse Reinforcement Learning (IRL) allows for the capture of trajectory-wise reward signals, leveraging historical data to infer individual mobility preferences. Subsequently, the pre-trained model is fine-tuned using the constructed reward model, effectively addressing the challenges inherent in traditional RL-based autoregressive methods, such as long-term credit assignment and handling of sparse reward environments. Comprehensive evaluations on multiple datasets illustrate that our framework markedly surpasses existing models in terms of reliability and diversity. Our findings not only advance the field of urban mobility modeling but also provide a robust methodology for simulating urban data, with significant implications for traffic management and urban development planning. The implementation is publicly available at https://github.com/Wangjw6/TrajGPT_R .",
+   "lang": "en",
+   "topic": "Traffic Prediction and Management Techniques",
+   "authors": [
+    {
+     "name": "Jiawei Wang",
+     "openalex": "A5140889529",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Chuang Yang",
+     "openalex": "A5140923067",
+     "orcid": "https://orcid.org/0000-0002-8504-0057",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Jiawei Yong",
+     "openalex": "A5134262238",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Xiaohang Xu",
+     "openalex": "A5140864280",
+     "orcid": "https://orcid.org/0000-0003-1266-9943",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Hongjun Wang",
+     "openalex": "A5140914893",
+     "orcid": "https://orcid.org/0000-0002-5396-7659",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Noboru Koshizuka",
+     "openalex": "A5012068346",
+     "orcid": "https://orcid.org/0000-0002-4728-9425",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Shintaro Fukushima",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0002-8788-5555",
+     "tokai": []
+    },
+    {
+     "name": "Ryosuke Shibasaki",
+     "openalex": "A5105206953",
+     "orcid": "https://orcid.org/0000-0001-8760-244X",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Renhe Jiang",
+     "openalex": "A5040449880",
+     "orcid": "https://orcid.org/0000-0003-2593-4638",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7203836322",
+   "doi": "https://doi.org/10.1109/compsac69091.2026.00132",
+   "title": "Accountable Fair Exchange Protocols on Blockchain",
+   "date": "2026-07-01",
+   "type": "conference-paper",
+   "venue": "IEEE Annual Computers, Software, and Applications Conference (COMPSAC)",
+   "url": "https://doi.org/10.1109/compsac69091.2026.00132",
+   "cited": 1,
+   "abstract": "",
+   "lang": null,
+   "topic": "Blockchain Technology Applications and Security",
+   "authors": [
+    {
+     "name": "Riku Mochizuki",
+     "openalex": "A5119882023",
+     "orcid": null,
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Ryosuke Abe",
+     "openalex": "A5147536289",
+     "orcid": "https://orcid.org/0000-0002-1407-2545",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Shigeya Suzuki",
+     "openalex": "A5070615114",
+     "orcid": "https://orcid.org/0000-0003-4856-9434",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7220539582",
+   "doi": null,
+   "title": "Integrating Point Cloud Features with Large Language Models for Bridge Understanding",
+   "date": "2026-07-01",
+   "type": "conference-paper",
+   "venue": "Institutional Repositories DataBase (IRDB)",
+   "url": "https://hdl.handle.net/2115/100475",
+   "cited": 0,
+   "abstract": "Automated structural inspection of bridges using LiDAR point clouds holds great promise for reducing inspection costs and improving safety. However, existing point cloud understanding methods are designed for general-purpose object-centric or indoor scenes and fail to exploit the rich structural priors inherent in civil infrastructure. We present BridgeLLM, the first multimodal large language model (LLM) framework specifically designed for bridge structural point cloud understanding. The core of BridgeLLM is BridgeSPT (Structure-Preserving Transformer), a novel hierarchical encoder that integrates five bridge-domain inductive biases: (i) adaptive hash-based voxel tokenization, (ii) parameter-free PCA structural geometric descriptors (linearity, planarity, scattering), (iii) additive geometric conditioning at every Transformer stage, (iv) dual Morton-curve serialization sensitive to bridge elongation, and (v) a learnable query bottleneck for compact LLM-aligned representations. Training follows a two-stage protocol coupling feature alignment with LoRA-based instruction tuning on Qwen2.5-7B-Instruct. Evaluated on ten real-world LiDAR bridge scans with 10,000 instruction-response pairs, BridgeSPT achieves the lowest inference latency while generating accurate structural descriptions across diverse question types-bridge classification, component identification, dimensional estimation, and free-form inspection reporting.",
+   "lang": "en",
+   "topic": "Infrastructure Maintenance and Monitoring",
+   "authors": [
+    {
+     "name": "Yu Chen",
+     "openalex": "A5157604765",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Chao Lin",
+     "openalex": "A5157642021",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "先峯 李",
+     "openalex": "A5131685059",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Pang-jo CHUN",
+     "openalex": "A5023605971",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
+  },
+  {
+   "id": "W7165389845",
+   "doi": "https://doi.org/10.65326/u7y566831",
+   "title": "The Illiquidity Premium in Tokenized Real-World Assets: Modifying Asset Pricing Models for Utility-Backed NFTs",
+   "date": "2026-06-19",
+   "type": "article",
+   "venue": "Unveiling seven continents yearbook journal",
+   "url": "https://doi.org/10.65326/u7y566831",
+   "cited": 0,
+   "abstract": "Tokenization promises to convert lumpy, illiquid real-world assets into divisible, transferable claims, yet secondary markets for these instruments remain thin and trading is infrequent. Standard asset pricing models, including the capital asset pricing model and its liquidity-adjusted extensions, were not designed for assets whose holders derive consumption, access, or governance value directly from ownership. This paper develops a conceptual asset pricing framework for utility-backed non-fungible tokens (NFTs) and tokenized real-world assets by augmenting the liquidity-adjusted capital asset pricing model with a utility (convenience) yield. The framework decomposes the required pecuniary return into a risk-free rate, a systematic liquidity-risk premium, an amortized illiquidity level premium that scales with transaction costs and turnover, and a utility-yield offset that lowers the return investors require in cash. Two analytical implications follow. First, utility backing compresses observed pecuniary returns without eliminating the underlying illiquidity premium. Second, where utility flows covary positively with illiquidity, estimates that regress pecuniary returns on liquidity proxies understate the gross illiquidity premium. An illustrative calibration, with parameter ranges drawn from the empirical tokenization literature, quantifies the mechanism rather than estimating it. The framework yields testable predictions and implications for valuation and disclosure.",
+   "lang": null,
+   "topic": "Financial Markets and Investment Strategies",
+   "authors": [
+    {
+     "name": "Mikito Takayasu",
+     "openalex": "A5138984433",
+     "orcid": "https://orcid.org/0009-0008-9398-5545",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ブロックチェーン・暗号資産・フィンテック",
+   "region": "関東"
   }
  ],
  "projects": [
@@ -1280,7 +2446,8 @@
      "crid": "1420282801202431744",
      "affiliation": "南山大学",
      "role": "principal_investigator",
-     "tokai": "南山大学"
+     "tokai": "南山大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1300,7 +2467,8 @@
      "crid": "1420282801202431744",
      "affiliation": "南山大学",
      "role": "principal_investigator",
-     "tokai": "南山大学"
+     "tokai": "南山大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1320,35 +2488,40 @@
      "crid": "1420564276161399680",
      "affiliation": "京都大学",
      "role": "principal_investigator",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "高橋 祐介",
      "crid": "1420282801198151424",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "渡辺 徹也",
      "crid": "1420564276159316864",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "酒井 貴子",
      "crid": "1420282801197129600",
      "affiliation": "大阪公立大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "小塚 真啓",
      "crid": "1420282801210797568",
      "affiliation": "岡山大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     }
    ],
    "word": "ブロックチェーン"
@@ -1368,28 +2541,32 @@
      "crid": "1420282801191973248",
      "affiliation": "電気通信大学",
      "role": "principal_investigator",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "村瀬 勉",
      "crid": "1420001326206315520",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "李 鵬",
      "crid": "1030003658583730816",
      "affiliation": "会津大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "計 宇生",
      "crid": "1420282801212475776",
      "affiliation": "国立情報学研究所",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     }
    ],
    "word": "ブロックチェーン"
@@ -1409,77 +2586,88 @@
      "crid": "1420845751164661120",
      "affiliation": "大阪大学",
      "role": "principal_investigator",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "林 秀弥",
      "crid": "1420001326230492544",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "大澤 彩",
      "crid": "1420845751160884224",
      "affiliation": "法政大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "高橋 祐介",
      "crid": "1420282801198151424",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "品田 智史",
      "crid": "1420564276187497984",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "松尾 健一",
      "crid": "1420001326225001856",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "青木 大也",
      "crid": "1420001326225120256",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "津野田 一馬",
      "crid": "1420845751144473088",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "川地 宏行",
      "crid": "1030003658516923904",
      "affiliation": "明治大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "明治大学",
+     "region": "関東"
     },
     {
      "name": "水島 郁子",
      "crid": "1420001326214811392",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "白石 大",
      "crid": "1420001326237234176",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     }
    ],
    "word": "ブロックチェーン"
@@ -1499,7 +2687,8 @@
      "crid": "1420282801212292736",
      "affiliation": "名古屋工業大学",
      "role": "principal_investigator",
-     "tokai": "名古屋工業大学"
+     "tokai": "名古屋工業大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1519,7 +2708,8 @@
      "crid": "1420282801212292736",
      "affiliation": "名古屋工業大学",
      "role": "principal_investigator",
-     "tokai": "名古屋工業大学"
+     "tokai": "名古屋工業大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1539,14 +2729,16 @@
      "crid": "1420282801183950208",
      "affiliation": "名古屋市立大学",
      "role": "principal_investigator",
-     "tokai": "名古屋市立大学"
+     "tokai": "名古屋市立大学",
+     "region": "東海"
     },
     {
      "name": "小林 直三",
      "crid": "1420845751136525696",
      "affiliation": "名古屋市立大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋市立大学"
+     "tokai": "名古屋市立大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1566,7 +2758,8 @@
      "crid": "1420564276158118272",
      "affiliation": "名城大学",
      "role": "principal_investigator",
-     "tokai": "名城大学"
+     "tokai": "名城大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1586,14 +2779,16 @@
      "crid": "1420001326221327232",
      "affiliation": "岐阜大学",
      "role": "principal_investigator",
-     "tokai": "岐阜大学"
+     "tokai": "岐阜大学",
+     "region": "東海"
     },
     {
      "name": "川口 知子",
      "crid": "1420282801207455872",
      "affiliation": "岐阜大学",
      "role": "co_investigator_buntan",
-     "tokai": "岐阜大学"
+     "tokai": "岐阜大学",
+     "region": "東海"
     }
    ],
    "word": "ブロックチェーン"
@@ -1613,14 +2808,1244 @@
      "crid": "1420001326221327232",
      "affiliation": "岐阜大学",
      "role": "principal_investigator",
-     "tokai": "岐阜大学"
+     "tokai": "岐阜大学",
+     "region": "東海"
     },
     {
      "name": "上岡 寛",
      "crid": "1420282801190299008",
      "affiliation": "岡山大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040581224879064448",
+   "title": "トリレンマの数理的解明とそれに基づく持続可能ブロックチェーンの研究",
+   "since": "2024-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "ブロックチェーンへの攻撃手法に対し、数理的解析、および、シミュレータを用いた実験的解析を行う。また、我々自身も攻撃手法の考案や体系化を行う。並行して、ブロックチェーントリレンマを数理的に解明する。広く信じられてきたがいまだ数理的に表現されたことがなかったトリレンマに、数理的表現を与える。見出した数理的表現に基づいて、例えば、これまでの性能向上手法が安全性をどれほど犠牲にするのかを評価したり、また、安全性を犠牲にせずに性能を向上させる手法を検討する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24H00691/",
+   "researchers": [
+    {
+     "name": "首藤 一幸",
+     "crid": "1420282801213701376",
+     "affiliation": "京都大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "斉藤 賢爾",
+     "crid": "1420001326228315136",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    },
+    {
+     "name": "廣中 詩織",
+     "crid": "1420006518502396800",
+     "affiliation": "京都大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "坂野 遼平",
+     "crid": "1420564276184568192",
+     "affiliation": "一橋大学",
+     "role": "co_investigator_buntan",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040589375702481280",
+   "title": "プラットフォーム・デザインとイノベーションを促進する競争政策",
+   "since": "2026-04-01",
+   "until": "2031-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、巨大IT企業が構築する多様なプラットフォームの「デザイン」に着目し、イノベーションの促進と安心・安全なデジタル経済の形成を両立する競争政策・規制のあり方を解明する。ミクロ経済学・産業組織論の理論分析とデータに基づく実証分析を用い、(1) 巨大事業者に対する非対称な事前規制が新規参入に与える影響、(2) 物流や広告枠などプラットフォームに追加収入をもたらすアドオン・サービスの効果、(3) ブロックチェーンを活用したNFT取引プラットフォームの新たな経済的特性、の3点を包括的に解明する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K00340/",
+   "researchers": [
+    {
+     "name": "善如 悠介",
+     "crid": "1420001326217614592",
+     "affiliation": "神戸大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "広瀬 浩介",
+     "crid": "1420282801204503424",
+     "affiliation": "大阪経済大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "角田 侑史",
+     "crid": "1420564276181265536",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "田頭 拓己",
+     "crid": "1420845751136764544",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "栗田 健一",
+     "crid": "1420845751147927168",
+     "affiliation": "九州大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "佐藤 進",
+     "crid": "1420003854340151424",
+     "affiliation": "一橋大学",
+     "role": "co_investigator_buntan",
+     "tokai": "一橋大学",
+     "region": "関東"
+    },
+    {
+     "name": "原 泰史",
+     "crid": "1420845751143338752",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040862699865865216",
+   "title": "非集中型システムにおける省資源高速ブロードキャスト技術の研究",
+   "since": "2024-04-01",
+   "until": "2027-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "非集中型システムは、複数の計算機ノードが自律分散的に振る舞い、ネットワークを介して連携することで、総体として何らかの機能を実現するシステムを指す。代表的な事例としてはブロックチェーンや分散データベース、コンテンツ共有システム等が挙げられる。こうした非集中型システムでは、全体を統御するノードが存在しないことから、ノード群の協調動作のためにしばしばブロードキャストが用いられる。本研究では、任意のノードがブロードキャスト送信源となり得る状況において、通信量を抑えつつ低遅延での伝播を実現する手法の確立を目指す。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24K14935/",
+   "researchers": [
+    {
+     "name": "坂野 遼平",
+     "crid": "1420564276184568192",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040585407814734592",
+   "title": "国家による貨幣独占とステーブルコインの動学一般均衡分析とその政策的含意",
+   "since": "2025-04-01",
+   "until": "2028-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "現在広く流通している暗号通貨としてステーブルコインに注目し、ステーブルコインの価格付けや収益性・リスク、従来からの国家独占の貨幣制度の経済効率性への暗号通貨の影響をマクロ経済学的に動学一般均衡分析する．ステーブルコインはブロックチェーン技術の利便性と伝統的貨幣の融合が図られ、本研究のステーブルコインの分析は金融経済学上も政策実務上も重要な研究意義を持つ．確率解析の数理技術を駆使して、ステーブルコインの暗号通貨技術のミクロ経済学と貨幣制度のマクロ経済学の2つの先行研究分野について、それらの間の溝を埋め融合することにより、国際的に新しい研究フロンティアを切り開く．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25K05182/",
+   "researchers": [
+    {
+     "name": "中村 恒",
+     "crid": "1420845751155167744",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040848250647578240",
+   "title": "近未来デジタル経済のための制度設計：理論、実証、実践",
+   "since": "2020-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "本研究の概要は以下の通りである。デジタル技術進歩とビジネス利用が実体経済に与える影響について、理論、実験、歴史学の視点から分析する。予測データが豊富に利用できるデジタル環境において、経済主体はその恩恵を受ける一方、複雑な判断を強いられる。そのため限定合理性の考察が重要になる。ブロックチェーンの普及によって、契約の自動化が進展する。その結果、ガバナンスが新たに問われる。大容量の情報通信が可能になったことで、携帯事業のみならず、全産業にわたって電波利用をいかに配分するかが重要課題になった。本プロジェクトは、ゲーム理論、行動経済学、実験経済学、歴史分析を駆使して基礎研究を発展させ、これらに取り組む。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20H00070/",
+   "researchers": [
+    {
+     "name": "松島 斉",
+     "crid": "1420001326204701952",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "尾山 大輔",
+     "crid": "1420845751157459328",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "萱場 豊",
+     "crid": "1420564276169824512",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "山本 裕一",
+     "crid": "1420845751151240192",
+     "affiliation": "一橋大学",
+     "role": "co_investigator_buntan",
+     "tokai": "一橋大学",
+     "region": "関東"
+    },
+    {
+     "name": "佐野 隆司",
+     "crid": "1420001326210809216",
+     "affiliation": "横浜国立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "横浜国立大学",
+     "region": "関東"
+    },
+    {
+     "name": "中島 大輔",
+     "crid": "1420845751164344192",
+     "affiliation": "小樽商科大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "安田 洋祐",
+     "crid": "1420564276166359936",
+     "affiliation": "大阪大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "早川 仁",
+     "crid": "1420845751143245952",
+     "affiliation": "北海道大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "岡崎 哲二",
+     "crid": "1420845751144753152",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "菊地 雄太",
+     "crid": "1420845751142287744",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040581301858202368",
+   "title": "シャーディング技術を用いたスケーラブルな許可型IoTブロックチェーン",
+   "since": "2023-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究ではブロックチェーン全体を複数の単位（シャード）に分割してスケーラビリティを向上させるシャーディング技術に着目する。特に、地理的に分散した様々なIoTノードを多様なネットワーク技術により繋ぐことでブロックチェーンが構成されるというIoTブロックチェーンの特徴を考慮した、スケーラブルなIoTブロックチェーンの実現技術を確立する。具体的には次の３つの課題について研究を進める：(1)各シャードのリソース利用の最適化によるスケーラビリティの向上、(2)ネットワークアウェアなシャード型IoTブロックチェーンの設計・構築法、(3)スケーラブルなクロスシャードプロトコルの提案。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K28067/",
+   "researchers": [
+    {
+     "name": "Kien Nguyen",
+     "crid": "1420282801202018944",
+     "affiliation": "千葉大学",
+     "role": "principal_investigator",
+     "tokai": "千葉大学",
+     "region": "関東"
+    },
+    {
+     "name": "塩田 茂雄",
+     "crid": "1420282801200458496",
+     "affiliation": "千葉大学",
+     "role": "co_investigator_buntan",
+     "tokai": "千葉大学",
+     "region": "関東"
+    },
+    {
+     "name": "関屋 大雄",
+     "crid": "1420564276182753792",
+     "affiliation": "千葉大学",
+     "role": "co_investigator_buntan",
+     "tokai": "千葉大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040585559553739264",
+   "title": "IoTブロックチェーンにおけるシャーディング技術を用いたスケーラビリティ改善",
+   "since": "2025-04-01",
+   "until": "2027-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究では、IoT機器が多様な場所に分散して存在し、通信環境も異なるという特徴を考慮した、拡張性の高いブロックチェーンシステムの構築を目指します。従来のブロックチェーンは全体で一括処理するため、取引数が増えると処理速度が低下するという課題があります。本研究では、システム全体を複数の小さなネットワークに分け、それぞれが独立して処理を行うことで、効率的な運用を実現します。さらに、これらのネットワーク間で発生する取引の効率的な処理方法や、負荷が偏らないようにするための技術も開発し、公平性と高処理性能を両立させた、IoTに最適なブロックチェーン技術の確立を目指します。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25KJ0728/",
+   "researchers": [
+    {
+     "name": "蘇 悦",
+     "crid": "1030585559553739264",
+     "affiliation": "千葉大学",
+     "role": "principal_investigator",
+     "tokai": "千葉大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040577277047254272",
+   "title": "財産上の利益の刑法的保護",
+   "since": "2023-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "近時、キャッシュレス化がますます進行している。そこではコンピュータやネットワークにおける手続きのみで取引きが完了し、紙幣等の財物(有体物)は登場しない。また、技術・サービスの発展は著しく、新たな決済方法・サービスが次々と誕生している(例えばブロックチェーン技術・暗号資産)。しかし、1907年に作られた現行刑法は基本的に財物(有体物)を念頭に置いており、キャッシュレス化の時代に必ずしも対応しているとはいえない。\nそこで、本研究では、沿革的・比較法的研究によって現代的な財産上の利益の刑法的保護の在り方につき基本的な視座を獲得し、財産上の利益に対する罪の適正な処罰範囲を画する理論的基盤を構築する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K01154/",
+   "researchers": [
+    {
+     "name": "荒木 泰貴",
+     "crid": "1420564276175486976",
+     "affiliation": "千葉大学",
+     "role": "principal_investigator",
+     "tokai": "千葉大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040848250614363392",
+   "title": "中央集約型と分散型の併用による医療情報共有のためのトラスト（信頼関係）の評価法",
+   "since": "2019-07-17",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "トラストに応じて個人情報や営業秘密、知的財産を含む様々な情報の開示範囲や詳細度を適切に設定するには、どのような法制度や規範が必要なのか、倫理や道徳の観点から考えるべきことは何か検討する。ゲノム医療の実践のための医療法（および同法等の一部を改正する法律）に基づく臨床検査における遺伝子関連検査と遺伝子検査ビジネスの明確な区別も医療機関では行われるようになっているが国民にとっては複雑で分かりにくい。医療法で規程される遺伝子関連検査の精度確保や臨床検査としてのゲノム医療を明確にすることが必要である。本研究のテーマである医療情報共有のためのトラスト（信頼関係）の評価法の確立は極めて重要である。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-19KT0019/",
+   "researchers": [
+    {
+     "name": "松下 一之",
+     "crid": "1420845751156130560",
+     "affiliation": "千葉大学",
+     "role": "principal_investigator",
+     "tokai": "千葉大学",
+     "region": "関東"
+    },
+    {
+     "name": "鈴木 哲朗",
+     "crid": "1420282801181478144",
+     "affiliation": "浜松医科大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "末岡 榮三朗",
+     "crid": "1420001326204809600",
+     "affiliation": "佐賀大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "島井 健一郎",
+     "crid": "1420282801183112704",
+     "affiliation": "千葉大学",
+     "role": "co_investigator_buntan",
+     "tokai": "千葉大学",
+     "region": "関東"
+    },
+    {
+     "name": "前川 真人",
+     "crid": "1420845751159214720",
+     "affiliation": "浜松医科大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "武藤 学",
+     "crid": "1420282801197136640",
+     "affiliation": "京都大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "荻島 創一",
+     "crid": "1420564276174023680",
+     "affiliation": "東北大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "古川 泰司",
+     "crid": "1420564276177084928",
+     "affiliation": "帝京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "吉田 雅幸",
+     "crid": "1420282801190326784",
+     "affiliation": "東京医科歯科大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京医科歯科大学",
+     "region": "関東"
+    },
+    {
+     "name": "西村 基",
+     "crid": "1420845751166189824",
+     "affiliation": "千葉大学",
+     "role": "co_investigator_buntan",
+     "tokai": "千葉大学",
+     "region": "関東"
+    },
+    {
+     "name": "竹内 公一",
+     "crid": "1030009640031130370",
+     "affiliation": "千葉大学",
+     "role": "co_investigator_buntan",
+     "tokai": "千葉大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040282256982258048",
+   "title": "仮想通貨Bitcoinにおける取引履歴の解析による使用目的の識別と関連性の解明",
+   "since": "2018-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "Bitcoinは，アドレスと呼ばれる個人と一切紐付けのない口座間で送金が可能な匿名性のある仮想通貨として普及している。この匿名性はマネーロンダリング，違法商品を扱うマーケットプレイスでの決済手段，投資詐欺などに悪用されており、データマイニングを活用し、Bitcoinの取引履歴を解析する手法について取り組んだ。またブロックチェーンの年々増加する取引量増大に伴い、スケーラブルな手法が求められたため、分散機械学習および各データマイニング協力者へのインセンティブ設計、また計算量の少ない取引検証手法についても追加で取り組んだ。本成果は計5通の学術論文誌および5件の国際会議にて発表された。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-18K18162/",
+   "researchers": [
+    {
+     "name": "豊田 健太郎",
+     "crid": "1420845751164368896",
+     "affiliation": "慶應義塾大学",
+     "role": "principal_investigator",
+     "tokai": "慶應義塾大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040862776831931520",
+   "title": "第4次産業革命下における海事法の変容と革新：運航の自動化と船荷証券の電子化",
+   "since": "2024-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、第4次産業革命のもとで生じつつある海事産業のデジタル化が海事法にもたらす革新のうち、①自動運航船を用いた運航により生じる責任と②ブロックチェーン技術を用いた運送書類の電子化のもたらす法律問題について検討し、立法論・解釈論的な提言を行うものである。海上航行のリスクを船舶の遠隔操作者や自動運航プログラム供給者等を含む関係者間でいかに分配することが望ましいか、有価証券という法技術に依拠して構築されてきた法体系を有価証券のない世界でいかにして実現するかという、実践的であると同時にで高度に理論的でもある学問的研究である。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K22066/",
+   "researchers": [
+    {
+     "name": "藤田 友敬",
+     "crid": "1420564276166920704",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "笹岡 愛美",
+     "crid": "1420001326221894400",
+     "affiliation": "横浜国立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "横浜国立大学",
+     "region": "関東"
+    },
+    {
+     "name": "後藤 元",
+     "crid": "1420001326222684160",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "増田 史子",
+     "crid": "1420282801199402752",
+     "affiliation": "岡山大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "南 健悟",
+     "crid": "1420001326235166592",
+     "affiliation": "慶應義塾大学",
+     "role": "co_investigator_buntan",
+     "tokai": "慶應義塾大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040569382225772416",
+   "title": "ブロックチェーンを持続可能にする数理的・実験的研究",
+   "since": "2021-04-05",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "ブロックチェーンの安全性、分権性、インセンティブ整合性を向上させる。ブロックチェーン、DAGの構成法を網羅的に調査・整理し、攻撃手法の調査・考案・評価を数理的・実験的に行う。これにより、持続可能性を備えたブロックチェーンの構成法を確立する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21H04872/",
+   "researchers": [
+    {
+     "name": "坂野 遼平",
+     "crid": "1420564276184568192",
+     "affiliation": "工学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "首藤 一幸",
+     "crid": "1420282801213701376",
+     "affiliation": "京都大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "斉藤 賢爾",
+     "crid": "1420001326228315136",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040569382220899456",
+   "title": "ブロックチェーン技術を基盤としたサイバーフィジカルライフサイクルシステムの構築",
+   "since": "2021-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "製品ライフサイクルのマネジメントにおいては、製品や部品の個別状態や循環経路に応じて、ライフサイクル全体のマテリアルフローを適切に制御することが重要である。本研究では、資源循環の過程で所有権が様々なステークホルダに移ってゆく人工物の情報をブロックチェーンの技術を基盤として個別かつリアルタイムに収集するための仕組みであるCyber-Physical Lifecycle Systemを提案する。この仕組みに基づき、物理空間における製品ライフサイクルの状態変化をサイバー空間のデジタルツインモデルに反映させることで、実態に応じた様々な分析やシミュレーションを可能にする。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K03823/",
+   "researchers": [
+    {
+     "name": "高本 仁志",
+     "crid": "1420001326230878336",
+     "affiliation": "国立研究開発法人産業技術総合研究所",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "福重 真一",
+     "crid": "1420564276159619200",
+     "affiliation": "早稲田大学",
+     "role": "principal_investigator",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040581301854924288",
+   "title": "言語資源エコシステムのためのシェアリングエコノミーの構築",
+   "since": "2024-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は，信頼できる第三者の存在しない環境において，マルチエージェントシステムとブロックチェーンを用いて，耐改ざん性とプライバシー保護を両立したシェアリングエコノミーを構築する．これにより，低資源言語の言語資源作成者が利用者から直接的に報酬を得ることで，持続可能な低資源言語の言語資源開発を実現することを目指す．具体的には，エージェントを各ユーザの端末に配備した超分散マルチエージェントシステムを構築し，言語資源の品質を保証するためのエージェント間のプロトコルを考案し，信頼性のある低資源言語の言語資源の集積を図る．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K21730/",
+   "researchers": [
+    {
+     "name": "村上 陽平",
+     "crid": "1420001326227321728",
+     "affiliation": "立命館大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "PITUXCOOSUVARN MONDHEERA",
+     "crid": "1420003854339317376",
+     "affiliation": "立命館大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "石田 亨",
+     "crid": "1420845751137055104",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    },
+    {
+     "name": "林 冬惠",
+     "crid": "1420282801191876864",
+     "affiliation": "岡山大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040026425749007104",
+   "title": "安全安心なデジタル資産取引のためのグローバル国際私法法制の構築",
+   "since": "2026-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "ブロックチェーンを活用したデジタル資産の国際的な取引における当事者の期待の保護や健全で安全な取引の実現の観点から、国際裁判管轄の判断基準、物権的帰属・移転の準拠法、そして盗取・詐取された資産の回復を可能にする情報収集・救済制度等を、デジタル資産の特性を踏まえ、いかに国際的に整合的かつ実効的に構築できるかを研究する。また、デジタル資産の取引においては技術が重要な意味を持つことから、技術と法の役割分担も考察する。\n欧米等との比較法的検討や国際機関における議論の状況等についての分析を踏まえ、技術と法を統合した新たな国際私法理論の構築を目指す。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K00274/",
+   "researchers": [
+    {
+     "name": "森下 哲朗",
+     "crid": "1420845751143820672",
+     "affiliation": "上智大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "野村 美明",
+     "crid": "1420001326229062144",
+     "affiliation": "大阪大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "ELBALTI BELIGH",
+     "crid": "1420564276173334144",
+     "affiliation": "大阪大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "白木 敦士",
+     "crid": "1420579599299712768",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040000782002498304",
+   "title": "広域環境地図生成のためのブロックチェーンを用いた複数ロボット間データ共有システム",
+   "since": "2018-04-01",
+   "until": "2023-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "仮想通貨の基盤技術であるブロックチェーンをロボットネットワークシステムに適用して、各ロボットのデータの所有権および価値に基づいたデータ共有システムを開発した。都市環境下で移動ロボットが自律走行する際、走行に必要な箇所の環境地図をその所有者からブロックチェーンを通じて取得し、価値に応じた対価を支払うことで、都市環境内を走行できるシステムである。価値のある地図の所有者はその所有権を守ることができ、他のロボットは必要に応じて地図を取得できる、ロボットネットワークシステムが構築可能であることを示した。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-18K11494/",
+   "researchers": [
+    {
+     "name": "森岡 一幸",
+     "crid": "1420845751139655680",
+     "affiliation": "明治大学",
+     "role": "principal_investigator",
+     "tokai": "明治大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040303932837845760",
+   "title": "資産担保型セキュリティートークンの電子取引に対する課税制度の調査研究",
+   "since": "2025-04-01",
+   "until": "2028-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究テーマ「資産担保型セキュリティトークンの電子取引に対する適正な課税制度の研究」は、不動産、社債、貴金属等の資産を小口証券化・電子化し、ブロックチェーン等の分散型台帳技術を用いたシステム上で取引されるデジタル証票（これを『セキュリティトークン」という）に変換して、これを私募又は公募により、投資家に販売する方法が考案され、米国及び英国において先行販売され、最近では日本でも特に不動産を裏付け資産とするセキュリティトークン取引が行われ始めたことを背景にして、こうした取引により生ずる利得に対する適切な課税方法を比較法的に考究するものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25K04762/",
+   "researchers": [
+    {
+     "name": "岩崎 政明",
+     "crid": "1420282801183564288",
+     "affiliation": "明治大学",
+     "role": "principal_investigator",
+     "tokai": "明治大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040854882527972992",
+   "title": "暗号資産の財産的価値に関する研究ー民法・税法と刑法の対話ー",
+   "since": "2022-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "暗号資産は、ネットワーク関与者がその移転を検証し、認証すること（マイニング）で、ブロックチェーン上にその移転が記録され、ある人物に移転・帰属することが確定するという形態によって管理される。そして、暗号資産の帰属・移転に関する情報をいわば「全員で書き換え、全員で保存する」ことによって情報の真正さを担保しようとする点で、これまでにない資産管理方法を採用しているため、そもそも民法の規律対象となりうる財産的な価値にあたりうるかという根源的な問いが投げられている。本研究では、暗号資産の持つ財産的価値を刑法上どのように適切に法的に位置づけ、評価していくのかを研究する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-22K01201/",
+   "researchers": [
+    {
+     "name": "内海 朋子",
+     "crid": "1420282801193863808",
+     "affiliation": "横浜国立大学",
+     "role": "principal_investigator",
+     "tokai": "横浜国立大学",
+     "region": "関東"
+    },
+    {
+     "name": "松原 有里",
+     "crid": "1420001326208408960",
+     "affiliation": "明治大学",
+     "role": "co_investigator_buntan",
+     "tokai": "明治大学",
+     "region": "関東"
+    },
+    {
+     "name": "原 謙一",
+     "crid": "1420564276189914496",
+     "affiliation": "西南学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040852814762870912",
+   "title": "環境配慮行動を促進する誘因システムやナッジの実装ならびに日墺両国における実証実験",
+   "since": "2021-10-07",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "環境問題の解決において人々の適切な行動変容こそが本質的に重要である。環境配慮行動の促進メカニズムは行動経済学や社会心理学を中心に主に実験による仮説検証がなされてきているが、実証的な展開と効果の検証は未解決の課題である。その中で欧州では市民の環境意識が高く、様々な取り組みが先駆的に行われている。本研究では、我々がこれまで従事した国際研究を発展させ、墺・独で導入が進む環境配慮行動促進システムで、多くの企業・参加者が参加している Changers と協働し、環境配慮行動を促進させる効果的な誘因やナッジは何かを明らかにする。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21KK0027/",
+   "researchers": [
+    {
+     "name": "岡田 勇",
+     "crid": "1420845751163851904",
+     "affiliation": "創価大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "山本 仁志",
+     "crid": "1420845751164960768",
+     "affiliation": "立正大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "鈴木 貴久",
+     "crid": "1420001326216537344",
+     "affiliation": "津田塾大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "後藤 晶",
+     "crid": "1420564276178768000",
+     "affiliation": "明治大学",
+     "role": "co_investigator_buntan",
+     "tokai": "明治大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040589375703442688",
+   "title": "揮発性を持つ検証証明の複数台帳間連携とその拡張",
+   "since": "2026-04-01",
+   "until": "2030-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "ブロックチェーンには、暗号通貨等の金融応用だけでなく、電子投票、サプライチェーン応用など社会的インパクトの大きな分野において、基盤技術としての期待がかけられている。しかし、Bitcoinの採掘だけで中規模国一つに相当するほどの電力を消費していると指摘されるなど、現時点では社会受容性の観点で見過ごせない問題を抱えている。本研究では、台帳情報を保管する多数のノードにおける処理を戦略的に省略してブロックチェーンを大幅に省電力化する検証証明技術を複数のブロックチェーンにまたがって利用可能にする複数台帳間連携について、省電力化以外のメリットももたらす技術革新とともに、理論的および実験的に研究する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K02907/",
+   "researchers": [
+    {
+     "name": "松浦 幹太",
+     "crid": "1420845751157170048",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040299826879851904",
+   "title": "多層環境におけるブロックチェーンの省電力化に関する研究",
+   "since": "2024-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "ブロックチェーンには、暗号通貨等の金融応用だけでなく、電子投票、サプライチェーン応用など社会的インパクトの大きな分野で、基盤技術としての期待がかけられている。しかし、Bitcoinの採掘だけで小～中規模国一つに相当するほどの電力を消費していると指摘されるなど、現時点では社会受容性の観点で見過ごせない問題を抱えている。本研究では、台帳情報を保管する多数のノードにおける処理を戦略的に省略してブロックチェーンを大幅に省電力化する技術を現実的な環境に適用する手法を構築し、定量的に評価する。しかも、処理省略の戦略を工夫することによって、安全性を下げず逆に向上させる効果を追求する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K24845/",
+   "researchers": [
+    {
+     "name": "松浦 幹太",
+     "crid": "1420845751157170048",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040282256952619264",
+   "title": "トラスト基盤におけるセキュリティ評価手法の工学的および経済学的研究",
+   "since": "2017-07-18",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "トラスト基盤におけるセキュリティ評価手法を工学的および経済学的に検討し、具体的に手法を開発して応用への知見を得るという目的を達成した。とくに、全ての項目にまたがる知見として、工学的なランダムネス発生源を、経済学的なトークンモデルにおける適合確率過程に利用できるだけでなく、ブロックチェーン上で稼働させる場合の検証証明（ブロックチェーンに記録された内容が正当であることを誰かが確かに検証した、という証拠）としても利用できる可能性を見出した。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-17KT0081/",
+   "researchers": [
+    {
+     "name": "松浦 幹太",
+     "crid": "1420845751157170048",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040010457599433472",
+   "title": "マーケットデザインによる仮想通貨システムの分析",
+   "since": "2022-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "仮想通貨システムがどのようなインセンティブを与え、利害関係者がどう行動するかを理論・実証の両面から分析することで、(i) 仮想通貨システムが安定的か、(ii) 現状で安定的でないならアップデートを行うことでその弱点を克服可能か、(iii) 利害関係者たちにはアップデートを受け入れるインセンティブがあるか (iv) 総じて仮想通貨システムの登場は社会にどのような影響を与えるか　を明らかにする。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-22K13361/",
+   "researchers": [
+    {
+     "name": "野田 俊也",
+     "crid": "1420573504978845056",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040295802075868288",
+   "title": "脱中心化・分散する政策実現過程・法執行過程における正統性確保と専門家統治の諸原理",
+   "since": "2023-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "（１）行政国家と私的主体との「協働」状況における脱中心化・分散化の諸技術の位置付け\n（２）脱中心化・分散化の諸技術のネットワークに対する統制手法・統制プロセスの位置付け\n（３）分散型ブロックチェーンを担う脱中心化・分散化の主体・作用への「法」的正統性付与の諸相\nの３点について、法哲学・行政法学・法政策学を横断する「執行研究Enforcement Studies」の構築の観点から、主として、官民を横断するその応用例(DLT,NFT,DAO等)の実践的な担い手を通じた（関連するラボ研究等の知見を踏まえた）諸研究の蓄積及び理論面における文献調査を通じて明らかにし、分野の確立を目指す。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K12354/",
+   "researchers": [
+    {
+     "name": "永石 尚也",
+     "crid": "1420282801195497216",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040295879331464960",
+   "title": "汎用アクション指向言語による形式手法の研究",
+   "since": "2023-03-08",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、信頼性の高い複雑なシステムの開発を促進するため、汎用アクション指向プログラミング（AOP）の理論基盤と実践方法論の構築を目的としている。AOPは、新しい視点から使いやすい形式手法を用いて、モデルの表現力と精度を向上し、低コストで実装の正当性を保証することで、正当性証明可能なシステムの開発をサポートするプログラミングパラダイムである。また、本研究では信頼性の高い分散システム、堅牢なプログラミングツール、および説明可能なAIモデルを開発するために、AOPを実用化し、現実的なフレームワークの構築を目標とする。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-22KJ0614/",
+   "researchers": [
+    {
+     "name": "丁 曄澎",
+     "crid": "1030015487557224192",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040297504286228480",
+   "title": "状況に即応するマイクロクレデンシャルのためのプログラム開発モデルとその実装",
+   "since": "2023-09-08",
+   "until": "2028-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "高等教育の役割が高校卒業者から広く労働者や市民へと広がると同時に、国際的な大学間連携がさらに重要になるなか、マイクロクレデンシャルはその根幹を担う概念の1つとなりつつある。本事業はUniversity of the Philippines Los Banos(以下 UPLB)を中心的な海外研究拠点とし、他のフィリピンの大学をサテライト・キャンパスとして連携し、 A)状況に即応するコンテンツ開発体制の検討、B)コンテンツ開発ビジネスモデルの検討、 C)授業品質のデジタル証明システムの提案、という３つの課題を進める。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23KK0044/",
+   "researchers": [
+    {
+     "name": "富田 英司",
+     "crid": "1420845751167303808",
+     "affiliation": "愛媛大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "中井 俊樹",
+     "crid": "1420845751160484480",
+     "affiliation": "愛媛大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "苅田 知則",
+     "crid": "1420845751150575232",
+     "affiliation": "愛媛大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "HERBUELA VONRALPHDANE",
+     "crid": "1420861074291316352",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "河村 泰之",
+     "crid": "1420001326235977984",
+     "affiliation": "愛媛大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040000782016226304",
+   "title": "社会ゲームの理論的拡張とそれによるプラットフォームの取引ガバナンスの理論研究",
+   "since": "2019-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "まず、研究分担者の藤原（奥野）がVSRPDのモデルを精緻化する。特に有限期間の行動履歴の下で、永続的な協力が始まる均衡が存在するかを理論的に解明する。次に、研究代表者の野口がlearningの手法を適用し、behavioralなエージェントに限定した場合、このVSRPDのno information flowの仮定の理論的拡張が可能かどうかという点を中心に考察する。最後に研究分担者の中泉がプラットフォームやブロックチェーンの経済活動の理論的な分析を行う。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-19K01562/",
+   "researchers": [
+    {
+     "name": "野口 雄一",
+     "crid": "1420001326233720192",
+     "affiliation": "関東学院大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "藤原 正寛",
+     "crid": "1420564276162460800",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "中泉 拓也",
+     "crid": "1420282801203852928",
+     "affiliation": "関東学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040569382216325376",
+   "title": "実用的なペアリング暗号の開発",
+   "since": "2021-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究では効率的なペアリングベース暗号に寄与するペアリングとその構成法の提案を行う．\nペアリングの最近の安全性解析結果により，効率的なペアリング暗号のための多岐に渡るパラメータ選定とその構成法は依然不明な箇所が多く，新たな候補の曲線に対し，最適な計算アルゴリズムが見いだされていない．\n本研究においては，匿名認証やブロックチェーンなど様々なペアリング暗号技術の効率化に寄与する最適な暗号パラメータの探索とペアリングの構成を行い，その成果をペアリング暗号の利用者・実装者に提供する．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K17740/",
+   "researchers": [
+    {
+     "name": "石井 将大",
+     "crid": "1420845751158995840",
+     "affiliation": "東京工業大学",
+     "role": "principal_investigator",
+     "tokai": "東京工業大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040307900732368256",
+   "title": "相互検証とブロックチェーン永続記録による信頼の高い災害情報基盤",
+   "since": "2026-04-01",
+   "until": "2030-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は，災害時にSNSから得られる即時情報を活用しつつ，誤情報の拡散と記録消失を抑え，自治体が利用可能な高信頼の防災情報基盤の基礎理論を確立することを目的とする．中核となるのは，地域コミュニティが相互検証を担うファクトチェックと，通報・検証・公開までの来歴を改ざん困難に時系列保存するブロックチェーンである．これにより，速報性を損なわずに情報の信頼性と事後検証可能性を高め，災害対応の再現性と意思決定の妥当性向上に資する枠組みを目指す．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K17625/",
+   "researchers": [
+    {
+     "name": "柳原 貴明",
+     "crid": "1420026415193894656",
+     "affiliation": "公立諏訪東京理科大学",
+     "role": "principal_investigator",
+     "tokai": "東京理科大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040295802077965696",
+   "title": "秘密分散と暗号技術を用いた超高速な秘密計算及びその応用である秘匿検索の実現",
+   "since": "2023-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "モノのインターネットデバイスから収集したビッグデータの利活用には，データに含まれる個人情報の保護と統計計算の両立ができる技術が求められる．そこで，データ活用と個人情報保護の両立ができる秘密計算が注目されている．秘密計算とは，データを暗号化したままの状態でも演算をすることができる技術である．秘密計算を実現する手法として，(1)鍵を利用しデータを保護する暗号技術と，(2)鍵を利用せずデータを保護する秘密分散法に大別できる．本研究では，秘密分散と暗号技術の特徴を組み合わせて，両手法の長所を同時に実現できるより実用的な秘密計算を検討し，その応用である秘匿検索の確立について研究する．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K16884/",
+   "researchers": [
+    {
+     "name": "Mohd・Kamal Ahmad・Akmal・Aminuddin",
+     "crid": "1420296066543505920",
+     "affiliation": "東京理科大学",
+     "role": "principal_investigator",
+     "tokai": "東京理科大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040862776833273216",
+   "title": "サイバー攻撃対策と暗号理論で支えられるスマートコントラクト利用型自動監視技術",
+   "since": "2024-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究では，暗号資産ネットワークを含む，より一般的なブロックチェーンを基盤とした自律分散型ネットワークにおいて，スマートコントラクトを利用して悪意あるユーザを自動的に検出・追跡できるセキュリティ技術について研究開発を行う．より具体的には，ブロックチェーンハニーポット及び暗号理論的追跡機能を用いた自律分散型の自動監視手法を提案するとともに，サイバー攻撃対策と暗号理論の両面で支えられる自律分散型ネットワークシステムの高信頼性を確保する．これにより，自律分散型ネットワーク環境において，悪意あるユーザの不正を抑止する効果が期待される．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K24844/",
+   "researchers": [
+    {
+     "name": "面 和成",
+     "crid": "1420564276164005376",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    },
+    {
+     "name": "吉岡 克成",
+     "crid": "1420282801199508992",
+     "affiliation": "横浜国立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "横浜国立大学",
+     "region": "関東"
+    },
+    {
+     "name": "江村 恵太",
+     "crid": "1420282801196388992",
+     "affiliation": "金沢大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040303932848966656",
+   "title": "デジタルコンテンツの真正性を保証する生成AI拡張スマコンシステム",
+   "since": "2025-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "本研究では，コンテンツの生成に使用されたプログラム（スマートコントラクト）及びデータのトレーサビリティを満たしたコンテンツの真正性を保証するセキュリティ技術について研究開発を行う．より具体的には，ブロックチェーンを利用してコンテンツの真正性を保証する生成AI拡張スマートコントラクトシステムの提案・プロトタイプ実装・評価を行うとともに，サイバー攻撃対策，暗号理論，プライバシー保護の3つの観点で支えられるシステムの高信頼性を確保する．これにより，コンテンツの真正性を保証するのみならず，コンテンツの信頼性が担保されたデジタル空間の創出が期待される．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25H01106/",
+   "researchers": [
+    {
+     "name": "面 和成",
+     "crid": "1420564276164005376",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    },
+    {
+     "name": "吉岡 克成",
+     "crid": "1420282801199508992",
+     "affiliation": "横浜国立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "横浜国立大学",
+     "region": "関東"
+    },
+    {
+     "name": "江村 恵太",
+     "crid": "1420282801196388992",
+     "affiliation": "金沢大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "千田 浩司",
+     "crid": "1420577541523088768",
+     "affiliation": "群馬大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040574181143538432",
+   "title": "データ汚染耐性を有する非中央集権型フォレンジック技術",
+   "since": "2022-06-30",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は，次の2つの研究課題について研究開発を行う．\n(1) インセンティブメカニズムを考慮した認証手法\nスマートコントラクト（ブロックチェーン上で自動実行されるプログラム）との自動連携によって，機器の相互監視及び報酬（インセンティブ）の支払いを可能とする認証手法を構築する．\n(2) 非中央集権型フォレンジック手法\nスマートコントラクトを上記(1)で構築した認証手法と自動連携させることで，正当な証拠情報のみがブロックチェーンに自動で記録されていく高信頼なフォレンジック手法を構築する．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-22K19768/",
+   "researchers": [
+    {
+     "name": "面 和成",
+     "crid": "1420564276164005376",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040848250657228032",
+   "title": "WEB3.0時代における「情報」保存の多様化に対応する法理論構築",
+   "since": "2020-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、「WEB3.0時代」におけるクラウドストレージサービスやブロックチェーン及びP2Pなどの情報技術に基づく「情報」の分散管理等、従来の法理論において対応が困難な「情報」の保存についての法的取り扱いについて研究を行うものである。\n本研究は、情報通信技術や暗号理論の現状と今後の進展状況をふまえ、従来の法理論の維持の可能性と、新たな制度整備の必要性を明らかにするとともに、「情報の客体性の問題、児童ポルノ情報や名誉侵害情報などの違法情報の流通防止の問題に対応する新たな法理論を提示することを目指すものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K13385/",
+   "researchers": [
+    {
+     "name": "高良 幸哉",
+     "crid": "1420845751159050624",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040003825720957440",
+   "title": "現実的に利用可能な関数型暗号の実現",
+   "since": "2020-04-24",
+   "until": "2023-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "ビックデータやIoTなどITの活用が注目されていることからクラウドの発展が求められている．ただ, クラウドのみに依存したシステムの場合, クライアントの機微情報をクラウドにて集中管理する事も懸念される事からサイバー攻撃によるクラウドからの情報漏えいのリスクが生じる．そこで, 本研究ではIntel Software Guard Extensionsなどセキュアハードウェアと暗号方式を併用する事で, クラウドだけでなくクライアントによるIoT機器の安全性と現代暗号理論による安全性を担保した, 実社会で利用可能な暗号方式の構成及び実装評価を行う．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20J22324/",
+   "researchers": [
+    {
+     "name": "鈴木 達也",
+     "crid": "1030581148820200320",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ブロックチェーン"
+  },
+  {
+   "crid": "1040297504286140032",
+   "title": "復号が確率的に制御可能な暗号スキームの研究",
+   "since": "2023-08-31",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "中央銀行が発行するデジタル通貨において，マネーロンダリング等の犯罪対策のために監査機能が必要となる．先行研究では，悪意あるユーザは，高額であっても時間をかけて少しずつ送金を行えば，監査を回避することが可能である．\n<BR>\nそこで，「復号が確率的に制御可能な暗号スキーム」の提案を行い，高額の送金を高い確率で監査対象とすることを可能にする．本研究で提案する暗号スキームは，機密性を保ちつつ一定の条件下で情報を公開できる性質をもつため，様々な分野のデータ共有手法等への応用が見込まれる．\n<BR>\n新しい暗号スキームの提案となるため，定義等の構成を優先し，安全性の根拠となる仮定の強弱については，議論を次の課題とする．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K19952/",
+   "researchers": [
+    {
+     "name": "高橋 大成",
+     "crid": "1420298124322718976",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
     }
    ],
    "word": "ブロックチェーン"
@@ -1640,7 +4065,8 @@
      "crid": "1420001326224214144",
      "affiliation": "三重大学",
      "role": "principal_investigator",
-     "tokai": "三重大学"
+     "tokai": "三重大学",
+     "region": "東海"
     }
    ],
    "word": "暗号資産"
@@ -1660,105 +4086,323 @@
      "crid": "1420282801199223552",
      "affiliation": "北海道大学",
      "role": "principal_investigator",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "藤田 友敬",
      "crid": "1420564276166920704",
      "affiliation": "東京大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "東京大学",
+     "region": "関東"
     },
     {
      "name": "小塚 荘一郎",
      "crid": "1420564276183693312",
      "affiliation": "学習院大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "森下 哲朗",
      "crid": "1420845751143820672",
      "affiliation": "上智大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "松井 和彦",
      "crid": "1420845751151629568",
      "affiliation": "大阪大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "岩川 隆嗣",
      "crid": "1420001326218645632",
      "affiliation": "慶應義塾大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "慶應義塾大学",
+     "region": "関東"
     },
     {
      "name": "沖野 眞已",
      "crid": "1030003658775850373",
      "affiliation": "東京大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "東京大学",
+     "region": "関東"
     },
     {
      "name": "青木 則幸",
      "crid": "1420282801184944896",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "原 恵美",
      "crid": "1420001326211778560",
      "affiliation": "中央大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "村上 正子",
      "crid": "1420845751147131008",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "西谷 祐子",
      "crid": "1420001326208172800",
      "affiliation": "京都大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "林 貴美",
      "crid": "1420564276170457984",
      "affiliation": "同志社大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "横溝 大",
      "crid": "1420564276180463104",
      "affiliation": "名古屋大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     },
     {
      "name": "児矢野 マリ",
      "crid": "1420282801202454016",
      "affiliation": "北海道大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "高杉 直",
      "crid": "1420001326211334272",
      "affiliation": "同志社大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040295956266278528",
+   "title": "暗号資産交換業者に暗号資産を預託した顧客の私法上の地位",
+   "since": "2023-04-25",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "・銀行、証券会社等における法律関係の分析\n第一に、顧客の資産を預託する場面として、これまで典型的に語られてきた銀行、証券会社等の先行研究を調査する。そして、銀行、証券会社等に預託された資産の動きに着目し、顧客との間の法律関係を分析する。\n<BR>\n・暗号資産交換業者の特性を踏まえた分析\n第二に、暗号資産交換業者は、幅広い業務を取り扱っており、銀行、証券会社等と比較しても、顧客の預託理由にバリエーションが見られることに特徴があるため、このバリエーションが顧客の法的地位に与える影響を分析する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23KJ0975/",
+   "researchers": [
+    {
+     "name": "津田 慧",
+     "crid": "1030296962535993088",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040287907231447936",
+   "title": "支払及び決済手段の多様化と租税法のあり方に関する研究",
+   "since": "2021-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は，近年における支払及び決済手段の急速な展開や経済の変化がもたらす租税法上の課題を明らかにし，対応のあり方を検討するものである。その上で，景気平準化という観点から租税法の意義を再検討し，一定の方向性を示すことも目的とするものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K01122/",
+   "researchers": [
+    {
+     "name": "藤岡 祐治",
+     "crid": "1420282801186502400",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040282256979762304",
+   "title": "通貨の匿名性と課税に関する研究",
+   "since": "2018-04-01",
+   "until": "2023-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "情報通信技術の発達は、貨幣、主権国家間の国境及び金融機関といった既存の制度を前提としない取引、決済及び支払手段を生み出している。本研究は、これらが租税行政に必要な情報取得にもたらす課題を、様々な支払手段を考慮に入れた包括的な分析を行うことを目的として通貨の匿名性に着目して分析した。そして、通貨の匿名性は租税行政に影響を与えるだけでなく、実体法上も考慮すべきものであることを明らかにした。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-18K12640/",
+   "researchers": [
+    {
+     "name": "藤岡 祐治",
+     "crid": "1420282801186502400",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040307900734115712",
+   "title": "デジタル通貨と新金融秩序の創造：制度設計を支えるマクロとミクロの邂逅",
+   "since": "2026-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "本研究は、デジタル化が加速する中で、金融制度と政策の在り方について、ミクロ的イン\nセンティブ設計とマクロ政策の統合的枠組みを提示する。特に、①金融データ共有と異業種参入が信用秩序をどう変えるか、②情報環境の変化が暗号資産を含むバブルの発生・崩壊にどう作用するか、③ステーブルコインやCBDCの設計が通貨主権や危機対応にどのような課題をもたらすか、という三つの問いを立て、信用・仲介・バブル・暗号通貨・中央銀行デジタル通貨（CBDC）に関する五つのプロジェクトを展開する。制度設計を支える理論的基盤を提示し、国際的議論を先導するとともに日本における戦略的対応を支える知見を提示する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26H01961/",
+   "researchers": [
+    {
+     "name": "渡辺 誠",
+     "crid": "1420293401290532096",
+     "affiliation": "京都大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "陣内 了",
+     "crid": "1420001326222096128",
+     "affiliation": "一橋大学",
+     "role": "co_investigator_buntan",
+     "tokai": "一橋大学",
+     "region": "関東"
+    },
+    {
+     "name": "粟屋 祐",
+     "crid": "1420027423677163392",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "松岡 多利思",
+     "crid": "1420845751165403648",
+     "affiliation": "東京都立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "深井 大幹",
+     "crid": "1420845751162352640",
+     "affiliation": "西南学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "岩崎 康平",
+     "crid": "1420010555045836672",
+     "affiliation": "京都大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040585407823467520",
+   "title": "暗号資産の価格変動のモデル化とポートフォリオ最適化およびリスク管理への応用",
+   "since": "2025-04-01",
+   "until": "2030-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、21世紀に登場した新しい資産クラスである暗号資産を株式や債券などの伝統的金融資産と並ぶ資産運用の主要な柱の一つと位置付け、暗号資産市場の特性を明らかにするとともに、暗号資産を加えた資産運用において有効なリスク管理手法の開発と実装を行うことを目指す。まず暗号資産の価格変動をリターン（価格変化率）とボラティリティ（価格変化率の分散）に分解し、それぞれをファクターモデルとボラティリティモデルで表現することで、複数の暗号資産の価格変動を同時に説明する多変量時系列モデルを構築する。そして、得られたモデルに基づいて暗号資産を含むポートフォリオの最適化とリスク管理を行う手法の開発と実装に取り組む。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25K00626/",
+   "researchers": [
+    {
+     "name": "中妻 照雄",
+     "crid": "1420845751167094784",
+     "affiliation": "慶應義塾大学",
+     "role": "principal_investigator",
+     "tokai": "慶應義塾大学",
+     "region": "関東"
+    },
+    {
+     "name": "中北 誠",
+     "crid": "1420298124349505152",
+     "affiliation": "国立研究開発法人理化学研究所",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "鳥谷部 智規",
+     "crid": "1420016649344596224",
+     "affiliation": "金沢学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040307900727416320",
+   "title": "デジタル資産の私法上の法的性質",
+   "since": "2026-04-01",
+   "until": "2031-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、暗号資産、NFT、カーボン・クレジット、ステーブルコイン（電子決済手段）、および各種デジタルマネー（前払式支払手段および資金移動）などの、近時の技術の進展に応じて誕生した各種の資産（「デジタル資産」）が、我が国の私法上、いかなる法的性質を有するのかを、主としてフランス法との対比、補完的にドイツ法の参照を通じて、網羅的に検討することものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K04662/",
+   "researchers": [
+    {
+     "name": "岩川 隆嗣",
+     "crid": "1420001326218645632",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "暗号資産"
+  },
+  {
+   "crid": "1040863705823577216",
+   "title": "リテールCBDCの実証分析",
+   "since": "2024-06-28",
+   "until": "2030-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "リテールCBDCに関し、経済理論で予測される紙幣、銀行預金、外貨との三種類の代替について、その理論予測の確かさを、データを用いて検証する。具体的には、Bakong（リテールCBDC）を2020年10月に導入したカンボジアにおいて、家計と店舗を対象としたパネル・データ調査を行い、それに基づき計量経済分析を行う。カンボジアでは、ドル化が進んでいる中、自国通貨リエルだけでなく、米ドルでもBakongを提供しているため、CBDCとドル化との関連を丁寧に検証する。また、それまで金融サービスを受けることができなかった人々に対して手を差し伸べるという金融包摂の観点からも、リテールCBDCの意義を確かめる。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24K21182/",
+   "researchers": [
+    {
+     "name": "植田 健一",
+     "crid": "1420845751162222080",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
     }
    ],
    "word": "暗号資産"
@@ -1778,7 +4422,8 @@
      "crid": "1420845751136307328",
      "affiliation": "南山大学",
      "role": "principal_investigator",
-     "tokai": "南山大学"
+     "tokai": "南山大学",
+     "region": "東海"
     }
    ],
    "word": "仮想通貨"
@@ -1798,91 +4443,255 @@
      "crid": "1420001326230192640",
      "affiliation": "早稲田大学",
      "role": "principal_investigator",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "山邑 紘史",
      "crid": "1420001326205341696",
      "affiliation": "駒澤大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "竹村 和久",
      "crid": "1420845751135915520",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "瀋 俊毅",
      "crid": "1420564276159618816",
      "affiliation": "神戸大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "河野 正治",
      "crid": "1420282801206686976",
      "affiliation": "東京都立大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "里見 龍樹",
      "crid": "1420001326231067648",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "高瀬 浩一",
      "crid": "1420564276185968128",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "中丸 麻由子",
      "crid": "1420845751164936448",
      "affiliation": "東京工業大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "東京工業大学",
+     "region": "関東"
     },
     {
      "name": "大川内 隆朗",
      "crid": "1420001326235126912",
      "affiliation": "日本大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "大和 毅彦",
      "crid": "1420845751155906048",
      "affiliation": "東京工業大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "東京工業大学",
+     "region": "関東"
     },
     {
      "name": "下村 研一",
      "crid": "1420282801202514432",
      "affiliation": "神戸大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "",
+     "region": ""
     },
     {
      "name": "及川 浩希",
      "crid": "1420564276168563456",
      "affiliation": "早稲田大学",
      "role": "co_investigator_buntan",
-     "tokai": ""
+     "tokai": "早稲田大学",
+     "region": "関東"
     },
     {
      "name": "横山 和輝",
      "crid": "1420564276164879360",
      "affiliation": "名古屋市立大学",
      "role": "co_investigator_buntan",
-     "tokai": "名古屋市立大学"
+     "tokai": "名古屋市立大学",
+     "region": "東海"
+    }
+   ],
+   "word": "仮想通貨"
+  },
+  {
+   "crid": "1040303932837874944",
+   "title": "効用最大化を目指す新たな「所有権」の理論－不完備契約論の情報への応用",
+   "since": "2025-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、一定の情報の私法上の取り扱いについて、従来の研究のような (a) 国際的なルール動向の参照や (b) 所有権など伝統的な法概念の精緻化ではなく、効用最大化を基準とする法と経済学の議論から不完備契約論を用いることで、社会的に望ましい「情報の『所有権』」を新たにデザインすることを目指す。具体的には、情報の類型ごとに、情報の生産・収集・伝達・利活用の過程と社会にどのような利益を与えるかを分析し、かかる分析を基に、情報が社会に利益となるために必要となる行為を負担する主体に、行為によって生じる社会的利益を帰属させることで、主体がかかる行為を行うインセンティブを提供するというものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-25K04830/",
+   "researchers": [
+    {
+     "name": "得津 晶",
+     "crid": "1420564276172830848",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "仮想通貨"
+  },
+  {
+   "crid": "1040018351901204608",
+   "title": "持続可能な国際社会を創成する社会セキュリティ科学の確立",
+   "since": "2021-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "経済ネットワークのグローバル化は，分業や交流による生産や技術の向上を生み出した一方で，武器や麻薬といった世界の闇と我々とを無意識のうちに間接的に繋げた．大国や大企業は，複雑なグローバル株所有ネットワークを利用して他国の産業を支配できるようになった．外国への仮想通貨の送金による詐欺やマネーロンダリングが発生している．経済のグローバル化が生み出した国家と人間の経済安全保障問題を解決するための社会セキュリティ科学を，情報科学（複雑ネットワーク科学）と国際政治学（国際関係論・安全保障学）を融合して創出する．",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K21018/",
+   "researchers": [
+    {
+     "name": "水野 貴之",
+     "crid": "1420282801198500480",
+     "affiliation": "国立情報学研究所",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "栗崎 周平",
+     "crid": "1420564276166532864",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    },
+    {
+     "name": "土屋 貴裕",
+     "crid": "1420282801201017728",
+     "affiliation": "京都先端科学大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "仮想通貨"
+  },
+  {
+   "crid": "1040282256990148224",
+   "title": "公法における国境概念の変容：「非国境型行政空間」の法的エコシステムの解明と設計",
+   "since": "2019-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "本研究は，「国内公法のグローバル化現象」（行政法規を国外の行為にも適用すること／国際約束をもとに行政法規を立法し国内で実施すること）により，国境が，固定されたものでなく，法的に操作可能なものへと変容している現実に着目し，これに対処しうる21世紀型の公法（行政法）理論を，金融法，競争法，消費者法，環境法，租税法，知的財産法，さらに刑事法，国際法の研究者が並行的に比較する作業を通じて構築する。これにより，オンライン・プラットフォームや仮想通貨など，国境が意味を持たないデジタル化した諸活動に対する国家による規制手法の新原理を示し，国境内の行政過程のみを想定していた法制度設計の考え方の変革を目指す。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-19H00570/",
+   "researchers": [
+    {
+     "name": "中川 丈久",
+     "crid": "1420001326216921984",
+     "affiliation": "神戸大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "竹内 真理",
+     "crid": "1420845751157252352",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "黒沼 悦郎",
+     "crid": "1420845751139175552",
+     "affiliation": "早稲田大学",
+     "role": "co_investigator_buntan",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    },
+    {
+     "name": "川島 富士雄",
+     "crid": "1420001326224660096",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "渕 圭吾",
+     "crid": "1420564276190381568",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "興津 征雄",
+     "crid": "1420845751136287616",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "玉田 大",
+     "crid": "1420001326222693376",
+     "affiliation": "京都大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "島村 健",
+     "crid": "1420282801187230592",
+     "affiliation": "神戸大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "成瀬 剛",
+     "crid": "1420282801191840000",
+     "affiliation": "東京大学",
+     "role": "co_investigator_buntan",
+     "tokai": "東京大学",
+     "region": "関東"
+    },
+    {
+     "name": "小島 立",
+     "crid": "1420845751157227264",
+     "affiliation": "九州大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
     }
    ],
    "word": "仮想通貨"
@@ -1902,7 +4711,8 @@
      "crid": "1420282801196950528",
      "affiliation": "愛知大学",
      "role": "principal_investigator",
-     "tokai": "愛知大学"
+     "tokai": "愛知大学",
+     "region": "東海"
     }
    ],
    "word": "フィンテック"
@@ -1922,7 +4732,71 @@
      "crid": "1420282801195110784",
      "affiliation": "愛知教育大学",
      "role": "principal_investigator",
-     "tokai": "愛知教育大学"
+     "tokai": "愛知教育大学",
+     "region": "東海"
+    }
+   ],
+   "word": "フィンテック"
+  },
+  {
+   "crid": "1040282256973785984",
+   "title": "私法理論からみたプラットフォーム提供者の法的責任",
+   "since": "2018-04-01",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "社会経済活動のインフラがデジタルプラットフォーム化していく近未来を見据え、そこで起きる法的課題を的確に把握し、適切な法運用をどのように実現していけばよいのか。例えば、フィンテックサービスでは、従来は人間が「対面」で提供していたサービスにシステムつまり機械が担う「自動化」と「非対面化」がおこる。しかし、ここで機械化リスクにばかり目を奪われてしまうと「事の本質」を見失いかねない。20世紀初頭に穂積陳重が「電話と法律の関係」でおこなった考察の方法論に示唆を得て、技術革新などの社会経済の変化への「適応」を捉える「リーガルイノベーション」という法学コンセプトを提案し、いくつかの法解釈の提案をおこなった。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-18K01331/",
+   "researchers": [
+    {
+     "name": "角田 美穂子",
+     "crid": "1420282801193734784",
+     "affiliation": "一橋大学",
+     "role": "principal_investigator",
+     "tokai": "一橋大学",
+     "region": "関東"
+    }
+   ],
+   "word": "フィンテック"
+  },
+  {
+   "crid": "1040285300698525696",
+   "title": "信用と保険に対する貨幣の補完的機能に関する理論研究",
+   "since": "2020-04-01",
+   "until": "2025-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "企業間信用と銀行券の関係と企業間信用における名目債務の必要性についての均衡分析では、各モデルの中での不自然な仮定な洗い出しと、現代経済へのインプリケーションの導出を申請初年度である2020年度から並行して行い、申請年度内の査読付き国際学術雑誌での掲載を目指す。、また、もう一つのプロジェクトととして、均衡モデルによる地域通貨など複数通貨一般の分析、複数通貨の実装に向けた課題の洗い出しを行う。これらの作業を申請初年度の2020年度から並行して行い、申請年度内の査読付き国際学術雑誌での掲載を目指す。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K01780/",
+   "researchers": [
+    {
+     "name": "戸村 肇",
+     "crid": "1420564276168719360",
+     "affiliation": "早稲田大学",
+     "role": "principal_investigator",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "フィンテック"
+  },
+  {
+   "crid": "1040003825729720960",
+   "title": "金融の技術革新「フィンテック」による新しい機能、リスク、および制度設計",
+   "since": "2020-07-30",
+   "until": "2024-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "近年、フィンテックの進展は目覚ましく、異業種からの参入が金融サービスのほとんどの領域に拡大している。将来的には既存の概念を超えた新たな分野も登場するともいわれており、これら新しい金融サービスによって身近な金融取引の仕組みが大きく変わる可能性すらある。そうしたなかで、経済学の枠組みの中で、新しい金融サービスをどのように考えるべきかに関して、議論を整理し、そのバックグランドとなるべき新たな学術研究を行う研究グループを立ち上げ、さまざまな分野の研究者や実務家と意見交換を行いながら、金融業の機能や規制のあり方を、従来とは全く異なる視点に立って分析する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K20751/",
+   "researchers": [
+    {
+     "name": "福田 慎一",
+     "crid": "1420282801203637376",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
     }
    ],
    "word": "フィンテック"
@@ -1942,10 +4816,148 @@
      "crid": "1420845751136307328",
      "affiliation": "南山大学",
      "role": "principal_investigator",
-     "tokai": "南山大学"
+     "tokai": "南山大学",
+     "region": "東海"
     }
    ],
    "word": "ステーブルコイン"
+  },
+  {
+   "crid": "1040299981543363584",
+   "title": "ステーブルコイン規制のあり方ー比較法と実証の視点からの発展可能性とリスク対応",
+   "since": "2024-04-23",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "ステーブルコイン（SC）の発展に過不足のない制度整備が期待されているにもかかわらず、制度整備の方向性がその期待に応えるものとなっているか否か疑問がある。日本におけるSCの開発や運用がこれから増えつつあると予想されているなか、発行者の範囲、準備資産の構成、金銭預託の禁止をはじめとする課題が浮かび上がり、利用者および金融安定性の保護と発展可能性を両立させる制度の整備は喫緊の課題といえる。本研究は、これまで研究が充実していない比較法と実証の観点からの研究を通じて、前述課題の一解決策になるとともに、利用者および金融安定性の保護と発展可能性のバランスを提示することを目標としている。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24KJ0640/",
+   "researchers": [
+    {
+     "name": "MENG KENING",
+     "crid": "1030299981543363584",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ステーブルコイン"
+  },
+  {
+   "crid": "1040589518591785472",
+   "title": "預金契約の法的性質と払戻請求権",
+   "since": "2026-04-22",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、預金契約の法的性質について、ドイツ法学説史の展開を手がかりに、預金取引に関する法的理解の形成と変遷の過程を明らかにし、そこから日本法における預金契約の法概念および法的ルールの更新を試みるものである。その際に、本研究は、とりわけ預金者が金融機関に対して預金の払戻しを求める権利（払戻請求権）が私法上どのように構成され、その実効性がどのように確保されているかに着目し、さらに、近年広がるステーブルコインやセキュリティ・トークンといったデジタル金融資産をめぐる立法の動向や議論をも踏まえながら、現代における決済取引および金融取引の実態に適合した、預金取引に関する私法上の制度のあり方を模索する。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26KJ0935/",
+   "researchers": [
+    {
+     "name": "エイ 沛辰",
+     "crid": "1030589518591785472",
+     "affiliation": "東京大学",
+     "role": "principal_investigator",
+     "tokai": "東京大学",
+     "region": "関東"
+    }
+   ],
+   "word": "ステーブルコイン"
+  },
+  {
+   "crid": "1040858752031612672",
+   "title": "デジタル化時代のマクロプルーデンス政策",
+   "since": "2023-04-01",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "補助金",
+   "outline": "金融のデジタル化が進む中、伝統的貨幣や旧来の信用・仲介取引を前提として対応可能なのか、回答を導く研究が待たれる。本研究では、貨幣とは何か、信用とは何か、仲介とは何かという本質論に立ち返り、デジタル・トランスフォーメーションによって生じる①信用・仲介取引の革新、②バブルの発生・消滅、③中央銀行電子貨幣の導入、がもたらす影響を分析するための理論的基盤を構築する。それらを用いて、金融デジタル化時代に必要なマクロプルーデンス政策（金融システム全体に潜むリスクを評価して金融市場の安定化を図る政策）を考案する。デジタル化による経済合理性の果実を享受しつつ、安定的な金融システム設計に資する指針とする。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23H00054/",
+   "researchers": [
+    {
+     "name": "渡辺 誠",
+     "crid": "1420293401290532096",
+     "affiliation": "京都大学",
+     "role": "principal_investigator",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "陣内 了",
+     "crid": "1420001326222096128",
+     "affiliation": "一橋大学",
+     "role": "co_investigator_buntan",
+     "tokai": "一橋大学",
+     "region": "関東"
+    },
+    {
+     "name": "松岡 多利思",
+     "crid": "1420845751165403648",
+     "affiliation": "東京都立大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "深井 大幹",
+     "crid": "1420845751162352640",
+     "affiliation": "西南学院大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    },
+    {
+     "name": "岩崎 康平",
+     "crid": "1420010555045836672",
+     "affiliation": "京都大学",
+     "role": "co_investigator_buntan",
+     "tokai": "",
+     "region": ""
+    }
+   ],
+   "word": "デジタル通貨"
+  },
+  {
+   "crid": "1040018274930934656",
+   "title": "中央銀行デジタル通貨に対応した「中央銀行の独立性」、通貨・通貨主権概念の再構築",
+   "since": "2024-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、2026年頃に主要国で中央銀行デジタル通貨（CBDC）が導入され、IMFが提供予定の国際取引共通基盤（IMFやG7, G20が基準整備の予定）上で、CBDCのクロスボーダー取引が活発化する事態に備えた法整備に着目し、従来あまり検討されてこなかったが重要な２つの法概念（①国内法上の「中央銀行の独立性」、②国際法上の通貨・通貨主権概念の明確化）の課題に焦点を当て、改善提案を試みるものである。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24K04560/",
+   "researchers": [
+    {
+     "name": "久保田 隆",
+     "crid": "1420564276174898688",
+     "affiliation": "早稲田大学",
+     "role": "principal_investigator",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "デジタル通貨"
+  },
+  {
+   "crid": "1040589375704193280",
+   "title": "デジタル決済の普及が金融システムに与える影響：カンボジアを事例とした経済分析",
+   "since": "2026-04-01",
+   "until": "2029-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究は、カンボジアの中央銀行主導型デジタル決済システム「バコン」を事例に、相互運用性の導入が市場競争・金融アクセス・ドル化動態に及ぼす因果効果を定量的に解明する。商業銀行・マイクロファイナンス機関の地域別パネルデータおよび6州約1,000店舗の独自調査データを用い、Staggered DIDにより分析する。民間主導のモバイルマネー事例が中心だった既存研究と異なり、中央銀行が設計した二通貨建て決済制度の実証評価を行う点で学術的独自性が高い。成果は金融包摂と収益性を両立する決済インフラ設計に向けた政策的示唆を提供し、ドル化を抱える途上国全体への応用も期待される。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26K04899/",
+   "researchers": [
+    {
+     "name": "相場 大樹",
+     "crid": "1420564276162299264",
+     "affiliation": "早稲田大学",
+     "role": "principal_investigator",
+     "tokai": "早稲田大学",
+     "region": "関東"
+    }
+   ],
+   "word": "デジタル通貨"
   },
   {
    "crid": "1040858752028964224",
@@ -1962,10 +4974,32 @@
      "crid": "1420001326206449536",
      "affiliation": "名古屋大学",
      "role": "principal_investigator",
-     "tokai": "名古屋大学"
+     "tokai": "名古屋大学",
+     "region": "東海"
     }
    ],
    "word": "電子決済"
+  },
+  {
+   "crid": "1040578282915339008",
+   "title": "暗号に基づくプログラム実行回数制限機能の構成とその応用",
+   "since": "2023-06-30",
+   "until": "2026-03-31",
+   "program": "科学研究費助成事業",
+   "category": "基金",
+   "outline": "本研究では機密データを機密データを含むプログラムとして他者に安全に委託でき、かつその実行回数を制限できる技術の実現に取り組む。その実現により機密データのより有効な利活用と、それに基づく新たな電子サービスの創出が期待できる。本研究ではこの実現に向け、Witness暗号、量子計算機、分散型電子台帳、スマートコントラクトなどの要素技術の活用を検討し、まだ実用的でなくとも理論的な有用性を持つ実現方法と、実用的実行速度を持ちうる実現方法の両面を追求していく。",
+   "url": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-23K18459/",
+   "researchers": [
+    {
+     "name": "西出 隆志",
+     "crid": "1420845751143124224",
+     "affiliation": "筑波大学",
+     "role": "principal_investigator",
+     "tokai": "筑波大学",
+     "region": "関東"
+    }
+   ],
+   "word": "スマートコントラクト"
   }
  ],
  "kokkai": [

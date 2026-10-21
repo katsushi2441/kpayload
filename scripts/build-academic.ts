@@ -2,7 +2,7 @@
  * exbridge.jp/academic/ — 論文トラッカー（東海の大学の研究と、国会の議論を1ページに並べる）。
  *
  * 何のためか（2026-10-21）: 国会トラッカーの「誰が質問し、政府がどう答えたか」に、
- * 「東海の大学の研究者が何を研究しているか」を並べる。研究者に「この研究は国会のこの議論とつながっている」と
+ * 「東海・関東の大学の研究者が何を研究しているか」を並べる。研究者に「この研究は国会のこの議論とつながっている」と
  * データで示し、X で学者とつながる材料にする。xb4g.com は検索に弱いので exbridge.jp に置く（GSC 28日 xb4g 11クリック／exbridge.jp 468）。
  *
  * データ: data/academic/themes.json → scripts/academic-fetch.py（OpenAlex・KAKEN・国会トラッカー）
@@ -121,7 +121,7 @@ function workHtml(w: Work): string {
   return `<article class="ac-item"><h3><a href="${pUrl(w.id)}">${h(s?.title_ja || w.title)}</a></h3>
 ${s && s.title_ja !== w.title ? `<p class="orig">${h(w.title)}</p>` : ''}
 <div class="ac-meta"><span class="ac-tag">論文</span>${ymd(w.date)}${w.venue ? '　' + h(w.venue) : ''}${w.cited ? `　被引用 ${w.cited}` : ''}</div>
-<div class="ac-meta ac-who" style="margin-top:4px">東海の大学の著者：${tok}</div>
+<div class="ac-meta ac-who" style="margin-top:4px">東海・関東の大学の著者：${tok}</div>
 ${s?.summary_ja ? `<p class="sum">${h(s.summary_ja)}</p>` : ''}</article>`
 }
 
@@ -138,22 +138,24 @@ for (const d of all) {
   const t = d.theme
   const url = `${BASE}/theme/${t.slug}.html`
   const nKok = d.kokkai.reduce((a, k) => a + k.count, 0)
-  const projs = [...d.projects].sort((a, b) => (b.since || '').localeCompare(a.since || ''))
-  const works = [...d.works].sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  // 東海の研究を先に、その中は新しい順（2026-10-21 関東を足したとき「東海を軸に」）
+  const isT = (p: Proj) => p.researchers.some((r) => (r as Res & { region?: string }).region === '東海')
+  const projs = [...d.projects].sort((a, b) => Number(isT(b)) - Number(isT(a)) || (b.since || '').localeCompare(a.since || ''))
+  const works = [...d.works].sort((a, b) => Number((b as Work & { region?: string }).region !== '関東') - Number((a as Work & { region?: string }).region !== '関東') || (b.date || '').localeCompare(a.date || ''))
   const univs = new Set([...projs.flatMap((p) => p.researchers.map((r) => r.tokai)), ...works.flatMap((w) => w.authors.flatMap((a) => a.tokai))].filter(Boolean))
-  const desc = `${t.name}について、東海三県の大学の科研費の研究${projs.length}件・論文${works.length}本と、国会での質疑と答弁${nKok}件を並べました。研究者ごとのページから、研究と国会の議論のつながりをたどれます。`
-  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜東海の大学の研究 × 国会の議論</p><h1>${h(t.name)}の研究と、国会の議論</h1><p class="lead">${h(t.lead)}</p>
+  const desc = `${t.name}について、東海・関東の大学の科研費の研究${projs.length}件・論文${works.length}本と、国会での質疑と答弁${nKok}件を並べました。研究者ごとのページから、研究と国会の議論のつながりをたどれます。`
+  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜東海・関東の大学の研究 × 国会の議論</p><h1>${h(t.name)}の研究と、国会の議論</h1><p class="lead">${h(t.lead)}</p>
 <div class="ac-stats"><div><b>${projs.length}</b>科研費の研究</div><div><b>${works.length}</b>論文</div><div><b>${univs.size}</b>大学</div><div><b>${nKok}</b>国会の質疑・答弁</div></div></div></section>
 <div class="wrap"><p class="crumb"><a href="${BASE}/">論文トラッカー</a> › ${h(t.name)}</p>
 <section class="ac-sec"><h2>国会では <small>国会トラッカーの記録から（最新3件ずつ）</small></h2><div class="ac-list">${kokHtml(d)}</div></section>
-<section class="ac-sec"><h2>東海の研究者の科研費の研究 <small>${projs.length}件・新しい順</small></h2><p class="note">科学研究費助成事業（科研費）で採択された研究課題のうち、東海三県の大学の研究者が代表・分担しているものです。名前を押すと、研究者ごとのページを開きます。</p><div class="ac-list">${projs.map((p) => projHtml(p)).join('\n')}</div></section>
-<section class="ac-sec"><h2>東海の大学の著者がいる論文 <small>${works.length}本・新しい順</small></h2><p class="note">日本語の題名と要約は、論文の要旨をもとに当社が付けたものです（要旨が公開されていない論文は題名だけ）。正確な内容は、題名のリンクから原文を確かめてください。</p><div class="ac-list">${works.map(workHtml).join('\n')}</div></section>
+<section class="ac-sec"><h2>東海・関東の研究者の科研費の研究 <small>${projs.length}件・東海を先に新しい順</small></h2><p class="note">科学研究費助成事業（科研費）で採択された研究課題のうち、東海三県の大学の研究者が代表・分担しているものです。名前を押すと、研究者ごとのページを開きます。</p><div class="ac-list">${projs.map((p) => projHtml(p)).join('\n')}</div></section>
+<section class="ac-sec"><h2>東海・関東の大学の著者がいる論文 <small>${works.length}本・東海を先に新しい順</small></h2><p class="note">日本語の題名と要約は、論文の要旨をもとに当社が付けたものです（要旨が公開されていない論文は題名だけ）。正確な内容は、題名のリンクから原文を確かめてください。</p><div class="ac-list">${works.map(workHtml).join('\n')}</div></section>
 <section class="ac-sec"><div class="cta"><h2 style="margin:0 0 6px">研究と国会の議論を、つなげて見せる</h2><p style="margin:0">このページは、国会トラッカーと同じしくみで、当社が自動で集めて作っています。研究室や大学の広報、自治体の政策づくりで「この研究は国会でどう議論されているか」を示す資料が必要なときは、ご相談ください。</p><div class="kit-actions"><a class="btn btn-main" href="${SITE}/contact.php">相談する</a><a class="btn" href="${SITE}/ai-sns-komon.html#ref=${REF}-cta">AI-SNS顧問</a><a class="btn" href="${SITE}/ai-it-komon.html#ref=${REF}-cta">AI-IT顧問</a></div></div>
 <p class="note">出典：OpenAlex（CC0）、CiNii Research・KAKEN（国立情報学研究所）、国会会議録検索システム（国立国会図書館）。データ取得 ${ymd(d.fetched)}。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: t.seo_title, url, description: desc, dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: SITE },
     mainEntity: { '@type': 'ItemList', numberOfItems: works.length, itemListElement: works.slice(0, 30).map((w, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'ScholarlyArticle', name: w.title, url: w.url, datePublished: w.date } })) } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '論文トラッカー', item: `${BASE}/` }, { '@type': 'ListItem', position: 2, name: t.name, item: url }] }]
-  const ogi = og({ name: `theme-${t.slug}`, kind: 'theme', kicker: '論文トラッカー｜東海の大学の研究 × 国会の議論', title: t.name,
+  const ogi = og({ name: `theme-${t.slug}`, kind: 'theme', kicker: '論文トラッカー｜東海・関東の大学の研究 × 国会の議論', title: t.name,
     stats: [[String(projs.length), '科研費の研究'], [String(works.length), '論文'], [String(univs.size), '大学'], [nKok.toLocaleString('ja-JP'), '国会の質疑・答弁']] })
   await write(`theme/${t.slug}.html`, shell(t.seo_title, desc, url, body, ld, ogi))
   urls.push(url)
@@ -170,12 +172,12 @@ for (const d of all) {
     const tok = w.authors.filter((a) => a.tokai.length)
     const univs = [...new Set(tok.flatMap((a) => a.tokai))]
     const title = `${cut(tj, 48)}｜${univs.join('・')}の研究｜論文トラッカー`
-    const desc = `${s?.summary_ja || tj}（${ymd(w.date)}${w.venue ? '・' + w.venue : ''}）。東海の大学の著者: ${tok.map((a) => a.name + '（' + a.tokai[0] + '）').slice(0, 3).join('、')}。テーマ「${t.name}」の国会の議論と並べています。`
+    const desc = `${s?.summary_ja || tj}（${ymd(w.date)}${w.venue ? '・' + w.venue : ''}）。東海・関東の大学の著者: ${tok.map((a) => a.name + '（' + a.tokai[0] + '）').slice(0, 3).join('、')}。テーマ「${t.name}」の国会の議論と並べています。`
     const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜${h(t.name)}</p><h1 style="font-size:clamp(22px,3.6vw,34px)">${h(tj)}</h1>${s && tj !== w.title ? `<p class="lead">${h(w.title)}</p>` : ''}</div></section>
 <div class="wrap"><p class="crumb"><a href="${BASE}/">論文トラッカー</a> › <a href="${BASE}/theme/${t.slug}.html">${h(t.name)}</a> › 論文</p>
 <section class="ac-sec"><div class="panel">${s?.summary_ja ? `<p style="margin:0 0 10px;font-size:16px">${h(s.summary_ja)}</p><p class="note" style="margin:0 0 10px">この要約は、論文の要旨をもとに当社が付けたものです。正確な内容は原文で確かめてください。</p>` : ''}
 <table><tr><th>掲載</th><td>${ymd(w.date)}${w.venue ? '　' + h(w.venue) : ''}</td></tr>
-<tr><th>東海の大学の著者</th><td>${tok.map((a) => `${h(a.name)}（${h(a.tokai.join('・'))}）`).join('、')}</td></tr>
+<tr><th>東海・関東の大学の著者</th><td>${tok.map((a) => `${h(a.name)}（${h(a.tokai.join('・'))}）`).join('、')}</td></tr>
 <tr><th>著者（全員）</th><td>${h(w.authors.map((a) => a.name).slice(0, 12).join('、'))}${w.authors.length > 12 ? ` ほか${w.authors.length - 12}人` : ''}</td></tr>
 ${w.cited ? `<tr><th>被引用</th><td>${w.cited}（OpenAlex）</td></tr>` : ''}
 <tr><th>原文</th><td><a href="${attr(w.url)}" rel="noopener" target="_blank">${h(w.doi || w.url)}</a></td></tr></table></div></section>
@@ -198,7 +200,7 @@ for (const p of people.values()) {
   const title = `${p.name}（${p.affiliation}）の研究と国会の議論｜論文トラッカー`
   const desc = `${p.affiliation}の${p.name}さんの科研費の研究${p.projects.length}件（${themesOf.map((t) => t.name).join('・')}）と、同じテーマの国会での質疑・答弁をまとめました。`
   const kok = all.filter((d) => themesOf.some((t) => t.slug === d.theme.slug)).flatMap((d) => d.kokkai.filter((k) => k.count))
-  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜東海の大学の研究者</p><h1>${h(p.name)}</h1><p class="lead">${h(p.affiliation)}　科研費の研究 ${p.projects.length}件（${h(themesOf.map((t) => t.name).join('・'))}）</p></div></section>
+  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜東海・関東の大学の研究者</p><h1>${h(p.name)}</h1><p class="lead">${h(p.affiliation)}　科研費の研究 ${p.projects.length}件（${h(themesOf.map((t) => t.name).join('・'))}）</p></div></section>
 <div class="wrap"><p class="crumb"><a href="${BASE}/">論文トラッカー</a> › ${themesOf.map((t) => `<a href="${BASE}/theme/${t.slug}.html">${h(t.name)}</a>`).join('・')} › ${h(p.name)}</p>
 <section class="ac-sec"><h2>科研費の研究</h2><div class="ac-list">${p.projects.map((x) => projHtml(x.p).replace('</article>', `<div class="ac-meta" style="margin-top:6px">${h(p.name)}さんの役割：${roleJa(x.role)}</div></article>`)).join('\n')}</div>
 <p class="note">研究者の情報：<a href="https://cir.nii.ac.jp/crid/${attr(p.crid)}" rel="noopener" target="_blank">CiNii Research の研究者ページ</a></p></section>
@@ -206,7 +208,7 @@ for (const p of people.values()) {
 <p class="note">研究の内容と国会の議論は、テーマが同じものを並べています。研究者ご本人が国会で発言したという意味ではありません。</p></section>
 <section class="ac-sec"><p class="note">出典：CiNii Research・KAKEN（国立情報学研究所）、国会会議録検索システム（国立国会図書館）。掲載内容の訂正・削除のご依頼は<a href="${SITE}/contact.php">お問い合わせ</a>からお送りください。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'ProfilePage', name: title, url, dateModified: TODAY, mainEntity: { '@type': 'Person', name: p.name, affiliation: { '@type': 'CollegeOrUniversity', name: p.tokai }, sameAs: [`https://cir.nii.ac.jp/crid/${p.crid}`] } }]
-  const ogi = og({ name: `r-${p.crid}`, kind: 'researcher', kicker: '論文トラッカー｜東海の大学の研究者', title: p.name, sub: `${p.affiliation}｜${themesOf.map((t) => t.name).join('・')}`,
+  const ogi = og({ name: `r-${p.crid}`, kind: 'researcher', kicker: '論文トラッカー｜東海・関東の大学の研究者', title: p.name, sub: `${p.affiliation}｜${themesOf.map((t) => t.name).join('・')}`,
     stats: [[String(p.projects.length), '科研費の研究'], [String(kok.reduce((a, k) => a + k.count, 0).toLocaleString('ja-JP')), '同じテーマの国会の質疑・答弁']] })
   await write(`researcher/${p.crid}.html`, shell(title, desc, url, body, ld, ogi))
   urls.push(url)
@@ -217,16 +219,17 @@ for (const p of people.values()) {
   const url = `${BASE}/`
   const byUniv = new Map<string, Person[]>()
   for (const p of people.values()) byUniv.set(p.tokai, [...(byUniv.get(p.tokai) || []), p])
-  const univs = [...byUniv.entries()].sort((a, b) => b[1].length - a[1].length)
-  const desc = `東海三県（愛知・岐阜・三重）の大学の研究者が何を研究しているかと、国会で何が議論されているかを、テーマごとに並べた論文トラッカーです。科研費の研究・論文・国会の質疑と答弁をたどれます。`
-  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">東海の大学の研究 × 国会の議論</p><h1>論文トラッカー</h1><p class="lead">${h(desc)}</p></div></section>
+  const KANTO_U = ['東京大学', '慶應義塾大学', '早稲田大学', '東京科学大学', '一橋大学', '筑波大学', '東京理科大学', '千葉大学', '横浜国立大学', '明治大学', '東京工業大学', '東京医科歯科大学']
+  const univs = [...byUniv.entries()].sort((a, b) => Number(KANTO_U.includes(a[0])) - Number(KANTO_U.includes(b[0])) || b[1].length - a[1].length)
+  const desc = `東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、国会で何が議論されているかを、テーマごとに並べた論文トラッカーです。科研費の研究・論文・国会の質疑と答弁をたどれます。`
+  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">東海・関東の大学の研究 × 国会の議論</p><h1>論文トラッカー</h1><p class="lead">${h(desc)}</p></div></section>
 <div class="wrap"><section class="ac-sec"><h2>テーマ</h2><div class="ac-cards">${all.map((d) => `<a class="ac-card" href="${BASE}/theme/${d.theme.slug}.html"><b>${h(d.theme.name)}</b><span>科研費 ${d.projects.length}件・論文 ${d.works.length}本・国会 ${d.kokkai.reduce((a, k) => a + k.count, 0)}件</span></a>`).join('')}</div></section>
 <section class="ac-sec"><h2>大学ごとの研究者 <small>${people.size}人</small></h2>${univs.map(([u, ps]) => `<h3 style="margin-top:14px">${h(u)} <small class="note">${ps.length}人</small></h3><div class="ac-meta ac-who" style="font-size:14px;gap:6px 14px">${ps.sort((a, b) => a.name.localeCompare(b.name, 'ja')).map((p) => `<a href="${rUrl(p.crid)}">${h(p.name)}</a>`).join('')}</div>`).join('')}</section>
 <section class="ac-sec"><p class="note">国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-index">国会トラッカー</a> と同じデータです。出典：OpenAlex、CiNii Research・KAKEN、国会会議録検索システム。</p></section></div>`
-  const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '論文トラッカー｜東海の大学の研究と国会の議論', url, description: desc, dateModified: TODAY }]
-  const ogi = og({ name: 'index', kind: 'index', kicker: '東海の大学の研究 × 国会の議論', title: '論文トラッカー',
+  const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '論文トラッカー｜東海・関東の大学の研究と国会の議論', url, description: desc, dateModified: TODAY }]
+  const ogi = og({ name: 'index', kind: 'index', kicker: '東海・関東の大学の研究 × 国会の議論', title: '論文トラッカー',
     stats: [[String(all.length), 'テーマ'], [String(people.size), '研究者'], [String(new Set([...people.values()].map((p) => p.tokai)).size), '大学']] })
-  await write('index.html', shell('論文トラッカー｜東海の大学の研究と国会の議論', desc, url, body, ld, ogi))
+  await write('index.html', shell('論文トラッカー｜東海・関東の大学の研究と国会の議論', desc, url, body, ld, ogi))
   urls.unshift(url)
 }
 
