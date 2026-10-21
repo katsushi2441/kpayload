@@ -52,7 +52,7 @@ for (const t of themes) {
 const FOOT = `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">論文トラッカー</a>　<a href="${GIIN}/tracker/#ref=${REF}-foot">国会トラッカー</a>　<a href="${SITE}/ai-it-komon.html#ref=${REF}-foot">AI-IT顧問</a>　<a href="${SITE}/ai-sns-komon.html#ref=${REF}-foot">AI-SNS顧問</a>　<a href="${SITE}/contact.php">お問い合わせ</a>`
 /* OGP画像（2026-10-21）。ページごとに「画像に描く中身」を ogSpecs に積み、scripts/make_academic_ogp.py が
  * exbridge_jp/images/academic/<name>.png に描く。URL の ?v= は中身のハッシュ（数字が変われば URL も変わり、X が古い画像を出さない）。 */
-type OgSpec = { name: string; kind: 'theme' | 'researcher' | 'index'; kicker: string; title: string; sub?: string; stats?: [string, string][] }
+type OgSpec = { name: string; kind: 'theme' | 'researcher' | 'index' | 'paper'; kicker: string; title: string; sub?: string; stats?: [string, string][] }
 const ogSpecs: OgSpec[] = []
 function og(spec: OgSpec): string {
   ogSpecs.push(spec)
@@ -86,6 +86,7 @@ const KIND: Record<string, [string, string]> = { gov: ['答弁', 'gov'], q: ['�
 const ymd = (s: string) => (s || '').replace(/^(\d{4})-(\d{2})-(\d{2}).*/, '$1年$2月$3日').replace(/^(\d{4})-(\d{2})$/, '$1年$2月').replace(/年0/, '年').replace(/月0/, '月')
 const cut = (s: string, n: number) => { const t = (s || '').replace(/\s+/g, ' ').trim(); return t.length > n ? t.slice(0, n) + '…' : t }
 const rUrl = (crid: string) => `${BASE}/researcher/${crid}.html`
+const pUrl = (id: string) => `${BASE}/paper/${id}.html`
 
 /** 東海の研究者（KAKEN の研究課題に出てくる人）を集める。研究者のページはこの人たちだけ作る。 */
 type Person = { crid: string; name: string; affiliation: string; tokai: string; projects: { p: Proj; theme: Theme; role: string }[] }
@@ -117,7 +118,7 @@ ${p.outline ? `<p class="sum">${h(cut(p.outline, 170))}</p>` : ''}</article>`
 function workHtml(w: Work): string {
   const s = sums[w.id]
   const tok = w.authors.filter((a) => a.tokai.length).map((a) => `${h(a.name)}（${h(a.tokai[0])}）`).slice(0, 4).join('、')
-  return `<article class="ac-item"><h3><a href="${attr(w.url)}" rel="noopener" target="_blank">${h(s?.title_ja || w.title)}</a></h3>
+  return `<article class="ac-item"><h3><a href="${pUrl(w.id)}">${h(s?.title_ja || w.title)}</a></h3>
 ${s && s.title_ja !== w.title ? `<p class="orig">${h(w.title)}</p>` : ''}
 <div class="ac-meta"><span class="ac-tag">論文</span>${ymd(w.date)}${w.venue ? '　' + h(w.venue) : ''}${w.cited ? `　被引用 ${w.cited}` : ''}</div>
 <div class="ac-meta ac-who" style="margin-top:4px">東海の大学の著者：${tok}</div>
@@ -156,6 +157,38 @@ for (const d of all) {
     stats: [[String(projs.length), '科研費の研究'], [String(works.length), '論文'], [String(univs.size), '大学'], [nKok.toLocaleString('ja-JP'), '国会の質疑・答弁']] })
   await write(`theme/${t.slug}.html`, shell(t.seo_title, desc, url, body, ld, ogi))
   urls.push(url)
+}
+
+// 論文のページ（2026-10-21）。X で論文の話をしている人に、その論文のカード（題名・東海の著者）を見せて返信するため
+for (const d of all) {
+  const t = d.theme
+  const nKok = d.kokkai.reduce((a, k) => a + k.count, 0)
+  for (const w of d.works) {
+    const s = sums[w.id]
+    const url = pUrl(w.id)
+    const tj = s?.title_ja || w.title
+    const tok = w.authors.filter((a) => a.tokai.length)
+    const univs = [...new Set(tok.flatMap((a) => a.tokai))]
+    const title = `${cut(tj, 48)}｜${univs.join('・')}の研究｜論文トラッカー`
+    const desc = `${s?.summary_ja || tj}（${ymd(w.date)}${w.venue ? '・' + w.venue : ''}）。東海の大学の著者: ${tok.map((a) => a.name + '（' + a.tokai[0] + '）').slice(0, 3).join('、')}。テーマ「${t.name}」の国会の議論と並べています。`
+    const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">論文トラッカー｜${h(t.name)}</p><h1 style="font-size:clamp(22px,3.6vw,34px)">${h(tj)}</h1>${s && tj !== w.title ? `<p class="lead">${h(w.title)}</p>` : ''}</div></section>
+<div class="wrap"><p class="crumb"><a href="${BASE}/">論文トラッカー</a> › <a href="${BASE}/theme/${t.slug}.html">${h(t.name)}</a> › 論文</p>
+<section class="ac-sec"><div class="panel">${s?.summary_ja ? `<p style="margin:0 0 10px;font-size:16px">${h(s.summary_ja)}</p><p class="note" style="margin:0 0 10px">この要約は、論文の要旨をもとに当社が付けたものです。正確な内容は原文で確かめてください。</p>` : ''}
+<table><tr><th>掲載</th><td>${ymd(w.date)}${w.venue ? '　' + h(w.venue) : ''}</td></tr>
+<tr><th>東海の大学の著者</th><td>${tok.map((a) => `${h(a.name)}（${h(a.tokai.join('・'))}）`).join('、')}</td></tr>
+<tr><th>著者（全員）</th><td>${h(w.authors.map((a) => a.name).slice(0, 12).join('、'))}${w.authors.length > 12 ? ` ほか${w.authors.length - 12}人` : ''}</td></tr>
+${w.cited ? `<tr><th>被引用</th><td>${w.cited}（OpenAlex）</td></tr>` : ''}
+<tr><th>原文</th><td><a href="${attr(w.url)}" rel="noopener" target="_blank">${h(w.doi || w.url)}</a></td></tr></table></div></section>
+<section class="ac-sec"><h2>同じテーマの国会の議論 <small>国会の質疑・答弁 ${nKok.toLocaleString('ja-JP')}件</small></h2><div class="ac-list">${kokHtml(d)}</div>
+<p class="note">論文の内容と国会の議論は、テーマが同じものを並べています。著者が国会で発言したという意味ではありません。</p></section>
+<section class="ac-sec"><p><a class="btn" href="${BASE}/theme/${t.slug}.html">「${h(t.name)}」の研究と論文をすべて見る</a></p><p class="note">出典：OpenAlex（CC0）、国会会議録検索システム。掲載内容の訂正・削除のご依頼は<a href="${SITE}/contact.php">お問い合わせ</a>から。</p></section></div>`
+    const ld = [{ '@context': 'https://schema.org', '@type': 'ScholarlyArticle', name: w.title, headline: tj, url: w.url, datePublished: w.date,
+      author: w.authors.slice(0, 10).map((a) => ({ '@type': 'Person', name: a.name })), isPartOf: w.venue ? { '@type': 'Periodical', name: w.venue } : undefined, mainEntityOfPage: url }]
+    const ogi = og({ name: `p-${w.id}`, kind: 'paper', kicker: `論文トラッカー｜${t.name}`, title: cut(tj, 44), sub: `${univs.join('・')}　${tok.map((a) => a.name).slice(0, 2).join('・')}${tok.length > 2 ? ' ほか' : ''}`,
+      stats: [[ymd(w.date).replace(/月.*/, '月'), w.venue ? cut(w.venue, 22) : '論文'], [nKok.toLocaleString('ja-JP'), '同じテーマの国会の質疑・答弁']] })
+    await write(`paper/${w.id}.html`, shell(title, desc, url, body, ld, ogi))
+    urls.push(url)
+  }
 }
 
 // 研究者のページ

@@ -35,9 +35,10 @@ body{width:1200px;height:630px;font-family:"Noto Sans CJK JP",sans-serif;backgro
 .band{position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(180deg,#007f96,#0a9a8f)}
 .top{position:absolute;left:64px;top:44px;display:flex;align-items:center;gap:12px;font-size:24px;font-weight:700;color:#3d5566}
 .top img{width:40px;height:40px}
-.kicker{position:absolute;left:64px;top:118px;font-size:26px;font-weight:900;color:#007f96}
-h1{position:absolute;left:64px;top:162px;width:820px;font-weight:900;line-height:1.25;color:#10242b}
-.sub{position:absolute;left:66px;font-size:30px;font-weight:700;color:#3d5566}
+.main{position:absolute;left:64px;top:116px;width:820px;max-height:330px;overflow:hidden}
+.kicker{font-size:26px;font-weight:900;color:#007f96;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+h1{margin-top:12px;font-weight:900;line-height:1.25;color:#10242b;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.sub{margin-top:14px;font-size:28px;font-weight:700;color:#3d5566;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .stats{position:absolute;left:64px;bottom:56px;display:flex;gap:14px;flex-wrap:nowrap}
 .stats div{background:#fff;border:2px solid #dbe5e8;border-radius:18px;padding:12px 22px 14px;min-width:150px}
 .stats b{display:block;font-size:54px;line-height:1.1;color:#007f96;font-weight:900}
@@ -49,13 +50,12 @@ h1{position:absolute;left:64px;top:162px;width:820px;font-weight:900;line-height
 def page(spec: dict) -> str:
     title = html.escape(spec["title"])
     n = len(spec["title"])
-    size = 84 if n <= 8 else 68 if n <= 14 else 56 if n <= 20 else 46
-    sub_top = 162 + int(size * 1.25) * (1 if n * size < 820 else 2) + 18
+    size = 84 if n <= 8 else 68 if n <= 14 else 56 if n <= 20 else 46 if n <= 34 else 40
     stats = "".join(f"<div><b>{html.escape(a)}</b><span>{html.escape(b)}</span></div>" for a, b in spec.get("stats", []))
-    sub = f'<div class="sub" style="top:{sub_top}px">{html.escape(spec["sub"])}</div>' if spec.get("sub") else ""
+    sub = f'<div class="sub">{html.escape(spec["sub"])}</div>' if spec.get("sub") else ""
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="band"></div>'
-            f'<div class="top"><img src="{LOGO}">株式会社エクスブリッジ</div><div class="kicker">{html.escape(spec["kicker"])}</div>'
-            f'<h1 style="font-size:{size}px">{title}</h1>{sub}<img class="m" src="{MASCOT}">'
+            f'<div class="top"><img src="{LOGO}">株式会社エクスブリッジ</div><div class="main"><div class="kicker">{html.escape(spec["kicker"])}</div>'
+            f'<h1 style="font-size:{size}px">{title}</h1>{sub}</div><img class="m" src="{MASCOT}">'
             f'<div class="stats">{stats}</div><div class="url">exbridge.jp/academic</div></body></html>')
 
 
