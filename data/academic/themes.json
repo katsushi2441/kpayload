@@ -88,5 +88,35 @@
       "micro-plastic"
     ],
     "x_rx": "PFAS|ＰＦＡＳ|有機フッ素|PFOS|ＰＦＯＳ|PFOA|ＰＦＯＡ|マイクロプラスチック|ナノプラスチック|プラスチック汚染"
+  },
+  {
+    "slug": "fintech-blockchain",
+    "name": "ブロックチェーン・ステーブルコインとフィンテック",
+    "seo_title": "ブロックチェーン・フィンテックの研究｜東海の大学の論文・科研費と国会の議論",
+    "lead": "ブロックチェーン、暗号資産・ステーブルコイン、デジタル通貨、Web3とフィンテックについて、東海三県（愛知・岐阜・三重）の大学の研究者が何を研究しているかと、国会で何が議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "ブロックチェーン・暗号資産・フィンテック",
+        "search": "blockchain|stablecoin|stablecoins|cryptocurrency|cryptocurrencies|\"crypto asset\"|bitcoin|fintech|\"central bank digital currency\"|CBDC|\"decentralized finance\"|DeFi|Web3|\"smart contract\"|\"smart contracts\"|tokenization",
+        "and": "blockchain|blockchains|stablecoin|stablecoins|cryptocurrency|cryptocurrencies|crypto|bitcoin|fintech|CBDC|DeFi|Web3|smart contract|smart contracts|tokenization|distributed ledger",
+        "sort": "publication_date:desc",
+        "limit": 120
+      }
+    ],
+    "kaken": [
+      "ブロックチェーン",
+      "暗号資産",
+      "仮想通貨",
+      "フィンテック",
+      "ステーブルコイン",
+      "デジタル通貨",
+      "電子決済",
+      "スマートコントラクト"
+    ],
+    "kaken_must": "ブロックチェーン|暗号資産|仮想通貨|フィンテック|FinTech|Fintech|ステーブルコイン|デジタル通貨|CBDC|電子決済|キャッシュレス|スマートコントラクト|分散台帳|Web3|トークン",
+    "x_rx": "ブロックチェーン|ステーブルコイン|JPYC|暗号資産|仮想通貨|ビットコイン|Bitcoin|BTC|イーサリアム|Web3|ＷＥＢ３|フィンテック|FinTech|Fintech|デジタル通貨|CBDC|DeFi|NFT|トークン化|スマートコントラクト",
+    "trackers": [
+      "stablecoin"
+    ]
   }
 ]
