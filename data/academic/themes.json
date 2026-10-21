@@ -52,5 +52,39 @@
       "ai-kodomo"
     ],
     "kaken_must": "生成AI|生成ＡＩ|生成系AI|生成的AI|大規模言語モデル|LLM|ＬＬＭ|ChatGPT|GPT|対話型AI|基盤モデル|行政|自治体|地方公共団体|政府|公共サービス|電子政府|ガバメント|公務"
+  },
+  {
+    "slug": "pfas-microplastic",
+    "name": "PFAS・マイクロプラスチックと環境分析",
+    "seo_title": "PFAS・マイクロプラスチックの研究｜東海の大学の論文・科研費と国会の議論",
+    "lead": "有機フッ素化合物（PFAS）とマイクロプラスチックについて、東海三県（愛知・岐阜・三重）の大学の研究者が、どう測り、何を明らかにしようとしているかと、国会で何が議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "PFAS（有機フッ素化合物）",
+        "search": "PFAS|\"perfluoroalkyl\"|\"polyfluoroalkyl\"|PFOS|PFOA",
+        "sort": "publication_date:desc",
+        "limit": 80,
+        "and": "PFAS|PFASs|PFOS|PFOA|perfluoroalkyl|polyfluoroalkyl|perfluorinated|perfluorooctane|perfluorooctanoic"
+      },
+      {
+        "label": "マイクロプラスチック",
+        "search": "microplastic|microplastics|nanoplastic|nanoplastics",
+        "sort": "publication_date:desc",
+        "limit": 80,
+        "and": "microplastic|microplastics|nanoplastic|nanoplastics"
+      }
+    ],
+    "kaken": [
+      "PFAS",
+      "有機フッ素化合物",
+      "マイクロプラスチック",
+      "ナノプラスチック",
+      "プラスチック 海洋"
+    ],
+    "kaken_must": "PFAS|ＰＦＡＳ|有機フッ素|ペルフルオロ|PFOS|PFOA|ＰＦＯＳ|ＰＦＯＡ|マイクロプラスチック|ナノプラスチック|プラスチック",
+    "trackers": [
+      "pfas",
+      "micro-plastic"
+    ]
   }
 ]

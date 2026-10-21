@@ -96,11 +96,21 @@ const card = (href: string, meta: string, title: string, note: string) => `
   <div class="lc-d">${h(note)}</div>
 </a>`
 
+// 記事を実際に読んで作った本文（2026-10-09）。以前は題名から推測した要約（「〜とみられます」）で
+// 一致率0.62・90日クリック21だった。scripts/gen_zenn_content.py が data/zenn-content/<slug>.json に作る。
+type ZennC = { title: string; description: string; lead: string; summary: string[]; flow: string[]
+  notes: Array<{ h: string; p: string }>; faqs: Array<{ q: string; a: string }>; _generated: string }
+const zennContent = new Map<string, ZennC>()
+for (const f of await fs.readdir(path.join(root, 'data', 'zenn-content')).catch(() => [] as string[])) {
+  if (f.endsWith('.json')) zennContent.set(f.slice(0, -5), JSON.parse(await fs.readFile(path.join(root, 'data', 'zenn-content', f), 'utf8')))
+}
+
 function pageHtml(p: ZennPage): string {
   const a = p.article
+  const c = zennContent.get(p.slug)
   const zennUrl = a.path.startsWith('http') ? a.path : `https://zenn.dev${a.path}`
-  const title = p.pageTitle
-  const desc = `${p.keyword}について、Zennに公開されている実践記事「${a.title}」を紹介します。あわせて${p.ossName}の導入情報・SaaSからの置き換え可否・構築代行の入口もまとめました。`
+  const title = c ? c.title : p.pageTitle
+  const desc = c ? c.description : `${p.keyword}について、Zennに公開されている実践記事「${a.title}」を紹介します。あわせて${p.ossName}の導入情報・SaaSからの置き換え可否・構築代行の入口もまとめました。`
   const url = `${BASE}/${p.slug}.html`
 
   const proj: any = projBySlug.get(p.ossSlug)
@@ -132,7 +142,9 @@ function pageHtml(p: ZennPage): string {
 </a>`).join('')
 
   // よくある質問（表示とJSON-LDで同じ内容を使う）
-  const faqs: Array<{ q: string; a: string }> = [
+  const commonFaq = { q: `自分で導入するのが難しい場合はどうすればよいですか？`,
+      a: `当社がOSSの導入・日本語化・サーバー構築を代行しています（税込110,000円〜）。相談は無料で、Zoomでの打ち合わせにも対応しています。「そのOSSは御社には向かない」という結論になることもあり、その場合はそうお伝えします。` }
+  const faqs: Array<{ q: string; a: string }> = c ? [...c.faqs, commonFaq] : [
     { q: `${p.ossName} は商用利用できますか？`,
       a: `${p.ossName} はオープンソースとして公開されています。ライセンスの条件（改変版を配布する場合の義務など）は元のリポジトリで確認してください。当社のカタログページでは、ライセンスの区分と実務上の注意点をまとめています。` },
     { q: `${p.keyword} で調べています。まず何を読めばよいですか？`,
@@ -175,7 +187,7 @@ function pageHtml(p: ZennPage): string {
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">OSSの実践記事から探す</a> ／ ${h(p.keyword)}</nav>
 <h1>${h(title)}</h1>
-<p class="lead">${h(p.lead)}</p>
+<p class="lead">${h(c ? c.lead : p.lead)}</p>
 
 <section class="zbox">
   <div class="zhead">
@@ -186,11 +198,15 @@ function pageHtml(p: ZennPage): string {
       <div class="zm">${h([a.name || a.user, dateJa(a.published_at), a.liked ? `♥${a.liked}` : ''].filter(Boolean).join('　'))}</div>
     </div>
   </div>
-  <p class="zsum">${h(a.summary)}</p>
-  ${a.points && a.points.length ? `<ul class="zpts">${a.points.map((x) => `<li>${h(x)}</li>`).join('')}</ul>` : ''}
+  ${c ? c.summary.map((x) => `<p class="zsum">${h(x)}</p>`).join('') + `
+  <h3>記事の手順の流れ</h3>
+  <ol class="zpts">${c.flow.map((x) => `<li>${h(x)}</li>`).join('')}</ol>` : `<p class="zsum">${h(a.summary)}</p>
+  ${a.points && a.points.length ? `<ul class="zpts">${a.points.map((x) => `<li>${h(x)}</li>`).join('')}</ul>` : ''}`}
   <p class="zgo"><a class="btn" href="${attr(zennUrl)}" target="_blank" rel="noopener">Zennで記事を読む →</a></p>
   <p class="note">記事は著者の方がZennに公開されているものです。当社は内容を転載していません。上のリンクから元記事が開きます。</p>
 </section>
+
+${c ? c.notes.map((x) => `<section><h2>${h(x.h)}</h2><p class="sum">${h(x.p)}</p></section>`).join('\n') : ''}
 
 ${p.ossSummary ? `<section><h2>${h(p.ossName)} とは</h2><p class="sum">${h(p.ossSummary)}</p></section>` : ''}
 
@@ -324,7 +340,7 @@ await fs.writeFile(path.join(distRoot, 'index.html'), indexHtml(pages), 'utf8')
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-${pages.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
+${pages.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${zennContent.get(p.slug)?._generated || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
 </urlset>`
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sitemap, 'utf8')
 
