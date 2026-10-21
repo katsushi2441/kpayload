@@ -118,5 +118,33 @@
     "trackers": [
       "stablecoin"
     ]
+  },
+  {
+    "slug": "cybersecurity",
+    "name": "サイバーセキュリティと能動的サイバー防御",
+    "seo_title": "サイバーセキュリティの研究｜東海・関東の大学の論文・科研費と国会の議論",
+    "lead": "サイバー攻撃・ランサムウェア・不正アクセスへの対策、重要インフラの防御、能動的サイバー防御について、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、国会で何が議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "サイバーセキュリティ",
+        "search": "cybersecurity|\"cyber security\"|\"cyber attack\"|cyberattack|ransomware|\"intrusion detection\"|malware|\"critical infrastructure\" AND security",
+        "and": "cybersecurity|cyber security|cyber attack|cyberattack|cyberattacks|ransomware|intrusion detection|malware|phishing|botnet|vulnerability|vulnerabilities",
+        "sort": "publication_date:desc",
+        "limit": 60
+      }
+    ],
+    "kaken": [
+      "サイバーセキュリティ",
+      "サイバー攻撃",
+      "マルウェア",
+      "ランサムウェア",
+      "不正アクセス",
+      "侵入検知"
+    ],
+    "kaken_must": "サイバー|マルウェア|ランサムウェア|不正アクセス|侵入検知|セキュリティ|フィッシング|ボットネット|脆弱性",
+    "x_rx": "サイバー|ランサムウェア|マルウェア|不正アクセス|情報漏えい|情報漏洩|ハッキング|セキュリティ",
+    "trackers": [
+      "joho-roei"
+    ]
   }
 ]
