@@ -128,6 +128,9 @@ if [ "$what" = "academic" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: academic/ =="
   # build-academic.ts は exbridge_jp/academic/ に直接書く。研究者ごとのページが多いので、中身が変わったものだけ1接続で送る
   /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp academic || rc=1
+  # OGP画像（テーマ・研究者・一覧）。build が書いた中身から描き、変わったものだけ送る
+  /usr/bin/python3 "$(dirname "$0")/make_academic_ogp.py" || rc=1
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp images/academic || rc=1
 fi
 
 exit $rc

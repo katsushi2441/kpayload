@@ -11,6 +11,7 @@
  * 配置:   bash scripts/deploy.sh academic
  *   npx tsx scripts/build-academic.ts
  */
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -49,7 +50,16 @@ for (const t of themes) {
 }
 
 const FOOT = `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">論文トラッカー</a>　<a href="${GIIN}/tracker/#ref=${REF}-foot">国会トラッカー</a>　<a href="${SITE}/ai-it-komon.html#ref=${REF}-foot">AI-IT顧問</a>　<a href="${SITE}/ai-sns-komon.html#ref=${REF}-foot">AI-SNS顧問</a>　<a href="${SITE}/contact.php">お問い合わせ</a>`
-const shell = (t: string, d: string, u: string, b: string, l: unknown[]) => baseShell(t, d, u, b, l, { refPrefix: REF, base: BASE, footerLinks: FOOT })
+/* OGP画像（2026-10-21）。ページごとに「画像に描く中身」を ogSpecs に積み、scripts/make_academic_ogp.py が
+ * exbridge_jp/images/academic/<name>.png に描く。URL の ?v= は中身のハッシュ（数字が変われば URL も変わり、X が古い画像を出さない）。 */
+type OgSpec = { name: string; kind: 'theme' | 'researcher' | 'index'; kicker: string; title: string; sub?: string; stats?: [string, string][] }
+const ogSpecs: OgSpec[] = []
+function og(spec: OgSpec): string {
+  ogSpecs.push(spec)
+  const v = crypto.createHash('sha1').update(JSON.stringify(spec)).digest('hex').slice(0, 8)
+  return `${SITE}/images/academic/${spec.name}.png?v=${v}`
+}
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, b, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
 
 const CSS = `<style>
 .ac-sec{padding:26px 0 6px}.ac-sec>h2{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.ac-sec>h2 small{font-size:13px;color:var(--muted);font-weight:700}
@@ -142,7 +152,9 @@ for (const d of all) {
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: t.seo_title, url, description: desc, dateModified: TODAY, isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: SITE },
     mainEntity: { '@type': 'ItemList', numberOfItems: works.length, itemListElement: works.slice(0, 30).map((w, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'ScholarlyArticle', name: w.title, url: w.url, datePublished: w.date } })) } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '論文トラッカー', item: `${BASE}/` }, { '@type': 'ListItem', position: 2, name: t.name, item: url }] }]
-  await write(`theme/${t.slug}.html`, shell(t.seo_title, desc, url, body, ld))
+  const ogi = og({ name: `theme-${t.slug}`, kind: 'theme', kicker: '論文トラッカー｜東海の大学の研究 × 国会の議論', title: t.name,
+    stats: [[String(projs.length), '科研費の研究'], [String(works.length), '論文'], [String(univs.size), '大学'], [nKok.toLocaleString('ja-JP'), '国会の質疑・答弁']] })
+  await write(`theme/${t.slug}.html`, shell(t.seo_title, desc, url, body, ld, ogi))
   urls.push(url)
 }
 
@@ -161,7 +173,9 @@ for (const p of people.values()) {
 <p class="note">研究の内容と国会の議論は、テーマが同じものを並べています。研究者ご本人が国会で発言したという意味ではありません。</p></section>
 <section class="ac-sec"><p class="note">出典：CiNii Research・KAKEN（国立情報学研究所）、国会会議録検索システム（国立国会図書館）。掲載内容の訂正・削除のご依頼は<a href="${SITE}/contact.php">お問い合わせ</a>からお送りください。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'ProfilePage', name: title, url, dateModified: TODAY, mainEntity: { '@type': 'Person', name: p.name, affiliation: { '@type': 'CollegeOrUniversity', name: p.tokai }, sameAs: [`https://cir.nii.ac.jp/crid/${p.crid}`] } }]
-  await write(`researcher/${p.crid}.html`, shell(title, desc, url, body, ld))
+  const ogi = og({ name: `r-${p.crid}`, kind: 'researcher', kicker: '論文トラッカー｜東海の大学の研究者', title: p.name, sub: `${p.affiliation}｜${themesOf.map((t) => t.name).join('・')}`,
+    stats: [[String(p.projects.length), '科研費の研究'], [String(kok.reduce((a, k) => a + k.count, 0).toLocaleString('ja-JP')), '同じテーマの国会の質疑・答弁']] })
+  await write(`researcher/${p.crid}.html`, shell(title, desc, url, body, ld, ogi))
   urls.push(url)
 }
 
@@ -177,9 +191,12 @@ for (const p of people.values()) {
 <section class="ac-sec"><h2>大学ごとの研究者 <small>${people.size}人</small></h2>${univs.map(([u, ps]) => `<h3 style="margin-top:14px">${h(u)} <small class="note">${ps.length}人</small></h3><div class="ac-meta ac-who" style="font-size:14px;gap:6px 14px">${ps.sort((a, b) => a.name.localeCompare(b.name, 'ja')).map((p) => `<a href="${rUrl(p.crid)}">${h(p.name)}</a>`).join('')}</div>`).join('')}</section>
 <section class="ac-sec"><p class="note">国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-index">国会トラッカー</a> と同じデータです。出典：OpenAlex、CiNii Research・KAKEN、国会会議録検索システム。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '論文トラッカー｜東海の大学の研究と国会の議論', url, description: desc, dateModified: TODAY }]
-  await write('index.html', shell('論文トラッカー｜東海の大学の研究と国会の議論', desc, url, body, ld))
+  const ogi = og({ name: 'index', kind: 'index', kicker: '東海の大学の研究 × 国会の議論', title: '論文トラッカー',
+    stats: [[String(all.length), 'テーマ'], [String(people.size), '研究者'], [String(new Set([...people.values()].map((p) => p.tokai)).size), '大学']] })
+  await write('index.html', shell('論文トラッカー｜東海の大学の研究と国会の議論', desc, url, body, ld, ogi))
   urls.unshift(url)
 }
 
 await write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc><lastmod>${all[0]?.fetched || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`)
+await fs.writeFile(path.join(root, 'outputs', 'academic-ogp-specs.json'), JSON.stringify(ogSpecs, null, 1))
 console.log(`academic: テーマ ${all.length}・研究者 ${people.size}・計 ${urls.length} ページ → ${outDir}`)
