@@ -195,6 +195,7 @@ ${(p.related || []).map((r) => `<a class="cat-card" href="${attr(r.url)}${r.url.
 <p>文書の置き場所（ファイルサーバー・共有フォルダ・社内サイト）と量を伺い、全文検索エンジンとAIの組み合わせを決めます。<strong>初回のご相談は無料</strong>です。Zoomでも対面（名古屋近郊）でも。</p>
 <a class="btn btn-main" href="${attr(contact)}">構築について相談する</a>
 <a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+<a class="btn" href="${SITE}/ai-sns-komon.html?ref=solution-${attr(p.slug)}">AI-SNS顧問（X運用×HP×Webシステム）</a>
 </div>
 
 ${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>
@@ -279,6 +280,7 @@ ${(p.related || []).map((r) => `<a class="cat-card" href="${attr(r.url)}${r.url.
 <p>開発中のため、<strong>対象の地域・必要な項目・置き方（自社サイトに埋め込む／自社サーバーに置く／AIエージェントから呼ぶ）</strong>を伺って仕様を決めます。お問い合わせは無料です。Zoomでも対面（名古屋近郊）でも。</p>
 <a class="btn btn-main" href="${attr(contact)}">導入について問い合わせる</a>
 <a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+<a class="btn" href="${SITE}/ai-sns-komon.html?ref=solution-${attr(p.slug)}">AI-SNS顧問（X運用×HP×Webシステム）</a>
 </div>
 
 ${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>
@@ -361,6 +363,7 @@ ${(p.related || []).map((r) => `<a class="cat-card" href="${q(r.url)}" target="_
 ${p.kapp ? `<a class="btn btn-main" href="${q(p.kapp.url)}">導入版の商品ページ</a>` : ''}
 <a class="btn" href="${attr(contact)}">導入について問い合わせる</a>
 <a class="btn" href="${SITE}/ai-it-komon.html?ref=solution-${attr(p.slug)}">AI-IT顧問契約（名古屋市内）</a>
+<a class="btn" href="${SITE}/ai-sns-komon.html?ref=solution-${attr(p.slug)}">AI-SNS顧問（X運用×HP×Webシステム）</a>
 </div>
 
 ${faqs.length ? `<section><div class="panel"><h2>よくあるご質問</h2>

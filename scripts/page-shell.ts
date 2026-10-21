@@ -187,7 +187,7 @@ ${[...ld, orgLd()].map((x) => `<script type="application/ld+json">${json(x)}</sc
 ${NEWS_SCRIPT}
 ${styles()}</head><body>
 <header class="topbar"><a class="brand" href="${SITE}/"><img class="brand-logo" src="${SITE}/images/logo-mark-64.png" alt="" width="32" height="32" loading="eager"><span>株式会社エクスブリッジ</span></a>
-<nav class="toplinks${opts.topLinks ? ' all' : ''}">${opts.topLinks ?? `<a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/contact.php">相談する</a>`}</nav></header>
+<nav class="toplinks${opts.topLinks ? ' all' : ''}">${opts.topLinks ?? `<a href="${SITE}/ai-development.html">AI開発・活用支援</a><a href="${TRIAL}">AI導入お試し</a><a href="${SITE}/ai-it-komon.html#ref=${opts.refPrefix}-nav">AI-IT顧問</a><a href="${SITE}/ai-sns-komon.html#ref=${opts.refPrefix}-nav">AI-SNS顧問</a><a href="${SITE}/contact.php">相談する</a>`}</nav></header>
 ${body}
 ${pvRail(opts.pvTags)}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
