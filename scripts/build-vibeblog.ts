@@ -356,6 +356,7 @@ h1{font-size:26px;line-height:1.5;margin:6px 0 8px}
 section{margin:26px 0}
 section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;margin:0 0 10px}
 .idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
+.vb-promo{margin:26px 0;padding:14px 16px;border:1px solid #bcecd3;border-radius:12px;background:#f1faf7}.vb-promo-h{margin:0 0 10px;font-weight:900;font-size:14.5px;color:#0a726b}.vb-promo-i{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;padding:8px 0;border-top:1px dotted #cfe3df}.vb-promo-i:first-of-type{border-top:0}.vb-promo-i img{flex:none;width:160px;height:auto;aspect-ratio:480/252;border-radius:8px;border:1px solid #e3eaec}.vb-promo-i span{font-size:13.5px;line-height:1.5;color:#52636b}.vb-promo-i b{display:block;font-size:15px;color:#17242b;margin-bottom:2px}@media(max-width:480px){.vb-promo-i img{width:120px}}
 .lcard{display:block;background:#fff;border:1px solid #dcebe9;border-radius:12px;padding:13px 15px;text-decoration:none;transition:.15s}
 .lcard:hover{border-color:#0a9a8f;transform:translateY(-2px)}
 .lc-m{font-size:11px;font-weight:800;color:#0a9a8f;letter-spacing:.03em;margin-bottom:3px}
@@ -412,6 +413,29 @@ const ctaBlock = `
     <a class="btn sub" href="${KURAGE}/reseller.html?ref=vibeblog-reseller">販売代理店の条件を見る</a>
   </div>
 </section>`
+
+// 検索から人が来ている記事の本文の途中に、AI-SNS顧問への案内をバナー付きで入れる（2026-10-23 ユーザー指示）。
+// 対象は data/vibeblog-promo.json。位置は3つ目の見出しの直前（見出しが少なければ本文の真ん中の段落の後）
+const PROMO = new Set<string>((JSON.parse(readFileSync(path.join(root, 'data', 'vibeblog-promo.json'), 'utf8')).slugs || []) as string[])
+const promoBlock = (slug: string) => {
+  const r = `vibeblog-promo-${slug}`
+  const item = (href: string, img: string, t: string, d: string) =>
+    `<a class="vb-promo-i" href="${attr(href)}"><img src="${attr(img)}" width="480" height="252" alt="" loading="lazy" decoding="async"><span><b>${h(t)}</b>${h(d)}</span></a>`
+  return `<aside class="vb-promo"><p class="vb-promo-h">SNSの発信を、問い合わせや採用につなげたい会社の方へ</p>` +
+    item(`${BASE}/2026-10-23-sns-unyou-daikou-erabikata.html#ref=${r}`, `${SITE}/images/vibeblog-promo/sns-daikou-480.webp`,
+      'SNS運用代行で成果が出ない4つの理由', '頼む前に確かめたい5つの質問') +
+    item(`${SITE}/ai-sns-komon.html#ref=${r}`, `${SITE}/images/vibeblog-promo/ai-sns-komon-480.webp`,
+      'AI-SNS顧問（X運用 × ホームページ × Webシステム）', '開発会社が、SNSから来た人が見るページまで作ります') +
+    `</aside>`
+}
+const withPromo = (p: Post) => {
+  if (!PROMO.has(p.slug)) return p.html
+  const parts = p.html.split(/(?=<h2[\s>])/)
+  if (parts.length >= 4) return parts.slice(0, 3).join('') + promoBlock(p.slug) + parts.slice(3).join('')
+  const ps = p.html.split(/(?<=<\/p>)/)
+  const at = Math.max(1, Math.floor(ps.length / 2))
+  return ps.slice(0, at).join('') + promoBlock(p.slug) + ps.slice(at).join('')
+}
 
 const card = (href: string, meta: string, title: string, desc: string) =>
   `<a class="lcard" href="${attr(href)}"><div class="lc-m">${h(meta)}</div>` +
@@ -502,7 +526,7 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
   <button type="button" class="vb-copy" data-copy="${attr(`${p.title}\n${url}`)}">
     <span class="vb-copy-label">タイトルとURLをコピー</span></button>
 </div>
-<article class="post">${p.html}</article>
+<article class="post">${withPromo(p)}</article>
 ${(() => {
   const ts = trackersForPost(p)
   return ts.length ? `<section>
