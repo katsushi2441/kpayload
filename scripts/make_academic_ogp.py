@@ -44,7 +44,7 @@ h1{margin-top:12px;font-weight:900;line-height:1.25;color:#10242b;display:-webki
 .stats b{display:block;font-size:54px;line-height:1.1;color:#007f96;font-weight:900}
 .stats span{display:block;font-size:20px;font-weight:700;color:#5a6a72;max-width:330px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .m{position:absolute;right:46px;top:120px;width:250px;height:auto;object-fit:contain}
-.url{position:absolute;right:56px;bottom:22px;font-size:18px;color:#7a8a92;font-weight:700}"""
+.url{position:absolute;right:56px;bottom:22px;font-size:18px;color:#7a8a92;font-weight:700}.url b{color:#007f96;font-weight:900;font-size:20px}"""
 
 
 def page(spec: dict) -> str:
@@ -56,7 +56,7 @@ def page(spec: dict) -> str:
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="band"></div>'
             f'<div class="top"><img src="{LOGO}">株式会社エクスブリッジ</div><div class="main"><div class="kicker">{html.escape(spec["kicker"])}</div>'
             f'<h1 style="font-size:{size}px">{title}</h1>{sub}</div><img class="m" src="{MASCOT}">'
-            f'<div class="stats">{stats}</div><div class="url">exbridge.jp/academic</div></body></html>')
+            f'<div class="stats">{stats}</div><div class="url"><b>Kurage 論文トラッカー</b>　exbridge.jp/academic</div></body></html>')
 
 
 def main() -> None:
