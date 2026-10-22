@@ -1,0 +1,4051 @@
+{
+ "f7a2a4e7aed7": {
+  "id": "f7a2a4e7aed7",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "Studio 株式会社における不正アクセスによる個人情報の漏えいの可能性について",
+  "url": "https://www.digital.go.jp/press/a0a8f66c-b32d-4695-9372-bcd5d4280f22",
+  "date": "2026-10-22",
+  "cat": "報道発表",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "joho-roei"
+  ],
+  "themes": [
+   "digital"
+  ],
+  "related": [
+   "joho-roei"
+  ]
+ },
+ "e9321f8b1844": {
+  "id": "e9321f8b1844",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "AI・デジタル改革推進会議（第1回）の議事次第および資料を掲載しました",
+  "url": "https://www.digital.go.jp/councils/ai_digital/1f3aa34a-786d-4b56-99a4-469f8f933f1c",
+  "date": "2026-10-22",
+  "cat": "会議等",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai",
+   "digital"
+  ],
+  "related": []
+ },
+ "236c687371b6": {
+  "id": "236c687371b6",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "地方公共団体情報システムデータ要件・連携要件の標準仕様書に関する各論FAQを更新しました",
+  "url": "https://www.digital.go.jp/policies/local_governments/specification",
+  "date": "2026-10-22",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital",
+   "chiho"
+  ],
+  "related": []
+ },
+ "c83f34adf4f7": {
+  "id": "c83f34adf4f7",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "新卒採用 業務説明会・イベントを更新しました",
+  "url": "https://www.digital.go.jp/recruitment/recruiting-session",
+  "date": "2026-10-22",
+  "cat": "採用",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "9902a9841a93": {
+  "id": "9902a9841a93",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "意見招請：令和9年度マイナアプリおよび PC 版マイナポータルアプリの運用・保守業務一式を掲載しました",
+  "url": "https://www.digital.go.jp/procurement",
+  "date": "2026-10-22",
+  "cat": "調達情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "033a47707f03": {
+  "id": "033a47707f03",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "カオASEAN事務総長が古川デジタル大臣を表敬訪問しました",
+  "url": "https://www.digital.go.jp/press/542b23b5-1fca-44c0-9e31-ea0079535b1a",
+  "date": "2026-10-22",
+  "cat": "報道発表",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "bb6785040448": {
+  "id": "bb6785040448",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "機械可読性ルール適合チェックツール「Harunobu」について掲載しました",
+  "url": "https://www.digital.go.jp/resources/machine-readability-rule/harunobu",
+  "date": "2026-10-21",
+  "cat": "資料",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "7d985b2f4d06": {
+  "id": "7d985b2f4d06",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "古川大臣記者会見（令和8年10月20日）動画を掲載しました",
+  "url": "https://www.digital.go.jp/speech/minister-261020-01",
+  "date": "2026-10-21",
+  "cat": "会見",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "fc4f7f1f1fbd": {
+  "id": "fc4f7f1f1fbd",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "「自治体からの照会事務の自動化などの国・地方AI共通サービスに関する実証事業」の参加自治体（都道府県及び市区町村）を募集します",
+  "url": "https://www.digital.go.jp/policies/genai/0ef07948-2f5d-4b45-8ebe-ea974c20a3ac",
+  "date": "2026-10-20",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai",
+   "chiho"
+  ],
+  "related": [
+   "ai-hou"
+  ]
+ },
+ "6c8efdc7fbee": {
+  "id": "6c8efdc7fbee",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "学園祭での年齢確認にマイナンバーカードを活用しています",
+  "url": "https://www.digital.go.jp/news/6a52d1e9-30cc-455a-9154-f32479d1731a",
+  "date": "2026-10-20",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "90a6f199b40a": {
+  "id": "90a6f199b40a",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "令和8年度（2026年度）デジタル庁情報システム調達改革検討会（第1回） の議事概要を掲載しました",
+  "url": "https://www.digital.go.jp/councils/procurement-reform/FY2026/84c9dba6-43cb-4cf1-be91-0753c744f38d",
+  "date": "2026-10-20",
+  "cat": "会議等",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "1d3fb4558b20": {
+  "id": "1d3fb4558b20",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "AI・デジタル改革推進会議の開催について掲載いたしました",
+  "url": "https://www.digital.go.jp/councils/ai_digital",
+  "date": "2026-10-20",
+  "cat": "会議等",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai",
+   "digital"
+  ],
+  "related": []
+ },
+ "66801f3eb178": {
+  "id": "66801f3eb178",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "ガバメントAI 源内におけるAI エージェント利用環境の提供開始のお知らせと「源内基準」を掲載しました",
+  "url": "https://www.digital.go.jp/policies/genai/agent-safety-standard",
+  "date": "2026-10-20",
+  "cat": "報道発表",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai",
+   "kankyo"
+  ],
+  "related": [
+   "ai-agent"
+  ]
+ },
+ "0badea4c71ab": {
+  "id": "0badea4c71ab",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "「Androidのマイナンバーカード」の提供を開始しました（デジタル庁 ウェブサービス・アプリケーション）",
+  "url": "https://services.digital.go.jp/mynumbercard-android/news/13d5101e1dce63e2b6bdc/",
+  "date": "2026-10-20",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "592630e2bf29": {
+  "id": "592630e2bf29",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "今後のデジタル人材育成政策に関する検討会（第2回）の議事次第および資料を掲載しました",
+  "url": "https://www.digital.go.jp/councils/digital-talent-development-policy/773e7837-8bf8-4599-bbba-c31e813c4ad7",
+  "date": "2026-10-20",
+  "cat": "会議等",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "43691b0860a6": {
+  "id": "43691b0860a6",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "2026年度国家公務員中途採用者選考試験（就職氷河期世代）第2次選考（採用面接等）の予約フォームを掲載しました",
+  "url": "https://www.digital.go.jp/recruitment/career-government-official/visit2026-employment-ice-age",
+  "date": "2026-10-19",
+  "cat": "採用",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "1c5459dbee09": {
+  "id": "1c5459dbee09",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "カード代替電磁的記録（属性証明機能）における大臣認定を取得した送信用プログラムを更新しました",
+  "url": "https://www.digital.go.jp/policies/mynumber/mynumbercard-mdoc",
+  "date": "2026-10-19",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "a79766dd560c": {
+  "id": "a79766dd560c",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "マイナンバー制度における制度解説の情報連携に係る資料を更新しました",
+  "url": "https://www.digital.go.jp/policies/mynumber/explanation",
+  "date": "2026-10-19",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "02143ebb60be": {
+  "id": "02143ebb60be",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "古川大臣記者会見（令和8年10月16日）動画を掲載しました",
+  "url": "https://www.digital.go.jp/speech/minister-261016-01",
+  "date": "2026-10-19",
+  "cat": "会見",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "b97c69c6357e": {
+  "id": "b97c69c6357e",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "アナログ規制見直しの取組の「新規法令等のデジタル原則適合性確認等プロセス」の資料を更新しました",
+  "url": "https://www.digital.go.jp/policies/digital-extraordinary-administrative-research-committee",
+  "date": "2026-10-16",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "bf2ae4b67817": {
+  "id": "bf2ae4b67817",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "マイナンバーカード・インフォ（民間事業者向け情報）Vol.156を掲載しました",
+  "url": "https://www.digital.go.jp/policies/mynumber/private-business/info",
+  "date": "2026-10-16",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "317d9d7015af": {
+  "id": "317d9d7015af",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "デジタル推進委員向けのデジタル情報をまとめて案内するページ「教える人のためのデジタル情報ひろば」を更新しました",
+  "url": "https://www.digital.go.jp/policies/digital_promotion_staff/curation",
+  "date": "2026-10-16",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "52b2a6ebc4c6": {
+  "id": "52b2a6ebc4c6",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "医療DXに関するダッシュボードを更新しました",
+  "url": "https://www.digital.go.jp/resources/govdashboard/healthcare-dx",
+  "date": "2026-10-16",
+  "cat": "資料",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "digital"
+  ],
+  "related": []
+ },
+ "db35a4c80901": {
+  "id": "db35a4c80901",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "電子処方箋の導入状況に関するダッシュボードを更新しました",
+  "url": "https://www.digital.go.jp/resources/govdashboard/electronic-prescription",
+  "date": "2026-10-16",
+  "cat": "資料",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "0a2391266d2b": {
+  "id": "0a2391266d2b",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "自治体が実施する健康・医療・介護分野の事業のデジタル化（PMH）ー医療費助成に関するダッシュボードを更新しました",
+  "url": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
+  "date": "2026-10-16",
+  "cat": "資料",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "digital",
+   "chiho"
+  ],
+  "related": [
+   "koritsu-byoin-keiei"
+  ]
+ },
+ "de3f35fa00f8": {
+  "id": "de3f35fa00f8",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "保育提供体制に関するダッシュボードを更新しました",
+  "url": "https://www.digital.go.jp/resources/govdashboard/childcare",
+  "date": "2026-10-16",
+  "cat": "資料",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": [
+   "kyutokuho"
+  ]
+ },
+ "058644f784c6": {
+  "id": "058644f784c6",
+  "ministry": "digital",
+  "ministry_name": "デジタル庁",
+  "title": "古川デジタル大臣による窓口BPRアドバイザー連絡会議視察の様子を掲載しました",
+  "url": "https://www.digital.go.jp/policies/cs-dx/localgovernment-adviser/95074a05-5c23-4db4-8652-050b71043dd2",
+  "date": "2026-10-16",
+  "cat": "政策",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "aa552de16503": {
+  "id": "aa552de16503",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "77bff9334cba": {
+  "id": "77bff9334cba",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "d2999a1cfae9": {
+  "id": "d2999a1cfae9",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261013.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "34da6551d2c2": {
+  "id": "34da6551d2c2",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261009.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e9e29db059f5": {
+  "id": "e9e29db059f5",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "ef4114dcfac5": {
+  "id": "ef4114dcfac5",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin261002.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "882e3198b8f0": {
+  "id": "882e3198b8f0",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "94ddffb600b2": {
+  "id": "94ddffb600b2",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260925.html",
+  "date": "2026-09-25",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "52473151e3c6": {
+  "id": "52473151e3c6",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "井林大臣就任会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260918.html",
+  "date": "2026-09-18",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f946cf5c0419": {
+  "id": "f946cf5c0419",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "金子大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260917.html",
+  "date": "2026-09-17",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "9c3009d52dfd": {
+  "id": "9c3009d52dfd",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "金子大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260915.html",
+  "date": "2026-09-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f69b44d30592": {
+  "id": "f69b44d30592",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "金子大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260911.html",
+  "date": "2026-09-11",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "dca8c323e519": {
+  "id": "dca8c323e519",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "金子大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260908.html",
+  "date": "2026-09-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "b2503ba47ca5": {
+  "id": "b2503ba47ca5",
+  "ministry": "mlit",
+  "ministry_name": "国土交通省",
+  "title": "金子大臣会見要旨",
+  "url": "http://www.mlit.go.jp/report/interview/daijin260904.html",
+  "date": "2026-09-04",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "38c71c20d894": {
+  "id": "38c71c20d894",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "上野厚生労働大臣　閣議後記者会見のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76909.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "bc637b7d864d": {
+  "id": "bc637b7d864d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度の医師臨床研修マッチング結果をお知らせします",
+  "url": "https://www.mhlw.go.jp/stf/houdou/0000180824_00012.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "db43d116edf4": {
+  "id": "db43d116edf4",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬事審議会　医薬品等安全対策部会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76824.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "d23f9f2a94a0": {
+  "id": "d23f9f2a94a0",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "「2040年に向けた地域医療構想」について",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000080850_00019.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": [
+   "chiiki-iryo-renkei"
+  ]
+ },
+ "1bdfa04e995b": {
+  "id": "1bdfa04e995b",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "地域医療構想の実現に向けた重点支援区域の選定を行いました",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76650.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": [
+   "juten-shien-kofukin",
+   "chiiki-iryo-renkei"
+  ]
+ },
+ "a8080fabfb64": {
+  "id": "a8080fabfb64",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "採用情報（期間業務職員（職業安定局） )募集情報",
+  "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/hijoukin/hj-syokugyouanteikyoku.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "eb157bdd45af": {
+  "id": "eb157bdd45af",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第８回医療扶助・健康管理支援等に関する検討会の開催について（報道発表）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76805.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "f48426d55759": {
+  "id": "f48426d55759",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第24回成年後見制度利用促進専門家会議　開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76735.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "1fe4970caa72": {
+  "id": "1fe4970caa72",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年賃金引上げ等の実態に関する調査の概況",
+  "url": "https://www.mhlw.go.jp/toukei/itiran/roudou/chingin/jittai/26/index.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "23fe01d3f834": {
+  "id": "23fe01d3f834",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度「介護老人保健施設事業功労者厚生労働大臣表彰」の受賞者について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76587.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "rodo"
+  ],
+  "related": []
+ },
+ "b85497f077d3": {
+  "id": "b85497f077d3",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第５７回特定石綿被害建設業務労働者等認定審査会　開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76516.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "ed8b809d2058": {
+  "id": "ed8b809d2058",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬剤耐性(AMR)に関する記者勉強会のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000120172.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "813c6e6f47c7": {
+  "id": "813c6e6f47c7",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "後期高齢者医療事業状況報告",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/iryouhoken/database/seido/kouki_houkoku.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "96e101094e5e": {
+  "id": "96e101094e5e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "人事労務マガジン 特集第249号　国家公務員の高い専門能力と豊富な経験を事業に活かしてみませんか？他",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76816.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "48ea65847ff3": {
+  "id": "48ea65847ff3",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第211回労働政策審議会労働条件分科会　議事録（2026年9月16日）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76835.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "4b2ca9c1c5bc": {
+  "id": "4b2ca9c1c5bc",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第５回 医療関係職種の安定的な養成・確保に関する検討会：開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76847.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "iyakuhin-antei-kyokyu"
+  ]
+ },
+ "3ebed606837a": {
+  "id": "3ebed606837a",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第２回創薬力向上のための官民協議会 施策検討・推進部会　資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76843.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "03ccb460c1b1": {
+  "id": "03ccb460c1b1",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年10月20日付幹部名簿",
+  "url": "https://www.mhlw.go.jp/kouseiroudoushou/kanbumeibo/index.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "057f76d9bf4f": {
+  "id": "057f76d9bf4f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "2026年9月18日　第136回社会保障審議会介護保険部会　議事録",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76811.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "1b48922ee66a": {
+  "id": "1b48922ee66a",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第137回社会保障審議会介護保険部会の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76757.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "524779763b97": {
+  "id": "524779763b97",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度第２回 厚生科学審議会医薬品医療機器制度部会の開催について（Web併用）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76682.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "iryo-kiki"
+  ],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "iryo-kiki"
+  ]
+ },
+ "136a89ff122e": {
+  "id": "136a89ff122e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第79回労働政策審議会人材開発分科会監理団体審査部会 開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76548.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "75bedd6b3e83": {
+  "id": "75bedd6b3e83",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第399回労働政策審議会職業安定分科会労働力需給制度部会　資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76436.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "496a003e8d12": {
+  "id": "496a003e8d12",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第399回労働政策審議会職業安定分科会労働力需給制度部会（開催案内）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76434.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "520d21ac3477": {
+  "id": "520d21ac3477",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "社会保障審議会（介護保険部会）",
+  "url": "https://www.mhlw.go.jp/stf/shingi/shingi-hosho_126734.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "6bdb8f28d803": {
+  "id": "6bdb8f28d803",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "労働政策審議会 (人材開発分科会監理団体審査部会)",
+  "url": "https://www.mhlw.go.jp/stf/shingi/shingi-rousei_474670.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "f6b70e3cff7b": {
+  "id": "f6b70e3cff7b",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "WEBマガジン「厚生労働」（特集[臓器移植を考える]ほか更新）",
+  "url": "https://www.mhlw.go.jp/web_magazine/",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "21c66b15335e": {
+  "id": "21c66b15335e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第25回21世紀出生児縦断調査【平成13年出生児】へのご協力をお願いします",
+  "url": "https://www.mhlw.go.jp/toukei/saikin/hw/judan/taishousha/sn_11.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": []
+ },
+ "117b2c162c1e": {
+  "id": "117b2c162c1e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "公益事業に関する争議行為の予告公表ページについて更新されました",
+  "url": "https://www.mhlw.go.jp/seisakunitsuite/bunya/koyou_roudou/roudouseisaku/sougikoui/index.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "19d1b1bc36d9": {
+  "id": "19d1b1bc36d9",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "上野厚生労働大臣　閣議後記者会見のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76821.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "6843d91c109b": {
+  "id": "6843d91c109b",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "「事業場における労働者の健康保持増進のための指針」について（公示）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76807.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "rodo"
+  ],
+  "related": [
+   "shokuba-netchusho"
+  ]
+ },
+ "eb89cb2e09dd": {
+  "id": "eb89cb2e09dd",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "「第37回 労働政策審議会勤労者生活分科会」を開催します（開催案内）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76708.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "4210a421c9e4": {
+  "id": "4210a421c9e4",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第33回キャリアコンサルタント登録制度等に関する検討会を10月26日に開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76690.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "9cd622e80dad": {
+  "id": "9cd622e80dad",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第９回労働政策審議会労働条件分科会「組織再編に伴う労働関係の調整に関する部会」(開催案内)",
+  "url": "https://www.mhlw.go.jp/stf/shinngi_00022.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "61838d129cd4": {
+  "id": "61838d129cd4",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "「中高年の活躍支援」特設サイトをリニューアルしました",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76610.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "903bd78b6228": {
+  "id": "903bd78b6228",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "「第305回原子爆弾被爆者医療分科会」の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76439.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "ae1dfbe2fac6": {
+  "id": "ae1dfbe2fac6",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年労働安全衛生調査（実態調査）にご協力をお願いします",
+  "url": "https://www.mhlw.go.jp/toukei/oshirase/261014.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": [
+   "shokuba-netchusho"
+  ]
+ },
+ "4cff5879b938": {
+  "id": "4cff5879b938",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第２回精神医療に関する地域医療構想検討ワーキンググループ：資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76798.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": [
+   "chiiki-iryo-renkei"
+  ]
+ },
+ "a2976fda3d71": {
+  "id": "a2976fda3d71",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "採用情報（期間業務職員（政策統括官（総合政策、労使関係担当））募集情報）",
+  "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/hijoukin/hj-kenkou_seikatueiseikyoku01_00005.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "3146df5e54ec": {
+  "id": "3146df5e54ec",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第93回労働政策審議会雇用環境・均等分科会（ペーパーレス会議）を開催します（開催案内）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76686.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kankyo",
+   "rodo"
+  ],
+  "related": []
+ },
+ "3dc4990a858d": {
+  "id": "3dc4990a858d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "11月17日は世界さい帯血の日です。",
+  "url": "https://www.mhlw.go.jp/stf/htcp-topics-20261001_00001.html",
+  "date": "2026-10-17",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "3ab03bff634e": {
+  "id": "3ab03bff634e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "個人防護具の配布について",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kojinbougogu/haifu/index.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "1e866301ea91": {
+  "id": "1e866301ea91",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬事審議会　医療機器・体外診断薬部会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76766.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "iryo-kiki"
+  ],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "iryo-kiki"
+  ]
+ },
+ "d5e42f340c66": {
+  "id": "d5e42f340c66",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度生活衛生功労者に対する厚生労働大臣表彰について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76727.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "cb81c50dc616": {
+  "id": "cb81c50dc616",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度厚生労働統計功労者功績表彰の受賞者が決定しました",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76718.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "bbe1ac80d1d6": {
+  "id": "bbe1ac80d1d6",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "病院報告（令和８(2026)年7月分概数）",
+  "url": "https://www.mhlw.go.jp/toukei/saikin/hw/byouin/m26/07.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "4f47024dda7f": {
+  "id": "4f47024dda7f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第２２回肝炎治療戦略会議の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76678.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e75d3e756cfc": {
+  "id": "e75d3e756cfc",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第271回社会保障審議会介護給付費分科会（Web会議）を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76624.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "aebde475254a": {
+  "id": "aebde475254a",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第213回労働政策審議会労働条件分科会　開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76433.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "83c29b1a1076": {
+  "id": "83c29b1a1076",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "中央最低賃金審議会(目安制度の在り方に関する全員協議会)",
+  "url": "https://www.mhlw.go.jp/stf/shingi/shingi-tingin_127940.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "saitei-chingin"
+  ],
+  "themes": [
+   "bukka-chinage",
+   "rodo"
+  ],
+  "related": [
+   "saitei-chingin"
+  ]
+ },
+ "8742a0895054": {
+  "id": "8742a0895054",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "中央最低賃金審議会 (中央最低賃金審議会)",
+  "url": "https://www.mhlw.go.jp/stf/shingi/shingi-tingin_127939.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "saitei-chingin"
+  ],
+  "themes": [
+   "bukka-chinage",
+   "rodo"
+  ],
+  "related": [
+   "saitei-chingin"
+  ]
+ },
+ "8637362590f9": {
+  "id": "8637362590f9",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "インフルエンザに関する報道発表資料を更新しました",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/kekkaku-kansenshou01/houdou_00025.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "43bbd8684f7d": {
+  "id": "43bbd8684f7d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "新型コロナウイルス感染症に関する報道発表資料を更新しました",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000121431_00485.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "f0ec3df44a07": {
+  "id": "f0ec3df44a07",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "インフルエンザ・新型コロナウイルス感染症の定点当たり報告数の推移を更新しました",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/houkokusuunosuii_00007.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "ec2079a5cdf6": {
+  "id": "ec2079a5cdf6",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "インフルエンザの発生状況を更新しました",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/kekkaku-kansenshou01/houdou.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "25d126f469e8": {
+  "id": "25d126f469e8",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬事工業生産動態統計令和8年7月分月報について",
+  "url": "https://www.mhlw.go.jp/toukei/list/105-1c.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "1d185ac934fa": {
+  "id": "1d185ac934fa",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和8年国民年金被保険者実態調査にご協力をお願いします",
+  "url": "https://www.mhlw.go.jp/toukei/list/140-15.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nenkin"
+  ],
+  "related": []
+ },
+ "e6bab222f9a4": {
+  "id": "e6bab222f9a4",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "人口動態職業・産業別統計　調査の概要",
+  "url": "https://www.mhlw.go.jp/toukei/list/135-2.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "31edefac9dc0": {
+  "id": "31edefac9dc0",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "採用情報（任期付職員（就労支援専門官）募集情報）",
+  "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/ninkituki/ninki-syuuroushiensenmonkan.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "d805febd76a8": {
+  "id": "d805febd76a8",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "キャリアコンサルタント養成講習・更新講習の申請を希望する機関の方へ（令和8年11月申請説明会中止に関するお知らせ）",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/koushu_jisshi.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "1a2de7bb5b00": {
+  "id": "1a2de7bb5b00",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "上野厚生労働大臣　閣議後記者会見のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76750.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "b55ab3ed3a63": {
+  "id": "b55ab3ed3a63",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年熊本地震に伴う産業雇用安定助成金の特例を実施します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76532.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nankai-bosai",
+   "rodo"
+  ],
+  "related": [
+   "saitei-chingin"
+  ]
+ },
+ "45f1980bdebd": {
+  "id": "45f1980bdebd",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第37回厚生科学審議会予防接種・ワクチン分科会予防接種基本方針部会ワクチン評価に関する小委員会の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76729.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "iryo-kiki"
+  ]
+ },
+ "8f755f9942f5": {
+  "id": "8f755f9942f5",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "11月6日開催　健康的で持続可能な食環境戦略イニシアチブ　オープンフォーラム2026登壇者決定",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76660.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "kankyo"
+  ],
+  "related": []
+ },
+ "d4af2c6f7d3f": {
+  "id": "d4af2c6f7d3f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "有料老人ホームにおける望ましいサービス提供のあり方に関する検討会（第９回）議事録",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76739.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "40bd183e6774": {
+  "id": "40bd183e6774",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "厚生労働省本省係長級職員（一般職相当）採用選考 - 令和８年度第３期・第４期",
+  "url": "https://www.mhlw.go.jp/stf/newpage_33437.html",
+  "date": "2026-10-15",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "5cd25926c9b3": {
+  "id": "5cd25926c9b3",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "地域介護・福祉空間整備等施設整備交付金",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/fukushi/shisetsu_seibi_00005.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": []
+ },
+ "d870677bd2ed": {
+  "id": "d870677bd2ed",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "地域医療介護総合確保基金（介護施設等の整備に関する事業分）",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/fukushi/shisetsu_seibi_00004.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": [
+   "chiiki-iryo-renkei"
+  ]
+ },
+ "8b000271e891": {
+  "id": "8b000271e891",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第218回社会保障審議会医療保険部会（ペーパーレス）の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76677.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "4ebbe69f6421": {
+  "id": "4ebbe69f6421",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "看護教育ポータル 発見・看護！｜厚生労働省",
+  "url": "https://www.mhlw.go.jp/kango_kyouiku/",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate",
+   "iryo-kaigo",
+   "rodo"
+  ],
+  "related": []
+ },
+ "acd1e10fc39a": {
+  "id": "acd1e10fc39a",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "国民年金システム標準化研究会ワーキングチーム　資料(第１回)",
+  "url": "https://www.mhlw.go.jp/stf/nenkin_kenkyuukai-siryo02_00166.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nenkin"
+  ],
+  "related": []
+ },
+ "a1e3f7739791": {
+  "id": "a1e3f7739791",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "看護系技官採用サイト更新",
+  "url": "https://www.mhlw.go.jp/general/saiyo/kangokei/",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "d85516bc9eeb": {
+  "id": "d85516bc9eeb",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度第１回社会復帰促進等事業に関する検討会（議事録)",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76702.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "846fd3912515": {
+  "id": "846fd3912515",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第133回労働政策審議会労働条件分科会労災保険部会資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76698.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "5296ee5ae407": {
+  "id": "5296ee5ae407",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第２７回新型インフルエンザ対策に関する小委員会　第１２回危機対応医薬品等に関する小委員会　資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76692.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "1222e2f63412": {
+  "id": "1222e2f63412",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第228回労働政策審議会職業安定分科会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_021225156_00115.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "f140505a1a9d": {
+  "id": "f140505a1a9d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第24回 ASEAN・日本社会保障ハイレベル会合（開催案内）",
+  "url": "https://www.mhlw.go.jp/stf/aseanjapan_highlevelofficialsmeeting24.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "8209a958bd9b": {
+  "id": "8209a958bd9b",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第270回社会保障審議会介護給付費分科会（Web会議）を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76627.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "43640b767fad": {
+  "id": "43640b767fad",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬物乱用防止を目的とした啓発特設サイトを公開しました",
+  "url": "https://www.mhlw.go.jp/stf/houdou/0000179105_00026.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "091fcd8c99d9": {
+  "id": "091fcd8c99d9",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "家政婦(夫)サービスの求人情報の概要を発信する「家政婦(夫)ネット」の運用（モデル事業）を開始しました",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76363.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "5f3bd4b7a515": {
+  "id": "5f3bd4b7a515",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第17回厚生科学審議会結核部会　資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76689.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "a4886fb41cb2": {
+  "id": "a4886fb41cb2",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "自分らしく生きるための「人生会議」ポータルサイト",
+  "url": "https://www.mhlw.go.jp/acp-jinseikaigi/",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "jinsei-kaigi"
+  ],
+  "themes": [],
+  "related": [
+   "jinsei-kaigi"
+  ]
+ },
+ "3749e88a01c2": {
+  "id": "3749e88a01c2",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "上野厚生労働大臣　閣議後記者会見のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76679.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "27021215524e": {
+  "id": "27021215524e",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度（令和７年度からの繰越分）医療施設等施設整備費補助金の交付額の３回目内示について（２次募集分）",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76647.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "8078cb979907": {
+  "id": "8078cb979907",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第222回国会（令和８年臨時会）提出法律案",
+  "url": "https://www.mhlw.go.jp/stf/topics/bukyoku/soumu/houritu/222.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "bdf0225c3a2d": {
+  "id": "bdf0225c3a2d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第10回労働政策審議会職業安定分科会地方連携部会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76621.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo",
+   "chiho"
+  ],
+  "related": []
+ },
+ "303d23928617": {
+  "id": "303d23928617",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬事審議会　医薬品第一部会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76600.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "ed81b0b03954": {
+  "id": "ed81b0b03954",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度第９回「石綿に係る疾病の業務上外に関する検討会」を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76555.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f2fd1ca53b6f": {
+  "id": "f2fd1ca53b6f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第151回脳死下での臓器提供事例に係る検証会議を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76552.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "80cdafcb922f": {
+  "id": "80cdafcb922f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第６回2040年に向けた看護職員の養成・確保の在り方に関する検討会の開催について：開催案内",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76493.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kaigo-shogu"
+  ]
+ },
+ "fbccd8dfaa3f": {
+  "id": "fbccd8dfaa3f",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "有料老人ホームにおける望ましいサービス提供のあり方に関する検討会（第10回）の資料について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76664.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "04ccc79706fc": {
+  "id": "04ccc79706fc",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第133回労働政策審議会労働条件分科会労災保険部会資料",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76665.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "f8e557f5c591": {
+  "id": "f8e557f5c591",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第60回労働政策審議会人材開発分科会（オンライン併用）の開催について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76663.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "e9f302379856": {
+  "id": "e9f302379856",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "上野厚生労働大臣　閣議後記者会見のお知らせ",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76658.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "2739e6434be3": {
+  "id": "2739e6434be3",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度　地域における医薬品提供体制等の構築・強化に係るモデル事業",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76653.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": []
+ },
+ "eda794d9d7f1": {
+  "id": "eda794d9d7f1",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第269回社会保障審議会介護給付費分科会（Web会議）を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76455.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "kokuho-nogare"
+  ]
+ },
+ "f02b35d825d1": {
+  "id": "f02b35d825d1",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "薬事審議会　再生医療等製品・生物由来技術部会を開催します",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76385.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "saisei-iryo"
+  ],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": [
+   "saisei-iryo"
+  ]
+ },
+ "12c6259513f7": {
+  "id": "12c6259513f7",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "令和８年度「食品衛生事業功労者厚生労働大臣表彰」の受賞者の決定について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76332.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": [
+   "shokuba-netchusho"
+  ]
+ },
+ "24d840a8889d": {
+  "id": "24d840a8889d",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "化学物質審査専門官の募集について",
+  "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/ninkituki/ninki-kagakubushitsushinsasenmonkan.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kankyo"
+  ],
+  "related": []
+ },
+ "b55247c918b8": {
+  "id": "b55247c918b8",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第38回全国健康福祉祭埼玉大会（ねんりんピック彩の国さいたま２０２６）の開催及び美術展における厚生労働大臣賞等の決定について",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76588.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo",
+   "rodo"
+  ],
+  "related": []
+ },
+ "4aee9e449d62": {
+  "id": "4aee9e449d62",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "世界メンタルヘルスデー JAPAN 2026 特設サイト",
+  "url": "https://www.mhlw.go.jp/kokoro/mental_health_day/",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "ad416aa1e451": {
+  "id": "ad416aa1e451",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "採用情報（期間業務職員（大臣官房会計課）募集情報",
+  "url": "https://www.mhlw.go.jp/stf/kouseiroudoushou/saiyou/hijoukin/hj-daijinkanboukaikeika-kanrieiyoushi01.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "66b04e0efc60": {
+  "id": "66b04e0efc60",
+  "ministry": "mhlw",
+  "ministry_name": "厚生労働省",
+  "title": "第80回ハンセン病元患者家族補償金認定審査会",
+  "url": "https://www.mhlw.go.jp/stf/newpage_76654.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "63e2d0a5ee0b": {
+  "id": "63e2d0a5ee0b",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「雇用就農資金」令和8年度第3回目の募集を実施します",
+  "url": "https://www.maff.go.jp/j/press/keiei/zinzai/261022.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "rodo"
+  ],
+  "related": []
+ },
+ "2cbbc1d5e336": {
+  "id": "2cbbc1d5e336",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "農作業安全に関する啓発活動を表彰する「農作業安全表彰」を実施します",
+  "url": "https://www.maff.go.jp/j/press/nousan/sizai/261022.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "90f9e1678b14": {
+  "id": "90f9e1678b14",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "NIPPON FOOD SHIFT FES.TOKYO 2026開催",
+  "url": "https://www.maff.go.jp/j/press/kanbo/anpo/261021.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "3f402c8bd088": {
+  "id": "3f402c8bd088",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「令和8年度オーガニックビレッジ全国集会」の開催について",
+  "url": "https://www.maff.go.jp/j/press/nousan/kankyo/261021.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "9a5c8783e0b9": {
+  "id": "9a5c8783e0b9",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "インドネシア・ハラール認証義務化の延期について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kisei/261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e0ac966e5c11": {
+  "id": "e0ac966e5c11",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "ブルーインパルスによる展示飛行に国産SAFを使用し、原料となる廃食用油を回収するキャンペーンを実施します",
+  "url": "https://www.maff.go.jp/j/press/kanbo/bio_g/261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "8ba811d28894": {
+  "id": "8ba811d28894",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度（第22回）「若手農林水産研究者表彰」受賞者の決定及び表彰式開催のお知らせ",
+  "url": "https://www.affrc.maff.go.jp/docs/press/261020_1.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "56b959b530b2": {
+  "id": "56b959b530b2",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度（第27回）「民間部門農林水産研究開発功績者表彰」受賞者の決定及び表彰式開催のお知らせ",
+  "url": "https://www.affrc.maff.go.jp/docs/press/261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "cca8cdb95947": {
+  "id": "cca8cdb95947",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "小寺農林水産副大臣の海外出張（フランス）結果概要について",
+  "url": "https://www.maff.go.jp/j/press/y_kokusai/kikou/261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "e2fd35172d36": {
+  "id": "e2fd35172d36",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "【日本人初】渡邉紹裕京都大学名誉教授が国際かんがい排水委員会（ICID）の会長に就任",
+  "url": "https://www.maff.go.jp/j/press/nousin/sekkei/261019.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": []
+ },
+ "69c0971f0a5c": {
+  "id": "69c0971f0a5c",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "国際セミナー「植物品種保護が切り拓く農業の未来」開催",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/chizai/261019.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "212a532633c3": {
+  "id": "212a532633c3",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "茨城県における豚熱の患畜の確認（国内108例目）及び「農林水産省豚熱・アフリカ豚熱防疫対策本部」の持ち回り開催について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261016_1.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "4f883d21f74b": {
+  "id": "4f883d21f74b",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年産米の相対取引価格・数量について（令和8年9月）",
+  "url": "https://www.maff.go.jp/j/press/nousan/kikaku/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "96e3bccf49ea": {
+  "id": "96e3bccf49ea",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "米に関するマンスリーレポート（令和8年10月号）の公表について",
+  "url": "https://www.maff.go.jp/j/press/nousan/kikaku/261016_1.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "4cc5eaa2fd75": {
+  "id": "4cc5eaa2fd75",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "ウクライナからの家きん肉等の輸入一時停止措置の解除について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "fea6f8fffc86": {
+  "id": "fea6f8fffc86",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度農林水産統計業務協力者等に対する農林水産大臣感謝状の授与について",
+  "url": "https://www.maff.go.jp/j/press/tokei/kikaku/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "41de3ba0afbe": {
+  "id": "41de3ba0afbe",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "森業アワード2026受賞者決定！",
+  "url": "https://www.rinya.maff.go.jp/j/press/sin_riyou/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "05d67fee252f": {
+  "id": "05d67fee252f",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "国連食糧農業機関（FAO）が選ぶ「FAO農業・食料システムと農村振興における100人の女性ヒーロー」に群馬県の清水由紀江氏が選出",
+  "url": "https://www.maff.go.jp/j/press/y_kokusai/kikou/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "b02bfd039079": {
+  "id": "b02bfd039079",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「ウクライナへの食料・農業分野官民ミッション」の結果概要について",
+  "url": "https://www.maff.go.jp/j/press/y_kokusai/kokkyo/261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "9807276e9018": {
+  "id": "9807276e9018",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "11月29日はノウフクの日！",
+  "url": "https://www.maff.go.jp/j/press/nousin/kouryu/261014.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f71f3b991e72": {
+  "id": "f71f3b991e72",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年産の水田における作付状況について",
+  "url": "https://www.maff.go.jp/j/press/nousan/s_taisaku/261013.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "b0cd3708ded1": {
+  "id": "b0cd3708ded1",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度（第65回）農林水産祭天皇杯等の選賞について",
+  "url": "https://www.maff.go.jp/j/press/kanbo/bunsyo/261013.html",
+  "date": "2026-10-13",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "1f45d375ae71": {
+  "id": "1f45d375ae71",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "第3回クビアカツヤカミキリ対策本部の開催について",
+  "url": "https://www.maff.go.jp/j/press/syouan/syokubo/261013.html",
+  "date": "2026-10-14",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "7e9582b7f535": {
+  "id": "7e9582b7f535",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "千葉県における野生イノシシの豚熱感染事例について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261011.html",
+  "date": "2026-10-11",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "960ae414199c": {
+  "id": "960ae414199c",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "群馬県における豚熱の患畜の確認（国内107例目）及び「農林水産省豚熱・アフリカ豚熱防疫対策本部」の持ち回り開催について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261010.html",
+  "date": "2026-10-10",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "e5298c054340": {
+  "id": "e5298c054340",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "森下農林水産大臣政務官の海外出張（韓国）結果概要について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kaitaku/261010.html",
+  "date": "2026-10-10",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "323e68d8cd42": {
+  "id": "323e68d8cd42",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年梅雨前線豪雨から台風第25号までの一連の気象現象による災害（仮称）における「大規模災害時の災害査定の効率化」の対象について",
+  "url": "https://www.maff.go.jp/j/press/kanbo/bunsyo/saigai/261009.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nankai-bosai"
+  ],
+  "related": []
+ },
+ "401ee1ae9011": {
+  "id": "401ee1ae9011",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "ドイツ国内における日本産米の試験販売について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kaitaku/261009.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "66f26dc83ab9": {
+  "id": "66f26dc83ab9",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "狼煙漁港（狼煙地区）の岸壁と船揚場の一部供用開始について",
+  "url": "https://www.jfa.maff.go.jp/j/press/seibi/261006.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "869504d0fb8b": {
+  "id": "869504d0fb8b",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "家畜伝染病予防法第51条第6項に基づく店舗名称等の公表について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261009.html",
+  "date": "2026-10-09",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "eb308f8800a1": {
+  "id": "eb308f8800a1",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "森下農林水産大臣政務官の海外出張（韓国）について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kaitaku/261008_1.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "d50f4e8f87d2": {
+  "id": "d50f4e8f87d2",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "日米加の木造建築に関する基準や研究について意見交換を実施しました  〜2026年度  日米加建築専門家会合（BEC）／日米加JAS技術委員会（JTC）を開催〜",
+  "url": "https://www.maff.go.jp/j/press/shokuhin/ninsyo/261008.html",
+  "date": "2026-10-08",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "jutaku"
+  ],
+  "related": []
+ },
+ "7c78ffd0e082": {
+  "id": "7c78ffd0e082",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "愛媛県における豚熱の患畜の確認（国内106例目）及び「農林水産省豚熱・アフリカ豚熱防疫対策本部」の持ち回り開催について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261007.html",
+  "date": "2026-10-07",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "b1db64280d81": {
+  "id": "b1db64280d81",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「令和8年度病害虫発生予報第8号」の発表について",
+  "url": "https://www.maff.go.jp/j/press/syouan/syokubo/261007.html",
+  "date": "2026-10-07",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "18ba2473e6bf": {
+  "id": "18ba2473e6bf",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度全国優良経営体表彰受賞者の発表について",
+  "url": "https://www.maff.go.jp/j/press/keiei/keiei/261007.html",
+  "date": "2026-10-07",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f46a70815193": {
+  "id": "f46a70815193",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和7年度農薬の使用に伴う事故及び被害の発生状況について",
+  "url": "https://www.maff.go.jp/j/press/syouan/nouyaku/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "590d9ad91dce": {
+  "id": "590d9ad91dce",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "特定農林水産物等の名称の保護に関する法律に基づく措置命令について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/chizai/261006_1.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "a9bd5fc6ab21": {
+  "id": "a9bd5fc6ab21",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「オーガニックビレッジ取組事例集」の公表について",
+  "url": "https://www.maff.go.jp/j/press/nousan/kankyo/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "59d5c477f8bb": {
+  "id": "59d5c477f8bb",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「森林（もり）づくりシンポジウム2026」を開催！",
+  "url": "https://www.rinya.maff.go.jp/j/press/sin_riyou/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "1e670dfc00e6": {
+  "id": "1e670dfc00e6",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "イオン東北株式会社におけるそうざい（えび天ぷら）の不適正表示に対する措置について",
+  "url": "https://www.maff.go.jp/j/press/syouan/kansa/261006_1.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "cd10c5f78310": {
+  "id": "cd10c5f78310",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "株式会社パナックスにおける牛の個体識別番号の不適正表示に対する措置について",
+  "url": "https://www.maff.go.jp/j/press/syouan/kansa/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "86d3b39dd998": {
+  "id": "86d3b39dd998",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "特定農林水産物等の名称の保護に関する法律に基づく措置命令について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/chizai/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "310c6be5de18": {
+  "id": "310c6be5de18",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "英国からの生きた家きん、家きん肉等の輸入一時停止措置について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/261006.html",
+  "date": "2026-10-06",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f6f082e35dba": {
+  "id": "f6f082e35dba",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度のバター及び脱脂粉乳の輸入枠数量の検証について",
+  "url": "https://www.maff.go.jp/j/press/chikusan/c_gyunyu/261002.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "33cc3a813e49": {
+  "id": "33cc3a813e49",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度我が国周辺水域の水産資源に関する評価結果が公表されました（カタクチイワシ、ズワイガニ、スケトウダラ、マダラ、サワラ、ヒラメ、マダイ、イカナゴ）",
+  "url": "https://www.jfa.maff.go.jp/j/press/sigen/261002.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "98a04e16767d": {
+  "id": "98a04e16767d",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "簗農林水産大臣等の国内出張について",
+  "url": "https://www.maff.go.jp/j/press/kanbo/bunsyo/saigai/261002_1.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "4925d18a92f1": {
+  "id": "4925d18a92f1",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "簗農林水産大臣等の国内出張について",
+  "url": "https://www.maff.go.jp/j/press/kanbo/bunsyo/saigai/261002.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "bc2bd6ec9916": {
+  "id": "bc2bd6ec9916",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「GOHANプロジェクト第8回会合」の開催について",
+  "url": "https://www.maff.go.jp/j/press/nousan/kikaku/261002.html",
+  "date": "2026-10-02",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e9f87b6fa85b": {
+  "id": "e9f87b6fa85b",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "【GREEN×EXPO 2027】関連イベントへの出展情報（令和8年10月から11月まで）",
+  "url": "https://www.maff.go.jp/j/press/nousan/kaki/261001.html",
+  "date": "2026-10-01",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "7e4345f095af": {
+  "id": "7e4345f095af",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "国際原子力機関（IAEA）により実施される水産物試料採取等について",
+  "url": "https://www.jfa.maff.go.jp/j/press/kenkyu/261001.html",
+  "date": "2026-10-01",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "gasoline-energy",
+   "nogyo"
+  ],
+  "related": []
+ },
+ "345332a57083": {
+  "id": "345332a57083",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "インドネシア・ハラール認証義務化に関する事業者向けウェビナーの開催について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kisei/261001.html",
+  "date": "2026-10-01",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "45e94ab49fdd": {
+  "id": "45e94ab49fdd",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年8月の米穀流通の動向（集荷、販売、民間在庫）",
+  "url": "https://www.maff.go.jp/j/press/nousan/kikaku/260930.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f01be245687d": {
+  "id": "f01be245687d",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "アルゼンチンからの家きん肉等の輸入一時停止措置について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/260930_1.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e108cc6fd312": {
+  "id": "e108cc6fd312",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "アルゼンチン北部地域産牛肉及び牛肉製品の輸入に係る家畜衛生条件の合意について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/260930.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "chiho"
+  ],
+  "related": []
+ },
+ "95bbae84cbce": {
+  "id": "95bbae84cbce",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "歴史的風致維持向上計画（第2期）の認定について",
+  "url": "https://www.maff.go.jp/j/press/nousin/noukei/260930.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "dc90e4b811b5": {
+  "id": "dc90e4b811b5",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "野菜の生育状況及び価格見通し（令和8年10月）について",
+  "url": "https://www.maff.go.jp/j/press/nousan/engei/260930.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "ec77b803876d": {
+  "id": "ec77b803876d",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "「令和7年度国有林野の管理経営に関する基本計画の実施状況」について",
+  "url": "https://www.rinya.maff.go.jp/j/press/keiki/260930.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "31550624e281": {
+  "id": "31550624e281",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "10月は「木材利用促進月間」です",
+  "url": "https://www.rinya.maff.go.jp/j/press/riyou/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "151af43ef8e6": {
+  "id": "151af43ef8e6",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "ポルトガルからの家きん肉等の輸入一時停止措置の解除について",
+  "url": "https://www.maff.go.jp/j/press/syouan/douei/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "94efa7684d1c": {
+  "id": "94efa7684d1c",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "横浜グリーンエクスポで展示するグリーン技術を公募します！",
+  "url": "https://www.maff.go.jp/j/press/nousan/kaki/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "66d2a8a5fb67": {
+  "id": "66d2a8a5fb67",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "簗農林水産大臣等の国内出張について",
+  "url": "https://www.maff.go.jp/j/press/kanbo/tiho/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "a0e7a7a61087": {
+  "id": "a0e7a7a61087",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "農林水産省共通申請サービスを「eMAFF申請2.0」へリニューアル 〜令和8年10月から運用スタート〜",
+  "url": "https://www.maff.go.jp/j/press/kanbo/joho/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "6a0a71e87622": {
+  "id": "6a0a71e87622",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "10月は「食品ロス削減月間」、10月30日は「食品ロス削減の日」！",
+  "url": "https://www.maff.go.jp/j/press/shokuhin/recycle/260929_1.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "22d01da96bd0": {
+  "id": "22d01da96bd0",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "日本の「観光・食」の魅力発信イベントにおける日本産食材のプロモーションの実施について",
+  "url": "https://www.maff.go.jp/j/press/yusyutu_kokusai/kaitaku/260929.html",
+  "date": "2026-09-29",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "884d5b97ff02": {
+  "id": "884d5b97ff02",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "第14回「食品産業もったいない大賞」の受賞者決定！",
+  "url": "https://www.maff.go.jp/j/press/shokuhin/recycle/260929.html",
+  "date": "2026-09-30",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f1c8d971cf55": {
+  "id": "f1c8d971cf55",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "令和8年度我が国周辺水域の水産資源に関する評価結果が公表されました（ズワイガニ、マダラ、ヒラメ、ヤナギムシガレイ、サメガレイ）",
+  "url": "https://www.jfa.maff.go.jp/j/press/sigen/260928.html",
+  "date": "2026-09-28",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nogyo"
+  ],
+  "related": []
+ },
+ "192f83c16dbe": {
+  "id": "192f83c16dbe",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "国際原子力機関(IAEA)により実施された分析機関間比較(ILC)の報告書の公表",
+  "url": "https://www.jfa.maff.go.jp/j/press/kenkyu/260928.html",
+  "date": "2026-09-28",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "gasoline-energy"
+  ],
+  "related": []
+ },
+ "de0fc7394698": {
+  "id": "de0fc7394698",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "国際原子力機関（IAEA）により実施されたALPS処理水に係る分析機関間比較（ILC）の報告書の公表",
+  "url": "https://www.jfa.maff.go.jp/j/press/kenkyu/260928_1.html",
+  "date": "2026-09-28",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "gasoline-energy"
+  ],
+  "related": []
+ },
+ "d957a1d35d8c": {
+  "id": "d957a1d35d8c",
+  "ministry": "maff",
+  "ministry_name": "農林水産省",
+  "title": "衛星活用による現地確認業務効率化の取組事例を紹介するオンラインセミナーを開催します",
+  "url": "https://www.maff.go.jp/j/press/kanbo/joho/260928.html",
+  "date": "2026-09-28",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "3e5d508f1535": {
+  "id": "3e5d508f1535",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "デジタルな形態を含む教科書の発行・採択等の指針に関する検討会議（第6回）　配布資料",
+  "url": "https://www.mext.go.jp/b_menu/shingi/mext_02468.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": [
+   "digital-kyokasho"
+  ]
+ },
+ "0935979c8e36": {
+  "id": "0935979c8e36",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "「ポストコロナ時代の医療人材養成拠点形成事業（大学を中核とした地域における総合的な診療能力を有する医師の養成事業）」",
+  "url": "https://www.mext.go.jp/a_menu/koutou/iryou/20260731_00001.html",
+  "date": "2026-10-22",
+  "cat": "政策分野別",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate",
+   "iryo-kaigo",
+   "chiho"
+  ],
+  "related": [
+   "ishi-henzai"
+  ]
+ },
+ "898f3b1fafc8": {
+  "id": "898f3b1fafc8",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "PHPの脆弱性対応に伴う一部コンテンツやサービスの一時停止のお知らせ",
+  "url": "https://www.mext.go.jp/a_menu/mext_00007.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "c4f398eefb2c": {
+  "id": "c4f398eefb2c",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "文部科学省初等中等教育局　非常勤職員（期間業務職員）採用のお知らせ（令和9年1月1日採用）",
+  "url": "https://www.mext.go.jp/b_menu/saiyou/hijyoukin/1422427_00025.html",
+  "date": "2026-10-21",
+  "cat": "採用案内",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": []
+ },
+ "80d052f981fe": {
+  "id": "80d052f981fe",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "ライフサイエンス委員会 次世代医療実現のための基盤形成に関する作業部会（第12期～）（第6回）の開催について",
+  "url": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu2/113/kaisai/mext_00006.html",
+  "date": "2026-10-21",
+  "cat": "審議会情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "iryo-kaigo"
+  ],
+  "related": []
+ },
+ "714cf3e0ce13": {
+  "id": "714cf3e0ce13",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "「ポスト2030教育に関するユースアジェンダ起草会議」を開催します",
+  "url": "https://www.mext.go.jp/unesco/001/2014/1347530_00012.htm",
+  "date": "2026-10-21",
+  "cat": "政策分野別",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": [
+   "kyutokuho"
+  ]
+ },
+ "4fc3e6cfad62": {
+  "id": "4fc3e6cfad62",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "第169回南極地域観測統合推進本部総会",
+  "url": "https://www.mext.go.jp/a_menu/shinkou/nankyoku/detail/1422925_00019.htm",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "chiho"
+  ],
+  "related": []
+ },
+ "39878fe63e91": {
+  "id": "39878fe63e91",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "令和8年10月28日 第169回南極地域観測統合推進本部総会の開催について",
+  "url": "https://www.mext.go.jp/a_menu/shinkou/nankyoku/detail/1422006_00071.htm",
+  "date": "2026-10-21",
+  "cat": "政策分野別",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "chiho"
+  ],
+  "related": []
+ },
+ "c71a5ea79ab3": {
+  "id": "c71a5ea79ab3",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "令和8年10月28日 第169回南極地域観測統合推進本部総会の会議案内を掲載しました",
+  "url": "https://www.mext.go.jp/a_menu/shinkou/nankyoku/1285461.htm",
+  "date": "2026-10-21",
+  "cat": "政策分野別",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "chiho"
+  ],
+  "related": []
+ },
+ "033bc1b5fb08": {
+  "id": "033bc1b5fb08",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "中央教育審議会大学分科会質向上・質保証システム部会(第12回）の配付資料を掲載しました",
+  "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo4/055/giji_list/1422801_00030.html",
+  "date": "2026-10-21",
+  "cat": "審議会情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": []
+ },
+ "6065cc934b14": {
+  "id": "6065cc934b14",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "2026年度経験者採用試験（係長級（事務））合格者の官庁訪問（府省合同A区分（総合職））について",
+  "url": "https://www.mext.go.jp/b_menu/saiyou/sonota/mext_03647.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "81f291c73fa1": {
+  "id": "81f291c73fa1",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "関芳弘文部科学大臣記者会見録（令和8年10月20日）",
+  "url": "https://www.mext.go.jp/b_menu/daijin/detail/mext_00744.html",
+  "date": "2026-10-20",
+  "cat": "大臣会見",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "4f51efba5c42": {
+  "id": "4f51efba5c42",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "高等専門学校の機能強化に関する検討会（第6回）配布資料",
+  "url": "https://www.mext.go.jp/b_menu/shingi/chousa/koutou/136/siryo/mext_00005.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": [
+   "kyutokuho"
+  ]
+ },
+ "5e1cb98c64ed": {
+  "id": "5e1cb98c64ed",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "文部科学省研究開発局原子力損害賠償対策室　非常勤職員（期間業務職員）採用のお知らせ（令和9年1月1日採用）",
+  "url": "https://www.mext.go.jp/b_menu/saiyou/hijyoukin/1423086_00019.html",
+  "date": "2026-10-20",
+  "cat": "採用案内",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "gasoline-energy"
+  ],
+  "related": []
+ },
+ "e6efada46285": {
+  "id": "e6efada46285",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "法科大学院等特別委員会（第125回）議事録",
+  "url": "https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo4/041/1421098_00030.htm",
+  "date": "2026-10-20",
+  "cat": "審議会情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "kosodate"
+  ],
+  "related": []
+ },
+ "cf23c012532f": {
+  "id": "cf23c012532f",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "技術士分科会（第54回）の開催について",
+  "url": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu7/kaisai/mext_00006.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "bfe558e5f7ac": {
+  "id": "bfe558e5f7ac",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "第13期研究費部会（第7回）の開催について",
+  "url": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu4/053/kaisai/0004_00006.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f587a890878f": {
+  "id": "f587a890878f",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "第58回観測・設営計画委員会",
+  "url": "https://www.mext.go.jp/a_menu/shinkou/nankyoku/detail/1422525_00015.htm",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "5b024910f64b": {
+  "id": "5b024910f64b",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "111の活火山の現状の評価を公表しました（火山調査研究推進本部火山調査委員会）",
+  "url": "https://www.mext.go.jp/a_menu/kaihatu/jishin/mext_00298.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "94d4c4bb8954": {
+  "id": "94d4c4bb8954",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "H3ロケット10号機の打上げ成功について［文部科学大臣談話］",
+  "url": "https://www.mext.go.jp/b_menu/daijin/detail/mext_00739.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "uchu-seisaku"
+  ],
+  "themes": [],
+  "related": [
+   "uchu-seisaku"
+  ]
+ },
+ "d68f1dd399fb": {
+  "id": "d68f1dd399fb",
+  "ministry": "mext",
+  "ministry_name": "文部科学省",
+  "title": "デジタルな形態を含む教科書の発行・採択等の指針に関する検討会議（第6回）の開催について",
+  "url": "https://www.mext.go.jp/b_menu/shingi/chousa/shotou/206/kaisai/mext_02457.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": [
+   "digital-kyokasho"
+  ]
+ },
+ "db2df942e347": {
+  "id": "db2df942e347",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "電波監理審議会　有効利用評価部会(第64回)会議資料",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/denpa_kanri/kaisai/02kiban01_04000331.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "436edc3a6fea": {
+  "id": "436edc3a6fea",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "不登校等のこどもの健康診断に関する調査　＜結果に基づく通知＞",
+  "url": "https://www.soumu.go.jp/menu_news/s-news/hyouka_261022000193158.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "futoko"
+  ],
+  "themes": [
+   "kosodate",
+   "iryo-kaigo"
+  ],
+  "related": [
+   "futoko",
+   "kyutokuho"
+  ]
+ },
+ "292ae086836b": {
+  "id": "292ae086836b",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "特殊切手「2027年国際園芸博覧会（寄付金付）」に付加された寄附金の配分団体等の認可",
+  "url": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000180.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "601a2492d8fb": {
+  "id": "601a2492d8fb",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "第773回　入札監理小委員会（開催案内）",
+  "url": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001102.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "71c5fdbb486f": {
+  "id": "71c5fdbb486f",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会 情報通信技術分科会 IPネットワーク設備委員会（第96回）配布資料",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/ipnet/02kiban05_04000803.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e0f77f191f10": {
+  "id": "e0f77f191f10",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信行政・郵政行政審議会 電気通信事業部会　ユニバーサルサービス委員会（第16回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/universal_service/02kiban07_04000114.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "d910e819a0f6": {
+  "id": "d910e819a0f6",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "フロンティアAI時代の通信事業におけるデータの保護・セキュリティの在り方に関する検討会（第1回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/kenkyu/data_protection/02kiban18_02000510.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai"
+  ],
+  "related": [
+   "joho-roei",
+   "ai-biosecurity",
+   "ai-hou"
+  ]
+ },
+ "247f8ea213af": {
+  "id": "247f8ea213af",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会　情報通信技術分科会　放送システム委員会　STL/TTL/TSL高度化作業班（第6回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/docs_Broadcast/02ryutsu08_04000621.html",
+  "date": "2026-10-22",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "d678d3278c23": {
+  "id": "d678d3278c23",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "デジタル技術を活用した効率的・効果的な住民基本台帳事務等のあり方に関する検討会（第2回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/kenkyu/digitaltech_juki/dai01kai_00001.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "981c861dee27": {
+  "id": "981c861dee27",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "G7デジタル・技術大臣会合の開催結果",
+  "url": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000357.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "922463f4cc69": {
+  "id": "922463f4cc69",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会 情報通信政策部会 放送政策委員会 主査ヒアリング（視聴者）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000599.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f7929f2e6350": {
+  "id": "f7929f2e6350",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会 情報通信政策部会 放送政策委員会 主査ヒアリング（株式会社新潟放送）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000598.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "15e5f0d6bec1": {
+  "id": "15e5f0d6bec1",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "「第25回市場公募地方債発行団体合同IR」の開催",
+  "url": "https://www.soumu.go.jp/menu_news/s-news/01zaisei05_261021.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "chiho"
+  ],
+  "related": []
+ },
+ "2617b2f5be59": {
+  "id": "2617b2f5be59",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "統計委員会　第158回人口・社会統計部会",
+  "url": "https://www.soumu.go.jp/main_sosiki/singi/toukei/jinkou/kaigi/02shingi05_02000839.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f8536b455405": {
+  "id": "f8536b455405",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信行政・郵政行政審議会　電気通信事業部会　市場検証委員会　利用者視点を踏まえたモバイル市場の検証に関する専門委員会（第10回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/yusei/02kiban03_04001192.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "4a7d7b1da823": {
+  "id": "4a7d7b1da823",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "弾道ミサイルを想定した住民避難訓練の実施",
+  "url": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001277.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "nankai-bosai"
+  ],
+  "related": []
+ },
+ "c3307a3884cd": {
+  "id": "c3307a3884cd",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会 電気通信事業政策部会 固定電話サービス移行円滑化委員会（第7回）",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denwa/02kiban02_04000905.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "5a387436e10a": {
+  "id": "5a387436e10a",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信審議会　郵政政策部会　郵便局活性化委員会（第21回）配布資料・議事録",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yubinkyoku_kasseika/02ryutsu18_04000001_00017.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "21cb4c80eb61": {
+  "id": "21cb4c80eb61",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "情報通信行政・郵政行政審議会　郵政行政分科会（第106回）配布資料・議事概要・議事録",
+  "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000522.html",
+  "date": "2026-10-21",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "eb31675f0242": {
+  "id": "eb31675f0242",
+  "ministry": "soumu",
+  "ministry_name": "総務省",
+  "title": "第16回衆議院議員選挙区画定審議会",
+  "url": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000273.html",
+  "date": "2026-10-20",
+  "cat": "新着情報",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "8a06a2c9828a": {
+  "id": "8a06a2c9828a",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "第13回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月29日開催】",
+  "url": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/013/kaisai/index.html",
+  "date": "2026-10-22",
+  "cat": "開催案内 消費者委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai"
+  ],
+  "related": [
+   "ai-hou",
+   "ai-agent"
+  ]
+ },
+ "7b76da45f1f6": {
+  "id": "7b76da45f1f6",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "食品安全委員会（第1040回）の開催について【10月27日開催】",
+  "url": "https://www.fsc.go.jp/iinkai_annai/annai/annai1040.html",
+  "date": "2026-10-22",
+  "cat": "開催案内 食品安全委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "1a3256fdcea2": {
+  "id": "1a3256fdcea2",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "添加物専門調査会（第212回）の開催について【11月2日開催】",
+  "url": "https://www.fsc.go.jp/senmon/tenkabutu/annai/te_annai_212.html",
+  "date": "2026-10-22",
+  "cat": "開催案内 食品安全委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "f1cf60821d7c": {
+  "id": "f1cf60821d7c",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "第501回消費者委員会本会議【10月27日開催】",
+  "url": "https://www.cao.go.jp/consumer/iinkai/2026/501/kaisai/index.html",
+  "date": "2026-10-20",
+  "cat": "開催案内 消費者委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "ea000ab4e8ef": {
+  "id": "ea000ab4e8ef",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "国土強靱化に関する世論調査",
+  "url": "https://survey.gov-online.go.jp",
+  "date": "2026-10-16",
+  "cat": "調査報告 大臣官房政府広報室",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "8273699215af": {
+  "id": "8273699215af",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "第12回人工知能（AI）技術の利用と消費者問題に関する専門調査会【10月22日開催】",
+  "url": "https://www.cao.go.jp/consumer/kabusoshiki/ai_technology/012/kaisai/index.html",
+  "date": "2026-10-15",
+  "cat": "開催案内 消費者委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai"
+  ],
+  "related": [
+   "ai-hou",
+   "ai-agent"
+  ]
+ },
+ "8c63c50e811b": {
+  "id": "8c63c50e811b",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "栄養成分関連添加物ワーキンググループ（第25回）の開催について【10月26日開催】",
+  "url": "https://www.fsc.go.jp/senmon/sonota/annai/wg_eiyou_annai_25.html",
+  "date": "2026-10-15",
+  "cat": "開催案内 食品安全委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "e7cbb2b8dd01": {
+  "id": "e7cbb2b8dd01",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "機械受注統計調査報告（令和8年8月実績）",
+  "url": "https://www.esri.cao.go.jp/jp/stat/juchu/juchu.html",
+  "date": "2026-10-15",
+  "cat": "統計情報 経済社会総合研究所景気統計部",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "c5e5c1919ec7": {
+  "id": "c5e5c1919ec7",
+  "ministry": "cao",
+  "ministry_name": "内閣府",
+  "title": "ビスフェノールＡワーキンググループ（第7回）の開催について【10月21日開催】",
+  "url": "https://www.fsc.go.jp/senmon/sonota/annai/wg_bpa_annai_7.html",
+  "date": "2026-10-13",
+  "cat": "開催案内 食品安全委員会事務局",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "b78ac8a961ac": {
+  "id": "b78ac8a961ac",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "企業会計審議会第３回サステナビリティ情報保証部会の開催について掲載しました。",
+  "url": "https://www.fsa.go.jp/news/r8/singi/20261029.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "7ee3f9629c67": {
+  "id": "7ee3f9629c67",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "採用,職員を募集しています。（資産運用会社等の監督等に従事する職員）",
+  "url": "https://www.fsa.go.jp/common/recruit/r8/shiho-03/shiho-03.html",
+  "date": "2026-10-22",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "b32fc1ff91ad": {
+  "id": "b32fc1ff91ad",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "多重債務問題対策推進懇談会の開催について公表しました。",
+  "url": "https://www.fsa.go.jp/policy/kashikin/tajusaimukondankai/20261028/20261028.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "ff2126a83f7a": {
+  "id": "ff2126a83f7a",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "金融庁広報誌アクセスＦＳＡ第278号（2026年10月号）を発行しました。",
+  "url": "https://www.fsa.go.jp/access/index.html",
+  "date": "2026-10-21",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "77d1c98bc04e": {
+  "id": "77d1c98bc04e",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "「デジタル・分散型金融への対応のあり方等に関する研究会」（第１回）議事次第について公表しました。",
+  "url": "https://www.fsa.go.jp/singi/digital_2026/shiryo/20261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "digital"
+  ],
+  "related": []
+ },
+ "910a0fc15c3f": {
+  "id": "910a0fc15c3f",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "国際関係,「秋季金融庁-米国SEC金融規制対話」の開催について公表しました。",
+  "url": "https://www.fsa.go.jp/inter/etc/20261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "6571896e6463": {
+  "id": "6571896e6463",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "国際関係,バーゼル銀行監督委員会による「整合性評価プログラム（RCAP）におけるレバレッジ比率規制の評価」について公表しました。",
+  "url": "https://www.fsa.go.jp/inter/bis/20261020/20261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "8e60149c8784": {
+  "id": "8e60149c8784",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "金融経済教育イベント「ワニーサと学ぶ 未来のためのお金の教室 in広島」の開催について公表しました。",
+  "url": "https://www.fsa.go.jp/news/r8/sonota/20261020/20261020.html",
+  "date": "2026-10-20",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [
+   "kinyu-kyoiku"
+  ],
+  "themes": [
+   "kosodate"
+  ],
+  "related": [
+   "kinyu-kyoiku"
+  ]
+ },
+ "0262064ee153": {
+  "id": "0262064ee153",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "「AI時代を見据えたオンチェーン金融フォーラム」（第１回）議事録について公表しました。",
+  "url": "https://www.fsa.go.jp/singi/ai_onchain/gijiroku/20260930.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai"
+  ],
+  "related": []
+ },
+ "761cc65629dc": {
+  "id": "761cc65629dc",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "国際関係,BIS決済・市場インフラ委員会及び証券監督者国際機構による最終報告書「金融市場インフラ（FMI）によるビジネスリスク・ビジネスロス管理：金融市場インフラのための原則（FMI原則）に関する追加ガイダンス」について公表しました。",
+  "url": "https://www.fsa.go.jp/inter/ios/20261019/20261019.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "3f19ac8f1c44": {
+  "id": "3f19ac8f1c44",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "採用,職員を募集しています。（金融モニタリング業務（主に新形態銀行、資金移動業者や前払式支払手段発行者等に係るモニタリング等）に従事する職員【弁護士】)",
+  "url": "https://www.fsa.go.jp/common/recruit/r8/shiho-02/shiho-02.html",
+  "date": "2026-10-19",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "67a838427f15": {
+  "id": "67a838427f15",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "預貯金の不正送金問題等に対する対応状況（令和８年３月末）について公表しました。",
+  "url": "https://www.fsa.go.jp/news/r8/ginkou/20261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "81326432b871": {
+  "id": "81326432b871",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "保険会社等における障がい者等に配慮した取組に関するアンケート調査の結果について（令和８年３月末時点）公表しました。",
+  "url": "https://www.fsa.go.jp/news/r8/hoken/20261016/20261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "9c0e45d695d7": {
+  "id": "9c0e45d695d7",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "「監査基準の改訂について（公開草案）」について公表しました。",
+  "url": "https://www.fsa.go.jp/news/r8/sonota/20261016-2/20261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [],
+  "related": []
+ },
+ "647d6a5539f6": {
+  "id": "647d6a5539f6",
+  "ministry": "fsa",
+  "ministry_name": "金融庁",
+  "title": "国際関係,金融安定理事会による最終報告書「AIの責任ある導入に関する健全な実務慣行」について公表しました。",
+  "url": "https://www.fsa.go.jp/inter/fsf/20261016/20261016.html",
+  "date": "2026-10-16",
+  "cat": "",
+  "first_seen": "2026-10-23T07:51:39",
+  "trackers": [],
+  "themes": [
+   "ai"
+  ],
+  "related": [
+   "ai-hou"
+  ]
+ }
+}
