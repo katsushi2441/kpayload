@@ -43,7 +43,18 @@ function og(spec: OgSpec): string {
   return `${SITE}/images/shocho/${spec.name}.png?v=${v}`
 }
 const SNS_BAND = `<div class="wrap"><p class="ac-sns"><img src="https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp" width="30" height="34" alt="">このシステムを作った会社が、御社の X の運用をお手伝いします。<a href="${SITE}/ai-sns-komon.html#ref=${REF}-head-sns-komon">AI-SNS顧問を見る →</a></p></div>`
-const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, b.replace('</section>', '</section>' + SNS_BAND), l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
+// コピーと X 共有（2026-10-23 ユーザー指示「全ページに。詳しく見たいと思わせる文言とURL」）。見出しのすぐ下に置く
+const xw = (t: string) => [...t].reduce((a, c) => a + (c.charCodeAt(0) < 0x1100 ? 1 : 2), 0)
+function shareBox(text: string, url: string, kind: string): string {
+  let t = text
+  while (xw(t) + 24 > 280 && t.length > 20) t = t.slice(0, -2)   // URLは23として280に収める
+  const x = `https://x.com/intent/post?text=${encodeURIComponent(t)}&url=${encodeURIComponent(`${url}#ref=x-share-${REF}-${kind}`)}`
+  const copy = `${t}\n${url}#ref=copy-${REF}-${kind}`
+  return `<div class="wrap"><div class="sc-share"><a class="sc-x" href="${attr(x)}" target="_blank" rel="noopener">Xで共有</a>`
+    + `<button type="button" class="sc-copy" data-copy="${attr(copy)}">文言とURLをコピー</button><span class="sc-done" hidden>コピーしました</span></div></div>`
+}
+const SHARE_JS = `<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.sc-copy');if(!b)return;var t=b.getAttribute('data-copy');function ok(){var d=b.parentNode.querySelector('.sc-done');if(d){d.hidden=false;setTimeout(function(){d.hidden=true},2500)}}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok)}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}});</script>`
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string, share = '') => baseShell(t, d, u, b.replace('</section>', '</section>' + share + SNS_BAND) + SHARE_JS, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
 
 const CSS = `<style>
 .hero .kicker::before{content:"";display:inline-block;width:26px;height:30px;margin-right:7px;vertical-align:-9px;background:url(https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp) center/contain no-repeat}
@@ -60,6 +71,7 @@ const CSS = `<style>
 .sc-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .sc-card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
 .sc-card b{display:block;font-size:15px}.sc-card span{font-size:12.5px;color:var(--muted)}
+.sc-share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0}.sc-x,.sc-copy{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;border:1px solid #0a726b}.sc-x{background:#12202f;border-color:#12202f;color:#fff}.sc-copy{background:#fff;color:#0a726b;font-family:inherit}.sc-done{font-size:13px;color:#0a726b;font-weight:700}
 .sc-btn{display:inline-block;margin:12px 0 0;padding:10px 18px;border-radius:10px;background:#0a726b;color:#fff;font-weight:800;text-decoration:none}
 .ac-stats{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}.ac-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:8px 14px;font-size:13px;color:#cfe2e4}.ac-stats b{display:block;font-size:22px;color:#fff}
 @media(max-width:820px){.sc-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -109,7 +121,11 @@ ${same.length ? `<section class="sc-sec"><h2>同じ分野の、ほかの省庁�
   const ogi = og({ name: `n-${it.id}`, kind: 'item', kicker: `Kurage 省庁トラッカー｜${it.ministry_name}　${ymd(it.date)}`, title: cut(it.title, 54),
     sub: ks.length ? `国会では：${ks.slice(0, 2).map((k) => k.name).join('・')}` : (it.themes.map((t) => tname[t] || t).join('・') || ''),
     stats: ks.length ? [[ks.reduce((a, k) => a + k.count, 0).toLocaleString('ja-JP'), '同じ話題の国会の質疑・答弁']] : [] })
-  await write(`n/${it.id}.html`, shell(title, desc, url, body, ld, ogi))
+  const kc = ks.reduce((a, k) => a + k.count, 0)
+  const stext = ks.length
+    ? `【${it.ministry_name}】${cut(it.title, 60)}（${ymd(it.date)}）\n同じ話題は国会で${kc.toLocaleString('ja-JP')}件。だれが質問し、政府は何と答えた？｜Kurage 省庁トラッカー`
+    : `【${it.ministry_name}】${cut(it.title, 60)}（${ymd(it.date)}）\n公式の発表と、同じ分野のほかの省庁の動きを1ページに。｜Kurage 省庁トラッカー`
+  await write(`n/${it.id}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 'n')))
   urls.push(url)
 }
 
@@ -125,7 +141,9 @@ for (const [m, name] of MIN) {
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url, description: desc, dateModified: TODAY }]
   const ogi = og({ name: `m-${m}`, kind: 'ministry', kicker: 'Kurage 省庁トラッカー', title: `${name}の新着`, sub: '発表と、同じ話題の国会の議論',
     stats: [[String(xs.length), '発表'], [String(xs.filter((x) => x.related.some((k) => kok[k])).length), '国会トラッカーとつながった']] })
-  await write(`m/${m}.html`, shell(title, desc, url, body, ld, ogi))
+  const nk = xs.filter((x) => x.related.some((k) => kok[k])).length
+  const stext = `【${name}】いま出ている発表${xs.length}件を新しい順に。${nk ? `うち${nk}件は、同じ話題を国会でだれが質問し、政府が何と答えたかまでたどれます。` : 'この発表、国会ではどう議論されている？'}｜Kurage 省庁トラッカー`
+  await write(`m/${m}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 'm')))
   urls.push(url)
 }
 
@@ -145,7 +163,9 @@ ${ks.length ? `<section class="sc-sec"><h2>この分野を国会で追う <small
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url, description: desc, dateModified: TODAY }]
   const ogi = og({ name: `t-${t}`, kind: 'theme', kicker: 'Kurage 省庁トラッカー｜分野', title: name, sub: '省庁の発表 × 国会の議論',
     stats: [[String(xs.length), '省庁の発表'], [ks.reduce((a, k) => a + k.count, 0).toLocaleString('ja-JP'), '国会の質疑・答弁']] })
-  await write(`t/${t}.html`, shell(title, desc, url, body, ld, ogi))
+  const kc = ks.reduce((a, k) => a + k.count, 0)
+  const stext = `「${name}」で、各省庁はいま何を出している？発表${xs.length}件と、国会の質疑・答弁${kc.toLocaleString('ja-JP')}件を1ページに並べました。｜Kurage 省庁トラッカー`
+  await write(`t/${t}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 't')))
   urls.push(url)
 }
 
@@ -163,7 +183,8 @@ ${ks.length ? `<section class="sc-sec"><h2>この分野を国会で追う <small
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Kurage 省庁トラッカー｜省庁の発表と国会の議論', url, description: desc, dateModified: TODAY }]
   const ogi = og({ name: 'index', kind: 'index', kicker: '省庁の発表 × 国会の議論', title: 'Kurage 省庁トラッカー',
     stats: [[items.length.toLocaleString('ja-JP'), '発表'], [String(MIN.length), '府省'], [String(linked.length), '国会とつながった']] })
-  await write('index.html', shell('Kurage 省庁トラッカー｜省庁の発表と国会の議論', desc, url, body, ld, ogi))
+  const stext = `省庁の発表と国会の議論が、1ページでつながる。デジタル庁・厚労省・国交省など${MIN.length}府省の新着${items.length}件から、同じ話題を国会でだれが質問し、政府が何と答えたかまでたどれます。｜Kurage 省庁トラッカー`
+  await write('index.html', shell('Kurage 省庁トラッカー｜省庁の発表と国会の議論', desc, url, body, ld, ogi, shareBox(stext, url, 'top')))
   urls.unshift(url)
 }
 
