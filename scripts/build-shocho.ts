@@ -72,6 +72,7 @@ const CSS = `<style>
 .sc-card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
 .sc-card b{display:block;font-size:15px}.sc-card span{font-size:12.5px;color:var(--muted)}
 .sc-share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0}.sc-x,.sc-copy{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;border:1px solid #0a726b}.sc-x{background:#12202f;border-color:#12202f;color:#fff}.sc-copy{background:#fff;color:#0a726b;font-family:inherit}.sc-done{font-size:13px;color:#0a726b;font-weight:700}
+.sc-off{font-size:12.5px;font-weight:800;color:#0a726b;text-decoration:none;white-space:nowrap}.sc-off:hover{text-decoration:underline}
 .sc-btn{display:inline-block;margin:12px 0 0;padding:10px 18px;border-radius:10px;background:#0a726b;color:#fff;font-weight:800;text-decoration:none}
 .ac-stats{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}.ac-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:8px 14px;font-size:13px;color:#cfe2e4}.ac-stats b{display:block;font-size:22px;color:#fff}
 @media(max-width:820px){.sc-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -86,7 +87,7 @@ const mName = (m: string) => (MIN.find((x) => x[0] === m) || [m, m])[1]
 function itemHtml(it: Item): string {
   const tr = it.related.filter((k) => kok[k]).slice(0, 3).map((k) => `<a class="sc-tag k" href="${GIIN}/tracker/${attr(k)}#ref=${REF}-list">国会：${h(kok[k].name)}</a>`).join('')
   return `<article class="sc-item"><h3><a href="${nUrl(it.id)}">${h(it.title)}</a></h3>
-<div class="sc-meta"><a class="sc-tag" href="${BASE}/m/${it.ministry}.html">${h(it.ministry_name)}</a>${ymd(it.date)}${it.cat ? '　' + h(it.cat) : ''}${tr}</div></article>`
+<div class="sc-meta"><a class="sc-tag" href="${BASE}/m/${it.ministry}.html">${h(it.ministry_name)}</a>${ymd(it.date)}${it.cat ? '　' + h(it.cat) : ''}<a class="sc-off" href="${attr(it.url)}" rel="noopener" target="_blank">公式ページ ↗</a>${tr}</div></article>`
 }
 
 function kokHtml(k: Kok, ref: string): string {
