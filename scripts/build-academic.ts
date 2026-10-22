@@ -59,10 +59,14 @@ function og(spec: OgSpec): string {
   const v = crypto.createHash('sha1').update(JSON.stringify(spec)).digest('hex').slice(0, 8)
   return `${SITE}/images/academic/${spec.name}.png?v=${v}`
 }
-const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, b, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
+// AI-SNS顧問への入口（2026-10-22 ユーザー指示）。X の返信から人が来るのは論文・研究者のページなので、見出しのすぐ下に置く
+const SNS_BAND = `<div class="wrap"><p class="ac-sns"><img src="https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp" width="30" height="34" alt="">このシステムを作った会社が、御社の X の運用をお手伝いします。<a href="${SITE}/ai-sns-komon.html#ref=${REF}-head-sns-komon">AI-SNS顧問を見る →</a></p></div>`
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, b.replace('</section>', '</section>' + SNS_BAND), l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
 
 const CSS = `<style>
 .hero .kicker::before{content:"";display:inline-block;width:26px;height:30px;margin-right:7px;vertical-align:-9px;background:url(https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp) center/contain no-repeat}
+.ac-sns{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 0;padding:12px 16px;border-radius:12px;background:#e6f7f3;border:1px solid #bcecd3;font-size:14.5px;line-height:1.6}.ac-sns img{flex:none;width:30px;height:34px;object-fit:contain}.ac-sns a{font-weight:900;white-space:nowrap}
+.wrap table{width:100%;table-layout:fixed}.wrap table th,.wrap table td{overflow-wrap:anywhere}
 .ac-sec{padding:26px 0 6px}.ac-sec>h2{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.ac-sec>h2 small{font-size:13px;color:var(--muted);font-weight:700}
 .ac-list{display:grid;gap:12px}
 .ac-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px}
