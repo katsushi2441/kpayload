@@ -414,8 +414,8 @@ const ctaBlock = `
   </div>
 </section>`
 
-// 検索から人が来ている記事の本文の途中に、AI-SNS顧問への案内をバナー付きで入れる（2026-10-23 ユーザー指示）。
-// 対象は data/vibeblog-promo.json。位置は3つ目の見出しの直前（見出しが少なければ本文の真ん中の段落の後）
+// 記事の本文の途中に、AI-SNS顧問への案内をバナー付きで入れる（2026-10-23 ユーザー指示）。
+// 最初は検索流入のある記事（data/vibeblog-promo.json）だけだったが、全記事に広げた。位置は3つ目の見出しの直前（見出しが少なければ本文の真ん中の段落の後）
 const PROMO = new Set<string>((JSON.parse(readFileSync(path.join(root, 'data', 'vibeblog-promo.json'), 'utf8')).slugs || []) as string[])
 const promoBlock = (slug: string) => {
   const r = `vibeblog-promo-${slug}`
@@ -428,8 +428,10 @@ const promoBlock = (slug: string) => {
       'AI-SNS顧問（X運用 × ホームページ × Webシステム）', '開発会社が、SNSから来た人が見るページまで作ります') +
     `</aside>`
 }
+// 2026-10-23 全記事に広げた（ユーザー「頼む立場の人が少ないページでも認知させる必要がある」）。PROMO の一覧は使わない
+const PROMO_SKIP = new Set(['2026-10-23-sns-unyou-daikou-erabikata'])
 const withPromo = (p: Post) => {
-  if (!PROMO.has(p.slug)) return p.html
+  if (PROMO_SKIP.has(p.slug)) return p.html
   const parts = p.html.split(/(?=<h2[\s>])/)
   if (parts.length >= 4) return parts.slice(0, 3).join('') + promoBlock(p.slug) + parts.slice(3).join('')
   const ps = p.html.split(/(?<=<\/p>)/)
