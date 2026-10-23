@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url'
 
 import { SITE } from './site'
 import { TODAY, h, attr, shell as baseShell } from './page-shell'
+import { SIDE_CSS, KPV_SCRIPT, withSide } from './sister-side'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = path.join(root, 'data', 'shocho')
@@ -54,7 +55,13 @@ function shareBox(text: string, url: string, kind: string): string {
     + `<button type="button" class="sc-copy" data-copy="${attr(copy)}">文言とURLをコピー</button><span class="sc-done" hidden>コピーしました</span></div></div>`
 }
 const SHARE_JS = `<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.sc-copy');if(!b)return;var t=b.getAttribute('data-copy');function ok(){var d=b.parentNode.querySelector('.sc-done');if(d){d.hidden=false;setTimeout(function(){d.hidden=true},2500)}}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok)}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}});</script>`
-const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string, share = '') => baseShell(t, d, u, b.replace('</section>', '</section>' + share + SNS_BAND) + SHARE_JS, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
+// 見出し（最初の section）の下を、本文と右の列（PR動画・姉妹システム・災害系）の2列にする（2026-10-23 国会トラッカーと同じ構造）
+const splitHero = (b: string) => { const i = b.indexOf('</section>'); return i < 0 ? [b, ''] : [b.slice(0, i + 10), b.slice(i + 10)] }
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string, share = '') => {
+  const [hero, rest] = splitHero(b)
+  const kind = (u.match(/\/shocho\/(m|t|n)\//) || [, 'top'])[1] as string
+  return baseShell(t, d, u, SIDE_CSS + hero + share + SNS_BAND + withSide(rest, 'shocho', `shocho-${kind}`) + SHARE_JS + KPV_SCRIPT, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
+}
 
 const CSS = `<style>
 .hero .kicker::before{content:"";display:inline-block;width:26px;height:30px;margin-right:7px;vertical-align:-9px;background:url(https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp) center/contain no-repeat}
