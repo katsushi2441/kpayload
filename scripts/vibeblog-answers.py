@@ -96,8 +96,11 @@ def main() -> int:
     ps = posts()
     data = json.load(open(OUT)) if os.path.exists(OUT) else {}
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    if "--all" in sys.argv:
-        slugs = list(ps)
+    if "--missing" in sys.argv:
+        # 配置のたびに呼ぶ（deploy.sh vibeblog）。答えがまだ無い、日付つきの記事だけ（毎週書き換わる日付なしのページは除く）
+        slugs = [k for k in ps if k[:4].isdigit() and k not in data]
+    elif "--all" in sys.argv:
+        slugs = [k for k in ps if k[:4].isdigit()]
     elif args:
         slugs = args
     else:
@@ -112,9 +115,12 @@ def main() -> int:
         if data.get(s, {}).get("hash") == h:
             continue
         ok = None
-        for _ in range(2):
+        for _ in range(3):
             try:
                 ans = ask(ps[s]["title"], body)
+            except json.JSONDecodeError as e:   # JSON が途中で崩れた → もう1回作らせる
+                print("  崩れたJSON", s, e)
+                continue
             except Exception as e:  # noqa: BLE001
                 print("  失敗", s, e)
                 break
@@ -130,7 +136,7 @@ def main() -> int:
         print(f"  {s}: {data[s]['q']}")
         json.dump(data, open(OUT, "w"), ensure_ascii=False, indent=1)
     print(f"作った {done}件・累計 {len(data)}件")
-    return 0
+    return 3 if done else 0   # 3 = 作った（deploy.sh が作り直す合図）
 
 
 if __name__ == "__main__":
