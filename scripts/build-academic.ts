@@ -61,7 +61,21 @@ function og(spec: OgSpec): string {
 }
 // AI-SNS顧問への入口（2026-10-22 ユーザー指示）。X の返信から人が来るのは論文・研究者のページなので、見出しのすぐ下に置く
 const SNS_BAND = `<div class="wrap"><p class="ac-sns"><img src="https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp" width="30" height="34" alt="">このシステムを作った会社が、御社の X の運用をお手伝いします。<a href="${SITE}/ai-sns-komon.html#ref=${REF}-head-sns-komon">AI-SNS顧問を見る →</a></p></div>`
-const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, b.replace('</section>', '</section>' + SNS_BAND), l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
+// 全ページに「Xで共有」「文言とURLをコピー」（2026-10-23 ユーザー指摘「論文も省庁も…全ページあるの？」＝1,300ページすべてに無かった）。
+// 省庁トラッカー（build-shocho.ts）と同じ部品。題名とURLから自動で作るので、新しいページにも必ず付く
+const xw = (t: string) => [...t].reduce((a, c) => a + (c.charCodeAt(0) < 0x1100 ? 1 : 2), 0)
+function shareBox(text: string, url: string, kind: string): string {
+  let t = text
+  while (xw(t) + 24 > 280 && t.length > 20) t = t.slice(0, -2)   // URLは23として280に収める
+  const x = `https://x.com/intent/post?text=${encodeURIComponent(t)}&url=${encodeURIComponent(`${url}#ref=x-share-${REF}-${kind}`)}`
+  const copy = `${t}\n${url}#ref=copy-${REF}-${kind}`
+  return `<div class="wrap"><div class="sc-share"><a class="sc-x" href="${attr(x)}" target="_blank" rel="noopener">Xで共有</a>`
+    + `<button type="button" class="sc-copy" data-copy="${attr(copy)}">文言とURLをコピー</button><span class="sc-done" hidden>コピーしました</span></div></div>`
+}
+const SHARE_JS = `<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.sc-copy');if(!b)return;var t=b.getAttribute('data-copy');function ok(){var d=b.parentNode.querySelector('.sc-done');if(d){d.hidden=false;setTimeout(function(){d.hidden=true},2500)}}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok)}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}});</script>`
+const SHARE_CSS = `<style>.sc-share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0}.sc-x,.sc-copy{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;border:1px solid #0a726b}.sc-x{background:#12202f;border-color:#12202f;color:#fff}.sc-copy{background:#fff;color:#0a726b;font-family:inherit}.sc-done{font-size:13px;color:#0a726b;font-weight:700}</style>`
+const kindOf = (u: string) => (u.match(/\/academic\/(paper|researcher|theme)\//) || [, 'top'])[1] as string
+const shell = (t: string, d: string, u: string, b: string, l: unknown[], ogImage?: string) => baseShell(t, d, u, SHARE_CSS + b.replace('</section>', '</section>' + shareBox(t, u, kindOf(u)) + SNS_BAND) + SHARE_JS, l, { refPrefix: REF, base: BASE, footerLinks: FOOT, ogImage })
 
 const CSS = `<style>
 .hero .kicker::before{content:"";display:inline-block;width:26px;height:30px;margin-right:7px;vertical-align:-9px;background:url(https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp) center/contain no-repeat}
