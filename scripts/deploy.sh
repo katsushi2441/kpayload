@@ -113,6 +113,9 @@ fi
 
 if [ "$what" = "vibeblog" ] || [ "$what" = "all" ]; then
   echo "== exbridge.jp: vibeblog/ =="
+  # 新しい記事に「〇〇とは？」の答えとよくある質問を付ける（2026-10-23）。作ったら記事を作り直してから送る
+  /usr/bin/python3 "$(dirname "$0")/vibeblog-answers.py" --missing; arc=$?
+  if [ "$arc" = "3" ]; then (cd "$(dirname "$0")/.." && npx tsx scripts/build-vibeblog.ts >/dev/null) || rc=1; elif [ "$arc" != "0" ]; then rc=1; fi
   # canonical-map.json は GitHub Pages 側の向け替えに使う作業用ファイル。公開しない。
   # AI検索向けの記事一覧（/vibeblog/llms.txt）を dist から作り直す（2026-10-08）
   /usr/bin/python3 "$(dirname "$0")/build_vibeblog_llms.py" || rc=1
