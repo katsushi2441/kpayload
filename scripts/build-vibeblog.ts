@@ -356,6 +356,8 @@ h1{font-size:26px;line-height:1.5;margin:6px 0 8px}
 section{margin:26px 0}
 section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;margin:0 0 10px}
 .idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
+.vb-answer{margin:18px 0 6px;padding:14px 18px;border-left:5px solid #0a9a8f;border-radius:10px;background:#f1faf7}.vb-answer h2{margin:0 0 6px;font-size:18px;line-height:1.5;border:0;padding:0}.vb-answer p{margin:0;font-size:15.5px;line-height:1.8}
+.vb-faq h3{font-size:16px;margin:18px 0 4px}
 .vb-promo{margin:26px 0;padding:14px 16px;border:1px solid #bcecd3;border-radius:12px;background:#f1faf7}.vb-promo-h{margin:0 0 10px;font-weight:900;font-size:14.5px;color:#0a726b}.vb-promo-i{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;padding:8px 0;border-top:1px dotted #cfe3df}.vb-promo-i:first-of-type{border-top:0}.vb-promo-i img{flex:none;width:160px;height:auto;aspect-ratio:480/252;border-radius:8px;border:1px solid #e3eaec}.vb-promo-i span{font-size:13.5px;line-height:1.5;color:#52636b}.vb-promo-i b{display:block;font-size:15px;color:#17242b;margin-bottom:2px}@media(max-width:480px){.vb-promo-i img{width:120px}}
 .lcard{display:block;background:#fff;border:1px solid #dcebe9;border-radius:12px;padding:13px 15px;text-decoration:none;transition:.15s}
 .lcard:hover{border-color:#0a9a8f;transform:translateY(-2px)}
@@ -430,6 +432,13 @@ const promoBlock = (slug: string) => {
 }
 // 2026-10-23 全記事に広げた（ユーザー「頼む立場の人が少ないページでも認知させる必要がある」）。PROMO の一覧は使わない
 const PROMO_SKIP = new Set(['2026-10-23-sns-unyou-daikou-erabikata'])
+// 「〇〇とは？」への直接の答えとよくある質問（2026-10-23）。scripts/vibeblog-answers.py が gemma4 で記事の本文だけから作る。
+// Copilot に引用されていたのは問いに直接答えるページだった（Bing AI Performance）。毎週書き換わる日付なしのページは対象外
+type Ans = { q: string; a: string; faq: { q: string; a: string }[] }
+const ANSWERS = JSON.parse(existsSync(path.join(root, 'data', 'vibeblog-answers.json')) ? readFileSync(path.join(root, 'data', 'vibeblog-answers.json'), 'utf8') : '{}') as Record<string, Ans>
+const hasOwnFaq = (p: Post) => /<h2[^>]*>\s*よくある質問\s*<\/h2>/.test(p.html)
+const answerBox = (p: Post) => { const x = ANSWERS[p.slug]; return x ? `<section class="vb-answer"><h2>${h(x.q)}</h2><p>${h(x.a)}</p></section>` : '' }
+const faqBlock = (p: Post) => { const x = ANSWERS[p.slug]; return x && x.faq.length && !hasOwnFaq(p) ? `<section class="vb-faq"><h2>よくある質問</h2>${x.faq.map((f) => `<h3>${h(f.q)}</h3><p>${h(f.a)}</p>`).join('')}</section>` : '' }
 const withPromo = (p: Post) => {
   if (PROMO_SKIP.has(p.slug)) return p.html
   const parts = p.html.split(/(?=<h2[\s>])/)
@@ -515,6 +524,13 @@ function postHtml(p: Post, idx: number): string {
       }
     }
   }
+  // 本文によくある質問が無い記事は、作った答えとよくある質問を FAQPage に入れる（画面にも同じものを出す）
+  if (ANSWERS[p.slug] && !hasOwnFaq(p)) {
+    const x = ANSWERS[p.slug]
+    const qa = [{ q: x.q, a: x.a }, ...x.faq]
+    ;(ld as unknown[]).push({ '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: qa.map((y) => ({ '@type': 'Question', name: y.q, acceptedAnswer: { '@type': 'Answer', text: y.a } })) })
+  }
 
   const body = `
 <main class="wrap">
@@ -528,7 +544,8 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
   <button type="button" class="vb-copy" data-copy="${attr(`${p.title}\n${url}`)}">
     <span class="vb-copy-label">タイトルとURLをコピー</span></button>
 </div>
-<article class="post">${withPromo(p)}</article>
+${answerBox(p)}
+<article class="post">${withPromo(p)}${faqBlock(p)}</article>
 ${(() => {
   const ts = trackersForPost(p)
   return ts.length ? `<section>
