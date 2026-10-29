@@ -23,7 +23,7 @@ import { h, attr, fitLength, shell as baseShell, json } from './page-shell'
 
 type Item = { day: string; time: string; source: string; post: string; newsUrl?: string; headline: string; card: string; kind: string
   cardTitle: string; cardImage: string; tracker: string; trackerName: string; lead?: string
-  id?: string; cardDesc?: string; qa?: { date: string; house: string; meeting: string; q?: { who: string; text: string }; a?: { who: string; text: string } } | null }
+  id?: string; cardDesc?: string; qa?: { date: string; house: string; meeting: string; latest?: boolean; q?: { who: string; text: string }; a?: { who: string; text: string } } | null }
 
 const BASE = `${SITE}/news`
 const OUT = path.join(process.cwd(), 'dist', 'news')
@@ -212,7 +212,7 @@ for (const x of withId) {
 ${x.lead ? `<p>${h(x.lead)}</p>` : ''}
 <a class="nc-card" href="${attr(x.card)}#ref=exbridge-news-item">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
 ${x.cardDesc ? `<p class="nc-note">${h(x.cardDesc)}</p>` : ''}
-${qa && (qa.q || qa.a) ? `<div class="nc-qa"><p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
+${qa && (qa.q || qa.a) ? `<div class="nc-qa">${qa.latest ? `<p><b>このテーマ「${h(x.trackerName || '')}」で、国会でいちばん最近あった質問と答弁</b></p>` : ''}<p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
 ${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}…</p>` : ''}${qa.a ? `<p><span class="who">答弁　${h(qa.a.who)}</span><br>${h(qa.a.text)}…</p>` : ''}</div>` : ''}
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
 <div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>

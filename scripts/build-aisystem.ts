@@ -97,6 +97,10 @@ function ymOf(s?: string | null): string | null {
 // 9月中旬から /ai-system/ の表示が半分になった（GSC 28日 9,221→4,051）。索引には残っているが順位が落ちた。
 type Deep = { sources?: string[]; sections: Array<{ h2: string; html: string }> }
 const DEEP: Record<string, Deep> = (() => { try { return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'aisystem-deep.json'), 'utf8')) } catch { return {} } })()
+// できること別ページ（/ai-system/c/<key>/）にも業務担当向けの節を足す（data/aisystem-cap-deep.json。2026-10-29）。
+// ChatGPT が答えを作るときに読み、chatgpt.com から人が着地していたのは hr・ec・evaluation。一覧と実測の表だけでは、
+// 「業務がどう変わるか」「選ぶときに何を見るか」に答えていなかった。
+const CAP_DEEP: Record<string, Deep> = (() => { try { return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'aisystem-cap-deep.json'), 'utf8')) } catch { return {} } })()
 
 function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
   const url = `${BASE}/${p.slug}/`
@@ -418,6 +422,10 @@ ${relatedPanel(relatedProducts({ slug: cap.key, name: cap.label, cap: cap.key })
 <h2>${h(cap.label)}とは？</h2>
 <p>${h(cap.label)}とは、${h(cap.question)}という状態を仕組みで解消することです。ゼロから作らなくても、同じ用途で世界中に使われているオープンソースがあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
 </div></section>
+${(CAP_DEEP[cap.key]?.sections || []).map((x) => `<section><div class="panel">
+<h2>${h(x.h2)}</h2>
+${x.html}
+</div></section>`).join('\n')}
 ${combosFor(cap.key).length ? `<section><div class="panel">
 <h2>${h(cap.label)}の構成例（オープンソース×AI）</h2>
 <div class="cat-grid">${combosFor(cap.key).map((p) => `<a class="cat-card" href="${SITE}/solution/${attr(p.slug)}.html?ref=ai-system-c-${attr(cap.key)}"><b>${h(p.name)}</b><span>${h(p.kicker)}</span></a>`).join('')}</div>
