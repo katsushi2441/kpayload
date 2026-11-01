@@ -28,6 +28,8 @@ const BASE = `${SITE}/solution`
 const SHELL = {
   refPrefix: 'exbridge-solution',
   base: BASE,
+  // ヘッダー右メニューは vibeblog・exbridge.jp の LP と同じ4つ（2026-11-01 ユーザー指示。LP 側は exbridge_jp/scripts/std_nav.py）
+  topLinks: `<a href="${SITE}/ai-it-komon.html#ref=exbridge-solution-nav">AI-IT顧問</a><a href="${SITE}/ai-sns-komon.html#ref=exbridge-solution-nav">AI-SNS顧問</a><a href="${SITE}/sales-partner.html#ref=exbridge-solution-nav">代理店募集</a><a href="${KURAGE}/vibe-prototype.html#ref=exbridge-solution-nav">バイブプロトタイプ</a>`,
   footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-solution-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${KURAGE}/khojokin.php/?ref=exbridge-solution">補助金ナビ（いま出せる補助金を条件で探す）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-solution-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
