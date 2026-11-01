@@ -108,6 +108,6 @@ export function compareTable(rows: CmpRow[], o: CmpOpts): string {
 <div class="table-wrap"><table class="stack-table"><thead><tr><th>名前</th><th>ライセンス</th><th>日本語ロケール（実測）</th><th>最終更新</th><th>GitHubスター</th><th>当社の日本語デモ</th><th>導入キット</th></tr></thead><tbody>
 ${tr}
 </tbody></table></div>
-<p class="note">日本語ロケールは各リポジトリの公開ファイル一覧から日本語の実ファイルを数えた結果、最終更新は GitHub の最終 push 日です。ライセンスは導入前に必ず原文で確認してください。上限${max}件、並びは規模・日本語・デモ・更新の実測値による機械的な順位です。</p>
+<p class="note">日本語ロケールは各リポジトリの公開ファイル一覧から日本語の実ファイルを数えた結果、最終更新は GitHub の最終 push 日です。ライセンスは導入前に原文で確認してください。上限${max}件、並びは規模・日本語・デモ・更新の実測値による機械的な順位です。</p>
 </div></section>`
 }
