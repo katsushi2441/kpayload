@@ -100,6 +100,8 @@ const DEEP: Record<string, Deep> = (() => { try { return JSON.parse(readFileSync
 // できること別ページ（/ai-system/c/<key>/）にも業務担当向けの節を足す（data/aisystem-cap-deep.json。2026-10-29）。
 // ChatGPT が答えを作るときに読み、chatgpt.com から人が着地していたのは hr・ec・evaluation。一覧と実測の表だけでは、
 // 「業務がどう変わるか」「選ぶときに何を見るか」に答えていなかった。
+// 題名・説明文の上書き（data/aisystem-seo.json。2026-11-02）。Bing で表示があるのに押されていないページだけ
+const SEO: Record<string, { title?: string; desc?: string }> = (() => { try { return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'aisystem-seo.json'), 'utf8')) } catch { return {} } })()
 const CAP_DEEP: Record<string, Deep> = (() => { try { return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'aisystem-cap-deep.json'), 'utf8')) } catch { return {} } })()
 
 function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
@@ -119,12 +121,12 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
   // 「twenty crm」(月170・競合低)では90日間1回も表示されなかった。
   // /oss/（kurage）は技術者向けのOSS情報、ここは業務担当・経営者向けの「業務での使い方と導入」。題名も役割で分ける
   // （2026-10-20 ユーザー指示「重なっているのは、寄せるんじゃなくて、中身の違いをはっきりさせること」）。製品名は先頭のまま。
-  const title = fitLength(32,
+  const title = SEO[p.slug]?.title || fitLength(32,
     `${p.name}で${cap.label}｜業務での使い方と導入`,
     `${p.name}で${cap.label}｜導入の進め方`,
     `${p.name}｜${cap.label}の導入`,
     `${p.name}｜${cap.label}`)
-  const desc = fitLength(120,
+  const desc = SEO[p.slug]?.desc || fitLength(120,
     DEEP[p.slug]
       ? `${p.name}を${cap.label}の業務にどう使うか、向いている会社、導入で決めておくことと進め方をまとめました。${p.summary}名古屋のシステム開発会社が日本語化から導入まで行います。`
       : `${p.name}を${cap.label}の業務にどう使うかと、導入の進め方をまとめました。${p.summary}名古屋のシステム開発会社が日本語化から導入まで行います。`,
