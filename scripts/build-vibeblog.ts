@@ -439,13 +439,31 @@ const ANSWERS = JSON.parse(existsSync(path.join(root, 'data', 'vibeblog-answers.
 const hasOwnFaq = (p: Post) => /<h2[^>]*>\s*よくある質問\s*<\/h2>/.test(p.html)
 const answerBox = (p: Post) => { const x = ANSWERS[p.slug]; return x ? `<section class="vb-answer"><h2>${h(x.q)}</h2><p>${h(x.a)}</p></section>` : '' }
 const faqBlock = (p: Post) => { const x = ANSWERS[p.slug]; return x && x.faq.length && !hasOwnFaq(p) ? `<section class="vb-faq"><h2>よくある質問</h2>${x.faq.map((f) => `<h3>${h(f.q)}</h3><p>${h(f.a)}</p>`).join('')}</section>` : '' }
+// セキュリティの記事には、AI-SNS顧問の代わりに「ホームページの点検を頼む」入口を入れる（2026-11-02 ユーザー指示）。
+// ブログの読者はニュースを読みに来た人で、商品や月額の顧問は一歩が大きすぎた（10/1〜11/2 で858人→問い合わせページ1人）。
+// 点検の依頼は contact.php?topic=shindan（件名【点検の依頼】）。記事の題名を本文の頭に入れて、どの記事から来たかを残す
+const SEC_WORDS = ['セキュリティ', '不正アクセス', '脆弱性', 'サイバー攻撃', 'ランサムウェア', '情報漏えい', '改ざん']
+const isSecurityPost = (p: Post) => {
+  const head = p.title + ' ' + p.topics.join(' ')
+  if (SEC_WORDS.some((w) => head.includes(w))) return true
+  const body = p.html.replace(/<[^>]+>/g, '')
+  return SEC_WORDS.reduce((n, w) => n + body.split(w).length - 1, 0) >= 10
+}
+const shindanBlock = (p: Post) => {
+  const r = `vibeblog-shindan-${p.slug}`
+  const href = `${SITE}/contact.php?topic=shindan&subject=${encodeURIComponent(`ブログ「${p.title}」を読みました。`)}#ref=${r}`
+  return `<aside class="vb-promo"><p class="vb-promo-h">御社のホームページは、大丈夫ですか</p>` +
+    `<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#52636b">ふつうの訪問者がページを開くのと同じ、外から見える範囲だけで、ホームページのセキュリティを点検します。URLを書いて送っていただければ、早めに手を入れたほうがよい点を、担当からメールでお知らせします。攻撃にあたる検査はしません。</p>` +
+    `<a class="btn" href="${attr(href)}">ホームページの点検を頼む</a></aside>`
+}
 const withPromo = (p: Post) => {
   if (PROMO_SKIP.has(p.slug)) return p.html
+  const block = isSecurityPost(p) ? shindanBlock(p) : promoBlock(p.slug)
   const parts = p.html.split(/(?=<h2[\s>])/)
-  if (parts.length >= 4) return parts.slice(0, 3).join('') + promoBlock(p.slug) + parts.slice(3).join('')
+  if (parts.length >= 4) return parts.slice(0, 3).join('') + block + parts.slice(3).join('')
   const ps = p.html.split(/(?<=<\/p>)/)
   const at = Math.max(1, Math.floor(ps.length / 2))
-  return ps.slice(0, at).join('') + promoBlock(p.slug) + ps.slice(at).join('')
+  return ps.slice(0, at).join('') + block + ps.slice(at).join('')
 }
 
 const card = (href: string, meta: string, title: string, desc: string) =>
