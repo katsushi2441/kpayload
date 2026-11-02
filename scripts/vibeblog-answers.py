@@ -92,6 +92,13 @@ def numbers_ok(ans: dict, body: str) -> bool:
     return True
 
 
+def clean_ok(ans: dict) -> bool:
+    """答えの文に JSON の残骸（`}]}`・```json・"faq"）が混ざっていないか。
+    gemma4 が最後の答えの中に JSON をもう一度書き出し、FAQ と構造化データに出ていた（2026-11-03・3記事）"""
+    txt = " ".join([ans.get("a", "")] + [x.get("a", "") + x.get("q", "") for x in ans.get("faq", [])])
+    return not re.search(r'\}\]|```|"faq"|"q":', txt)
+
+
 def main() -> int:
     ps = posts()
     data = json.load(open(OUT)) if os.path.exists(OUT) else {}
@@ -124,7 +131,7 @@ def main() -> int:
             except Exception as e:  # noqa: BLE001
                 print("  失敗", s, e)
                 break
-            if ans.get("q") and ans.get("a") and len(ans.get("faq") or []) >= 2 and numbers_ok(ans, body):
+            if ans.get("q") and ans.get("a") and len(ans.get("faq") or []) >= 2 and numbers_ok(ans, body) and clean_ok(ans):
                 ok = ans
                 break
         if not ok:
