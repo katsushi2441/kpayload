@@ -454,7 +454,7 @@ const shindanBlock = (p: Post) => {
   const href = `${SITE}/contact.php?topic=shindan&subject=${encodeURIComponent(`ブログ「${p.title}」を読みました。`)}#ref=${r}`
   return `<aside class="vb-promo"><p class="vb-promo-h">御社のホームページは、大丈夫ですか</p>` +
     `<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#52636b">ふつうの訪問者がページを開くのと同じ、外から見える範囲だけで、ホームページのセキュリティを点検します。URLを書いて送っていただければ、早めに手を入れたほうがよい点を、担当からメールでお知らせします。攻撃にあたる検査はしません。</p>` +
-    `<a class="btn" href="${attr(href)}">ホームページの点検を頼む</a></aside>`
+    `<a class="btn" style="color:#fff" href="${attr(href)}">ホームページの点検を頼む</a></aside>`
 }
 const withPromo = (p: Post) => {
   if (PROMO_SKIP.has(p.slug)) return p.html
