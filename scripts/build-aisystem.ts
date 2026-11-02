@@ -288,13 +288,15 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
   // 分類名(label)ではなく検索で使われる一般名(noun)を主語にし、「オープンソース」と「OSS」の両方を入れる。
   const noun = cap.noun || cap.label
   const terms = cap.terms || []
-  const title = fitLength(32,
+  // 分類ページの上書きは data/aisystem-seo.json の "c/<key>"（{total} は件数に置き換わる。2026-11-02）
+  const ovc = SEO[`c/${cap.key}`]
+  const title = ovc?.title ? ovc.title.replace('{total}', String(total)) : fitLength(32,
     `${noun}のオープンソース（OSS）${total}件｜無料で使える製品を比較`,
     `${noun}のオープンソース（OSS）${total}件を比較`,
     `${noun}のオープンソース${total}件｜無料で使えるもの`,
     `${noun}のオープンソース${total}件を比較`,
     `${noun}のオープンソース${total}件`)
-  const desc = fitLength(120,
+  const desc = ovc?.desc ? ovc.desc.replace('{total}', String(total)) : fitLength(120,
     `${noun}をオープンソース（OSS）で。${cap.question}という課題に使える無料のオープンソースを${total}件掲載。ライセンス・日本語対応・更新状況の実測つきで比較。名古屋のシステム開発会社が導入まで行います。`,
     `${cap.question}という課題に使える無料のオープンソースを${total}件掲載。有料クラウドとの違い、日本語対応の実測、選び方まで。名古屋のシステム開発会社が導入まで行います。`,
     `${cap.question}という課題に使える無料のオープンソースを${total}件掲載。有料クラウドとの違いと選び方、日本語対応の実測つき。`)
