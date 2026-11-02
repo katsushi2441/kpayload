@@ -171,6 +171,12 @@ export function relatedNews(kind: 'saas' | 'oss', key: string): string {
 
 export const NEWS_SCRIPT = '<script defer src="https://exbridge.jp/ai-it-news/news-widget.js"></script>'
 
+/** 「エクスブリッジについて」の欄（2026-11-03 ユーザー指示: 流入の多いページのフッターに会社概要と資本金）。
+ *  正本は /home/kojima/work/kurage_web/exbridge-about.html。文言を変えるときは正本を直してからここに写す */
+export function exbAbout(ref: string): string {
+  return `<section class="exb-about" style="max-width:1080px;margin:32px auto 0;padding:18px 16px 8px;border-top:1px solid #d6dde3;font-size:13.5px;line-height:1.75;color:#33414d;background:transparent;box-sizing:border-box;text-align:left"><h2 style="font-size:15px;line-height:1.5;margin:0 0 6px;color:#1f2d38;font-weight:700">エクスブリッジについて</h2><p style="margin:0 0 8px">このページは、名古屋のシステム開発会社・株式会社エクスブリッジが運営しています。AIを使って中小企業の業務システムを作り、保守契約・月額のシステム利用料・要件定義なしで使える買い切りの業務システムを <a href="https://kappstore.exbridge.jp/#ref=${ref}">Kurage App Store</a> で販売しています。</p><dl style="display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0 0 8px"><dt style="font-weight:700">会社名</dt><dd style="margin:0">株式会社エクスブリッジ（EXBRIDGE, Inc.）</dd><dt style="font-weight:700">所在地</dt><dd style="margin:0">愛知県名古屋市瑞穂区内浜町34-9 305</dd><dt style="font-weight:700">設立</dt><dd style="margin:0">2004年4月</dd><dt style="font-weight:700">資本金</dt><dd style="margin:0">1億250万円</dd><dt style="font-weight:700">代表取締役</dt><dd style="margin:0">小嶋 篤</dd><dt style="font-weight:700">法人番号</dt><dd style="margin:0">4180001056508</dd><dt style="font-weight:700">事業</dt><dd style="margin:0">AIを使った業務システムの開発、Kurage App Store の運営、AI-IT顧問</dd></dl><p style="margin:0"><a href="https://exbridge.jp/profile.html#ref=${ref}">会社概要</a>　<a href="https://exbridge.jp/vibeblog/2026-11-03-exbridge-yameta-3tsu-hoshu-getsugaku-youken.html#ref=${ref}">エクスブリッジがやめた3つ</a>　<a href="https://exbridge.jp/ai-it-komon.html#ref=${ref}">AI-IT顧問</a>　<a href="https://exbridge.jp/contact.php#ref=${ref}">お問い合わせ</a></p></section>`
+}
+
 export function shell(title: string, desc: string, canonical: string, body: string, ld: unknown[], opts: ShellOpts): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -192,8 +198,9 @@ ${body}
 ${pvRail(opts.pvTags)}
 <img src="${SITE}/simpletrack.php?t=img&url=${encodeURIComponent(canonical)}" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px">
 ${kurageAiFab(canonical, opts.refPrefix, opts.base)}
+${exbAbout(`exb-about-${opts.refPrefix}`)}
 <footer><div class="wrap">
-<p><strong>株式会社エクスブリッジ</strong>（EXBRIDGE, Inc.／法人番号 4180001056508）　愛知県名古屋市瑞穂区内浜町34-9 305　2004年4月設立</p>
+<p><strong>株式会社エクスブリッジ</strong>（EXBRIDGE, Inc.／法人番号 4180001056508）　愛知県名古屋市瑞穂区内浜町34-9 305　2004年4月設立　資本金1億250万円</p>
 <p>${opts.footerLinks}</p>
 <p class="note">このページの最終更新日: <time datetime="${TODAY}">${TODAY_JA}</time>／文責: 株式会社エクスブリッジ 代表取締役 小嶋 篤</p>
 </div></footer>
