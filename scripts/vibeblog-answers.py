@@ -96,7 +96,8 @@ def clean_ok(ans: dict) -> bool:
     """答えの文に JSON の残骸（`}]}`・```json・"faq"）が混ざっていないか。
     gemma4 が最後の答えの中に JSON をもう一度書き出し、FAQ と構造化データに出ていた（2026-11-03・3記事）"""
     txt = " ".join([ans.get("a", "")] + [x.get("a", "") + x.get("q", "") for x in ans.get("faq", [])])
-    return not re.search(r'\}\]|```|"faq"|"q":', txt)
+    # gemma4 がまれに答えの末尾へキリル文字などを混ぜる（2026-11-03「…進め方をとります。чат」）。日本語の記事にハングル・アラビア・タイ・キリルは出ない
+    return not re.search(r'\}\]|```|"faq"|"q":|[\u0400-\u04FF\u0600-\u06FF\u0E00-\u0E7F\uAC00-\uD7AF]', txt)
 
 
 def main() -> int:
