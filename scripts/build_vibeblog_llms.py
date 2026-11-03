@@ -23,6 +23,13 @@ def pick(pat, s):
 
 
 def main():
+    # 記事ごとの「答え」（data/vibeblog-answers.json・vibeblog-answers.py が作る）を題名の下に添える。
+    # AI は説明文より「◯◯は◯◯である」の断定文を引用しやすい（2026-11-04 ブログへの AI 流入を増やす施策）
+    try:
+        import json
+        answers = json.load(open(os.path.join(KP, "data", "vibeblog-answers.json"), encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        answers = {}
     posts = []
     for f in glob.glob(os.path.join(DIST, "*.html")):
         name = os.path.basename(f)
@@ -38,6 +45,9 @@ def main():
         desc = re.sub(r"\s+", " ", desc)
         if len(desc) > 160:
             desc = desc[:158] + "…"
+        ans = (answers.get(name[:-5]) or {}).get("a", "")
+        if ans:
+            desc = re.sub(r"\s+", " ", ans)[:200]
         posts.append((sec, date, title, desc, BASE + name))
     secs = {"VWork Blog": "仕事の記録（AIとオープンソースで業務システムを作る・公開データを調べる）",
             "AI OSS技術解説": "AIのオープンソースの技術解説"}

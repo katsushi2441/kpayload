@@ -437,7 +437,8 @@ const PROMO_SKIP = new Set(['2026-10-23-sns-unyou-daikou-erabikata'])
 type Ans = { q: string; a: string; faq: { q: string; a: string }[] }
 const ANSWERS = JSON.parse(existsSync(path.join(root, 'data', 'vibeblog-answers.json')) ? readFileSync(path.join(root, 'data', 'vibeblog-answers.json'), 'utf8') : '{}') as Record<string, Ans>
 const hasOwnFaq = (p: Post) => /<h2[^>]*>\s*よくある質問\s*<\/h2>/.test(p.html)
-const answerBox = (p: Post) => { const x = ANSWERS[p.slug]; return x ? `<section class="vb-answer"><h2>${h(x.q)}</h2><p>${h(x.a)}</p></section>` : '' }
+// 記事の最初の画面に「答え」を置く（AI は冒頭の断定文を引用する。2026-11-04）。中身は data/vibeblog-answers.json（vibeblog-answers.py）
+const answerBox = (p: Post) => { const x = ANSWERS[p.slug]; return x ? `<section class="vb-answer"><p style="margin:0 0 4px;font-size:12px;font-weight:800;color:#0a7f78;letter-spacing:.04em">この記事の答え</p><h2>${h(x.q)}</h2><p>${h(x.a)}</p></section>` : '' }
 const faqBlock = (p: Post) => { const x = ANSWERS[p.slug]; return x && x.faq.length && !hasOwnFaq(p) ? `<section class="vb-faq"><h2>よくある質問</h2>${x.faq.map((f) => `<h3>${h(f.q)}</h3><p>${h(f.a)}</p>`).join('')}</section>` : '' }
 // セキュリティの記事には、AI-SNS顧問の代わりに「ホームページの点検を頼む」入口を入れる（2026-11-02 ユーザー指示）。
 // ブログの読者はニュースを読みに来た人で、商品や月額の顧問は一歩が大きすぎた（10/1〜11/2 で858人→問い合わせページ1人）。
@@ -770,6 +771,10 @@ ${blogPosts.slice(0, 50).map((p) => `<item>
 </channel>
 </rss>`
 await fs.writeFile(path.join(distRoot, 'feed.xml'), feed, 'utf8')
+// 関連する記事の一覧（kurage_web/vibeblog_related.php と build-static.ts が読む。2026-11-04 AI が引用するページからブログへ内部リンクを張るため）
+const related = posts.map((p) => ({ slug: p.slug, title: p.title, desc: p.description.slice(0, 120), date: p.date, src: p.src, tags: p.topics }))
+await fs.writeFile(path.join(distRoot, 'related.json'), JSON.stringify(related), 'utf8')
+await fs.writeFile(path.join(root, 'data', 'vibeblog-related.json'), JSON.stringify(related, null, 1), 'utf8')
 
 const long = posts.filter((p) => visibleLength(fitLength(32, p.seoTitle, p.title)) > 32).length
 console.log(`vibeblog: 記事${posts.length}ページ + index/feed/sitemap`)
