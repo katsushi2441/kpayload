@@ -146,5 +146,31 @@
     "trackers": [
       "joho-roei"
     ]
+  },
+  {
+    "slug": "jinko-kansetsu",
+    "name": "人工膝関節と変形性膝関節症（膝の痛み・手術・リハビリ）",
+    "seo_title": "人工膝関節・変形性膝関節症の研究｜東海・関東の大学の論文・科研費と国会の議論",
+    "lead": "膝の痛みの多くは変形性膝関節症で、進むと人工膝関節に入れ替える手術（人工膝関節置換術）が選ばれます。手術の方法、手術のあとのリハビリ、痛みや歩く力がどこまで戻るかについて、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、手術の費用にかかわる高額療養費が国会でどう議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "人工膝関節・変形性膝関節症",
+        "search": "\"total knee arthroplasty\"|\"knee arthroplasty\"|\"knee replacement\"|\"knee osteoarthritis\"|\"osteoarthritis of the knee\"",
+        "and": "knee arthroplasty|knee replacement|knee osteoarthritis|osteoarthritis of the knee|TKA|UKA|unicompartmental",
+        "sort": "publication_date:desc",
+        "limit": 60
+      }
+    ],
+    "kaken": [
+      "変形性膝関節症",
+      "人工膝関節",
+      "人工関節置換",
+      "膝関節 リハビリテーション"
+    ],
+    "kaken_must": "膝|人工関節|関節置換|変形性関節症",
+    "x_rx": "膝|人工関節|関節置換|変形性膝関節症|リハビリ",
+    "trackers": [
+      "kogaku-ryoyohi"
+    ]
   }
 ]
