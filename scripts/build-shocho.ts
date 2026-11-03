@@ -33,6 +33,9 @@ const items = Object.values(JSON.parse(await fs.readFile(path.join(dataDir, 'ite
   .sort((a, b) => (b.date + b.first_seen).localeCompare(a.date + a.first_seen))
 const kok = JSON.parse(await fs.readFile(path.join(dataDir, 'kokkai.json'), 'utf8')) as Record<string, Kok>
 const tname = JSON.parse(await fs.readFile(path.join(dataDir, 'themes.json'), 'utf8')) as Record<string, string>
+// 公式ページの本文の冒頭・配布資料・要点（scripts/shocho-detail.py。2026-11-03 追加。無い発表は従来どおり題名とリンクだけ）
+type Detail = { fetched: string; facts?: string[]; files?: { title: string; url: string }[]; points?: string[]; points_src?: string[]; h1?: string; error?: string }
+const detail = JSON.parse(await fs.readFile(path.join(dataDir, 'detail.json'), 'utf8').catch(() => '{}')) as Record<string, Detail>
 const MIN: [string, string][] = [['digital', 'デジタル庁'], ['mlit', '国土交通省'], ['mhlw', '厚生労働省'], ['maff', '農林水産省'], ['mext', '文部科学省'], ['soumu', '総務省'], ['cao', '内閣府'], ['fsa', '金融庁']]
 
 const FOOT = `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">Kurage 省庁トラッカー</a>　<a href="${GIIN}/tracker/#ref=${REF}-foot">Kurage 国会トラッカー</a>　<a href="${SITE}/academic/#ref=${REF}-foot">Kurage 論文トラッカー</a>　<a href="${SITE}/ai-it-komon.html#ref=${REF}-foot">AI-IT顧問</a>　<a href="${SITE}/ai-sns-komon.html#ref=${REF}-foot">AI-SNS顧問</a>　<a href="${SITE}/contact.php">お問い合わせ</a>`
@@ -80,6 +83,13 @@ const CSS = `<style>
 .sc-card b{display:block;font-size:15px}.sc-card span{font-size:12.5px;color:var(--muted)}
 .sc-share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0}.sc-x,.sc-copy{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;border:1px solid #0a726b}.sc-x{background:#12202f;border-color:#12202f;color:#fff}.sc-copy{background:#fff;color:#0a726b;font-family:inherit}.sc-done{font-size:13px;color:#0a726b;font-weight:700}
 .sc-off{font-size:12.5px;font-weight:800;color:#0a726b;text-decoration:none;white-space:nowrap}.sc-off:hover{text-decoration:underline}
+.sc-det{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 12px}
+.sc-det dl{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:6px 12px;margin:0;font-size:14.5px}.sc-det dt{font-weight:800;color:var(--muted)}.sc-det dd{margin:0;overflow-wrap:anywhere}
+.sc-det p{margin:6px 0;font-size:14.5px;line-height:1.75;overflow-wrap:anywhere}
+.sc-pts{margin:0;padding:0 0 0 1.3em;font-size:15px;line-height:1.8}.sc-pts li{margin:4px 0}
+.sc-files{margin:0;padding:0;list-style:none}.sc-files li{padding:8px 0;border-top:1px dotted var(--line);font-size:14.5px;overflow-wrap:anywhere}.sc-files li:first-child{border-top:0}
+.sc-files a{font-weight:700}.sc-ext{display:inline-block;font-size:11px;font-weight:800;border-radius:6px;padding:0 6px;margin-left:6px;background:#fbe9e7;color:#a33a24;vertical-align:1px}
+@media(max-width:520px){.sc-det dl{grid-template-columns:1fr}.sc-det dd{margin:0 0 6px}}
 .sc-btn{display:inline-block;margin:12px 0 0;padding:10px 18px;border-radius:10px;background:#0a726b;color:#fff;font-weight:800;text-decoration:none}
 .ac-stats{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}.ac-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:8px 14px;font-size:13px;color:#cfe2e4}.ac-stats b{display:block;font-size:22px;color:#fff}
 @media(max-width:820px){.sc-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -103,12 +113,42 @@ function kokHtml(k: Kok, ref: string): string {
     + `</ul><p class="note" style="margin:8px 0 0"><a href="${GIIN}/tracker/${attr(k.key)}#ref=${ref}">「${h(k.name)}」の質疑と答弁をすべて見る（国会トラッカー）→</a></p></div>`
 }
 
+const LABEL = /^(日時|開催日時|日程|開催日|日付|時間|場所|開催場所|会場|開催形式|議題（予定）|議題|議事次第|議事|次第|主な内容|内容|概要|趣旨|対象|期間|締切|提出先)$/
+function factsHtml(fs0: string[]): string {
+  const rows: string[] = []
+  let cur: [string, string[]] | null = null
+  const flush = () => { if (cur) rows.push(`<dt>${h(cur[0])}</dt><dd>${cur[1].map(h).join('<br>')}</dd>`); cur = null }
+  const paras: string[] = []
+  for (const x of fs0.slice(0, 18)) {
+    if (LABEL.test(x)) { flush(); cur = [x, []] } else if (cur && cur[1].length < 6) cur[1].push(cut(x, 160)); else { flush(); if (paras.length < 6) paras.push(cut(x, 220)) }
+  }
+  flush()
+  return (rows.length ? `<dl>${rows.join('')}</dl>` : '') + paras.map((p) => `<p>${h(p)}</p>`).join('')
+}
+const ext = (u: string) => ((u.split('?')[0].match(/\.(pdf|xlsx?|docx?|pptx?|csv|zip)$/i) || [, ''])[1] as string).toUpperCase()
+function detailHtml(it: Item, d: Detail | undefined): string {
+  if (!d) return ''
+  const pts = d.points || [], files = d.files || [], facts = (d.facts || []).filter((x) => x !== it.title)
+  let out = ''
+  if (pts.length) {
+    out += `<section class="sc-sec"><h2>資料に書いてあること <small>要点${pts.length}つ</small></h2><div class="sc-det"><ol class="sc-pts">${pts.map((p) => `<li>${h(p)}</li>`).join('')}</ol>
+<p class="note" style="margin:10px 0 0">${d.points_src?.length ? `「${d.points_src.map(h).join('」「')}」` : `${h(it.ministry_name)}の公式ページ`}の文言から、当社のAI（gemma4）が要点を抜き出しました。資料にない数字が入った要点は機械的に外していますが、正確な内容は必ず原文でご確認ください。</p></div></section>`
+  }
+  if (facts.length) out += `<section class="sc-sec"><h2>公式ページの内容 <small>${h(it.ministry_name)}</small></h2><div class="sc-det">${factsHtml(facts)}</div></section>`
+  if (files.length) {
+    out += `<section class="sc-sec"><h2>配布資料・添付ファイル <small>${files.length}件</small></h2><div class="sc-det"><ul class="sc-files">${files.slice(0, 30).map((f) => `<li><a href="${attr(f.url)}" rel="noopener" target="_blank">${h(f.title)}</a>${ext(f.url) ? `<span class="sc-ext">${ext(f.url)}</span>` : ''}</li>`).join('')}</ul></div></section>`
+  }
+  if (out) out += `<p class="note" style="margin:8px 0 0">出典：${h(it.ministry_name)}ウェブサイト「<a href="${attr(it.url)}" rel="noopener" target="_blank">${h(cut(it.title, 60))}</a>」（政府標準利用規約に基づき、本文の冒頭と資料の題名を掲載しています）</p>`
+  return out
+}
+
 async function write(rel: string, html: string) {
   const f = path.join(outDir, rel)
   await fs.mkdir(path.dirname(f), { recursive: true })
   await fs.writeFile(f, html)
 }
 const urls: string[] = []
+const lastmod: Record<string, string> = {}   // サイトマップの lastmod。中身が変わる日（発表の日付・資料を取り込んだ日）。毎回 TODAY を打たない
 const linked = items.filter((x) => x.related.some((k) => kok[k]))
 
 // 発表ごと
@@ -116,15 +156,22 @@ for (const it of items) {
   const url = nUrl(it.id)
   const ks = it.related.map((k) => kok[k]).filter(Boolean)
   const title = `${cut(it.title, 60)}｜${it.ministry_name}｜Kurage 省庁トラッカー`
-  const desc = `${it.ministry_name}が${ymd(it.date)}に公表した「${cut(it.title, 70)}」。${ks.length ? `同じ話題の国会の質疑・答弁（${ks.map((k) => k.name).join('・')}）と並べています。` : '公式ページへのリンクと、同じ分野の発表を並べています。'}`
+  const p0 = detail[it.id]?.points?.[0]
+  const nf = detail[it.id]?.files?.length || 0
+  const desc = `${it.ministry_name}が${ymd(it.date)}に公表した「${cut(it.title, 70)}」。${p0 ? `要点：${cut(p0, 70)}${nf ? `配布資料${nf}件の一覧つき。` : ''}` : ''}${ks.length ? `同じ話題の国会の質疑・答弁（${ks.map((k) => k.name).join('・')}）と並べています。` : '公式ページへのリンクと、同じ分野の発表を並べています。'}`
   const same = items.filter((x) => x.id !== it.id && x.themes.some((t) => it.themes.includes(t))).slice(0, 6)
+  const d = detail[it.id]
+  // 同じ会議の「開催案内」と「資料掲載」は別の発表として来る。題名が同じ発表どうしをつなぐ
+  const twin = items.filter((x) => x.id !== it.id && x.ministry === it.ministry && x.title === it.title)
   const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">Kurage 省庁トラッカー｜${h(it.ministry_name)}の発表</p><h1 style="font-size:clamp(21px,3.4vw,32px)">${h(it.title)}</h1>
 <p class="lead">${h(it.ministry_name)}　${ymd(it.date)}${it.cat ? '　' + h(it.cat) : ''}</p><a class="sc-btn" href="${attr(it.url)}" rel="noopener" target="_blank">${h(it.ministry_name)}の公式ページを開く →</a></div></section>
 <div class="wrap"><p class="crumb" style="font-size:13px;color:var(--muted);padding:14px 0 0"><a href="${BASE}/">Kurage 省庁トラッカー</a> › <a href="${BASE}/m/${it.ministry}.html">${h(it.ministry_name)}</a> › 発表</p>
+${detailHtml(it, d)}
+${twin.length ? `<section class="sc-sec"><h2>同じ会議・同じ件のほかの発表</h2><div class="sc-list">${twin.map(itemHtml).join('')}</div></section>` : ''}
 ${ks.length ? `<section class="sc-sec"><h2>この話題を国会で追う <small>国会トラッカー</small></h2>${ks.map((k) => kokHtml(k, `${REF}-n-${it.id}`)).join('')}</section>` : ''}
 ${it.themes.length ? `<section class="sc-sec"><h2>分野</h2><div class="sc-meta" style="font-size:14px">${it.themes.map((t) => `<a class="sc-tag" href="${BASE}/t/${t}.html">${h(tname[t] || t)}</a>`).join('')}</div></section>` : ''}
 ${same.length ? `<section class="sc-sec"><h2>同じ分野の、ほかの省庁の発表</h2><div class="sc-list">${same.map(itemHtml).join('')}</div></section>` : ''}
-<section class="sc-sec"><p class="note">題名・日付・URLは${h(it.ministry_name)}の新着情報（RSS）から機械的に取り込んでいます。内容は必ず公式ページでご確認ください。国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-n">国会トラッカー</a> と同じデータです。</p></section></div>`
+<section class="sc-sec"><p class="note">題名・日付・URLは${h(it.ministry_name)}の新着情報（RSS）から、本文の冒頭と資料の一覧は公式ページから機械的に取り込んでいます。内容は必ず公式ページでご確認ください。国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-n">国会トラッカー</a> と同じデータです。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, dateModified: TODAY, about: { '@type': 'GovernmentOrganization', name: it.ministry_name } }]
   const ogi = og({ name: `n-${it.id}`, kind: 'item', kicker: `Kurage 省庁トラッカー｜${it.ministry_name}　${ymd(it.date)}`, title: cut(it.title, 54),
     sub: ks.length ? `国会では：${ks.slice(0, 2).map((k) => k.name).join('・')}` : (it.themes.map((t) => tname[t] || t).join('・') || ''),
@@ -135,6 +182,7 @@ ${same.length ? `<section class="sc-sec"><h2>同じ分野の、ほかの省庁�
     : `【${it.ministry_name}】${cut(it.title, 60)}（${ymd(it.date)}）\n公式の発表と、同じ分野のほかの省庁の動きを1ページに。｜Kurage 省庁トラッカー`
   await write(`n/${it.id}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 'n')))
   urls.push(url)
+  lastmod[url] = [it.date, (d?.points?.length || d?.files?.length) ? (d.fetched || '').slice(0, 10) : ''].sort().pop() || it.date
 }
 
 // 府省ごと
@@ -153,6 +201,7 @@ for (const [m, name] of MIN) {
   const stext = `【${name}】いま出ている発表${xs.length}件を新しい順に。${nk ? `うち${nk}件は、同じ話題を国会でだれが質問し、政府が何と答えたかまでたどれます。` : 'この発表、国会ではどう議論されている？'}｜Kurage 省庁トラッカー`
   await write(`m/${m}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 'm')))
   urls.push(url)
+  lastmod[url] = xs[0].date
 }
 
 // 分野ごと
@@ -175,6 +224,7 @@ ${ks.length ? `<section class="sc-sec"><h2>この分野を国会で追う <small
   const stext = `「${name}」で、各省庁はいま何を出している？発表${xs.length}件と、国会の質疑・答弁${kc.toLocaleString('ja-JP')}件を1ページに並べました。｜Kurage 省庁トラッカー`
   await write(`t/${t}.html`, shell(title, desc, url, body, ld, ogi, shareBox(stext, url, 't')))
   urls.push(url)
+  lastmod[url] = xs[0].date
 }
 
 // トップ
@@ -194,8 +244,9 @@ ${ks.length ? `<section class="sc-sec"><h2>この分野を国会で追う <small
   const stext = `省庁の発表と国会の議論が、1ページでつながる。デジタル庁・厚労省・国交省など${MIN.length}府省の新着${items.length}件から、同じ話題を国会でだれが質問し、政府が何と答えたかまでたどれます。｜Kurage 省庁トラッカー`
   await write('index.html', shell('Kurage 省庁トラッカー｜省庁の発表と国会の議論', desc, url, body, ld, ogi, shareBox(stext, url, 'top')))
   urls.unshift(url)
+  lastmod[url] = items[0].date
 }
 
-await write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`)
+await write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${u}</loc><lastmod>${(lastmod[u] || TODAY) > TODAY ? TODAY : lastmod[u] || TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`)
 await fs.writeFile(path.join(root, 'outputs', 'shocho-ogp-specs.json'), JSON.stringify(ogSpecs, null, 1))
 console.log(`shocho: 発表 ${items.length}・国会とつながった ${linked.length}・計 ${urls.length} ページ → ${outDir}`)

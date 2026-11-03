@@ -10,3 +10,4 @@
 /data/harvest/
 /outputs/
 outputs_*.log
+data/shocho/.detail.lock

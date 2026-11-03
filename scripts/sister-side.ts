@@ -29,6 +29,7 @@ const DEMOS: [string, string, string][] = [
 export const SIDE_CSS = `<style>
 .xcols{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 .xmain{min-width:0}.xmain .wrap{width:auto;max-width:none}
+/* 1100px 未満は .wrap の左右の余白を消しているので、.xmain に余白を持たせる（2026-11-03 360px で本文が画面の左端に付いていた） */
 .xside{min-width:0;padding:18px 0}
 .xs-box{background:#fff;border:1px solid #e5ebf1;border-radius:14px;padding:12px 14px;margin:0 0 16px}
 .xs-h{font-size:15px;margin:0 0 10px;padding:0;border:0}.xs-h small{font-size:11.5px;font-weight:700;color:#0a726b;margin-left:4px}
@@ -44,7 +45,7 @@ export const SIDE_CSS = `<style>
 .xside .kpv-cm-box{margin:0 0 14px}
 .x-cm-sp{margin:14px 0}
 @media(min-width:1100px){.xcols{grid-template-columns:minmax(0,1fr) 300px;gap:28px;max-width:1360px;margin:0 auto;padding:0 20px}.xside{padding-top:26px}.x-cm-sp{display:none}}
-@media(max-width:1099px){.xside{padding:0 16px 18px}.xside .kpv-cm{display:none}.xs-sis,.xs-list{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}}
+@media(max-width:1099px){.xmain{padding:0 16px}.xside{padding:0 16px 18px}.xside .kpv-cm{display:none}.xs-sis,.xs-list{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}}
 </style>`
 
 export const KPV_SCRIPT = '<script src="https://kurage.exbridge.jp/kpv_cm.js" defer></script>'
