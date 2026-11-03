@@ -81,7 +81,7 @@ const SHELL = {
   ogImage: `${SITE}/images/vibeblog-ogp.png`,
   // 右上は ai-agent-automation.html と同じ3つ（2026-10-10 ユーザー指示）
   topLinks: `<a href="${SITE}/ai-it-komon.html?ref=vibeblog-nav">AI-IT顧問</a><a href="${SITE}/ai-sns-komon.html?ref=vibeblog-nav">AI-SNS顧問</a><a href="${SITE}/sales-partner.html?ref=vibeblog-nav">代理店募集</a><a href="${KURAGE}/vibe-prototype.html?ref=vibeblog-nav">バイブプロトタイプ</a>`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-vibeblog">無料相談</a>　<a href="${BASE}/">記事一覧</a>　<a href="${KURAGE}/oss/?ref=exbridge-vibeblog">業務OSSカタログ</a>　<a href="${SITE}/ai-system/?ref=exbridge-vibeblog">AIでできること</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-vibeblog">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-vibeblog">無料相談</a>　<a href="${BASE}/">記事一覧</a>　<a href="${BASE}/feed.xml">RSS</a>　<a href="${KURAGE}/oss/?ref=exbridge-vibeblog">業務OSSカタログ</a>　<a href="${SITE}/ai-system/?ref=exbridge-vibeblog">AIでできること</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-vibeblog">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], og?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, ogImage: og || SHELL.ogImage }).replace('</head>',
@@ -624,7 +624,8 @@ function indexHtml(): string {
 <header class="vb-head">
   <p class="vb-eyebrow">VWork Blog ・ 株式会社エクスブリッジ（名古屋）</p>
   <h1>バイブコーディング的仕事ブログ</h1>
-  <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${blogPosts.length}本</strong>（ほかに AI OSS技術解説 ${ossPosts.length}本）。</p>
+  <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${blogPosts.length}本</strong>（ほかに AI OSS技術解説 ${ossPosts.length}本）。
+    <a href="${BASE}/feed.xml" style="display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid #e0831a;border-radius:999px;color:#b35c00;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap">RSS で新着を受け取る</a></p>
   <div class="vb-two">
     <div class="vb-def">
       <div class="vb-dn">VWork（フレームワーク）</div>
