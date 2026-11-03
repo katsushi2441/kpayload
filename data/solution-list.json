@@ -720,6 +720,11 @@
   ],
   "products": [
    {
+    "name": "テレアポ営業のCRM・SFA Kurage テレアポCRM・SFA",
+    "url": "https://kappstore.exbridge.jp/app.php?id=0931d2dfecffc022",
+    "price": "220,000円"
+   },
+   {
     "name": "案件管理・商談管理 Kurage Deal Desk",
     "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
     "price": "55,000円"
@@ -756,7 +761,7 @@
    }
   ],
   "lps": [],
-  "facts": "CRMはOSSが最も成熟した領域。EspoCRM/Krayinは当社の日本語導入キットで共有レンタルサーバーにも立つ。MA(マーケティングオートメーション)の高度な自動化はSaaSが強い。日報からAIが起票する入力ゼロ運用は自社製kcrmagentが担う。",
+  "facts": "CRMはOSSが最も成熟した領域。EspoCRM/Krayinは当社の日本語導入キットで共有レンタルサーバーにも立つ。MA(マーケティングオートメーション)の高度な自動化はSaaSが強い。日報からAIが起票する入力ゼロ運用は自社製kcrmagentが担う。 テレアポ（架電リスト→続けて架電→再コール→アポで顧客→商談）は自社製 Kurage テレアポCRM・SFA が担う（PHP+SQLite・1リスト9万件）。",
   "lead": "営業部門では、顧客管理、商談管理、メール、マーケティング施策とSaaSの月額料金が積み上がり、利用者が増えるほど固定費の重さを感じがちです。高度なMAを担う本体は残し、顧客台帳や活動記録、日報入力など分離できる業務をOSSやオンプレミスの製品へ移せば、運用を保ちながら毎月の支出を抑えられます。",
   "verdict": "高度なマーケティングオートメーションはSaaSが強く、複雑な自動化までEspoCRMやKrayin CRMで同等に置き換えられるとはいえません。一方、顧客、リード、商談、活動、メールの管理は成熟したOSSへ分離できます。EspoCRMとKrayin CRMは日本語導入キットを使い、共有レンタルサーバーで自社運用する選択肢があります。日報入力の負担には、AIが顧客記録の下書きを作り、人が承認した分だけ台帳へ入れるkcrmagentも使えます。高度なMAが売上活動の中核で、設定済みの自動化を手放す損失が固定費を上回る場合は、Salesforce、HubSpot、Zoho CRMの継続が正解です。",
   "faqs": [
