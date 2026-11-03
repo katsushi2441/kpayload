@@ -16,6 +16,7 @@
 #   bash scripts/deploy.sh vibeblog   # exbridge: vibeblog/（VWorkブログの移設先）
 #   bash scripts/deploy.sh academic   # exbridge: academic/（論文トラッカー・東海の大学の研究×国会）
 #   bash scripts/deploy.sh shocho     # exbridge: shocho/（省庁トラッカー・各府省の新着×国会）
+#   bash scripts/deploy.sh meigen     # exbridge: meigen/（名言トラッカー・出典つきの名言で応援）
 #   bash scripts/deploy.sh news       # exbridge: news/（ニュースと国会の記録カード・毎時）
 #   bash scripts/deploy.sh all
 #
@@ -134,6 +135,14 @@ if [ "$what" = "shocho" ] || [ "$what" = "all" ]; then
   /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp shocho || rc=1
   /usr/bin/python3 "$(dirname "$0")/make_shocho_ogp.py" || rc=1
   /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp images/shocho || rc=1
+fi
+
+if [ "$what" = "meigen" ] || [ "$what" = "all" ]; then
+  echo "== exbridge.jp: meigen/ =="
+  # Kurage 名言トラッカー（2026-11-03）。build-meigen.ts が exbridge_jp/meigen/ に直接書く。データは /home/kojima/work/kmeigen
+  /usr/bin/python3 "$(dirname "$0")/make_meigen_ogp.py" || rc=1
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp images/meigen || rc=1
+  /usr/bin/python3 "$(dirname "$0")/put_changed.py" /home/kojima/work/exbridge_jp /web/exbridge_jp meigen || rc=1
 fi
 
 if [ "$what" = "academic" ] || [ "$what" = "all" ]; then
