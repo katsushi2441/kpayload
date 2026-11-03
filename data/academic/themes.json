@@ -172,5 +172,35 @@
     "trackers": [
       "kogaku-ryoyohi"
     ]
+  },
+  {
+    "slug": "yakin-suimin",
+    "name": "夜勤・睡眠不足・睡眠時無呼吸と肥満・脂肪肝",
+    "seo_title": "夜勤・睡眠不足・睡眠時無呼吸と肥満・脂肪肝の研究｜東海・関東の大学の論文・科研費と国会の議論",
+    "lead": "夜勤や交代勤務、子育ての夜泣きで眠りが足りないと、食欲や代謝にかかわるホルモンが乱れ、太りやすく、脂肪肝になりやすいと言われます。いびきや睡眠時無呼吸症候群も、肥満や脂肪肝と関係します。夜勤のある看護・介護・工場で働く人の健康、睡眠時無呼吸、肥満・脂肪肝について、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、介護職の夜勤が国会でどう議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "夜勤・睡眠不足と肥満・脂肪肝",
+        "search": "\"shift work\"|\"night shift\"|\"shift workers\"|\"sleep deprivation\"|\"short sleep duration\"|\"sleep restriction\"|\"sleep apnea\"|\"fatty liver\"|NAFLD|MASLD",
+        "and": "shift work|night shift|night work|shift workers|sleep deprivation|sleep restriction|short sleep|sleep duration|circadian|sleep apnea|apnea|fatty liver|NAFLD|MASLD|steatotic",
+        "sort": "publication_date:desc",
+        "limit": 60
+      }
+    ],
+    "kaken": [
+      "夜勤 健康",
+      "交代勤務",
+      "シフトワーク",
+      "睡眠不足 肥満",
+      "睡眠 脂肪肝",
+      "概日リズム 代謝",
+      "睡眠時無呼吸",
+      "脂肪肝"
+    ],
+    "kaken_must": "夜勤|交代勤務|シフト|睡眠|概日|脂肪肝|肥満|体内時計|無呼吸",
+    "x_rx": "夜勤|睡眠不足|交代勤務|脂肪肝|肥満|体内時計|無呼吸|いびき",
+    "trackers": [
+      "kaigo-shogu"
+    ]
   }
 ]
