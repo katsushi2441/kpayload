@@ -61,5 +61,51 @@
     "html": "<ul><li><strong>評価制度そのものが文書になっているか</strong>：等級、評価項目、評価の段階、昇給への反映のルールが文書になっていない会社は、システムより先に制度を書き出す必要があります。当社はこの段階からお手伝いします。</li><li><strong>期のサイクル</strong>：半期か年次か、目標設定と評価の締切をいつにするか。</li><li><strong>評価者の人数と階層</strong>：一次評価者が何人いて、誰が二次評価と調整を行うか。</li><li><strong>開示の方針</strong>：評価の理由を本人にどこまで伝えるか。開示するなら、評価者がコメントを書く前提で研修が要ります。</li><li><strong>記録の保存</strong>：退職者の評価記録をいつまで残すか。</li></ul><p>当社は初日3時間の無料ヒアリングで、いまの評価シートと制度の文書を見せていただいてから、どの製品を土台にするか、あるいは当社の職務・目標・引継ぎ管理システムで足りるかを提案します。</p>"
    }
   ]
+ },
+ "crm": {
+  "sources": [
+   "GSC 2026-08〜11: 「オープンソース crm」「顧客管理 オープンソース」「crm オープン ソース 比較」で表示はあるが2〜3ページ目（11/4 の買い手の語の分析）",
+   "当社の Krayin（2,066キー）・EspoCRM の日本語化と導入キット、テレアポCRM・SFA の開発記録"
+  ],
+  "sections": [
+   {
+    "h2": "オープンソースCRMの選び方——先に決める3つのこと",
+    "html": "<p>144件を上から見る前に、次の3つを決めると候補が3〜5件に絞れます。</p><ol><li><strong>何を管理するか。</strong>これから電話をかける先のリスト（テレアポ）と、取引のある客の台帳・商談は、同じCRMでも向くものが違います。前者は架電→再コール→アポの流れが1画面で回るもの、後者は会社・担当者・商談・活動が紐づくものを選びます。会員や寄付の管理なら<a href=\"https://exbridge.jp/ai-system/civicrm-core/\">CiviCRM</a>のような団体向けの系統です。</li><li><strong>だれが何人で入力するか。</strong>2〜3人で回すなら軽いもの、営業が10人を超えるなら権限・レポート・ワークフローのあるもの（<a href=\"https://exbridge.jp/ai-system/twenty/\">Twenty</a>、Krayin、EspoCRM）。入力する人が増えるほど、画面の日本語と項目名が業務の言葉になっているかが定着を決めます。</li><li><strong>どこで動かすか。</strong>PHP製の Krayin・EspoCRM は月数百円の共有レンタルサーバーでも動きます。Twenty など docker 前提のものは VPS が要ります。社内に Linux を触れる人がいなければ、前者から選ぶのが安全です。</li></ol><h3>当社の推し3本（日本語で立てた実物があるもの）</h3><div class=\"cat-grid\"><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=11e7c1d9a83d1ca3&amp;ref=ai-system-c-crm-pick\" target=\"_blank\" rel=\"noopener\"><b>Krayin CRM 日本語導入キット</b><span>共有レンタルサーバー編・税込110,000円。2,066キーの日本語は本家にマージ済み</span></a><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=9d27eb0ebe2fc7e0&amp;ref=ai-system-c-crm-pick\" target=\"_blank\" rel=\"noopener\"><b>EspoCRM 日本語導入キット</b><span>共有レンタルサーバー編・税込110,000円。会社・担当者・商談・活動の標準的なCRM</span></a><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=0931d2dfecffc022&amp;ref=ai-system-c-crm-pick\" target=\"_blank\" rel=\"noopener\"><b>Kurage テレアポCRM・SFA</b><span>税込220,000円・オンプレミス。架電リスト→続けて架電→アポで顧客→商談かんばん</span></a></div><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=CRM%E3%83%BB%E9%A1%A7%E5%AE%A2%E7%AE%A1%E7%90%86&amp;ref=ai-system-c-crm-howto#form\">どのCRMが合うかを相談する（初日3時間のヒアリングは無料）</a></p>"
+   }
+  ]
+ },
+ "storage": {
+  "sources": [
+   "GSC 2026-08〜11: 「ファイルサーバ オープンソース」97表示・20位、「オンラインストレージ オープンソース」32表示・29位（11/4 の買い手の語の分析）"
+  ],
+  "sections": [
+   {
+    "h2": "ファイルサーバー・オンラインストレージをオープンソースで持つ前に",
+    "html": "<p>この分類の製品は、ほぼすべてが docker や常駐プロセスを前提にしています。<strong>月数百円の共有レンタルサーバーでは動きません。</strong>VPS を1台用意するところから始まります。</p><ul><li><strong>社外とのやりとりが中心</strong>（見積や図面を取引先に渡す、期限つきのリンクで大きなファイルを送る）なら、<a href=\"https://exbridge.jp/ai-system/nextcloud/\">Nextcloud</a> の共有リンクで足ります。</li><li><strong>社内の共有フォルダ（Windows のネットワークドライブ）の置き換え</strong>なら、デスクトップ同期と WebDAV があるもの。<a href=\"https://exbridge.jp/ai-system/seafile/\">Seafile</a> は同期が速く、Nextcloud は機能が広い、という違いです。</li><li><strong>いまのファイルサーバーからの移行</strong>は、フォルダの権限と、古いファイルの持ち主を誰にするかで時間がかかります。先に「残す・捨てる・読み取り専用にする」を決めてから移します。</li></ul><p class=\"note\">この分類には当社の製品はまだありません。選定・VPSへの設置・既存サーバーからの移行は、業務システムの相談として受けています。</p><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%BB%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8&amp;ref=ai-system-c-storage-howto#form\">ファイル共有の選定と設置を相談する</a></p>"
+   }
+  ]
+ },
+ "mailmarketing": {
+  "sources": [
+   "GSC 2026-08〜11: 「メール配信システム オープンソース」88表示・17位、「メール配信システム oss」66表示・18位（11/4 の買い手の語の分析）",
+   "当社の BillionMail 日本語導入キット（VPS編）の作業記録"
+  ],
+  "sections": [
+   {
+    "h2": "メール配信システムをオープンソースで持つなら、先に見るもの",
+    "html": "<div class=\"cat-grid\"><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=495b5aca4ee119db&amp;ref=ai-system-c-mailmarketing-pick\" target=\"_blank\" rel=\"noopener\"><b>BillionMail 日本語導入キット（VPS編）</b><span>税込110,000円。配信とメールサーバーを1つの docker 構成で持つ BillionMail を、当社が日本語で立てた手順書つき</span></a></div><p><strong>届くかどうかは配信ソフトでは決まりません。</strong>送信ドメインの認証（SPF・DKIM・DMARC）と送信元IPの評判で決まります。ソフトを選ぶ前に、自前のメールサーバーから送るのか、送信だけ外部のAPIサービスに任せるのかを決めてください。</p><ul><li>配信だけを軽く持ちたい：<a href=\"https://exbridge.jp/ai-system/listmonk/\">listmonk</a>（1バイナリで動く、購読者リストとキャンペーンに絞った作り）</li><li>見込み客の行動で分岐するマーケティングまで：<a href=\"https://exbridge.jp/ai-system/mautic/\">Mautic</a>（機能は広いが、運用する人が要る）</li><li>メールサーバーごと自前で：BillionMail（上のキット）</li></ul><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=%E3%83%A1%E3%83%BC%E3%83%AB%E9%85%8D%E4%BF%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;ref=ai-system-c-mailmarketing-howto#form\">メール配信の構成を相談する</a></p>"
+   }
+  ]
+ },
+ "erp": {
+  "sources": [
+   "GSC 2026-08〜11: 「erp 無料」86表示・30位、「erp オープンソース」11表示・53位。着地が asERP・social・ekylibre の製品ページに散っていた（11/4 の買い手の語の分析）"
+  ],
+  "sections": [
+   {
+    "h2": "「ERP 無料」で探している方へ——先に業務を1つに絞る",
+    "html": "<p>ERP（基幹業務の統合）のオープンソースは本体が無料でも、<strong>導入で費用がかかるのは項目の設計・既存データの移行・運用の教育</strong>です。中小企業で最初から全部をつなぐ導入はほとんど成功しません。いちばん困っている業務を1つ選び、そこから入れると失敗が少なくなります。</p><ul><li>受発注と在庫から：<a href=\"https://exbridge.jp/ai-system/c/inventory/\">在庫管理のオープンソース</a>、当社の <a href=\"https://kappstore.exbridge.jp/app.php?id=88acc4be142bd444&amp;ref=ai-system-c-erp\" target=\"_blank\" rel=\"noopener\">Kurage Web Order（受発注）</a></li><li>請求と会計から：<a href=\"https://exbridge.jp/ai-system/c/accounting/\">会計・請求のオープンソース</a>、当社の <a href=\"https://kappstore.exbridge.jp/app.php?id=15abb025dc2ee4f6&amp;ref=ai-system-c-erp\" target=\"_blank\" rel=\"noopener\">Kurage 請求書（kbilling）</a></li><li>全部を1つで持つ前提なら：<a href=\"https://exbridge.jp/ai-system/odoo/\">Odoo</a>（コミュニティ版）、<a href=\"https://exbridge.jp/ai-system/erpnext/\">ERPNext</a>、<a href=\"https://exbridge.jp/ai-system/dolibarr/\">Dolibarr</a> の3つから比べるのが近道です。このページの一覧にある「project」「social」は Odoo のアドオンで、単体では動きません。</li></ul><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=ERP%E3%83%BB%E5%9F%BA%E5%B9%B9%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;ref=ai-system-c-erp-howto#form\">どの業務から入れるかを相談する</a></p>"
+   }
+  ]
  }
 }

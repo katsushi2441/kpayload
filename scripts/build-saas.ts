@@ -230,6 +230,7 @@ function detailPage(s: Saas, oss: Project[], others: Saas[], named: number): str
 </div></section>
 ${relatedNews('saas', s.slug)}
 <main class="wrap">
+${s.slug === 'notion' ? `<p class="note" style="margin:0 0 12px">Notion の代わりの<strong>選び方と移行の実際（OSS 5選）</strong>は <a href="${SITE}/notion.php?ref=saas-notion">こちらの記事</a>が正本です。このページは候補の一覧です。</p>` : ''}
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">SaaSとOSSの対応表</a> / ${h(s.name)}</nav>
 
 ${c ? `<section><div class="panel">
@@ -351,7 +352,9 @@ ${faqs.map((f) => `<div class="card" style="margin:0 0 10px"><h3>${h(f.q)}</h3><
       { '@type': 'ListItem', position: 2, name: 'SaaSとOSSの対応表', item: `${BASE}/` },
       { '@type': 'ListItem', position: 3, name: s.name, item: url }] },
   ]
-  return shell(title, desc, url, body, ld, [s.slug])
+  // 正本が別にあるページは canonical をそこへ向ける（notion: /notion.php が本文の正本。301 は使わない）2026-11-04
+  const CANONICAL_TO: Record<string, string> = { notion: `${SITE}/notion.php` }
+  return shell(title, desc, CANONICAL_TO[s.slug] || url, body, ld, [s.slug])
 }
 
 function indexPage(list: Array<{ s: Saas; oss: Project[] }>): string {

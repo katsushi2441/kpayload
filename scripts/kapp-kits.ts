@@ -21,23 +21,23 @@ export const KAPP_KITS: Record<string, KappKit> = {
   freescout: { id: '6d0e2c491e4170da', label: 'FreeScout 日本語導入キットを見る' },
   billionmail: { id: '495b5aca4ee119db', label: 'BillionMail 日本語導入キットを見る' },
   'decap-cms': { id: 'a3b60acb11b65f47', label: 'Decap CMS 日本語導入キットを見る' },
-  'krayin-crm': { id: '11e7c1d9a83d1ca3', label: 'Krayin CRM 日本語導入キットを見る', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-02-krayin-japanese-merged.html' },
+  'krayin-crm': { id: '11e7c1d9a83d1ca3', label: 'Krayin CRM 日本語導入キットを見る', article: 'https://exbridge.jp/vibeblog/2026-09-02-krayin-japanese-merged.html' },
   docuseal: { id: 'f543c9cbd613871b', label: 'DocuSeal 日本語導入キット（電子契約・VPS編）を見る', price: '税込5,500円（オンプレミス）' },
   libredesk: { id: '104c05db7779a709', label: 'LibreDesk 日本語導入キットを見る' },
   'kouchou-ai': { id: '53493d74a09cfd8c', label: '広聴AI 完全ローカル導入キットを見る' },
-  codealmanac: { id: 'b81d730eb535b454', label: 'CodeAlmanac 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-codealmanac-linux-guide.html' },
+  codealmanac: { id: 'b81d730eb535b454', label: 'CodeAlmanac 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-03-codealmanac-linux-guide.html' },
   // 2026-09-04 受け皿強化4本（Google流入のあるOSS名→商品ページへの導線）
-  vikunja: { id: '767ea5a2f7963f2a', label: 'Vikunja 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-vikunja-japanese-guide.html' },
-  docmost: { id: '7495b31ca104b483', label: 'Docmost 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-docmost-japanese-guide.html' },
-  planka: { id: '1364b33c7d1cde58', label: 'Planka 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-planka-japanese-guide.html' },
-  docspell: { id: '7f9481c10a09b560', label: 'Docspell 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-docspell-japanese-guide.html' },
-  pdfmathtranslate: { id: '8adb859f30cb8cc5', label: 'PDFMathTranslate 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-pdf-translation-selfhosted.html' },
+  vikunja: { id: '767ea5a2f7963f2a', label: 'Vikunja 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-03-vikunja-japanese-guide.html' },
+  docmost: { id: '7495b31ca104b483', label: 'Docmost 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-03-docmost-japanese-guide.html' },
+  planka: { id: '1364b33c7d1cde58', label: 'Planka 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-04-planka-japanese-guide.html' },
+  docspell: { id: '7f9481c10a09b560', label: 'Docspell 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-04-docspell-japanese-guide.html' },
+  pdfmathtranslate: { id: '8adb859f30cb8cc5', label: 'PDFMathTranslate 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-04-pdf-translation-selfhosted.html' },
   // paperless-ngx は「日本語OCRが3か所直さないと効かない」実測が売り。
   // 表記ゆれ（paperless / paperless-ngx）どちらのslugでも同じキットへ寄せる。
-  'paperless-ngx': { id: '2c8193abe130c90c', label: 'paperless-ngx 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-05-paperless-ngx-japanese-ocr.html' },
-  paperless: { id: '2c8193abe130c90c', label: 'paperless-ngx 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-05-paperless-ngx-japanese-ocr.html' },
+  'paperless-ngx': { id: '2c8193abe130c90c', label: 'paperless-ngx 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-05-paperless-ngx-japanese-ocr.html' },
+  paperless: { id: '2c8193abe130c90c', label: 'paperless-ngx 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-05-paperless-ngx-japanese-ocr.html' },
   // Appsmith は翻訳キットではなく「初回起動の破損からの復旧」＋英語画面の読み替えが売り。
-  appsmith: { id: 'a5109169d3b23989', label: 'Appsmith 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-05-appsmith-first-boot-brick.html' },
+  appsmith: { id: 'a5109169d3b23989', label: 'Appsmith 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-05-appsmith-first-boot-brick.html' },
   // 2026-09-29 動物病院の電子カルテ（本家に翻訳の仕組みが無く、当社の日本語版フォーク＋紙カルテ移行が売り）
   openvpm: { id: '302ada8100bb954f', label: '動物病院の電子カルテ OpenVPM 日本語版 導入キットを見る', price: '税込5,500円（オンプレミス）' },
   // 導入キットではなく「そのOSSを使って当社が作ったオンプレミスの製品」。
@@ -48,11 +48,11 @@ export const KAPP_KITS: Record<string, KappKit> = {
   ocrmypdf: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
   tesseract: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
   paddleocr: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
-  whisper: { id: 'cd1eda3248c87920', label: 'Whisperで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
-  'whisper-cpp': { id: 'cd1eda3248c87920', label: 'whisper.cppで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-whisper-cpp-japanese-transcription.html' },
+  whisper: { id: 'cd1eda3248c87920', label: 'Whisperで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-whisper-cpp-japanese-transcription.html' },
+  'whisper-cpp': { id: 'cd1eda3248c87920', label: 'whisper.cppで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-whisper-cpp-japanese-transcription.html' },
   // 全文検索×AIチャット（Namazu実績→Fessでも同構成）。出口はオンプレミスのチャットボット
   namazu: { id: '224e141f77bd07a8', label: 'Namazu検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-namazu-ai-chat-knowledge.html' },
-  fess: { id: '224e141f77bd07a8', label: 'Fess検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://katsushi2441.github.io/vwork/articles/2026-09-04-fess-fulltext-search-ai-chat.html' },
+  fess: { id: '224e141f77bd07a8', label: 'Fess検索×AIチャットの土台（Kurage Light ChatBot・オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-fess-fulltext-search-ai-chat.html' },
   postgis: { id: 'a5ac4b9f1fdb6d19', label: 'PostGISで作った商圏分析システム(オンプレミス)を見る', product: true },
   kshoken: { id: 'a5ac4b9f1fdb6d19', label: '設置手順つきのオンプレミス版を見る', product: true },
   // kepler.gl（GSC 8〜10位・月100表示）は「可視化」で、到達圏と人口集計は無い。商圏分析まで欲しい人の出口を置く。

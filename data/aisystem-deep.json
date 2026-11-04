@@ -147,9 +147,15 @@
       "Zammad 公式ドキュメント（zammad-documentation prerequisites/hardware・software）: 最小構成 2コア・6GB（Elasticsearch同居は+4GB）",
       "Zammad 管理者ドキュメント（zammad-admin-documentation）: channels一覧、manage（groups, overviews, trigger, macros, slas, calendars, text-modules, time-accounting, knowledge-base）、system/integrations/ldap",
       "当社記事 vibeblog/2026-09-03-zammad-japanese-guide（日本語23%の実測、5,123エントリ全訳、Weblate投入）",
-      "既存ページ exbridge.jp/ai-system/zammad/ と kurage.exbridge.jp/oss/zammad/（重複回避のため）"
+      "既存ページ exbridge.jp/ai-system/zammad/ と kurage.exbridge.jp/oss/zammad/（重複回避のため）",
+      "当社の Zammad 日本語化の記録（2026-09-03）: 本家同梱の日本語は実測23%、5,123エントリを全訳して本家の翻訳基盤（Weblate）に投入",
+      "GSC 2026-08〜11: 「zammad 日本語」436表示・13クリックが17ページに散っていた（11/4 の買い手の語の分析）"
     ],
     "sections": [
+      {
+        "h2": "Zammad を日本語で使うには（当社の実測と手順）",
+        "html": "<p>Zammad 本家に同梱されている日本語は、当社が数えた時点で<strong>全体の23%</strong>でした。チケット一覧や設定画面の多くが英語のまま出ます。当社は5,123エントリを全訳して本家の翻訳基盤に入れたので、いまは最新版を入れて言語に日本語を選べば大半が日本語で出ます。古い版や、まだ翻訳が取り込まれていない版で今すぐ日本語にする手順は、次の記事にまとめています。</p><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/vibeblog/2026-09-03-zammad-japanese-guide.html?ref=ai-system-zammad\">Zammad 日本語化ガイド（全訳の経緯と、今すぐ日本語にする手順）</a></p><p>問い合わせ管理の業務として何を揃えるか（メールの取り込み・担当の割り当て・返信の型・対応時間の記録）は <a href=\"https://exbridge.jp/solution/toiawase.html?ref=ai-system-zammad\">問い合わせ管理の業務ページ</a> に、Zendesk からの置き換えの考え方は <a href=\"https://kurage.exbridge.jp/zendesk-helpdesk.php?ref=ai-system-zammad\">Zendesk の代わりをオープンソースで</a> に書いています。</p><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=Zammad%EF%BC%88%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E7%AE%A1%E7%90%86%EF%BC%89&amp;ref=ai-system-zammad-howto#form\">Zammad の導入・日本語化を相談する</a></p>"
+      },
       {
         "h2": "問い合わせ対応でZammadを使うと、1日の仕事がどう変わるか",
         "html": "<p>問い合わせがsupport@のメール、Webのフォーム、電話でばらばらに届き、誰が返事をしたかを口頭やExcelで確かめている会社を考えます。</p><ul><li><strong>受付</strong>：届いたメールやフォームの内容はチケットとして登録され、部署ごとのグループに振り分けられます。チケットはどれか1つのグループに入り、担当者はグループごとの権限の範囲で見ます。</li><li><strong>朝の確認</strong>：担当者は自分の担当や未対応の一覧を開き、上から順に返事をします。</li><li><strong>返信</strong>：よく使う返答文はテキストモジュールとして登録しておき、キーワードで呼び出します。</li><li><strong>自動の振り分け</strong>：条件に合うチケットに自動で処理をかけるトリガーで、たとえば特定の取引先からのメールを決まったグループへ回します。</li><li><strong>期限</strong>：返答期限（SLA）と営業時間のカレンダーを設定すると、期限が近いチケットが分かります。</li><li><strong>記録</strong>：チケットごとに対応にかかった時間を残す機能があり、よくある質問はナレッジベースとして公開できます。</li></ul>"
@@ -260,6 +266,22 @@
       {
         "h2": "当社の記録",
         "html": "<p>当社は2026年9月3日にv2.6.0を実際に立てて確かめました。日本語の画面は最初から入っていて、翻訳は1,364キーのうち1,246キー（91%）でした。残りは左メニューの「My Open Tasks」「Inbox」や、カンバンの「To-Do」「Doing」「Done」など、目立つ場所に英語で出ていました。</p><p>当社は残りの135キーをローカルのAIで訳し、変数の書き方が原文と1文字も違わないことをプログラムで確かめて、本家の翻訳サイト（Crowdin）への投入を進めています。手順は<a href=\"https://exbridge.jp/vibeblog/2026-09-03-vikunja-japanese-guide.html#ref=ai-system-deep-vikunja\">Vikunjaを立てて日本語で使うまでの記事</a>に、プロジェクトの設計表や移行の注意、CalDAVでの同期、バックアップのスクリプトは<a href=\"https://kappstore.exbridge.jp/app.php?id=767ea5a2f7963f2a#ref=ai-system-deep-vikunja\">Vikunja日本語導入・運用キット</a>にまとめています。</p>"
+      }
+    ]
+  },
+  "project": {
+    "sources": [
+      "OCA/project（Odoo Community Association）のリポジトリ: Odoo 向けプロジェクト管理アドオン群",
+      "GSC 2026-08〜11: このページに『プロジェクト管理 ai』208表示・43位、『epc プロジェクト管理システム』13表示・17位で表示（11/4 の買い手の語の分析）"
+    ],
+    "sections": [
+      {
+        "h2": "「project」は単体のソフトではなく、Odoo のアドオン群です",
+        "html": "<p>この一覧の「project」は、オープンソースERP「Odoo」にプロジェクト管理の機能を足すアドオン（追加モジュール）の集まりです。<strong>Odoo を使っていない会社が、これだけを入れてプロジェクト管理をすることはできません。</strong>Odoo を基幹に使っていて、案件・工数・請求までをつなげたい場合の選択肢です。</p>"
+      },
+      {
+        "h2": "単体で入るプロジェクト管理のオープンソースを探している方へ",
+        "html": "<p>Odoo を使っていないなら、単体で動くものから選びます。比較は <a href=\"https://exbridge.jp/ai-system/c/project/\">プロジェクト管理ツールのオープンソース527件</a> と <a href=\"https://exbridge.jp/ai-system/c/task/\">タスク管理ツール135件</a> にあります。当社が実際に日本語で立てて手順書にしたのは次の2つです。</p><div class=\"cat-grid\"><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=767ea5a2f7963f2a&amp;ref=ai-system-project-pick\" target=\"_blank\" rel=\"noopener\"><b>Vikunja 日本語導入・運用キット</b><span>税込5,500円。タスク・カンバン・ガントを1つで。10〜30人の案件管理に</span></a><a class=\"cat-card\" href=\"https://kappstore.exbridge.jp/app.php?id=1364b33c7d1cde58&amp;ref=ai-system-project-pick\" target=\"_blank\" rel=\"noopener\"><b>Planka 日本語導入・運用キット</b><span>税込5,500円。カンバンに絞った軽い作り。Trello の置き換えに</span></a></div><p>日本語ロケールを本体が同梱しているものでは <a href=\"https://exbridge.jp/ai-system/leantime/\">Leantime</a> があります。</p><p><strong>「AI」で探している方へ。</strong>タスクの遅れを見つける・進捗を要約する、といったAIの働きは、どのツールにも最初から入っているわけではなく、API でタスクを取り出してAIに読ませる形で足します。当社は会議の録音から決定事項とタスクを起こす <a href=\"https://kappstore.exbridge.jp/app.php?id=cd1eda3248c87920&amp;ref=ai-system-project\" target=\"_blank\" rel=\"noopener\">Kurage AI MOM（AI議事録）</a> と、上のタスク管理を組み合わせる型で導入しています。</p><p><a class=\"btn btn-main\" href=\"https://exbridge.jp/contact.php?topic=system&amp;kw=%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86&amp;ref=ai-system-project-howto#form\">プロジェクト管理の土台選びを相談する</a></p>"
       }
     ]
   }

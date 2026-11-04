@@ -556,6 +556,9 @@ type MG = { slug: string; name: string; cats: string[]; rx: string; pain: string
   products: Array<{ name: string; url: string; price: string }> }
 type MI = { slug: string; name: string; kicker: string; context: string; skip: string[] }
 const matrix = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-matrix.json'), 'utf8')) as { gyomu: MG[]; industries: MI[] }
+// 業種×業務ページに載せる画面の見本（exbridge_jp/solution/img/ に置いた PNG）。無ければ節ごと出さない（2026-11-04）
+type Shot = { file: string; alt: string; caption: string }
+const SHOTS: Record<string, Shot[]> = await fs.readFile(path.join(root, 'data', 'solution-shots.json'), 'utf8').then((s) => JSON.parse(s) as Record<string, Shot[]>).catch(() => ({}))
 const allProjects = result.docs as unknown as Project[]
 
 // ページごとの本文（2026-10-09）。テンプレートの差し替えだけでは2枚の89%が同じ行で、
@@ -630,6 +633,16 @@ function pairPage(ind: MI, g: MG): string {
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / <a href="${BASE}/${attr(ind.slug)}/">${h(ind.name)}</a> / ${h(g.name)}</nav>
+${g.products.length ? `<section><div class="panel">
+<h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
+<p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
+<div class="cat-grid">
+${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）</span></a>`).join('')}
+</div></div></section>` : ''}
+${(SHOTS[`${ind.slug}/${g.slug}`] || []).length ? `<section><div class="panel">
+<h2>${h(g.name)}の画面の見本</h2>
+<div class="grid">${(SHOTS[`${ind.slug}/${g.slug}`] || []).map((s) => `<figure class="card" style="margin:0"><img src="${SITE}/solution/img/${attr(s.file)}" alt="${attr(s.alt)}" loading="lazy" style="width:100%;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px"><figcaption style="font-size:.92em;color:#444;margin-top:8px">${h(s.caption)}</figcaption></figure>`).join('')}</div>
+</div></section>` : ''}
 ${c ? `<section><div class="panel"><h2>${h(ind.name)}の${h(g.name)}で押さえること</h2>
 <div class="grid">${c.points.map((x) => `<div class="card"><h3>${h(x.h)}</h3><p>${h(x.p)}</p></div>`).join('')}</div>
 </div></section>
@@ -639,12 +652,6 @@ ${c ? `<section><div class="panel"><h2>${h(ind.name)}の${h(g.name)}で押さえ
 <section><div class="panel"><h2>どこを何で持つか</h2>
 ${c.split.map((x) => `<div class="card" style="margin:0 0 10px"><h3>${h(x.h)}</h3><p>${h(x.p)}</p></div>`).join('')}
 </div></section>` : ''}
-${g.products.length ? `<section><div class="panel">
-<h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
-<p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
-<div class="cat-grid">
-${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）</span></a>`).join('')}
-</div></div></section>` : ''}
 ${oss.length ? `<section><div class="panel">
 <h2>${h(g.name)}に使えるオープンソース</h2>
 <p>カタログ${allProjects.length.toLocaleString('en-US')}件から、${h(g.name)}に当てはまるものを実測値（規模・日本語対応・デモの有無）で並べています。ライセンスの範囲で無料で使えます。</p>
