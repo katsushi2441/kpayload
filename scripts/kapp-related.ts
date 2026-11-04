@@ -27,6 +27,8 @@ const P: Record<string, Prod> = {
     lead: '顧客のメールアドレスごとに、商談をAIに相談し、記録とかんばんで案件を管理。CRMにはメールでつなぐ。' },
   kcrmagent: { id: 'f6fab083d826739f', name: 'Kurage CRM Agent', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kcrmagent/',
     lead: '日報を書くだけで顧客・商談の記録が残る、入力ゼロのCRM。' },
+  kcallcrm: { id: '0931d2dfecffc022', name: 'Kurage テレアポCRM・SFA', price: '税込220,000円', demo: 'https://proto.exbridge.jp/kcallcrm/',
+    lead: '架電リストを読み込み、続けて架電。アポが取れたら顧客になり、商談をかんばんで追う。CSVで他のCRMと行き来できる。' },
   klcrm: { id: '0e723e981c922df6', name: 'Kurage LINE CRM', price: '税込55,000円', demo: 'https://proto.exbridge.jp/klcrm/',
     lead: 'LINE公式アカウントの相談を、顧客ごとに記録・対応するCRM。' },
   kaima: { id: '4679d4cf90699580', name: 'Kurage AI名刺解析', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kaima/',
@@ -84,6 +86,7 @@ const RULES: Array<[RegExp, string]> = [
   [/\b(zoning|cadastr\w*|land ?use|urban ?planning)\b|都市計画|用途地域/i, 'ktoshikeikaku'],
   [/\b(disaster|hazard|flood\w*|earthquake|tsunami|evacuat\w*|emergency)\b|防災|災害|避難|浸水/i, 'bousai'],
   [/\b(chatbot|chat ?bot|rag|faq|helpdesk|help ?desk|knowledge ?base|livechat|live ?chat|dify|anything ?llm|lobe ?(chat|hub)|lobehub|khoj|open ?webui|librechat|langflow|flowise|ragflow|fastgpt|maxkb|botpress|rasa|typebot\w*|onyx|danswer|quivr|private ?gpt|jan|nextchat|chatbox|cherry ?studio|kotaemon|ai ?assistant|llm ?chat)\b|チャットボット/i, 'klchatbot'],
+  [/テレアポ|架電|電話営業|アウトバウンド|\b(cold ?call(ing)?|telemarketing|call ?center|dialer|outbound)\b/i, 'kcallcrm'],
   [/\b(sfa|deals?|pipeline|opportunit(y|ies)|odoo|erpnext|dolibarr|idurar|flectra|vtiger|yetiforce)\b|商談|案件管理|営業管理/i, 'kdealdesk'],
   [/\b(crm|sales ?(crm|force|management)|leads? ?management)\b|顧客管理|営業/i, 'kcrmagent'],
   [/\b(business ?cards?|vcard)\b|名刺/i, 'kaima'],
@@ -115,7 +118,7 @@ const CATS: Record<string, string[]> = {
   inventory: ['kweborder'], erp: ['kweborder', 'kbilling'], quote: ['kweborder', 'kbilling'], production: ['kweborder'],
   accounting: ['kbilling', 'kinvoice', 'kweborder'], invoice: ['kbilling', 'kinvoice'], expense: ['kbilling', 'kocrwork'],
   budget: ['kbilling'], payment: ['kpaylink', 'kbilling'], subscription: ['kpaylink', 'kbilling'], finance: ['kbilling'],
-  crm: ['kdealdesk', 'kcrmagent', 'klcrm'], sfa: ['kdealdesk', 'kcrmagent', 'kaima'], marketing: ['kseo', 'ktrackgeo', 'klcrm'], mailmarketing: ['klcrm', 'kseo'],
+  crm: ['kcallcrm', 'kdealdesk', 'kcrmagent', 'klcrm'], sfa: ['kcallcrm', 'kdealdesk', 'kcrmagent', 'kaima'], marketing: ['kseo', 'ktrackgeo', 'klcrm'], mailmarketing: ['klcrm', 'kseo'],
   booking: ['kreserve', 'kcaldav'], calendar: ['kcaldav', 'kreserve'], facility: ['kreserve'], ticket: ['kreserve'],
   hr: ['kkintai', 'khrpost'], attendance: ['kkintai'], timetrack: ['kkintai'], payroll: ['kkintai'], recruit: ['khrpost'], evaluation: ['khrpost'],
   groupware: ['kvgwc'], lowcode: ['kvgwc', 'kdbagent'], workflow: ['kvgwc'], team: ['kvgwc'], portal: ['kvgwc'], spreadsheet: ['kvgwc'],
@@ -142,7 +145,7 @@ export function relatedProducts(o: { slug: string; name: string; category?: stri
     const p = P[k]
     if (!p || excludeIds.includes(p.id) || out.some((x) => x.id === p.id)) continue
     out.push(p)
-    if (out.length >= 3) break
+    if (out.length >= 4) break
   }
   return out
 }
