@@ -626,7 +626,7 @@ function pairPage(ind: MI, g: MG): string {
 <p class="kicker">${h(ind.name)}｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}の${h(g.name)}を、<br>内製化とオープンソースで。</h1>
 <p class="lead">${c ? h(c.lead) : `${h(g.pain)}——${h(ind.name)}の現場からよく伺う悩みです。${h(ind.context)}`}</p>
-<p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(`${ind.name}の${g.name}の相談`)}">無料で相談する（Zoom可）</a></p>
+<p><a class="btn btn-main" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(`${ind.name}の${g.name}`)}&amp;ref=solution-pair-cta-${attr(ind.slug)}-${attr(g.slug)}#form">${h(ind.name)}の${h(g.name)}のシステム選びを相談する（Zoom可）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / <a href="${BASE}/${attr(ind.slug)}/">${h(ind.name)}</a> / ${h(g.name)}</nav>

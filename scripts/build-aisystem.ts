@@ -137,7 +137,8 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
 <p class="kicker">AIでできること / ${h(cap.label)}</p>
 <h1>${h(p.name)}とは？<br>${h(cap.label)}に使えるオープンソース</h1>
 <p class="lead">${h(p.name)}は、${h(cap.label)}に使えるオープンソースです。${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。<strong>ソフト自体は無料</strong>で、ゼロから作るより早く、月額のユーザー課金もありません。</p>
-${DEMOS[p.slug] ? `<p><a class="btn btn-main" href="${demoUrl(p.slug, `ai-system-hero-${p.slug}`)}" target="_blank" rel="noopener">${h(p.name)}の日本語デモを触る</a></p>` : ''}
+<p>${DEMOS[p.slug] ? `<a class="btn btn-main" href="${demoUrl(p.slug, `ai-system-hero-${p.slug}`)}" target="_blank" rel="noopener">${h(p.name)}の日本語デモを触る</a> ` : ''}<a class="btn${DEMOS[p.slug] ? '' : ' btn-main'}" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(cap.label + '（' + p.name + '）')}&amp;ref=ai-system-cta-${attr(p.slug)}#form">${h(cap.label)}のシステム選びを相談する</a></p>
+<p class="note" style="margin-top:8px">${h(p.name)}は、${h(cap.label)}に使えるオープンソースの1つです。比較して選ぶなら → <a href="${BASE}/c/${attr(cap.key)}/#ref=ai-system-back-${attr(p.slug)}">${h(cap.label)}のオープンソースを実測で比較（ライセンス・日本語対応・更新）</a></p>
 </div></section>
 ${relatedNews('oss', p.slug)}
 <main class="wrap">
@@ -418,6 +419,7 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 <p class="kicker">AIでできること / ${h(groupLabel)}</p>
 <h1>${h(noun)}に使える<br>オープンソース（OSS）${total}件</h1>
 <p class="lead">${terms.length ? `${h(noun)}をオープンソース（OSS）で用意したい方向けの一覧です。` : ''}${h(cap.question)}——その課題に使えるオープンソースを${total}件、ライセンス・日本語対応・更新状況を実測して並べました。<strong>ソフト自体はどれも無料</strong>で、自社サーバーに置いて使えます。ユーザー数に応じた月額課金はありません。名古屋市内なら、計15時間・税別15万円で導入まで試せます。</p>
+<p><a class="btn btn-main" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(cap.label)}&amp;ref=ai-system-c-cta-${attr(cap.key)}#form">${h(cap.label)}のシステム選びを相談する</a> <a class="btn" href="#list">${total}件の比較表を見る</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / ${h(cap.label)}</nav>
