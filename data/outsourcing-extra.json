@@ -500,6 +500,9 @@
     "report",
     "analytics",
     "bi"
+   ],
+   "own": [
+    "12ae317340f91d51"
    ]
   },
   "shijou-chousa": {
@@ -605,6 +608,7 @@
   "cd1eda3248c87920": "Whisperで文字起こし・AI議事録を自社サーバーで（Kurage AI MOM）",
   "f0f56c6e4da881be": "勤怠管理システムを安く導入する（顔打刻つき Kurage Kintai）",
   "f6fab083d826739f": "エクセル日報を自動化する入力ゼロCRM（Kurage CRM Agent）",
-  "63000166082c7a26": "案件管理・商談管理をオンプレミスで（Kurage Deal Desk）"
+  "63000166082c7a26": "案件管理・商談管理をオンプレミスで（Kurage Deal Desk）",
+  "12ae317340f91d51": "Kurage 広告AI分析（Google広告の分析と日報を毎朝自動で・承認制の変更）"
  }
 }
