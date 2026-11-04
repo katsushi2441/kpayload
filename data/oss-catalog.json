@@ -240,7 +240,8 @@
    }
   ],
   "sourceLpName": "電子契約に月額を払わない方法（DocuSeal）",
-  "funnel": "oss"
+  "funnel": "oss",
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=f543c9cbd613871b"
  },
  {
   "name": "Payload CMS",

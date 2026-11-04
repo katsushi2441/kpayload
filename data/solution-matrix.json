@@ -190,7 +190,13 @@
       ],
       "rx": "電子署名|電子契約|e-?sign",
       "pain": "契約書の郵送・押印の往復で、着手が1週間遅れる",
-      "products": []
+      "products": [
+        {
+          "name": "DocuSeal 日本語導入キット（電子契約・VPS編）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=f543c9cbd613871b",
+          "price": "5,500円"
+        }
+      ]
     },
     {
       "slug": "wiki",

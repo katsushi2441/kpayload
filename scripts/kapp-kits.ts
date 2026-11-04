@@ -22,6 +22,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   billionmail: { id: '495b5aca4ee119db', label: 'BillionMail 日本語導入キットを見る' },
   'decap-cms': { id: 'a3b60acb11b65f47', label: 'Decap CMS 日本語導入キットを見る' },
   'krayin-crm': { id: '11e7c1d9a83d1ca3', label: 'Krayin CRM 日本語導入キットを見る', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-02-krayin-japanese-merged.html' },
+  docuseal: { id: 'f543c9cbd613871b', label: 'DocuSeal 日本語導入キット（電子契約・VPS編）を見る', price: '税込5,500円（オンプレミス）' },
   libredesk: { id: '104c05db7779a709', label: 'LibreDesk 日本語導入キットを見る' },
   'kouchou-ai': { id: '53493d74a09cfd8c', label: '広聴AI 完全ローカル導入キットを見る' },
   codealmanac: { id: 'b81d730eb535b454', label: 'CodeAlmanac 日本語導入・運用キットを見る', price: '税込5,500円（オンプレミス）', article: 'https://katsushi2441.github.io/vwork/articles/2026-09-03-codealmanac-linux-guide.html' },
