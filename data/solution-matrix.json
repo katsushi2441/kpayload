@@ -10,6 +10,14 @@
       "pain": "タイムカードと紙のシフト表で、締め日の集計に時間を取られている",
       "products": [
         {
+          "name": "Kurage 勤怠 保育園版（配置基準チェック・シフト予測）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=b7e010bb0869cbde",
+          "price": "220,000円",
+          "only": [
+            "hoiku"
+          ]
+        },
+        {
           "name": "Kurage 顔打刻勤怠 (kkintai)",
           "url": "https://kappstore.exbridge.jp/app.php?id=f0f56c6e4da881be",
           "price": "55,000円"
@@ -62,6 +70,11 @@
       "rx": "問い合わせ|ヘルプデスク|helpdesk|チケット|メール共有",
       "pain": "問い合わせメールを個人の受信箱で受けていて、対応漏れ・二重返信が起きる",
       "products": [
+        {
+          "name": "Zammad 日本語導入キット（問い合わせ管理・VPS編）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=df2e650ed0c59bae",
+          "price": "5,500円"
+        },
         {
           "name": "FreeScout 日本語導入キット",
           "url": "https://kappstore.exbridge.jp/app.php?id=6d0e2c491e4170da",
@@ -163,6 +176,11 @@
           "name": "オンプレミスのグループウェア (kvgwc)",
           "url": "https://kappstore.exbridge.jp/app.php?id=c1864cba4ab726b0",
           "price": "55,000円"
+        },
+        {
+          "name": "Budibase 日本語導入・運用キット（申請・承認アプリ）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=d5227ad09ccf969e",
+          "price": "5,500円"
         }
       ]
     },
@@ -175,6 +193,11 @@
       "rx": "",
       "pain": "紙の書類とスキャンPDFが混在し、探す時間が積み上がっている",
       "products": [
+        {
+          "name": "OCRmyPDF 日本語導入キット（紙の書類を検索できるPDFに）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=38cdb7bf9e3504b9",
+          "price": "5,500円"
+        },
         {
           "name": "Simplenote型メモ (Kurage Memo)",
           "url": "https://kappstore.exbridge.jp/app.php?id=2186dc017968081c",
@@ -227,6 +250,11 @@
           "name": "案件管理・商談管理 (Kurage Deal Desk)",
           "url": "https://kappstore.exbridge.jp/app.php?id=63000166082c7a26",
           "price": "55,000円"
+        },
+        {
+          "name": "Leantime 日本語導入・運用キット（案件管理）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=b3654ce58ec539b3",
+          "price": "5,500円"
         }
       ]
     },
@@ -238,7 +266,13 @@
       ],
       "rx": "在庫|発注|倉庫|入出庫",
       "pain": "在庫はExcel台帳で、欠品と過剰在庫が同時に起きる",
-      "products": []
+      "products": [
+        {
+          "name": "NocoDB 日本語導入キット（備品・在庫の台帳の型つき）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=105556250f6cfa8d",
+          "price": "無料"
+        }
+      ]
     },
     {
       "slug": "hikitsugi",

@@ -433,7 +433,7 @@ ${p.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミスの商品（Kurage App Store）</h2>
 <p>${p.productsNote ? h(p.productsNote) : '当社が販売しているオンプレミスの商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。'}</p>
 <div class="cat-grid">
-${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）・Kurage App Store</span></a>`).join('')}
+${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}・Kurage App Store</span></a>`).join('')}
 </div>
 ${p.brain.length ? `<p style="margin-top:12px">構築手順を自分で読みたい方へ: ${p.brain.map((b) => `<a href="${attr(b.url)}?ref=solution-${attr(p.slug)}" target="_blank" rel="noopener">${h(b.label)}</a>`).join('　')}</p>` : ''}
 ${p.lps.length ? `<p class="note">${p.lps.map((l) => `<a href="${attr(l.url)}?ref=solution-${attr(p.slug)}">${h(l.label)}</a>`).join('　')}</p>` : ''}
@@ -553,7 +553,7 @@ ${ai.length ? `<section><div class="panel">
 // 業種36×業務15(除外つき)=476ページを、業務ごとのOSS実測表(カタログ2,800件から抽出)と
 // 自社製品(kappstore)を差し込んで生成する。文章は業種context×業務painの合成+固有FAQ。
 type MG = { slug: string; name: string; cats: string[]; rx: string; pain: string
-  products: Array<{ name: string; url: string; price: string }> }
+  products: Array<{ name: string; url: string; price: string; only?: string[] }> }
 type MI = { slug: string; name: string; kicker: string; context: string; skip: string[] }
 const matrix = JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-matrix.json'), 'utf8')) as { gyomu: MG[]; industries: MI[] }
 // 業種×業務ページに載せる画面の見本（exbridge_jp/solution/img/ に置いた PNG）。無ければ節ごと出さない（2026-11-04）
@@ -605,7 +605,9 @@ function pickOss(g: MG): Project[] {
 }
 const ossByGyomu = new Map(matrix.gyomu.map((g) => [g.slug, pickOss(g)]))
 
-function pairPage(ind: MI, g: MG): string {
+function pairPage(ind: MI, g0: MG): string {
+  // 業種を限った製品（only）はその業種のページにだけ出す（保育園版の勤怠 2026-11-05）
+  const g: MG = { ...g0, products: g0.products.filter((pr) => !pr.only || pr.only.includes(ind.slug)) }
   const url = `${BASE}/${ind.slug}/${g.slug}.html`
   const oss = ossByGyomu.get(g.slug) || []
   const c = pairContent.get(`${ind.slug}/${g.slug}`)
@@ -637,7 +639,7 @@ ${g.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
 <p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
 <div class="cat-grid">
-${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}（税込）</span></a>`).join('')}
+${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}</span></a>`).join('')}
 </div></div></section>` : ''}
 ${(SHOTS[`${ind.slug}/${g.slug}`] || []).length ? `<section><div class="panel">
 <h2>${h(g.name)}の画面の見本</h2>

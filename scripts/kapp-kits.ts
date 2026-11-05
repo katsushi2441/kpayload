@@ -17,6 +17,12 @@ export type KappKit = {
 }
 
 export const KAPP_KITS: Record<string, KappKit> = {
+  listmonk: { id: '1cc9b2d4ba1a853f', label: 'listmonk 日本語導入キット（メール配信・特定電子メール法の型つき）を見る', price: '税込5,500円（オンプレミス）' },
+  budibase: { id: 'd5227ad09ccf969e', label: 'Budibase 日本語導入・運用キット（申請・承認アプリ）を見る', price: '税込5,500円（オンプレミス）' },
+  baserow: { id: 'db3bf74ddbe29835', label: 'Baserow 日本語導入・運用キット（Excel台帳をWebデータベースに）を見る', price: '税込5,500円（オンプレミス）' },
+  nocodb: { id: '105556250f6cfa8d', label: 'NocoDB 日本語導入キット（Excel台帳をWebデータベースに）を見る' },
+  leantime: { id: 'b3654ce58ec539b3', label: 'Leantime 日本語導入・運用キット（案件管理）を見る', price: '税込5,500円（オンプレミス）' },
+  zammad: { id: 'df2e650ed0c59bae', label: 'Zammad 日本語導入キット（問い合わせ管理・VPS編）を見る', price: '税込5,500円（オンプレミス）', article: 'https://exbridge.jp/vibeblog/2026-09-03-zammad-japanese-guide.html' },
   espocrm: { id: '9d27eb0ebe2fc7e0', label: 'EspoCRM 日本語導入キットを見る' },
   freescout: { id: '6d0e2c491e4170da', label: 'FreeScout 日本語導入キットを見る' },
   billionmail: { id: '495b5aca4ee119db', label: 'BillionMail 日本語導入キットを見る' },
@@ -45,7 +51,7 @@ export const KAPP_KITS: Record<string, KappKit> = {
   kkintai: { id: 'f0f56c6e4da881be', label: '顔打刻つき勤怠管理 Kurage Kintai（オンプレミス）を見る', price: '税込55,000円（オンプレミス）', product: true },
   // 2026-10-03 Kurage OCR Work が組み込んでいるOCRエンジン（MinerU は同梱しないので入れない）。
   // 「ocrmypdf 日本語」で /oss/ocrmypdf/ に検索流入があるのに、店への出口が無かった
-  ocrmypdf: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
+  ocrmypdf: { id: '38cdb7bf9e3504b9', label: 'OCRmyPDF 日本語導入キット（紙の書類を検索できるPDFに）を見る', price: '税込5,500円（オンプレミス）' },
   tesseract: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
   paddleocr: { id: 'ef52a62e1c6bbe7a', label: 'AI-OCRで注文書・手書きFAXを受注登録（Kurage OCR Work）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://note.com/tokoname/n/nc808ea3c1de6' },
   whisper: { id: 'cd1eda3248c87920', label: 'Whisperで動くオンプレミスのAI議事録（Kurage AI MOM）を見る', price: '税込55,000円（オンプレミス）', product: true, article: 'https://exbridge.jp/vibeblog/2026-09-04-whisper-cpp-japanese-transcription.html' },

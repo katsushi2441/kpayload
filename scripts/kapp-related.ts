@@ -27,6 +27,10 @@ const P: Record<string, Prod> = {
     lead: '顧客のメールアドレスごとに、商談をAIに相談し、記録とかんばんで案件を管理。CRMにはメールでつなぐ。' },
   kcrmagent: { id: 'f6fab083d826739f', name: 'Kurage CRM Agent', price: '税込55,000円', demo: 'https://proto.exbridge.jp/kcrmagent/',
     lead: '日報を書くだけで顧客・商談の記録が残る、入力ゼロのCRM。' },
+  kfileshare: { id: '4003999985c45854', name: 'Kurage ファイル共有', price: '税込110,000円', demo: 'https://proto.exbridge.jp/kfileshare/',
+    lead: '取引先ごとのフォルダと期限つきリンクで、見積・図面・大容量のファイルを自社サーバーで受け渡し。レンタルサーバーで動きます。' },
+  kkintaihoiku: { id: 'b7e010bb0869cbde', name: 'Kurage 勤怠 保育園版', price: '税込220,000円', demo: 'https://proto.exbridge.jp/kkintai-hoiku/',
+    lead: '顔打刻の勤怠に、保育士の配置基準を打刻の実績で15分ごとに確かめる機能。シフトの段階で不足を先に知らせます。' },
   kcallcrm: { id: '0931d2dfecffc022', name: 'Kurage テレアポCRM・SFA', price: '税込220,000円', demo: 'https://proto.exbridge.jp/kcallcrm/',
     lead: '架電リストを読み込み、続けて架電。アポが取れたら顧客になり、商談をかんばんで追う。CSVで他のCRMと行き来できる。' },
   klcrm: { id: '0e723e981c922df6', name: 'Kurage LINE CRM', price: '税込55,000円', demo: 'https://proto.exbridge.jp/klcrm/',
@@ -112,6 +116,7 @@ const RULES: Array<[RegExp, string]> = [
 
 /** 分類（/oss/ の category と /ai-system/ の cap の両方）→ 製品 */
 const CATS: Record<string, string[]> = {
+  storage: ['kfileshare'], filesharing: ['kfileshare'], fileshare: ['kfileshare'],
   commerce: ['kweborder', 'vibecart', 'kpaylink'], ec: ['vibecart', 'kweborder', 'kpaylink'], pos: ['vibecart', 'kweborder'],
   marketplace: ['vibecart', 'kweborder'],
   order: ['kweborder', 'kocrwork'], purchase: ['kweborder'], warehouse: ['kweborder'], delivery: ['kweborder'],
@@ -120,7 +125,7 @@ const CATS: Record<string, string[]> = {
   budget: ['kbilling'], payment: ['kpaylink', 'kbilling'], subscription: ['kpaylink', 'kbilling'], finance: ['kbilling'],
   crm: ['kcallcrm', 'kdealdesk', 'kcrmagent', 'klcrm'], sfa: ['kcallcrm', 'kdealdesk', 'kcrmagent', 'kaima'], marketing: ['kseo', 'ktrackgeo', 'klcrm'], mailmarketing: ['klcrm', 'kseo'],
   booking: ['kreserve', 'kcaldav'], calendar: ['kcaldav', 'kreserve'], facility: ['kreserve'], ticket: ['kreserve'],
-  hr: ['kkintai', 'khrpost'], attendance: ['kkintai'], timetrack: ['kkintai'], payroll: ['kkintai'], recruit: ['khrpost'], evaluation: ['khrpost'],
+  hr: ['kkintai', 'khrpost'], attendance: ['kkintai', 'kkintaihoiku'], timetrack: ['kkintai'], payroll: ['kkintai'], recruit: ['khrpost'], evaluation: ['khrpost'],
   groupware: ['kvgwc'], lowcode: ['kvgwc', 'kdbagent'], workflow: ['kvgwc'], team: ['kvgwc'], portal: ['kvgwc'], spreadsheet: ['kvgwc'],
   form: ['kfillout', 'kvgwc'], bpm: ['kvgwc'], office: ['kvgwc'],
   knowledge: ['klchatbot', 'kmemo'], note: ['kmemo'], notes: ['kmemo'], wiki: ['klchatbot', 'kmemo'], manual: ['klchatbot'], techdocs: ['klchatbot'], bookmark: ['kmemo'],
