@@ -37,7 +37,7 @@ const ver = JSON.parse(await fs.readFile(path.join(KM, 'verified.json'), 'utf8')
 const themes = src.themes
 const quotes = src.quotes.filter((q) => ver[q.id]?.ok)   // 出典と照合できたものだけ
 const tname = Object.fromEntries(themes.map((t) => [t.slug, t.name]))
-const KIND: Record<string, string> = { aozora: '青空文庫で照合', wikiquote: 'Wikiquote で照合', press: '報道で照合' }
+const KIND: Record<string, string> = { aozora: '青空文庫で照合', wikiquote: 'Wikiquote で照合', press: '報道で照合', kokkai: '国会会議録で照合' }
 
 const FOOT = `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">Kurage 名言トラッカー</a>　<a href="${GIIN}/tracker/#ref=${REF}-foot">Kurage 国会トラッカー</a>　<a href="${SITE}/ai-sns-komon.html#ref=${REF}-foot">AI-SNS顧問</a>　<a href="${SITE}/contact.php">お問い合わせ</a>`
 type OgSpec = { name: string; kind: string; text: string; speaker: string; work: string; theme?: string }
@@ -112,8 +112,12 @@ for (const q of quotes) {
   const v = ver[q.id]
   const url = qUrl(q.id)
   const title = `「${cut(q.text, 26)}」${q.speaker}の名言｜Kurage 名言トラッカー`
-  const desc = `${by(q)}の言葉「${cut(q.text, 60)}」。出典（${q.source_label}）で一字一句確かめた名言と、その意味・背景。${q.themes.map((t) => tname[t]).join('・')}に、応援のコメントとして贈れます。`
-  const same = quotes.filter((x) => x.id !== q.id && x.themes.some((t) => q.themes.includes(t))).slice(0, 6)
+  const desc = `${by(q)}の言葉「${cut(q.text, 60)}」。${q.kind === 'wikiquote' ? `原文を出典（${q.source_label}）で確かめた名言` : `出典（${q.source_label}）で一字一句確かめた名言`}と、その意味・背景。${q.themes.map((t) => tname[t]).join('・')}に、応援のコメントとして贈れます。`
+  // 同じ場面の言葉。いつも先頭の6件にならないよう、重なる場面の数→名言ごとに決まった順で選ぶ（2026-11-05 267件に増やしたとき）
+  const mix = (a: string) => crypto.createHash('sha1').update(q.id + a).digest('hex')
+  const same = quotes.filter((x) => x.id !== q.id && x.themes.some((t) => q.themes.includes(t)))
+    .map((x) => ({ x, n: x.themes.filter((t) => q.themes.includes(t)).length, k: mix(x.id) }))
+    .sort((a, b) => b.n - a.n || (a.k < b.k ? -1 : 1)).slice(0, 6).map((o) => o.x)
   const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">Kurage 名言トラッカー｜${q.themes.map((t) => h(tname[t])).join('・')}</p>
 <p class="mg-quote">${h(q.text)}</p><p class="mg-by"><b>${h(q.speaker)}</b>（${h(q.speaker_note)}）　${h(q.work)}${q.year ? `・${h(q.year)}` : ''}</p></div></section>
 <div class="wrap"><p class="crumb" style="font-size:13px;color:var(--muted);padding:14px 0 0"><a href="${BASE}/">Kurage 名言トラッカー</a> › ${q.themes.map((t) => `<a href="${BASE}/t/${t}.html">${h(tname[t])}</a>`).join('・')}</p>
@@ -153,11 +157,11 @@ for (const t of themes) {
 {
   const url = `${BASE}/`
   const nk = quotes.filter((q) => ver[q.id].kokkai?.count).length
-  const desc = `頑張っている人、つらい思いをしている人に、名言で応援のコメントを贈るための名言集です。宮沢賢治・夏目漱石・正岡子規から、エジソン・ニーチェ、大谷翔平・イチローまで、出典の本文と一字一句確かめた言葉${quotes.length}件を、場面ごとに並べました。国会で引かれた発言も載せています。`
+  const desc = `頑張っている人、つらい思いをしている人に、名言で応援のコメントを贈るための名言集です。宮沢賢治・夏目漱石・福沢諭吉から、リンカーン・ヘレン・ケラー・マンデラ、大谷翔平・イチロー・羽生結弦、首相の施政方針演説まで、出典と照らし合わせて確かめた言葉${quotes.length}件を、${themes.length}の場面ごとに並べました。国会で引かれた回数も載せています。`
   const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">頑張っている人・つらい人に、言葉を贈る</p><h1>Kurage 名言トラッカー</h1><p class="lead">${h(desc)}</p></div></section>
 <div class="wrap"><section class="mg-sec"><h2>場面から選ぶ</h2><div class="mg-themes">${themes.map((t) => `<a href="${BASE}/t/${t.slug}.html"><b>${h(t.name)}</b><span>${quotes.filter((q) => q.themes.includes(t.slug)).length}件</span></a>`).join('')}</div></section>
 <section class="mg-sec"><h2>使い方</h2><div class="mg-box"><p>X で、頑張っている人やつらい思いをしている人にコメントするとき、名言のページの「言葉とURLをコピー」を押して貼ってください。返信に、名言のカード画像が出ます。</p>
-<p>載せているのは、出典の本文と照らし合わせて確かめた言葉だけです。青空文庫の作品は本文と一字一句、外国の言葉は英語版 Wikiquote で「出典のある言葉」の節にあるか、現代の人の言葉は報道の記事本文で確かめています。名言のサイトで有名でも、本人の記録が見つからない言葉（例：エジソンの「失敗したのではない、うまくいかない方法を1万通り見つけたのだ」）は載せていません。</p></div></section>
+<p>載せているのは、出典の本文と照らし合わせて確かめた言葉だけです。青空文庫の作品は本文と一字一句、外国の言葉は英語版 Wikiquote で「出典のある言葉」の節にあるか、現代の人の言葉は報道の記事本文で、国会の言葉は国会会議録の本文で確かめています。名言のサイトで有名でも、本人の記録が見つからない言葉（例：エジソンの「失敗したのではない、うまくいかない方法を1万通り見つけたのだ」）は載せていません。</p></div></section>
 <section class="mg-sec"><h2>すべての言葉 <small>${quotes.length}件・国会で引かれた言葉 ${nk}件</small></h2><div class="mg-list">${quotes.map((q) => card(q, 'index')).join('')}</div></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Kurage 名言トラッカー', url, description: desc, dateModified: TODAY }]
   const first = quotes[0]
