@@ -234,7 +234,7 @@ ${rel.length ? `<section>
   <p>OSSは「入れる」より「日本語で運用に乗せる」ほうが手間です。記事のとおりに進めて詰まったら、そこから先は任せてください。</p>
   <div class="ctarow">
     <a class="btn" href="${KURAGE}/vibe-oss.html?ref=exbridge-zenn">OSS導入・カスタマイズを頼む（税込110,000円〜）</a>
-    <a class="btn" href="${KURAGE}/vibe-prototype.html?ref=exbridge-zenn">動くプロトタイプを1営業日で（税込110,000円〜）</a>
+    <a class="btn" href="${KURAGE}/vibe-prototype.html?ref=exbridge-zenn">動くプロトタイプを最短1営業日で（税別300,000円）</a>
     <a class="btn sub" href="https://kappstore.exbridge.jp/?ref=exbridge-zenn">オンプレミスの業務システムを見る</a>
     <a class="btn sub" href="${KURAGE}/chat.php?ref=exbridge-zenn">AIに相談する（無料）</a>
     <a class="btn sub" href="${SITE}/contact.php?ref=exbridge-zenn">人に相談する（無料・Zoom可）</a>
