@@ -450,6 +450,7 @@ const ctaBlock = `
     <a class="btn sub" href="https://kappstore.exbridge.jp/?ref=exbridge-vibeblog">オンプレミスの業務システムを見る</a>
     <a class="btn sub" href="${SITE}/contact.php?ref=exbridge-vibeblog">人に相談する（無料・Zoom可）</a>
   </div>
+  <p class="note" style="margin-top:10px">名古屋で頼むなら：<a href="${SITE}/system-kaihatsu-nagoya.html#ref=exbridge-vibeblog-cta">システム開発 名古屋（頼み方と料金）</a>　<a href="${SITE}/homepage-seisaku-nagoya.html#ref=exbridge-vibeblog-cta">ホームページ制作 名古屋</a></p>
 </section>
 <section class="cta" style="margin-top:12px;background:#fff">
   <h2>開発会社・IT販売の方へ</h2>
