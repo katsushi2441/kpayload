@@ -410,7 +410,7 @@ const ctaBlock = `
 </section>
 <section class="cta" style="margin-top:12px;background:#fff">
   <h2>開発会社・IT販売の方へ</h2>
-  <p>この記事に出てくるシステムは、御社の案件で売ったり、御社の製品に組み込んだりできます。ソースコードは MIT ライセンスで、御社のブランドでの販売もできます。販売手数料は、バイブプロトタイプ制作・バイブOSSで1件9万円（税別）、App Store の製品は本体価格の10%です。登録無料・ノルマなし。</p>
+  <p>この記事に出てくるシステムは、御社の案件で売ったり、御社の製品に組み込んだりできます。ソースコードは MIT ライセンスで、御社のブランドでの販売もできます。販売手数料は、バイブプロトタイプ制作で1件9万円、バイブOSSで1件3万円（いずれも税別）、App Store の製品は本体価格の10%です。登録無料・ノルマなし。</p>
   <div class="ctarow">
     <a class="btn sub" href="${KURAGE}/reseller.html?ref=vibeblog-reseller">販売代理店の条件を見る</a>
   </div>
