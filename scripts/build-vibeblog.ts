@@ -293,6 +293,49 @@ const LPS: Lp[] = [
     .map((x: any) => ({ url: `${SITE}/outsourcing/${x.slug}.html`, label: '外注している業務を社内で', name: x.name,
       note: (x.auto || `${x.name}を外注せず、社内の仕組みで回す方法`).slice(0, 66), words: lpWords(x.name), strict: true })),
 ]
+// 業種×業務のページ（/solution/<業種>/<業務>.html・527本）へのリンク（2026-11-06）。
+// Googlebot は11/1〜6に exbridge.jp を1,204回読み、ブログ401回に対して /solution/ は5回だけで、業種×業務のページの多くが
+// 「検出 - インデックス未登録」のままだった。よく読まれるブログの各記事から3本ずつ割り当て、527本すべてにブログからの入口を作る。
+// 話題が合う組み合わせ（業種・業務の名前が題名か本文に出る）を優先し、残りはリンクの少ないページから順に埋める。
+type Pair = { url: string; ind: string; g: string; indName: string; gName: string; pain: string }
+const MATRIX = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'solution-matrix.json'), 'utf8')) as { gyomu: { slug: string; name: string; pain: string }[]; industries: { slug: string; name: string }[] }
+const PAIRS: Pair[] = MATRIX.industries.flatMap((i) => MATRIX.gyomu
+  .filter((g) => existsSync(path.join(process.cwd(), 'dist', 'solution', i.slug, `${g.slug}.html`)))
+  .map((g) => ({ url: `${SITE}/solution/${i.slug}/${g.slug}.html`, ind: i.slug, g: g.slug, indName: i.name, gName: g.name, pain: g.pain || '' })))
+const IND_W = new Map(MATRIX.industries.map((i) => [i.slug, lpWords(i.name)]))
+const G_W = new Map(MATRIX.gyomu.map((g) => [g.slug, lpWords(g.name)]))
+const PAIR_PICK = new Map<string, Pair[]>()
+{
+  const used = new Map<string, number>(PAIRS.map((x) => [x.url, 0]))
+  const need: Post[] = []
+  for (const p of posts) {
+    const t = nfk(p.title + ' ' + (p.headKeyword || '') + ' ' + p.html.replace(/<[^>]+>/g, ' '))
+    const hitI = MATRIX.industries.filter((i) => (IND_W.get(i.slug) || []).some((w) => t.includes(w))).map((i) => i.slug)
+    const hitG = MATRIX.gyomu.filter((g) => (G_W.get(g.slug) || []).some((w) => t.includes(w))).map((g) => g.slug)
+    const cand = PAIRS.filter((x) => (hitI.includes(x.ind) && hitG.includes(x.g)))
+      .concat(PAIRS.filter((x) => hitG.includes(x.g) && !hitI.includes(x.ind)), PAIRS.filter((x) => hitI.includes(x.ind) && !hitG.includes(x.g)))
+    const pick: Pair[] = []
+    for (const x of cand.sort((a, b) => (used.get(a.url)! - used.get(b.url)!))) {
+      if (pick.length >= 3) break
+      if (!pick.some((y) => y.url === x.url) && !p.html.includes(x.url.replace(SITE, ''))) pick.push(x)
+    }
+    pick.forEach((x) => used.set(x.url, used.get(x.url)! + 1))
+    PAIR_PICK.set(p.slug, pick)
+    if (pick.length < 3) need.push(p)
+  }
+  // 足りない分は、リンクの少ないページから順に（同じ点数なら一覧の順）
+  for (const p of need) {
+    const pick = PAIR_PICK.get(p.slug)!
+    const rest = [...PAIRS].sort((a, b) => (used.get(a.url)! - used.get(b.url)!) || PAIRS.indexOf(a) - PAIRS.indexOf(b))
+    for (const x of rest) {
+      if (pick.length >= 3) break
+      if (!pick.some((y) => y.url === x.url)) { pick.push(x); used.set(x.url, used.get(x.url)! + 1) }
+    }
+  }
+  const zero = [...used.values()].filter((n) => n === 0).length
+  console.log(`  業種×業務のページへのリンク: ${PAIRS.length}本中 ブログからのリンクが0本のページ ${zero}`)
+}
+
 function lpsForPost(p: Post): Lp[] {
   const text = nfk(p.title + ' ' + p.html.replace(/<[^>]+>/g, ' '))
   const title = nfk(p.title + ' ' + (p.headKeyword || ''))
@@ -580,6 +623,15 @@ ${(() => {
   <h2>この記事の業務を、自社の仕組みにするなら</h2>
   <p class="note">業種・業務ごとに、オープンソースを土台に社内で回す進め方と費用をまとめています。</p>
   <div class="idx">${ls.map((l) => card(`${l.url}#ref=vibeblog-lp-${p.slug}`, l.label, l.name, l.note)).join('')}</div>
+</section>` : ''
+})()}
+
+${(() => {
+  const ps = PAIR_PICK.get(p.slug) || []
+  return ps.length ? `<section>
+  <h2>業種・業務ごとに、自社用のシステムを考える</h2>
+  <p class="note">業種と業務の組み合わせごとに、よくある悩み、オープンソースや当社の業務アプリでの解き方、費用をまとめています。</p>
+  <div class="idx">${ps.map((x) => card(`${x.url}#ref=vibeblog-pair-${p.slug}`, x.indName, `${x.indName}の${x.gName}`, (x.pain || `${x.indName}の${x.gName}を、自社の仕組みにする進め方と費用`).slice(0, 66))).join('')}</div>
 </section>` : ''
 })()}
 

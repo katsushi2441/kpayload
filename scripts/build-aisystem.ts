@@ -16,7 +16,7 @@
 import 'dotenv/config'
 
 import fs from 'node:fs/promises'
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -61,6 +61,44 @@ import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMOS, PROTO, demoPanel, demoUrl } from './demos'
 import { kappKitPanel, kappKitCards, kappKitNames, KAPP_KITS } from './kapp-kits'
 import { relatedProducts, relatedPanel } from './kapp-related'
+
+// 用途（cap）→ /solution/ の業務。用途別・OSSごとのページから、業種×業務のページ（/solution/<業種>/<業務>.html）へつなぐ（2026-11-06）。
+// Googlebot は /ai-system/ を11/1〜6に122回読んだが /solution/ は5回だけで、業種×業務のページの多くが「検出 - インデックス未登録」だった。
+const CAP_GYOMU: Record<string, string> = {
+  attendance: 'kintai', timetrack: 'kintai', payroll: 'kintai', hr: 'kintai',
+  booking: 'yoyaku', restaurant: 'yoyaku', meeting: 'gijiroku',
+  helpdesk: 'toiawase', ticket: 'toiawase', livechat: 'toiawase', chatbot: 'toiawase', faq: 'toiawase',
+  crm: 'kokyaku', sfa: 'kokyaku', invoice: 'seikyu', payment: 'seikyu', quote: 'seikyu', accounting: 'seikyu', expense: 'seikyu',
+  dms: 'bunsho', paperless: 'bunsho', ocr: 'bunsho', pdf: 'bunsho', esign: 'keiyaku',
+  wiki: 'wiki', knowledge: 'wiki', manual: 'wiki', techdocs: 'wiki', note: 'wiki',
+  project: 'anken', task: 'anken', kanban: 'anken', gantt: 'anken', issue: 'anken',
+  inventory: 'zaiko', warehouse: 'zaiko', order: 'zaiko', purchase: 'zaiko', pos: 'zaiko',
+  team: 'groupware', chat: 'groupware', calendar: 'groupware', portal: 'groupware',
+  gis: 'shoken', shoken: 'shoken', checklist: 'genba-kiroku', maintenance: 'genba-kiroku', report: 'genba-kiroku', construction: 'genba-kiroku', form: 'genba-kiroku',
+  workflow: 'hikitsugi', bpm: 'hikitsugi',
+}
+const SOL_MATRIX = JSON.parse(readFileSync(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'solution-matrix.json'), 'utf8')) as { gyomu: { slug: string; name: string }[]; industries: { slug: string; name: string }[] }
+const solPairs = (cap: string) => {
+  const g = SOL_MATRIX.gyomu.find((x) => x.slug === CAP_GYOMU[cap])
+  if (!g) return [] as { url: string; ind: string; gName: string }[]
+  return SOL_MATRIX.industries
+    .filter((i) => existsSync(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'dist', 'solution', i.slug, `${g.slug}.html`)))
+    .map((i) => ({ url: `https://exbridge.jp/solution/${i.slug}/${g.slug}.html`, ind: i.name, gName: g.name }))
+}
+/** 用途別のページ：その業務の業種別ページを全業種ぶん */
+const solCapBlock = (cap: string, label: string) => {
+  const ps = solPairs(cap)
+  return ps.length ? `<section><div class="panel"><h2>業種ごとの「${ps[0].gName}」</h2><p class="note">${label}を業種ごとに考えると、悩みも使う仕組みも変わります。業種別に、悩み・オープンソースや当社の業務アプリでの解き方・費用をまとめています。</p>
+<p style="line-height:2.1">${ps.map((x) => `<a href="${x.url}#ref=ai-system-c-pair-${cap}" style="display:inline-block;margin:0 10px 0 0">${x.ind}の${x.gName}</a>`).join('')}</p></div></section>` : ''
+}
+/** OSSごとのページ：同じ業務の業種別ページを3本（OSSごとに業種をずらして、全業種のページに入口ができるように） */
+const solProjBlock = (cap: string, slug: string) => {
+  const ps = solPairs(cap)
+  if (!ps.length) return ''
+  let n = 0; for (const ch of slug) n = (n * 31 + ch.charCodeAt(0)) >>> 0
+  const pick = [0, 1, 2].map((k) => ps[(n + k * 7) % ps.length]).filter((x, i, a) => a.findIndex((y) => y.url === x.url) === i)
+  return `<section><div class="panel"><h2>業種ごとに、この業務の仕組みを考える</h2><p>${pick.map((x) => `<a href="${x.url}#ref=ai-system-pair-${slug}">${x.ind}の${x.gName}</a>`).join('　')}</p></div></section>`
+}
 import { compareTable } from './compare-table'
 import { ORG, orgLd, TODAY, TODAY_JA, h, attr, json, items, jaVerdict, styles,
          relatedNews, shell as baseShell, visibleLength, fitLength, type Project } from './page-shell'
@@ -144,6 +182,7 @@ ${relatedNews('oss', p.slug)}
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / <a href="${BASE}/c/${attr(cap.key)}/">${h(cap.label)}</a> / ${h(p.name)}</nav>
 ${relatedPanel(relatedProducts({ slug: p.slug, name: p.name, cap: cap.key, keywords: (p as { keywords?: string[] }).keywords }, KAPP_KITS[p.slug] ? [KAPP_KITS[p.slug].id] : []), `ai-system-rel-${attr(p.slug)}`, h(p.name))}
+${solProjBlock(cap.key, p.slug)}
 
 <section><div class="panel">
 <h2>${h(cap.label)}の業務で、${h(p.name)}を使うと</h2>
@@ -424,6 +463,7 @@ function capabilityPage(cap: Capability, all: Project[], related: Capability[], 
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">AIでできること</a> / ${h(cap.label)}</nav>
 ${relatedPanel(relatedProducts({ slug: cap.key, name: cap.label, cap: cap.key }), `ai-system-c-rel-${attr(cap.key)}`, h(cap.label), `${h(cap.label)}に使える、当社の製品（オンプレミス）`)}
+${solCapBlock(cap.key, h(cap.label))}
 <section><div class="panel">
 <h2>${h(cap.label)}とは？</h2>
 <p>${h(cap.label)}とは、${h(cap.question)}という状態を仕組みで解消することです。ゼロから作らなくても、同じ用途で世界中に使われているオープンソースがあります。当社はそれを土台に、日本語化と自社向けの変更を加えて導入します。月額のユーザー課金は発生しません。</p>
