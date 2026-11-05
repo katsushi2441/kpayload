@@ -152,6 +152,18 @@ const lastmod: Record<string, string> = {}   // サイトマップの lastmod。
 const linked = items.filter((x) => x.related.some((k) => kok[k]))
 
 // 発表ごと
+/** 話題が合う発表だけ、開発の相談のページへ1行（2026-11-06。ChatGPT-User がこのページをよく読むため）。題名と分野名に語があるときだけ。計測は ref=shocho-dev-<ページ> */
+const DEV_LINKS: [RegExp, string, string, string][] = [
+  [/IT導入補助金|デジタル化・AI導入補助金|ものづくり[^。]{0,10}補助金|中小企業[^。]{0,20}補助金|補助金[^。]{0,20}(IT|ＩＴ|デジタル|AI|ＡＩ|DX|ＤＸ)|(IT|ＩＴ|デジタル|AI|ＡＩ|DX|ＤＸ)[^。]{0,20}補助金/, 'ai-hojokin.html', 'hojokin', 'AI導入に使える補助金（デジタル化・AI導入補助金2026と愛知県・名古屋市の制度）'],
+  [/生成AI|ＡＩ|AI|人工知能/, 'ai-development.html', 'ai', 'AIを業務で使える形にする（名古屋のAI開発・AI活用支援）'],
+  [/ＤＸ|DX|デジタル化|業務効率|人手不足|省力化|生産性/, 'gyomu-system-kaihatsu.html', 'gyomu', '自社の業務システムを持つ（業務システム開発・税別15〜20万円・最短4営業日）'],
+]
+function devLink(it: Item): string {
+  const t = `${it.title} ${it.themes.map((x) => tname[x] || x).join(' ')}`
+  const hit = DEV_LINKS.find(([re]) => re.test(t))
+  return hit ? `<section class="sc-sec"><p>この発表を自社の仕事に置きかえると：<a href="${SITE}/${hit[1]}#ref=shocho-dev-${hit[2]}">${h(hit[3])}</a></p></section>` : ''
+}
+
 for (const it of items) {
   const url = nUrl(it.id)
   const ks = it.related.map((k) => kok[k]).filter(Boolean)
@@ -171,6 +183,7 @@ ${twin.length ? `<section class="sc-sec"><h2>同じ会議・同じ件のほか�
 ${ks.length ? `<section class="sc-sec"><h2>この話題を国会で追う <small>国会トラッカー</small></h2>${ks.map((k) => kokHtml(k, `${REF}-n-${it.id}`)).join('')}</section>` : ''}
 ${it.themes.length ? `<section class="sc-sec"><h2>分野</h2><div class="sc-meta" style="font-size:14px">${it.themes.map((t) => `<a class="sc-tag" href="${BASE}/t/${t}.html">${h(tname[t] || t)}</a>`).join('')}</div></section>` : ''}
 ${same.length ? `<section class="sc-sec"><h2>同じ分野の、ほかの省庁の発表</h2><div class="sc-list">${same.map(itemHtml).join('')}</div></section>` : ''}
+${devLink(it)}
 <section class="sc-sec"><p class="note">題名・日付・URLは${h(it.ministry_name)}の新着情報（RSS）から、本文の冒頭と資料の一覧は公式ページから機械的に取り込んでいます。内容は必ず公式ページでご確認ください。国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-n">国会トラッカー</a> と同じデータです。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, dateModified: TODAY, about: { '@type': 'GovernmentOrganization', name: it.ministry_name } }]
   const ogi = og({ name: `n-${it.id}`, kind: 'item', kicker: `Kurage 省庁トラッカー｜${it.ministry_name}　${ymd(it.date)}`, title: cut(it.title, 54),

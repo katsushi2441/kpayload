@@ -124,6 +124,19 @@ ${x.lead ? `<p class="nc-lead-line">${h(x.lead)}</p>` : ''}
 </article>`
 }
 
+/** 話題が合うニュースだけ、開発の相談のページへ1行（2026-11-06。ChatGPT-User が1日約100回このページを読むため）。
+ *  見出しと国会トラッカーの名前に語があるときだけ出す。計測は ref=news-dev-<ページ> */
+const DEV_LINKS: [RegExp, string, string, string][] = [
+  [/IT導入補助金|デジタル化・AI導入補助金|ものづくり[^。]{0,10}補助金|中小企業[^。]{0,20}補助金|補助金[^。]{0,20}(IT|ＩＴ|デジタル|AI|ＡＩ|DX|ＤＸ)|(IT|ＩＴ|デジタル|AI|ＡＩ|DX|ＤＸ)[^。]{0,20}補助金/, 'ai-hojokin.html', 'hojokin', 'AI導入に使える補助金（デジタル化・AI導入補助金2026と愛知県・名古屋市の制度）'],
+  [/生成AI|ＡＩ|AI|人工知能|ChatGPT|チャットＧＰＴ|AIエージェント/, 'ai-development.html', 'ai', 'AIを業務で使える形にする（名古屋のAI開発・AI活用支援）'],
+  [/ＤＸ|DX|デジタル化|業務効率|人手不足|省力化|生産性/, 'gyomu-system-kaihatsu.html', 'gyomu', '自社の業務システムを持つ（業務システム開発・税別15〜20万円・最短4営業日）'],
+]
+function devLink(x: Item): string {
+  const t = `${x.headline} ${x.trackerName || ''}`   // リード・カード名は全ページ共通の語を含むので使わない（台風・選挙に当たった）
+  const hit = DEV_LINKS.find(([re]) => re.test(t))
+  return hit ? `<p class="nc-note">この話題を自社の仕事に置きかえると：<a href="${SITE}/${hit[1]}#ref=news-dev-${hit[2]}">${h(hit[3])}</a></p>` : ''
+}
+
 function daySection(d: string, list: Item[], heading: 'h2' | 'none'): string {
   const grid = `<div class="nc-grid">${list.map(itemHtml).join('')}</div>`
   return heading === 'h2' ? `<section class="nc-day"><h2><a href="${BASE}/${d}.html" style="color:inherit;text-decoration:none">${h(dayJa(d))}</a>（${list.length}件）</h2>${grid}</section>` : grid
@@ -215,6 +228,7 @@ ${x.cardDesc ? `<p class="nc-note">${h(x.cardDesc)}</p>` : ''}
 ${qa && (qa.q || qa.a) ? `<div class="nc-qa">${qa.latest ? `<p><b>このテーマ「${h(x.trackerName || '')}」で、国会でいちばん最近あった質問と答弁</b></p>` : ''}<p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
 ${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}…</p>` : ''}${qa.a ? `<p><span class="who">答弁　${h(qa.a.who)}</span><br>${h(qa.a.text)}…</p>` : ''}</div>` : ''}
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
+${devLink(x)}
 <div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>
 </section>
 ${same.length ? `<section class="nc-box"><h2>同じテーマのほかのニュース</h2><ul>${same.map((y) => `<li><a href="${attr(itemUrl(y))}">${h(y.headline)}</a>（${h(y.source)}・${h(dayJa(y.day))}）</li>`).join('')}</ul></section>` : ''}

@@ -30,7 +30,7 @@ const SHELL = {
   base: BASE,
   // ヘッダー右メニューは vibeblog・exbridge.jp の LP と同じ4つ（2026-11-01 ユーザー指示。LP 側は exbridge_jp/scripts/std_nav.py）
   topLinks: `<a href="${SITE}/ai-it-komon.html#ref=exbridge-solution-nav">AI-IT顧問</a><a href="${SITE}/ai-sns-komon.html#ref=exbridge-solution-nav">AI-SNS顧問</a><a href="${SITE}/sales-partner.html#ref=exbridge-solution-nav">代理店募集</a><a href="${KURAGE}/vibe-prototype.html#ref=exbridge-solution-nav">バイブプロトタイプ</a>`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-solution-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${KURAGE}/khojokin.php/?ref=exbridge-solution">補助金ナビ（いま出せる補助金を条件で探す）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-solution-cost">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/leaflet.html?ref=exbridge-solution-leaflet">会社案内リーフレット（PDF・印刷可）</a>　<a href="${SITE}/contact.php">無料相談</a>　<a href="${BASE}/">業種・業務別ソリューション</a>　<a href="${SITE}/saas/">SaaSとOSSの対応表</a>　<a href="${SITE}/ai-system/?ref=exbridge-solution">AIでできること</a>　<a href="${KURAGE}/oss/?ref=exbridge-solution">業務OSSカタログ</a>　<a href="${KURAGE}/khojokin.php/?ref=exbridge-solution">補助金ナビ（いま出せる補助金を条件で探す）</a>　<a href="${SITE}/outsourcing/">業務のAI自動化</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-solution-cost">業務システムの受託開発（名古屋・概算見積無料）</a>　<a href="${SITE}/gyomu-system-kaihatsu.html#ref=solution-foot-gyomu">業務システム開発（税別15〜20万円・最短4営業日）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], pvTags?: string[], ogImage?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, pvTags, ogImage: ogImage ?? SHELL.ogImage })
@@ -401,7 +401,7 @@ function detailPage(p: SolutionPage): string {
 <p class="kicker">${KIND_LABEL[p.kind]}別ソリューション｜${h(p.kicker)}</p>
 <h1>${p.h1Override ? h(p.h1Override).replaceAll('&lt;br&gt;', '<br>') : `${h(p.name)}のITコストを、<br>オープンソースと内製化で見直す。`}</h1>
 <p class="lead">${h(p.lead || p.facts)}</p>
-<p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(p.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=solution-${attr(p.slug)}">OSSカスタマイズ（110,000円〜）</a></p>
+<p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(p.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${SITE}/gyomu-system-kaihatsu.html#ref=solution-gyomu-${attr(p.slug)}">業務システム開発（税別15〜20万円・最短4営業日）</a> <a class="btn" href="${KURAGE}/vibe-oss.html?ref=solution-${attr(p.slug)}">OSSカスタマイズ（110,000円〜）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別ソリューション</a> / ${h(p.name)}</nav>
@@ -631,7 +631,7 @@ function pairPage(ind: MI, g0: MG): string {
 <p class="kicker">${h(ind.name)}｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}の${h(g.name)}を、<br>内製化とオープンソースで。</h1>
 <p class="lead">${c ? h(c.lead) : `${h(g.pain)}——${h(ind.name)}の現場からよく伺う悩みです。${h(ind.context)}`}</p>
-<p><a class="btn btn-main" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(`${ind.name}の${g.name}`)}&amp;ref=solution-pair-cta-${attr(ind.slug)}-${attr(g.slug)}#form">${h(ind.name)}の${h(g.name)}のシステム選びを相談する（Zoom可）</a></p>
+<p><a class="btn btn-main" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(`${ind.name}の${g.name}`)}&amp;ref=solution-pair-cta-${attr(ind.slug)}-${attr(g.slug)}#form">${h(ind.name)}の${h(g.name)}のシステム選びを相談する（Zoom可）</a> <a class="btn" href="${SITE}/gyomu-system-kaihatsu.html#ref=solution-gyomu-${attr(ind.slug)}-${attr(g.slug)}">業務システム開発（税別15〜20万円・最短4営業日）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / <a href="${BASE}/${attr(ind.slug)}/">${h(ind.name)}</a> / ${h(g.name)}</nav>
@@ -667,6 +667,7 @@ ${c ? `<section><div class="panel"><h2>導入の進め方</h2>
 <h2>${h(ind.name)}の${h(g.name)}、何から手を付けるか一緒に決めます</h2>
 <p><strong>初日のヒアリングと提案は無料</strong>です。いまのやり方（紙・Excel・使用中のサービス）を見せていただければ、残すもの・置き換えるものを仕分けしてお返しします。</p>
 <a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(`${ind.name}の${g.name}の相談`)}">無料で相談する</a>
+<a class="btn" href="${SITE}/gyomu-system-kaihatsu.html#ref=solution-gyomu-${attr(ind.slug)}-${attr(g.slug)}">業務システム開発（税別15〜20万円・最短4営業日）</a>
 <a class="btn" href="${KURAGE}/vibe-oss.html?ref=solution-${attr(ind.slug)}-${attr(g.slug)}">OSSカスタマイズ（110,000円〜）</a>
 <a class="btn" href="${KURAGE}/vibe-prototype.html?ref=solution-${attr(ind.slug)}-${attr(g.slug)}">動くデモを先に見る</a>
 </div>
@@ -708,7 +709,7 @@ function industryHub(ind: MI): string {
 <p class="kicker">業種別ソリューション｜${h(ind.kicker)}</p>
 <h1>${h(ind.name)}のITを、<br>業務ごとに安くする。</h1>
 <p class="lead">${h(c ? c.lead : ind.context)}</p>
-<p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(ind.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a></p>
+<p><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent(ind.name + 'のIT費用の相談')}">無料で相談する（Zoom可）</a> <a class="btn" href="${SITE}/gyomu-system-kaihatsu.html#ref=solution-gyomu-${attr(ind.slug)}">業務システム開発（税別15〜20万円・最短4営業日）</a></p>
 </div></section>
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">株式会社エクスブリッジ</a> / <a href="${BASE}/">業種・業務別</a> / ${h(ind.name)}</nav>
