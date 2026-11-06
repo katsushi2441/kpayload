@@ -273,6 +273,7 @@ ${x.cardDesc ? `<p class="nc-note">${h(x.cardDesc)}</p>` : ''}
 ${qa && (qa.q || qa.a) ? `<div class="nc-qa">${qa.latest ? `<p><b>このテーマ「${h(x.trackerName || '')}」で、国会でいちばん最近あった質問と答弁</b></p>` : ''}<p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
 ${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}…</p>` : ''}${qa.a ? `<p><span class="who">答弁　${h(qa.a.who)}</span><br>${h(qa.a.text)}…</p>` : ''}</div>` : ''}
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
+${x.tracker ? `<p class="nc-note">国会の記録のURL：${h(x.tracker.replace(/[#?].*$/, ''))}</p>` : ''}
 ${flowLine(x, 'exbridge-news-item')}
 ${devLink(x)}
 ${(() => { const k = kappLine(x.headline, 'news-kapp', h); return k ? `<p class="nc-note">${k}</p>` : '' })()}

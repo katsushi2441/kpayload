@@ -111,7 +111,7 @@ function itemHtml(it: Item): string {
 function kokHtml(k: Kok, ref: string): string {
   return `<div class="sc-kok"><h3><a href="${GIIN}/tracker/${attr(k.key)}#ref=${ref}">${h(k.name)}</a> <small class="note">国会での発言 ${k.count.toLocaleString('ja-JP')}件</small></h3><ul>`
     + k.recent.map((s) => `<li><span class="sc-meta"><span class="sc-tag ${KIND[s.kind]?.[1] || ''}">${KIND[s.kind]?.[0] || '発言'}</span>${ymd(s.date)}　${h(s.house)} ${h(s.meeting)}　<b>${h(s.speaker)}</b></span><div>${h(cut(s.body, 110))} <a href="${attr(s.url)}" rel="nofollow noopener" target="_blank">会議録</a></div></li>`).join('')
-    + `</ul><p class="note" style="margin:8px 0 0"><a href="${GIIN}/tracker/${attr(k.key)}#ref=${ref}">「${h(k.name)}」の質疑と答弁をすべて見る（国会トラッカー）→</a></p></div>`
+    + `</ul><p class="note" style="margin:8px 0 0"><a href="${GIIN}/tracker/${attr(k.key)}#ref=${ref}">「${h(k.name)}」の質疑と答弁をすべて見る（国会トラッカー）→</a><br>国会の記録のURL：${GIIN}/tracker/${h(k.key)}</p></div>`
 }
 
 const LABEL = /^(日時|開催日時|日程|開催日|日付|時間|場所|開催場所|会場|開催形式|議題（予定）|議題|議事次第|議事|次第|主な内容|内容|概要|趣旨|対象|期間|締切|提出先)$/
