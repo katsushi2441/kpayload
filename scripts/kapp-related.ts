@@ -158,6 +158,9 @@ export function relatedProducts(o: { slug: string; name: string; category?: stri
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 /** 目立つ枠。name は呼び出し側でエスケープ済み。該当が無ければ空文字 */
+/** 商品IDから名前と価格を引く（ChatGPT が引用する冒頭の答えに商品を入れるため・2026-11-07） */
+export function prodById(id: string): Prod | undefined { return Object.values(P).find((x) => x.id === id) }
+
 export function relatedPanel(list: Prod[], ref: string, name: string, heading?: string): string {
   if (!list.length) return ''
   return `<style>.krel{border:2px solid #0a8f85;border-radius:14px;background:#f3fbfa;padding:16px;margin:0 0 18px}.krel h2{margin:0 0 6px;font-size:19px}.krel>p{margin:0 0 10px;color:#37485a;font-size:14px;line-height:1.75}.krel-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.krel-c{background:#fff;border:1px solid #cfe5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}.krel-c b{font-size:15px;color:#10242b}.krel-c span{font-size:13px;color:#37485a;line-height:1.65}.krel-c em{font-style:normal;font-weight:800;font-size:13px;color:#0a5f58}.krel-a{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}.krel-a a{display:inline-block;text-decoration:none;font-weight:800;font-size:13px;border-radius:8px;padding:7px 12px}.krel-a a.m{background:#0a8f85;color:#fff}.krel-a a.s{background:#fff;color:#07756d;border:1px solid #cfe5e2}</style>`

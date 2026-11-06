@@ -26,7 +26,7 @@ OUT = ROOT / "data" / "shocho"
 GIIN = pathlib.Path("/home/kojima/work/xb4g/giin")
 UA = "Mozilla/5.0 (compatible; KurageShochoTracker/1.0; +https://exbridge.jp/shocho/)"
 
-# RSS を出している府省（2026-10-23 実測）。経産省は 403、環境省・こども家庭庁は RSS が見つからない
+# RSS を出している府省（2026-10-23 実測・2026-11-07 中小企業庁を追加）。経産省は 403、環境省・こども家庭庁は RSS が見つからない
 FEEDS = [
     ("digital", "デジタル庁", "https://www.digital.go.jp/rss/news.xml"),
     ("mlit", "国土交通省", "https://www.mlit.go.jp/index.rdf"),
@@ -36,6 +36,8 @@ FEEDS = [
     ("soumu", "総務省", "https://www.soumu.go.jp/news.rdf"),
     ("cao", "内閣府", "https://www.cao.go.jp/rss/news.rdf"),
     ("fsa", "金融庁", "https://www.fsa.go.jp/fsaNewsListAll_rss2.xml"),
+    # 2026-11-07 追加: 補助金・取引の発表が出る（Kurage App Store の「業務の制度ニュース」の材料）。国税庁は RSS が無く、公正取引委員会・個人情報保護委員会はボットを断る（403/503）
+    ("chusho", "中小企業庁", "https://www.chusho.meti.go.jp/rss/index.xml"),
 ]
 
 

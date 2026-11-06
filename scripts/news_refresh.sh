@@ -8,3 +8,5 @@ cd /home/kojima/work/kpayload
 npx tsx scripts/build-news.ts || exit 1
 set -a; . /home/kojima/work/aixec/.env; set +a
 bash scripts/deploy.sh news
+# Kurage App Store の「AI・IT・DXニュース」と「業務の制度ニュース」のデータも作り直して送る（2026-11-07）
+/usr/bin/python3 /home/kojima/work/kappstore/scripts/build_news_data.py --deploy || true

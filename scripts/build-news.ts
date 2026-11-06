@@ -20,6 +20,7 @@ import path from 'node:path'
 
 import { SITE, KURAGE } from './site'
 import { h, attr, fitLength, shell as baseShell, json } from './page-shell'
+import { loadKappTopics, kappLine } from './kapp-topic-links'
 
 type Item = { day: string; time: string; source: string; post: string; newsUrl?: string; headline: string; card: string; kind: string
   cardTitle: string; cardImage: string; tracker: string; trackerName: string; lead?: string
@@ -32,6 +33,7 @@ const SUB = '国会トラッカーカード'
 const REF_SHARE = 'x-share-newscard'
 const DAYS_ON_INDEX = 7
 
+await loadKappTopics()   // 話題が合うニュースに当社の商品を1行（2026-11-07）
 const data: { generated: string; items: Item[] } = JSON.parse(await fs.readFile(path.join(process.cwd(), 'data', 'news-cards.json'), 'utf8'))
 
 // 政策の流れトラッカー（xb4g.com/giin/flow/）への導線（2026-11-06 ユーザー指示「国会トラッカーだけじゃなくて、政策の流れトラッカーも追加しないと」）。
@@ -273,6 +275,7 @@ ${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
 ${flowLine(x, 'exbridge-news-item')}
 ${devLink(x)}
+${(() => { const k = kappLine(x.headline, 'news-kapp', h); return k ? `<p class="nc-note">${k}</p>` : '' })()}
 <div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>
 </section>
 ${same.length ? `<section class="nc-box"><h2>同じテーマのほかのニュース</h2><ul>${same.map((y) => `<li><a href="${attr(itemUrl(y))}">${h(y.headline)}</a>（${h(y.source)}・${h(dayJa(y.day))}）</li>`).join('')}</ul></section>` : ''}

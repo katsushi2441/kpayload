@@ -205,6 +205,7 @@ ${kurageAiFab(canonical, opts.refPrefix, opts.base)}
 <p>名古屋で頼む：<a href="https://exbridge.jp/system-kaihatsu-nagoya.html#ref=${opts.refPrefix}-foot-nagoya">システム開発 名古屋</a>　<a href="https://exbridge.jp/homepage-seisaku-nagoya.html#ref=${opts.refPrefix}-foot-nagoya">ホームページ制作 名古屋</a></p>
 <p class="note">このページの最終更新日: <time datetime="${TODAY}">${TODAY_JA}</time>／文責: 株式会社エクスブリッジ 代表取締役 小嶋 篤</p>
 </div></footer>
+<script>/* ChatGPT などのAI検索から来た人の、App Store への移動を数える印（via=ai）。2026-11-07 */(function(){try{var r=document.referrer||'',q=location.search||'';if(!/chatgpt\.com|chat\.openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai/.test(r)&&q.indexOf('utm_source=chatgpt.com')<0)return;document.querySelectorAll('a[href*="kappstore.exbridge.jp"]').forEach(function(a){var h=a.getAttribute('href');if(h.indexOf('via=ai')>=0)return;var i=h.indexOf('#'),b=i<0?h:h.slice(0,i),f=i<0?'':h.slice(i);a.setAttribute('href',b+(b.indexOf('?')<0?'?':'&')+'via=ai'+f);});}catch(e){}})();</script>
 </body></html>`
 }
 

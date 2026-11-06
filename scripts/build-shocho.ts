@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url'
 
 import { SITE } from './site'
 import { TODAY, h, attr, shell as baseShell } from './page-shell'
+import { loadKappTopics, kappLine } from './kapp-topic-links'
 import { SIDE_CSS, KPV_SCRIPT, withSide } from './sister-side'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -36,7 +37,7 @@ const tname = JSON.parse(await fs.readFile(path.join(dataDir, 'themes.json'), 'u
 // 公式ページの本文の冒頭・配布資料・要点（scripts/shocho-detail.py。2026-11-03 追加。無い発表は従来どおり題名とリンクだけ）
 type Detail = { fetched: string; facts?: string[]; files?: { title: string; url: string }[]; points?: string[]; points_src?: string[]; h1?: string; error?: string }
 const detail = JSON.parse(await fs.readFile(path.join(dataDir, 'detail.json'), 'utf8').catch(() => '{}')) as Record<string, Detail>
-const MIN: [string, string][] = [['digital', 'デジタル庁'], ['mlit', '国土交通省'], ['mhlw', '厚生労働省'], ['maff', '農林水産省'], ['mext', '文部科学省'], ['soumu', '総務省'], ['cao', '内閣府'], ['fsa', '金融庁']]
+const MIN: [string, string][] = [['digital', 'デジタル庁'], ['mlit', '国土交通省'], ['mhlw', '厚生労働省'], ['maff', '農林水産省'], ['mext', '文部科学省'], ['soumu', '総務省'], ['cao', '内閣府'], ['fsa', '金融庁'], ['chusho', '中小企業庁']]
 
 const FOOT = `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">Kurage 省庁トラッカー</a>　<a href="${GIIN}/tracker/#ref=${REF}-foot">Kurage 国会トラッカー</a>　<a href="${SITE}/academic/#ref=${REF}-foot">Kurage 論文トラッカー</a>　<a href="${SITE}/ai-it-komon.html#ref=${REF}-foot">AI-IT顧問</a>　<a href="${SITE}/ai-sns-komon.html#ref=${REF}-foot">AI-SNS顧問</a>　<a href="${SITE}/contact.php">お問い合わせ</a>`
 type OgSpec = { name: string; kind: string; kicker: string; title: string; sub?: string; stats?: [string, string][] }
@@ -158,6 +159,7 @@ const DEV_LINKS: [RegExp, string, string, string][] = [
   [/生成AI|ＡＩ|AI|人工知能/, 'ai-development.html', 'ai', 'AIを業務で使える形にする（名古屋のAI開発・AI活用支援）'],
   [/ＤＸ|DX|デジタル化|業務効率|人手不足|省力化|生産性/, 'gyomu-system-kaihatsu.html', 'gyomu', '自社の業務システムを持つ（業務システム開発・税別15〜20万円・最短4営業日）'],
 ]
+await loadKappTopics()   // 話題が合う発表に当社の商品を1行（2026-11-07）
 function devLink(it: Item): string {
   const t = `${it.title} ${it.themes.map((x) => tname[x] || x).join(' ')}`
   const hit = DEV_LINKS.find(([re]) => re.test(t))
@@ -184,6 +186,7 @@ ${ks.length ? `<section class="sc-sec"><h2>この話題を国会で追う <small
 ${it.themes.length ? `<section class="sc-sec"><h2>分野</h2><div class="sc-meta" style="font-size:14px">${it.themes.map((t) => `<a class="sc-tag" href="${BASE}/t/${t}.html">${h(tname[t] || t)}</a>`).join('')}</div></section>` : ''}
 ${same.length ? `<section class="sc-sec"><h2>同じ分野の、ほかの省庁の発表</h2><div class="sc-list">${same.map(itemHtml).join('')}</div></section>` : ''}
 ${devLink(it)}
+${(() => { const k = kappLine(it.title, 'shocho-kapp', h); return k ? `<section class="sc-sec"><p>${k}</p></section>` : '' })()}
 <section class="sc-sec"><p class="note">題名・日付・URLは${h(it.ministry_name)}の新着情報（RSS）から、本文の冒頭と資料の一覧は公式ページから機械的に取り込んでいます。内容は必ず公式ページでご確認ください。国会の議論は <a href="${GIIN}/tracker/#ref=${REF}-n">国会トラッカー</a> と同じデータです。</p></section></div>`
   const ld = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: title, url, description: desc, dateModified: TODAY, about: { '@type': 'GovernmentOrganization', name: it.ministry_name } }]
   const ogi = og({ name: `n-${it.id}`, kind: 'item', kicker: `Kurage 省庁トラッカー｜${it.ministry_name}　${ymd(it.date)}`, title: cut(it.title, 54),
@@ -243,7 +246,7 @@ ${ks.length ? `<section class="sc-sec"><h2>この分野を国会で追う <small
 // トップ
 {
   const url = `${BASE}/`
-  const desc = `デジタル庁・国土交通省・厚生労働省・農林水産省・文部科学省・総務省・内閣府・金融庁の新着情報を毎日取り込み、発表ごとに同じ話題の国会の質疑・答弁を並べます。国会トラッカーの側からも、省庁の新しい発表へたどれます。`
+  const desc = `デジタル庁・国土交通省・厚生労働省・農林水産省・文部科学省・総務省・内閣府・金融庁・中小企業庁の新着情報を毎日取り込み、発表ごとに同じ話題の国会の質疑・答弁を並べます。国会トラッカーの側からも、省庁の新しい発表へたどれます。`
   const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">省庁の発表 × 国会の議論</p><h1>Kurage 省庁トラッカー</h1><p class="lead">${h(desc)}</p>
 <div class="ac-stats"><div><b>${items.length.toLocaleString('ja-JP')}</b>発表</div><div><b>${MIN.length}</b>府省</div><div><b>${linked.length}</b>国会トラッカーとつながった</div></div></div></section>
 <div class="wrap"><section class="sc-sec"><h2>府省</h2><div class="sc-cards">${MIN.map(([m, n]) => `<a class="sc-card" href="${BASE}/m/${m}.html"><b>${h(n)}</b><span>${items.filter((x) => x.ministry === m).length}件</span></a>`).join('')}</div></section>

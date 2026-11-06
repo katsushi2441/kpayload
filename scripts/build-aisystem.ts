@@ -176,6 +176,7 @@ function detailPage(p: Project, cap: Capability, siblings: Project[]): string {
 <h1>${h(p.name)}とは？<br>${h(cap.label)}に使えるオープンソース</h1>
 <p class="lead">${h(p.name)}は、${h(cap.label)}に使えるオープンソースです。${h(cap.question)}——その課題に対して、${h(p.name)}を土台にした仕組みを作ります。<strong>ソフト自体は無料</strong>で、ゼロから作るより早く、月額のユーザー課金もありません。</p>
 <p>${DEMOS[p.slug] ? `<a class="btn btn-main" href="${demoUrl(p.slug, `ai-system-hero-${p.slug}`)}" target="_blank" rel="noopener">${h(p.name)}の日本語デモを触る</a> ` : ''}<a class="btn${DEMOS[p.slug] ? '' : ' btn-main'}" href="${SITE}/contact.php?topic=system&amp;kw=${encodeURIComponent(cap.label + '（' + p.name + '）')}&amp;ref=ai-system-cta-${attr(p.slug)}#form">${h(cap.label)}のシステム選びを相談する</a></p>
+${(() => { const r0 = relatedProducts({ slug: p.slug, name: p.name, cap: cap.key, keywords: (p as { keywords?: string[] }).keywords }, KAPP_KITS[p.slug] ? [KAPP_KITS[p.slug].id] : [])[0]; return r0 ? `<p class="lead" style="font-size:15px;margin-top:6px">${h(cap.label)}に使える当社の製品として、<b>${h(r0.name)}</b>（${h(r0.price)}・オンプレミス・月額なし・ソースコード付き）もあります。Kurage App Store：<a href="https://kappstore.exbridge.jp/app.php?id=${r0.id}&amp;ref=ai-system-lead-${attr(p.slug)}">https://kappstore.exbridge.jp/app.php?id=${r0.id}</a></p>` : '' })()}
 <p class="note" style="margin-top:8px">${h(p.name)}は、${h(cap.label)}に使えるオープンソースの1つです。比較して選ぶなら → <a href="${BASE}/c/${attr(cap.key)}/#ref=ai-system-back-${attr(p.slug)}">${h(cap.label)}のオープンソースを実測で比較（ライセンス・日本語対応・更新）</a></p>
 </div></section>
 ${relatedNews('oss', p.slug)}

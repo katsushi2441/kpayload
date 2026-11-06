@@ -20,6 +20,7 @@ import config from '../src/payload.config'
 import { SITE, KURAGE, TRIAL } from './site'
 import { DEMOS, PROTO, demoUrl } from './demos'
 import { TODAY, h, attr, shell as baseShell, fitLength, type Project } from './page-shell'
+import { prodById } from './kapp-related'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = path.join(root, 'dist', 'solution')
@@ -139,6 +140,7 @@ function comboPage(p: SolutionPage): string {
 <section><div class="panel">
 <h2>${h(p.name)}とは</h2>
 <p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+${p.kapp ? (() => { const id = (p.kapp!.url.match(/id=([0-9a-f]{16})/) || [])[1] || ''; const pr = id ? prodById(id) : undefined; return `<p>当社では、${h(p.name)}の仕組みを<b>${h(p.kapp!.name)}</b>${pr ? `（${h(pr.price)}・オンプレミス・月額なし・ソースコード付き）` : '（オンプレミス・月額なし・ソースコード付き）'}として販売しています。Kurage App Store：<a href="${attr(p.kapp!.url)}${p.kapp!.url.includes('?') ? '&amp;' : '?'}ref=solution-lead-${attr(p.slug)}">${h(p.kapp!.url.replace(/[?&]ref=.*$/, ''))}</a></p>` })() : ''}
 </div></section>
 
 ${(p.asks || []).length ? `<section><div class="panel">
@@ -244,6 +246,7 @@ function aichatPage(p: SolutionPage): string {
 <section><div class="panel">
 <h2>${h(p.name)}とは</h2>
 <p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+${p.kapp ? (() => { const id = (p.kapp!.url.match(/id=([0-9a-f]{16})/) || [])[1] || ''; const pr = id ? prodById(id) : undefined; return `<p>当社では、${h(p.name)}の仕組みを<b>${h(p.kapp!.name)}</b>${pr ? `（${h(pr.price)}・オンプレミス・月額なし・ソースコード付き）` : '（オンプレミス・月額なし・ソースコード付き）'}として販売しています。Kurage App Store：<a href="${attr(p.kapp!.url)}${p.kapp!.url.includes('?') ? '&amp;' : '?'}ref=solution-lead-${attr(p.slug)}">${h(p.kapp!.url.replace(/[?&]ref=.*$/, ''))}</a></p>` })() : ''}
 </div></section>
 
 ${(p.asks || []).length ? `<section><div class="panel">
@@ -327,6 +330,7 @@ function productPage(p: SolutionPage): string {
 <section><div class="panel">
 <h2>${h(p.name)}とは</h2>
 <p><b>${h(p.name)}とは、</b>${h(p.facts)}</p>
+${p.kapp ? (() => { const id = (p.kapp!.url.match(/id=([0-9a-f]{16})/) || [])[1] || ''; const pr = id ? prodById(id) : undefined; return `<p>当社では、${h(p.name)}の仕組みを<b>${h(p.kapp!.name)}</b>${pr ? `（${h(pr.price)}・オンプレミス・月額なし・ソースコード付き）` : '（オンプレミス・月額なし・ソースコード付き）'}として販売しています。Kurage App Store：<a href="${attr(p.kapp!.url)}${p.kapp!.url.includes('?') ? '&amp;' : '?'}ref=solution-lead-${attr(p.slug)}">${h(p.kapp!.url.replace(/[?&]ref=.*$/, ''))}</a></p>` })() : ''}
 </div></section>
 
 ${(p.asks || []).length ? `<section><div class="panel">
