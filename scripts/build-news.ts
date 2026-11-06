@@ -33,6 +33,46 @@ const REF_SHARE = 'x-share-newscard'
 const DAYS_ON_INDEX = 7
 
 const data: { generated: string; items: Item[] } = JSON.parse(await fs.readFile(path.join(process.cwd(), 'data', 'news-cards.json'), 'utf8'))
+
+// 政策の流れトラッカー（xb4g.com/giin/flow/）への導線（2026-11-06 ユーザー指示「国会トラッカーだけじゃなくて、政策の流れトラッカーも追加しないと」）。
+// 分野ごとの「関係する国会トラッカー」（xb4g/giin/data/flow/index.json の trackers）で引き、当たらないときは見出しの語で当てる
+const FLOW = 'https://xb4g.com/giin/flow'
+type FlowField = { slug: string; name: string; trackers?: string[] }
+const flowFields: FlowField[] = await fs.readFile('/home/kojima/work/xb4g/giin/data/flow/index.json', 'utf8')
+  .then((t) => (JSON.parse(t).fields || []) as FlowField[]).catch(() => [])
+const FLOW_WORDS: Record<string, RegExp> = {
+  'iryo-fukushi-yushi': /コロナ融資|ゼロゼロ融資|福祉医療機構|物価高騰融資|優遇融資/,
+  cyber: /サイバー|偽情報|偽・誤情報|誤情報|デマ|脆弱性|ランサム|不正アクセス|情報漏え?い|フィッシング/,
+  koho: /政府広報|広報予算|広報費|安保広報|広報事業|PR動画|啓発動画/,
+  ai: /生成AI|生成ＡＩ|AI法|ＡＩ法|人工知能|AI政策|ＡＩ政策|データセンター|国産AI|国産ＡＩ|GENIAC/,
+}
+// 分野の画面の「関係する国会トラッカー」には周辺のもの（経済安全保障・介護報酬など）も入るので、ニュースの判定は中心のトラッカーだけで引く
+// （株価のニュースがサイバー分野に、介護サービスのニュースが資金繰りの分野に当たったため・2026-11-06）
+const FLOW_CORE: Record<string, string[]> = {
+  ai: ['ai-hou', 'ai-agent', 'ai-biosecurity', 'datacenter-denryoku'],
+  koho: ['seifu-koho'],
+  cyber: ['nise-joho', 'zeijakusei-chosa', 'ransomware', 'joho-roei'],
+  'iryo-fukushi-yushi': ['corona-yushi'],
+}
+function flowFor(x: Item): FlowField[] {
+  const key = (x.tracker || '').replace(/[#?].*$/, '').replace(/\/$/, '').split('/').pop() || ''
+  const byTracker = key ? flowFields.filter((f) => (FLOW_CORE[f.slug] || f.trackers || []).includes(key)) : []
+  if (byTracker.length) return byTracker
+  return flowFields.filter((f) => FLOW_WORDS[f.slug]?.test(x.headline))
+}
+function flowLine(x: Item, ref: string): string {
+  const fs2 = flowFor(x)
+  return fs2.length ? `<p class="nc-trk">予算・事業・成果までの流れ：${fs2.map((f) => `<a href="${FLOW}/${attr(f.slug)}#ref=${ref}">政策の流れトラッカー「${h(f.name)}」</a>`).join('　')}</p>` : ''
+}
+function flowBox(list: Item[]): string {
+  const m = new Map<string, { f: FlowField; n: number }>()
+  for (const x of list) for (const f of flowFor(x)) m.set(f.slug, { f, n: (m.get(f.slug)?.n || 0) + 1 })
+  const top = [...m.values()].sort((a, b) => b.n - a.n)
+  return `<section class="nc-box"><h2>ニュースに出てきた政策の流れ</h2>
+<p class="nc-note">国会の議論の先にある、計画・予算・支出先・目標と実績・点検を、公表資料だけでつないで並べたページです。</p>
+${top.length ? `<ul>${top.map((v) => `<li><a href="${FLOW}/${attr(v.f.slug)}#ref=exbridge-news-list">${h(v.f.name)}</a>（${v.n}件のニュース）</li>`).join('')}</ul>` : ''}
+<p class="nc-note"><a href="${FLOW}/#ref=exbridge-news-list">政策の流れトラッカーの一覧（すべての分野）</a></p></section>`
+}
 const items = data.items.filter((x) => x.headline && x.card)
 const days = [...new Set(items.map((x) => x.day))].sort().reverse()
 const dayJa = (d: string) => d.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_, y, m, dd) => `${y}年${Number(m)}月${Number(dd)}日`)
@@ -41,8 +81,8 @@ const SHELL = {
   refPrefix: 'exbridge-news',
   base: BASE,
   ogImage: `${SITE}/images/ai-development-ogp.png`,
-  topLinks: `<a href="https://xb4g.com/giin/tracker/#ref=exbridge-news-nav">国会トラッカー</a><a href="${SITE}/keizai/#ref=exbridge-news-nav">経済指標カード</a><a href="${SITE}/vibeblog/#ref=exbridge-news-nav">ブログ</a>`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">${NAME}</a>　<a href="https://xb4g.com/giin/tracker/#ref=exbridge-news">国会トラッカー（テーマごとの質疑と政府の答弁）</a>　<a href="${SITE}/keizai/#ref=exbridge-news">経済指標カード</a>　<a href="${KURAGE}/kshuisho.php/#ref=exbridge-news">質問主意書アシスト</a>`,
+  topLinks: `<a href="https://xb4g.com/giin/tracker/#ref=exbridge-news-nav">国会トラッカー</a><a href="https://xb4g.com/giin/flow/#ref=exbridge-news-nav">政策の流れ</a><a href="${SITE}/keizai/#ref=exbridge-news-nav">経済指標カード</a><a href="${SITE}/vibeblog/#ref=exbridge-news-nav">ブログ</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${BASE}/">${NAME}</a>　<a href="https://xb4g.com/giin/tracker/#ref=exbridge-news">国会トラッカー（テーマごとの質疑と政府の答弁）</a>　<a href="https://xb4g.com/giin/flow/#ref=exbridge-news">政策の流れトラッカー（計画・予算・成果）</a>　<a href="${SITE}/keizai/#ref=exbridge-news">経済指標カード</a>　<a href="${KURAGE}/kshuisho.php/#ref=exbridge-news">質問主意書アシスト</a>`,
 }
 
 const copyScript = `<script>
@@ -119,6 +159,7 @@ function itemHtml(x: Item): string {
 <h3>${x.id ? `<a href="${attr(itemUrl(x))}">${h(x.headline)}</a>` : `<a href="${attr(x.post)}" target="_blank" rel="noopener nofollow">${h(x.headline)}</a>`}</h3>
 <a class="nc-card" href="${attr(x.card)}#ref=exbridge-news">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁：<a href="${attr(x.tracker)}#ref=exbridge-news">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
+${flowLine(x, 'exbridge-news')}
 ${x.lead ? `<p class="nc-lead-line">${h(x.lead)}</p>` : ''}
 <div class="nc-btns"><button type="button" class="nc-cp" data-copy="${attr(post)}">投稿文をコピー</button><a class="nc-x" href="${attr(intent)}" target="_blank" rel="noopener">Xに投稿</a></div>
 </article>`
@@ -185,6 +226,7 @@ const recentItems = items.filter((x) => recent.includes(x.day))
 ${filters(recentItems)}
 ${recent.map((d) => daySection(d, recentItems.filter((x) => x.day === d), 'h2')).join('\n')}
 ${trackerBox(recentItems)}
+${flowBox(recentItems)}
 <section class="nc-box"><h2>日ごとのカード</h2><div class="nc-days">${days.map((d) => `<a href="${BASE}/${d}.html">${h(dayJa(d))}</a>`).join('')}</div></section>
 </main>${styles}`
   await fs.writeFile(path.join(OUT, 'index.html'), shell(title, desc, `${BASE}/`, body, ld(title, `${BASE}/`, recentItems)))
@@ -203,6 +245,7 @@ ${nav}
 ${filters(list)}
 ${daySection(d, list, 'none')}
 ${trackerBox(list)}
+${flowBox(list)}
 ${nav}
 </main>${styles}`
   await fs.writeFile(path.join(OUT, `${d}.html`), shell(title, desc, `${BASE}/${d}.html`, body, ld(title, `${BASE}/${d}.html`, list)))
@@ -228,6 +271,7 @@ ${x.cardDesc ? `<p class="nc-note">${h(x.cardDesc)}</p>` : ''}
 ${qa && (qa.q || qa.a) ? `<div class="nc-qa">${qa.latest ? `<p><b>このテーマ「${h(x.trackerName || '')}」で、国会でいちばん最近あった質問と答弁</b></p>` : ''}<p class="nc-note">${h(dayJa(qa.date))}　${h(qa.house)} ${h(qa.meeting)}（会議録の原文のまま・冒頭のみ）</p>
 ${qa.q ? `<p><span class="who">質問　${h(qa.q.who)}</span><br>${h(qa.q.text)}…</p>` : ''}${qa.a ? `<p><span class="who">答弁　${h(qa.a.who)}</span><br>${h(qa.a.text)}…</p>` : ''}</div>` : ''}
 ${x.tracker ? `<p class="nc-trk">このテーマの国会の質疑と政府の答弁をすべて見る：<a href="${attr(x.tracker)}#ref=exbridge-news-item">国会トラッカー「${h(x.trackerName || 'テーマ')}」</a></p>` : ''}
+${flowLine(x, 'exbridge-news-item')}
 ${devLink(x)}
 <div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>
 </section>
