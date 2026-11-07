@@ -167,6 +167,58 @@ ${cta(`p-${l.slug}`)}
   lastmod[url] = l.date
 }
 
+// ---------- AIエージェントとセキュリティ（2026-11-07 ユーザー「作って」）
+// X でセキュリティの話題に返信するとき、1本の URL で「いま開発者の間で起きていること」と「使えるOSS」を見せるためのページ。
+// 拾い方は語で決める。トピックの「security」だけで拾うと、動画スキル集の「security-graded」などが混じったので、
+// 英語の説明・日本語の説明の強い語と、限られたトピックだけで判定する。アカウント停止を避ける手引き（Claude-Guardian 等）は防御ではないので外す。
+const SEC_EN = /vulnerab|pen-?test|penetration|\bcve\b|sandbox|backdoor|malware|attack surface|red[- ]team|prompt injection|adversarial|obfuscat|code review/i
+const SEC_JA = /脆弱性|侵入テスト|ペネトレーション|サンドボックス|隔離された|攻撃面|マルウェア|バックドア/   // リバースエンジニアリングは、動画の解析・ゲームの改造・アプリの複製まで入るので語にしない（トピックの cybersecurity・ctf で拾う）
+const SEC_TOPIC = new Set(['cybersecurity', 'security', 'pentest', 'penetration-testing', 'sandbox', 'red-team', 'vulnerability', 'malware-analysis', 'ctf'])
+const SEC_NG = /account (ban|suspen)|avoid (ban|suspen)|guardian|アカウント停止/i
+const SEC_HN = /backdoor|secur|vulnerab|sends (your|each)|leak|exploit|malware|injection|privacy|training on|telemetry/i
+const secKind = (r: Repo): string => {
+  const t = `${r.desc} ${r.what} ${r.name_ja}`
+  if (/侵入テスト|ペネトレーション|脆弱性|攻撃面|pen-?test|penetration|vulnerab|\bcve\b/i.test(t)) return 'attack'
+  if (/サンドボックス|隔離|sandbox|code review|コードレビュー|レビュー/i.test(t)) return 'run'
+  return 'analysis'
+}
+const secRepos = repos.filter((r) => {
+  const en = `${r.desc} ${r.topics.join(' ')}`
+  if (SEC_NG.test(en) || SEC_NG.test(r.what)) return false
+  return SEC_EN.test(r.desc) || SEC_JA.test(r.what) || r.topics.some((t) => SEC_TOPIC.has(t))
+})
+const secHn = data.hn.filter((x) => SEC_HN.test(x.title))
+const SEC_URL = `${BASE}/security.html`
+{
+  const url = SEC_URL
+  const KINDS: [string, string, string][] = [
+    ['attack', 'AIで攻撃を試す・弱点を点検する', 'AIのエージェントが自分で攻撃の手順を組み立てて、自社のシステムの弱点を探すOSSです。攻撃する側も同じことをAIでやっているので、防御する側が先に使って穴をふさぐための道具です。'],
+    ['run', 'エージェントを安全に動かす', 'AIのエージェントが書いたコードや実行するコマンドを、隔離した環境で動かしたり、push の前に別のAIで検査したりするOSSです。'],
+    ['analysis', '解析と、解析からの防御', 'ソフトウェアの中身を調べるリバースエンジニアリングの資料と、AIによる解析を誤らせて自社のソフトを守る道具です。'],
+  ]
+  const hnList = secHn.map((x) => `<li><b>${h(x.title_ja || x.title)}</b><br><small>${h(x.title)}</small><br>${x.what ? `${h(x.what)}<br>` : ''}<small>${ymd(x.date)}・${num(x.points)}点・コメント${num(x.comments)}件　<a href="${attr(x.hn)}" rel="nofollow noopener" target="_blank">Hacker News</a>${x.url ? `　<a href="${attr(x.url)}" rel="nofollow noopener" target="_blank">元の記事</a>` : ''}</small></li>`).join('')
+  const desc = `AIエージェントとセキュリティの話題を毎日集めています。開発者の間で起きたこと（${secHn.slice(0, 2).map((x) => x.title_ja || x.title).join('・')}など）と、AIで弱点を点検する・エージェントを隔離して動かすOSS${secRepos.length}件。会社でAIエージェントを使う前に確かめることもまとめました。`
+  const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">${NAME}｜セキュリティ</p><h1>AIエージェントとセキュリティ</h1><p class="lead">${h(desc)}</p></div></section>
+<div class="wrap"><p class="crumb" style="font-size:13px;color:var(--muted);padding:14px 0 0"><a href="${BASE}/">${NAME}</a> › セキュリティ</p>
+${secHn.length ? `<section class="ag-sec"><h2>開発者の間で起きたこと <small>Hacker News・直近14日</small></h2><p class="lead2">AIのコーディングエージェントや、その拡張機能をめぐって話題になった記事です。</p><div class="ag-box ag-hn"><ul>${hnList}</ul></div></section>` : ''}
+${KINDS.map(([k, t, lead]) => { const xs = secRepos.filter((r) => secKind(r) === k); return xs.length ? `<section class="ag-sec"><h2>${h(t)} <small>${xs.length}件</small></h2><p class="lead2">${h(lead)}</p><div class="ag-grid">${xs.map((r) => repoCard(r, 'security')).join('')}</div></section>` : '' }).join('')}
+<section class="ag-sec"><h2>会社でAIエージェントを使う前に確かめること</h2><div class="ag-box warn"><ul>
+<li>拡張機能やスキルは、どこが出しているものかを確かめる。公式に見える名前でも、マーケットプレイスには別の人が出したものが並ぶ（バックドア入りの拡張機能が出回った例がある）</li>
+<li>エージェントが何を外へ送るかを確かめる。指示の文章、開いたページの中身、作業の記録、メールアドレスなどを、AIのサービスや外部のサイトへ送る作りのものがある</li>
+<li>エージェントに渡す権限を絞る。本番のデータベースや、社外に出せないファイルがある場所で、そのまま動かさない。隔離した環境（サンドボックス）で動かす</li>
+<li>エージェントが書いたコードは、そのまま使わない。別の人か別の仕組みで確かめてから入れる</li>
+<li>社外に出せない情報を扱うなら、外部のAIサービスではなく、社内のモデルで動かせるかを先に考える</li>
+</ul></div></section>
+${cta('security')}
+<section class="ag-sec">${ABOUT}</section></div>`
+  const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: `AIエージェントとセキュリティ｜${NAME}`, url, description: desc, dateModified: TODAY },
+    { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: secRepos.slice(0, 10).map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: rUrl(r), name: r.repo })) }]
+  const ogi = og({ name: 'security', title: 'AIエージェントとセキュリティ', sub: '開発者の間で起きたことと、弱点を点検するOSS', chips: ['バックドア', '情報の送信', '侵入テスト', '隔離して動かす'], badge: '毎日更新' })
+  await write('security.html', shell(`AIエージェントとセキュリティ｜バックドア・情報の送信と、AIで弱点を点検するOSS｜${NAME}`, desc, url, body, ld, ogi, shareBox(`【${NAME}】AIエージェントとセキュリティ。拡張機能のバックドアや情報の送信など開発者の間で起きたことと、AIで弱点を点検する・隔離して動かすOSSを毎日。`, url, 'security')))
+  urls.push(url)
+  lastmod[url] = TODAY
+}
+
 // ---------- トップ
 {
   const url = `${BASE}/`
@@ -175,6 +227,7 @@ ${cta(`p-${l.slug}`)}
   const hnList = data.hn.slice(0, 20).map((x) => `<li><b>${h(x.title_ja || x.title)}</b><br><small>${h(x.title)}</small><br>${x.what ? `${h(x.what)}<br>` : ''}<small>${ymd(x.date)}・${num(x.points)}点・コメント${num(x.comments)}件　<a href="${attr(x.hn)}" rel="nofollow noopener" target="_blank">Hacker News</a>${x.url ? `　<a href="${attr(x.url)}" rel="nofollow noopener" target="_blank">元の記事</a>` : ''}</small></li>`).join('')
   const body = `${CSS}<section class="hero"><div class="wrap"><p class="kicker">いま話題のAIエージェントの技術・毎日更新</p><h1>${NAME}</h1><p class="lead">${h(desc)}</p></div></section>
 <div class="wrap">
+<section class="ag-sec"><div class="ag-box"><p><b><a href="${SEC_URL}#ref=${REF}-index">AIエージェントとセキュリティ</a></b>　拡張機能のバックドアや情報の送信など、開発者の間で起きたことと、AIで弱点を点検するOSS（${secRepos.length}件）をまとめています。</p></div></section>
 <section class="ag-sec"><h2>大手の新しいエージェント</h2><div class="ag-grid">${launches.map((l) => launchCard(l, 'index')).join('')}</div></section>
 <section class="ag-sec"><h2>GitHubで急に伸びているOSS <small>${top.length}件・★の伸びの順</small></h2><p class="lead2">直近45日に公開されたAIエージェント関連のリポジトリを、1日あたりの★の増え方で並べています。</p><div class="ag-grid">${top.map((r) => repoCard(r, 'index')).join('')}</div></section>
 ${data.hn.length ? `<section class="ag-sec"><h2>開発者の間の話題（Hacker News） <small>直近14日</small></h2><div class="ag-box ag-hn"><ul>${hnList}</ul></div></section>` : ''}
