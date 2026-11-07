@@ -1,0 +1,56 @@
+{
+ "_note": "大手の発表（手で確かめて書く）。日付と中身は公式の発表と報道で確かめたものだけ。alts は GitHub の説明文でこの製品に触れているOSSを拾う正規表現。2026-11-07 作成",
+ "launches": [
+  {
+   "slug": "grok-bot",
+   "name": "Grok Bot",
+   "maker": "xAI",
+   "date": "2026-08-11",
+   "status": "ベータ",
+   "what": "いつも動いているAIエージェントのチーム。普段使っている道具やアプリの中で、何段階もある仕事を最後まで片づけ、承認が要るときだけ声をかけてくる。",
+   "points": [
+    "エージェントはクラウド上の専用のコンピューターで動くので、人が離れていても仕事が進む",
+    "同僚に頼むようにメッセージで頼む。会話はスマホとパソコンで引き継がれる",
+    "複数のエージェントが同時に動き、スレッドやグループチャットで分担する",
+    "人の操作を見せて手順を覚えさせると、決まった手順として後で繰り返せる",
+    "使えるのは SuperGrok の契約者と Cursor の有料プランの利用者（企業向けは順番待ち）。9月に企業向けの管理機能とチーム向けが追加された"
+   ],
+   "caution": "仕事の材料（画面・ファイル・やり取り）は xAI のクラウドで処理される。社外に出せない情報を扱う業務では、何を任せるかを先に決める必要がある。",
+   "official": "https://x.ai/news/introducing-grok-bot",
+   "alts": "(?i)grok ?bot",
+   "sources": [
+    [
+     "xAI の発表",
+     "https://x.ai/news/introducing-grok-bot"
+    ]
+   ]
+  },
+  {
+   "slug": "openai-dots",
+   "name": "dots",
+   "maker": "OpenAI",
+   "date": "2026-09-29",
+   "status": "提供開始（Pro・Business Premium・Enterprise から）",
+   "what": "ChatGPT の中で動き続けるAIエージェント。1つ1つの dot が自分専用のクラウドのコンピューターとブラウザを持ち、OpenAI のプラグインで4,000以上のアプリにつながる。",
+   "points": [
+    "OpenAI の開発者向けイベント DevDay（9月29日・サンフランシスコ）で発表された",
+    "dot が使っているクラウドの画面を人が見られる。どの操作に承認が要るかを決めておける",
+    "保存したパスワードで対応サイトにログインできる（モデルにはパスワードを見せない作り）",
+    "OpenAI 自身が「間違えることがあるので、大事な仕事は必ず見直して」と書いている"
+   ],
+   "caution": "Grok Bot と同じく、処理は OpenAI のクラウドで行われる。追加の dot の料金は公式の発表に書かれていない（報道に出ている金額は公式の数字ではない）。",
+   "official": "",
+   "alts": "(?i)openai dots|\\bdots\\b.*(agent|openai)|always[- ]on agent",
+   "sources": [
+    [
+     "The Next Web",
+     "https://thenextweb.com/news/openai-dots-always-on-ai-agents-cloud-computers-devday"
+    ],
+    [
+     "SiliconANGLE",
+     "https://siliconangle.com/2026/09/29/openai-launches-dots-always-on-ai-agents-in-chatgpt-with-their-own-cloud-computers/"
+    ]
+   ]
+  }
+ ]
+}
