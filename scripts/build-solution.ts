@@ -609,14 +609,37 @@ function pickOss(g: MG): Project[] {
 }
 const ossByGyomu = new Map(matrix.gyomu.map((g) => [g.slug, pickOss(g)]))
 
+// 業種×業務ページの題名の前半を、検索で使われる呼び名にそろえる（2026-11-07）。
+// 564本のうち28日で検索に出たのは68本だけ。索引には約75%入っている（抜き取り40本中30本）のに表示されないのは、
+// 題名が「保育園 勤怠管理」のように業務名だけで、人が検索する「保育園 勤怠管理システム」の形になっていないから。
+// クリックが出ていたのは「電子契約システム 派遣（4）」「電子契約システム 保育園（2）」で、どちらも題名の業務名が検索語とほぼ一致していた。
+// 検索需要の実測（Keyword Planner 2026-09）でも、検索されるのは「業種×業務×システム/ソフト/アプリ」の形。
+const SEARCH_NOUN: Record<string, string> = {
+  kintai: '勤怠管理システム', yoyaku: '予約システム', gijiroku: '議事録作成ツール', toiawase: '問い合わせ管理システム',
+  kokyaku: '顧客管理システム', seikyu: '請求書発行システム', meishi: '名刺管理アプリ', groupware: 'グループウェア',
+  bunsho: '文書管理システム', keiyaku: '電子契約システム', wiki: 'マニュアル作成ツール', anken: '案件・工程管理システム',
+  zaiko: '在庫管理システム', hikitsugi: '引き継ぎ・ナレッジ共有ツール', shoken: '商圏分析ツール', 'genba-kiroku': '作業報告アプリ',
+}
+const TITLE_RENAMED = '2026-11-07'
+function searchTitle(t: string, gslug: string): string {
+  const noun = SEARCH_NOUN[gslug]
+  const i = t.indexOf('｜')
+  if (!noun || i < 0) return t
+  const head = t.slice(0, i), tail = t.slice(i)
+  const sp = head.search(/[ 　]/)
+  if (sp < 0) return t   // 「業種 業務」の形でない題名（手で書いたもの）は変えない
+  return `${head.slice(0, sp)} ${noun}${tail}`
+}
+
 function pairPage(ind: MI, g0: MG): string {
   // 業種を限った製品（only）はその業種のページにだけ出す（保育園版の勤怠 2026-11-05）
   const g: MG = { ...g0, products: g0.products.filter((pr) => !pr.only || pr.only.includes(ind.slug)) }
   const url = `${BASE}/${ind.slug}/${g.slug}.html`
   const oss = ossByGyomu.get(g.slug) || []
   const c = pairContent.get(`${ind.slug}/${g.slug}`)
-  if (c) lastmodOf.set(url, c._generated)
-  const title = c ? c.title : fitLength(32,
+  // 題名を検索の呼び名にそろえた日（2026-11-07）より古ければ、その日を更新日にする（題名が実際に変わったので）
+  if (c) lastmodOf.set(url, c._generated > TITLE_RENAMED ? c._generated : TITLE_RENAMED)
+  const title = c ? searchTitle(c.title, g.slug) : fitLength(32,
     `${ind.name}の${g.name}を安くする｜OSSと内製化`,
     `${ind.name}の${g.name}｜OSSと内製化`,
     `${ind.name}の${g.name}を安くする`)
