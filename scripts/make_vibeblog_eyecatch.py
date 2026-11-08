@@ -28,11 +28,23 @@
 og:image とトップ画像を出し分けるので、ビルドより先に作る必要がある）→ deploy.sh vibeblog が --sync で送る。
 出力: /home/kojima/work/exbridge_jp/images/vibeblog/<slug>.png
 """
-import argparse, base64, ftplib, glob, hashlib, html, os, re, sys
+import argparse, base64, ftplib, glob, hashlib, html, json, os, re, sys
 
 VWORK_BLOG = "/home/kojima/work/vwork/blog"
 OUT = "/home/kojima/work/exbridge_jp/images/vibeblog"
 REMOTE = "/web/exbridge_jp/images/vibeblog"
+# 2026-11-08: 看板の材料が変わっても作り直さず、作り直しても同じ名前の画像は送られなかった（--sync は「サーバーに無いもの」だけ）。
+# og_stat を数字からキーワードに直した5本が、手で送るまで古い看板のままだった。材料の指紋と、送った画像の指紋を残して判定する。
+KEYS = "/home/kojima/work/kpayload/outputs/vibeblog-eyecatch-keys.json"
+SENT = "/home/kojima/work/kpayload/outputs/vibeblog-eyecatch-sent.json"
+
+
+def input_key(p):
+    return hashlib.sha1(json.dumps([p.get(k) for k in ("title", "kw", "stat", "stat_label", "stat_note", "fig", "tags")], ensure_ascii=False, default=str).encode()).hexdigest()[:12]
+
+
+def file_md5(path):
+    return hashlib.md5(open(path, "rb").read()).hexdigest()
 MASCOT = "data:image/png;base64," + base64.b64encode(
     open("/home/kojima/work/kurage_web/images/kurage-mascot-cutout.png", "rb").read()).decode()
 LOGO = "data:image/png;base64," + base64.b64encode(
@@ -262,12 +274,24 @@ def sync():
         have = {os.path.basename(x) for x in f.nlst()}
     except ftplib.error_perm:
         f.mkd(REMOTE); f.cwd(REMOTE); have = set()
-    todo = [p for p in sorted(glob.glob(os.path.join(OUT, "*.png"))) if os.path.basename(p) not in have]
-    for path in todo:
+    sent = json.load(open(SENT, encoding="utf-8")) if os.path.exists(SENT) else {}
+    first = not sent
+    todo = []
+    for p in sorted(glob.glob(os.path.join(OUT, "*.png"))):
+        n = os.path.basename(p); h = file_md5(p)
+        if n not in have:
+            todo.append((p, h))
+        elif first:
+            sent[n] = h   # 初回：サーバーにあるものは送ったとみなして指紋だけ残す
+        elif sent.get(n) != h:
+            todo.append((p, h))   # 作り直した画像（同じ名前で中身が変わった）
+    for path, h in todo:
         with open(path, "rb") as fh:
             f.storbinary("STOR " + os.path.basename(path), fh, blocksize=1 << 18)
+        sent[os.path.basename(path)] = h
     f.quit()
-    print(f"トップ画像: サーバーに無かった {len(todo)}枚を配置")
+    json.dump(sent, open(SENT, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    print(f"トップ画像: 無かった・作り直した {len(todo)}枚を配置")
 
 
 def deploy(files):
@@ -302,6 +326,9 @@ def main():
         sync(); return
     os.makedirs(OUT, exist_ok=True)
     posts = [p for p in load_posts() if not a.only or p["slug"] == a.only]
+    keys = json.load(open(KEYS, encoding="utf-8")) if os.path.exists(KEYS) else {}
+    if not keys:   # 初回：今ある画像の材料を記録するだけ（全部を作り直さない）
+        keys = {p["slug"]: input_key(p) for p in load_posts() if os.path.exists(os.path.join(OUT, p["slug"] + ".png"))}
     made = []
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
@@ -309,12 +336,16 @@ def main():
         page = b.new_page(viewport=dict(width=1200, height=630))
         for p in posts:
             path = os.path.join(OUT, p["slug"] + ".png")
-            if os.path.exists(path) and not a.force:
-                continue
+            ik = input_key(p)
+            old_k = keys.get(p["slug"])
+            if os.path.exists(path) and not a.force and (old_k is None or old_k == ik):
+                continue   # 材料（題・og_stat など）が前と同じなら作り直さない
             key, layout, size = render(page, p, path)
+            keys[p["slug"]] = ik
             made.append(path)
             print(f"  {p['slug'][:48]:48} {key:6} {layout:5} {size}")
         b.close()
+    json.dump(keys, open(KEYS, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print(f"作成 {len(made)}枚 / 記事 {len(posts)}本 → {OUT}")
     if a.all_deploy:
         deploy(sorted(glob.glob(os.path.join(OUT, "*.png"))))
