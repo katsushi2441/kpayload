@@ -1935,10 +1935,10 @@
   "featured": true,
   "summary": "Zabbix障害をAIが調査し、証拠付きレポートと運用ブログへまとめるインシデント対応システムです。",
   "description": "Zabbixのイベントを入口に、メトリクス、ログ、サービス状態を読み取り、警告と実害を分けた調査レポートを生成します。読み取りと変更操作を分離した運用を想定します。",
-  "license": "ライセンス未設定（公開リポジトリ）",
+  "license": "ソースコード非公開（当社の運用システム）",
   "japaneseStatus": "日本語の障害調査、通知、運用レポートに対応。",
   "officialUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
-  "githubUrl": "https://github.com/katsushi2441/kzabbix",
+  "githubUrl": null,
   "lpUrl": "https://kzabbix.exbridge.jp/kzabbix.html",
   "demoUrl": "https://kurage.exbridge.jp/zabbix/",
   "useCases": [

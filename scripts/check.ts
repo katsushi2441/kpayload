@@ -9,11 +9,12 @@ const catalog = JSON.parse(await fs.readFile(path.join(dist, 'catalog.json'), 'u
 if (catalog.length < 20) throw new Error(`Expected at least 20 OSS records, got ${catalog.length}`)
 if (new Set(catalog.map((item) => item.slug)).size !== catalog.length) throw new Error('Duplicate slugs found')
 
+// kzabbix は 2026-11-13 にリポジトリを private にしたので外した（GitHub リンクなしで掲載）
 const selfOwnedSlugs = [
   'aiknowledgecms', 'aimediapost', 'airadio', 'airadio-scripted-mv', 'aixec', 'kappstore',
   'karchitect', 'kcbrain', 'kclauncher', 'kfinanalyst', 'kfreqai', 'kfxai', 'kfxbrain',
   'kgeo', 'kmontage', 'ksbrain', 'ktajp', 'tradingagents-jp', 'kurl2gr', 'kvtuber',
-  'kzabbix', 'kurage', 'nofx', 'url2ai', 'url2brain', 'url2pub',
+  'kurage', 'nofx', 'url2ai', 'url2brain', 'url2pub',
 ]
 for (const slug of selfOwnedSlugs) {
   const item = catalog.find((entry) => entry.slug === slug) as { githubUrl?: string | null, lpUrl?: string | null } | undefined
