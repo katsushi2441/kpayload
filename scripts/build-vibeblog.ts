@@ -222,7 +222,20 @@ for (const p of loaded) {
   if (seen.has(p.slug)) { merged.push(p.slug); continue }
   seen.set(p.slug, p)
 }
-const posts = [...seen.values()].sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+// 同じ日付の記事は投稿した順（新しいものが上）に並べる（2026-11-13 ユーザー指示）。
+// 投稿時刻は、vwork に記事のファイルが最初に commit された時刻。まだ commit していないものは今。
+const postedAt = new Map<string, number>()
+{
+  const r = spawnSync('git', ['-C', VWORK, 'log', '--diff-filter=A', '--format=@%at', '--name-only', '--', 'blog', 'articles'], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })
+  let ts = 0
+  for (const line of (r.stdout || '').split('\n')) {
+    if (line.startsWith('@')) { ts = Number(line.slice(1)); continue }
+    const m = line.match(/^(?:blog|articles)\/(.+)\.md$/)
+    if (m && !postedAt.has(m[1])) postedAt.set(m[1], ts) // log は新しい順なので、最初に出たものが最後に追加された時刻
+  }
+}
+const posted = (p: Post) => postedAt.get(p.slug) ?? Date.now() / 1000
+const posts = [...seen.values()].sort((a, b) => (b.date || '').localeCompare(a.date || '') || posted(b) - posted(a))
 const blogPosts = posts.filter((p) => p.src === 'blog')
 const ossPosts = posts.filter((p) => p.src === 'articles')
 const SECTION = { blog: 'VWork Blog', articles: 'AI OSS技術解説' } as const
