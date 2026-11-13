@@ -61,6 +61,8 @@ THEMES = [
      dict(bg="#f2f6fa", ink="#13263a", accent="#2b6cb0", soft="#d9e6f3", label="システム障害と業務")),
     ("security", r"情報漏洩|情報漏えい|不正アクセス|サイバー攻撃|ランサムウェア|脆弱性",
      dict(bg="#fbf3f3", ink="#3d1416", accent="#b3262f", soft="#f4dcdd", label="セキュリティと業務")),
+    ("compliance", r"不正請求|不祥事|粉飾|改ざん|データ偽装",
+     dict(bg="#f8f5ef", ink="#33270f", accent="#9a6b12", soft="#efe4cc", label="企業不祥事と業務")),
     ("care",   r"介護|福祉|障害|看護|保育|子育て|就労|放課後|グループホーム",
      dict(bg="#fdf6f1", ink="#4a2618", accent="#d0643a", soft="#f7e1d4", label="福祉と公開データ")),
     ("data",   r"実測|ベンチ|計測|測った|比較|検証|問で|分析|データ分析",
