@@ -23,9 +23,17 @@ DATE = re.compile(rb'20\d\d-\d\d-\d\d(T[\d:.+Z-]+)?|20\d\d\xe5\xb9\xb4\d{1,2}\xe
 SKIP = {"canonical-map.json"}   # GitHub Pages 側の向け替え用の作業ファイル。公開しない
 
 
+# サイトマップの lastmod は中身そのもの（追記した記事の lastmod を Google に伝える）。日付を伏せると、
+# 追記で lastmod だけ変わったときに送られない（2026-11-14 実測）。ただし一覧ページ（…/ で終わる URL）は
+# build のたびに今日の日付になるので、その lastmod だけ伏せて、毎回送らないようにする。
+DIR_LASTMOD = re.compile(rb'(<loc>[^<]*/</loc>\s*<lastmod>)[^<]*(</lastmod>)')
+
+
 def digest(path):
     b = open(path, "rb").read()
-    if path.endswith((".html", ".xml", ".json", ".txt")):
+    if os.path.basename(path).startswith("sitemap") and path.endswith(".xml"):
+        b = DIR_LASTMOD.sub(rb"\1D\2", b)
+    elif path.endswith((".html", ".xml", ".json", ".txt")):
         b = DATE.sub(b"D", b)
     return hashlib.sha1(b).hexdigest()
 
