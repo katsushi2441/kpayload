@@ -409,9 +409,14 @@ function categoryPage(category: string, projects: Project[], all: Project[]): st
   // 完成品(oss)だけだと devsupport/devtools/sitegen のように空になる分類があるので、掲載全件から出す
   // 分類のページにも当社製品の枠を出す（2026-10-04。CRM の分類ページから商談管理へ誘導が無かった）
   const catRel = relatedPanel(relatedProducts({ slug: '', name: label, category }), `oss-c-rel-${category}`, h(label), `${h(label)}を、当社の製品で`)
+  // 同じ語を exbridge.jp/ai-system/c/<分類>/ と取り合う分類は、そちらの比較ページへ寄せる（2026-11-14 CRM：「オープンソース crm」等の着地が9〜11ページに散っていた）
+  const aiSystemCompare: Record<string, { key: string; text: string }> = { crm: { key: 'crm', text: '顧客管理システム（CRM）のオープンソースを、ライセンス・日本語対応・更新状況で比べた一覧（エクスブリッジ）' } }
+  const catCompare = aiSystemCompare[category]
+    ? `<p class="lead" style="margin-top:10px"><a class="btn" href="https://exbridge.jp/ai-system/c/${attr(aiSystemCompare[category].key)}/#ref=kurage-oss-c-${attr(category)}">${h(aiSystemCompare[category].text)}</a></p>`
+    : ''
   const cmpHtml = compareTable(list, { base: catalogBase, ref: `oss-c-${category}`, noun: label, h, attr, today: cmpToday, all: list })
   const body = `<main class="wrap"><nav class="crumb" aria-label="パンくず"><a href="${catalogBase}/">OSS一覧</a> / ${h(label)}</nav>
-<section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${categorySeo[category] ? h(categorySeo[category].lead) + '\n' : ''}${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p><div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
+<section class="detail-hero"><span class="eyebrow">${h(label)} × VIBE CODING</span><h1>${h(label)}のOSS一覧</h1><p class="lead">${categorySeo[category] ? h(categorySeo[category].lead) + '\n' : ''}${h(label)}に使えるオープンソースを${list.length}件掲載しています。ライセンス、日本語対応の実測結果、GitHubのスター数を比較して選べます。</p>${catCompare}<div class="stats"><span class="stat"><b>${list.length}</b>件</span><span class="stat"><b>${ossCount}</b>カスタマイズ可</span><span class="stat"><b>${protoCount}</b>開発に使う</span></div></section>
 ${catRel ? `<section class="section">${catRel}</section>` : ''}
 <section class="section"><div class="tools"><input class="search" id="search" type="search" placeholder="${attr(label)}のOSSを検索" aria-label="${attr(label)}のOSSを検索"><div class="filters" role="group" aria-label="種別"><button class="filter active" type="button" data-kind="all">種別すべて</button><button class="filter" type="button" data-kind="oss">カスタマイズ可</button><button class="filter" type="button" data-kind="prototype">開発に使う</button></div></div><div class="grid" id="oss-grid">${list.map(card).join('')}</div><p class="empty" id="empty">条件に一致するOSSはありません。</p></section>
 ${cmpHtml}
