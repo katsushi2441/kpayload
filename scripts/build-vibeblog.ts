@@ -129,6 +129,7 @@ type Post = {
   slug: string
   src: 'articles' | 'blog'
   date: string
+  updated: string        // 追記した日（frontmatter の updated。無ければ空）
   title: string          // 記事の見出し（h1）
   seoTitle: string       // <title> 用の短い題
   description: string
@@ -203,6 +204,8 @@ async function load(dir: 'articles' | 'blog'): Promise<Post[]> {
       .replace(new RegExp(`${GHP}/blog/(?![A-Za-z0-9._-]+\\.html)`, 'g'), `${BASE}/`)
     out.push({
       slug, src: dir, date, title,
+      // 追記した記事は updated に日付を書く。dateModified とサイトマップの lastmod に使う（2026-11-14）
+      updated: fmGet(fm, 'updated').slice(0, 10),
       seoTitle: fmGet(fm, 'seo_title') || title,
       description: fmGet(fm, 'description'),
       headKeyword: fmGet(fm, 'head_keyword'),
@@ -565,7 +568,7 @@ function postHtml(p: Post, idx: number): string {
   const ld = [{
     '@context': 'https://schema.org', '@type': 'BlogPosting', '@id': `${url}#article`,
     headline: p.title, description: desc, url, inLanguage: 'ja',
-    datePublished: p.date || undefined, dateModified: p.date || undefined,
+    datePublished: p.date || undefined, dateModified: p.updated || p.date || undefined,
     keywords: [p.headKeyword, ...p.topics].filter(Boolean).join(', '),
     articleSection: SECTION[p.src],
     wordCount: p.chars,
@@ -613,7 +616,7 @@ function postHtml(p: Post, idx: number): string {
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">バイブコーディング的仕事ブログ</a>${p.src === 'articles' ? ` ／ <a href="${BASE}/oss.html">AI OSS技術解説</a>` : ''}</nav>
 ${img ? `<figure class="vb-eyecatch"><img src="${attr(img)}" width="1200" height="630" alt="${attr(p.title)}" loading="eager" decoding="async"></figure>` : ''}
 <h1>${h(p.title)}</h1>
-<p class="meta">${p.src === 'articles' ? '<span>AI OSS技術解説</span>' : ''}${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
+<p class="meta">${p.src === 'articles' ? '<span>AI OSS技術解説</span>' : ''}${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}${p.updated && p.updated !== p.date ? `<span>${h(dateJa(p.updated))}追記</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
     p.headKeyword ? `<span>${h(p.headKeyword)}</span>` : ''}</p>
 ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 <div class="vb-share">
@@ -795,7 +798,7 @@ const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>${BASE}/</loc><lastmod>${TODAY}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
 ${ossPosts.length ? `<url><loc>${BASE}/oss.html</loc><lastmod>${ossPosts[0].date || TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>` : ''}
-${posts.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${p.date || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
+${posts.map((p) => `<url><loc>${BASE}/${p.slug}.html</loc><lastmod>${p.updated || p.date || TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`).join('\n')}
 </urlset>`
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), sm, 'utf8')
 
