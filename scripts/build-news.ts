@@ -66,6 +66,18 @@ function flowLine(x: Item, ref: string): string {
   const fs2 = flowFor(x)
   return fs2.length ? `<p class="nc-trk">予算・事業・成果までの流れ：${fs2.map((f) => `<a href="${FLOW}/${attr(f.slug)}#ref=${ref}">政策の流れトラッカー「${h(f.name)}」</a>`).join('　')}</p>` : ''
 }
+/**
+ * 「次に読む」（2026-11-16 media mesh の考察）。ChatGPT はこのページをよく読むが、AI の答えから来た人が次へ進まない（13%）。
+ * 答えから来た人がすぐ深い記録へ進めるよう、見出しの直下に行き先を3つまで並べる（国会トラッカー・政策の流れ・同じテーマのニュース）。
+ */
+function nextBox(x: Item, sameCount: number): string {
+  const li: string[] = []
+  if (x.tracker) li.push(`<li><a href="${attr(x.tracker)}#ref=exbridge-news-next">国会でこのテーマを誰が質問し、政府が何と答えたか（国会トラッカー「${h(x.trackerName || 'テーマ')}」）</a></li>`)
+  else if (x.card) li.push(`<li><a href="${attr(x.card)}#ref=exbridge-news-next">${h(x.cardTitle || 'このニュースに関係する記録')}</a></li>`)
+  for (const f of flowFor(x).slice(0, 1)) li.push(`<li><a href="${FLOW}/${attr(f.slug)}#ref=exbridge-news-next">計画・予算・成果までの流れ（政策の流れ「${h(f.name)}」）</a></li>`)
+  if (sameCount) li.push(`<li><a href="#same">同じテーマのほかのニュース（${sameCount}件）</a></li>`)
+  return li.length ? `<section class="nc-next"><b>次に読む</b><ul>${li.join('')}</ul></section>` : ''
+}
 function flowBox(list: Item[]): string {
   const m = new Map<string, { f: FlowField; n: number }>()
   for (const x of list) for (const f of flowFor(x)) m.set(f.slug, { f, n: (m.get(f.slug)?.n || 0) + 1 })
@@ -118,6 +130,7 @@ const styles = `<style>
 .nc-trk{font-size:13px;margin:0}.nc-lead-line{font-size:13px;color:#425560;margin:0}.nc-trk a{color:#0a726b}
 .nc-btns{display:flex;gap:8px;margin-top:auto}.nc-btns>*{flex:1;text-align:center;border-radius:8px;padding:8px 6px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
 .nc-cp{border:1px solid #0a7a6e;background:#fff;color:#0a7a6e}.nc-x{background:#111;color:#fff;text-decoration:none;border:1px solid #111}
+.nc-next{background:#eef8f6;border:1px solid #b9e0da;border-radius:12px;padding:12px 16px;margin:14px 0 4px}.nc-next b{display:block;font-size:13px;color:#0a726b;margin-bottom:4px}.nc-next ul{margin:0;padding-left:1.2em;font-size:14.5px;line-height:1.8}.nc-next a{color:#0a5f59;font-weight:700}
 .nc-box{background:#fff;border:1px solid #e3eaec;border-radius:12px;padding:14px 16px;margin:22px 0}
 .nc-box h2{font-size:17px;margin:0 0 8px}.nc-box ul{margin:0;padding-left:20px}.nc-box li{margin:3px 0}
 .nc-days{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px}
@@ -244,9 +257,9 @@ for (const d of days) {
 <h1>${h(dayJa(d))}の${NAME}</h1><p class="nc-sub">${SUB}</p>
 <p class="nc-lead">${h(lead)}</p>
 ${nav}
+${trackerBox(list)}
 ${filters(list)}
 ${daySection(d, list, 'none')}
-${trackerBox(list)}
 ${flowBox(list)}
 ${nav}
 </main>${styles}`
@@ -266,6 +279,7 @@ for (const x of withId) {
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">${NAME}</a> ／ <a href="${BASE}/${x.day}.html">${h(dayJa(x.day))}</a></nav>
 <h1>${h(x.headline)}</h1>
 <p class="nc-src">${h(x.source)}・${h(dayJa(x.day))} ${h(x.time)}の投稿より　<a href="${attr(x.newsUrl || x.post)}" target="_blank" rel="noopener nofollow">元の記事を読む</a></p>
+${nextBox(x, same.length)}
 <section class="nc-box"><h2>このニュースに関係する国会の記録</h2>
 ${x.lead ? `<p>${h(x.lead)}</p>` : ''}
 <a class="nc-card" href="${attr(x.card)}#ref=exbridge-news-item">${x.cardImage ? `<img src="${attr(x.cardImage)}" alt="${attr(x.cardTitle)}" loading="lazy" width="1200" height="630">` : ''}<span>${h(x.cardTitle || x.card)}</span></a>
@@ -279,7 +293,7 @@ ${devLink(x)}
 ${(() => { const k = kappLine(x.headline, 'news-kapp', h); return k ? `<p class="nc-note">${k}</p>` : '' })()}
 <div class="nc-btns" style="max-width:420px;margin-top:10px"><button type="button" class="nc-cp" data-copy="${attr(shareText(x))}">投稿文をコピー</button><a class="nc-x" href="${attr('https://x.com/intent/post?' + new URLSearchParams({ text: shareText(x) }).toString())}" target="_blank" rel="noopener">Xに投稿</a></div>
 </section>
-${same.length ? `<section class="nc-box"><h2>同じテーマのほかのニュース</h2><ul>${same.map((y) => `<li><a href="${attr(itemUrl(y))}">${h(y.headline)}</a>（${h(y.source)}・${h(dayJa(y.day))}）</li>`).join('')}</ul></section>` : ''}
+${same.length ? `<section class="nc-box" id="same"><h2>同じテーマのほかのニュース</h2><ul>${same.map((y) => `<li><a href="${attr(itemUrl(y))}">${h(y.headline)}</a>（${h(y.source)}・${h(dayJa(y.day))}）</li>`).join('')}</ul></section>` : ''}
 <p class="nc-days"><a href="${BASE}/${x.day}.html">${h(dayJa(x.day))}のカード一覧</a><a href="${BASE}/">最新のカード</a></p>
 <p class="nc-note">見出しは${h(x.source)}の投稿の1行目です。記事の中身は元の記事でご確認ください。カードは国会会議録・質問主意書・日本銀行の統計などの公開データから、株式会社エクスブリッジが作っています。</p>
 </main>${styles}`
