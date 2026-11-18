@@ -19,7 +19,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 import { SITE, KURAGE } from './site'
-import { h, attr, fitLength, shell as baseShell, json } from './page-shell'
+import { h, attr, fitLength, shell as baseShell, json, hashRefUrl } from './page-shell'
 import { loadKappTopics, kappLine } from './kapp-topic-links'
 
 type Item = { day: string; time: string; source: string; post: string; newsUrl?: string; headline: string; card: string; kind: string
@@ -87,6 +87,8 @@ function flowBox(list: Item[]): string {
 ${top.length ? `<ul>${top.map((v) => `<li><a href="${FLOW}/${attr(v.f.slug)}#ref=exbridge-news-list">${h(v.f.name)}</a>（${v.n}件のニュース）</li>`).join('')}</ul>` : ''}
 <p class="nc-note"><a href="${FLOW}/#ref=exbridge-news-list">政策の流れトラッカーの一覧（すべての分野）</a></p></section>`
 }
+// カードの URL に付いている ?ref=（X 返信の計測）は外す。ページの側で #ref= を付ける（?ref= は Google・Bing が別URLとして拾う。2026-11-19）
+for (const x of data.items) if (x.card && !x.card.slice(x.card.indexOf('?') + 1).includes('#')) x.card = hashRefUrl(x.card).replace(/#ref=[^#]*$/, '')
 const items = data.items.filter((x) => x.headline && x.card)
 const days = [...new Set(items.map((x) => x.day))].sort().reverse()
 const dayJa = (d: string) => d.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_, y, m, dd) => `${y}年${Number(m)}月${Number(dd)}日`)
@@ -220,7 +222,7 @@ function ld(title: string, url: string, list: Item[]) {
   return [
     { '@context': 'https://schema.org', '@type': 'CollectionPage', name: title, url, inLanguage: 'ja', isPartOf: { '@type': 'WebSite', name: '株式会社エクスブリッジ', url: `${SITE}/` },
       mainEntity: { '@type': 'ItemList', numberOfItems: list.length,
-        itemListElement: list.slice(0, 50).map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: x.card, name: x.cardTitle || x.headline })) } },
+        itemListElement: list.slice(0, 50).map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: hashRefUrl(x.card), name: x.cardTitle || x.headline })) } },  // 計測の ref は #ref=（2026-11-19）
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: NAME, item: `${BASE}/` },
