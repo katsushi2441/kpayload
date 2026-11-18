@@ -60,11 +60,11 @@ for (const item of catalog) {
   if (item.funnel === 'prototype') {
     if (!html.includes('を使ったシステム開発')) throw new Error(`${item.slug}: prototype development explanation is missing`)
     if (!html.includes(`ref=proto-${item.slug}`) || !html.includes('/vibe-prototype.html')) throw new Error(`${item.slug}: prototype CTA is missing`)
-    if (html.includes('/vibe-oss.html?ref=')) throw new Error(`${item.slug}: prototype page must not offer OSS customization`)
+    if (/\/vibe-oss\.html(?:[?#]ref=|#flow)/.test(html)) throw new Error(`${item.slug}: prototype page must not offer OSS customization`)
     if (html.includes('をバイブコーディングでカスタマイズ</h2>')) throw new Error(`${item.slug}: prototype page must not claim the tool itself is customizable`)
   } else {
     if (!html.includes('をバイブコーディングでカスタマイズ')) throw new Error(`${item.slug}: OSS customization explanation is missing`)
-    if (!html.includes(`ref=oss-${item.slug}`) || !html.includes('/vibe-oss.html')) throw new Error(`${item.slug}: customization CTA is missing`)
+    if (!html.includes('/vibe-oss.html#flow')) throw new Error(`${item.slug}: customization CTA is missing`)
   }
   const hasBrainLink = html.includes(`data-brain-for="${item.slug}"`)
   if (hasBrainLink !== Boolean(item.brainUrl)) throw new Error(`${item.slug}: Brain link does not match catalog data`)

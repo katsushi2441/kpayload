@@ -10,6 +10,44 @@
 import { SITE, KURAGE, TRIAL, GA } from './site'
 import { DEMO_CSS } from './demos'
 
+/**
+ * 自社ページへのリンクの計測 ref を ?ref= から #ref= に置き換える（2026-11-19）。
+ *
+ * なぜ: ?ref= だと Google・Bing が ref ごとに別のURLとして拾う。Bing Webmaster から
+ * 「多数のページが同じ canonical を指している」と警告（ai-it-komon.html?ref=… など 2,584 URL）。
+ * simpletrack は location.href ごと記録するので #ref= でも数えられる。
+ * - chat.php はサーバー側で ?ref= を読むので替えない。simpletrack.php は計測そのものなので替えない。
+ * - ほかのクエリ（?subject=… 等）は残し、ref だけを抜いて #ref= を後ろに付ける。
+ * - すでに目印（#form 等）があるときは、目印を残して ref を捨てる（# を2つにしない）。
+ * - 対象は exbridge.jp・kurage.exbridge.jp・kappstore.exbridge.jp と相対リンク。外部サイトは触らない。
+ * 同じ処理の Python 版: scripts/hash_ref_links.py（生成済みの手置きページ用）。
+ */
+const REF_OWN_HOST = /^(?:https?:)?\/\/(?:www\.)?(?:exbridge\.jp|kurage\.exbridge\.jp|kappstore\.exbridge\.jp)(?=[/?#]|$)/i
+export function hashRefUrl(u: string): string {
+  const relative = !/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(u)
+  if (!relative && !REF_OWN_HOST.test(u)) return u
+  if (/(?:^|\/)(?:chat|simpletrack)\.php(?:[/?#]|$)/i.test(u)) return u
+  const hi = u.indexOf('#')
+  const pre = hi < 0 ? u : u.slice(0, hi)
+  const frag = hi < 0 ? '' : u.slice(hi + 1)
+  const qi = pre.indexOf('?')
+  if (qi < 0) return u
+  const query = pre.slice(qi + 1)
+  const sep = query.includes('&amp;') ? '&amp;' : '&'
+  const keep: string[] = []
+  let ref: string | null = null
+  for (const p of query.split(/&(?:amp;)?/)) {
+    if (ref === null && p.startsWith('ref=')) ref = p.slice(4)
+    else if (p !== '') keep.push(p)
+  }
+  if (ref === null) return u
+  const base = pre.slice(0, qi) + (keep.length ? '?' + keep.join(sep) : '')
+  return frag ? `${base}#${frag}` : `${base}#ref=${ref}`
+}
+export function hashRefLinks(html: string): string {
+  return html.replace(/(\shref=)(["'])([^"']*?[?&]ref=[^"']*)\2/gi, (_m, a: string, q: string, u: string) => `${a}${q}${hashRefUrl(u)}${q}`)
+}
+
 type TextItem = { text?: string | null }
 export type Project = {
   name: string; slug: string; category: string; summary: string; description: string
@@ -179,6 +217,11 @@ export function exbAbout(ref: string): string {
 }
 
 export function shell(title: string, desc: string, canonical: string, body: string, ld: unknown[], opts: ShellOpts): string {
+  // 計測の ref は #ref= に（hashRefLinks の説明を参照）
+  return hashRefLinks(shellRaw(title, desc, canonical, body, ld, opts))
+}
+
+function shellRaw(title: string, desc: string, canonical: string, body: string, ld: unknown[], opts: ShellOpts): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${h(title)}</title><meta name="description" content="${attr(desc)}"><link rel="canonical" href="${attr(canonical)}">

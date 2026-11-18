@@ -10,7 +10,7 @@ import config from '../src/payload.config'
 import { DEMOS, PROTO, demoPanel, demoUrl, DEMO_CSS } from './demos'
 import { categoryLabels } from './site'
 import { compareTable } from './compare-table'
-import { exbAbout } from './page-shell'
+import { exbAbout, hashRefLinks } from './page-shell'
 
 type TextItem = { text?: string | null }
 type FAQ = { question?: string | null; answer?: string | null }
@@ -169,7 +169,7 @@ function funnelCopy(project: Project) {
     return {
       kind: 'prototype' as Funnel,
       ref: `proto-${project.slug}`,
-      ctaUrl: `${publicBase}/vibe-prototype.html?ref=proto-${project.slug}`,
+      ctaUrl: `${publicBase}/vibe-prototype.html#ref=proto-${project.slug}`,
       hubUrl: `${publicBase}/vibe-prototype.html`,
       eyebrow: '開発に使うツール',
       guideTitle: `${name}を使ったシステム開発`,
@@ -193,7 +193,8 @@ function funnelCopy(project: Project) {
   return {
     kind: 'oss' as Funnel,
     ref: `oss-${project.slug}`,
-    ctaUrl: `${publicBase}/vibe-oss.html?ref=oss-${project.slug}#flow`,
+    // 計測の ref は #ref= に置く決まり。#flow（申込の流れ）へ飛ばすので ref は付けない（# を2つにしない。2026-11-19）
+    ctaUrl: `${publicBase}/vibe-oss.html#flow`,
     hubUrl: `${publicBase}/vibe-oss.html`,
     eyebrow: `${categoryLabel(project.category)} × VIBE CODING`,
     // このページは技術者向けの「OSS情報」。業務での使い方と導入の進め方は exbridge.jp/ai-system/<slug>/ に分けた
@@ -249,6 +250,11 @@ function pvRailHtml(tags?: string[]): string {
 }
 
 function shell(title: string, description: string, canonical: string, body: string, structuredData: unknown[], pvTags?: string[], ogImage?: string): string {
+  // 計測の ref は #ref= に（page-shell.ts の hashRefLinks の説明を参照。2026-11-19）
+  return hashRefLinks(shellRaw(title, description, canonical, body, structuredData, pvTags, ogImage))
+}
+
+function shellRaw(title: string, description: string, canonical: string, body: string, structuredData: unknown[], pvTags?: string[], ogImage?: string): string {
   return `<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${h(title)}</title><meta name="description" content="${attr(description)}"><link rel="canonical" href="${attr(canonical)}">
@@ -511,7 +517,7 @@ const urls = [`${catalogBase}/`, ...categoryList.map((category) => `${catalogBas
 await fs.writeFile(path.join(distRoot, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${h(url)}</loc><changefreq>weekly</changefreq><priority>${url === `${catalogBase}/` ? '0.9' : url.includes('/c/') ? '0.8' : '0.7'}</priority></url>`).join('\n')}\n</urlset>\n`)
 await fs.writeFile(path.join(distRoot, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Kurage OSS Catalog</title><link>${catalogBase}/</link><description>業務OSSの日本語導入とバイブコーディングによるカスタマイズを案内するカタログ</description>${projects.map((project) => `<item><title>${h(project.name)}</title><link>${catalogBase}/${h(project.slug)}/</link><guid>${catalogBase}/${h(project.slug)}/</guid><description>${h(project.summary)} バイブコーディングによる自社向けカスタマイズとサーバー導入に対応。</description></item>`).join('')}</channel></rss>\n`)
 await fs.writeFile(path.join(distRoot, 'llms.txt'), `# Kurage Payload CMS - OSS Catalog\n\n> 業務OSSを日本語で比較し、バイブコーディングで自社向けにカスタマイズするためのカタログ。\n\n## OSS customization service\n\n- Service: OSSの日本語化、画面・項目・権限・通知・外部連携の変更、サーバー導入、稼働確認\n- Method: 完成済みOSSを土台に、AIエージェントとの対話によるバイブコーディングで変更\n- URL: ${publicBase}/vibe-oss.html\n\n## Prototype development service\n\n- Service: AI開発ツールを組み込んだ自社向けシステムの開発、デモ制作、サーバー導入、ソースコード納品\n- Method: 対象ツールを土台に、AIエージェントとの対話によるバイブコーディングで実装\n- URL: ${publicBase}/vibe-prototype.html\n\n## Categories\n\n${categoryList.map((category) => `- [${categoryLabel(category)}](${catalogBase}/c/${category}/): ${projects.filter((item) => item.category === category).length}件`).join('\n')}\n\n## Catalog\n\n${projects.map((project) => `- [${project.name}](${catalogBase}/${project.slug}/): ${project.summary} ${funnelCopy(project).catalogNote}`).join('\n')}\n`)
-await fs.writeFile(path.join(root, 'dist', 'vibe-oss-catalog.html'), vibeSnippet(projects))
+await fs.writeFile(path.join(root, 'dist', 'vibe-oss-catalog.html'), hashRefLinks(vibeSnippet(projects)))
 
 payload.logger.info(`Exported ${projects.length} OSS pages and ${categoryList.length} category pages to ${distRoot}`)
 process.exit(0)

@@ -19,7 +19,7 @@ import { getPayload } from 'payload'
 import config from '../src/payload.config'
 import { SITE, KURAGE, TRIAL } from './site'
 import { DEMOS, PROTO, demoUrl } from './demos'
-import { TODAY, h, attr, shell as baseShell, fitLength, type Project } from './page-shell'
+import { TODAY, h, attr, shell as baseShell, fitLength, hashRefLinks, type Project } from './page-shell'
 import { prodById } from './kapp-related'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -796,7 +796,8 @@ for (const p of pages) {
 <div class="cat-grid">${ais.map((a) => `<a class="cat-card" href="${BASE}/${attr(a.slug)}.html?ref=solution-${attr(p.slug)}"><b>${h(a.name)}（開発中）</b><span>${h(a.kicker)}</span></a>`).join('')}</div>
 </div></section>\n</main>`)
   }
-  await fs.writeFile(path.join(distRoot, `${p.slug}.html`), html)
+  // shell() のあとで足した欄にも計測の ref があるので、書く直前にもう一度 #ref= にそろえる（2026-11-19）
+  await fs.writeFile(path.join(distRoot, `${p.slug}.html`), hashRefLinks(html))
 }
 let pairCount = 0
 for (const ind of matrix.industries) {
