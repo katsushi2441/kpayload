@@ -25,9 +25,9 @@ import sys
 OWN = re.compile(r'^(?:https?:)?//(?:www\.)?(?:exbridge\.jp|kurage\.exbridge\.jp|kappstore\.exbridge\.jp)(?=[/?#]|$)', re.I)
 SCHEME = re.compile(r'^(?:[a-z][a-z0-9+.-]*:|//)', re.I)
 KEEP = re.compile(r'(?:^|/)(?:chat|simpletrack)\.php(?:[/?#]|$)', re.I)
-HREF = re.compile(r'''(\shref=)(["'])([^"']*?[?&]ref=[^"']*)\2''', re.I)
+HREF = re.compile(r'''(\shref=)(["'])([^"']*?(?:[?&]|&amp;)ref=[^"']*)\2''', re.I)
 # --php-strings: PHP の配列などに書いたURLの文字列（'https://…?ref=…' / 'xxx.php?ref=…'）も直す
-PHPSTR = re.compile(r"(')((?:https?://[^'\s]+|[a-z0-9_][a-z0-9_./-]*\.(?:php|html)/?[^'\s]*|oss/[^'\s]*)[?&]ref=[^'\s]*)(')", re.I)
+PHPSTR = re.compile(r"(')((?:https?://[^'\s]+|[a-z0-9_][a-z0-9_./-]*\.(?:php|html)/?[^'\s]*|oss/[^'\s]*)(?:[?&]|&amp;)ref=[^'\s]*)(')", re.I)
 EXTS = ('.html', '.htm', '.php')
 
 

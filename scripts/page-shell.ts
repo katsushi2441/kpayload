@@ -45,7 +45,7 @@ export function hashRefUrl(u: string): string {
   return frag ? `${base}#${frag}` : `${base}#ref=${ref}`
 }
 export function hashRefLinks(html: string): string {
-  return html.replace(/(\shref=)(["'])([^"']*?[?&]ref=[^"']*)\2/gi, (_m, a: string, q: string, u: string) => `${a}${q}${hashRefUrl(u)}${q}`)
+  return html.replace(/(\shref=)(["'])([^"']*?(?:[?&]|&amp;)ref=[^"']*)\2/gi, (_m, a: string, q: string, u: string) => `${a}${q}${hashRefUrl(u)}${q}`)
 }
 
 type TextItem = { text?: string | null }
