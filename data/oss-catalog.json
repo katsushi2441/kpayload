@@ -6580,7 +6580,7 @@
    },
    {
     "question": "OpenDolphinのライセンスはGPLの何版ですか？",
-    "answer": "本家（dolphin-dev/OpenDolphin）は、READMEでは「GNU GPL3」、LICENSEファイルでは「GPLv2またはそれ以降」と書かれていて、版の表記が食い違っています。フォークのOpenDolphin-2.7mは、LICENSEファイルで「OpenDolphin 2.7.0b, (c)Life Sciences Computing Corp. のフォーク」「GPLv2またはそれ以降」と明記しています。著作権表示の扱いには関係者のあいだで見解の相違があるので、カスタマイズして配布する前に、もとにするソースのライセンスと著作権表示を確認してください。"
+    "answer": "本家（dolphin-dev/OpenDolphin）は、READMEでは「GNU GPL3」、LICENSEファイルでは「GPLv2またはそれ以降」と書かれていて、版の表記が食い違っています。フォークのOpenDolphin-2.7mは、LICENSEファイルで「OpenDolphin 2.7.0b, (c)Life Sciences Computing Corp. のフォーク」と書き、GPL version 3 を明記しています（2026年11月時点）。著作権表示の扱いには関係者のあいだで見解の相違があるので、カスタマイズして配布する前に、もとにするソースのライセンスと著作権表示を確認してください。"
    },
    {
     "question": "保険請求（レセプト）までできますか？",
@@ -6589,6 +6589,203 @@
    {
     "question": "国の標準型電子カルテや認証制度の対象になりますか？",
     "answer": "なりません。厚生労働省の標準仕様と認証制度が対象にしているのはクラウド型の製品で、2027年4月から認証を受けた製品の提供を目指しています。国の補助や電子カルテ情報共有サービスへの対応を重視するなら、認証製品か標準型電子カルテを待つほうが確実です。"
+   },
+   {
+    "question": "いま保守されているフォークはありますか？",
+    "answer": "猪股弘明さん（PHAZOR合同会社）が保守している OpenDolphin-2.7m（GitHub Hiroaki-Inomata/OpenDolphin-2.7m）があります。2.7.0b をもとに、データ構造は同じまま不具合の修正やファイルバックアップの機能を加え、JakartaEE・Java17 で動きます。2018年に OpenOcean へ名前を変え、いまは作り直しが進んでいます。詳しくは、このカタログの「OpenOcean / OpenDolphin-2.7m」のページにまとめています。"
+   }
+  ]
+ },
+ {
+  "name": "OpenOcean / OpenDolphin-2.7m",
+  "slug": "openocean",
+  "category": "medical",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "日本製の電子カルテ OpenDolphin 2.7.0b を受け継いだフォークです（GPL version 3）。猪股弘明さん（PHAZOR合同会社）が保守していて、JakartaEE・Java17 で動きます。",
+  "description": "OpenDolphin-2.7m は、日本の診療所向けのオープンソース電子カルテ OpenDolphin（本家 dolphin-dev/OpenDolphin・2.7.0b）の修正版で、精神科医で開発者の猪股弘明さん（PHAZOR合同会社）が保守しています（GitHub Hiroaki-Inomata/OpenDolphin-2.7m・2016年作成）。README によると、クライアントの見た目とデータ構造は 2.7 と同じで、不具合の修正に加えてファイルバックアップの機能を持ち、JakartaEE・Java17 で動きます。ORCA（日医標準レセプトソフト）と連携する本家の作りも受け継いでいます。2018年5月に、独自の機能が増えたことから OpenOcean に名前を変えました。OpenOcean のリポジトリ（air-h-128k-il/OpenOcean）は、いまは README だけで、作り直しが進んでいます（OpenOcean 2.0 → DolphORCA → OceanMini）。その一部は OceanMini-OpenSource（GPL version 3・C++17・Mac・Windows・Linux を動作環境に挙げる。組み込みの Web サーバー Crow は BSD 3-Clause で LICENSE_third_party に記載）として公開されています。本家 OpenDolphin については、このカタログの「OpenDolphin」のページにまとめています。著作権表示の扱いには関係者のあいだで見解の相違があるので、カスタマイズして配布する前に、もとにするソースの LICENSE と著作権表示を確認してください。",
+  "license": "GPL-3.0（LICENSEファイル・2026年11月時点）",
+  "licenseTier": "osi-copyleft",
+  "licenseNote": "OpenDolphin-2.7m の LICENSE は「OpenDolphin 2.7.0b, (c)Life Sciences Computing Corp. のフォーク」と書き、GNU GPL version 3 を明記（2026-11-22 に GPLv2 から変更）。OceanMini-OpenSource も GPL version 3。",
+  "japaneseStatus": "日本製で、画面も用語も日本語です。",
+  "officialUrl": "https://phazor.info/OpenOcean/",
+  "githubUrl": "https://github.com/Hiroaki-Inomata/OpenDolphin-2.7m",
+  "stars": 5,
+  "language": "Java",
+  "githubCreatedAt": "2016-07-12T02:47:17Z",
+  "githubPushedAt": "2026-11-22T22:10:45Z",
+  "useCases": [
+   {
+    "text": "OpenDolphin 2.7 系の電子カルテを、保守の続くフォークで動かす"
+   },
+   {
+    "text": "ORCA（日レセ）と連携する診療所の電子カルテ"
+   },
+   {
+    "text": "カルテのファイルバックアップを自院で取る"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "OpenDolphin 2.7m"
+   },
+   {
+    "text": "OpenOcean 電子カルテ"
+   },
+   {
+    "text": "電子カルテ オープンソース"
+   },
+   {
+    "text": "OpenDolphin Java17"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "本家の OpenDolphin とどう違いますか？",
+    "answer": "本家（dolphin-dev/OpenDolphin）の最終版は2018年の2.7.1で、リポジトリの更新は2023年4月が最後です。OpenDolphin-2.7m は 2.7.0b をもとにしたフォークで、クライアントの見た目とデータ構造は 2.7 と同じまま、不具合の修正とファイルバックアップの機能が加わり、JakartaEE・Java17 で動くように手が入っています（2026年11月にも更新）。"
+   },
+   {
+    "question": "OpenOcean と OpenDolphin-2.7m の関係は？",
+    "answer": "OpenDolphin-2.7m が2018年5月に OpenOcean へ名前を変えました。その後 OpenOcean は作り直しに入り（OpenOcean 2.0 → DolphORCA → OceanMini）、air-h-128k-il/OpenOcean のリポジトリはいまは README だけです。2.7m のリポジトリは README に「こちらはこちらで残しておきます」とあり、更新が続いています。"
+   },
+   {
+    "question": "ライセンスは？",
+    "answer": "OpenDolphin-2.7m の LICENSE ファイルは、「OpenDolphin 2.7.0b, (c)Life Sciences Computing Corp. のフォーク」と書き、GPL version 3 を明記しています（2026年11月時点。2026年11月22日に GPLv2 から変更）。OceanMini-OpenSource も GPL version 3 で、組み込みの Web サーバー Crow は別のライセンス（BSD 3-Clause）として LICENSE_third_party に書かれています。"
+   },
+   {
+    "question": "国の標準型電子カルテや認証制度の対象になりますか？",
+    "answer": "なりません。厚生労働省の標準仕様と認証制度が対象にしているのはクラウド型の製品です。自院のサーバーで動かす場合、安全管理ガイドラインへの対応や停止時の備えは導入する医療機関側で用意する必要があります。"
+   }
+  ]
+ },
+ {
+  "name": "HorliX",
+  "slug": "horlix",
+  "category": "medical",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "Horos／OsiriX をもとにした Mac 用の DICOM ビューアです（LGPLv3）。日本語の画面で CT・MRI を表示でき、猪股弘明さん（PHAZOR合同会社）が保守を続けています。",
+  "description": "HorliX（ホーリックス）は、Mac 用の医療画像ビューア Horos／OsiriX をもとにした DICOM ビューアです。もとは Horos の日本語版 HorosJ で、2018年ごろに64ビット化や ROI（関心領域）の操作画面の変更、RAW ファイルの読み込みの強化などで仕様が分かれたため、HorliX に名前を変えました（README による）。最初のリポジトリは air-h-128k-il/HorliX（2018年5月作成・スター8）で、いまは精神科医で開発者の猪股弘明さん（PHAZOR合同会社）のフォーク Hiroaki-Inomata/HorliX で手入れが続いています（最終更新 2026年9月）。README では、新しい macOS（README の表記では Golden Gate）で動くこと、日本語表示に問題がないことが書かれています。後継として、猪股さんが一から作り直した Mac 用 DICOM ビューア PHORLIX（Mac App Store の有料アプリ。オープンソースではありません）があり、README でも PHORLIX の利用を勧めています。描画が OpenGL に依存していて、Apple が OpenGL を非推奨にしているためです。医療画像の閲覧は参考閲覧用です。診断に使う場合は、プログラム医療機器としての承認が必要になる場合があります。",
+  "license": "LGPL-3.0（LICENSEファイル）",
+  "licenseTier": "osi-copyleft",
+  "licenseNote": "GitHub の判定は NOASSERTION だが、LICENSE ファイルは「GNU Lesser General Public License version 3」と明記（OsiriX 由来の部分も LGPL）。同梱の JPEG 2000 ライブラリ Grok は AGPLv3 と LICENSE に記載。",
+  "japaneseStatus": "日本語の画面あり（README・公式サイトに日本語版。英語と日本語の2言語）。",
+  "officialUrl": "https://phazor.info/HorliX-J/",
+  "githubUrl": "https://github.com/Hiroaki-Inomata/HorliX",
+  "language": "C++",
+  "githubPushedAt": "2026-09-26T04:33:04Z",
+  "useCases": [
+   {
+    "text": "Mac で CT・MRI の DICOM 画像を日本語の画面で参考閲覧する"
+   },
+   {
+    "text": "MPR・3D表示・ROI の計測"
+   },
+   {
+    "text": "Horos／OsiriX のソースを日本語で読み解く足がかり"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "DICOM ビューア Mac"
+   },
+   {
+    "text": "HorliX"
+   },
+   {
+    "text": "Horos 日本語"
+   },
+   {
+    "text": "OsiriX 無料"
+   },
+   {
+    "text": "PHORLIX"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "HorliX のライセンスは？",
+    "answer": "GitHub ではライセンスが NOASSERTION（自動判定できない）と表示されますが、LICENSE ファイルには「GNU Lesser General Public License version 3」と書かれています。もとになった OsiriX の部分も LGPL です。また、JPEG 2000 を速く表示するために Grok ライブラリ（AGPLv3）とリンクしていると LICENSE に書かれているので、配布するときはその条件も確かめてください。"
+   },
+   {
+    "question": "後継の PHORLIX とは？",
+    "answer": "猪股弘明さんが macOS 向けに一から作り直した DICOM ビューアで、Mac App Store で販売している有料アプリです（オープンソースではありません）。Metal による2D・3D表示、アキシャル・コロナル・サジタルの3断面、ROI の計測、TotalSegmentator による CT の自動セグメンテーション、DICOM SR・SEG への対応、Horos や HorliX からのデータの取り込みができます（App Store の説明による）。2026年11月17日には、米国の App Store の医療カテゴリーの有料ランキングで1位になりました（猪股さんが X に載せた画面で確認）。App Store の説明には、研究・教育・画像処理のためのアプリで、一次診断を目的としていないと書かれています。"
+   },
+   {
+    "question": "HorliX はまだ使えますか？",
+    "answer": "使えます。README によると保守は続いていて、最新の macOS で動き、Horos でよくある画面の崩れもないとされています。ただ、描画が Apple の非推奨にした OpenGL に依存しているため、長く使うなら後継の PHORLIX も検討するよう README で勧めています。"
+   },
+   {
+    "question": "診断に使えますか？",
+    "answer": "医療画像の閲覧は参考閲覧用です。診断に使う場合は、プログラム医療機器としての承認が必要になる場合があります。"
+   }
+  ]
+ },
+ {
+  "name": "OHIF Viewer",
+  "slug": "ohif-viewer",
+  "category": "medical",
+  "featured": false,
+  "funnel": "oss",
+  "summary": "ブラウザで動く医療画像（DICOM）のビューアです（MIT）。CT・MRIの断面切り替え（MPR）や長さ・角度の計測ができ、描画の部品には cornerstone3D（MIT）を使っています。",
+  "description": "OHIF Viewer は、Open Health Imaging Foundation（OHIF）が開発している、ブラウザだけで動く医療画像（DICOM）のビューアです。パソコンにソフトを入れずに、院内の画像サーバー（PACS）から DICOMweb で画像を読み込み、CT・MRI などを表示します。アキシャル・サジタル・コロナルの3断面を並べる MPR、ウィンドウ幅・レベルの調整、長さ・角度・楕円などの計測、セグメンテーションの表示ができます。画像を描く部品は同じ団体が中心になって開発している cornerstone3D（github.com/cornerstonejs/cornerstone3D・MIT）で、OHIF Viewer はその上に作られたアプリです。画像をためるサーバーは別に必要で、オープンソースの Orthanc（本体 GPLv3・DICOMweb プラグイン AGPLv3）と組み合わせる構成がよく使われます。本家の画面には日本語（ja-JP）の訳がありますが、訳されているのは一部です。医療画像の閲覧は参考閲覧用です。診断に使う場合は、プログラム医療機器としての承認が必要になる場合があります。",
+  "license": "MIT",
+  "licenseTier": "osi",
+  "licenseNote": "OHIF Viewer・cornerstone3D とも MIT（GitHub の LICENSE で確認）。組み合わせる Orthanc は本体 GPLv3・DICOMweb プラグイン AGPLv3。",
+  "japaneseStatus": "本家に日本語（ja-JP）はあるが、画面の文言665語のうち63語（約9%）だけ。新しい検査一覧は英語が直書き（v3.13.15で実測）。",
+  "officialUrl": "https://ohif.org/",
+  "githubUrl": "https://github.com/OHIF/Viewers",
+  "stars": 4418,
+  "language": "TypeScript",
+  "githubCreatedAt": "2015-10-13T08:57:37Z",
+  "githubPushedAt": "2026-11-20T22:06:58Z",
+  "useCases": [
+   {
+    "text": "院内の画像サーバー（PACS）の画像をブラウザで参考閲覧する"
+   },
+   {
+    "text": "CT・MRIの3断面（MPR）表示と長さ・角度の計測"
+   },
+   {
+    "text": "研究・教育用の画像閲覧環境を自前のサーバーで持つ"
+   },
+   {
+    "text": "自社の医療画像システムに組み込むビューアの土台にする"
+   }
+  ],
+  "keywords": [
+   {
+    "text": "DICOM ビューア ブラウザ"
+   },
+   {
+    "text": "OHIF Viewer 日本語"
+   },
+   {
+    "text": "DICOM ビューア オープンソース"
+   },
+   {
+    "text": "cornerstone3D"
+   },
+   {
+    "text": "Orthanc OHIF"
+   }
+  ],
+  "faqs": [
+   {
+    "question": "OHIF Viewer で診断できますか？",
+    "answer": "このページで紹介しているのは参考閲覧用の使い方です。診断に使う場合は、プログラム医療機器としての承認が必要になる場合があります。OHIF Viewer の画面にも、既定で「研究用（INVESTIGATIONAL USE ONLY）」の表示が出ます。"
+   },
+   {
+    "question": "cornerstone3D との関係は？",
+    "answer": "cornerstone3D は、ブラウザで医療画像を描くための JavaScript の部品群（MIT）です。OHIF Viewer はその部品を使って作られたアプリで、断面の切り替えや計測の機能は cornerstone3D が担っています。自社のアプリに画像表示だけを組み込みたいなら cornerstone3D を直接使う方法もあります。"
+   },
+   {
+    "question": "画像はどこに置くのですか？",
+    "answer": "OHIF Viewer は画像をためる機能を持たないので、DICOMweb に対応した画像サーバーが別に必要です。オープンソースなら Orthanc（本体 GPLv3・DICOMweb プラグイン AGPLv3）がよく組み合わされます。"
+   },
+   {
+    "question": "日本語で使えますか？",
+    "answer": "本家にも日本語の設定はありますが、v3.13.15 で数えると、画面の文言665語のうち日本語があるのは63語（約9%）で、新しい検査一覧は英語が直書きです。当社で665語すべてと直書きの部分を日本語にし、Docker Compose で Orthanc と一緒に立てて、CT・MRI の表示・3断面の切り替え・計測を画面で確かめました。"
    }
   ]
  },

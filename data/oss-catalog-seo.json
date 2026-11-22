@@ -103,5 +103,14 @@
   "openemr": {
     "seoTitle": "OpenEMRとは｜電子カルテのオープンソース（GPL）と日本での使いどころ",
     "summary": "世界で広く使われているオープンソースの電子カルテ（GPL-3.0）。予約・カルテ・請求を扱いますが、日本の保険診療のレセプトには対応していません。"
+  },
+  "ohif-viewer": {
+    "seoTitle": "OHIF Viewerとは｜ブラウザで動くDICOMビューア（MIT）"
+  },
+  "horlix": {
+    "seoTitle": "HorliXとは｜Mac用DICOMビューア（LGPLv3）と後継PHORLIX"
+  },
+  "openocean": {
+    "seoTitle": "OpenOcean／OpenDolphin-2.7mとは｜電子カルテ（GPLv3）"
   }
 }
