@@ -81,7 +81,7 @@ const SHELL = {
   ogImage: `${SITE}/images/vibeblog-ogp.png`,
   // 右上は ai-agent-automation.html と同じ3つ（2026-10-10 ユーザー指示）。右端に Kurage App Store（2026-11-13 ユーザー指示）
   topLinks: `<a href="${SITE}/ai-it-komon.html?ref=vibeblog-nav">AI-IT顧問</a><a href="${SITE}/ai-sns-komon.html?ref=vibeblog-nav">AI-SNS顧問</a><a href="${SITE}/sales-partner.html?ref=vibeblog-nav">代理店募集</a><a href="${KURAGE}/vibe-prototype.html?ref=vibeblog-nav">バイブプロトタイプ</a><a href="https://kappstore.exbridge.jp/?ref=vibeblog-nav">Kurage App Store</a>`,
-  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-vibeblog">無料相談</a>　<a href="${BASE}/">記事一覧</a>　<a href="${BASE}/feed.xml">RSS</a>　<a href="${KURAGE}/oss/?ref=exbridge-vibeblog">業務OSSカタログ</a>　<a href="${SITE}/ai-system/?ref=exbridge-vibeblog">AIでできること</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-vibeblog">業務システムの受託開発（名古屋・概算見積無料）</a>`,
+  footerLinks: `<a href="${SITE}/company">会社概要</a>　<a href="${SITE}/contact.php?ref=exbridge-vibeblog">無料相談</a>　<a href="${BASE}/">記事一覧</a>　<a href="${BASE}/#search">記事を検索</a>　<a href="${BASE}/feed.xml">RSS</a>　<a href="${KURAGE}/oss/?ref=exbridge-vibeblog">業務OSSカタログ</a>　<a href="${SITE}/ai-system/?ref=exbridge-vibeblog">AIでできること</a>　<a href="${SITE}/system-development-cost.html?ref=exbridge-vibeblog">業務システムの受託開発（名古屋・概算見積無料）</a>`,
 }
 const shell = (t: string, d: string, u: string, b: string, l: unknown[], og?: string) =>
   baseShell(t, d, u, b, l, { ...SHELL, ogImage: og || SHELL.ogImage }).replace('</head>',
@@ -667,6 +667,32 @@ ${ctaBlock}
   return shell(title, desc, url, body + styles(), ld, img || undefined)
 }
 
+/**
+ * 記事のキーワード検索（2026-11-22 ユーザー指示「キーワード検索できるようにできないか」）。
+ * 静的なサイトなので、組み立てるときに search-index.json（題名・説明・検索キーワード・タグ・本文の見出し）を書き出し、
+ * 一覧のページの検索欄に入力したときに初めて読んでその場で絞り込む。本文そのものは入れない（ファイルを軽くするため）。
+ * 検索語は URL の #q= に入れる（?q= だと Google が別ページとして拾うので使わない）。
+ */
+// 検索の JavaScript は scripts/vibeblog-search.js に普通に書く（テンプレート文字列に入れるとバックスラッシュが消えて正規表現が壊れた）
+const SEARCH_JS = await fs.readFile(path.join(root, 'scripts', 'vibeblog-search.js'), 'utf8')
+const SEARCH_JS_VER = (await import('node:crypto')).createHash('sha1').update(SEARCH_JS).digest('hex').slice(0, 8)
+function searchUi(): string {
+  return `<style>
+.vb-search{margin:14px 0 6px;scroll-margin-top:170px}
+.vb-search input{width:100%;box-sizing:border-box;padding:12px 14px;font-size:16px;border:2px solid #e0831a;border-radius:10px;background:#fff}
+.vb-search input:focus{outline:none;border-color:#b35c00;box-shadow:0 0 0 3px rgba(224,131,26,.18)}
+.vb-sres{margin-top:8px}
+.vb-sres .vs-n{font-size:13px;color:#5f7078;margin:4px 2px 8px}
+.vb-sres a.vs-i{display:block;padding:10px 12px;margin:0 0 8px;border:1px solid #e6dcc9;border-radius:10px;background:#fff;text-decoration:none;color:#17242b}
+.vb-sres a.vs-i:hover{border-color:#e0831a}
+.vb-sres .vs-t{font-weight:800;line-height:1.5}
+.vb-sres .vs-m{font-size:12px;color:#7a8a91;margin-top:2px}
+.vb-sres .vs-d{font-size:13px;color:#4a5a61;margin-top:4px;line-height:1.6}
+.vb-sres mark{background:#ffe59a;color:inherit;padding:0 1px;border-radius:2px}
+</style>
+<script src="${BASE}/search.js?v=${SEARCH_JS_VER}" defer></script>`
+}
+
 function indexHtml(): string {
   const url = `${BASE}/`
   // ブログの題は「バイブコーディング的仕事ブログ」。VWork Blog はこの媒体の名前として
@@ -696,6 +722,11 @@ function indexHtml(): string {
   <h1>バイブコーディング的仕事ブログ</h1>
   <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${blogPosts.length}本</strong>（ほかに AI OSS技術解説 ${ossPosts.length}本）。
     <a href="${BASE}/feed.xml" style="display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid #e0831a;border-radius:999px;color:#b35c00;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap">RSS で新着を受け取る</a></p>
+  <div class="vb-search" id="search">
+    <input id="vbq" data-base="${BASE}" type="search" inputmode="search" autocomplete="off" aria-label="記事をキーワードで探す"
+      placeholder="キーワードで記事を探す（例：相対性理論、カブアンド、OSS、補助金）">
+    <div id="vbr" class="vb-sres" aria-live="polite"></div>
+  </div>
   <div class="vb-two">
     <div class="vb-def">
       <div class="vb-dn">VWork（フレームワーク）</div>
@@ -729,7 +760,7 @@ ${ossPosts.length ? `<section class="vb-latest">
 </section>
 
 ${ctaBlock}
-</main>`
+</main>${searchUi()}`
   return shell(title, desc, url, body + styles(), ld)
 }
 
@@ -753,6 +784,17 @@ for (let i = 0; i < posts.length; i++) {
   console.log(`本文の画像: ${want.size}枚を assets/ へ`)
 }
 await fs.writeFile(path.join(distRoot, 'index.html'), hashRef(indexHtml()), 'utf8')
+{
+  const strip = (x: string) => x.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim()
+  const si = posts.map((p) => ({
+    s: p.slug, t: p.title, d: p.description, k: p.headKeyword || '', g: p.topics,
+    h: [...p.html.matchAll(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/g)].map((m) => strip(m[1])).filter(Boolean).slice(0, 24),
+    dt: p.date, o: p.src === 'articles' ? 1 : 0,
+  }))
+  await fs.writeFile(path.join(distRoot, 'search-index.json'), JSON.stringify(si), 'utf8')
+  await fs.writeFile(path.join(distRoot, 'search.js'), SEARCH_JS, 'utf8')
+  console.log(`検索用ファイル: ${si.length}本`)
+}
 
 /** AI OSS技術解説の一覧（/vibeblog/oss.html）。VWork Blog の一覧と混ぜない */
 function ossIndexHtml(): string {
