@@ -76,9 +76,40 @@ def norm(s: str) -> str:
     return re.sub(r"[ \t　\xa0]+", " ", s or "").strip()
 
 
+# e-Gov の意見募集（2026-11-22 追加・国交省の意見募集を取り込むため）。案件の表（th/td）と、資料の a.file（/pcm/download?seqNo=…。
+# URL に拡張子が無いので、横のバッジ（PDF・Word）を type に入れる）。ふつうの読み方だと「facebook」「(旧Twitter)」が本文に入った
+EGOV_FACTS = ("定めようとする命令などの題名", "案の公示日", "受付締切日時", "問合せ先", "カテゴリー", "根拠法令条項")
+
+
+def egov_page(soup, url: str) -> dict:
+    rows = {}
+    for tr in soup.select("table tr"):
+        th, td = tr.find("th"), tr.find("td")
+        if th and td:
+            k = norm(re.sub(r"（所管省庁・部局名等）", "", th.get_text(" ")))
+            v = norm(td.get_text(" ").replace("NEW", ""))
+            if k and v and v not in ("ー", "－", "-") and not td.find("a", class_="file"):
+                rows[k] = v
+    facts = [f"{k}：{rows[k]}" for k in EGOV_FACTS if rows.get(k)]
+    files, seen = [], set()
+    for a in soup.select("a.file[href]"):
+        u = urllib.parse.urljoin(url, a["href"].strip())
+        t = norm(a.get_text(" "))
+        if not t or u in seen:
+            continue
+        seen.add(u)
+        badge = a.find_next_sibling("span")
+        typ = norm(badge.get_text()) if badge else ""
+        files.append({"title": t[:120], "url": u, **({"type": typ.upper()} if typ else {})})
+    h1 = soup.find("h1")
+    return {"facts": facts, "text": "\n".join(facts), "files": files[:40], "h1": norm(h1.get_text(" "))[:200] if h1 else ""}
+
+
 def page(url: str, title: str) -> dict:
     raw, ctype = get(url, 5_000_000)
     soup = BeautifulSoup(decode(raw, ctype), "lxml")
+    if urllib.parse.urlparse(url).netloc == "public-comment.e-gov.go.jp":
+        return egov_page(soup, url)
     for t in soup(["script", "style", "noscript", "header", "footer", "nav", "aside", "form", "iframe", "svg"]):
         t.decompose()
     for t in soup.find_all(True):
@@ -247,7 +278,7 @@ def main() -> int:
             rec["points"], rec["points_src"] = old.get("points"), old.get("points_src", [])
         elif ns < cap_sum and not rec.get("error"):
             src, used = "", []
-            for f in [f for f in rec.get("files", []) if f["url"].lower().split("?")[0].endswith(".pdf")][:2]:
+            for f in [f for f in rec.get("files", []) if f["url"].lower().split("?")[0].endswith(".pdf") or f.get("type") == "PDF"][:2]:
                 try:
                     t = pdf_text(f["url"])
                     time.sleep(1.0)

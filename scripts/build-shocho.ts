@@ -35,7 +35,7 @@ const items = Object.values(JSON.parse(await fs.readFile(path.join(dataDir, 'ite
 const kok = JSON.parse(await fs.readFile(path.join(dataDir, 'kokkai.json'), 'utf8')) as Record<string, Kok>
 const tname = JSON.parse(await fs.readFile(path.join(dataDir, 'themes.json'), 'utf8')) as Record<string, string>
 // 公式ページの本文の冒頭・配布資料・要点（scripts/shocho-detail.py。2026-11-03 追加。無い発表は従来どおり題名とリンクだけ）
-type Detail = { fetched: string; facts?: string[]; files?: { title: string; url: string }[]; points?: string[]; points_src?: string[]; h1?: string; error?: string }
+type Detail = { fetched: string; facts?: string[]; files?: { title: string; url: string; type?: string }[]; points?: string[]; points_src?: string[]; h1?: string; error?: string }
 const detail = JSON.parse(await fs.readFile(path.join(dataDir, 'detail.json'), 'utf8').catch(() => '{}')) as Record<string, Detail>
 const MIN: [string, string][] = [['digital', 'デジタル庁'], ['mlit', '国土交通省'], ['mhlw', '厚生労働省'], ['maff', '農林水産省'], ['mext', '文部科学省'], ['soumu', '総務省'], ['cao', '内閣府'], ['fsa', '金融庁'], ['chusho', '中小企業庁']]
 
@@ -137,7 +137,7 @@ function detailHtml(it: Item, d: Detail | undefined): string {
   }
   if (facts.length) out += `<section class="sc-sec"><h2>公式ページの内容 <small>${h(it.ministry_name)}</small></h2><div class="sc-det">${factsHtml(facts)}</div></section>`
   if (files.length) {
-    out += `<section class="sc-sec"><h2>配布資料・添付ファイル <small>${files.length}件</small></h2><div class="sc-det"><ul class="sc-files">${files.slice(0, 30).map((f) => `<li><a href="${attr(f.url)}" rel="noopener" target="_blank">${h(f.title)}</a>${ext(f.url) ? `<span class="sc-ext">${ext(f.url)}</span>` : ''}</li>`).join('')}</ul></div></section>`
+    out += `<section class="sc-sec"><h2>配布資料・添付ファイル <small>${files.length}件</small></h2><div class="sc-det"><ul class="sc-files">${files.slice(0, 30).map((f) => `<li><a href="${attr(f.url)}" rel="noopener" target="_blank">${h(f.title)}</a>${(ext(f.url) || f.type) ? `<span class="sc-ext">${h(ext(f.url) || f.type || '')}</span>` : ''}</li>`).join('')}</ul></div></section>`
   }
   if (out) out += `<p class="note" style="margin:8px 0 0">出典：${h(it.ministry_name)}ウェブサイト「<a href="${attr(it.url)}" rel="noopener" target="_blank">${h(cut(it.title, 60))}</a>」（政府標準利用規約に基づき、本文の冒頭と資料の題名を掲載しています）</p>`
   return out

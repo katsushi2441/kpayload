@@ -13,6 +13,7 @@
 import datetime as dt
 import email.utils
 import hashlib
+import html
 import json
 import pathlib
 import re
@@ -38,6 +39,90 @@ FEEDS = [
     ("fsa", "金融庁", "https://www.fsa.go.jp/fsaNewsListAll_rss2.xml"),
     # 2026-11-07 追加: 補助金・取引の発表が出る（Kurage App Store の「業務の制度ニュース」の材料）。国税庁は RSS が無く、公正取引委員会・個人情報保護委員会はボットを断る（403/503）
     ("chusho", "中小企業庁", "https://www.chusho.meti.go.jp/rss/index.xml"),
+]
+
+
+# RSS に出ない発表をページから読む（2026-11-22 追加）。国交省の RSS（index.rdf）は大臣会見要旨しか出さず、報道発表が1件も入らなかった。
+# 報道発表の一覧は /report/press/houdou<YYYYMM>.html（月ごと・UTF-8。index.html はここへ meta refresh するだけ）。
+# 中身は <dt>2026年11月20日</dt><dd>…<a href="/report/press/jidosha08_hh_005895.html">題名<br>～副題～</a>… の並び。
+MLIT_PRESS = "https://www.mlit.go.jp/report/press/houdou{ym}.html"
+MLIT_PRESS_MAX = 80  # 1回に取る件数（新しい順）。足りなければ前の月のページも読む（最大2ページ）
+# URL の頭（jidosha08 など）→ 部局別一覧の名前。2026-11-22 に /report/press/<部局>_news.html の20ページを読んで数えた実測。
+# 数字まで見て決まるもの（kanbo08＝技術調査 など）を先に、残りは英字の部分で引く。どれにも当たらなければ「報道発表」だけ
+MLIT_BUREAU_EXACT = {"kanbo08": "技術調査関係", "kanbo12": "危機管理関係", "sogo05": "国際関係", "sogo07": "国際関係",
+                     "sogo02": "土地・不動産・建設業関係", "tokatsu05": "政策統括関係"}
+MLIT_BUREAU = {"sogo": "総合政策関係", "joho": "総合政策関係", "kokudoseisaku": "国土政策関係",
+               "tochi_fudousan_kensetsugyo": "土地・不動産・建設業関係", "toshi": "都市関係", "mizukokudo": "水管理・国土保全関係",
+               "sabo": "水管理・国土保全関係", "water": "水管理・国土保全関係", "road": "道路関係", "house": "住宅関係",
+               "tetsudo": "鉄道関係", "jidosha": "物流・自動車関係", "tokatsu": "物流・自動車関係", "kaiji": "海事関係",
+               "port": "港湾関係", "kouku": "航空関係", "hok": "北海道関係", "eizen": "官庁営繕関係", "kanbo": "その他", "unyu": "その他"}
+# 意見募集（パブリックコメント）は e-Gov の RSS（全府省の新しい順・約20件）から、問合せ先が国土交通省のものだけ。
+# 2026-11-20 の「宅配便の多様な受取方法の普及に向けたガイドライン（案）」（置き配の指針案）は報道発表の一覧に載らず、ここにだけ出た
+EGOV_PCM = "https://public-comment.e-gov.go.jp/rss/pcm_list.xml"
+
+
+def _html_title(s: str) -> str:
+    s = re.sub(r"<rt>.*?</rt>|<rp>.*?</rp>", "", s, flags=re.S)
+    s = re.sub(r"<br\s*/?>", "　", s, flags=re.I)
+    s = html.unescape(re.sub(r"<[^>]+>", "", s))
+    return re.sub(r"[ \t\r\n]+", " ", s).replace(" 　", "　").replace("　 ", "　").strip(" 　")
+
+
+def mlit_press() -> list[dict]:
+    """国交省の報道発表（月ごとの一覧のページ）を新しい順に MLIT_PRESS_MAX 件まで"""
+    today = dt.date.today()
+    yms = [today.strftime("%Y%m"), (today.replace(day=1) - dt.timedelta(days=1)).strftime("%Y%m")]
+    out: list[dict] = []
+    for ym in yms:
+        try:
+            t = fetch(MLIT_PRESS.format(ym=ym)).decode("utf-8", errors="replace")
+        except Exception as e:  # noqa: BLE001  月の初めはその月のページがまだ無い（404）ことがある
+            print(f"  国土交通省 報道発表 {ym}: 取れない（{e}）", file=sys.stderr)
+            continue
+        t = t.split('id="leftColumn"', 1)[0]  # 左の部局別一覧より前が本体
+        day = ""
+        for m in re.finditer(r'<dt>\s*(\d{4})年(\d{1,2})月(\d{1,2})日\s*</dt>|<a href="(/report/press/[^"#]+\.html)">(.*?)</a>', t, re.S):
+            if m.group(1):
+                day = f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+                continue
+            href, title = m.group(4), _html_title(m.group(5))
+            if not day or "_hh_" not in href or not title:
+                continue
+            head = re.match(r"/report/press/([a-z_]+?)(\d*)_hh_", href)
+            bureau = ""
+            if head:
+                bureau = MLIT_BUREAU_EXACT.get(head.group(1) + head.group(2)) or MLIT_BUREAU.get(head.group(1), "")
+            out.append({"title": title, "link": "https://www.mlit.go.jp" + href, "date": day,
+                        "cat": f"報道発表（{bureau}）" if bureau else "報道発表"})
+        if len(out) >= MLIT_PRESS_MAX:
+            break
+    out.sort(key=lambda r: r["date"], reverse=True)
+    return out[:MLIT_PRESS_MAX]
+
+
+def egov_pubcom(ministry_name: str) -> list[dict]:
+    """e-Gov の意見募集の RSS から、問合せ先（所管省庁）が ministry_name のもの"""
+    rows = []
+    root = ET.fromstring(to_text(fetch(EGOV_PCM)))
+    for el in root.iter():
+        if local(el.tag) != "item":
+            continue
+        f = {local(c.tag): (c.text or "").strip() for c in el}
+        desc = html.unescape(f.get("description", ""))
+        m = re.search(r"所管省庁・部局名等）：\s*(\S+)", desc)
+        if not (f.get("title") and f.get("link") and m and m.group(1).startswith(ministry_name)):
+            continue
+        d = re.search(r"案の公示日：(\d{4})/(\d{1,2})/(\d{1,2})", desc)
+        rows.append({"title": f["title"], "link": f["link"],
+                     "date": f"{int(d.group(1)):04d}-{int(d.group(2)):02d}-{int(d.group(3)):02d}" if d else ymd(f.get("date", "")),
+                     "cat": "意見募集（パブリックコメント）"})
+    return rows
+
+
+# RSS 以外の取り込み（府省の slug・名前・見出し・読む関数）
+PAGES = [
+    ("mlit", "国土交通省", "報道発表", mlit_press),
+    ("mlit", "国土交通省", "意見募集", lambda: egov_pubcom("国土交通省")),
 ]
 
 
@@ -119,11 +204,13 @@ def main() -> int:
     items: dict = json.loads(fi.read_text()) if fi.exists() else {}
     now = dt.datetime.now().isoformat(timespec="seconds")
     got = new = 0
-    for slug, name, url in FEEDS:
+    sources = [(slug, name, name, (lambda u=url: parse(to_text(fetch(u))))) for slug, name, url in FEEDS]
+    sources += [(slug, name, f"{name} {label}", fn) for slug, name, label, fn in PAGES]
+    for slug, name, label, read in sources:
         try:
-            rows = parse(to_text(fetch(url)))
+            rows = read()
         except Exception as e:  # noqa: BLE001
-            print(f"  {name}: 取れない（{e}）", file=sys.stderr)
+            print(f"  {label}: 取れない（{e}）", file=sys.stderr)
             continue
         for r in rows:
             iid = hashlib.sha1(r["link"].encode()).hexdigest()[:12]
@@ -134,7 +221,7 @@ def main() -> int:
                               "date": r.get("date") or now[:10], "cat": r.get("cat", ""), "first_seen": now}
             else:
                 items[iid]["title"] = r["title"]
-        print(f"  {name}: {len(rows)}件")
+        print(f"  {label}: {len(rows)}件")
     # テーマに結び付ける（毎回やり直す。トラッカーの語が増えたら古い発表にも付く）
     tw = tracker_words()
     # 1段広い「ことがら」（26分野）。題名に分野の語があれば、その分野の国会トラッカーのうち直近で動いている3本を結び付ける
