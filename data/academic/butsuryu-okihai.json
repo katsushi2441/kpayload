@@ -1,0 +1,3542 @@
+{
+ "theme": {
+  "slug": "butsuryu-okihai",
+  "name": "物流・置き配・再配達とラストワンマイル",
+  "seo_title": "物流・置き配・再配達とラストワンマイルの研究｜東海・関東の大学の論文・科研費と国会の議論",
+  "lead": "ネット通販で宅配便が増える一方、トラックドライバーは足りなくなっています（物流の2024年問題）。国土交通省は2026年11月20日、置き配や宅配ボックスなどの受取方法についてのガイドライン案を公表し、意見募集を始めました。置き配・宅配ロッカー、再配達の削減、ラストワンマイルの配送、ドローンや配送ロボット、都市の物流について、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、置き配・再配達と物流の人手不足が国会でどう議論されているかを、1ページで並べました。",
+  "openalex": [
+   {
+    "label": "ラストワンマイル配送と置き配・宅配ロッカー",
+    "search": "\"last-mile delivery\"|\"last mile delivery\"|\"last-mile logistics\"|\"parcel locker\"|\"parcel lockers\"|\"delivery lockers\"|\"unattended delivery\"|\"package theft\"|\"e-commerce logistics\"|\"truck driver shortage\"|\"driver shortage\"|\"urban logistics\"|\"city logistics\"|\"delivery robot\"|\"delivery robots\"|\"drone delivery\"|\"parcel delivery\"",
+    "and": "last-mile|last mile|parcel locker|parcel lockers|delivery locker|delivery lockers|unattended delivery|package theft|e-commerce logistics|driver shortage|urban logistics|city logistics|urban freight|delivery robot|delivery robots|drone delivery|delivery drone|delivery drones|parcel delivery|home delivery service|redelivery|failed delivery|courier",
+    "sort": "publication_date:desc",
+    "limit": 60
+   },
+   {
+    "label": "トラック輸送・宅配と物流の効率化",
+    "search": "\"freight transport\"|\"truck driver\"|\"truck drivers\"|\"autonomous truck\"|\"truck platoon\"|\"truck platooning\"|\"logistics warehouse\"|\"attended home delivery\"|\"online food delivery\"|\"on-demand delivery\"|\"vehicle routing\"|\"physical internet\"",
+    "and": "freight transport|truck driver|truck drivers|trucking|truck platoon|truck platooning|autonomous truck|logistics warehouse|home delivery service|home delivery services|attended home delivery|home delivery planning|online food delivery|food delivery app|food delivery apps|food delivery services|on-demand delivery|vehicle routing|physical internet|parcel|cold-chain logistics",
+    "sort": "publication_date:desc",
+    "limit": 40
+   }
+  ],
+  "kaken": [
+   "物流",
+   "宅配",
+   "ラストワンマイル",
+   "ドローン 物流",
+   "配送 ロボット",
+   "トラック 輸送"
+  ],
+  "kaken_must": "(?<!書)物流|ラストマイル|ラストワンマイル|宅配|置き配|再配達|ロジスティクス|貨物|トラック輸送|トラックドライバー|配送ロボット|ドローン配送|ドローン物流|配達",
+  "x_rx": "置き配|再配達|宅配ボックス|宅配ロッカー|宅配便|2024年問題|ドライバー不足|ラストワンマイル|ドローン配送|配送ロボット",
+  "trackers": [
+   "okihai-saihaitatsu"
+  ],
+  "exclude_ids": [
+   "W4388910192",
+   "W7167540829",
+   "W4416833600",
+   "W4383888897",
+   "W4391187152",
+   "W4388623964",
+   "W7202201685",
+   "W7140308292",
+   "W7159777077",
+   "W4402721945",
+   "W4317796995",
+   "W4417281907",
+   "W4408147409",
+   "W7167593735",
+   "W7167642644",
+   "W7165058059",
+   "W7159937565",
+   "W7166728000",
+   "W7235462824",
+   "W4416875380",
+   "W7213862683",
+   "W4415258624",
+   "W7214209681",
+   "W7154907263",
+   "W4416420355",
+   "W7130425113",
+   "W4406261787",
+   "W4401751411",
+   "W4392297638",
+   "W4392248358"
+  ]
+ },
+ "fetched": "2026-11-22",
+ "works": [
+  {
+   "id": "W7119523936",
+   "doi": "https://doi.org/10.1080/21650020.2025.2612442",
+   "title": "Integrating passenger and freight transport in depopulated areas: key success and failure factors from Japanese case studies",
+   "date": "2026-01-09",
+   "type": "article",
+   "venue": "Urban Planning and Transport Research",
+   "url": "https://doi.org/10.1080/21650020.2025.2612442",
+   "cited": 2,
+   "abstract": "In response to depopulation and aging in rural Japan, integration of passenger and freight transport (IPFT) is a promising strategy to maintain essential mobility and logistics services. Although regulatory reforms in 2017 enabled privately paid transportation (PPT) systems to incorporate cargo delivery, cases remain limited. This study examines two fixed-schedule and two demand-responsive systems within the PPT framework. Through a comparative case study, it identifies key operational and institutional factors influencing the sustainability of these services. Using international literature and original fieldwork, each case is analyzed across transport volume, integration route characteristics, and schedule coordination. Results show that in demand-responsive systems, success depends on sufficient idle vehicle capacity and operational flexibility. Conversely, fixed-schedule systems hinge on effective last-mile delivery coordination and stakeholder alignment. The ongoing Hoihoi Service and Smile Daisen Service projects illustrate how successful integration depends on vehicle utilization, institutional coordination, infrastructure readiness, and adaptive business models. This study enriches existing IPFT literature by providing empirical evidence from Japan, where such initiatives are nascent. Moreover, it offers practical implications for policymakers and operators designing sustainable mobility systems in depopulated regions. It emphasizes the need for context-specific strategies that integrate passenger and freight objectives under realistic institutional and logistical constraints.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Shumpei Harada",
+     "openalex": "A5109377993",
+     "orcid": null,
+     "tokai": [
+      "名古屋市立大学"
+     ]
+    },
+    {
+     "name": "Kosuke Miyatake",
+     "openalex": "A5077719584",
+     "orcid": "https://orcid.org/0009-0003-7559-9564",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "東海"
+  },
+  {
+   "id": "W4417284674",
+   "doi": "https://doi.org/10.1109/gcce65946.2025.11274601",
+   "title": "Improving Field of View Representation for Improved Safety and Efficiency of Drone Delivery Using Reinforcement Learning",
+   "date": "2025-09-23",
+   "type": "conference-paper",
+   "venue": "IEEE Global Conference on Consumer Electronics (GCCE)",
+   "url": "https://doi.org/10.1109/gcce65946.2025.11274601",
+   "cited": 0,
+   "abstract": "In a previous study [1], it was shown that in a DRP environment handled within the framework of cooperative multi-agent reinforcement learning (MARL), differences in path planning performance can be achieved by devising state representations based on the\" vision \"possessed by each agent. The purpose of this study is to improve the design of such field of view-based state representation to achieve higher performance. In this study, we tried to improve the agent’s ability to recognize its environment by extending the state representation to include both relative and fixed information about the \" field of view \". As a result, we achieved better path planning performance than previous methods in several evaluation indices.",
+   "lang": "en",
+   "topic": "Reinforcement Learning in Robotics",
+   "authors": [
+    {
+     "name": "Sosuke Nakatsubo",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Takahiro Uchiya",
+     "openalex": "A5090246029",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Yuichiro Tateiwa",
+     "openalex": "A5030799955",
+     "orcid": "https://orcid.org/0000-0002-3235-2161",
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "東海"
+  },
+  {
+   "id": "W7171782841",
+   "doi": "https://doi.org/10.3390/futuretransp6040162",
+   "title": "Cargo-Specific Multimodal Freight Transport Performance Assessment Using a Minimum-Cost Flow Framework in Laos",
+   "date": "2026-07-30",
+   "type": "article",
+   "venue": "Future Transportation",
+   "url": "https://doi.org/10.3390/futuretransp6040162",
+   "cited": 1,
+   "abstract": "Dynamic freight transportation systems are critical for improving logistics performance in developing economies where multimodal integration remains limited. Despite Lao People’s Democratic Republic (Lao PDR)’s substantial investments to transition from a landlocked to a land-linked hub, quantitative assessments capturing heterogeneous cargo behavior across its multimodal networks are scarce. This study develops a cargo-specific, multi-source, multi-sink minimum-cost flow (MCF) framework to evaluate freight transport performance in Lao PDR. The framework integrates road, railway, inland waterway, and air transport into a unified directed network, capturing heterogeneous behaviors across six cargo categories. Testing under three demand scenarios (Q500, Q1000, and Q2000 tons/day) across both export and import systems, the results from 99 feasible solutions indicate that railway transport consistently dominates long-distance corridors within the assumptions of the proposed framework, reflecting its structural cost advantages. Conversely, road transport primarily serves first- and last-mile connectivity, while inland waterways and air transport serve as supplementary modes. Ultimately, these findings provide scenario-based insights to support policy decision-making for cross-border infrastructure investments, regional dry port integration, and synchronized rail-road connectivity across the Greater Mekong Subregion (GMS).",
+   "lang": "en",
+   "topic": "Railways and European Transport Policy",
+   "authors": [
+    {
+     "name": "Souksamai Thoumboulom",
+     "openalex": "A5144038540",
+     "orcid": "https://orcid.org/0009-0007-4044-4895",
+     "tokai": [
+      "岐阜大学"
+     ]
+    },
+    {
+     "name": "Fumitaka Kurauchi",
+     "openalex": "A5074583360",
+     "orcid": "https://orcid.org/0000-0002-7448-8737",
+     "tokai": [
+      "岐阜大学"
+     ]
+    },
+    {
+     "name": "Toshiyuki Nakamura",
+     "openalex": "A5022154058",
+     "orcid": "https://orcid.org/0000-0003-3093-4229",
+     "tokai": [
+      "岐阜大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W7161762961",
+   "doi": "https://doi.org/10.1016/j.actpsy.2026.107102",
+   "title": "The dark side of online food delivery: Evidence of impulsive consumption behavior",
+   "date": "2026-05-21",
+   "type": "article",
+   "venue": "Acta Psychologica",
+   "url": "https://doi.org/10.1016/j.actpsy.2026.107102",
+   "cited": 1,
+   "abstract": "Impulsive consumption in the online food delivery scenario has received increasing attention from academia, but the mechanism by which individual differences affect this behavior remains unclear. Based on Prospect Theory and Self-Control Theory, this study explores the impact of price sensitivity on impulsive consumption, and clarifies the psychological mechanism and boundary conditions of the interaction between the two. Through three scenario experiments, this study finds that individuals with higher price sensitivity have stronger impulsive consumption tendencies. Further analysis shows that coupon proneness plays a partial mediating role between the two: price-sensitive consumers are more likely to notice coupon-type promotions and attach importance to their value, which in turn reinforces impulsive consumption. In addition, self-control can weaken the positive correlation between price sensitivity and coupon proneness, but cannot significantly reduce the direct impact of price sensitivity on impulsive consumption. The above results indicate that although self-regulation can reduce individuals' responses to promotional cues, once consumption impulses are triggered, the restraining ability of self-control on behavior is relatively limited. Overall, this study clarifies the psychological path through which price sensitivity acts on impulsive consumption, and expands the combined application of Prospect Theory and Self-Control Theory in the digital catering consumption scenario.",
+   "lang": "en",
+   "topic": "Consumer Market Behavior and Pricing",
+   "authors": [
+    {
+     "name": "Yang Liu",
+     "openalex": "A5136587064",
+     "orcid": null,
+     "tokai": [
+      "南山大学"
+     ]
+    },
+    {
+     "name": "Luchen Huang",
+     "openalex": "A5010251732",
+     "orcid": "https://orcid.org/0000-0002-9157-1110",
+     "tokai": []
+    },
+    {
+     "name": "Kazumitsu Minamikawa",
+     "openalex": "A5068032936",
+     "orcid": null,
+     "tokai": [
+      "南山大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W7104022509",
+   "doi": "https://doi.org/10.1016/j.aei.2025.104008",
+   "title": "Multi-depot electric vehicle routing problem with drones considering time-dependent traffic",
+   "date": "2025-11-05",
+   "type": "article",
+   "venue": "Advanced Engineering Informatics",
+   "url": "https://doi.org/10.1016/j.aei.2025.104008",
+   "cited": 10,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Hao Fan",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0001-6541-0607",
+     "tokai": []
+    },
+    {
+     "name": "Kai Liu",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0002-3361-4741",
+     "tokai": []
+    },
+    {
+     "name": "Jiangbo Wang",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Jian Zhao",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W7117473600",
+   "doi": "https://doi.org/10.1145/3714394.3756198",
+   "title": "Smartphone-Based Activity Recognition in a Logistics Warehouse Using Self-supervised Representation Learning",
+   "date": "2025-10-12",
+   "type": "conference-paper",
+   "venue": "ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp)",
+   "url": "https://doi.org/10.1145/3714394.3756198",
+   "cited": 2,
+   "abstract": "To address labor shortages in logistics, digital twins that digitize physical environments are gaining attention, as they enable visualization and simulation-based optimization of warehouse operations. However, digitizing worker activities is particularly challenging due to operational burden and difficulty in adapting to diverse tasks. In response to this issue, we propose a deep learning-based framework for automatic warehouse task recognition using smartphone inertial sensors (accelerometer and gyroscope). Our model combines a CNN pretrained on unlabeled data using SimCLR, a self-supervised representation learning method, to improve generalization, and a Transformer encoder to capture task-level context. We collected data in a logistics warehouse and conducted cross-validation using 6 hours of annotated data from 10 individuals. As a result, the proposed method achieved a weighted F1 score of 0.89, improving by 7 points over the model without pretraining.",
+   "lang": "en",
+   "topic": "Context-Aware Activity Recognition Systems",
+   "authors": [
+    {
+     "name": "Kisho Watanabe",
+     "openalex": "A5114231418",
+     "orcid": "https://orcid.org/0009-0004-7887-8531",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kazuma Kano",
+     "openalex": "A5090835852",
+     "orcid": "https://orcid.org/0000-0002-7514-1655",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Tahera Hossain",
+     "openalex": "A5018591931",
+     "orcid": "https://orcid.org/0000-0002-8985-9043",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shin Katayama",
+     "openalex": "A5002452411",
+     "orcid": "https://orcid.org/0000-0002-5614-4412",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kenta Urano",
+     "openalex": "A5044005499",
+     "orcid": "https://orcid.org/0000-0003-2906-537X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Takuro Yonezawa",
+     "openalex": "A5083114149",
+     "orcid": "https://orcid.org/0000-0001-9781-0402",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Nobuo Kawaguchi",
+     "openalex": "A5045353484",
+     "orcid": "https://orcid.org/0000-0002-0444-2290",
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W7125947401",
+   "doi": "https://doi.org/10.1109/smc58881.2025.11342838",
+   "title": "Joint Black-Box Optimization of Warehouse Layout and Worker Assignment Using Quantum Annealing and Factorization Machines",
+   "date": "2025-10-05",
+   "type": "conference-paper",
+   "venue": "Conference proceedings/Conference proceedings - IEEE International Conference on Systems, Man, and Cybernetics",
+   "url": "https://doi.org/10.1109/smc58881.2025.11342838",
+   "cited": 2,
+   "abstract": "As global demand for logistics continues to grow, improving the efficiency of warehouse operations has become increasingly important. While many processes in logistics warehouses have been automated, the receiving area still relies heavily on manual work. Therefore, optimizing this area is essential. When optimizing operations in a logistics warehouse, various problems must be considered, such as layout design and worker assignment. Previous research has typically focused on these problems individually. However, because they are closely related, jointly optimizing them can further improve overall efficiency. In this study, we focus on the receiving area and conduct joint optimization of layout design and worker assignment. Specifically, we extend and apply a black-box optimization method called FMQA, which combines Factorization Machines (FM) with Quantum Annealing (QA). By using Factorization Machine regression, we build an objective function from simulator data. We then use Quantum Annealing to minimize it and improve the receiving area. A comparison with an actual warehouse environment, using the multi-agent simulator, shows that our approach can reduce mean package processing time by up to 22.1%. This result demonstrates the effectiveness of joint optimization of layout design and worker assignment.",
+   "lang": "en",
+   "topic": "Advanced Manufacturing and Logistics Optimization",
+   "authors": [
+    {
+     "name": "Kairi Takaki",
+     "openalex": "A5124107025",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yusuke Asai",
+     "openalex": "A5157573026",
+     "orcid": "https://orcid.org/0009-0005-3862-1683",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shin Katayama",
+     "openalex": "A5002452411",
+     "orcid": "https://orcid.org/0000-0002-5614-4412",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kenta Urano",
+     "openalex": "A5044005499",
+     "orcid": "https://orcid.org/0000-0003-2906-537X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Takuro Yonezawa",
+     "openalex": "A5083114149",
+     "orcid": "https://orcid.org/0000-0001-9781-0402",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Nobuo Kawaguchi",
+     "openalex": "A5045353484",
+     "orcid": "https://orcid.org/0000-0002-0444-2290",
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4412478804",
+   "doi": "https://doi.org/10.1016/j.tranpol.2025.07.019",
+   "title": "A quantitative spatial model for evaluating transport-induced spatial reorganization",
+   "date": "2025-07-16",
+   "type": "article",
+   "venue": "Transport Policy",
+   "url": "https://doi.org/10.1016/j.tranpol.2025.07.019",
+   "cited": 3,
+   "abstract": "Interregional transport improvements, such as highway and high-speed rail expansions, can significantly affect the spatial distribution of economic activity by enhancing agglomeration economies. Quantitative spatial models (QSMs) are a key tool for evaluating these effects; however, recent theoretical studies have identified a fundamental limitation: widely used QSMs invariably predict that transport cost reductions result in population dispersion rather than agglomeration in metropolitan areas. This prediction contradicts empirical evidence, suggesting that existing models cannot adequately represent transport policies’ complex spatial impacts. To address this issue, this study extends a QSM to better incorporate the mechanisms driving economic agglomeration. We incorporate recent theoretical advancements to develop a more generalized QSM that addresses restrictive assumptions that otherwise systematically predict dispersion. We apply our extended model to Japan’s highway network improvements, demonstrating that it successfully reflects economic agglomeration trends in major metropolitan areas. Furthermore, we estimate the spatial impacts of emerging autonomous vehicle technologies and truck platooning, finding that these innovations could help form a larger megalopolis centered on Tokyo, Osaka, and Nagoya.",
+   "lang": "en",
+   "topic": "Agglomeration and Urban Systems",
+   "authors": [
+    {
+     "name": "Tatsuya SUGIMOTO",
+     "openalex": "A5001792406",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuki Takayama",
+     "openalex": "A5072236529",
+     "orcid": "https://orcid.org/0000-0002-7638-4640",
+     "tokai": []
+    },
+    {
+     "name": "Akiyoshi TAKAGI",
+     "openalex": "A5090794319",
+     "orcid": "https://orcid.org/0009-0000-9749-8877",
+     "tokai": [
+      "岐阜大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4411996342",
+   "doi": "https://doi.org/10.1109/smartcomp65954.2025.00035",
+   "title": "Digitization Methods for a Logistics Warehouse Towards Digital Twin-Driven Optimization",
+   "date": "2025-06-16",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Smart Computing",
+   "url": "https://doi.org/10.1109/smartcomp65954.2025.00035",
+   "cited": 4,
+   "abstract": "The rapid growth of e-commerce, rising consumer expectations, and labor shortages in Japan pose challenges for logistics warehouse optimization. While automation has advanced outbound operations, inbound processes remain inefficient. This study presents a comprehensive approach to digitizing and optimizing large-scale logistics warehouses, with a case study at TRUSCO NAKAYAMA Corp. in partnership with Nagoya University. Key technologies include a large-scale camera array, multi-camera object tracking, and smartphone-based task estimation. Our contributions include real-time tracking of personnel and packages, cooperative annotation for improved object recognition, and synthetic data augmentation. Additionally, truck berth analysis and indoor localization enhance operational efficiency. To optimize worker shifts and warehouse layout, we apply Factorization Machine Quantum Annealing (FMQA), achieving a 37.4% reduction in lead times and a 14.3% decrease in labor hours. A visualization tool enables warehouse operators to make data-driven decisions. This research demonstrates the potential of digital transformation in logistics and provides a scalable framework for broader industry adoption.",
+   "lang": "en",
+   "topic": "Advanced Manufacturing and Logistics Optimization",
+   "authors": [
+    {
+     "name": "Nobuo Kawaguchi",
+     "openalex": "A5045353484",
+     "orcid": "https://orcid.org/0000-0002-0444-2290",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yusuke Asai",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kazuma Kano",
+     "openalex": "A5090835852",
+     "orcid": "https://orcid.org/0000-0002-7514-1655",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kairi Takaki",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yuki Mori",
+     "openalex": "A5033106552",
+     "orcid": "https://orcid.org/0000-0002-9320-826X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yuma Suzuki",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kisho Watanabe",
+     "openalex": "A5114231418",
+     "orcid": "https://orcid.org/0009-0004-7887-8531",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yuki Gushi",
+     "openalex": "A5107571221",
+     "orcid": "https://orcid.org/0009-0007-5426-115X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shin Katayama",
+     "openalex": "A5002452411",
+     "orcid": "https://orcid.org/0000-0002-5614-4412",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kenta Urano",
+     "openalex": "A5044005499",
+     "orcid": "https://orcid.org/0000-0003-2906-537X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Takuro Yonezawa",
+     "openalex": "A5083114149",
+     "orcid": "https://orcid.org/0000-0001-9781-0402",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shintaro Hashiguchi",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4409634488",
+   "doi": "https://doi.org/10.3390/electronics14081681",
+   "title": "A Physiological Evaluation of Driver Workload in the Lead Vehicle of an Autonomous Truck Platoon Using Bio-Signal Analysis",
+   "date": "2025-04-21",
+   "type": "article",
+   "venue": "Electronics",
+   "url": "https://doi.org/10.3390/electronics14081681",
+   "cited": 0,
+   "abstract": "The evaluation of driver workload in the lead vehicle of a driver-following autonomous truck platoon was conducted using bio-signal analysis. In this study, a single driver operated the lead vehicle while the second and third trucks followed autonomously. Three professional truck drivers (38 ± 4 years old, male) participated in the experiment. During driving, wearable sensors measured heart-rate variability indices, body acceleration, and skin temperature. The heart rate and body acceleration were sampled at 128 Hz (7.8 ms intervals), while skin temperature was recorded at 1 Hz. Each participant underwent three measurement sessions on different days, with each session lasting approximately 30–40 min. Statistical analysis was performed using repeated-measures ANOVA to determine significant differences across conditions and days. The results indicated that compared to solo driving, driving the lead vehicle of the autonomous platoon significantly increased skin temperature (p < 0.001), suggesting a higher physiological workload. This study provides insight into the physiological impact of autonomous platooning on lead-vehicle drivers, which is crucial for developing strategies to mitigate driver workload in such systems.",
+   "lang": "en",
+   "topic": "Human-Automation Interaction and Safety",
+   "authors": [
+    {
+     "name": "Emi Yuda",
+     "openalex": "A5003831253",
+     "orcid": "https://orcid.org/0000-0002-1865-7735",
+     "tokai": [
+      "三重大学"
+     ]
+    },
+    {
+     "name": "Junichiro Hayano",
+     "openalex": "A5027344214",
+     "orcid": "https://orcid.org/0000-0002-5340-6325",
+     "tokai": [
+      "名古屋市立大学"
+     ]
+    },
+    {
+     "name": "Makoto Konagai Takahashi",
+     "openalex": "A5023822966",
+     "orcid": "https://orcid.org/0000-0001-6973-844X",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4405756038",
+   "doi": "https://doi.org/10.1109/ica63002.2024.00019",
+   "title": "Can curiosity enhance the quality of on-demand delivery services?",
+   "date": "2024-12-04",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Agents (ICA)",
+   "url": "https://doi.org/10.1109/ica63002.2024.00019",
+   "cited": 0,
+   "abstract": "In this paper, we use multi-agent reinforcement learning to analyze how drivers’ behavioral policies in on-demand delivery services (ODS) affect the service’s overall revenue and other aspects. Specifically, we perform simulations using agents built with two reinforcement learning frameworks, Proximal Policy Optimization (PPO) and Random Network Distillation (RND), to analyze the effect of the existence of drivers who, although seemingly irrational, prefer to find new stores by exploring areas they have not visited before. In addition, this paper employs a design in which each driver has a separate learning model, which allows each driver to adopt different behavior patterns and search strategies, thus enabling a variety of searches throughout the system. Simulation experiments were conducted to evaluate the performance of the system in three different scenarios with different supply-demand balances. The results showed that the presence of curious drivers increased revenues, and this was especially true in situations where the number of orders relative to that of drivers was high. This suggests that when designing a behavioral policy for drivers in ODS, factors that promote exploratory behavior are important.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Riku Yoshioka",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Koichi Moriyama",
+     "openalex": "A5066183149",
+     "orcid": "https://orcid.org/0000-0003-1735-1862",
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Yuko Sakurai",
+     "openalex": "A5037088437",
+     "orcid": "https://orcid.org/0000-0002-0642-3878",
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4404240333",
+   "doi": "https://doi.org/10.1007/978-3-031-76452-3_35",
+   "title": "Proposal of Vehicle Routing System for Disaster Situations",
+   "date": "2024-11-12",
+   "type": "conference-paper",
+   "venue": "Lecture notes on data engineering and communications technologies",
+   "url": "https://doi.org/10.1007/978-3-031-76452-3_35",
+   "cited": 0,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Haruto Domoto",
+     "openalex": "A5093276245",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Taiki Naito",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Takahiro Uchiya",
+     "openalex": "A5090246029",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Takumi Ichi",
+     "openalex": "A5057003546",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4403269474",
+   "doi": "https://doi.org/10.3397/in_2024_3136",
+   "title": "Study on the effect of viaducts vibration by truck platooning experiments",
+   "date": "2024-10-04",
+   "type": "conference-paper",
+   "venue": "NOISE-CON proceedings",
+   "url": "https://doi.org/10.3397/in_2024_3136",
+   "cited": 0,
+   "abstract": "Japan is currently grappling with a shortage and aging workforce of truck drivers, alongside the pressing need for improved fuel efficiency. In response, the Ministry of Economy, Trade and Industry (METI) and the Ministry of Land, Infrastructure, Transport and Tourism (MLIT) have set a goal to achieve autonomous driving technology, facilitating truck platooning with no drivers in following trucks on expressways. METI and MLIT have initiated demonstration tests for an autonomous driving system featuring truck platoons traversing expressways, with no drivers in following trucks. When multiple trucks form a platoon on a viaduct, both the trucks and the viaduct may generate coupled vibrations, leading to significant viaduct vibrations. Nonetheless, the authors consider that it is possible to reduce the vibration of the viaduct by specifying the platooning conditions. The aim of this study was to examine the impact of truck platooning on viaduct vibrations. Vibration simulations and truck platooning experiments were conducted on an existing viaduct. The findings confirmed that, under the conditions of present experiments, there exists a distance between trucks that can reduce vibration when two trucks are travelling in a platoon compared to travelling alone.",
+   "lang": "en",
+   "topic": "Railway Engineering and Dynamics",
+   "authors": [
+    {
+     "name": "Kimikazu IKEYA",
+     "openalex": "A5023797026",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Naoto Maeda",
+     "openalex": "A5104327386",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Hiroshi Iwabuki",
+     "openalex": "A5033292682",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Noboru Kamiakito",
+     "openalex": "A5084105157",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Saiji FUAKDA",
+     "openalex": "A5108179935",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yasuyuki SANO",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "愛知工業大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4404330529",
+   "doi": "https://doi.org/10.1017/elr.2024.47",
+   "title": "The impact of the Korean safe rates system on work environment and road safety",
+   "date": "2024-09-01",
+   "type": "article",
+   "venue": "The Economic and Labour Relations Review",
+   "url": "https://doi.org/10.1017/elr.2024.47",
+   "cited": 4,
+   "abstract": "The regulation of road transport supply chains has recently become a subject of international concern. A significant body of research shows that ensuring minimum rates of pay for truck drivers is important, not only to workers’ health and safety but also to achieving improved road safety outcomes and other policy objectives related to the viability of the road transport industry. For this study, we used an empirical analysis to quantitatively demonstrate the impact of South Korea’s Safe Rates System on factors of the work environment and driver behaviours that affect road safety. Specifically, we looked at the impact of the system on market structure, truck drivers’ monthly net income, average working time, time spent on maintenance, and the frequency of overloading, speeding, and drowsiness while driving. Our results suggest that increased rates of pay for owner truck drivers resulting from the implementation of the Safe Rates System led to a reduction in the average number of contracting steps between client companies who ship goods and the truck drivers who transport them, improvement in the level of market transparency, increased monthly income, decrease in total time worked, decrease in the frequency of overloading, speeding, and drowsiness while driving, and increase in time spent on vehicle maintenance. The level of compliance with the system by clients and transport companies also had an overall positive impact on the industry structure. By empirically demonstrating the system’s impact, our results provide statistical evidence useful to the debate on reintroduction of the Safe Rates System in Korea.",
+   "lang": "en",
+   "topic": "Traffic and Road Safety",
+   "authors": [
+    {
+     "name": "Doojoo Baek",
+     "openalex": "A5114587244",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Hyeonil Jeong",
+     "openalex": "",
+     "orcid": "https://orcid.org/0009-0002-8130-6070",
+     "tokai": []
+    },
+    {
+     "name": "Wol-san Liem",
+     "openalex": "A5114587243",
+     "orcid": "https://orcid.org/0009-0004-0497-1282",
+     "tokai": []
+    },
+    {
+     "name": "Kunhyui Kim",
+     "openalex": "A5063849338",
+     "orcid": "https://orcid.org/0000-0003-4520-6048",
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4396594261",
+   "doi": "https://doi.org/10.1007/978-981-97-0194-0_54",
+   "title": "A Heuristic Algorithm for the Vehicle Routing Problem with Stochastic Travel and Service Times",
+   "date": "2024-05-03",
+   "type": "conference-paper",
+   "venue": "Lecture notes in mechanical engineering",
+   "url": "https://doi.org/10.1007/978-981-97-0194-0_54",
+   "cited": 1,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Yusuke Honda",
+     "openalex": "A5101011837",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Koichi Nakade",
+     "openalex": "A5050471042",
+     "orcid": "https://orcid.org/0000-0002-0933-6614",
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4394711795",
+   "doi": "https://doi.org/10.1109/percom59722.2024.10494498",
+   "title": "Semi-Automated Framework for Digitalizing Multi-Product Warehouses with Large Scale Camera Arrays",
+   "date": "2024-03-11",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Pervasive Computing and Communications",
+   "url": "https://doi.org/10.1109/percom59722.2024.10494498",
+   "cited": 7,
+   "abstract": "As global demand for logistics continues to grow, optimizing the automation and efficiency of distribution warehouse operations is of paramount importance. Digitalizing warehouse environments, which refers to the process of sensing the physical space and extracting meaningful information from the obtained data, offers a promising solution to this challenge. However, converting raw warehouse data, such as video footage captured inside the warehouse, into actionable metadata (e.g., tracking the movement paths of workers and products or analyzing the usage patterns of different warehouse locations) often necessitates significant human intervention. The rise of machine learning further complicates this, as it requires the manual preparation of extensive training datasets. In this paper, we introduce a framework that semi-automates the digitalization process in complex warehouse settings. This framework employs dense optical flow and representation learning to autonomously segment warehouse objects and cluster similar objects, thereby substantially cutting down on annotation costs. To evaluate our approach, we constructed a large-scale data collection platform with over 60 fixed cameras in a real-world logistics warehouse, and the video data from this platform was then applied to our framework. Our evaluations indicate that our method markedly reduces both the time and resources required for warehouse digitalization using the captured video data.",
+   "lang": "en",
+   "topic": "Video Surveillance and Tracking Methods",
+   "authors": [
+    {
+     "name": "Keisuke Higashiura",
+     "openalex": "A5070325267",
+     "orcid": "https://orcid.org/0009-0006-2170-552X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kodai Yokoyama",
+     "openalex": "A5053550823",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Yusuke Asai",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Hironori Shimosato",
+     "openalex": "A5055177785",
+     "orcid": "https://orcid.org/0000-0003-3418-8833",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kazuma Kano",
+     "openalex": "A5090835852",
+     "orcid": "https://orcid.org/0000-0002-7514-1655",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shin Katayama",
+     "openalex": "A5002452411",
+     "orcid": "https://orcid.org/0000-0002-5614-4412",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Kenta Urano",
+     "openalex": "A5044005499",
+     "orcid": "https://orcid.org/0000-0003-2906-537X",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Takuro Yonezawa",
+     "openalex": "A5083114149",
+     "orcid": "https://orcid.org/0000-0001-9781-0402",
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Nobuo Kawaguchi",
+     "openalex": "A5045353484",
+     "orcid": "https://orcid.org/0000-0002-0444-2290",
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4403279939",
+   "doi": "https://doi.org/10.1016/j.ifacol.2024.09.247",
+   "title": "Optimizing Truck Transportation by Introducing Discount for Shipping Fees",
+   "date": "2024-01-01",
+   "type": "article",
+   "venue": "IFAC-PapersOnLine",
+   "url": "https://doi.org/10.1016/j.ifacol.2024.09.247",
+   "cited": 0,
+   "abstract": "As increase of delivery items, the overtime of truck drivers becomes an important issue, and so the effective operation of trucks is necessary. In this research, the effect of the discount fee on leveling the amount of necessary is discussed. By introducing the discount fee, some of demand corresponds to the late delivery, and leveling loads of trucks is realized. The mathematical model is formulated as a Markov reward model. In numerical examples, the optimal discount is derived and the effectiveness of introducing discount is discussed. Sensitivity analysis, on the number of normal trucks, the capacity for each truck and the demand function for the discount, is also developed.",
+   "lang": "en",
+   "topic": "Supply Chain and Inventory Management",
+   "authors": [
+    {
+     "name": "Koichi Nakade",
+     "openalex": "A5050471042",
+     "orcid": "https://orcid.org/0000-0002-0933-6614",
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    },
+    {
+     "name": "Akane Maeoka",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋工業大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4403715341",
+   "doi": "https://doi.org/10.11361/journalcpij.59.1186",
+   "title": "Scenario-Based Planning for Emergency Vehicle Routing with Stochastic Regions",
+   "date": "2024-01-01",
+   "type": "article",
+   "venue": "Journal of the City Planning Institute of Japan",
+   "url": "https://doi.org/10.11361/journalcpij.59.1186",
+   "cited": 0,
+   "abstract": "本研究では，地域ごとの復旧見通しが不確実な中で直近の緊急時配送計画を策定する方法に関して提案を行う．対象領域を二つに分け，各領域の需要家が配送を必要としている確率をシナリオごとに設け，期限内にすべての配送が完了する前提のもと，総移動距離の期待値が最小となるような直近の配送計画を求めた．得られた特徴として，(1)基地と需要家を往復する配送の場合，復旧の見通しが立たない場合には移動距離が小さい順，見通しが想定出来る場合は移動距離と復旧確率の積が小さい順に需要家を選択すれば良い，(2)基地から需要家を周回する配送の場合，基地から近い領域で配送を必要とする確率が高いと想定される場合，ないしは復旧見通しが立たない場合には，主に基地から近い需要家を選択し周回すれば良い．一方，基地から遠い領域で明らかに配送を必要とする確率が高い場合は基地から遠い需要家を選択して配送すれば良いことがわかった．加えて，本研究では，配送事業者が自ら所有するデータで配送計画が可能となるよう，配送計画問題として定式化を行った後に，需要家200件超，配送車18台でも適用可能な施設配置ヒューリスティクスを解法として提案した．",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Naoshi Shiono",
+     "openalex": "A5028703251",
+     "orcid": "https://orcid.org/0000-0003-0913-821X",
+     "tokai": []
+    },
+    {
+     "name": "Yuji Ozawa",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Shogo Hashitomi",
+     "openalex": "A5114389816",
+     "orcid": null,
+     "tokai": [
+      "名古屋大学"
+     ]
+    },
+    {
+     "name": "Takashi Tomita",
+     "openalex": "A5102003097",
+     "orcid": "https://orcid.org/0000-0003-3458-4780",
+     "tokai": [
+      "名古屋大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W4389240904",
+   "doi": "https://doi.org/10.3397/in_2023_0880",
+   "title": "Influence of truck platooning with various vehicular gaps on bridge vibration",
+   "date": "2023-11-30",
+   "type": "conference-paper",
+   "venue": "NOISE-CON proceedings",
+   "url": "https://doi.org/10.3397/in_2023_0880",
+   "cited": 0,
+   "abstract": "Truck platooning tests using automated driving technology have been conducted on expressways to address issues such as truck driver shortages, an aging workforce, and rising fuel costs. These tests involved three trucks traveling at a speed of 80 km/h, with the trailing two trucks unmanned and maintaining approximately 9 m between vehicles. When multiple trucks cross a bridge with a specific gap between them, the combined vibration of the vehicles and the bridge can cause significant bridge vibrations. In recent years, many bridges have been constructed as continuous structures to improve their seismic performance. Consequently, numerous vibration modes of multiple bridges exist in proximity. Hence, it is believed that many coupled vibrations between trucks and bridges are generated. However, it is possible to control the bridge vibration response by altering the gap between vehicles and their traveling speed. In this study, the effect of the gap between vehicles during actual truck platooning tests on changes in bridge vibrations is investigated.",
+   "lang": "en",
+   "topic": "Structural Engineering and Vibration Analysis",
+   "authors": [
+    {
+     "name": "Saiji Fukada",
+     "openalex": "A5045533594",
+     "orcid": "https://orcid.org/0000-0002-9161-1231",
+     "tokai": []
+    },
+    {
+     "name": "Tatsuaki Mori",
+     "openalex": "A5011880380",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Hiroshi Iwabuki",
+     "openalex": "A5033292682",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yasuyuki Sano",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "愛知工業大学"
+     ]
+    },
+    {
+     "name": "Yasunao Matsumoto",
+     "openalex": "A5050181940",
+     "orcid": "https://orcid.org/0000-0002-2419-8141",
+     "tokai": []
+    },
+    {
+     "name": "Noboru Kamiakito",
+     "openalex": "A5084105157",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Akito Yabe",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "東海"
+  },
+  {
+   "id": "W7214599659",
+   "doi": "https://doi.org/10.1051/e3sconf/202674407005",
+   "title": "A Drone-Based Emergency Medical Supply Network for Rapid Blood Delivery in Rural Thailand: A Conceptual Design",
+   "date": "2026-09-28",
+   "type": "conference-paper",
+   "venue": "E3S Web of Conferences",
+   "url": "https://doi.org/10.1051/e3sconf/202674407005",
+   "cited": 0,
+   "abstract": "Timely access to blood and critical medical supplies is essential for emergency healthcare, particularly in rural areas of Thailand where transportation delays can critically impact patient survival. The current system relies on manual coordination and road-based logistics, resulting in delivery times of 1-4 hours. This paper presents ASTRO (Automated Supply and Transport for Rural Operations), a drone-based emergency medical supply network designed to improve the speed and reliability of blood delivery in rural Thailand. It integrates a smart digital platform for real-time request processing with autonomous VTOL drone delivery, transporting temperature-controlled products from regional blood centers co-located with related facilities directly to hospitals within a 50-80 km radius. By eliminating manual coordination and reducing dependency on ground transport, the system targets delivery times of 15-30 minutes. This research demonstrates how integrating advanced UAV logistics into existing Thai healthcare infrastructure can address critical bottlenecks and significantly improve patient outcomes.",
+   "lang": "en",
+   "topic": "UAV Applications and Optimization",
+   "authors": [
+    {
+     "name": "Pasihn Nimmanpipak",
+     "openalex": "A5138666584",
+     "orcid": "https://orcid.org/0009-0004-4701-1855",
+     "tokai": []
+    },
+    {
+     "name": "Nutpatchaporn Thippayajindakul",
+     "openalex": "A5153400567",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Wataru Nagaoka",
+     "openalex": "A5153189323",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Minami Iida",
+     "openalex": "A5153366414",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Thanaporn Piromvard",
+     "openalex": "A5153283273",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Prinn Chiewpanich",
+     "openalex": "A5153230597",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuki Taoka",
+     "openalex": "A5031786145",
+     "orcid": "https://orcid.org/0000-0002-2897-1971",
+     "tokai": []
+    },
+    {
+     "name": "Rie Murakami-Suzuki",
+     "openalex": "A5153243971",
+     "orcid": "https://orcid.org/0000-0001-9478-638X",
+     "tokai": []
+    },
+    {
+     "name": "Eri Ota",
+     "openalex": "A5153324201",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Natt Leelawat",
+     "openalex": "A5036021266",
+     "orcid": "https://orcid.org/0000-0001-5181-2584",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Jing Tang",
+     "openalex": "A5078817579",
+     "orcid": "https://orcid.org/0000-0002-4835-1016",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7171555348",
+   "doi": "https://doi.org/10.1016/j.tre.2026.105127",
+   "title": "Beyond efficiency: societal benefit perception as a driver of public acceptance for UAM-based last-mile delivery in Japan",
+   "date": "2026-07-29",
+   "type": "article",
+   "venue": "Transportation Research Part E Logistics and Transportation Review",
+   "url": "https://doi.org/10.1016/j.tre.2026.105127",
+   "cited": 1,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Dohyung Kim",
+     "openalex": "A5100607740",
+     "orcid": "https://orcid.org/0000-0001-5399-3710",
+     "tokai": []
+    },
+    {
+     "name": "Sunbin Yoo",
+     "openalex": "A5023795277",
+     "orcid": "https://orcid.org/0000-0002-9588-2389",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Shunsuke Managi",
+     "openalex": "A5033548751",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Zheng Chang",
+     "openalex": "A5011351576",
+     "orcid": "https://orcid.org/0000-0001-6624-3206",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7167454467",
+   "doi": "https://doi.org/10.3390/electronics15132939",
+   "title": "TeCoR-UAV: A Two-Stage Topology Extraction and Cooperative Routing Algorithm for Low-Altitude Logistics",
+   "date": "2026-07-05",
+   "type": "article",
+   "venue": "Electronics",
+   "url": "https://doi.org/10.3390/electronics15132939",
+   "cited": 0,
+   "abstract": "Multi-UAV cooperative delivery is a key technology for intelligent low-altitude logistics, with applications in mountainous-area transport, urban last-mile delivery, and emergency resupply. In complex three-dimensional (3D) low-altitude environments, obstacle-constrained airspace, fleet heterogeneity, payload limits, and time windows make the realistic representation of flight costs difficult and substantially restrict the feasible region of cooperative planning. To address these challenges, this paper proposes TeCoR-UAV, a two-stage topology extraction and cooperative route planning framework. The proposed method first precomputes executable flight trajectories in obstacle-constrained airspace and constructs a topological graph that captures realistic flight costs. A bi-objective optimization model is then formulated to minimize operational cost and maximize service quality. Furthermore, a hierarchical genetic solver is designed to improve solution quality and feasibility jointly through global task allocation and single-UAV execution sequence optimization. Experimental results show that the proposed method can better reflect realistic flight costs in complex environments. Compared with existing benchmark methods, TeCoR-UAV achieves better bi-objective trade-offs in most medium- and large-scale scenarios, as well as in topologically constrained scenarios, and improves service quality by an average of 18.5 percentage points, indicating its scenario adaptability and potential for practical application.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "丁步扬",
+     "openalex": "A5055806305",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Weijun Ni",
+     "openalex": "A5162743883",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yixing Luo",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Zhiming Liu",
+     "openalex": "A5100405109",
+     "orcid": "https://orcid.org/0000-0001-9771-3071",
+     "tokai": []
+    },
+    {
+     "name": "Nianyu Li",
+     "openalex": "A5052040242",
+     "orcid": "https://orcid.org/0000-0001-8960-7770",
+     "tokai": []
+    },
+    {
+     "name": "Jialong Li",
+     "openalex": "A5100708117",
+     "orcid": "https://orcid.org/0000-0003-3416-5551",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Mingyue Zhang",
+     "openalex": "A5162774484",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7148630493",
+   "doi": "https://doi.org/10.1007/s12597-026-01150-w",
+   "title": "Development of optimization mechanism for cross-border e-commerce logistics using genetic algorithm: scenario of home appliance from Japan to East China",
+   "date": "2026-04-03",
+   "type": "article",
+   "venue": "OPSEARCH",
+   "url": "https://doi.org/10.1007/s12597-026-01150-w",
+   "cited": 0,
+   "abstract": "To address the challenges of high costs, volatility, and multiple constraints in cross-border e-commerce logistics of home appliances from Japan to East China, this study proposes a two-segment chromosome genetic algorithm (GA) optimization mechanism to systematically compare ten logistics operation models that are currently feasible for enterprises. The first segment encodes the suitability of candidate logistics models, while the second segment simultaneously evolves the weight coefficient of key performance indicators. A global search is conducted in a multi-objective space using fitness-proportional selection, BLX- α crossover, and adaptive Gaussian mutation through which both the suitability and the coefficient weights are synchronously adjusted during the search process to obtain a comprehensive evaluation that is more consistent with real business scenarios. The experiment is based on company-collected operational data and industry survey results, incorporating transportation, warehousing, return logistics, and carbon emissions. The GA results indicate that the Off-peak Transit Time is the most critical performance indicator, leading to a strong preference for air shipping, with approximately 60% of orders allocated to air consolidation. As reason, the time and inventory costs associated with short-sea routes weaken the traditional advantages of sea shipping, while the economies of scale of consolidation offset the typically high cost of air shipping. The study demonstrates the applicability of an enhanced GA in medium-range cross-border logistics system design, offering practical decision support for enterprises seeking a balanced trade-off among cost efficiency, lead time, service quality, and sustainability.",
+   "lang": "en",
+   "topic": "E-commerce and Technology Innovations",
+   "authors": [
+    {
+     "name": "Yujing Huang",
+     "openalex": "A5101909127",
+     "orcid": "https://orcid.org/0000-0001-8064-3425",
+     "tokai": []
+    },
+    {
+     "name": "Luyao Shen",
+     "openalex": "A5132803174",
+     "orcid": "https://orcid.org/0009-0003-8099-0015",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Laixiang Xu",
+     "openalex": "A5032884269",
+     "orcid": "https://orcid.org/0000-0001-5412-7689",
+     "tokai": []
+    },
+    {
+     "name": "Haitao Yan",
+     "openalex": "A5132821994",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7203483466",
+   "doi": "https://doi.org/10.1109/tits.2026.3720527",
+   "title": "Deep Learning and Simulated Annealing Empowered Path Planning for Intelligent Logistics ITS With Adaptive Privacy Preserving",
+   "date": "2026-01-01",
+   "type": "article",
+   "venue": "IEEE Transactions on Intelligent Transportation Systems",
+   "url": "https://doi.org/10.1109/tits.2026.3720527",
+   "cited": 0,
+   "abstract": "Within the domain of intelligent transportation systems (ITS), smart last-mile delivery increasingly leverages mobile logistics nodes to enhance operational efficiency. However, the extensive data collected through these nodes significantly heightens privacy risks, thereby necessitating adaptive restricted zones to safeguard sensitive information. Meanwhile, traditional restricted zones are typically government-designated, permanent, non-adjustable, inattentive to users’ privacy needs, and reliant on inefficient node encoding methods. To address these challenges, first, we propose a novel deep q-network with simulated annealing (DQN-SA) approach for delivery with multiple mobile logistics nodes. This approach mitigates the tendency for traditional simulated annealing to become trapped in local optima. While DQN improves neighborhood selection, SA enhances DQN learning and exploration. Second, we address the complexities of real-world scenarios by designing restricted zones with varying radii to accommodate zone restrictions in delivery tasks. In order to protect different levels of privacy requirements, this design enables dynamic adjustment of route planning during the optimization process to satisfy these constraints. Third, to validate the applicability and robustness of the algorithm, we test it under different customer node distribution patterns, providing a comprehensive evaluation of its performance in diverse scenarios. The experimental results confirm the validity of our proposed model. Our study provides more flexible options for the delivery of mobile logistics nodes while addressing user privacy protection.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Zhengyi Sun",
+     "openalex": "A5101072024",
+     "orcid": "https://orcid.org/0009-0000-8053-7497",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Jun Wu",
+     "openalex": "A5004673608",
+     "orcid": "https://orcid.org/0000-0003-2483-6980",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Qianqian Pan",
+     "openalex": "A5030720947",
+     "orcid": "https://orcid.org/0000-0001-8093-3377",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Maryam Mohamed Al Dabel",
+     "openalex": "A5015487601",
+     "orcid": "https://orcid.org/0000-0003-4371-8939",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7138962087",
+   "doi": "https://doi.org/10.1109/globecom59602.2025.11432039",
+   "title": "LLM-Enhanced Learning Route Optimization for Next-Generation Logistics Networking with Hybrid Unmanned Vehicles",
+   "date": "2025-12-08",
+   "type": "conference-paper",
+   "venue": "Globecom",
+   "url": "https://doi.org/10.1109/globecom59602.2025.11432039",
+   "cited": 0,
+   "abstract": "Next-generation logistics systems involving collaborative delivery that integrate both manned and unmanned vehicles (UVs) have become essential to efficiently address the rapid growth and complexity of urban logistics demands. However, the adaptability of these collaborative systems in dynamic routing scenarios remains limited, as existing optimization methods often rely on manually tuned parameters. Moreover, route optimization becomes even more challenging when UVs operate in signal-shielded zones, further complicating delivery operations. To address these issues, first, we propose an intelligent manned-unmanned vehicle collaborative delivery optimization framework that integrates adaptive parameter tuning based on a large language model (LLM) into a hybrid deep Q-network (DQN) and simulated annealing (SA) algorithm. This method dynamically balances exploration and exploitation, explicitly accounts for signal constraints, and evaluates the impact of different LLMs. Second, we systematically evaluate the influence of different LLMs on adaptive parameter tuning within the DQN-SA algorithm to understand their respective effectiveness in enhancing optimization performance. Finally, we examine the framework’s performance across different levels of customer clustering to ensure robustness under varying real-world distribution conditions. Experimental results demonstrate that our proposed algorithm significantly outperforms traditional methods, effectively reducing the total delivery distance and highlighting its superior adaptability and optimization capability.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Zhengyi Sun",
+     "openalex": "A5101072024",
+     "orcid": "https://orcid.org/0009-0000-8053-7497",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Jiao Wu",
+     "openalex": "A5103023916",
+     "orcid": "https://orcid.org/0000-0001-7868-5239",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7127190941",
+   "doi": "https://doi.org/10.1109/ieem63636.2025.11357587",
+   "title": "Solution Approaches and Comparative Analysis for Multi-Product Vehicle Routing Problems with Capacity Constraints under Demand Uncertainty",
+   "date": "2025-12-07",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
+   "url": "https://doi.org/10.1109/ieem63636.2025.11357587",
+   "cited": 0,
+   "abstract": "The objective of this study is to define a vehicle routing problem in which the demand at each location follows a normal distribution under the driver shortage conditions and to propose several formulations. To assume a driver shortage, the number of trucks is fixed to one, and the objective is to minimize the transportation cost, satisfy the demand, and increase the revenue in addition to minimizing the transportation cost. Then, the existing solution methods for each formulation and for a situation where multiple trucks can be used are run on multiple data sets with different characteristics, and a comparative analysis of the results is performed.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Yumu Yasui",
+     "openalex": "A5124833348",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Takashi Hasuike",
+     "openalex": "A5088963187",
+     "orcid": "https://orcid.org/0000-0002-0475-8439",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7127134108",
+   "doi": "https://doi.org/10.1145/3787256.3787269",
+   "title": "Locker-based Drone Delivery with Battery Swapping Stations: A Joint Routing–Recharging Optimization",
+   "date": "2025-11-21",
+   "type": "conference-paper",
+   "venue": "International Conference on Computational Intelligence and Intelligent Systems (CIIS)",
+   "url": "https://doi.org/10.1145/3787256.3787269",
+   "cited": 1,
+   "abstract": "Against the backdrop of growing e-commerce demand and tightening labor constraints, drone delivery has emerged as a promising alternative for scalable and automated last-mile logistics. This paper examines a Locker-based Drone Delivery system with Battery-Swapping Stations (LDDP), addressing a critical gap in prior research that overlooks the limitations of drone range and the practical role of battery infrastructure. We formalize the LDDP problem on a time-expanded network and develop a mixed-integer linear programming model that simultaneously optimizes drone routing, locker service sequencing, and battery-swapping operations under realistic operational constraints. To validate the proposed model, experiments are conducted using real-world geographic data from Tsukuba, Japan.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Wushuang Wang",
+     "openalex": "A5124755359",
+     "orcid": "https://orcid.org/0009-0009-2658-4845",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Yiliu Tan",
+     "openalex": "A5036754929",
+     "orcid": "https://orcid.org/0000-0002-1102-3764",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Yu Li",
+     "openalex": "A5100345807",
+     "orcid": "https://orcid.org/0000-0002-6195-1710",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Maiko Shigeno",
+     "openalex": "A5003295530",
+     "orcid": "https://orcid.org/0000-0002-3671-9434",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7136181794",
+   "doi": "https://doi.org/10.1109/itsc60802.2025.11423720",
+   "title": "Balancing Efficiency and Service: A Marginal Cost Approximation Approach to Multi-Period Vehicle Routing in E-Commerce Logistics",
+   "date": "2025-11-18",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
+   "url": "https://doi.org/10.1109/itsc60802.2025.11423720",
+   "cited": 0,
+   "abstract": "This paper proposes a user-based dynamic pricing approach for attended home delivery (AHD), using marginal routing costs to improve efficiency and maximize profits. Delivery timing choices are modeled with a nested logit model, and multi-period vehicle routing problems (MPVRP) is modeled to simulate the vehicle routing. Three cost approximation methods—continuous approximation (CA), regression-based (RA), cheapest insertion (CI) are evaluated based on a MPVRP and the delivery timing choice model. Additionally, future order prediction mechanism is adopted to cope with future uncertainty. Numerical results show dynamic pricing is outperforming the fixed pricing, with all methods meeting speed requirements. After integrating the future prediction model, the profit increase across all approximation models. Additionally, the cluster location of customer is examined, finding that dynamic pricing could be more benefit when demand is clustered. This efficient approach offers a practical solution for user-based time slot pricing over larger areas.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "H. Huang",
+     "openalex": "A5002298877",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Ryota Okazaki",
+     "openalex": "A5156949429",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuki Oyama",
+     "openalex": "A5008477033",
+     "orcid": "https://orcid.org/0000-0001-5172-6600",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7116851471",
+   "doi": "https://doi.org/10.1109/isc266238.2025.11293310",
+   "title": "Exploring Perceived Risk of Passing Sidewalk Mobility Using VR",
+   "date": "2025-10-06",
+   "type": "conference-paper",
+   "venue": "IEEE International Smart Cities Conference (ISC2)",
+   "url": "https://doi.org/10.1109/isc266238.2025.11293310",
+   "cited": 1,
+   "abstract": "As diverse modes of transportation become increasingly common on sidewalks, ensuring safe coexistence with pedestrians is becoming more important than ever. While empirical studies exist, they often use fixed speed ranges and do not identify the subjective thresholds for perceived danger. Moreover, few have systematically examined how contributing factors interact with mobility types and passing patterns within an integrated framework. This study focused on the diversification of mobilities (electric kick scooters, electric wheelchairs, autonomous delivery robots) on sidewalks. We utilized a unique interactive application that allowed participants to adjust speeds in$1 ~\\text{km} / \\mathrm{h}$increments within a virtual reality environment to evaluate the critical speed for perceived danger and the factors influencing perceived danger in head-on passing versus overtaking scenarios. A total of 22 participants experienced the scenarios, after which a two-way repeated-measures ANOVA was conducted. The results indicated significant main effects for mobility type and passing pattern, as well as a significant interaction, on the critical speed at which pedestrians perceived danger. The critical speed was lower during overtaking than head-on passing. Furthermore, while electric kick scooters tended to be perceived as less dangerous even at higher speeds compared to other mobilities, they generated a strong impression of norm violation. These findings contribute to the revision of sidewalk design and regulations.",
+   "lang": "en",
+   "topic": "Traffic and Road Safety",
+   "authors": [
+    {
+     "name": "Chisaki Hori",
+     "openalex": "A5114094858",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Rin Sakamoto",
+     "openalex": "A5121061542",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Takeo Hamada Takeo Hamada",
+     "openalex": "A5113650911",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Noboru Koshizuka",
+     "openalex": "A5121059499",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7116886556",
+   "doi": "https://doi.org/10.1109/isc266238.2025.11293251",
+   "title": "Smart Building-Robot Cooperation via Delegated Control: Enabling Lightweight Elevator Integration",
+   "date": "2025-10-06",
+   "type": "conference-paper",
+   "venue": "IEEE International Smart Cities Conference (ISC2)",
+   "url": "https://doi.org/10.1109/isc266238.2025.11293251",
+   "cited": 1,
+   "abstract": "Service robots for delivery, security, and cleaning are increasingly being deployed in urban smart buildings. However, conventional robot-centric approaches face scalability and security limitations, especially when (i) multiple robots must share the same facility and (ii) guest or newly deployed robots must be onboarded instantly. We propose a Delegated Control framework that shifts high-level logic to the building side. A centralized agent server orchestrates elevators and other facilities, publishes commands via MQTT-based publish-subscribe communication protocol, and issues session-scoped capability tokens that grant each robot only the minimum required privileges. The framework has three features: (1) Infrastructure-centric asynchronous orchestration that coordinates many robots and facilities; (2) Fine-grained, time-bounded security realized by static ACLs and dynamically generated MQTT topics; and (3) Hardwareagnostic interfaces that remove the need for additional special devices on the robot. We implemented the system in a fivestory research building and evaluated it using two delivery robots operating with a shared elevator. The evaluation achieved 100% coordination success with MQTT latency below 2 ms, demonstrating that policy-aware MQTT orchestration combined with delegated control enables scalable and secure robot-building cooperation.",
+   "lang": "en",
+   "topic": "Robotics and Automated Systems",
+   "authors": [
+    {
+     "name": "Katsutoshi Amano",
+     "openalex": "A5113352642",
+     "orcid": "https://orcid.org/0009-0002-8872-0223",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Hangli Ge",
+     "openalex": "A5034634831",
+     "orcid": "https://orcid.org/0000-0001-8025-3013",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Yasuhira Chiba",
+     "openalex": "A5080082035",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Noboru Koshizuka",
+     "openalex": "A5121059499",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4409044804",
+   "doi": "https://doi.org/10.3390/urbansci9040104",
+   "title": "Smart Mobility in a Secondary City: Insights from Food Delivery App Adoption Among Thai University Students",
+   "date": "2025-04-01",
+   "type": "article",
+   "venue": "Urban Science",
+   "url": "https://doi.org/10.3390/urbansci9040104",
+   "cited": 9,
+   "abstract": "Food delivery apps (FDAs) have emerged as transformative tools in the digital age, reshaping consumer behavior and urban mobility through their convenience and accessibility. This study explores the factors influencing the adoption of FDAs among university students in a secondary city in Thailand, framed within the broader context of smart mobility. This study employs an extended Unified Theory of Acceptance and Use of Technology (UTAUT) framework, incorporating key constructs including performance expectancy, effort expectancy, social influence, facilitating conditions, and environmental concerns. Data were collected from 396 students at Mahasarakham University through a structured questionnaire and analyzed using structural equation modeling. The results reveal that effort expectancy, social influence, and environmental concerns significantly impact behavioral intention, while behavioral intention and facilitating conditions drive actual usage behavior. Environmental concerns emerged as a critical determinant, reflecting the growing alignment between consumer preferences and sustainability goals. The findings underscore the role of FDAs as key enablers of smart mobility, optimizing urban logistics, reducing transportation inefficiencies, and supporting sustainable city systems. By integrating environmental concerns into the UTAUT model, this study contributes to understanding technology adoption dynamics in secondary cities. Practical implications include promoting eco-friendly practices, enhancing digital infrastructure, and leveraging FDAs to foster sustainable and inclusive mobility ecosystems.",
+   "lang": "en",
+   "topic": "Technology Adoption and User Behaviour",
+   "authors": [
+    {
+     "name": "Manop Chantasoon",
+     "openalex": "A5116866170",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Aphisit Pukdeewut",
+     "openalex": "A5098944985",
+     "orcid": "https://orcid.org/0009-0001-9614-6551",
+     "tokai": []
+    },
+    {
+     "name": "Prasongchai Setthasuravich",
+     "openalex": "A5032307225",
+     "orcid": "https://orcid.org/0000-0003-1807-4350",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4412937967",
+   "doi": "https://doi.org/10.2322/jjsass.73.117",
+   "title": "Development of Drone Operation Manual and Analysis of Issues for Enhancing Drone Operation Safety",
+   "date": "2025-01-01",
+   "type": "article",
+   "venue": "JOURNAL OF THE JAPAN SOCIETY FOR AERONAUTICAL AND SPACE SCIENCES",
+   "url": "https://doi.org/10.2322/jjsass.73.117",
+   "cited": 0,
+   "abstract": "This paper discusses how to develop and enhance a safe system in a organization which offers drone services. This paper reviews academic papers on drone operations, summarizes latest drone regulation in Japan, and Fukushima Robot Test Field's drone operation risk assessment guideline, which was published at the end of 2022 based on Joint Authorities for Rulemaking on Unmanned Systems' Specific Operations Risk Assessment V2.0, to a specific drone delivery operation. The Fukushima guideline is one of important document for drone operators but lack of the detail procedures. This paper with development procedure and demonstration of a drone operation manual aims to help drone service operators in Japan to develop a safe system in the organization. And this paper concludes the need of academic contribution to evaluate the adequacy of the safety system of the drone operation, including development of a simulator to support.",
+   "lang": "en",
+   "topic": "Air Traffic Management and Optimization",
+   "authors": [
+    {
+     "name": "Hiroko Nakamura",
+     "openalex": "A5082289640",
+     "orcid": "https://orcid.org/0000-0003-3036-7877",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Takeshi Tsuchiya",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Shinji Suzuki",
+     "openalex": "A5102880407",
+     "orcid": "https://orcid.org/0000-0003-3628-5952",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Tokuaki Nakajima",
+     "openalex": "A5060797542",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kimihiko Maejima",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yusaku Hatano",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4405224094",
+   "doi": "https://doi.org/10.5057/ijae.ijae-d-24-00020",
+   "title": "Comparative Study on the Effect of Slant Shape in the Design of UGV Delivery Robots on Perceived Safety",
+   "date": "2024-12-10",
+   "type": "article",
+   "venue": "International Journal of Affective Engineering",
+   "url": "https://doi.org/10.5057/ijae.ijae-d-24-00020",
+   "cited": 1,
+   "abstract": "This study investigates the influence of the appearance of UGV delivery robots on Perceived Safety by comparing four variations of robot shapes using slants. The experiment was performed by presenting the robot shapes in a virtual environment by using a Virtual Reality headset (VR) and a computer screen (PC). We analyzed four participant groups: (1) Brazilians and (2) Japanese living in Japan using VR, (3) Brazilians living in Japan and (4) Brazilians living in Brazil using PC. In an exploratory approach, we investigated how Perceived Safety was influenced by nationality, country of residence, gender, field of study, preference for robot shape, and previous contact with robots. Perceived Safety was assessed using Kansei and Magnitude scores. Results indicate that while nationality did not affect perceived safety, living in a different country did. Additionally, both front and back slants positively influenced perceived safety compared to robots without slants.",
+   "lang": "en",
+   "topic": "Social Robot Interaction and HRI",
+   "authors": [
+    {
+     "name": "Vithor Hugo Costa da Silva",
+     "openalex": "A5011469416",
+     "orcid": "https://orcid.org/0000-0003-3973-7280",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Shinichi Koyama",
+     "openalex": "A5040700878",
+     "orcid": "https://orcid.org/0000-0001-6280-5750",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Toshimasa Yamanaka",
+     "openalex": "A5084180560",
+     "orcid": "https://orcid.org/0000-0001-9049-294X",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Soh Masuko",
+     "openalex": "A5101659759",
+     "orcid": "https://orcid.org/0000-0002-3277-5690",
+     "tokai": []
+    },
+    {
+     "name": "Kelvin Cheng",
+     "openalex": "A5075186287",
+     "orcid": "https://orcid.org/0000-0003-2779-9150",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4402433153",
+   "doi": "https://doi.org/10.1145/3640792.3675716",
+   "title": "Shrinkable Arm-based eHMI on Autonomous Delivery Vehicle for Effective Communication with Other Road Users",
+   "date": "2024-09-22",
+   "type": "conference-paper",
+   "venue": "International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutomotiveUI)",
+   "url": "https://doi.org/10.1145/3640792.3675716",
+   "cited": 9,
+   "abstract": "When employing autonomous driving technology in logistics, small autonomous delivery vehicles (aka delivery robots) encounter challenges different from passenger vehicles when interacting with other road users. We conducted an online video survey as a pre-study and found that autonomous delivery vehicles need external human-machine interfaces (eHMIs) to ask for help due to their small size and functional limitations. Inspired by everyday human communication, we chose arms as eHMI to show their request through limb motion and gesture. We held an in-house workshop to identify the arm’s requirements for designing a specific arm with shrink-ability (conspicuous when delivering messages but not affect traffic at other times). We prototyped a small delivery robot with a shrinkable arm and filmed the experiment videos. We conducted two studies (a video-based and a 360-degree-photo VR-based) with 18 participants. We demonstrated that arm-on-delivery robots can increase interaction efficiency by drawing more attention and communicating specific information.",
+   "lang": "en",
+   "topic": "Social Robot Interaction and HRI",
+   "authors": [
+    {
+     "name": "Xinyue Gui",
+     "openalex": "A5062839476",
+     "orcid": "https://orcid.org/0000-0001-6541-224X",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Mikiya Kusunoki",
+     "openalex": "A5027487083",
+     "orcid": "https://orcid.org/0009-0006-2084-4886",
+     "tokai": []
+    },
+    {
+     "name": "Bofei Huang",
+     "openalex": "A5152549189",
+     "orcid": "https://orcid.org/0009-0006-7660-032X",
+     "tokai": []
+    },
+    {
+     "name": "Stela H. Seo",
+     "openalex": "A5016226875",
+     "orcid": "https://orcid.org/0000-0002-0412-476X",
+     "tokai": []
+    },
+    {
+     "name": "Chia-Ming Chang",
+     "openalex": "A5101709988",
+     "orcid": "https://orcid.org/0000-0003-0390-6361",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Haoran Xie",
+     "openalex": "A5103016566",
+     "orcid": "https://orcid.org/0000-0002-6926-3082",
+     "tokai": []
+    },
+    {
+     "name": "Manabu Tsukada",
+     "openalex": "A5067716610",
+     "orcid": "https://orcid.org/0000-0001-8045-3939",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Takeo Igarashi",
+     "openalex": "A5102743150",
+     "orcid": "https://orcid.org/0000-0002-5495-6441",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4400682414",
+   "doi": "https://doi.org/10.1016/j.trc.2024.104738",
+   "title": "A fluid–particle decomposition approach to matching market design for crowdsourced delivery systems",
+   "date": "2024-07-16",
+   "type": "article",
+   "venue": "Transportation Research Part C Emerging Technologies",
+   "url": "https://doi.org/10.1016/j.trc.2024.104738",
+   "cited": 6,
+   "abstract": "This paper considers a crowdsourced delivery (CSD) system that effectively utilizes the existing trips to fulfill parcel delivery as a matching problem between CSD drivers and delivery tasks. This matching problem has two major challenges. First, it is a large-scale combinatorial optimization problem that is hard to solve in a reasonable computational time. Second, the evaluation of the objective function for socially optimal matching contains the utility of drivers for performing the tasks, which is generally unobservable private information. To address these challenges, this paper proposes a hierarchical distribution mechanism of CSD tasks that decomposes the matching problem into the task partition (master problem) and individual task-driver matching within smaller groups of drivers (sub-problems). We incorporate an auction mechanism with truth-telling and efficiency into the sub-problems so that the drivers’ perceived utilities are revealed through their bids. Furthermore, we formulate the master problem as a fluid model based on continuously approximated decision variables. By exploiting the random utility framework, we analytically represent the objective function of the problem using continuous variables, without explicitly knowing the drivers’ utilities. The numerical experiment shows that the proposed approach solved large-scale matching problems at least 100 times faster than a naive LP solver and approximated the original objective value with errors of less than 1%. The code of this work is available at https://github.com/yuki-oyama/fluid-particle-csd .",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Takashi Akamatsu",
+     "openalex": "A5086632927",
+     "orcid": "https://orcid.org/0000-0002-8545-839X",
+     "tokai": []
+    },
+    {
+     "name": "Yuki Oyama",
+     "openalex": "A5008477033",
+     "orcid": "https://orcid.org/0000-0001-5172-6600",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4396985748",
+   "doi": "https://doi.org/10.1016/j.commtr.2024.100130",
+   "title": "Drone-based vertical delivery system for high-rise buildings: Multiple drones vs. a single elevator",
+   "date": "2024-05-16",
+   "type": "article",
+   "venue": "Communications in Transportation Research",
+   "url": "https://doi.org/10.1016/j.commtr.2024.100130",
+   "cited": 33,
+   "abstract": "As urbanization and high-rise living increase, frequent delivery of goods in the building to higher floors from the ground level is becoming a pressing issue. We introduce a drone-based vertical delivery system aimed at enhancing the efficiency of high-rise building logistics. The potential of the proposed system in reducing delivery time and energy consumption compared to conventional elevator-based delivery is analyzed. By assessing the requisite number of drones, their operating frequencies, and identifying scenarios in which drones can surpass conventional methods, the advantages using drone delivery systems are highlighted. The results indicate that drone delivery is not only viable but also advantageous to meet certain demand levels, offering a promising alternative to elevator-based deliveries.",
+   "lang": "en",
+   "topic": "UAV Applications and Optimization",
+   "authors": [
+    {
+     "name": "Takahiro Ezaki",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0003-4175-3028",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Kazuhiro Fujitsuka",
+     "openalex": "A5098672189",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Naoto Imura",
+     "openalex": "A5017109854",
+     "orcid": "https://orcid.org/0000-0002-1428-7407",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Katsuhiro Nishinari",
+     "openalex": "A5086650139",
+     "orcid": "https://orcid.org/0000-0003-3069-1757",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4395664585",
+   "doi": "https://doi.org/10.1109/amc58169.2024.10505717",
+   "title": "Pedestrian Detection for Autonomous Mobile Robots using 3D LIDAR",
+   "date": "2024-02-28",
+   "type": "conference-paper",
+   "venue": "IEEE International Workshop on Advanced Motion Control (AMC)",
+   "url": "https://doi.org/10.1109/amc58169.2024.10505717",
+   "cited": 3,
+   "abstract": "There is a severe labor shortage due to the aging population, and there is an increasing demand for autonomous mobile robots such as delivery robots. These robots operate in the same space as pedestrians, so encounters and overtaking with pedestrians occur. In such cases, the robot can achieve safe and efficient path planning for both the robot itself and pedestrians by recognizing pedestrians as distinct from other obstacles. Therefore, this study aims to propose a pedestrian detection model and evaluate its performance. The sensor used in this paper is a 3D LIDAR, and pedestrian classification is conducted using a machine-learning technique: “Random Forest”. The“KITTI” dataset was utilized for model training and simulation. The evaluation of the proposed model showed an accuracy of approximately 98% in cluster-level tests.",
+   "lang": "en",
+   "topic": "Autonomous Vehicle Technology and Safety",
+   "authors": [
+    {
+     "name": "Kazuma Mine",
+     "openalex": "A5059734629",
+     "orcid": null,
+     "tokai": [
+      "横浜国立大学"
+     ]
+    },
+    {
+     "name": "Yasutaka Fujimoto",
+     "openalex": "A5026753908",
+     "orcid": "https://orcid.org/0000-0002-8106-5425",
+     "tokai": [
+      "横浜国立大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4410712691",
+   "doi": "https://doi.org/10.1299/jsmetld.2024.33.tl5-1-3",
+   "title": "Long-distance Path Planning using Improved A-Star Algorithm for Drone Logistics",
+   "date": "2024-01-01",
+   "type": "conference-paper",
+   "venue": "The Proceedings of the Transportation and Logistics Conference",
+   "url": "https://doi.org/10.1299/jsmetld.2024.33.tl5-1-3",
+   "cited": 0,
+   "abstract": "In recent years, advancements in UAV and drone technologies have expanded their use in areas like photography and inspection, with drone delivery experiments gaining attention in Japan. The Japanese government is promoting drone logistics as part of its Next-Generation Air Mobility Initiative, however, practical implementation requires automatic flight path generation. This study proposes an efficient path planning method using an improved A-Star algorithm, incorporating obstacle and wind condition data from the 4D Spatio-Temporal Data Exchange Infrastructure (4D-STDEI). The algorithm minimizes a cost function, adding wind condition costs to account for wind effects. Also, in open areas with fewer obstacles, the algorithm reduces node granularity (or the voxel’s “zoom level”) to lower computational costs, making large-scale pathfinding more efficient. The paper presents simulation results comparing the improved A-Star algorithm with and without wind condition costs, showing that the proposed method consistently reduced maximum wind speeds and improved computation times in larger search areas. This approach enables faster and safer drone flight path exploration.",
+   "lang": "en",
+   "topic": "Robotic Path Planning Algorithms",
+   "authors": [
+    {
+     "name": "Hiroki Uchiyama",
+     "openalex": "A5006796913",
+     "orcid": "https://orcid.org/0000-0002-5867-7810",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Mikio BANDO",
+     "openalex": "A5088359413",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Takeshi Tsuchiya",
+     "openalex": "A5029879031",
+     "orcid": "https://orcid.org/0000-0002-8399-3831",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4387387269",
+   "doi": "https://doi.org/10.21606/iasdr.2023.287",
+   "title": "What is the Effect of a Slant Shape in the Design of a UGV Delivery Robot? - UGV Robots and the Effect of Shape on the Perceived Safety",
+   "date": "2023-10-09",
+   "type": "conference-paper",
+   "venue": "International Association of Societies of Design Research Congress (IASDR)",
+   "url": "https://doi.org/10.21606/iasdr.2023.287",
+   "cited": 2,
+   "abstract": "This research aimed to investigate the specific effect of the slant shape on the perceived safety related to UGV Robots. Additionally, it investigates possible differences between the evaluation of those robot shapes considering different nationalities (Japanese and Brazilian), and different types of media used for the experiment (PC Screen and VR Headset). In the investigation, 4 different stimuli were tested and evaluated by 75 participants, 30 Brazilians in the experiment with PC Screen, 22 other Brazilians in the experiment with VR Headset, and 22 Japanese in the experiment with VR Headset. The effect of the slant shape was defined based on two components of Perceived Safety (Sensitivity and Magnitude), as well as the comparisons between experimental groups. The study showed that slant has a positive effect on Perceived Safety for robots that has slant in the front or both sides.",
+   "lang": "en",
+   "topic": "Social Robot Interaction and HRI",
+   "authors": [
+    {
+     "name": "Vithor Hugo Costa da Silva",
+     "openalex": "A5011469416",
+     "orcid": "https://orcid.org/0000-0003-3973-7280",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Shinichi Koyama",
+     "openalex": "A5040700878",
+     "orcid": "https://orcid.org/0000-0001-6280-5750",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Toshimasa Yamanaka",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Soh Masuko",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kelvin Cheng",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4385455972",
+   "doi": "https://doi.org/10.3233/atde230106",
+   "title": "Capacitated Vehicle Routing Problem with Delivery Options: Private or Shared Location",
+   "date": "2023-07-27",
+   "type": "book-chapter",
+   "venue": "Advances in transdisciplinary engineering",
+   "url": "https://doi.org/10.3233/atde230106",
+   "cited": 5,
+   "abstract": "Last-mile delivery costs are increasingly growing due to the rapid growth in E-commerce and the proliferation of online shopping especially after COVID-19 crisis. Integrating shared location delivery systems with home delivery has been a new trend in tackling last mile delivery challenges. This paper studies the Capacitated Vehicle Routing Problem with Delivery Options (CVRPDO). In this problem, customers can choose between picking up their requests from a shared location or receiving them at their homes within a preferred time window. The problem is formulated mathematically to minimize the total delivery costs considering the customers’ preferences. Results include comparisons between delivery costs in the standard Capacitated Vehicle Routing Problem (CVRP) and those in the CVRPDO. Results demonstrate that the CVRPDO outperforms the CVRP by a considerable margin for varied-size instances providing a justification for substantial investment in establishing shared locations for delivery.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Amira Saker",
+     "openalex": "A5002426170",
+     "orcid": "https://orcid.org/0000-0002-8953-5575",
+     "tokai": []
+    },
+    {
+     "name": "Junichi Iijima",
+     "openalex": "A5113682523",
+     "orcid": null,
+     "tokai": [
+      "東京理科大学"
+     ]
+    },
+    {
+     "name": "Islam Ali",
+     "openalex": "A5027235710",
+     "orcid": "https://orcid.org/0000-0002-7344-6113",
+     "tokai": []
+    },
+    {
+     "name": "Amr Eltawil",
+     "openalex": "A5014763439",
+     "orcid": "https://orcid.org/0000-0001-6073-8240",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4385440634",
+   "doi": "https://doi.org/10.1016/j.trip.2023.100885",
+   "title": "Significance of face-to-face service quality in last mile delivery for e-commerce platforms",
+   "date": "2023-07-20",
+   "type": "article",
+   "venue": "Transportation Research Interdisciplinary Perspectives",
+   "url": "https://doi.org/10.1016/j.trip.2023.100885",
+   "cited": 21,
+   "abstract": "This study aims to clarify how the quality of face-to-face service in last mile delivery affects consumer use of e-commerce (EC) platforms. We implemented a questionnaire survey for Japanese EC users and obtained 1137 valid responses. Based on this dataset, we implemented the following statistical analysis procedures: (1) We employed clustering of the dataset based on the respondents’ sensitivity to pricing, product variety, delivery period, and face-to-face service quality at delivery within the context of a customer’s journey of EC platform use; consequently, five clusters were established. (2) For each cluster, we statistically calculated the influence of face-to-face service quality on EC platform use. (3) Additionally, we statistically analyzed which factors are considered as important in last mile delivery by the users belonging to the cluster requiring high quality of face-to-face service. The results suggested the following: Low level of face-to-face service quality generally reduces EC platform use among customers in all clusters. High level of face-to-face service quality increases EC platform use in one cluster that included approximately 19% of the users. However, two clusters including approximately 41% of the users exhibited decreased EC platform use in the condition of high-level service quality; Second, users in a cluster desiring high quality face-to-face service do not necessarily demand receiving parcels face to face. Rather, such users showed a significantly high acceptance of the self-pickup option. Consequently, we discuss how platform firms should manage face-to-face service quality in last mile delivery on EC platforms.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Yuki Inoue",
+     "openalex": "A5049065298",
+     "orcid": "https://orcid.org/0000-0001-6298-2693",
+     "tokai": []
+    },
+    {
+     "name": "Masataka Hashimoto",
+     "openalex": "A5087790176",
+     "orcid": null,
+     "tokai": [
+      "明治大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4379538398",
+   "doi": "https://doi.org/10.3390/su15119117",
+   "title": "Evaluation of a Team-Based Collection and Delivery Operation",
+   "date": "2023-06-05",
+   "type": "article",
+   "venue": "Sustainability",
+   "url": "https://doi.org/10.3390/su15119117",
+   "cited": 1,
+   "abstract": "The rise in the volume of e-commerce is adding increasing pressure on the logistics of parcel delivery. To improve the efficiency of their operations, the parcel industry in Japan is exploring team-based collection and delivery (TCD), whereby the sales driver (SD) hands out parcels to the field crews (FC), who subsequently deliver them to the door. However, the efficiency of TCD is still understudied. This study proposes a method for optimizing the delivery route for TCD and evaluates the efficiency of the ongoing operation. The TCD delivery problem focuses on minimizing the task completion time using parameters derived through surveys of the actual operations. Comparison between seven different methods show that the newly proposed method of fuzzy c-means clustering with a genetic algorithm outperforms the rest, rapidly computing sufficiently accurate results. Results suggest that the proposed optimal route reduces the total delivery time by up to 18.7%. However, the amount of time saved varies considerably by the area and the number of parcels delivered. Additional constraints for improving driver safety, the cost-benefit of increasing FCs, and the impact on the environmental cost are also considered. The proposed method also helps spread the workload and the travel time of the FCs more evenly, thus further reducing the total delivery time.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Toshihiro Osaragi",
+     "openalex": "A5057944783",
+     "orcid": "https://orcid.org/0000-0002-6327-3976",
+     "tokai": [
+      "東京科学大学"
+     ]
+    },
+    {
+     "name": "Yuya Taguchi",
+     "openalex": "",
+     "orcid": null,
+     "tokai": [
+      "東京科学大学"
+     ]
+    },
+    {
+     "name": "Narushige Shiode",
+     "openalex": "A5056197959",
+     "orcid": "https://orcid.org/0000-0003-3065-3654",
+     "tokai": []
+    },
+    {
+     "name": "Shino Shiode",
+     "openalex": "A5045704476",
+     "orcid": "https://orcid.org/0000-0003-4392-1814",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4360856191",
+   "doi": "https://doi.org/10.1080/13658816.2023.2190371",
+   "title": "Fast optimization for large scale logistics in complex urban systems using the hybrid sparrow search algorithm",
+   "date": "2023-03-24",
+   "type": "article",
+   "venue": "International Journal of Geographical Information Systems",
+   "url": "https://doi.org/10.1080/13658816.2023.2190371",
+   "cited": 27,
+   "abstract": "Urban logistics is vital to the development and operation of cities, and its optimization is highly beneficial to economic growth. The increasing customer needs and the complexity of urban systems are two challenges for current logistics optimization. However, little research considers both, failing to balance efficiency and cost. In this study, we propose a hybrid sparrow search algorithm (SA-SSA) by combining the sparrow search algorithm with fast computational speed and the simulated annealing algorithm with the ability to get the global optimum solution. Wuhan city was selected for logistics optimization experiments. The results show that the SA-SSA can optimize large-scale urban logistics with guaranteed efficiency and solution quality. Compared with simulated annealing, sparrow search, and genetic algorithm, the cost of SA-SSA was reduced by 17.12, 18.62, and 14.72%, respectively. Although the cost of SS-SSA was 11.50% higher than the ant colony algorithm, its computation time was reduced by 99.06%. In addition, the simulation experiments were conducted to explore the impact of spatial elements on the algorithm performance. The SA-SSA can provide high-quality solutions with high efficiency, considering the constraints of many customers and complex road networks. It can support realizing the scientific scheduling of distribution vehicles by logistics enterprises.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Yao Yao",
+     "openalex": "",
+     "orcid": "https://orcid.org/0000-0002-2830-0377",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Siqi Lei",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Zijin Guo",
+     "openalex": "A5104143383",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuanyuan Li",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Shuliang Ren",
+     "openalex": "A5064416036",
+     "orcid": "https://orcid.org/0000-0003-3776-3266",
+     "tokai": []
+    },
+    {
+     "name": "Zhihang Liu",
+     "openalex": "A5101890300",
+     "orcid": "https://orcid.org/0009-0000-6281-418X",
+     "tokai": []
+    },
+    {
+     "name": "Qingfeng Guan",
+     "openalex": "A5063647157",
+     "orcid": "https://orcid.org/0000-0002-7392-3709",
+     "tokai": []
+    },
+    {
+     "name": "Peng Luo",
+     "openalex": "A5103140655",
+     "orcid": "https://orcid.org/0000-0002-3680-8509",
+     "tokai": []
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W4383604645",
+   "doi": "https://doi.org/10.15803/ijnc.13.2_216",
+   "title": "Delivery Routing to Reduce Calculation Load of Drones on Divided Logistics Areas for Drone Logistics Networks",
+   "date": "2023-01-01",
+   "type": "article",
+   "venue": "International Journal of Networking and Computing",
+   "url": "https://doi.org/10.15803/ijnc.13.2_216",
+   "cited": 0,
+   "abstract": "In a drone logistics system, a message delivery system in which the drone delivers messages for other users on the way to a parcel delivery destination has been proposed. To reduce the complexity of message delivery routes, this paper proposes a message delivery method that divides logistics areas and determines the message delivery routes in each area. The method also makes it possible for a later departure drone and an early departure drone to exchange information to add, cancel, and/or exchange their messages and delivery points. The simulation experiments show that compared with the previous method, the proposed method has lower computational complexity and in contrast, the average travel distance increases by a maximum of 53.6% to 77.9% and so forth.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Kazuya Matsutani",
+     "openalex": "A5051711304",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Shigetomo Kimura",
+     "openalex": "A5029362482",
+     "orcid": "https://orcid.org/0000-0001-7371-0407",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "ラストワンマイル配送と置き配・宅配ロッカー",
+   "region": "関東"
+  },
+  {
+   "id": "W7203763808",
+   "doi": "https://doi.org/10.1007/s11067-026-09785-4",
+   "title": "Connectivity, Redundancy, and Resilience in Freight Transport Networks under Disruptive Shocks",
+   "date": "2026-08-19",
+   "type": "article",
+   "venue": "Networks and Spatial Economics",
+   "url": "https://doi.org/10.1007/s11067-026-09785-4",
+   "cited": 2,
+   "abstract": "Freight transport networks are vulnerable not only because links or nodes may be physically disconnected, but also because residual capacity may become insufficient even when origins and destinations remain topologically connected. This paper develops an analytically tractable framework for freight network resilience that treats connectivity and redundancy as explicit structural economic variables. We represent a multimodal freight system as an attributed spatial graph whose links and nodes may differ by mode, capacity, generalized cost, and transfer function. Connectivity is defined in two complementary ways: topological connectivity through edge-disjoint paths and capacity-mediated connectivity through max-flow/min-cut capacity and cut slack. Disruptive shocks are modeled as link or node removal, capacity degradation, and cost jumps, capturing freight-specific disruptions such as port closures, bridge and rail-corridor failures, border delays, canal blockages, and intermodal terminal disruptions. The analysis derives cut-based vulnerability conditions, regime boundaries between smooth degradation, capacity infeasibility, and disconnection, and spatial incidence results governed by binding cuts and corridor shadow prices. A computational experiment on a synthetic bottleneck-corridor freight network illustrates the operability of the proposed measures and shows that binary connectivity can substantially overstate resilience when residual capacity is depleted. The framework bridges network theory and spatial economics by clarifying when redundancy yields systemic resilience benefits rather than marginal capacity improvements.",
+   "lang": "en",
+   "topic": "Infrastructure Resilience and Vulnerability Analysis",
+   "authors": [
+    {
+     "name": "Tomoo Noguchi",
+     "openalex": "A5120260713",
+     "orcid": "https://orcid.org/0009-0008-2222-7165",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7168997288",
+   "doi": "https://doi.org/10.1016/j.tre.2026.105078",
+   "title": "A practical approach to multi-day dynamic pricing in attended home delivery",
+   "date": "2026-07-16",
+   "type": "article",
+   "venue": "Transportation Research Part E Logistics and Transportation Review",
+   "url": "https://doi.org/10.1016/j.tre.2026.105078",
+   "cited": 0,
+   "abstract": "This paper proposes a sampling-based dynamic pricing approach for attended home delivery (AHD), utilizing approximation methods to improve both calculation efficiency and profitability. First, the pricing mechanism is formulated as a choice-based optimization to reflect individual customer preferences. To account for the sequential arrival of multiple customers, the problem is extended to a Markov decision process (MDP) framework. For practical use, a logistics platform must determine prices within 100 milliseconds to ensure a seamless experience for each customer. However, the computational complexity of vehicle routing combined with future uncertainty regarding multi-day customer choices leads to the curse of dimensionality, making real-time application computationally infeasible. To address these challenges, we introduce area-based (Continuous Approximation and Regression-based) and route-based (Cheapest Insertion) approximation methods. Crucially, a sampling-based approximation is developed to mitigate future uncertainty across multi-day delivery options, thereby overcoming the computational barriers of the MDP framework. The performance of each method is evaluated via simulation, incorporating a nested logit model estimated from large-scale stated choice data to reflect realistic delivery timing preferences. The results show that dynamic pricing outperforms fixed pricing, with all methods meeting the required speed limitations (100 milliseconds). After integrating the sampling-based model, profits increase across all approximation methods. Additionally, we evaluate the model under different cost-scaling factors, slot capacities, and customer preferences. The results show that sampling-based policies generally improve profit, with route-based approximation maintaining the highest average profit across the tested settings. This efficient approach provides a scalable and robust solution for dynamic time slot pricing in real-world logistics platforms.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Hsin-Kai Huang",
+     "openalex": "A5038075558",
+     "orcid": "https://orcid.org/0009-0008-6656-3275",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Ryota Okazaki",
+     "openalex": "A5156949429",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuki Oyama",
+     "openalex": "A5008477033",
+     "orcid": "https://orcid.org/0000-0001-5172-6600",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7168149472",
+   "doi": "https://doi.org/10.3390/foods15142481",
+   "title": "How Online Food Delivery Services Are Reshaping the Urban Food Environment: Evidence from Hangzhou, China",
+   "date": "2026-07-13",
+   "type": "article",
+   "venue": "Foods",
+   "url": "https://doi.org/10.3390/foods15142481",
+   "cited": 1,
+   "abstract": "The rapid expansion of Online Food Delivery Services (OFDS) is associated with changes in urban food environments long structured by the central place hierarchy. Does OFDS narrow the spatial inequalities embedded in traditional food access, or reproduce them in a new form? To address the limited multi-dimensional evidence on this question, this study develops an integrated online-offline framework comparing the walkable food environment (W-FE) and the OFDS food environment (OFDS-FE) across three dimensions: accessibility, availability, and affordability. Taking Hangzhou, China as a case, we match multi-source restaurant data via the Hungarian algorithm, model OFDS service ranges with a three-stage Gaussian distance-decay function, and assess spatial equity using the Gini coefficient. Results show that the OFDS-FE is associated with extended potential accessibility beyond walkable catchments and with higher relative affordability of mid- and high-end dining options. At the citywide scale, inequality indicators are lower in the OFDS-FE than in the W-FE, yet disparities persist and, in some suburban areas, widen. All findings are based on modeled, supply-side potential access derived from a single-platform (Meituan), single-month (December 2024) cross-section, rather than on observed consumer behavior. Rather than dissolving the central place hierarchy, OFDS extends the reach of established food centers, forming a broader \"digital central service zone.\" These findings inform the integration of digital delivery ranges into community life-circle planning.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Li Chen",
+     "openalex": "A5140517395",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Haoying Han",
+     "openalex": "A5084523223",
+     "orcid": "https://orcid.org/0000-0003-4933-9665",
+     "tokai": []
+    },
+    {
+     "name": "Wanglin Yan",
+     "openalex": "A5140523008",
+     "orcid": null,
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Yang Yang",
+     "openalex": "A5100397659",
+     "orcid": "https://orcid.org/0000-0002-7132-5860",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7167496453",
+   "doi": "https://doi.org/10.3390/logistics10070151",
+   "title": "Efficiency and Fairness in Physical Internet Logistics Coordination Under Shared Capacity Constraints",
+   "date": "2026-07-06",
+   "type": "article",
+   "venue": "Logistics",
+   "url": "https://doi.org/10.3390/logistics10070151",
+   "cited": 0,
+   "abstract": "Background: The Physical Internet (PI) promotes resource sharing among independent firms. This can improve logistics efficiency, but shared route capacity and limited compensation may also create unequal outcomes among firms. Methods: This study develops a framework for coordinated logistics planning under shared route capacity constraints. The framework includes two coordination rules. Model 3.3 is an efficiency-oriented participation-guaranteeing rule with individual rationality constraints. Model 3.4 is a fairness-oriented rule that minimizes the maximum firm-level disadvantage under a limited compensation budget. Numerical experiments are conducted using a stylized Japanese domestic consumer goods distribution network. Results: Coordinated planning reduces total logistics cost compared with decentralized sequential allocation. Model 3.3 achieves the lowest system cost but gives benefits unevenly. Model 3.4 gives more balanced firm-level outcomes and improves the worst-off firm in the tested scenarios. The results also show that substantial fairness improvements can be obtained through small route-allocation changes. Conclusions: The study shows how two coordination rules can be used in PI-oriented logistics coordination. Model 3.3 is useful when firms need a no-loss guarantee, especially in an early stage. Model 3.4 is useful in a mature or repeated coordination stage, where the platform needs to avoid excessive disadvantage.",
+   "lang": "en",
+   "topic": "Supply Chain and Inventory Management",
+   "authors": [
+    {
+     "name": "Qian Huang",
+     "openalex": "A5080914670",
+     "orcid": "https://orcid.org/0000-0001-6377-8969",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yao Hu",
+     "openalex": "A5102202029",
+     "orcid": "https://orcid.org/0009-0004-0024-191X",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Shunichi Ohmori",
+     "openalex": "A5066774819",
+     "orcid": "https://orcid.org/0000-0002-2635-0450",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7203611486",
+   "doi": "https://doi.org/10.1093/heapro/daag126",
+   "title": "Is there a healthy-food premium? A cross-sectional analysis of the UK online food delivery sector",
+   "date": "2026-07-01",
+   "type": "article",
+   "venue": "Health Promotion International",
+   "url": "https://doi.org/10.1093/heapro/daag126",
+   "cited": 0,
+   "abstract": "Online food delivery (OFD) platforms account for a growing share of out-of-home meals, but their often poor nutritional quality may worsen diets and related health inequalities. Furthermore, pricing structures within this sector may be systematically incentivizing the selection of higher-calorie items. Using menu data collected in June 2023 from two major UK OFD platforms, this study examined 7392 unique adult menu items from large restaurant chains. The price-calorie relationship (per 100 kcal) was modelled using restaurant-chain fixed-effects regressions controlling for menu categories. Results indicated a significant nonlinear relationship: while price initially increased with calorie content (101.14 pence per additional 100 kcal, 95% CI [87.98, 114.29]), the rate of increase diminished by 2.19 pence per (100 kcal)2 (95% CI [1.50, 2.87]), suggesting a relative discount for higher-calorie options. Furthermore, menu items classified as 'healthier' (<600 kcal, consistent with recommendation on calorie content per meal in England) were priced relatively higher, costing 70.3 pence more per 100 kcal than items containing ≥600 kcal (95% CI [61.9, 78.8]) after controlling for menu categories. These findings suggest that pricing structures within the UK OFD sector financially favour higher-calorie options. Policy makers should consider strategies addressing pricing mechanisms to ensure healthier options are equally accessible.",
+   "lang": "en",
+   "topic": "Nutrition, Health and Food Behavior",
+   "authors": [
+    {
+     "name": "Yuma Asai",
+     "openalex": "A5085829839",
+     "orcid": "https://orcid.org/0009-0000-5739-9858",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Laura Cornelsen",
+     "openalex": "A5055372959",
+     "orcid": "https://orcid.org/0000-0003-3769-8740",
+     "tokai": []
+    },
+    {
+     "name": "Alexandra Irene Kalbus",
+     "openalex": "A5082104610",
+     "orcid": "https://orcid.org/0000-0002-7388-7074",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7166690309",
+   "doi": "https://doi.org/10.1016/j.clrc.2026.100460",
+   "title": "Sustainability-oriented vehicle routing with multi-depot, multi-period planning, precedence constraints, and selective backhauling: A hybrid particle swarm optimization with cheetah optimizer",
+   "date": "2026-06-30",
+   "type": "article",
+   "venue": "Cleaner and Responsible Consumption",
+   "url": "https://doi.org/10.1016/j.clrc.2026.100460",
+   "cited": 1,
+   "abstract": "This study addresses a significant challenge in the animal feed industry. It is crucial to identify cost-effective vehicle routing methods that consider multiple depots and time periods while taking precedence constraints and selective backhauling into account. Using a combination of internal vehicles and outsourced transportation can lead to inefficiencies and higher operating costs. While previous studies have addressed these constraints, there has been a lack of research that effectively tackles transportation as a single optimization problem. This study develops integrated solutions that reflect real-world complexities and support more responsible logistics planning. It proposes a novel hybrid metaheuristic that balances global search and fast convergence in order to solve a multi-depot, multi-period transportation routing problem incorporating selective backhauling, outsourced services, and precedence constraints. The mixed-integer programming model has been validated on small and medium-sized instances, and the hybrid algorithm has been implemented in a large-scale real-world scenario. The model minimizes transportation costs while supporting fleet constraints, carrier-dependent scheduling, and outsourced services. Empirical experiments demonstrate the efficiency of the hybrid particle swarm optimization with cheetah optimizer algorithm. This method outperforms seven baseline approaches, including particle swarm optimization, differential evolution, improved self-adaptive differential evolution, grey wolf optimization, extended adaptive grey wolf optimization and sand cat swarm optimization. The system achieves near-optimal efficiency (98.66%) while reducing logistics expenditure by 22.64% compared to current practices. These improvements also reduce fuel consumption and travel distance, promoting cleaner and more responsible energy consumption. Furthermore, this research method could also benefit the agro-food industry and warehousing and distribution.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Wanchai Buttayothee",
+     "openalex": "A5139678870",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Punyawich Sessomboon",
+     "openalex": "A5107577415",
+     "orcid": "https://orcid.org/0009-0007-0974-4048",
+     "tokai": []
+    },
+    {
+     "name": "Ming‐Lang Tseng",
+     "openalex": "A5063349276",
+     "orcid": "https://orcid.org/0000-0002-2702-3590",
+     "tokai": []
+    },
+    {
+     "name": "Ming Kim Lim",
+     "openalex": "A5024010407",
+     "orcid": "https://orcid.org/0000-0003-0809-9431",
+     "tokai": []
+    },
+    {
+     "name": "Shunichi Ohmori",
+     "openalex": "A5066774819",
+     "orcid": "https://orcid.org/0000-0002-2635-0450",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Krisanarach Nitisiri",
+     "openalex": "A5041907231",
+     "orcid": "https://orcid.org/0000-0002-5044-4035",
+     "tokai": []
+    },
+    {
+     "name": "Kanchana Sethanan",
+     "openalex": "A5072294176",
+     "orcid": "https://orcid.org/0000-0002-3340-2538",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7203789046",
+   "doi": "https://doi.org/10.1109/ipdpsw71298.2026.00020",
+   "title": "Accelerating Clarke and Wright’s savings algorithm by multi-threaded parallel processing with SIMD assistance for solving large-scale Euclidean CVRPs",
+   "date": "2026-05-01",
+   "type": "conference-paper",
+   "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+   "url": "https://doi.org/10.1109/ipdpsw71298.2026.00020",
+   "cited": 0,
+   "abstract": "Clarke and Wright’s savings algorithm (CW algorithm) is one of the most representative greedy constructive heuristic methods for solving the capacitated vehicle routing problem (CVRP). Given a scenario with N customers, a depot, and a capacity-constraint of delivery vehicles, the CW algorithm initially generates N distinct delivery routes, each connecting a single customer to the depot. It then iteratively merges routes based on the saving values, i.e., distance reductions achieved by merging two distinct routes, under the constraint that the total load of items delivered on the new route does not exceed the vehicle’s capacity. This involves generating ${\\mathcal{O}}\\left({{N^2}}\\right)$ saving values and sorting them in descending order so as to merge the routes with larger saving values preferentially, which incurs the overall time complexity of ${\\mathcal{O}}\\left({{N^2}\\log N}\\right)$ in standard implementations, whose execution time rapidly grows for large-scale instances. In this study, we accelerate CW algorithm leveraging its inherent parallelism by multi-threaded parallel processing with SIMD assistance. In our proposed approach, multiple worker threads split up generating the saving values, which is further accelerated by SIMD processing in each worker thread. Following that, each worker thread sorts its own saving values independently, and then a master thread constructs a delivery route set implicitly rearranging the saving values sorted in \"thread-local\" descending order into \"global\" descending order to follow the greedy principle of CW algorithm. In order to suppress the rearrangement overhead, it constructs the route set discarding the saving values that become superfluous while the route set construction. Experimental results on a 32-core CPU with Intel AVX/AVX2 SIMD instruction set show that our proposed approach handles large-scale problems involving 30,000 customer nodes in a handful of seconds and achieves 21× speedup at the maximum over sequential execution of a standard CW algorithm on the same platform.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Kenji Kanazawa",
+     "openalex": "A5147469187",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7138884952",
+   "doi": "https://doi.org/10.20965/jaciii.2026.p0532",
+   "title": "Dual-Objective Optimization Model for Low Carbon Cold-Chain Logistics",
+   "date": "2026-03-20",
+   "type": "article",
+   "venue": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+   "url": "https://doi.org/10.20965/jaciii.2026.p0532",
+   "cited": 2,
+   "abstract": "Cold-chain logistics plays a crucial role in maintaining the quality of temperature-sensitive products. However, it generates high energy consumption and carbon emissions due to refrigeration and complex routing operations. Therefore, this study proposes a dual-objective optimization model for low carbon cold-chain vehicle routing that simultaneously minimizes total logistics and carbon emission costs. The model comprehensively integrates transportation, refrigeration, cargo damage, and holding costs, as well as emissions from fuel consumption and refrigeration energy use. To solve the proposed model, two multi-objective evolutionary algorithms, the non-dominated sorting genetic algorithm II (NSGA-II) and the multi-objective particle swarm optimization (MOPSO), were employed and compared under the same experimental framework. Numerical experiments based on Solomon benchmark instances demonstrate that both algorithms can effectively generate Pareto-optimal solutions. NSGA-II shows superior convergence and better diversity maintenance, whereas MOPSO achieves faster early-stage convergence and stronger global exploration. The comparative analysis, supported by quantitative performance metrics and visual results, confirms the reliability of the proposed optimization model and highlights the complementary characteristics of the two algorithms. The findings provide theoretical and practical insights for designing sustainable, cost-efficient, and environmentally friendly cold-chain logistics systems.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Chaofan Wang",
+     "openalex": "A5100636446",
+     "orcid": "https://orcid.org/0009-0005-1830-7283",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Takashi Hasuike",
+     "openalex": "A5088963187",
+     "orcid": "https://orcid.org/0000-0002-0475-8439",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7128367456",
+   "doi": "https://doi.org/10.1007/s10479-026-07089-x",
+   "title": "Optimizing Cooperative Carrier-Vehicle Routing with Iterative Second-Order Cone Programming Method",
+   "date": "2026-02-09",
+   "type": "article",
+   "venue": "Annals of Operations Research",
+   "url": "https://doi.org/10.1007/s10479-026-07089-x",
+   "cited": 0,
+   "abstract": "This study focuses on optimizing a cooperative delivery system that combines a large-capacity but slow carrier and two fast yet capacity-limited unmanned aerial vehicles (UAVs). The primary objective is to minimize the carrier’s total travel time while ensuring all delivery points in predetermined order are serviced by the UAVs. We formulate this problem with an emphasis on the flight patterns of the two UAVs. We propose a novel optimization approach that breaks down the complex problem into manageable subproblems by considering pairs of UAV flights. This decomposition enables more efficient computation and better scalability than a prior approach. Numerical experiments demonstrate that in a test instance with 20 delivery points, our method reduces computation time by over 90% and decreases the carrier’s travel time by approximately 40% compared to an existing approach. These results suggest significant potential for improving the efficiency of cooperative delivery systems, which can be applied to logistics and various vehicle coordination problems.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Ning-Wen Yang",
+     "openalex": "A5125426637",
+     "orcid": null,
+     "tokai": [
+      "東京科学大学"
+     ]
+    },
+    {
+     "name": "Maharani Rizki Larasati",
+     "openalex": "A5020860883",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "I-Lin Wang",
+     "openalex": "A5048549569",
+     "orcid": "https://orcid.org/0000-0003-1607-8286",
+     "tokai": []
+    },
+    {
+     "name": "Makoto Yamashita",
+     "openalex": "A5085474915",
+     "orcid": "https://orcid.org/0000-0002-8409-036X",
+     "tokai": [
+      "東京科学大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7128493883",
+   "doi": "https://doi.org/10.1002/qute.202500660",
+   "title": "A Quadratic Unconstrained Binary Optimization (QUBO) Model for Elevation‐Aware Vehicle Routing: Optimizing Fuel Consumption and Traffic Congestion",
+   "date": "2026-02-01",
+   "type": "article",
+   "venue": "Advanced Quantum Technologies",
+   "url": "https://doi.org/10.1002/qute.202500660",
+   "cited": 1,
+   "abstract": "This study formulates a novel, elevation‐aware Quadratic Unconstrained Binary Optimization (QUBO) model for multi‐vehicle route optimization that simultaneously reduces fuel consumption and traffic congestion. Candidate routes are generated using a gradient‐corrected Dijkstra algorithm, and route selection is optimized by minimizing a rigorously constructed QUBO Hamiltonian that incorporates fuel cost, route overlap, and constraint satisfaction. Extensive numerical validation is performed using classical annealing simulations across multiple regions with diverse topographical and road network characteristics, including San Francisco. The results demonstrate that incorporating elevation information significantly reduces fuel consumption, while the proposed overlap penalty effectively mitigates congestion. A clear trade‐off between overlap reduction and fuel efficiency is quantitatively characterized. The mathematical consistency of the formulation is ensured through a theoretically derived penalty coefficient, which guarantees constraint satisfaction and stable optimization behavior. Scaling experiments further reveal the limitations of classical solvers as the number of candidate routes increases, highlighting the importance of robust QUBO formulations and motivating future implementation on quantum processing units. Overall, this work establishes a validated and theoretically sound QUBO framework for sustainable transportation optimization and provides a reliable performance baseline for future quantum hardware–based investigations.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Tsubasa Suzuki",
+     "openalex": "A5125531612",
+     "orcid": "https://orcid.org/0009-0000-4477-7880",
+     "tokai": []
+    },
+    {
+     "name": "Takao Tomono",
+     "openalex": "A5044730054",
+     "orcid": "https://orcid.org/0000-0003-4984-4063",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7124240096",
+   "doi": "https://doi.org/10.3390/futuretransp6010020",
+   "title": "Evaluating Autonomous Truck Adoption: An Elasticity-Based Model of Demand, Modal Shift, and Emissions",
+   "date": "2026-01-15",
+   "type": "article",
+   "venue": "Future Transportation",
+   "url": "https://doi.org/10.3390/futuretransp6010020",
+   "cited": 2,
+   "abstract": "This study develops a compact elasticity-based framework for assessing how autonomous truck adoption influences corridor-level performance, freight demand, modal competition, and CO2 emissions in multimodal freight Intelligent Transportation Systems. The model specifies the constant elastic (log-linear) responses of traffic performance and generalized costs to adoption, enabling the closed-form characterization of system-level rebound and road–rail reallocation effects. The analytical results show that an internal adoption threshold P* emerges, defined by dE^/dP=0, which separates a beneficial regime (efficiency gains dominate) from an adverse regime (rebound and modal shift dominate). Comparative statics indicate that P* decreases with stronger ITS capability A and increases with rebound intensity R and the road–rail carbon intensity contrast K. Numerical experiments across representative corridor contexts illustrate induced demand effects exceeding 25% under high-rebound conditions and threshold ranges around P*≈0.3–0.4 for plausible parameters. The results provide interpretable guidance for coordinating autonomous truck deployment with intermodal logistics design and decarbonization strategies.",
+   "lang": "en",
+   "topic": "Railways and European Transport Policy",
+   "authors": [
+    {
+     "name": "Tomoo Noguchi",
+     "openalex": "A5120260713",
+     "orcid": "https://orcid.org/0009-0008-2222-7165",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7134952843",
+   "doi": "https://doi.org/10.1109/access.2026.3672634",
+   "title": "A Hybrid Constructive Genetic Algorithm (HCGA) for the Vehicle Routing Problem With Time Windows in Logistics Optimization",
+   "date": "2026-01-01",
+   "type": "article",
+   "venue": "IEEE Access",
+   "url": "https://doi.org/10.1109/access.2026.3672634",
+   "cited": 3,
+   "abstract": "The Vehicle Routing Problem with Time Windows (VRPTW) is paramount in elevating operational efficiency, driving cost reductions, and enhancing customer satisfaction. This problem has widespread applications in the real world, with the primary objective of determining the optimal delivery routes for a fleet of vehicles. Although numerous metaheuristic algorithms have been proposed to solve VRPTW, to the best of our knowledge, few studies have combined the Solomon insertion constructive heuristic with the sequential constructive crossover (SCX) operator and other strategies to form a hybrid constructive framework within a genetic algorithm. To fill this gap, this article proposes a hybrid constructive genetic algorithm (HCGA), which introduces strong individuals through Solomon’s I1 insertion heuristic to compensate for the limitations of the SCX crossover, thereby enhancing both the global search capability of the algorithm and the precision of local searches. The performance of the proposed HCGA is evaluated on the widely used Solomon100 benchmark data set. Experimental results indicate that among 56 problem instances, HCGA achieves Best-Known Solutions (BKS) in 12 cases, with the remaining solutions deviating only slightly from the BKS. HCGA consistently delivers solutions comparable to or better than state-of-the-art algorithms in multiple solution quality metrics while maintaining a favorable balance between solution quality and computational efficiency. The results demonstrate that HCGA exhibits strong adaptability and efficiency in handling a wide range of VRPTW scenarios, providing significant theoretical and practical value for logistics and supply chain optimization.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Hongyi Du",
+     "openalex": "A5111273509",
+     "orcid": "https://orcid.org/0009-0003-7336-0381",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yoshitaka TANIMIZU",
+     "openalex": "A5081848910",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Ruriko Watanabe",
+     "openalex": "A5022868538",
+     "orcid": "https://orcid.org/0000-0003-2130-3791",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7225630893",
+   "doi": "https://doi.org/10.1109/tits.2026.3742013",
+   "title": "A Deep Graph Learning Approach for Large-Scale Hub-Based Truck Platoon Coordination Problem",
+   "date": "2026-01-01",
+   "type": "article",
+   "venue": "IEEE Transactions on Intelligent Transportation Systems",
+   "url": "https://doi.org/10.1109/tits.2026.3742013",
+   "cited": 0,
+   "abstract": "The optimal coordination of truck platooning across large networks presents a formidable challenge due to the inherent computational complexity, often described as the “curse of dimensionality”. While traditional exact methods such as Dynamic Programming (DP) guarantee optimality for discretized problems, their reliance on problem decomposition and discretization of decision space limits their practicality and performance in real-world, large-scale systems. This paper introduces a novel Deep Graph Learning (DGL) approach to solve the large-scale truck platooning problem. In our formulation, individual trucks are represented as state-evolving nodes, and their platooning compatibilities with other trucks are encoded as weighted edges, together forming dynamic spatiotemporal graphs. Then, a Graph Neural Network (GNN) model is used to learn the optimal coordination strategies through an end-to-end training process, effectively shifting the computational burden offline. Extensive simulations grounded in real-world operational data demonstrate the outstanding performance of DGL. The results show that the proposed DGL approach achieves substantial computational speedups compared with conventional exact and heuristic baselines. Moreover, significant cost reductions have been achieved by generating a higher number and larger platoons. Crucially, spatial analysis reveals that DGL can achieve superior coordination coverage across the entire network. This work underscores the transformative potential of DGL to enable system-wide optimization, paving the way for more intelligent, scalable, and sustainable transportation systems.",
+   "lang": "en",
+   "topic": "Traffic control and management",
+   "authors": [
+    {
+     "name": "Bingci Liu",
+     "openalex": "A5161331528",
+     "orcid": "https://orcid.org/0009-0006-1069-030X",
+     "tokai": []
+    },
+    {
+     "name": "Na Wu",
+     "openalex": "A5102952467",
+     "orcid": "https://orcid.org/0000-0002-9979-5055",
+     "tokai": []
+    },
+    {
+     "name": "Ruixuan Zhang",
+     "openalex": "A5138631799",
+     "orcid": "https://orcid.org/0009-0001-0173-575X",
+     "tokai": []
+    },
+    {
+     "name": "Zhigang Xu",
+     "openalex": "A5032643811",
+     "orcid": "https://orcid.org/0000-0002-8479-4973",
+     "tokai": []
+    },
+    {
+     "name": "Liyuan Zhao",
+     "openalex": "A5161344839",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Lichen Luo",
+     "openalex": "A5014131907",
+     "orcid": "https://orcid.org/0000-0002-3764-7620",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7117865953",
+   "doi": "https://doi.org/10.1587/nolta.17.279",
+   "title": "A metaheuristic strategy for solving capacitated vehicle routing problem by using chaotic dynamics",
+   "date": "2025-12-31",
+   "type": "article",
+   "venue": "Nonlinear Theory and Its Applications IEICE",
+   "url": "https://doi.org/10.1587/nolta.17.279",
+   "cited": 1,
+   "abstract": "The capacitated vehicle routing problem (CVRP) is one of the NP-hard combinatorial optimization problems, and efficient construction of a high-quality solution is a major challenge. In this paper, we propose a metaheuristic method based on chaotic dynamics to improve the efficiency of two local search operations: the CROSS-Exchange and the 2-opt methods. Unlike traditional methods that usually rely on randomization or fixed rules, this method dynamically controls the selection and execution of local search operations using chaotic neurodynamics. The experimental results show that this method can effectively improve the quality of the solution and algorithm performance when solving CVRP, and also provides a new solution framework for logistics optimization.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Fengkai Guo",
+     "openalex": "A5102407370",
+     "orcid": "https://orcid.org/0009-0003-2567-6314",
+     "tokai": [
+      "東京理科大学"
+     ]
+    },
+    {
+     "name": "Takafumi Matsuura",
+     "openalex": "A5052894625",
+     "orcid": "https://orcid.org/0000-0002-8007-0556",
+     "tokai": []
+    },
+    {
+     "name": "Takayuki Kimura",
+     "openalex": "A5082317183",
+     "orcid": "https://orcid.org/0000-0003-0160-6146",
+     "tokai": []
+    },
+    {
+     "name": "Tohru Ikeguchi",
+     "openalex": "A5069803426",
+     "orcid": "https://orcid.org/0000-0001-9280-9541",
+     "tokai": [
+      "東京理科大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W7127133139",
+   "doi": "https://doi.org/10.1109/ieem63636.2025.11357683",
+   "title": "Dual-Objective Optimization of Cold-Chain Vehicle Routing Problem Considering Transportation Cost and Carbon Emission",
+   "date": "2025-12-07",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
+   "url": "https://doi.org/10.1109/ieem63636.2025.11357683",
+   "cited": 1,
+   "abstract": "With increasing attention to climate change and sustainability, cold-chain logistics faces the dual challenge of minimizing operational costs while reducing carbon emissions. This study proposes a dual-objective optimization model for the cold-chain vehicle routing problem with time windows, aiming to reduce total transportation costs and carbon emissions simultaneously. The model incorporates a realistic cost-emission structure, including refrigeration energy consumption, cargo deterioration, time window penalties, and fuel-based emissions. To solve the problem efficiently, an improved Non-Dominated Sorting Genetic Algorithm II (NSGA-II) is developed, generating a diverse set of Pareto-optimal solutions that reflect the trade-offs between economic and environmental performance. Numerical experiments based on Solomon benchmark datasets demonstrate the effectiveness of the proposed model and algorithm under various initial population strategies. The results highlight the importance of integrating cold-chain specific energy and emission factors into green logistics planning, providing decision-makers with a practical tool for sustainable distribution network design.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Chaofan Wang",
+     "openalex": "A5100636446",
+     "orcid": "https://orcid.org/0009-0005-1830-7283",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Takashi Hasuike",
+     "openalex": "A5088963187",
+     "orcid": "https://orcid.org/0000-0002-0475-8439",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4416874977",
+   "doi": "https://doi.org/10.1109/qce65121.2025.10356",
+   "title": "Search Space Partition Using an Ising Machine for Capacitated Vehicle Routing Problem",
+   "date": "2025-08-30",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Quantum Computing and Engineering (QCE)",
+   "url": "https://doi.org/10.1109/qce65121.2025.10356",
+   "cited": 1,
+   "abstract": "In this study, we proposed a method using an Ising machine to support a mathematical programming solver in order to partition the search space for large-scale combinatorial optimization problems, especially for the capacitated vehicle routing problem. As a method for partitioning the search space, we use the constrained maximum cut problem (CMC), which allows for efficient embedding and is easy to solve on the Ising machine. By using CMC, it is possible to partition the search space for solutions as subproblems within the feasible space of the master problem. In order to evaluate the effectiveness of the proposed method, experiments were carried out using multiple instances. The results indicated that feasible solutions to the master problem can be obtained quickly using the proposed method.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Eiji Kawase",
+     "openalex": "A5120575582",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Shuta Kikuchi",
+     "openalex": "A5023738281",
+     "orcid": "https://orcid.org/0009-0002-1319-6834",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    },
+    {
+     "name": "Hideaki Tamai",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Shu Tanaka",
+     "openalex": "A5057961231",
+     "orcid": "https://orcid.org/0000-0002-0871-3836",
+     "tokai": [
+      "慶應義塾大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4417054224",
+   "doi": "https://doi.org/10.1109/iicaiet67254.2025.11265401",
+   "title": "Evaluation of Various Sequential Constructive Approaches for Optimizing Vehicle Routing Problem with Time Windows",
+   "date": "2025-08-26",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Artificial Intelligence in Engineering and Technology (IICAIET)",
+   "url": "https://doi.org/10.1109/iicaiet67254.2025.11265401",
+   "cited": 1,
+   "abstract": "Evolutionary algorithms and genetic algorithms have been widely applied to routing optimization problems due to their outstanding performance. Among them, Sequential Constructive Crossover (SCX) is regarded as one of the most effective crossover operators. Although SCX was originally designed to solve the Traveling Salesman Problem (TSP), it has also been successfully applied to the Capacitated Vehicle Routing Problem (CVRP) in recent years. However, currently, there is no literature reporting the application of SCX to the Vehicle Routing Problem with Time Windows (VRPTW). This paper adapts and implements several variants of the SCX operator within a genetic algorithm framework tailored for VRPTW, systematically comparing their performance in benchmark instances. Furthermore, several other commonly used crossover operators are compared. The experimental results demonstrate that the proposed method exhibits both high efficiency and effectiveness in solving VRPTW.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Hongyi Du",
+     "openalex": "A5111273509",
+     "orcid": "https://orcid.org/0009-0003-7336-0381",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yoshitaka TANIMIZU",
+     "openalex": "A5081848910",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4413120131",
+   "doi": "https://doi.org/10.1016/j.retrec.2025.101615",
+   "title": "Evaluating choice-based demand management strategies for day-to-day home delivery planning",
+   "date": "2025-08-08",
+   "type": "article",
+   "venue": "Research in Transportation Economics",
+   "url": "https://doi.org/10.1016/j.retrec.2025.101615",
+   "cited": 1,
+   "abstract": "As demand for online shopping and home delivery increases rapidly, courier companies often offer customer-oriented services, placing severe constraints on delivery planning and making routes inefficient. This study presents a framework for evaluating strategies to balance customer satisfaction and delivery efficiency in day-to-day home delivery planning. We first model the online shopping frequency choices by an ordered logit model and delivery timing choices by a nested logit model and estimate them using stated choice data. Based on the day-to-day delivery demand simulated by these models, we optimize a quasi-dynamic multi-period vehicle routing problem with a variable routing period ( d -MPVRP) and evaluate the delivery efficiency under various demand management strategies. Our results show that different demand management strategies, such as surcharges for highly-demanded time slots and discounts for frequent users, have different effectiveness across urban and rural contexts. The discount on the flexible delivery option for customers who frequently shop online allows consolidation of multiple delivery orders, and was particularly effective in rural areas. Our results suggest that effective demand management in day-to-day home delivery requires strategies considering geographic and demand characteristics to achieve delivery efficiency while maintaining customer satisfaction. • Choice-based demand management for day-to-day home delivery is studied. • E-commerce customers’ choices of order frequency and delivery timing are modeled. • Simulation-based evaluation framework integrates the choice models with a multi-period vehicle routing problem. • Normal delivery option gives couriers flexibility in delivery timing and improves efficiency. • Encouraging frequent customers to choose normal delivery allows for consolidation of multiple orders into a single delivery.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Ryota Okazaki",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuki Oyama",
+     "openalex": "A5008477033",
+     "orcid": "https://orcid.org/0000-0001-5172-6600",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Naoto Imura",
+     "openalex": "A5017109854",
+     "orcid": "https://orcid.org/0000-0002-1428-7407",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Katsuhiro Nishinari",
+     "openalex": "A5086650139",
+     "orcid": "https://orcid.org/0000-0003-3069-1757",
+     "tokai": [
+      "東京大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4415594818",
+   "doi": "https://doi.org/10.1109/icce-taiwan66881.2025.11207772",
+   "title": "Evaluation of Radio Interference Considering Actual User Distribution in Urban UAV Delivery",
+   "date": "2025-07-16",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Consumer Electronics - Taiwan (ICCE-Taiwan)",
+   "url": "https://doi.org/10.1109/icce-taiwan66881.2025.11207772",
+   "cited": 0,
+   "abstract": "UAV delivery services can help address the shortage of truck drivers and enable blind flight in urban areas, making urban delivery more feasible. However, since UAVs operate in the sky, their radio waves reach farther than ground-based communications, increasing radio interference. The authors evaluated this interference using a 3D city model from PLATEAU and ray-traced simulations. This paper analyzes radio interference in Tokyo, Japan, based on actual user distribution. It reveals that the percentage of affected users depends on the number of users near UAVs.",
+   "lang": "en",
+   "topic": "UAV Applications and Optimization",
+   "authors": [
+    {
+     "name": "Hideya So",
+     "openalex": "A5016434811",
+     "orcid": "https://orcid.org/0000-0002-5396-4458",
+     "tokai": []
+    },
+    {
+     "name": "Jin Nakazato",
+     "openalex": "A5091566433",
+     "orcid": "https://orcid.org/0000-0002-2394-267X",
+     "tokai": [
+      "東京理科大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4412450620",
+   "doi": "https://doi.org/10.1016/j.est.2025.117626",
+   "title": "Low-carbon routing and charging planning for electric freight trucks utilizing local surplus solar power",
+   "date": "2025-07-15",
+   "type": "article",
+   "venue": "Journal of Energy Storage",
+   "url": "https://doi.org/10.1016/j.est.2025.117626",
+   "cited": 12,
+   "abstract": "The decarbonization of freight transport via electric vehicles (EVs) is hampered not only by operational constraints but also by the CO 2 emission factor of charging electricity. This study addresses this challenge by proposing a novel Electric Vehicle Routing Problem (EVRP) framework that strategically absorbs local, spatiotemporally variable surplus photovoltaic (PV) power, based on transport-side access to surplus information. Unlike prior studies that passively assume the availability of renewable energy , our approach enables delivery operators to proactively adjust both the timing and location of charging in response to surplus forecasts, thereby optimizing charging behavior accordingly. Our primary innovation is a mixed-integer programming model with an objective function that directly minimizes CO 2 emissions by distinguishing between carbon-intensive grid power and low-carbon surplus PV based on smart metering data. The model optimizes delivery routes and en-route charging schedules by integrating day-ahead forecasts of regional surplus power. Through a data-driven case study in Utsunomiya, Japan , our method demonstrated a 16.6 % average reduction in CO 2 emissions from charging compared to conventional depot-only charging strategies. In high-surplus scenarios, reductions exceeded 60 %. Crucially, these reductions were achieved while satisfying delivery time window constraints and maintaining efficient routing in terms of total delivery time and travel distance. Our findings illustrate that commercial EV fleets can be leveraged as mobile assets to support local energy sustainability , providing a viable pathway to simultaneously decarbonize logistics and enhance grid stability.",
+   "lang": "en",
+   "topic": "Electric Vehicles and Infrastructure",
+   "authors": [
+    {
+     "name": "Ryoji Miyabe",
+     "openalex": "A5116479252",
+     "orcid": null,
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yu Fujimoto",
+     "openalex": "A5029328351",
+     "orcid": "https://orcid.org/0000-0001-8475-0535",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Yasuhiro Hayashi",
+     "openalex": "A5024829628",
+     "orcid": "https://orcid.org/0000-0002-4009-4430",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4412986115",
+   "doi": "https://doi.org/10.1109/ccdc65474.2025.11090772",
+   "title": "Online Deep Reinforcement Learning Approach for Solving Dynamic Vehicle Routing Problems with Time Windows",
+   "date": "2025-05-16",
+   "type": "conference-paper",
+   "venue": "Chinese Control and Decision Conference (CCDC)",
+   "url": "https://doi.org/10.1109/ccdc65474.2025.11090772",
+   "cited": 0,
+   "abstract": "To address the limitations of existing methods for dynamic vehicle routing problems, including exponential growth in solving time as problem size increases, susceptibility to local optima, and difficulty in handling stochastic demands and changes, we propose an online deep reinforcement learning algorithm for solving dynamic vehicle routing problems with time windows. First, we establish a partially observable Markov decision process (POMDP) model based on the time sequence of customer deliveries by the fleet. This model describes the interaction between the agent and the dynamic environment. Second, we propose a network model based on the Transformer architecture with multi-head attention to represent the policy and value function networks. Additionally, an actor-critic algorithm with a greedy baseline is designed to train the neural networks. Once trained, the network model can provide end-to-end solutions for dynamic vehicle routing problems and adjust planned routes online based on dynamic changes in problem conditions. Experiments demonstrate that the proposed method outperforms advanced meta-heuristic algorithms and deep reinforcement learning algorithms in both solution speed and quality, indicating that this method can efficiently achieve online optimization for dynamic vehicle routing problems with time windows.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Yanpeng Zhang",
+     "openalex": "A5042601584",
+     "orcid": "https://orcid.org/0000-0003-3827-8983",
+     "tokai": []
+    },
+    {
+     "name": "Xianghua Li",
+     "openalex": "A5100400536",
+     "orcid": "https://orcid.org/0000-0002-2172-7271",
+     "tokai": []
+    },
+    {
+     "name": "Yuqian Zhao",
+     "openalex": "",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Hui Wang",
+     "openalex": "A5100460887",
+     "orcid": "https://orcid.org/0000-0003-1015-7653",
+     "tokai": []
+    },
+    {
+     "name": "Gui Gui",
+     "openalex": "A5032658108",
+     "orcid": "https://orcid.org/0000-0001-7764-1533",
+     "tokai": []
+    },
+    {
+     "name": "Qing Ye",
+     "openalex": "A5100347581",
+     "orcid": "https://orcid.org/0000-0003-3956-3348",
+     "tokai": []
+    },
+    {
+     "name": "Quanjun Chen",
+     "openalex": "A5074092636",
+     "orcid": "https://orcid.org/0000-0001-6528-2924",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Chunhua Yang",
+     "openalex": "A5101971818",
+     "orcid": "https://orcid.org/0000-0002-3770-9887",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4413342235",
+   "doi": "https://doi.org/10.1504/ajmsa.2025.148897",
+   "title": "Estimation of average TSP distance considering zone length-width ratio: implications for territory design",
+   "date": "2025-01-01",
+   "type": "article",
+   "venue": "Asian J of Management Science and Applications",
+   "url": "https://doi.org/10.1504/ajmsa.2025.148897",
+   "cited": 0,
+   "abstract": "In vehicle routing, estimating route lengths using continuous approximation models can be valuable for delivery planning, particularly for tour cost estimation and territory design, because it eliminates the computational costs associated with solving TSP and VRP directly. In this study, we propose a route-length estimation formula based on rectilinear distances by considering the shape of the area. We calibrate the parameters through numerical experiments and apply them to a territorial decision problem. Thus, our proposed formula can estimate the average tour length over a rectilinear distance with high accuracy. As the number of points increases, the influence of the shape decreases.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Daisuke Hasegawa",
+     "openalex": "A5030344667",
+     "orcid": "https://orcid.org/0000-0002-4854-6665",
+     "tokai": [
+      "東京大学"
+     ]
+    },
+    {
+     "name": "Naoshi Shiono",
+     "openalex": "A5028703251",
+     "orcid": "https://orcid.org/0000-0003-0913-821X",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4414752472",
+   "doi": "https://doi.org/10.1504/ajmsa.2025.148895",
+   "title": "An optimised vehicle routing model for minimising distribution costs in cold-chain logistics",
+   "date": "2025-01-01",
+   "type": "article",
+   "venue": "Asian J of Management Science and Applications",
+   "url": "https://doi.org/10.1504/ajmsa.2025.148895",
+   "cited": 0,
+   "abstract": "As economies and technology evolve, cold-chain logistics has emerged as a critical component in enhancing life quality and ensuring food safety. However, challenges remain due to incomplete technology and uneven customer distribution. This study proposes a routing model that integrates external temperature fluctuations into the cost calculations for simultaneous delivery and pick-up in cold-chain logistics. The model focuses solely on external temperature and examines its impact on distribution costs by analysing transportation, cargo damage, and refrigeration costs. To address the complexities of vehicle routing for simultaneous delivery and pick-up under variable external temperatures, this study enhances ant colony optimisation and genetic algorithms. Experimental results, based on multiple iterations, demonstrate that the improved model achieves lower overall distribution costs compared to traditional models, particularly in reducing cargo loss during transport and at customer nodes. These findings offer cold-chain logistics enterprises a more efficient, cost-effective strategy to reduce losses and boost efficiency.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Chaofan Wang",
+     "openalex": "A5100636446",
+     "orcid": "https://orcid.org/0009-0005-1830-7283",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Takashi Hasuike",
+     "openalex": "A5088963187",
+     "orcid": "https://orcid.org/0000-0002-0475-8439",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4406047495",
+   "doi": "https://doi.org/10.1109/mcsoc64144.2024.00086",
+   "title": "A Quantum Q-Learning Model for the Capacitated Vehicle Routing Problem",
+   "date": "2024-12-16",
+   "type": "conference-paper",
+   "venue": "IEEE International Symposium on Embedded Multicore/Many-core Systems-on-Chip (MCSoC)",
+   "url": "https://doi.org/10.1109/mcsoc64144.2024.00086",
+   "cited": 4,
+   "abstract": "The research on Variational Quantum Algorithms (VQAs) has gained significant momentum because of their promising practicality in the noisy intermediate-scale quantum (NISQ) era. Recent studies highlight the potential of VQAs in reinforcement learning (RL) by replacing classical components with parameterized quantum circuits (PQCs). Building on this, we propose a quantum Q-learning model for the Capacitated Vehicle Routing Problem (CVRP), combining a PQC with an RL training process. We present a PQC for embedding both static and dynamic states in RL environments. The proposed PQC approximates the Q-value function by using the expectation values of different observables. Experimental results demonstrate that the proposed PQC outperforms the existing PQC for the CVRP with fewer quantum resources. Furthermore, our method shows competitive performance compared to the classical counterpart.",
+   "lang": "en",
+   "topic": "Quantum Computing Algorithms and Architecture",
+   "authors": [
+    {
+     "name": "Junde Xu",
+     "openalex": "A5003497389",
+     "orcid": null,
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Ningyi Xie",
+     "openalex": "A5059675095",
+     "orcid": "https://orcid.org/0000-0002-9373-3355",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Xinwei Lee",
+     "openalex": "A5022637745",
+     "orcid": "https://orcid.org/0000-0002-8509-8697",
+     "tokai": []
+    },
+    {
+     "name": "Yoshiyuki Saito",
+     "openalex": "A5026064784",
+     "orcid": "https://orcid.org/0000-0002-7798-9019",
+     "tokai": []
+    },
+    {
+     "name": "Nobuyoshi Asai",
+     "openalex": "A5030658732",
+     "orcid": "https://orcid.org/0000-0002-8832-0521",
+     "tokai": []
+    },
+    {
+     "name": "Dongsheng Cai",
+     "openalex": "A5103100460",
+     "orcid": "https://orcid.org/0000-0003-1041-6037",
+     "tokai": [
+      "筑波大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4407128995",
+   "doi": "https://doi.org/10.1109/ieem62345.2024.10857012",
+   "title": "An Optimization of Cold-chain Logistics Routing for Cost and Carbon Reduction",
+   "date": "2024-12-15",
+   "type": "conference-paper",
+   "venue": "IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
+   "url": "https://doi.org/10.1109/ieem62345.2024.10857012",
+   "cited": 3,
+   "abstract": "The prevalence of low carbon and environmental protection philosophy and the increasing importance of sustainable supply chain development have rendered cold-chain logistics increasingly significant. This study addresses the optimal route planning challenge from warehouses to distribution centers, focusing on minimizing costs and carbon emissions in cold-chain logistics. A novel vehicle route planning model for cold-chain logistics was developed, targeting cost savings and reducing carbon emissions. Genetic algorithm and ant colony optimization were employed to determine the optimal route, demonstrating effective performance in solving the optimization problem. The study achieved a more optimal distribution path by combining the rapid convergence of ant colony optimization with the computational efficiency of genetic algorithm. Experimental results validate the enhanced algorithm’s ability to swiftly obtain an optimal cold-chain logistics distribution scheme at a lower cost. This research contributes to cost reduction in distribution and significantly lowers carbon emissions, thereby yielding dual economic and social benefits.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Chaofan Wang",
+     "openalex": "A5100636446",
+     "orcid": "https://orcid.org/0009-0005-1830-7283",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Takashi Hasuike",
+     "openalex": "A5088963187",
+     "orcid": "https://orcid.org/0000-0002-0475-8439",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4401822419",
+   "doi": "https://doi.org/10.1016/j.trip.2024.101200",
+   "title": "Assessment of the sustainability of online food delivery from the perspective of CO2 emissions and transport intensity: A case study in Jakarta",
+   "date": "2024-08-23",
+   "type": "article",
+   "venue": "Transportation Research Interdisciplinary Perspectives",
+   "url": "https://doi.org/10.1016/j.trip.2024.101200",
+   "cited": 12,
+   "abstract": "This study examines the impact of online food delivery on CO 2 emissions and transport intensity in Jakarta, Indonesia, by integrating data from both delivery drivers and customers. A total of 235 delivery instances were analyzed to discern typical distances and patterns inherent in these services. Additionally, insights into the demand side were obtained through customer surveys, yielding 203 valid responses, that included waiting times, costs, and behaviors related to alternative meal acquisition methods. CO 2 emissions generated by delivery processes were estimated, utilizing travel distances recorded by drivers. The traffic impact was assessed by calculating the road occupancy of motorcycles used for deliveries. Furthermore, the assessment of CO 2 emissions and transport intensity considered hypothetical emission scenarios without such delivery services based on customer indications of their alternative means of meal acquisition. This analysis revealed that frequent short journeys by delivery motorcycles significantly contribute to urban traffic congestion and CO 2 emissions, highlighting the environmental and traffic pressures resulting from the rise of food delivery services. Results from the customer survey revealed a profound dependence on these services, indicating that their availability prompts a significant number of additional trips, thereby exacerbating these impacts. The findings suggest recommendations for mitigating these adverse effects, including promoting the use of electric motorcycles for deliveries and managing demand by reassessing delivery fees to reflect the actual environmental costs.",
+   "lang": "en",
+   "topic": "Urban and Freight Transport Logistics",
+   "authors": [
+    {
+     "name": "Mihoko Matsuyuki",
+     "openalex": "A5090650788",
+     "orcid": "https://orcid.org/0000-0002-7986-3751",
+     "tokai": [
+      "横浜国立大学"
+     ]
+    },
+    {
+     "name": "Chotib Chotib",
+     "openalex": "A5091301512",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Renny Nurhasana",
+     "openalex": "A5030721153",
+     "orcid": "https://orcid.org/0000-0003-3154-8223",
+     "tokai": []
+    },
+    {
+     "name": "Yulius Antokida",
+     "openalex": "A5092799713",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Irene Sondang Fitrinitia",
+     "openalex": "A5018728271",
+     "orcid": "https://orcid.org/0000-0002-0839-904X",
+     "tokai": []
+    },
+    {
+     "name": "Ni Made Shellasih",
+     "openalex": "A5046601762",
+     "orcid": "https://orcid.org/0000-0003-4774-2338",
+     "tokai": []
+    },
+    {
+     "name": "Fadhilah Rizky Ningtyas",
+     "openalex": "A5044452529",
+     "orcid": "https://orcid.org/0009-0002-9169-285X",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4401096567",
+   "doi": "https://doi.org/10.1007/s11128-024-04497-5",
+   "title": "A feasibility-preserved quantum approximate solver for the Capacitated Vehicle Routing Problem",
+   "date": "2024-07-29",
+   "type": "article",
+   "venue": "Quantum Information Processing",
+   "url": "https://doi.org/10.1007/s11128-024-04497-5",
+   "cited": 52,
+   "abstract": "The Capacitated Vehicle Routing Problem (CVRP) is an NP-optimization problem (NPO) that arises in various fields including transportation and logistics. The CVRP extends from the Vehicle Routing Problem (VRP), aiming to determine the most efficient plan for a fleet of vehicles to deliver goods to a set of customers, subject to the limited carrying capacity of each vehicle. As the number of possible solutions skyrockets when the number of customers increases, finding the optimal solution remains a significant challenge. Recently, the Quantum Approximate Optimization Algorithm (QAOA), a quantum-classical hybrid algorithm, has exhibited enhanced performance in certain combinatorial optimization problems compared to classical heuristics. However, its ability diminishes notably in solving constrained optimization problems including the CVRP. This limitation primarily arises from the typical approach of encoding the given problems as penalty-inclusive binary optimization problems. In this case, the QAOA faces challenges in sampling solutions satisfying all constraints. Addressing this, our work presents a new binary encoding for the CVRP, with an alternative objective function of minimizing the shortest path that bypasses the vehicle capacity constraint of the CVRP. The search space is further restricted by the constraint-preserving mixing operation. We examine and discuss the effectiveness of the proposed encoding under the framework of the variant of the QAOA, Quantum Alternating Operator Ansatz (AOA), through its application to several illustrative examples. Compared to the typical QAOA approach, the proposed method not only preserves the feasibility but also achieves a significant enhancement in the probability of measuring optimal solutions.",
+   "lang": "en",
+   "topic": "Quantum Computing Algorithms and Architecture",
+   "authors": [
+    {
+     "name": "Ningyi Xie",
+     "openalex": "A5059675095",
+     "orcid": "https://orcid.org/0000-0002-9373-3355",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Xinwei Lee",
+     "openalex": "A5022637745",
+     "orcid": "https://orcid.org/0000-0002-8509-8697",
+     "tokai": []
+    },
+    {
+     "name": "Dongsheng Cai",
+     "openalex": "A5103100460",
+     "orcid": "https://orcid.org/0000-0003-1041-6037",
+     "tokai": [
+      "筑波大学"
+     ]
+    },
+    {
+     "name": "Yoshiyuki Saito",
+     "openalex": "A5026064784",
+     "orcid": "https://orcid.org/0000-0002-7798-9019",
+     "tokai": []
+    },
+    {
+     "name": "Nobuyoshi Asai",
+     "openalex": "A5030658732",
+     "orcid": "https://orcid.org/0000-0002-8832-0521",
+     "tokai": []
+    },
+    {
+     "name": "Hoong Chuin Lau",
+     "openalex": "A5015466370",
+     "orcid": "https://orcid.org/0000-0002-5326-411X",
+     "tokai": []
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4401416534",
+   "doi": "https://doi.org/10.1109/cec60901.2024.10612031",
+   "title": "Improved Discrete Cat Swarm Optimization for Optimal Multi-Trip Vehicle Routing in Case of a Natural Disaster",
+   "date": "2024-06-30",
+   "type": "conference-paper",
+   "venue": "IEEE Congress on Evolutionary Computation (CEC)",
+   "url": "https://doi.org/10.1109/cec60901.2024.10612031",
+   "cited": 0,
+   "abstract": "This paper proposes an improved discrete cat swarm optimization based method for optimal multi-trip vehicle routing in case of a natural disaster. In recent years, large-scale natural disasters have occurred frequently in many countries. When a natural disaster occurred, logistics of emergency relief supplies should be built to enable prompt and accurate distribution of emergency relief supplies. For building the logistics, it is necessary to determine optimal multi-trip vehicle routing because available vehicles are limited. This problem can be formulated as a multi-trip vehicle routing problem (MTVRP) considering fairness and road closure. The proposed improved discrete cat swarm optimization modifies discrete cat swarm optimization for application to the multi-trip vehicle routing problem. Using the proposed method, solutions can be improved using parts of high quality solutions' routes in the MTVRP. It is verified that the proposed method can generate higher quality optimal vehicle routing than the conventional improved reactive tabu search based method with actual evacuation center data of Chiba City. The data are planned to be utilized in case of a natural disaster. Effectiveness of the proposed method is verified by Welch's t-test.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Takumi Abe",
+     "openalex": "A5109760585",
+     "orcid": null,
+     "tokai": [
+      "明治大学"
+     ]
+    },
+    {
+     "name": "Yoshikazu Fukuyama",
+     "openalex": "A5022209091",
+     "orcid": "https://orcid.org/0000-0002-6115-1676",
+     "tokai": [
+      "明治大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4396594294",
+   "doi": "https://doi.org/10.1007/978-981-97-0194-0_42",
+   "title": "Quantifying the Impact of Physical Internet Systems Under Decentralized Control",
+   "date": "2024-05-03",
+   "type": "conference-paper",
+   "venue": "Lecture notes in mechanical engineering",
+   "url": "https://doi.org/10.1007/978-981-97-0194-0_42",
+   "cited": 1,
+   "abstract": "",
+   "lang": "en",
+   "topic": "Supply Chain and Inventory Management",
+   "authors": [
+    {
+     "name": "Sadami Suzuki",
+     "openalex": "A5101347419",
+     "orcid": null,
+     "tokai": [
+      "横浜国立大学"
+     ]
+    },
+    {
+     "name": "Ornida Kraiwuttianant",
+     "openalex": "A5096292623",
+     "orcid": null,
+     "tokai": [
+      "東京科学大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  },
+  {
+   "id": "W4392248663",
+   "doi": "https://doi.org/10.1109/icce59016.2024.10444436",
+   "title": "Optimization of Practical Time-Dependent Vehicle Routing Problem by Ising Machines",
+   "date": "2024-01-06",
+   "type": "conference-paper",
+   "venue": "International Conference on Consumer Electronics",
+   "url": "https://doi.org/10.1109/icce59016.2024.10444436",
+   "cited": 9,
+   "abstract": "The Vehicle Routing Problem (VRP) is an extension of the Travelling Salesperson Problem (TSP). A VRP determines the delivery sequence where multiple vehicles are available, delivery should be made to multiple points, and each point should be visited once. However, road conditions change depending on the time of day, and the time required to travel between two points changes accordingly. Unless these changes are considered, a calculated minimum cost is not realized in actual logistics. Aiming to apply the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW), which is a VRP extension that counts changes in the time required to travel between two points depending on the time of day, to Ising machines including quantum annealers, this paper proposes an effective formulation to realize TDVRPTW, composed of several objective functions and constraints. Further, this paper compares and evaluates the results obtained by a physical Ising machine and confirms the validity of the formulation, thus verifying the applicability of the TDVRPTW to quantum computing.",
+   "lang": "en",
+   "topic": "Vehicle Routing Optimization Methods",
+   "authors": [
+    {
+     "name": "Yui Tsuyumine",
+     "openalex": "A5094023362",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Kenichi Masuda",
+     "openalex": "A5108904530",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Takeshi Hachikawa",
+     "openalex": "A5001916638",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Tsuyoshi Haga",
+     "openalex": "A5047176028",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Yuta Yachi",
+     "openalex": "A5055411160",
+     "orcid": null,
+     "tokai": []
+    },
+    {
+     "name": "Tatsuhiko Shirai",
+     "openalex": "A5009463360",
+     "orcid": "https://orcid.org/0000-0001-7375-4119",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Masashi Tawada",
+     "openalex": "A5052270421",
+     "orcid": "https://orcid.org/0000-0002-1065-3393",
+     "tokai": [
+      "早稲田大学"
+     ]
+    },
+    {
+     "name": "Nozomu Togawa",
+     "openalex": "A5087516286",
+     "orcid": "https://orcid.org/0000-0003-3400-3587",
+     "tokai": [
+      "早稲田大学"
+     ]
+    }
+   ],
+   "group": "トラック輸送・宅配と物流の効率化",
+   "region": "関東"
+  }
+ ],
+ "projects": [],
+ "kokkai": [
+  {
+   "key": "okihai-saihaitatsu",
+   "name": "置き配・再配達と物流の人手不足",
+   "count": 897,
+   "recent": [
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-10-22",
+     "house": "参議院",
+     "meeting": "農林水産委員会",
+     "speaker": "武部新",
+     "kind": "gov",
+     "url": "https://kokkai.ndl.go.jp/txt/122215007X00120261022/8",
+     "body": "…するインバウンド需要を取り込みつつ、農林水産業との連携の下での国産原材料の安定調達や利用拡大による付加価値向上、中継共同物流拠点の整備によるサプライチェーン全体の物流効率化、また、海外展開により、持続的な発展を図ります。\r\n　また、円滑な食品アクセスの確保を図るため、ラストワンマイル配送、フードバンク等を通じた食料供給を円滑にする地域の体制づくり等を進めます。\r\n　農林水産物・食品の輸出については、これまで十三年間にわたり連続して輸出額を増加させてきましたが、二〇三〇年五兆円の輸出額目標に向けて、更なるペースアップを図る必要があります。このため、輸出先国の多角化、現地系商流への売り込み、輸出産"
+    },
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-10-21",
+     "house": "衆議院",
+     "meeting": "農林水産委員会",
+     "speaker": "武部新",
+     "kind": "gov",
+     "url": "https://kokkai.ndl.go.jp/txt/122205007X00120261021/8",
+     "body": "…するインバウンド需要を取り込みつつ、農林水産業との連携の下での国産原材料の安定調達や利用拡大による付加価値向上、中継共同物流拠点の整備によるサプライチェーン全体の物流効率化、また、海外展開により、持続的な発展を図ります。\r\n　また、円滑な食品アクセスの確保を図るため、ラストワンマイル配送、フードバンク等を通じた食料供給を円滑にする地域の体制づくりを進めます。\r\n　農林水産物、食品の輸出については、これまで十三年間にわたり連続して輸出額を増加させてきましたが、二〇三〇年五兆円の輸出額目標に向けて、更なるペースアップを図る必要があります。このため、輸出先国の多角化、現地系商流への売り込み、輸出産地"
+    },
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-10-09",
+     "house": "参議院",
+     "meeting": "本会議",
+     "speaker": "高木かおり",
+     "kind": "q",
+     "url": "https://kokkai.ndl.go.jp/txt/122215254X00320261009/14",
+     "body": "…Ｉは、戦略十七分野の一つであるＡＩ・半導体において主要技術として注目されています。産業用ロボットや精密部品、そして工場、物流、インフラの現場で磨き上げてきた運用の知恵は、日本にしかない強みであり、政府も、本年七月に策定した日本成長戦略でフィジカルＡＩを成長の加速装置と位置付けています。現場の知見とＡＩを結び付け、安全に制御し、使いこなす仕組みを磨き上げる。私は、ここにこそ日本の勝ち筋があると確信しています。\r\n　フィジカルＡＩが最も切実に求められている現場の一つが介護です。人手不足が叫ばれる中で、見守りセンサーやＡＩで記録や確認の多くを自動化できる時代に、現場は今も紙と人手を前提とした仕組みに"
+    },
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-07-08",
+     "house": "参議院",
+     "meeting": "本会議",
+     "speaker": "羽田次郎",
+     "kind": "q",
+     "url": "https://kokkai.ndl.go.jp/txt/122115254X02620260708/5",
+     "body": "…\n　そのような中、昨年一月二十八日、埼玉県八潮市で、下水道管路の破損に起因する大規模な道路陥没事故が発生し、巻き込まれたトラック運転手一人がお亡くなりになるという痛ましい事故が発生いたしました。改めて、お悔やみを申し上げます。\r\n　老朽化するインフラ対策、適切な維持管理の実施、それらに携わる地方公共団体の財政、組織体制強化に一刻の猶予もないことを私たちは認識せねばなりません。\r\n　本法律案は、こうした課題に対応するため、安全性確保を最優先する下水道事業マネジメントの確立、道路地下空間の安全性確保、事業を支える基盤強化等を内容として提出されたものと承知しております。\r\n　この法律案が、下水道を取"
+    },
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-06-11",
+     "house": "参議院",
+     "meeting": "総務委員会",
+     "speaker": "牛山智弘",
+     "kind": "gov",
+     "url": "https://kokkai.ndl.go.jp/txt/122114601X01120260611/41",
+     "body": "お答え申し上げます。\r\n　今委員から御指摘のございました再配達などの郵便に附帯するサービスにつきましては、郵便法におきましては具体的な提供状況などの規定はないところでございまして、こうしたサービスの見直しにつきましては、郵便局の負担でございますとか利用者のニーズ等に鑑みながら、まず日本郵便において適切に判断をしていただきたいと考えているところでございます。"
+    },
+    {
+     "tracker": "okihai-saihaitatsu",
+     "date": "2026-06-11",
+     "house": "参議院",
+     "meeting": "内閣委員会",
+     "speaker": "神山弘",
+     "kind": "gov",
+     "url": "https://kokkai.ndl.go.jp/txt/122114889X01520260611/44",
+     "body": "…用途又は目的を妨げない限度においてその使用を許可できることとなってございます。\r\n　したがって、御指摘のように、公民館に宅配ロッカーを設置することについては、設置者である各自治体において、地域住民の利便性の向上のほか、公民館がその役割を果たす上での支障の有無や公民館への来館者を増やすことにつながるかなども踏まえながら判断がなされるものと考えてございます。\r\n　このように、公民館への宅配ロッカーの設置は一律に排除されているものではなく、具体的な設置の可否については各地方公共団体の判断に委ねられておるところでございます。"
+    }
+   ]
+  }
+ ]
+}

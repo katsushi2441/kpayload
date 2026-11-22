@@ -202,5 +202,72 @@
     "trackers": [
       "kaigo-shogu"
     ]
+  },
+  {
+    "slug": "butsuryu-okihai",
+    "name": "物流・置き配・再配達とラストワンマイル",
+    "seo_title": "物流・置き配・再配達とラストワンマイルの研究｜東海・関東の大学の論文・科研費と国会の議論",
+    "lead": "ネット通販で宅配便が増える一方、トラックドライバーは足りなくなっています（物流の2024年問題）。国土交通省は2026年11月20日、置き配や宅配ボックスなどの受取方法についてのガイドライン案を公表し、意見募集を始めました。置き配・宅配ロッカー、再配達の削減、ラストワンマイルの配送、ドローンや配送ロボット、都市の物流について、東海三県（愛知・岐阜・三重）と関東の大学の研究者が何を研究しているかと、置き配・再配達と物流の人手不足が国会でどう議論されているかを、1ページで並べました。",
+    "openalex": [
+      {
+        "label": "ラストワンマイル配送と置き配・宅配ロッカー",
+        "search": "\"last-mile delivery\"|\"last mile delivery\"|\"last-mile logistics\"|\"parcel locker\"|\"parcel lockers\"|\"delivery lockers\"|\"unattended delivery\"|\"package theft\"|\"e-commerce logistics\"|\"truck driver shortage\"|\"driver shortage\"|\"urban logistics\"|\"city logistics\"|\"delivery robot\"|\"delivery robots\"|\"drone delivery\"|\"parcel delivery\"",
+        "and": "last-mile|last mile|parcel locker|parcel lockers|delivery locker|delivery lockers|unattended delivery|package theft|e-commerce logistics|driver shortage|urban logistics|city logistics|urban freight|delivery robot|delivery robots|drone delivery|delivery drone|delivery drones|parcel delivery|home delivery service|redelivery|failed delivery|courier",
+        "sort": "publication_date:desc",
+        "limit": 60
+      },
+      {
+        "label": "トラック輸送・宅配と物流の効率化",
+        "search": "\"freight transport\"|\"truck driver\"|\"truck drivers\"|\"autonomous truck\"|\"truck platoon\"|\"truck platooning\"|\"logistics warehouse\"|\"attended home delivery\"|\"online food delivery\"|\"on-demand delivery\"|\"vehicle routing\"|\"physical internet\"",
+        "and": "freight transport|truck driver|truck drivers|trucking|truck platoon|truck platooning|autonomous truck|logistics warehouse|home delivery service|home delivery services|attended home delivery|home delivery planning|online food delivery|food delivery app|food delivery apps|food delivery services|on-demand delivery|vehicle routing|physical internet|parcel|cold-chain logistics",
+        "sort": "publication_date:desc",
+        "limit": 40
+      }
+    ],
+    "kaken": [
+      "物流",
+      "宅配",
+      "ラストワンマイル",
+      "ドローン 物流",
+      "配送 ロボット",
+      "トラック 輸送"
+    ],
+    "kaken_must": "(?<!書)物流|ラストマイル|ラストワンマイル|宅配|置き配|再配達|ロジスティクス|貨物|トラック輸送|トラックドライバー|配送ロボット|ドローン配送|ドローン物流|配達",
+    "x_rx": "置き配|再配達|宅配ボックス|宅配ロッカー|宅配便|2024年問題|ドライバー不足|ラストワンマイル|ドローン配送|配送ロボット",
+    "trackers": [
+      "okihai-saihaitatsu"
+    ],
+    "exclude_ids": [
+      "W4388910192",
+      "W7167540829",
+      "W4416833600",
+      "W4383888897",
+      "W4391187152",
+      "W4388623964",
+      "W7202201685",
+      "W7140308292",
+      "W7159777077",
+      "W4402721945",
+      "W4317796995",
+      "W4417281907",
+      "W4408147409",
+      "W7167593735",
+      "W7167642644",
+      "W7165058059",
+      "W7159937565",
+      "W7166728000",
+      "W7235462824",
+      "W4416875380",
+      "W7213862683",
+      "W4415258624",
+      "W7214209681",
+      "W7154907263",
+      "W4416420355",
+      "W7130425113",
+      "W4406261787",
+      "W4401751411",
+      "W4392297638",
+      "W4392248358"
+    ]
   }
 ]

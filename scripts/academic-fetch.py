@@ -209,6 +209,8 @@ def main() -> None:
             if f.name in ("themes.json", "summaries.json"):
                 continue
             d = json.loads(f.read_text()); n = len(d["works"]); d["works"] = clean(d["works"])
+            ex = set(d["theme"].get("exclude_ids", []))
+            d["works"] = [w for w in d["works"] if w["id"] not in ex]
             ands = {q["label"]: q["and"] for q in d["theme"]["openalex"] if q.get("and")}
             d["works"] = [w for w in d["works"] if w["group"] not in ands or and_ok(ands[w["group"]], (w["title"] or "") + " " + (w.get("abstract") or ""))]
             f.write_text(json.dumps(d, ensure_ascii=False, indent=1))
@@ -222,6 +224,11 @@ def main() -> None:
                 d = json.loads(f.read_text()); d["kokkai"] = kokkai(th["trackers"]); f.write_text(json.dumps(d, ensure_ascii=False, indent=1))
                 print("国会を取り直し", th["slug"])
         return
+    # --no-kaken: 科研費だけ取らない（2026-11-22 CiNii の crid 詳細が AWS WAF の challenge（202・本文なし）を返し、
+    # 1件ごとに再試行の待ちが重なって1語40分以上かかった）。科研費は前回の取得分があれば残す
+    no_kaken = "--no-kaken" in sys.argv
+    if no_kaken:
+        sys.argv.remove("--no-kaken")
     themes = json.loads((DATA / "themes.json").read_text())
     want = set(sys.argv[1:])
     for th in themes:
@@ -238,7 +245,14 @@ def main() -> None:
                         works.append(w)
                 print(f"  OpenAlex {region}「{q['label']}」まで {len(works)} 本", flush=True)
         works = clean(works)
-        projects = kaken(th["kaken"])
+        # 語は当たっても中身が別の分野の論文（目で見て外したもの）。themes.json の exclude_ids に OpenAlex の ID で書く
+        ex = set(th.get("exclude_ids", []))
+        works = [w for w in works if w["id"] not in ex]
+        if no_kaken:
+            old = DATA / f"{th['slug']}.json"
+            projects = json.loads(old.read_text()).get("projects", []) if old.exists() else []
+        else:
+            projects = kaken(th["kaken"])
         data = {"theme": th, "fetched": time.strftime("%Y-%m-%d"), "works": works, "projects": projects, "kokkai": kokkai(th["trackers"])}
         (DATA / f"{th['slug']}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
         print(f"  → data/academic/{th['slug']}.json 論文{len(works)} 科研費{len(projects)}", flush=True)
