@@ -6787,7 +6787,8 @@
     "question": "日本語で使えますか？",
     "answer": "本家にも日本語の設定はありますが、v3.13.15 で数えると、画面の文言665語のうち日本語があるのは63語（約9%）で、新しい検査一覧は英語が直書きです。当社で665語すべてと直書きの部分を日本語にし、Docker Compose で Orthanc と一緒に立てて、CT・MRI の表示・3断面の切り替え・計測を画面で確かめました。"
    }
-  ]
+  ],
+  "buyUrl": "https://kappstore.exbridge.jp/app.php?id=0bb3640c5a9b243d"
  },
  {
   "name": "VoiceStudio",
