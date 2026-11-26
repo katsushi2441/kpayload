@@ -476,6 +476,11 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 .vb-giin{display:flex;flex-wrap:wrap;gap:4px}
 .vb-giin img{display:block;width:34px;height:34px;border-radius:50%;object-fit:cover;border:1px solid #cfdbe8;background:#fff}
 .vb-smore{margin:8px 0 0;font-size:13px}
+/* 記事の上：看板を小さくして左、プロフィールを右（2026-11-27 ユーザー指示） */
+.vb-ahead{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.vb-ahead .vb-eyecatch{max-width:560px}
+.vb-aside{position:sticky;top:12px}
+.vb-aside .vb-acard img{width:72px;height:72px}
 .vb-byline{margin:-6px 0 12px}
 .vb-byline a{display:inline-flex;align-items:center;gap:8px;color:#3a4a52;text-decoration:none;font-size:13px;line-height:1.5}
 .vb-byline img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid #dfe8ec;flex:0 0 auto}
@@ -484,7 +489,7 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 .vb-apost .vb-author{display:grid;grid-template-columns:300px minmax(0,1fr);gap:4px 18px;align-items:start}
 .vb-apost .vb-acards{grid-row:span 3}
 .vb-apost .vb-abio{margin:2px 0 4px}
-@media (max-width:900px){.vb-top{grid-template-columns:minmax(0,1fr)}.vb-apost .vb-author{display:block}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
+@media (max-width:900px){.vb-ahead{display:block}.vb-ahead .vb-eyecatch{max-width:none}.vb-aside{display:none}.vb-top{grid-template-columns:minmax(0,1fr)}.vb-apost .vb-author{display:block}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
 </style>`
 
 const ctaBlock = `
@@ -647,6 +652,7 @@ function postHtml(p: Post, idx: number): string {
   const body = `
 <main class="wrap">
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ <a href="${BASE}/">バイブコーディング的仕事ブログ</a>${p.src === 'articles' ? ` ／ <a href="${BASE}/oss.html">AI OSS技術解説</a>` : ''}</nav>
+<div class="vb-ahead"><div class="vb-aheadl">
 ${img ? `<figure class="vb-eyecatch"><img src="${attr(img)}" width="1200" height="630" alt="${attr(p.title)}" loading="eager" decoding="async"></figure>` : ''}
 <h1>${h(p.title)}</h1>
 <p class="meta">${p.src === 'articles' ? '<span>AI OSS技術解説</span>' : ''}${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}${p.updated && p.updated !== p.date ? `<span>${h(dateJa(p.updated))}追記</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
@@ -656,6 +662,9 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 <div class="vb-share">
   <button type="button" class="vb-copy" data-copy="${attr(`${p.title}\n${url}`)}">
     <span class="vb-copy-label">タイトルとURLをコピー</span></button>
+</div>
+</div>
+<div class="vb-aside">${authorBox()}</div>
 </div>
 ${answerBox(p)}
 <article class="post">${withPromo(p)}${faqBlock(p)}</article>
