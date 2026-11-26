@@ -437,7 +437,7 @@ ${p.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミスの商品（Kurage App Store）</h2>
 <p>${p.productsNote ? h(p.productsNote) : '当社が販売しているオンプレミスの商品です。月額はかかりません。<b>業務アプリ</b>はソースコード込み（MITライセンス）で自社改造OK、<b>日本語導入キット</b>は無料のオープンソース本体を共有レンタルサーバーに日本語で立てるための実測手順書＋ツール一式です。'}</p>
 <div class="cat-grid">
-${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}・Kurage App Store</span></a>`).join('')}
+${p.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}#ref=solution-${attr(p.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}・Kurage App Store</span></a>`).join('')}
 </div>
 ${p.brain.length ? `<p style="margin-top:12px">構築手順を自分で読みたい方へ: ${p.brain.map((b) => `<a href="${attr(b.url)}?ref=solution-${attr(p.slug)}" target="_blank" rel="noopener">${h(b.label)}</a>`).join('　')}</p>` : ''}
 ${p.lps.length ? `<p class="note">${p.lps.map((l) => `<a href="${attr(l.url)}?ref=solution-${attr(p.slug)}">${h(l.label)}</a>`).join('　')}</p>` : ''}
@@ -570,7 +570,10 @@ const allProjects = result.docs as unknown as Project[]
 // data/solution-content/<業種>/<業務>.json（業種トップは _hub.json）に作る。
 type Sec = { h: string; p: string }
 type PairC = { title: string; description: string; lead: string; points: Sec[]; features: string[]
-  split: Sec[]; steps: string[]; faqs: Array<{ q: string; a: string }>; _generated: string }
+  split: Sec[]; steps: string[]; faqs: Array<{ q: string; a: string }>; _generated: string
+  // そのまま使える見本（マニュアルの目次・日報の記入欄など）。競争の低い業種×業務の言葉で、
+  // ひな形の量産ページより中身のあるページにするため（2026-11-27）
+  sample?: { h: string; intro: string; groups: Array<{ h: string; items: string[] }>; note?: string } }
 type HubC = { title: string; description: string; lead: string; sections: Sec[]; faqs: Array<{ q: string; a: string }>; _generated: string }
 async function readContent<T>(ind: string, key: string): Promise<T | null> {
   try { return JSON.parse(await fs.readFile(path.join(root, 'data', 'solution-content', ind, `${key}.json`), 'utf8')) as T } catch { return null }
@@ -666,7 +669,7 @@ ${g.products.length ? `<section><div class="panel">
 <h2>すぐ導入できるオンプレミス製品（Kurage App Store）</h2>
 <p>当社が販売している${h(g.name)}向けのオンプレミスの商品です。月額はかかりません。デモを触ってから判断できます。</p>
 <div class="cat-grid">
-${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}&ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}</span></a>`).join('')}
+${g.products.map((pr) => `<a class="cat-card" href="${attr(pr.url)}#ref=solution-${attr(ind.slug)}-${attr(g.slug)}" target="_blank" rel="noopener"><b>${h(pr.name)}</b><span>オンプレミス ${h(pr.price)}${/円$/.test(pr.price) ? '（税込）' : ''}</span></a>`).join('')}
 </div></div></section>` : ''}
 ${(SHOTS[`${ind.slug}/${g.slug}`] || []).length ? `<section><div class="panel">
 <h2>${h(g.name)}の画面の見本</h2>
@@ -675,6 +678,11 @@ ${(SHOTS[`${ind.slug}/${g.slug}`] || []).length ? `<section><div class="panel">
 ${c ? `<section><div class="panel"><h2>${h(ind.name)}の${h(g.name)}で押さえること</h2>
 <div class="grid">${c.points.map((x) => `<div class="card"><h3>${h(x.h)}</h3><p>${h(x.p)}</p></div>`).join('')}</div>
 </div></section>
+${c.sample ? `<section><div class="panel"><h2>${h(c.sample.h)}</h2>
+<p>${h(c.sample.intro)}</p>
+<div class="grid">${c.sample.groups.map((gr) => `<div class="card"><h3>${h(gr.h)}</h3><ul class="checks">${gr.items.map((x) => `<li>${h(x)}</li>`).join('')}</ul></div>`).join('')}</div>
+${c.sample.note ? `<p class="note">${h(c.sample.note)}</p>` : ''}
+</div></section>` : ''}
 <section><div class="panel"><h2>${h(g.name)}のシステムに要る機能</h2>
 <ul class="checks">${c.features.map((x) => `<li>${h(x)}</li>`).join('')}</ul>
 </div></section>

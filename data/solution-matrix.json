@@ -231,8 +231,18 @@
       "pain": "作業手順が人によって違い、新人教育のたびに同じ説明をしている",
       "products": [
         {
+          "name": "社内マニュアルを自社サーバーで共有（Docmost 日本語導入キット）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=7495b31ca104b483",
+          "price": "5,500円"
+        },
+        {
           "name": "AIチャットボット (klchatbot)",
           "url": "https://kappstore.exbridge.jp/app.php?id=224e141f77bd07a8",
+          "price": "55,000円"
+        },
+        {
+          "name": "業務引き継ぎ・属人化解消の職務管理（Kurage HR Post）",
+          "url": "https://kappstore.exbridge.jp/app.php?id=56bf3ddd46b5a457",
           "price": "55,000円"
         }
       ]
