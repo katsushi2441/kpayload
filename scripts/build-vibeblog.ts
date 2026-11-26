@@ -454,6 +454,29 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 @media(max-width:640px){h1{font-size:21px}.vb-head h1{font-size:26px}
   .post{font-size:14.5px}.post h2{font-size:17px}
   .vb-rows a{flex-wrap:wrap;gap:2px}.vb-rows time{width:auto}}
+.vb-top{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:24px;align-items:start}
+.vb-author{background:#fff;border:1px solid #dfe8ec;border-radius:12px;padding:12px}
+.vb-acards{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vb-acard{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:#17242b;padding:8px 4px;border-radius:10px;background:#f6f9fa}
+.vb-acard img{display:block;width:84px;height:84px;object-fit:cover;border-radius:10px;border:1px solid #dfe8ec;background:#fff}
+.vb-acard img.vb-akg{object-fit:contain;padding:4px;box-sizing:border-box}
+.vb-arole{margin-top:6px;font-size:11px;letter-spacing:.08em;color:#5f7078}
+.vb-acard b{font-size:14px;margin-top:2px}
+.vb-asub{font-size:11.5px;color:#0b6fa8}
+.vb-abio{font-size:13px;line-height:1.75;color:#3a4a52;margin:10px 2px}
+.vb-alink{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;margin-top:6px;border:1px solid #17242b;border-radius:8px;color:#17242b;text-decoration:none;font-size:13px;font-weight:700}
+.vb-alink span{color:#e0831a}
+.vb-social{margin:28px 0 8px;padding:16px 18px;background:#f4f8fd;border:1px solid #dbe6f3;border-radius:12px}
+.vb-social h2{font-size:18px;margin:0 0 6px}
+.vb-social>p{font-size:14px;line-height:1.8;margin:0 0 12px}
+.vb-sbox{display:flex;gap:14px;align-items:center}
+.vb-sban{flex:0 0 330px}
+.vb-sban img{display:block;width:100%;height:auto;border-radius:8px}
+.vb-scap{margin:0 0 6px;font-size:13.5px;font-weight:700}
+.vb-giin{display:flex;flex-wrap:wrap;gap:4px}
+.vb-giin img{display:block;width:34px;height:34px;border-radius:50%;object-fit:cover;border:1px solid #cfdbe8;background:#fff}
+.vb-smore{margin:8px 0 0;font-size:13px}
+@media (max-width:900px){.vb-top{grid-template-columns:minmax(0,1fr)}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
 </style>`
 
 const ctaBlock = `
@@ -693,6 +716,41 @@ function searchUi(): string {
 <script src="${BASE}/search.js?v=${SEARCH_JS_VER}" defer></script>`
 }
 
+// 書いている人の紹介欄（2026-11-27 ユーザー指示「誰が書いてるかわかりにくい」。kurage.exbridge.jp のトップ右上と同じ形）
+function authorBox(): string {
+  return `<aside class="vb-author" aria-label="書いている人">
+  <div class="vb-acards">
+    <a class="vb-acard" href="https://x.com/xb_bittensor" target="_blank" rel="noopener"><img src="https://kurage.exbridge.jp/images/bittensorman.webp" width="400" height="400" alt="BittensorMan（小嶋 篤）のアイコン" loading="eager"><span class="vb-arole">書いている人</span><b>小嶋 篤</b><span class="vb-asub">BittensorMan ・ @xb_bittensor</span></a>
+    <a class="vb-acard" href="https://kappstore.exbridge.jp/#ref=vibeblog-author"><img class="vb-akg" src="https://kurage.exbridge.jp/images/kurage-mascot-cutout-300.webp" width="300" height="339" alt="Kurage のマスコットキャラクター" loading="eager"><span class="vb-arole">開発しているシステム</span><b>Kurage</b><span class="vb-asub">Kurage App Store</span></a>
+  </div>
+  <p class="vb-abio">株式会社エクスブリッジ代表取締役。1995年から業務システムを作り、いまは名古屋で、AIとシステム開発で社会の課題を解くシステムを開発しています。このブログには、その仕事でやったこと・測ったこと・やめたことを、そのまま書いています。</p>
+  <a class="vb-alink" href="https://kurage.exbridge.jp/#ref=vibeblog-author">プロフィールと開発しているシステム<span>→</span></a>
+  <a class="vb-alink" href="${SITE}/profile.html#ref=vibeblog-author">運営：株式会社エクスブリッジ（名古屋・2004年設立）<span>→</span></a>
+</aside>`
+}
+
+// フォロワーポータルの欄（2026-11-27 ユーザー指示：exdirect.net/supplier の部分を新着の下に）。
+// 数字は手で書かず data-xb（/js/xb-stats.js が /xb_stats.php の最新値に置き換える）。顔の一覧は作るたびに social.json から。
+const SOCIAL = await fetch('https://exbridge.jp/kfollowers/social.json').then((r) => r.ok ? r.json() : null).catch(() => null) as
+  { account?: { followers?: number }; counts?: Record<string, number>; giin?: Array<{ name: string; sub: string; avatar: string; url: string }> } | null
+function followerBox(): string {
+  const c = SOCIAL?.counts || {}
+  const giin = SOCIAL?.giin || []
+  const n = (k: string, v?: number) => `<span data-xb="${k}">${v == null ? '' : v.toLocaleString('en-US')}</span>`
+  const asof = `${new Date().getFullYear()}年${new Date().getMonth() + 1}月`
+  return `<section class="vb-social">
+  <h2>国会議員${n('giin', c.giin)}人がフォローする X 公式アカウント</h2>
+  <p>このブログを書いている当社の X 公式アカウント <a href="https://x.com/xb_bittensor" target="_blank" rel="noopener">@xb_bittensor</a> は、2010年から運用し、フォロワー${n('x_followers', SOCIAL?.account?.followers)}人。党首・大臣を含む国会議員${n('giin', c.giin)}人、首長${n('shucho', c.shucho)}人、フォロワー1万人を超えるインフルエンサー${n('influencers', c.influencers)}人、企業${n('companies', c.companies)}社にフォローされています（<span data-xb="asof">${asof}</span>時点）。</p>
+  <div class="vb-sbox">
+    <a class="vb-sban" href="https://exbridge.jp/kfollowers/#ref=vibeblog-top"><img src="https://exbridge.jp/kfollowers/assets/banner.png" width="1500" height="500" alt="@xb_bittensor のフォロワーを紹介する Kurage フォロワーポータル" loading="lazy"></a>
+    ${giin.length ? `<div class="vb-sbody"><p class="vb-scap">@xb_bittensor をフォローしている国会議員（${n('giin', c.giin)}人）</p>
+    <div class="vb-giin">${giin.map((g) => `<a href="${attr(g.url)}" rel="nofollow noopener" target="_blank" title="${attr(`${g.name}（${g.sub}）`)}"><img src="${attr(g.avatar)}" alt="${attr(`${g.name}（${g.sub}）`)}" width="34" height="34" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'"></a>`).join('')}</div>
+    <p class="vb-smore"><a href="https://exbridge.jp/kfollowers/#ref=vibeblog-top">Kurage フォロワーポータルで、フォローしてくださっている方々を見る</a></p></div>` : ''}
+  </div>
+</section>
+<script defer src="/js/xb-stats.js"></script>`
+}
+
 function indexHtml(): string {
   const url = `${BASE}/`
   // ブログの題は「バイブコーディング的仕事ブログ」。VWork Blog はこの媒体の名前として
@@ -718,6 +776,8 @@ function indexHtml(): string {
 <nav class="crumb"><a href="${SITE}/">ホーム</a> ／ バイブコーディング的仕事ブログ</nav>
 
 <header class="vb-head">
+<div class="vb-top">
+<div class="vb-topl">
   <p class="vb-eyebrow">VWork Blog ・ 株式会社エクスブリッジ（名古屋）</p>
   <h1>バイブコーディング的仕事ブログ</h1>
   <p class="vb-tag">バイブコーディングでやったことを、そのまま書いています。現在 <strong>${blogPosts.length}本</strong>（ほかに AI OSS技術解説 ${ossPosts.length}本）。
@@ -737,6 +797,9 @@ function indexHtml(): string {
       <p>その作り方で実際にやった仕事の解説と考察。何を測り、何をやめたかまで書きます。</p>
     </div>
   </div>
+</div>
+${authorBox()}
+</div>
 </header>
 
 <section class="vb-latest">
@@ -744,6 +807,8 @@ function indexHtml(): string {
   <div class="idx">${lead.map((p) =>
     card(`${BASE}/${p.slug}.html`, dateJa(p.date), p.title, p.description.slice(0, 82))).join('')}</div>
 </section>
+
+${followerBox()}
 
 ${ossPosts.length ? `<section class="vb-latest">
   <h2>AI OSS技術解説（新しい順）</h2>
