@@ -28,7 +28,7 @@
 og:image とトップ画像を出し分けるので、ビルドより先に作る必要がある）→ deploy.sh vibeblog が --sync で送る。
 出力: /home/kojima/work/exbridge_jp/images/vibeblog/<slug>.png
 """
-import argparse, base64, ftplib, glob, hashlib, html, json, os, re, sys
+import argparse, sys, base64, ftplib, glob, hashlib, html, json, os, re, sys
 
 VWORK_BLOG = "/home/kojima/work/vwork/blog"
 OUT = "/home/kojima/work/exbridge_jp/images/vibeblog"
@@ -336,7 +336,7 @@ def main():
     keys = json.load(open(KEYS, encoding="utf-8")) if os.path.exists(KEYS) else {}
     if not keys:   # 初回：今ある画像の材料を記録するだけ（全部を作り直さない）
         keys = {p["slug"]: input_key(p) for p in load_posts() if os.path.exists(os.path.join(OUT, p["slug"] + ".png"))}
-    made = []
+    made, failed = [], []
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         b = pw.chromium.launch(headless=True)
@@ -347,17 +347,25 @@ def main():
             old_k = keys.get(p["slug"])
             if os.path.exists(path) and not a.force and (old_k is None or old_k == ik):
                 continue   # 材料（題・og_stat など）が前と同じなら作り直さない
-            key, layout, size = render(page, p, path)
+            try:
+                key, layout, size = render(page, p, path)
+            except SystemExit as e:
+                # 1本が入りきらなくても、残りの記事は作り続ける（2026-11-27: 1本目で止まり、その日の15本すべてが看板なしになった）
+                failed.append(f"{p['slug']}: {e}")
+                print(f"  ！作れない {e}", file=sys.stderr)
+                continue
             keys[p["slug"]] = ik
             made.append(path)
             print(f"  {p['slug'][:48]:48} {key:6} {layout:5} {size}")
         b.close()
     json.dump(keys, open(KEYS, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    print(f"作成 {len(made)}枚 / 記事 {len(posts)}本 → {OUT}")
+    print(f"作成 {len(made)}枚 / 記事 {len(posts)}本 / 作れない {len(failed)}本 → {OUT}")
     if a.all_deploy:
         deploy(sorted(glob.glob(os.path.join(OUT, "*.png"))))
     elif a.deploy and made:
         deploy(made)
+    if failed:   # 作れたものは置いたうえで、失敗を知らせる
+        sys.exit(1)
 
 
 if __name__ == "__main__":
