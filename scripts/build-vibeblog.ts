@@ -476,7 +476,15 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 .vb-giin{display:flex;flex-wrap:wrap;gap:4px}
 .vb-giin img{display:block;width:34px;height:34px;border-radius:50%;object-fit:cover;border:1px solid #cfdbe8;background:#fff}
 .vb-smore{margin:8px 0 0;font-size:13px}
-@media (max-width:900px){.vb-top{grid-template-columns:minmax(0,1fr)}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
+.vb-byline{margin:-6px 0 12px}
+.vb-byline a{display:inline-flex;align-items:center;gap:8px;color:#3a4a52;text-decoration:none;font-size:13px;line-height:1.5}
+.vb-byline img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid #dfe8ec;flex:0 0 auto}
+.vb-byline b{color:#17242b}
+.vb-apost{margin:26px 0 8px}
+.vb-apost .vb-author{display:grid;grid-template-columns:300px minmax(0,1fr);gap:4px 18px;align-items:start}
+.vb-apost .vb-acards{grid-row:span 3}
+.vb-apost .vb-abio{margin:2px 0 4px}
+@media (max-width:900px){.vb-top{grid-template-columns:minmax(0,1fr)}.vb-apost .vb-author{display:block}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
 </style>`
 
 const ctaBlock = `
@@ -596,7 +604,9 @@ function postHtml(p: Post, idx: number): string {
     articleSection: SECTION[p.src],
     wordCount: p.chars,
     image: img ? { '@type': 'ImageObject', url: img, width: 1200, height: 630 } : undefined,
-    author: { '@type': 'Organization', '@id': `${SITE}/#organization` },
+    author: { '@type': 'Person', '@id': 'https://kurage.exbridge.jp/#bittensorman', name: '小嶋篤', alternateName: 'BittensorMan',
+      url: 'https://kurage.exbridge.jp/', jobTitle: '代表取締役', worksFor: { '@id': `${SITE}/#organization` },
+      sameAs: ['https://x.com/xb_bittensor'] },
     publisher: { '@id': `${SITE}/#organization` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   }, {
@@ -641,6 +651,7 @@ ${img ? `<figure class="vb-eyecatch"><img src="${attr(img)}" width="1200" height
 <h1>${h(p.title)}</h1>
 <p class="meta">${p.src === 'articles' ? '<span>AI OSS技術解説</span>' : ''}${p.date ? `<span>${h(dateJa(p.date))}</span>` : ''}${p.updated && p.updated !== p.date ? `<span>${h(dateJa(p.updated))}追記</span>` : ''}<span>約${Math.round(p.chars / 400) || 1}分で読めます</span>${
     p.headKeyword ? `<span>${h(p.headKeyword)}</span>` : ''}</p>
+<p class="vb-byline"><a href="https://kurage.exbridge.jp/#ref=vibeblog-byline"><img src="https://kurage.exbridge.jp/images/bittensorman-96.webp" width="96" height="96" alt="" loading="eager"><span>書いた人 <b>小嶋 篤</b>（BittensorMan）・株式会社エクスブリッジ 代表取締役</span></a></p>
 ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 <div class="vb-share">
   <button type="button" class="vb-copy" data-copy="${attr(`${p.title}\n${url}`)}">
@@ -648,6 +659,7 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 </div>
 ${answerBox(p)}
 <article class="post">${withPromo(p)}${faqBlock(p)}</article>
+<section class="vb-apost"><h2>この記事を書いた人</h2>${authorBox()}</section>
 ${(() => {
   const ts = trackersForPost(p)
   return ts.length ? `<section>
