@@ -2014,5 +2014,50 @@
       "kurage"
     ],
     "note": "編集機能まで含めた置き換えは難しく、素材生成（公開モデル）と粗編集（FFmpeg）を分けて考えるのが現実的です。当社は台本→素材→ナレーション→字幕→mp4までを自社パイプライン（kmontage）で回しています。"
+  },
+  {
+    "slug": "appsheet",
+    "name": "AppSheet",
+    "kana": "アップシート",
+    "vendor": "Google",
+    "category": "lowcode",
+    "what": "Googleスプレッドシートなどの表のデータから、プログラムを書かずに業務アプリを作れるサービス。一覧・入力フォーム・地図・グラフの画面を自動で作り、スマホのアプリとしても使えます。",
+    "volume": 27100,
+    "ossCats": [
+      "lowcode",
+      "database"
+    ],
+    "ossPicks": [
+      "budibase",
+      "nocodb",
+      "baserow",
+      "appsmith",
+      "teable",
+      "saltcorn",
+      "kdbagent"
+    ],
+    "note": "AppSheetは「表のデータから画面を自動で作ること」「スマホで使えること（電波の無い場所での入力にも対応）」「Google Workspace とのつながり」の3つが強みです。置き換えを考えるときは、表のデータ管理と入力フォームが中心ならBudibase・NocoDB・Baserowのような表から画面を作るもの、画面を作り込むならAppsmithが向きます。いずれもブラウザで使う形が基本で、専用のスマホアプリや電波の無い場所での入力はAppSheetほど得意ではありません。現場でスマホから写真や位置情報を入力する使い方が中心なら、AppSheetを続けるほうが合う場合があります。当社では、PHPのLaravelとFilamentで業務アプリの土台を作り、MCPでAIが表を作って入力・集計する形も考えています（構想）。"
+  },
+  {
+    "slug": "power-apps",
+    "name": "Power Apps",
+    "kana": "パワーアップス",
+    "vendor": "Microsoft",
+    "category": "lowcode",
+    "what": "Microsoft 365 の中で、画面の操作で業務アプリを作れるサービス。SharePoint の一覧や Excel、Dataverse のデータを使って、入力フォームや承認の流れを作れます。",
+    "volume": 12100,
+    "ossCats": [
+      "lowcode",
+      "database"
+    ],
+    "ossPicks": [
+      "appsmith",
+      "budibase",
+      "illa-builder",
+      "nocodb",
+      "baserow",
+      "kdbagent"
+    ],
+    "note": "Power Appsは「Microsoft 365（Teams・SharePoint・Outlook）とのつながり」「Power Automateと組み合わせた承認や通知の流れ」「Copilotで画面やアプリを作る機能」が強みです。置き換えを考えるときは、社内の管理画面を作り込むならAppsmithやBudibase、表のデータ管理が中心ならNocoDBやBaserowが向きます。ただし、TeamsやSharePointと深くつないで使っている会社は、つながりを作り直す手間が大きいので、Power Appsを続けるほうが安く済む場合があります。当社では、PHPのLaravelとFilamentで業務アプリの土台を作り、MCPでAIが操作する形も考えています（構想）。"
   }
 ]
