@@ -1,0 +1,11 @@
+{
+ "_note": "構想（まだ作っていない）の記事。/oss/ の各ページに「関連する記事（構想）」として出し、「実際に使った記事」には出さない（2026-11-28）",
+ "articles": [
+  {
+   "slug": "2026-11-28-appsheet-laravel-filament-mcp",
+   "title": "AppSheetの料金が気になる会社へ｜Laravel Filament と MCP で、AIが表を作って入力・集計する業務アプリを考えた（画面イメージ付き）",
+   "date": "2026-11-28",
+   "oss": ["filament", "budibase", "nocodb", "baserow", "appsmith", "teable", "saltcorn", "illa-builder", "kdbagent"]
+  }
+ ]
+}
