@@ -10,7 +10,7 @@
  *   外注先を探す語には実需要がある（SNS運用代行 14,800/指数63・経理代行 1,600/
  *   入札882〜4,684円・記帳代行 1,900）。当社は代行会社ではなく
  *   「外注をやめて、その業務のAI自動化を社内に作る」側。提供の実体は
- *   AI-IT顧問契約（月15時間・税別15万円）で、ai-it-komon.html と同一。
+ *   AI-IT顧問契約（月16時間・税別16万円）で、ai-it-komon.html と同一。
  *   業務ごとに『外注するとどうなるか／AIで自動化するとどうなるか』を
  *   具体で書き分ける（データは data/outsourcing-list.json。発明しない）。
  *
@@ -217,13 +217,13 @@ function faqs(g: Gyomu) {
   const c = CONTENT.get(g.slug)
   if (c) {
     return [...c.faqs,
-      { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月15時間・税別150,000円（1時間あたり10,000円）。月30時間・1年契約なら時間単価は最大20%下がり8,000円になります。仕組みの構築も、その後の改善も、この時間の中で行います。' },
+      { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月16時間・税別160,000円（1時間あたり10,000円）。仕組みの構築も、その後の改善も、この時間の中で行います。' },
       { q: '対応地域は？', a: 'オンサイトは名古屋市内、Zoom・リモート作業の組み合わせで進めます。仕組みの構築自体はリモートで完結することがほとんどです。' }]
   }
   return [
     { q: `${g.name}の外注・代行と、AI自動化は何が違いますか？`,
       a: `外注は毎月・毎件の費用が続き、社内にノウハウが残りません。AI自動化は、${g.auto}。作った仕組みは御社の資産になり、件数が増えても費用はほぼ増えません。` },
-    { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月15時間・税別150,000円（1時間あたり10,000円）。月30時間・1年契約なら時間単価は最大20%下がり8,000円になります。仕組みの構築も、その後の改善も、この時間の中で行います。' },
+    { q: '費用はいくらですか？', a: 'AI-IT顧問契約と同一です。月16時間・税別160,000円（1時間あたり10,000円）。仕組みの構築も、その後の改善も、この時間の中で行います。' },
     { q: 'どのくらいで動きますか？', a: 'まず1か月目に最小構成を動かし、実データで検証しながら広げます。当社自身が同じ型の自動化（記事作成・動画生成・バナー量産・データ判定）を社内で毎日運用しており、ゼロからの研究開発ではありません。' },
     { q: `${g.name}を完全に無人化できますか？`, a: 'しません。判断や承認は人に残す設計にします。AIが下書き・分類・転記を行い、人は確認と例外対応に集中する形が、事故なく続く形だと考えています。' },
     ...(g.keep ? [{ q: `${g.name}は、外注のままのほうがいい場合もありますか？`, a: `あります。${g.keep}` }] : []),
@@ -235,7 +235,7 @@ function page(g: Gyomu, all: Gyomu[]): string {
   const c = CONTENT.get(g.slug)
   const title = c ? c.title : isOut(g) ? `${lead(g)}を探す前に｜AIで社内に自動化する方法と費用`
     : `${lead(g)}をAIで自動化する方法と費用｜外注する前に`
-  const desc = c ? c.description : `${isOut(g) ? `${lead(g)}を探している方へ。` : `${lead(g)}を外注するか迷っている方へ。`}${g.auto}。外注のままのほうがいい場合も正直に書きます。構築はAI-IT顧問契約（月15時間・税別15万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
+  const desc = c ? c.description : `${isOut(g) ? `${lead(g)}を探している方へ。` : `${lead(g)}を外注するか迷っている方へ。`}${g.auto}。外注のままのほうがいい場合も正直に書きます。構築はAI-IT顧問契約（月16時間・税別16万円）の中で行い、仕組みは御社の資産になります。名古屋のAIシステム開発会社エクスブリッジ。`
   const url = `${BASE}/${g.slug}.html`
   const same = all.filter((x) => x.slug !== g.slug && g.cat && x.cat === g.cat)
   const rel = (same.length ? same : all.filter((x) => x.slug !== g.slug)).slice(0, 12)
@@ -313,11 +313,10 @@ ${g.keep || own.length ? `<section class="sec"><div class="wrap">
 <section class="sec"><div class="wrap">
   <h2>費用 — <span class="ac">AI-IT顧問契約</span>と同一です</h2>
   <div class="price">
-    <div class="price-main"><span class="p-num">15<small>万円</small></span><span class="p-sub">月15時間・税別<br>（1時間あたり10,000円）</span></div>
+    <div class="price-main"><span class="p-num">16<small>万円</small></span><span class="p-sub">月16時間・税別<br>（1時間あたり10,000円）</span></div>
     <div class="price-body">
       <div class="ck">${h(g.name)}の自動化の構築も、その後の改善も、この時間の中で行います</div>
-      <div class="ck">月30時間・1年契約なら時間単価は最大20%下がり8,000円に</div>
-      <div class="ck">成果物（仕組み・コード・手順）はすべて御社に帰属</div>
+            <div class="ck">成果物（仕組み・コード・手順）はすべて御社に帰属</div>
       <div class="ck">提供はこの業務に限らず、ITでできることをひととおり</div>
       <p class="p-note">詳しい条件は<a href="${KOMON}?ref=outsourcing-${h(g.slug)}">AI-IT顧問契約のページ</a>へ。オンサイトは名古屋市内、Zoom・リモートの組み合わせで進めます。</p>
     </div>
@@ -349,8 +348,8 @@ ${proofSection(g.slug)}
       description: desc, url,
       provider: { '@id': `${SITE}/#organization` },
       areaServed: [{ '@type': 'City', name: '名古屋市' }, { '@type': 'Country', name: '日本' }],
-      offers: { '@type': 'Offer', price: '150000', priceCurrency: 'JPY',
-        description: '月15時間・税別150,000円のAI-IT顧問契約に構築・改善を含む' } },
+      offers: { '@type': 'Offer', price: '160000', priceCurrency: 'JPY',
+        description: '月16時間・税別160,000円のAI-IT顧問契約に構築・改善を含む' } },
     { '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: fq.map((x) => ({ '@type': 'Question', name: x.q,
         acceptedAnswer: { '@type': 'Answer', text: x.a } })) },
@@ -365,7 +364,7 @@ ${proofSection(g.slug)}
 function indexPage(all: Gyomu[]): string {
   // 実測: アウトソーシングとは 18,100/指数4・BPO 40,500/指数14。解説需要を正面から受ける
   const title = 'アウトソーシング・BPOとは｜外注する前に「AIで自動化して社内に残す」比較 全' + all.length + '業務'
-  const desc = `アウトソーシング（外注・BPO・代行）の違いと費用の考え方を整理し、データ入力・経理・SNS運用など${all.length}業務それぞれについて「外注した場合」と「AIで自動化して社内に残す場合」を比べられる一覧です。構築はAI-IT顧問契約（月15時間・税別15万円）に含まれます。名古屋のAIシステム開発会社エクスブリッジ。`
+  const desc = `アウトソーシング（外注・BPO・代行）の違いと費用の考え方を整理し、データ入力・経理・SNS運用など${all.length}業務それぞれについて「外注した場合」と「AIで自動化して社内に残す場合」を比べられる一覧です。構築はAI-IT顧問契約（月16時間・税別16万円）に含まれます。名古屋のAIシステム開発会社エクスブリッジ。`
   const body = EXTRA_CSS + `<main class="wrap">
 <section><div class="panel">
 <p class="eyebrow">OUTSOURCING × AI</p>
@@ -387,7 +386,7 @@ function indexPage(all: Gyomu[]): string {
 <p>いま外注されている業務の多くは「読む・転記する・分類する・下書きする」の組み合わせで、
 これはAIが最も得意な領域です。当社は代行会社ではありません。
 <strong>その業務を回すAIの仕組みを、御社の中に作る</strong>会社です。
-構築は<a href="${KOMON}?ref=outsourcing-index">AI-IT顧問契約</a>（月15時間・税別15万円）の中で行い、
+構築は<a href="${KOMON}?ref=outsourcing-index">AI-IT顧問契約</a>（月16時間・税別16万円）の中で行い、
 仕組み・コード・手順はすべて御社の資産になります。</p>
 </div></section>
 <section><div class="panel"><h2>業務から探す（全${all.length}業務）</h2>
@@ -407,7 +406,7 @@ ${Object.entries(EXTRA.cats).map(([k, v]) => `<h3>${h(v)}</h3>
       { '@type': 'Question', name: '外注とAI自動化はどちらが安いですか？',
         acceptedAnswer: { '@type': 'Answer', text: '件数が少ないうちは外注が安いことがあります。件数が増えるほどAI自動化が有利になります。外注は件数に比例して費用が増えるのに対し、社内に作った仕組みは件数が増えても費用がほぼ増えないためです。' } },
       { '@type': 'Question', name: 'AI自動化の構築費用はいくらですか？',
-        acceptedAnswer: { '@type': 'Answer', text: 'AI-IT顧問契約（月15時間・税別150,000円）の中で構築します。月30時間・1年契約なら時間単価は最大20%下がります（1時間8,000円）。成果物は御社に帰属します。' } },
+        acceptedAnswer: { '@type': 'Answer', text: 'AI-IT顧問契約（月16時間・税別160,000円）の中で構築します。成果物は御社に帰属します。' } },
     ] },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '株式会社エクスブリッジ', item: `${SITE}/` },
@@ -446,7 +445,7 @@ function rpaPage(all: Gyomu[]): string {
 <h2>どの業務で使えるか</h2>
 <p>外注されがちな${all.length}業務について、AI自動化の具体例を業務別にまとめています:
 <a href="${BASE}/">業務のAI自動化 一覧</a></p>
-<p>構築は<a href="${KOMON}?ref=outsourcing-rpa">AI-IT顧問契約</a>（月15時間・税別15万円）の中で行います。
+<p>構築は<a href="${KOMON}?ref=outsourcing-rpa">AI-IT顧問契約</a>（月16時間・税別16万円）の中で行います。
 RPAツールの年間ライセンスを買う前に、一度ご相談ください。</p>
 <p style="margin-top:14px"><a class="btn btn-main" href="${SITE}/contact.php?subject=${encodeURIComponent('RPA・AI自動化の相談')}">いま自動化したい業務を聞かせてください</a></p>
 </div></section>
