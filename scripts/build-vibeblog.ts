@@ -487,7 +487,16 @@ section h2{font-size:18.5px;padding-left:11px;border-left:4px solid #0a9a8f;marg
 .vb-byline b{color:#17242b}
 .vb-apost{margin:26px 0 8px}
 .vb-apost .vb-author{display:grid;grid-template-columns:300px minmax(0,1fr);gap:4px 18px;align-items:start}
-.vb-apost .vb-acards{grid-row:span 3}
+.vb-apost .vb-acards{grid-row:span 5}
+.vb-aoffer{display:flex;gap:14px;align-items:flex-start;margin-top:12px;padding:12px;border:2px solid #0a8f85;border-radius:12px;background:#f2fbf9;color:#17242b;text-decoration:none}
+.vb-aoffer img{width:96px;height:auto;flex:none;border:1px solid #dfe8ec;border-radius:6px;background:#fff}
+.vb-aobody{display:flex;flex-direction:column;gap:4px;min-width:0}
+.vb-aok{font-size:11px;font-weight:800;letter-spacing:.08em;color:#0a8f85}
+.vb-aoffer b{font-size:16px;line-height:1.45}
+.vb-aop{font-size:13px;line-height:1.75;color:#3a4a52}
+.vb-aol{align-self:flex-start;margin-top:2px;padding:6px 12px;border-radius:8px;background:#0a8f85;color:#fff;font-size:13px;font-weight:700}
+.vb-aol span{margin-left:6px}
+@media (max-width:600px){.vb-aoffer{gap:10px;padding:10px}.vb-aoffer img{width:58px}.vb-aoffer b{font-size:15px}}
 .vb-apost .vb-abio{margin:2px 0 4px}
 @media (max-width:900px){.vb-ahead{display:block}.vb-ahead .vb-eyecatch{max-width:none}.vb-aside{display:none}.vb-top{grid-template-columns:minmax(0,1fr)}.vb-apost .vb-author{display:block}.vb-sbox{display:block}.vb-sban{display:block;margin:0 0 10px}}
 </style>`
@@ -668,7 +677,7 @@ ${desc ? `<p class="lead">${h(desc)}</p>` : ''}
 </div>
 ${answerBox(p)}
 <article class="post">${withPromo(p)}${faqBlock(p)}</article>
-<section class="vb-apost"><h2>この記事を書いた人</h2>${authorBox()}</section>
+<section class="vb-apost"><h2>この記事を書いた人</h2>${authorBox(true)}</section>
 ${(() => {
   const ts = trackersForPost(p)
   return ts.length ? `<section>
@@ -738,7 +747,11 @@ function searchUi(): string {
 }
 
 // 書いている人の紹介欄（2026-11-27 ユーザー指示「誰が書いてるかわかりにくい」。kurage.exbridge.jp のトップ右上と同じ形）
-function authorBox(): string {
+// 記事の最後の「この記事を書いた人」にだけ、AIシステム基盤×AI-IT顧問契約の提案を出す（2026-11-28 ユーザー指示「提案を拡散させたい」）。
+// ブログには価格を書かない決まりなので、料金は書かずに AI-IT顧問のページへ案内する。
+const KIBAN_OFFER = `<a class="vb-aoffer" href="https://exbridge.jp/ai-it-komon.html#ref=vibeblog-author-kiban"><img src="https://exbridge.jp/pdf/ai-system-kiban.png" width="992" height="1404" alt="AIシステム基盤の説明資料（A4）" loading="lazy"><span class="vb-aobody"><span class="vb-aok">ご提案</span><b>AIシステム基盤を、AI-IT顧問契約で作りませんか</b><span class="vb-aop">Copilot・Gemini・ChatGPT を入れただけでは、業務は自動化されません。AIが受注・メール・会計などの業務システムを直接操作できる土台を、AI-IT顧問契約の中で、御社の業務に合わせて作っていきます。業務システムは1つ平均3時間で作れます。</span><span class="vb-aol">AI-IT顧問契約を見る<span>→</span></span></span></a>
+  <a class="vb-alink" href="https://exbridge.jp/pdf/ai-system-kiban.pdf#ref=vibeblog-author-kiban" target="_blank" rel="noopener">AIシステム基盤の資料（A4・1枚・PDF）<span>→</span></a>`
+function authorBox(offer = false): string {
   return `<aside class="vb-author" aria-label="書いている人">
   <div class="vb-acards">
     <a class="vb-acard" href="https://x.com/xb_bittensor" target="_blank" rel="noopener"><img src="https://kurage.exbridge.jp/images/bittensorman.webp" width="400" height="400" alt="BittensorMan（小嶋 篤）のアイコン" loading="eager"><span class="vb-arole">書いている人</span><b>小嶋 篤</b><span class="vb-asub">BittensorMan ・ @xb_bittensor</span></a>
@@ -747,6 +760,7 @@ function authorBox(): string {
   <p class="vb-abio">株式会社エクスブリッジ代表取締役。1995年から業務システムを作り、いまは名古屋で、AIとシステム開発で社会の課題を解くシステムを開発しています。このブログには、その仕事でやったこと・測ったこと・やめたことを、そのまま書いています。</p>
   <a class="vb-alink" href="https://kurage.exbridge.jp/#ref=vibeblog-author">プロフィールと開発しているシステム<span>→</span></a>
   <a class="vb-alink" href="${SITE}/profile.html#ref=vibeblog-author">運営：株式会社エクスブリッジ（名古屋・2004年設立）<span>→</span></a>
+  ${offer ? KIBAN_OFFER : ''}
 </aside>`
 }
 
