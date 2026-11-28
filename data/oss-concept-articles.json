@@ -5,7 +5,30 @@
    "slug": "2026-11-28-appsheet-laravel-filament-mcp",
    "title": "AppSheetの料金が気になる会社へ｜Laravel Filament と MCP で、AIが表を作って入力・集計する業務アプリを考えた（画面イメージ付き）",
    "date": "2026-11-28",
-   "oss": ["filament", "budibase", "nocodb", "baserow", "appsmith", "teable", "saltcorn", "illa-builder", "kdbagent"]
+   "oss": [
+    "laravel",
+    "filament",
+    "budibase",
+    "nocodb",
+    "baserow",
+    "appsmith",
+    "teable",
+    "saltcorn",
+    "illa-builder",
+    "kdbagent"
+   ]
+  },
+  {
+   "slug": "2026-11-28-bi-tool-ai-laravel-filament",
+   "title": "BIツールは要る？｜Metabaseの代わりに、AIが集計して Laravel Filament で見せる BI を考えた（画面イメージ付き）",
+   "date": "2026-11-28",
+   "oss": [
+    "metabase",
+    "superset",
+    "redash",
+    "laravel",
+    "filament"
+   ]
   }
  ]
 }
